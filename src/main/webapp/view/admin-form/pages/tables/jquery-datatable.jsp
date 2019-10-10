@@ -3,6 +3,7 @@
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="dec"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<c:url var="APIurl" value="/api-admin-user"/>
 <!DOCTYPE html>
 <html>
 
@@ -836,10 +837,6 @@
 	                                    <span>ADD USER</span>
 	                                </button>
 	                                </a>
-                             <button type="button" class="btn bg-blue waves-effect" id = "btnDelete">
-                                 <i class="material-icons">verified_user</i>
-                                 <span>DELETE USER</span>
-                             </button>
                             <form action="<c:url value='/admin-user'/>" id="formSubmit" method="get">
                                 <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                     <thead>
@@ -863,6 +860,7 @@
                                        		<td><input type="checkbox" id="checkbox_${user.userid}" value="${user.userid}"/></td>
                                             <td>${user.userid}</td>
                                             <td>${user.username}</td>
+                                            <td><button value = "${user.userid }" onClick = "btnDeleteClick(this)"><img src="style/admin/images/Delete_16x16.png"/></button></td>
                                         </tr>
                                     </c:forEach>
                                     </tbody>
@@ -1387,26 +1385,24 @@
     </section>
 	
 	<script>
-	$("#btnDelete").click(function() {
+	function btnDeleteClick(obj) {
 		var data = {};
-		var ids = $('tbody input[type=checkbox]:checked').map(function () {
-            return $(this).val();
-        }).get();
-		data['ids'] = ids;
-		deleteNew(data);
-	});
+		var ids = obj.value;
+		data['userid'] = ids;
+		deleteUser(data);
+		location.href=location.href;
+	};
 	
-	function deleteNew(data) {
+	function deleteUser(data) {
         $.ajax({
             url: '${APIurl}',
             type: 'DELETE',
             contentType: 'application/json',
             data: JSON.stringify(data),
-            success: function (result) {
-            	window.location.href = "/chiasetailieu/admin-user";
+            success: function () {
+            	
             },
-            error: function (error) {
-            	window.location.href = "/chiasetailieu/admin-user";
+            error: function () {
             }
         });
     }

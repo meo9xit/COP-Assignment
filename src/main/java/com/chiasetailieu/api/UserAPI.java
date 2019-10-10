@@ -57,7 +57,8 @@ public class UserAPI extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("application/json");
 		User user = HttpUtil.of(request.getReader()).toModel(User.class);
-		userService.delete(user);
+		userService.delete(userService.findById(user.getUserid()));
+		mapper.writeValue(response.getOutputStream(), "{}");
 	}
 
 }

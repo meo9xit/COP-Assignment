@@ -34,4 +34,11 @@ public class UserService implements IUserService{
 		userDAO.delete(user);
 	}
 
+	@Override
+	public User findById(Long id) {
+		// TODO Auto-generated method stub
+		User ret = userDAO.findById(id);
+		return ret;
+	}
+
 }

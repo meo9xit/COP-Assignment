@@ -16,4 +16,7 @@ public class Role {
 		this.rolename = rolename;
 	}
 	
+	public String toString() {
+		return rolename;
+	}
 }
