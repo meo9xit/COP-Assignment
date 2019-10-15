@@ -9,4 +9,5 @@ public interface IUserService {
 	List<User> findAll();
 	void delete(User user);
 	User findById(Long id);
+	User findByUsernameAndPassword(String username, String password);
 }
