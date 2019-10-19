@@ -2,6 +2,8 @@ package com.chiasetailieu.model;
 
 import java.util.List;
 
+import com.chiasetailieu.dao.impl.RoleDAO;
+
 public class User extends AbstractModel<User>{
 	private Long userid;
 	private String username;
@@ -9,6 +11,7 @@ public class User extends AbstractModel<User>{
 	private Long roleId;
 	private Role role;
 	private List<Document> documents;
+	
 	
 	public Long getRoleId() {
 		return roleId;

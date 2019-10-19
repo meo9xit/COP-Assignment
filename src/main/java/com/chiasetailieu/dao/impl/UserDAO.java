@@ -49,7 +49,11 @@ public class UserDAO extends GenericDAO<User> implements IUserDAO{
 		String sql = "select * from user "
 				+ "where user_id = ?";
 		List<User> users = query(sql, new UserMapper(), id);
-		return users.isEmpty()?null:users.get(0);
+		User us = users.isEmpty()?null:users.get(0);
+		RoleDAO rd = new RoleDAO();
+		Role role = rd.findById(us.getRoleId());
+		us.setRole(role);
+		return us;
 	}
 
 	@Override
@@ -57,6 +61,11 @@ public class UserDAO extends GenericDAO<User> implements IUserDAO{
 		// TODO Auto-generated method stub
 		String sql = "select * from user inner join role on user.role_id = role.role_id";
 		List<User> users = query(sql, new UserMapper());
+		for(User user : users) {
+			RoleDAO rd = new RoleDAO();
+			Role role = rd.findById(user.getRoleId());
+			user.setRole(role);
+		}
 		return users;
 	}
 	
