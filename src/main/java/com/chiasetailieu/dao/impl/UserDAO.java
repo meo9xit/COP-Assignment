@@ -4,17 +4,22 @@ import java.util.List;
 
 import com.chiasetailieu.dao.IUserDAO;
 import com.chiasetailieu.dao.mapper.UserMapper;
+import com.chiasetailieu.model.Role;
 import com.chiasetailieu.model.User;
 
 public class UserDAO extends GenericDAO<User> implements IUserDAO{
-
+	
 	@Override
 	public User findByUserNameAndPassword(String username, String password) {
 		// TODO Auto-generated method stub
-		String sql = "select * from user inner join role on user.role_id = role.role_id"
-				+ "where username = ? and password = ?";
+		String sql = "select * from user "
+				+ "where user_name = ? and password = ?";
 		List<User> users = query(sql, new UserMapper(), username, password);
-		return users.isEmpty()?null:users.get(0);
+		User us = users.isEmpty()?null:users.get(0);
+		RoleDAO rd = new RoleDAO();
+		Role role = rd.findById(us.getRoleId());
+		us.setRole(role);
+		return us;
 	}
 
 	@Override

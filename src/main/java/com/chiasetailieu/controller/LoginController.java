@@ -18,7 +18,7 @@ import com.chiasetailieu.utils.AppUtils;
 /**
  * Servlet implementation class LoginController
  */
-@WebServlet("/LoginController")
+@WebServlet("/login")
 public class LoginController extends HttpServlet {
     private static final long serialVersionUID = 1L;
  
@@ -30,7 +30,7 @@ public class LoginController extends HttpServlet {
             throws ServletException, IOException {
  
         RequestDispatcher dispatcher //
-                = this.getServletContext().getRequestDispatcher("/WEB-INF/views/loginView.jsp");
+                = this.getServletContext().getRequestDispatcher("/view/web/login.jsp");
  
         dispatcher.forward(request, response);
     }
@@ -39,8 +39,8 @@ public class LoginController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
  
-        String userName = request.getParameter("userName");
-        String password = request.getParameter("password");
+        String userName = request.getParameter("uname");
+        String password = request.getParameter("psw");
         User userAccount = userService.findByUsernameAndPassword(userName, password);
  
         if (userAccount == null) {
@@ -49,7 +49,7 @@ public class LoginController extends HttpServlet {
             request.setAttribute("errorMessage", errorMessage);
  
             RequestDispatcher dispatcher //
-                    = this.getServletContext().getRequestDispatcher("/WEB-INF/views/loginView.jsp");
+                    = this.getServletContext().getRequestDispatcher("/view/web/login.jsp");
  
             dispatcher.forward(request, response);
             return;
@@ -69,7 +69,7 @@ public class LoginController extends HttpServlet {
         } else {
             // Mặc định sau khi đăng nhập thành công
             // chuyển hướng về trang /userInfo
-            response.sendRedirect(request.getContextPath() + "/userInfo");
+        		response.sendRedirect(request.getContextPath() + "/view/web/index.html");
         }
  
     }
