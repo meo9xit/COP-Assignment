@@ -1,3 +1,8 @@
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="dec"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
 <!-- saved from url=(0021)https://sharecode.vn/ -->
 <html lang="vi" xml:lang="vi" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
@@ -12,13 +17,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="twitter:card" value="summary">
 <meta property="og:site_name" content="Sharecode.vn">
-<link rel="stylesheet" type="text/css" href="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/select2.min.css">
-<link rel="stylesheet" type="text/css" href="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/jquery-ui.min.css">
-<link rel="stylesheet" type="text/css" href="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/animate.css">
-<link rel="stylesheet" type="text/css" href="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/reset.css">
-<link rel="stylesheet" type="text/css" href="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/style.css">
+<link rel="stylesheet" type="text/css" href="style/web-style/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="style/web-style/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="style/web-style/select2.min.css">
+<link rel="stylesheet" type="text/css" href="style/web-style/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="style/web-style/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="style/web-style/animate.css">
+<link rel="stylesheet" type="text/css" href="style/web-style/reset.css">
+<link rel="stylesheet" type="text/css" href="style/web-style/style.css">
     <meta name="description" content="Thư viện chia sẻ và download source code, upload code kiếm tiền, tổng hợp các mã nguồn và đồ án, kiến thức lập trình chuyên nghành công nghệ thông tin">
     <meta name="keywords" content="Downloads source code, đồ án, mã nguồn, source code web, do an lap trinh, Source Code free, source web bán hàng,share code">
     <meta property="og:image" content="https://sharecode.vn/assets/images/logo_sharecode.png">
@@ -28,8 +33,8 @@
     <meta property="og:description" content="Thư viện chia sẻ và download source code, upload code kiếm tiền, tổng hợp các mã nguồn và đồ án, kiến thức lập trình chuyên nghành công nghệ thông tin">
     
     <link href="https://sharecode.vn/" rel="canonical">
-    <link rel="stylesheet" type="text/css" href="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/jquery.bxslider.css">
-<link rel="stylesheet" type="text/css" href="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/responsive.css">
+    <link rel="stylesheet" type="text/css" href="style/web-style/jquery.bxslider.css">
+<link rel="stylesheet" type="text/css" href="style/web-style/responsive.css">
 <style type="text/css"></style>
 <style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
 .fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
@@ -37,9 +42,9 @@
 </head>
 <body class="home">
     
-    <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div><div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/xd_arbiter.html" style="border: none;"></iframe></div></div></div>
+    <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div><div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="style/web-style/xd_arbiter.html" style="border: none;"></iframe></div></div></div>
     
-    <script async="" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/analytics.js.tải xuống"></script><script src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/sdk.js.tải xuống" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/sdk.js(1).tải xuống"></script><script>
+    <script async="" src="style/web-style/analytics.js.tải xuống"></script><script src="style/web-style/sdk.js.tải xuống" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="style/web-style/sdk.js(1).tải xuống"></script><script>
         window.fbAsyncInit = function () {
             FB.init({
                 appId: '1938824166400762',
@@ -83,11 +88,11 @@ function __doPostBack(eventTarget, eventArgument) {
 </script>
 
 
-<script src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/WebResource.axd" type="text/javascript"></script>
+<script src="style/web-style/WebResource.axd" type="text/javascript"></script>
 
 
-<script src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/ScriptResource.axd" type="text/javascript"></script>
-<script src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/ScriptResource(1).axd" type="text/javascript"></script>
+<script src="style/web-style/ScriptResource.axd" type="text/javascript"></script>
+<script src="style/web-style/ScriptResource(1).axd" type="text/javascript"></script>
 <div class="aspNetHidden">
 
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="8D0E13E6">
@@ -106,18 +111,18 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                     <div class="item" style="background: #86bd3b;">
                         
                         <a data-toggle="modal" data-target="#LoginForm" onclick="createCaptcha();" title="UPLOAD source code KIẾM TIỀN cùng Sharecode.vn">
-                            <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/code-hay-upload-kiem-tien.jpg">
+                            <img src="style/web-style/code-hay-upload-kiem-tien.jpg">
                         </a>
                         
                     </div>
                      <div class="item" style="background: #2175ba;">
                         <a href="https://sharecode.vn/kien-thuc-lap-trinh/dich-vu-thiet-ke-website-chuyen-nghiep-voi-gia-cuc-re-va-nhieu-uu-dai-tai-sharecodevn-880.htm" title="Dịch vụ thiết kế website" target="_blank">
-                            <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/thiet-ke-website.jpg">
+                            <img src="style/web-style/thiet-ke-website.jpg">
                         </a>
                     </div>
                    <div class="item active" style="background: #34a5cd;">
                                 <a href="https://sharecode.vn/vps-may-chu-ao.htm" title="Đăng kí CLOULD VPS NGAY!">
-                                <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/share-code-clould-vps.jpg"> </a>
+                                <img src="style/web-style/share-code-clould-vps.jpg"> </a>
                             </div>
                           
                    
@@ -130,9 +135,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                 <div class="container">                    
                     <div class="nav-top-links">
                         <a class="first-item" href="tel:+84981282756" title="Click gọi ngay!">
-                            <img alt="hotline" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/phone.png">0981.282.756</a>
+                            <img alt="hotline" src="style/web-style/phone.png">0981.282.756</a>
                         <a href="mailto:sharecode.contact@gmail.com" title="Click để gửi email!">
-                            <img alt="email sharecode" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/email.png">Sharecode.contact@gmail.com</a>
+                            <img alt="email sharecode" src="style/web-style/email.png">Sharecode.contact@gmail.com</a>
                         <a href="https://sharecode.vn/kien-thuc-lap-trinh.htm">Kiến thức lập trình</a>
                         <a href="https://sharecode.vn/su-kien.htm">Sự kiện</a>
                     </div>
@@ -148,7 +153,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 col-md-3 logo">
                         <a href="https://sharecode.vn/">
-                            <img alt="Trang chủ sharecode.vn" title="Sharecode.vn" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/logo.png"></a>
+                            <img alt="Trang chủ sharecode.vn" title="Sharecode.vn" src="style/web-style/logo.png"></a>
                     </div>
                     <div class="col-xs-7 col-sm-7 col-md-6 header-search-box">
                         
@@ -174,7 +179,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                     <ul class="vertical-menu-list">
                                         <li>
                                             <a class="parent" href="https://sharecode.vn/#">
-                                                <img class="icon-menu" alt="Thể loại code" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/2.png">PHÂN LOẠI CODE</a>
+                                                <img class="icon-menu" alt="Thể loại code" src="style/web-style/2.png">PHÂN LOẠI CODE</a>
                                             <div class="vertical-dropdown-menu" style="width: 902px;">
                                                 <div class="vertical-groups col-sm-6 col-md-4">
                                                     <div class="mega-group col-sm-12">
@@ -209,49 +214,49 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                         </li>
                                         
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/android-15.htm">
-                                                    <img class="icon-menu" alt="Android" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/3.png">Android</a></li>
+                                                    <img class="icon-menu" alt="Android" src="style/web-style/3.png">Android</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/ios-23.htm">
-                                                    <img class="icon-menu" alt="iOS" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/3.png">iOS</a></li>
+                                                    <img class="icon-menu" alt="iOS" src="style/web-style/3.png">iOS</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/windows-phone-26.htm">
-                                                    <img class="icon-menu" alt="Windows phone" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/3.png">Windows phone</a></li>
+                                                    <img class="icon-menu" alt="Windows phone" src="style/web-style/3.png">Windows phone</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/php-mysql-21.htm">
-                                                    <img class="icon-menu" alt="PHP &amp; MySQL" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/3.png">PHP &amp; MySQL</a></li>
+                                                    <img class="icon-menu" alt="PHP &amp; MySQL" src="style/web-style/3.png">PHP &amp; MySQL</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">
-                                                    <img class="icon-menu" alt="WordPress" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/3.png">WordPress</a></li>
+                                                    <img class="icon-menu" alt="WordPress" src="style/web-style/3.png">WordPress</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/joomla-28.htm">
-                                                    <img class="icon-menu" alt="Joomla" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/3.png">Joomla</a></li>
+                                                    <img class="icon-menu" alt="Joomla" src="style/web-style/3.png">Joomla</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-17.htm">
-                                                    <img class="icon-menu" alt="Visual C#" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/3.png">Visual C#</a></li>
+                                                    <img class="icon-menu" alt="Visual C#" src="style/web-style/3.png">Visual C#</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/aspaspnet-16.htm">
-                                                    <img class="icon-menu" alt="Asp/Asp.Net" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/3.png">Asp/Asp.Net</a></li>
+                                                    <img class="icon-menu" alt="Asp/Asp.Net" src="style/web-style/3.png">Asp/Asp.Net</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/javajsp-20.htm">
-                                                    <img class="icon-menu" alt="Java/JSP" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/3.png">Java/JSP</a></li>
+                                                    <img class="icon-menu" alt="Java/JSP" src="style/web-style/3.png">Java/JSP</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-basic-19.htm">
-                                                    <img class="icon-menu" alt="Visual Basic" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/3.png">Visual Basic</a></li>
+                                                    <img class="icon-menu" alt="Visual Basic" src="style/web-style/3.png">Visual Basic</a></li>
                                             
                                                 <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/cocos2d-24.htm">
-                                                    <img class="icon-menu" alt="Cocos2D" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/3.png">Cocos2D</a></li>
+                                                    <img class="icon-menu" alt="Cocos2D" src="style/web-style/3.png">Cocos2D</a></li>
                                             
                                                 <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/unity-27.htm">
-                                                    <img class="icon-menu" alt="Unity" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/3.png">Unity</a></li>
+                                                    <img class="icon-menu" alt="Unity" src="style/web-style/3.png">Unity</a></li>
                                             
                                                 <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-18.htm">
-                                                    <img class="icon-menu" alt="Visual C++" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/3.png">Visual C++</a></li>
+                                                    <img class="icon-menu" alt="Visual C++" src="style/web-style/3.png">Visual C++</a></li>
                                             
                                                 <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/html-template-25.htm">
-                                                    <img class="icon-menu" alt="Html &amp; Template" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/3.png">Html &amp; Template</a></li>
+                                                    <img class="icon-menu" alt="Html &amp; Template" src="style/web-style/3.png">Html &amp; Template</a></li>
                                             
                                                 <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/khac-22.htm">
-                                                    <img class="icon-menu" alt="Khác" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/3.png">Khác</a></li>
+                                                    <img class="icon-menu" alt="Khác" src="style/web-style/3.png">Khác</a></li>
                                             
                                     </ul>
                                     <div class="all-category"><span class="open-cate">Xem tất cả</span></div>
@@ -490,7 +495,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
     }
 </script>
 <div style="height: 30px; width: 140px; float: left; margin-left: 10px;">
-    <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/captcha.jpg" alt="captcha" class="imgCaptcha" height="30" width="80">
+    <img src="style/web-style/captcha.jpg" alt="captcha" class="imgCaptcha" height="30" width="80">
     <div class="aorange" style="float: right; width: 60px; margin-top: 6px; padding-left: 5px;" onclick="return createCaptcha();">
         Mã khác
     </div>
@@ -537,15 +542,15 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                     <div class="homeslider">
                         <div class="content-slide">
                             <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 450px;"><ul id="contenhomeslider" style="width: 415%; position: relative; transition-duration: 0.5s; transform: translate3d(-1332px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 666px;" class="bx-clone">
-                                    <img alt="Phân biệt sharecode.vn và topcode.vn" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/Sharecode-vs-topcode.jpg" title="Sharecode.vn thư viện code tham khảo và Topcode.vn sàn code chất lượng cao"></li>
+                                    <img alt="Phân biệt sharecode.vn và topcode.vn" src="style/web-style/Sharecode-vs-topcode.jpg" title="Sharecode.vn thư viện code tham khảo và Topcode.vn sàn code chất lượng cao"></li>
                                 <li style="float: left; list-style: none; position: relative; width: 666px;">
-                                    <img alt="sharecode cộng đồng download source code" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/share-code-1.jpg" title="Thư viện download code hàng đầu Việt Nam - Upload mỗi ngày!"></li>
+                                    <img alt="sharecode cộng đồng download source code" src="style/web-style/share-code-1.jpg" title="Thư viện download code hàng đầu Việt Nam - Upload mỗi ngày!"></li>
                               
                                 <li style="float: left; list-style: none; position: relative; width: 666px;">
-                                    <img alt="Phân biệt sharecode.vn và topcode.vn" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/Sharecode-vs-topcode.jpg" title="Sharecode.vn thư viện code tham khảo và Topcode.vn sàn code chất lượng cao"></li>
+                                    <img alt="Phân biệt sharecode.vn và topcode.vn" src="style/web-style/Sharecode-vs-topcode.jpg" title="Sharecode.vn thư viện code tham khảo và Topcode.vn sàn code chất lượng cao"></li>
                                 
                             <li style="float: left; list-style: none; position: relative; width: 666px;" class="bx-clone">
-                                    <img alt="sharecode cộng đồng download source code" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/share-code-1.jpg" title="Thư viện download code hàng đầu Việt Nam - Upload mỗi ngày!"></li></ul></div><div class="bx-controls bx-has-pager bx-has-controls-direction"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="https://sharecode.vn/" data-slide-index="0" class="bx-pager-link">1</a></div><div class="bx-pager-item"><a href="https://sharecode.vn/" data-slide-index="1" class="bx-pager-link active">2</a></div></div><div class="bx-controls-direction"><a class="bx-prev" href="https://sharecode.vn/"><i class="fa fa-angle-left"></i></a><a class="bx-next" href="https://sharecode.vn/"><i class="fa fa-angle-right"></i></a></div></div></div>
+                                    <img alt="sharecode cộng đồng download source code" src="style/web-style/share-code-1.jpg" title="Thư viện download code hàng đầu Việt Nam - Upload mỗi ngày!"></li></ul></div><div class="bx-controls bx-has-pager bx-has-controls-direction"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="https://sharecode.vn/" data-slide-index="0" class="bx-pager-link">1</a></div><div class="bx-pager-item"><a href="https://sharecode.vn/" data-slide-index="1" class="bx-pager-link active">2</a></div></div><div class="bx-controls-direction"><a class="bx-prev" href="https://sharecode.vn/"><i class="fa fa-angle-left"></i></a><a class="bx-next" href="https://sharecode.vn/"><i class="fa fa-angle-right"></i></a></div></div></div>
                         </div>
                     </div>
                     <div class="header-banner banner-opacity">
@@ -729,7 +734,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
         <div class="service ">
             <div class="col-xs-6 col-sm-3 service-item service-line ">
                 <div class="icon">
-                    <img alt="services" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/s1.png">
+                    <img alt="services" src="style/web-style/s1.png">
                 </div>
                 <div class="info">
                     <span class="title3 orange">CODE PHONG PHÚ</span>
@@ -738,7 +743,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
             </div>
             <div class="col-xs-6 col-sm-3 service-item service-line">
                 <div class="icon">
-                    <img alt="services" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/s2.png">
+                    <img alt="services" src="style/web-style/s2.png">
                 </div>
                 <div class="info">
                     <span class="title3 orange">CODE CHẤT LƯỢNG</span>
@@ -747,7 +752,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
             </div>
             <div class="col-xs-6 col-sm-3 service-item service-line">
                 <div class="icon">
-                    <img alt="services" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/s3.png">
+                    <img alt="services" src="style/web-style/s3.png">
                 </div>
 
                 <div class="info">
@@ -757,7 +762,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
             </div>
             <div class="col-xs-6 col-sm-3 service-item service-line">
                 <div class="icon">
-                    <img alt="services" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/s4.png">
+                    <img alt="services" src="style/web-style/s4.png">
                 </div>
                 <div class="info">
                     <span class="title3 orange">THANH TOÁN</span>
@@ -770,12 +775,12 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
     <div class="row banner-bottom">
             <div class="col-sm-6">
                 <div class="banner-boder-zoom">
-                    <a href="https://sharecode.vn/dang-ki-ten-mien.htm"><img alt="Kiểm tra và đăng kí tên miền" class="img-responsive" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/banner-domain.jpg"></a>
+                    <a href="https://sharecode.vn/dang-ki-ten-mien.htm"><img alt="Kiểm tra và đăng kí tên miền" class="img-responsive" src="style/web-style/banner-domain.jpg"></a>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="banner-boder-zoom">
-                    <a href="https://sharecode.vn/hosting-ssd.htm"><img alt="Đăng kí hosting ssd chất lượng cao" class="img-responsive" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/banner-hosting.jpg"></a>
+                    <a href="https://sharecode.vn/hosting-ssd.htm"><img alt="Đăng kí hosting ssd chất lượng cao" class="img-responsive" src="style/web-style/banner-hosting.jpg"></a>
                 </div>
             </div>
         </div></div>
@@ -811,7 +816,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     <div class="left-block">
                                                         <a href="https://sharecode.vn/source-code/ma-nguon-web-thi-trac-nghiem-truc-tuyen-codeigniter-23731.htm">
                                                             <div class="img-box">
-                                                                <img class="img-responsive" itemprop="image" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/ma-nguon-web-thi-trac-nghiem-truc-tuyen-codeigniter-225257.jpg" alt="Mã nguồn web thi trắc nghiệm trực tuyến CodeIgniter" title="Download Mã nguồn web thi trắc nghiệm trực tuyến CodeIgniter">
+                                                                <img class="img-responsive" itemprop="image" src="style/web-style/ma-nguon-web-thi-trac-nghiem-truc-tuyen-codeigniter-225257.jpg" alt="Mã nguồn web thi trắc nghiệm trực tuyến CodeIgniter" title="Download Mã nguồn web thi trắc nghiệm trực tuyến CodeIgniter">
                                                             </div>
                                                         </a>
                                                         <div class="quick-view">
@@ -851,7 +856,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     <div class="left-block">
                                                         <a href="https://sharecode.vn/source-code/source-code-do-an-website-ban-thuc-pham-tay-bac-bang-laravel-23717.htm">
                                                             <div class="img-box">
-                                                                <img class="img-responsive" itemprop="image" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/source-code-do-an-website-ban-thuc-pham-tay-bac-bang-laravel-135854.jpg" alt="Source code đồ án website bán thực phẩm tây bắc bằng laravel" title="Download Source code đồ án website bán thực phẩm tây bắc bằng laravel">
+                                                                <img class="img-responsive" itemprop="image" src="style/web-style/source-code-do-an-website-ban-thuc-pham-tay-bac-bang-laravel-135854.jpg" alt="Source code đồ án website bán thực phẩm tây bắc bằng laravel" title="Download Source code đồ án website bán thực phẩm tây bắc bằng laravel">
                                                             </div>
                                                         </a>
                                                         <div class="quick-view">
@@ -891,7 +896,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     <div class="left-block">
                                                         <a href="https://sharecode.vn/source-code/share-code-mau-gioi-thieu-nha-hang-quan-an-woordpress-23716.htm">
                                                             <div class="img-box">
-                                                                <img class="img-responsive" itemprop="image" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/share-code-mau-gioi-thieu-nha-hang-quan-an-woordpress-13516.jpg" alt="Share code mẫu giới thiệu nhà hàng quán ăn woordpress" title="Download Share code mẫu giới thiệu nhà hàng quán ăn woordpress">
+                                                                <img class="img-responsive" itemprop="image" src="style/web-style/share-code-mau-gioi-thieu-nha-hang-quan-an-woordpress-13516.jpg" alt="Share code mẫu giới thiệu nhà hàng quán ăn woordpress" title="Download Share code mẫu giới thiệu nhà hàng quán ăn woordpress">
                                                             </div>
                                                         </a>
                                                         <div class="quick-view">
@@ -931,7 +936,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     <div class="left-block">
                                                         <a href="https://sharecode.vn/source-code/source-code-do-an-website-ban-smart-tivi-bang-php-va-mysql-23715.htm">
                                                             <div class="img-box">
-                                                                <img class="img-responsive" itemprop="image" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/source-code-do-an-website-ban-smart-tivi-bang-php-va-mysql-12266.jpg" alt="Source code đồ án website bán smart tivi bằng PHP và MYSQL" title="Download Source code đồ án website bán smart tivi bằng PHP và MYSQL">
+                                                                <img class="img-responsive" itemprop="image" src="style/web-style/source-code-do-an-website-ban-smart-tivi-bang-php-va-mysql-12266.jpg" alt="Source code đồ án website bán smart tivi bằng PHP và MYSQL" title="Download Source code đồ án website bán smart tivi bằng PHP và MYSQL">
                                                             </div>
                                                         </a>
                                                         <div class="quick-view">
@@ -971,7 +976,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     <div class="left-block">
                                                         <a href="https://sharecode.vn/source-code/source-code-wordpress-gioi-thieu-san-pham-phan-mem-cong-ty-23713.htm">
                                                             <div class="img-box">
-                                                                <img class="img-responsive" itemprop="image" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/source-code-wordpress-gioi-thieu-san-pham-phan-mem-cong-ty-104322.jpg" alt="Source code Wordpress giới thiệu sản phẩm phần mềm công ty" title="Download Source code Wordpress giới thiệu sản phẩm phần mềm công ty">
+                                                                <img class="img-responsive" itemprop="image" src="style/web-style/source-code-wordpress-gioi-thieu-san-pham-phan-mem-cong-ty-104322.jpg" alt="Source code Wordpress giới thiệu sản phẩm phần mềm công ty" title="Download Source code Wordpress giới thiệu sản phẩm phần mềm công ty">
                                                             </div>
                                                         </a>
                                                         <div class="quick-view">
@@ -1011,7 +1016,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     <div class="left-block">
                                                         <a href="https://sharecode.vn/source-code/share-code-website-booking-phong-khach-san-cuc-dep-chuan-seo-full-code-23710.htm">
                                                             <div class="img-box">
-                                                                <img class="img-responsive" itemprop="image" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/share-code-website-booking-phong-khach-san-cuc-dep-chuan-seo-full-code-14582.jpg" alt="Share Code website Booking phòng khách sạn cực đẹp chuẩn seo Full code" title="Download Share Code website Booking phòng khách sạn cực đẹp chuẩn seo Full code">
+                                                                <img class="img-responsive" itemprop="image" src="style/web-style/share-code-website-booking-phong-khach-san-cuc-dep-chuan-seo-full-code-14582.jpg" alt="Share Code website Booking phòng khách sạn cực đẹp chuẩn seo Full code" title="Download Share Code website Booking phòng khách sạn cực đẹp chuẩn seo Full code">
                                                             </div>
                                                         </a>
                                                         <div class="quick-view">
@@ -1051,7 +1056,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     <div class="left-block">
                                                         <a href="https://sharecode.vn/source-code/full-source-code-app-webview-vovinam-martial-arts-already-release-appstore-ch-play-23708.htm">
                                                             <div class="img-box">
-                                                                <img class="img-responsive" itemprop="image" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/full-source-code-app-webview-vovinam-martial-arts-already-release-appstore-ch-play-133518.jpg" alt="Full Source CODE app webview Vovinam Martial Arts ( Already Release AppStore, CH Play)" title="Download Full Source CODE app webview Vovinam Martial Arts ( Already Release AppStore, CH Play)">
+                                                                <img class="img-responsive" itemprop="image" src="style/web-style/full-source-code-app-webview-vovinam-martial-arts-already-release-appstore-ch-play-133518.jpg" alt="Full Source CODE app webview Vovinam Martial Arts ( Already Release AppStore, CH Play)" title="Download Full Source CODE app webview Vovinam Martial Arts ( Already Release AppStore, CH Play)">
                                                             </div>
                                                         </a>
                                                         <div class="quick-view">
@@ -1091,7 +1096,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     <div class="left-block">
                                                         <a href="https://sharecode.vn/source-code/bo-adobe-xd-giao-dien-app-booking-interpreter-23707.htm">
                                                             <div class="img-box">
-                                                                <img class="img-responsive" itemprop="image" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/bo-adobe-xd-giao-dien-app-booking-interpreter-132729.jpg" alt="Bộ Adobe XD giao diện App Booking Interpreter" title="Download Bộ Adobe XD giao diện App Booking Interpreter">
+                                                                <img class="img-responsive" itemprop="image" src="style/web-style/bo-adobe-xd-giao-dien-app-booking-interpreter-132729.jpg" alt="Bộ Adobe XD giao diện App Booking Interpreter" title="Download Bộ Adobe XD giao diện App Booking Interpreter">
                                                             </div>
                                                         </a>
                                                         <div class="quick-view">
@@ -1131,7 +1136,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     <div class="left-block">
                                                         <a href="https://sharecode.vn/source-code/full-source-code-du-an-mau-quan-li-sach-fpt-polytechnic-23706.htm">
                                                             <div class="img-box">
-                                                                <img class="img-responsive" itemprop="image" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/full-source-code-du-an-mau-quan-li-sach-fpt-polytechnic-131731.jpg" alt="Full Source Code Dự Án Mẫu Quản Lí Sách (FPT polytechnic)" title="Download Full Source Code Dự Án Mẫu Quản Lí Sách (FPT polytechnic)">
+                                                                <img class="img-responsive" itemprop="image" src="style/web-style/full-source-code-du-an-mau-quan-li-sach-fpt-polytechnic-131731.jpg" alt="Full Source Code Dự Án Mẫu Quản Lí Sách (FPT polytechnic)" title="Download Full Source Code Dự Án Mẫu Quản Lí Sách (FPT polytechnic)">
                                                             </div>
                                                         </a>
                                                         <div class="quick-view">
@@ -1171,7 +1176,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     <div class="left-block">
                                                         <a href="https://sharecode.vn/source-code/ung-dung-android-order_food-full-bao-cao-23705.htm">
                                                             <div class="img-box">
-                                                                <img class="img-responsive" itemprop="image" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/ung-dung-android-order_food-full-bao-cao-2289.jpg" alt="Ứng dụng Android Order_Food + full báo cáo" title="Download Ứng dụng Android Order_Food + full báo cáo">
+                                                                <img class="img-responsive" itemprop="image" src="style/web-style/ung-dung-android-order_food-full-bao-cao-2289.jpg" alt="Ứng dụng Android Order_Food + full báo cáo" title="Download Ứng dụng Android Order_Food + full báo cáo">
                                                             </div>
                                                         </a>
                                                         <div class="quick-view">
@@ -1211,7 +1216,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     <div class="left-block">
                                                         <a href="https://sharecode.vn/source-code/share-code-website-thuong-mai-dien-tu-ban-laptop-bang-php-mysql-khong-loi-lam-full-100-code-php-bao-cao-slide-23704.htm">
                                                             <div class="img-box">
-                                                                <img class="img-responsive" itemprop="image" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/share-code-website-thuong-mai-dien-tu-ban-laptop-bang-php-mysql-khong-loi-lam-full-100-code-php-bao-cao-slide-211621.jpg" alt="Share code website thương mại điện tử bán Laptop bằng PHP &amp; MySQL không lỗi lầm ( Full 100% Code PHP + Báo Cáo + Slide)" title="Download Share code website thương mại điện tử bán Laptop bằng PHP &amp; MySQL không lỗi lầm ( Full 100% Code PHP + Báo Cáo + Slide)">
+                                                                <img class="img-responsive" itemprop="image" src="style/web-style/share-code-website-thuong-mai-dien-tu-ban-laptop-bang-php-mysql-khong-loi-lam-full-100-code-php-bao-cao-slide-211621.jpg" alt="Share code website thương mại điện tử bán Laptop bằng PHP &amp; MySQL không lỗi lầm ( Full 100% Code PHP + Báo Cáo + Slide)" title="Download Share code website thương mại điện tử bán Laptop bằng PHP &amp; MySQL không lỗi lầm ( Full 100% Code PHP + Báo Cáo + Slide)">
                                                             </div>
                                                         </a>
                                                         <div class="quick-view">
@@ -1251,7 +1256,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                     <div class="left-block">
                                                         <a href="https://sharecode.vn/source-code/source-code-web-wordpress-noi-that-thiet-bi-ve-sinh-giay-dan-tuong-23703.htm">
                                                             <div class="img-box">
-                                                                <img class="img-responsive" itemprop="image" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/source-code-web-wordpress-noi-that---thiet-bi-ve-sinh---giay-dan-tuong...-192653.jpg" alt="Source code WEB wordpress nội thất - thiết bị vệ sinh - giấy dán tường..." title="Download Source code WEB wordpress nội thất - thiết bị vệ sinh - giấy dán tường...">
+                                                                <img class="img-responsive" itemprop="image" src="style/web-style/source-code-web-wordpress-noi-that---thiet-bi-ve-sinh---giay-dan-tuong...-192653.jpg" alt="Source code WEB wordpress nội thất - thiết bị vệ sinh - giấy dán tường..." title="Download Source code WEB wordpress nội thất - thiết bị vệ sinh - giấy dán tường...">
                                                             </div>
                                                         </a>
                                                         <div class="quick-view">
@@ -1318,7 +1323,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                             <div class="left-block">
                                                                 <a href="https://sharecode.vn/source-code/full-code-tin-tuc-wordpress-cuc-load-cuc-nhanh-nhe-mien-phi-23642.htm">
                                                                     <div class="img-box">
-                                                                        <img class="img-responsive" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/full-code-tin-tuc-wordpress-cuc-load-cuc-nhanh-nhe-mien-phi-111544.jpg" alt="Full code tin tức wordpress cực load cực nhanh" title="Download Full code tin tức wordpress cực load cực nhanh">
+                                                                        <img class="img-responsive" src="style/web-style/full-code-tin-tuc-wordpress-cuc-load-cuc-nhanh-nhe-mien-phi-111544.jpg" alt="Full code tin tức wordpress cực load cực nhanh" title="Download Full code tin tức wordpress cực load cực nhanh">
                                                                     </div>
                                                                 </a>
                                                                 <div class="quick-view">
@@ -1347,7 +1352,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                             <div class="left-block">
                                                                 <a href="https://sharecode.vn/source-code/fulll-code-wordpress-reviews-it-theme-sach-wordpress-dep-load-nhanh-23657.htm">
                                                                     <div class="img-box">
-                                                                        <img class="img-responsive" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/fulll-code-wordpress-reviews-it-theme-sach-wordpress-dep-load-nhanh-112139.jpg" alt="Fulll code wordpress reviews IT , theme Sạch , wordpress đẹp , load nhanh" title="Download Fulll code wordpress reviews IT , theme Sạch , wordpress đẹp , load nhanh">
+                                                                        <img class="img-responsive" src="style/web-style/fulll-code-wordpress-reviews-it-theme-sach-wordpress-dep-load-nhanh-112139.jpg" alt="Fulll code wordpress reviews IT , theme Sạch , wordpress đẹp , load nhanh" title="Download Fulll code wordpress reviews IT , theme Sạch , wordpress đẹp , load nhanh">
                                                                     </div>
                                                                 </a>
                                                                 <div class="quick-view">
@@ -1376,7 +1381,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                             <div class="left-block">
                                                                 <a href="https://sharecode.vn/source-code/source-code-mang-xa-hoi-sngine-v26-23655.htm">
                                                                     <div class="img-box">
-                                                                        <img class="img-responsive" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/source-code-mang-xa-hoi-sngine-v2.6-22341.jpg" alt="Source Code Mạng Xã Hội Sngine v2.6" title="Download Source Code Mạng Xã Hội Sngine v2.6">
+                                                                        <img class="img-responsive" src="style/web-style/source-code-mang-xa-hoi-sngine-v2.6-22341.jpg" alt="Source Code Mạng Xã Hội Sngine v2.6" title="Download Source Code Mạng Xã Hội Sngine v2.6">
                                                                     </div>
                                                                 </a>
                                                                 <div class="quick-view">
@@ -1405,7 +1410,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                             <div class="left-block">
                                                                 <a href="https://sharecode.vn/source-code/full-code-java-4-fpt-polytechnic-23693.htm">
                                                                     <div class="img-box">
-                                                                        <img class="img-responsive" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/full-code-java-4-fpt-polytechnic-10347.jpg" alt="Full code Java 4 FPT Polytechnic" title="Download Full code Java 4 FPT Polytechnic">
+                                                                        <img class="img-responsive" src="style/web-style/full-code-java-4-fpt-polytechnic-10347.jpg" alt="Full code Java 4 FPT Polytechnic" title="Download Full code Java 4 FPT Polytechnic">
                                                                     </div>
                                                                 </a>
                                                                 <div class="quick-view">
@@ -1443,7 +1448,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                             <div class="left-block">
                                                                 <a href="https://sharecode.vn/source-code/full-source-code-ung-dung-quan-ly-sach-du-an-mau-android-studio-23479.htm">
                                                                     <div class="img-box">
-                                                                        <img class="img-responsive" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/full-source-code-ung-dung-quan-ly-sach-du-an-mau-android-studio-154842.jpg" alt="Full source code ứng dụng quản lý Sách ( Dự Án MẪU ANDROID STUDIO)" title="Download Full source code ứng dụng quản lý Sách ( Dự Án MẪU ANDROID STUDIO)">
+                                                                        <img class="img-responsive" src="style/web-style/full-source-code-ung-dung-quan-ly-sach-du-an-mau-android-studio-154842.jpg" alt="Full source code ứng dụng quản lý Sách ( Dự Án MẪU ANDROID STUDIO)" title="Download Full source code ứng dụng quản lý Sách ( Dự Án MẪU ANDROID STUDIO)">
                                                                     </div>
                                                                 </a>
                                                                 <div class="quick-view">
@@ -1472,7 +1477,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                             <div class="left-block">
                                                                 <a href="https://sharecode.vn/source-code/app-quan-ly-nha-hang-du-an-1-android-23435.htm">
                                                                     <div class="img-box">
-                                                                        <img class="img-responsive" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/app-quan-ly-nha-hang-du-an-1-android-144733.jpg" alt="App quản lý nhà hàng (DỰ ÁN 1 ANDROID)" title="Download App quản lý nhà hàng (DỰ ÁN 1 ANDROID)">
+                                                                        <img class="img-responsive" src="style/web-style/app-quan-ly-nha-hang-du-an-1-android-144733.jpg" alt="App quản lý nhà hàng (DỰ ÁN 1 ANDROID)" title="Download App quản lý nhà hàng (DỰ ÁN 1 ANDROID)">
                                                                     </div>
                                                                 </a>
                                                                 <div class="quick-view">
@@ -1501,7 +1506,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                             <div class="left-block">
                                                                 <a href="https://sharecode.vn/source-code/source-code-quan-ly-khach-hang-va-dich-vu-23588.htm">
                                                                     <div class="img-box">
-                                                                        <img class="img-responsive" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/source-code-quan-ly-khach-hang-va-dich-vu-114130.jpg" alt="Source code Quản lý khách hàng và dịch vụ" title="Download Source code Quản lý khách hàng và dịch vụ">
+                                                                        <img class="img-responsive" src="style/web-style/source-code-quan-ly-khach-hang-va-dich-vu-114130.jpg" alt="Source code Quản lý khách hàng và dịch vụ" title="Download Source code Quản lý khách hàng và dịch vụ">
                                                                     </div>
                                                                 </a>
                                                                 <div class="quick-view">
@@ -1530,7 +1535,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                             <div class="left-block">
                                                                 <a href="https://sharecode.vn/source-code/source-code-xay-dung-ung-dung-gui-tin-nhan-ma-hoa-android-23379.htm">
                                                                     <div class="img-box">
-                                                                        <img class="img-responsive" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/source-code-xay-dung-ung-dung-gui-tin-nhan-ma-hoa-android-22114.jpg" alt="Source code xây dựng ứng dụng gửi tin nhắn mã hóa android" title="Download Source code xây dựng ứng dụng gửi tin nhắn mã hóa android">
+                                                                        <img class="img-responsive" src="style/web-style/source-code-xay-dung-ung-dung-gui-tin-nhan-ma-hoa-android-22114.jpg" alt="Source code xây dựng ứng dụng gửi tin nhắn mã hóa android" title="Download Source code xây dựng ứng dụng gửi tin nhắn mã hóa android">
                                                                     </div>
                                                                 </a>
                                                                 <div class="quick-view">
@@ -1568,7 +1573,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                             <div class="left-block">
                                                                 <a href="https://sharecode.vn/source-code/lap-lich-cpu-thuat-toan-sjf-23051.htm">
                                                                     <div class="img-box">
-                                                                        <img class="img-responsive" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/lap-lich-cpu-thuat-toan-sjf-144122.jpg" alt="Lập lịch CPU thuật toán SJF" title="Download Lập lịch CPU thuật toán SJF">
+                                                                        <img class="img-responsive" src="style/web-style/lap-lich-cpu-thuat-toan-sjf-144122.jpg" alt="Lập lịch CPU thuật toán SJF" title="Download Lập lịch CPU thuật toán SJF">
                                                                     </div>
                                                                 </a>
                                                                 <div class="quick-view">
@@ -1597,7 +1602,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                             <div class="left-block">
                                                                 <a href="https://sharecode.vn/source-code/dragon-shadow-warriors-23154.htm">
                                                                     <div class="img-box">
-                                                                        <img class="img-responsive" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/source-code-game-dragon-shadow-warriors-15456.jpg" alt="Source code game Dragon Shadow Warriors" title="Download Source code game Dragon Shadow Warriors">
+                                                                        <img class="img-responsive" src="style/web-style/source-code-game-dragon-shadow-warriors-15456.jpg" alt="Source code game Dragon Shadow Warriors" title="Download Source code game Dragon Shadow Warriors">
                                                                     </div>
                                                                 </a>
                                                                 <div class="quick-view">
@@ -1626,7 +1631,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                             <div class="left-block">
                                                                 <a href="https://sharecode.vn/source-code/game-caro-doc-file-text-22898.htm">
                                                                     <div class="img-box">
-                                                                        <img class="img-responsive" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/source-code-game-caro-doc-file-text-83715.jpg" alt="Source code Game caro đọc file text" title="Download Source code Game caro đọc file text">
+                                                                        <img class="img-responsive" src="style/web-style/source-code-game-caro-doc-file-text-83715.jpg" alt="Source code Game caro đọc file text" title="Download Source code Game caro đọc file text">
                                                                     </div>
                                                                 </a>
                                                                 <div class="quick-view">
@@ -1655,7 +1660,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                             <div class="left-block">
                                                                 <a href="https://sharecode.vn/source-code/share-code-game-mario-bang-html-javascript-23396.htm">
                                                                     <div class="img-box">
-                                                                        <img class="img-responsive" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/share-code-game-mario-bang-html-javascript-175523.jpg" alt="Share Code Game Mario Bằng HTML Javascript" title="Download Share Code Game Mario Bằng HTML Javascript">
+                                                                        <img class="img-responsive" src="style/web-style/share-code-game-mario-bang-html-javascript-175523.jpg" alt="Share Code Game Mario Bằng HTML Javascript" title="Download Share Code Game Mario Bằng HTML Javascript">
                                                                     </div>
                                                                 </a>
                                                                 <div class="quick-view">
@@ -1694,7 +1699,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                     <li>
                         <div class="products-block-left">
                             <a href="https://sharecode.vn/source-code/full-source-code-app-webview-vovinam-martial-arts-already-release-appstore-ch-play-23708.htm">
-                                <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/full-source-code-app-webview-vovinam-martial-arts-already-release-appstore-ch-play-133518.jpg" alt="App,web,web app,app view,web store app" title="Download Full Source CODE app webview Vovinam Martial Arts ( Already Release AppStore, CH Play)">
+                                <img src="style/web-style/full-source-code-app-webview-vovinam-martial-arts-already-release-appstore-ch-play-133518.jpg" alt="App,web,web app,app view,web store app" title="Download Full Source CODE app webview Vovinam Martial Arts ( Already Release AppStore, CH Play)">
                             </a>
                         </div>
                         <div class="products-block-right">
@@ -1717,7 +1722,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                     <li>
                         <div class="products-block-left">
                             <a href="https://sharecode.vn/source-code/full-source-code-du-an-mau-quan-li-sach-fpt-polytechnic-23706.htm">
-                                <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/full-source-code-du-an-mau-quan-li-sach-fpt-polytechnic-131731.jpg" alt="code de hieu           va de hiểu nhất,code java de hieu           va de hiểu nhất,ứng dụng android,app android,dự án fpoly,dự án cá nhân" title="Download Full Source Code Dự Án Mẫu Quản Lí Sách (FPT polytechnic)">
+                                <img src="style/web-style/full-source-code-du-an-mau-quan-li-sach-fpt-polytechnic-131731.jpg" alt="code de hieu           va de hiểu nhất,code java de hieu           va de hiểu nhất,ứng dụng android,app android,dự án fpoly,dự án cá nhân" title="Download Full Source Code Dự Án Mẫu Quản Lí Sách (FPT polytechnic)">
                             </a>
                         </div>
                         <div class="products-block-right">
@@ -1740,7 +1745,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                     <li>
                         <div class="products-block-left">
                             <a href="https://sharecode.vn/source-code/bo-adobe-xd-giao-dien-app-booking-interpreter-23707.htm">
-                                <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/bo-adobe-xd-giao-dien-app-booking-interpreter-132729.jpg" alt="App,giao diện,giao diện ổn,Adobe XD,app android,app mobile android" title="Download Bộ Adobe XD giao diện App Booking Interpreter">
+                                <img src="style/web-style/bo-adobe-xd-giao-dien-app-booking-interpreter-132729.jpg" alt="App,giao diện,giao diện ổn,Adobe XD,app android,app mobile android" title="Download Bộ Adobe XD giao diện App Booking Interpreter">
                             </a>
                         </div>
                         <div class="products-block-right">
@@ -1763,7 +1768,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                     <li>
                         <div class="products-block-left">
                             <a href="https://sharecode.vn/source-code/fulll-code-wordpress-reviews-it-theme-sach-wordpress-dep-load-nhanh-23657.htm">
-                                <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/fulll-code-wordpress-reviews-it-theme-sach-wordpress-dep-load-nhanh-112139.jpg" alt="theme wordpress,theme wordpress tin tức,theme wordpress miễn phí,theme tin tức wordpress,theme wordpress đẹp,share themeforest" title="Download Fulll code wordpress reviews IT , theme Sạch , wordpress đẹp , load nhanh">
+                                <img src="style/web-style/fulll-code-wordpress-reviews-it-theme-sach-wordpress-dep-load-nhanh-112139.jpg" alt="theme wordpress,theme wordpress tin tức,theme wordpress miễn phí,theme tin tức wordpress,theme wordpress đẹp,share themeforest" title="Download Fulll code wordpress reviews IT , theme Sạch , wordpress đẹp , load nhanh">
                             </a>
                         </div>
                         <div class="products-block-right">
@@ -1786,7 +1791,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                     <li>
                         <div class="products-block-left">
                             <a href="https://sharecode.vn/source-code/dua-pokemon-pokemon-crossing-23691.htm">
-                                <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/dua-pokemon---pokemon-crossing-162321.jpg" alt="Code game Pokemon,game pokemon,pokemon" title="Download Đua Pokemon - Pokemon Crossing">
+                                <img src="style/web-style/dua-pokemon---pokemon-crossing-162321.jpg" alt="Code game Pokemon,game pokemon,pokemon" title="Download Đua Pokemon - Pokemon Crossing">
                             </a>
                         </div>
                         <div class="products-block-right">
@@ -1854,13 +1859,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                 
             
     <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1500px, 0px, 0px); transition: all 0s ease 0s; width: 2100px;"><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm" rel="nofollow" target="_blank">
-                    <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/9_49_20_meo tang doanh thu ban code2.jpg" alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code" title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li></div><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="https://sharecode.vn/su-kien/uu-dai-tung-bung-tang-thuong-khi-upload-va-upload-code-dat-moc-11.htm" rel="nofollow" target="_blank">
-                    <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/0_21_40_sharecode tang thuong 2.jpg" alt="sự kiện, event, tặng thưởng, upload code" title="Sự kiện: Mừng ngày giỗ tổ 10/3 - Tặng thưởng khi upload code đạt mốc"></a></li></div><div class="owl-item" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/code-mien-phi.htm" rel="nofollow" target="_blank">
-                    <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/14_11_43_download source code, do an, ma nguon mien phi.jpg" alt="Download source code, download mã nguồn, đồ án miễn phí, thư viện chi sẻ source code" title="Download source code, mã nguồn miễn phí"></a></li></div><div class="owl-item" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm" rel="nofollow" target="_blank">
-                    <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/9_49_20_meo tang doanh thu ban code2.jpg" alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code" title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li></div><div class="owl-item animated owl-animated-out fadeOut" style="width: 270px; margin-right: 30px; left: 300px;"><li><a href="https://sharecode.vn/su-kien/uu-dai-tung-bung-tang-thuong-khi-upload-va-upload-code-dat-moc-11.htm" rel="nofollow" target="_blank">
-                    <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/0_21_40_sharecode tang thuong 2.jpg" alt="sự kiện, event, tặng thưởng, upload code" title="Sự kiện: Mừng ngày giỗ tổ 10/3 - Tặng thưởng khi upload code đạt mốc"></a></li></div><div class="owl-item cloned animated owl-animated-in fadeIn active" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/code-mien-phi.htm" rel="nofollow" target="_blank">
-                    <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/14_11_43_download source code, do an, ma nguon mien phi.jpg" alt="Download source code, download mã nguồn, đồ án miễn phí, thư viện chi sẻ source code" title="Download source code, mã nguồn miễn phí"></a></li></div><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm" rel="nofollow" target="_blank">
-                    <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/9_49_20_meo tang doanh thu ban code2.jpg" alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code" title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li></div></div></div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;"><i class="fa fa-angle-left"></i></div><div class="owl-next" style="display: none;"><i class="fa fa-angle-right"></i></div></div><div class="owl-dots" style=""><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div></div></div></ul>
+                    <img src="style/web-style/9_49_20_meo tang doanh thu ban code2.jpg" alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code" title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li></div><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="https://sharecode.vn/su-kien/uu-dai-tung-bung-tang-thuong-khi-upload-va-upload-code-dat-moc-11.htm" rel="nofollow" target="_blank">
+                    <img src="style/web-style/0_21_40_sharecode tang thuong 2.jpg" alt="sự kiện, event, tặng thưởng, upload code" title="Sự kiện: Mừng ngày giỗ tổ 10/3 - Tặng thưởng khi upload code đạt mốc"></a></li></div><div class="owl-item" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/code-mien-phi.htm" rel="nofollow" target="_blank">
+                    <img src="style/web-style/14_11_43_download source code, do an, ma nguon mien phi.jpg" alt="Download source code, download mã nguồn, đồ án miễn phí, thư viện chi sẻ source code" title="Download source code, mã nguồn miễn phí"></a></li></div><div class="owl-item" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm" rel="nofollow" target="_blank">
+                    <img src="style/web-style/9_49_20_meo tang doanh thu ban code2.jpg" alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code" title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li></div><div class="owl-item animated owl-animated-out fadeOut" style="width: 270px; margin-right: 30px; left: 300px;"><li><a href="https://sharecode.vn/su-kien/uu-dai-tung-bung-tang-thuong-khi-upload-va-upload-code-dat-moc-11.htm" rel="nofollow" target="_blank">
+                    <img src="style/web-style/0_21_40_sharecode tang thuong 2.jpg" alt="sự kiện, event, tặng thưởng, upload code" title="Sự kiện: Mừng ngày giỗ tổ 10/3 - Tặng thưởng khi upload code đạt mốc"></a></li></div><div class="owl-item cloned animated owl-animated-in fadeIn active" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/code-mien-phi.htm" rel="nofollow" target="_blank">
+                    <img src="style/web-style/14_11_43_download source code, do an, ma nguon mien phi.jpg" alt="Download source code, download mã nguồn, đồ án miễn phí, thư viện chi sẻ source code" title="Download source code, mã nguồn miễn phí"></a></li></div><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm" rel="nofollow" target="_blank">
+                    <img src="style/web-style/9_49_20_meo tang doanh thu ban code2.jpg" alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code" title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li></div></div></div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;"><i class="fa fa-angle-left"></i></div><div class="owl-next" style="display: none;"><i class="fa fa-angle-right"></i></div></div><div class="owl-dots" style=""><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div></div></div></ul>
 </div>
                     </div>
                 </div>
@@ -1869,7 +1874,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
     </div>
 
         
-<script src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/floater_xlib.js.tải xuống"></script>
+<script src="style/web-style/floater_xlib.js.tải xuống"></script>
 <script type="text/javascript">
 
     var slideTime = 600;
@@ -1920,13 +1925,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
 <div id="floating_banner_left" style="text-align: right; position: fixed; overflow: hidden; width: 120px; z-index: 99999; display: none; left: -70.5px; top: 60px;">
     <div id="floating_banner_left_content">
         <a href="https://sharecode.vn/kien-thuc-lap-trinh/dich-vu-thiet-ke-website-chuyen-nghiep-voi-gia-cuc-re-va-nhieu-uu-dai-tai-sharecodevn-880.htm" target="_blank">
-            <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/thiet-ke-web-gia-re.jpg" border="0" width="120" alt=""></a><br>
+            <img src="style/web-style/thiet-ke-web-gia-re.jpg" border="0" width="120" alt=""></a><br>
     </div>
 </div>
 <div id="floating_banner_right" style="text-align: left; position: fixed; overflow: hidden; width: 120px; z-index: 99999; left: 1299.5px; top: 60px; display: none;">
     <div id="Div2">
         <a href="https://topcode.vn/" target="_blank">
-            <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/Ra-mat-topcode.jpg" border="0" width="120" alt=""></a><br>
+            <img src="style/web-style/Ra-mat-topcode.jpg" border="0" width="120" alt=""></a><br>
     </div>
 </div>
   <script>
@@ -1945,7 +1950,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                             <div class="col-md-3">
                                 <div id="address-box">
                                     <a href="https://sharecode.vn/">
-                                        <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/logo.png" alt="Sharecode.vn"></a>
+                                        <img src="style/web-style/logo.png" alt="Sharecode.vn"></a>
                                     <div id="address-list">
                                         <div class="tit-name">Hotline:</div>
                                         <div class="tit-contain"><a href="tel:+84981282756" title="Click gọi ngay!">0981.282.756</a></div>
@@ -2015,28 +2020,28 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                 <ul id="trademark-list">
                                     <li id="payment-methods">Thanh toán đảm bảo</li>
                                     <li>
-                                        <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/b1.png" alt="ngan luong">
+                                        <img src="style/web-style/b1.png" alt="ngan luong">
                                     </li>
                                     <li>
-                                        <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/b10.png" alt="bao kim">
+                                        <img src="style/web-style/b10.png" alt="bao kim">
                                     </li>
                                     <li>
-                                        <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/b11.png" alt="momo">
+                                        <img src="style/web-style/b11.png" alt="momo">
                                     </li>
                                     <li>
-                                        <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/b8.png" alt="paypal">
+                                        <img src="style/web-style/b8.png" alt="paypal">
                                     </li>
                                     <li>
-                                        <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/b5.png" alt="vietcombank">
+                                        <img src="style/web-style/b5.png" alt="vietcombank">
                                     </li>
                                     <li>
-                                        <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/b9.png" alt="vietin bank">
+                                        <img src="style/web-style/b9.png" alt="vietin bank">
                                     </li>
                                     <li>
-                                        <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/b6.png" alt="agribank">
+                                        <img src="style/web-style/b6.png" alt="agribank">
                                     </li>
                                     <li>
-                                        <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/b7.png" alt="bidv">
+                                        <img src="style/web-style/b7.png" alt="bidv">
                                     </li>
                                     
                                 </ul>
@@ -2058,8 +2063,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                             <p class="text-center">
                                 Copyrights © 2014 Sharecode.vn - Nội dung đã được bảo vệ bản quyền
                                 <a href="https://www.dmca.com/Protection/Status.aspx?ID=e3cfb854-1733-4462-a9e8-0ef4661d6600&amp;refurl=https://sharecode.vn/" title="DMCA.com Protection Status" class="dmca-badge">
-                                    <img src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/dmca-badge-w150-5x1-09.png" alt="DMCA.com Protection Status"></a>
-                                <script src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/DMCABadgeHelper.min.js.tải xuống"> </script>
+                                    <img src="style/web-style/dmca-badge-w150-5x1-09.png" alt="DMCA.com Protection Status"></a>
+                                <script src="style/web-style/DMCABadgeHelper.min.js.tải xuống"> </script>
                             </p>
                         </div>
                     </div>
@@ -2070,13 +2075,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
 
     <a href="https://sharecode.vn/#" class="scroll_top" title="Lên đầu" style="display: inline;"></a>
     <!-- Script-->
-    <script type="text/javascript" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/jquery-1.11.2.min.js.tải xuống"></script>
-    <script type="text/javascript" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/bootstrap.min.js.tải xuống"></script>
-    <script type="text/javascript" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/select2.min.js.tải xuống"></script>
-    <script type="text/javascript" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/owl.carousel.min.js.tải xuống"></script>
-    <script type="text/javascript" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/jquery.actual.min.js.tải xuống"></script>
-    <script type="text/javascript" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/theme-script.js.tải xuống"></script>
-    <script type="text/javascript" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/jquery-ui.min.js.tải xuống"></script>
+    <script type="text/javascript" src="style/web-style/jquery-1.11.2.min.js.tải xuống"></script>
+    <script type="text/javascript" src="style/web-style/bootstrap.min.js.tải xuống"></script>
+    <script type="text/javascript" src="style/web-style/select2.min.js.tải xuống"></script>
+    <script type="text/javascript" src="style/web-style/owl.carousel.min.js.tải xuống"></script>
+    <script type="text/javascript" src="style/web-style/jquery.actual.min.js.tải xuống"></script>
+    <script type="text/javascript" src="style/web-style/theme-script.js.tải xuống"></script>
+    <script type="text/javascript" src="style/web-style/jquery-ui.min.js.tải xuống"></script>
     <script type="text/javascript">
         $('#slSearch').on('change', function () {
             $('#hdLangFilter').val($("#slSearch").val());
@@ -2162,7 +2167,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
         ga('send', 'pageview');
     </script>
     <!-- Đặt thẻ này vào phần đầu hoặc ngay trước thẻ đóng phần nội dung của bạn. -->
-    <script src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/platform.js.tải xuống" async="" defer="" gapi_processed="true">
+    <script src="style/web-style/platform.js.tải xuống" async="" defer="" gapi_processed="true">
   {lang: 'vi'}
     </script>
     <script type="application/ld+json">
@@ -2185,12 +2190,12 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
     <div class="hisella-messages" style="bottom: -350px; right: -30px;">
         <div class="hisella-messages-outer">
             <div id="hisella-minimize">&nbsp;HỖ TRỢ TRỰC TUYẾN</div>
-            <div id="hisella-facebook" class="fb-page fb_iframe_widget" data-adapt-container-width="true" data-height="350" data-hide-cover="false" data-href="https://www.facebook.com/sharecode.vn" data-show-facepile="true" data-show-posts="false" data-small-header="false" data-tabs="messages" data-width="250" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=1938824166400762&amp;container_width=0&amp;height=350&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fsharecode.vn&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;small_header=false&amp;tabs=messages&amp;width=250" style="opacity: 0;"><span style="vertical-align: bottom; width: 250px; height: 350px;"><iframe name="f2580c9a0827eb" width="250px" height="350px" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/page.html" style="border: none; visibility: visible; width: 250px; height: 350px;" class=""></iframe></span></div>
+            <div id="hisella-facebook" class="fb-page fb_iframe_widget" data-adapt-container-width="true" data-height="350" data-hide-cover="false" data-href="https://www.facebook.com/sharecode.vn" data-show-facepile="true" data-show-posts="false" data-small-header="false" data-tabs="messages" data-width="250" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=1938824166400762&amp;container_width=0&amp;height=350&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fsharecode.vn&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;small_header=false&amp;tabs=messages&amp;width=250" style="opacity: 0;"><span style="vertical-align: bottom; width: 250px; height: 350px;"><iframe name="f2580c9a0827eb" width="250px" height="350px" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="style/web-style/page.html" style="border: none; visibility: visible; width: 250px; height: 350px;" class=""></iframe></span></div>
         </div>
     </div>
     
     
-    <script src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/jquery.easy-ticker.js.tải xuống"></script>
+    <script src="style/web-style/jquery.easy-ticker.js.tải xuống"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             var dd = $('.action_box').easyTicker({
@@ -2214,12 +2219,14 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
         });
     </script>
     
-    <link href="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/iosOverlay.css" rel="stylesheet">
-    <script src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/iosOverlay.js.tải xuống"></script>
-    <script type="text/javascript" src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/jquery.bxslider.min.js.tải xuống"></script>
-     <link href="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/rateit.css" rel="stylesheet">
-    <script src="./Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí_files/jquery.rateit.min.js.tải xuống"></script>
+    <link href="style/web-style/iosOverlay.css" rel="stylesheet">
+    <script src="style/web-style/iosOverlay.js.tải xuống"></script>
+    <script type="text/javascript" src="style/web-style/jquery.bxslider.min.js.tải xuống"></script>
+     <link href="style/web-style/rateit.css" rel="stylesheet">
+    <script src="style/web-style/jquery.rateit.min.js.tải xuống"></script>
 
 
 
-<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span></body></html>
+<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>
