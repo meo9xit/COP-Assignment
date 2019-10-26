@@ -1,6 +1,6 @@
 package com.chiasetailieu.model;
 
-public class Document {
+public class Document extends AbstractModel<Document>{
 	private Long docId;
 	private String docName;
 	private String docSource;
