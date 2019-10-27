@@ -31,11 +31,11 @@ public class DocumentDAO extends GenericDAO<Document> implements IDocumentDAO{
 	}
 
 	@Override
-	public void save(Document document) {
+	public Long save(Document document) {
 		// TODO Auto-generated method stub
 		String sql = "insert into document (`doc_name`, `cate_id`, `subcate_id`, `user_id`, `doc_source`, `doc_cover`, `create_date`, `edit_date`)"
 				+ " values (?,?,?,?,?,?,?,?)";
-		insert(sql, document.getDocName(), document.getCateId(), document.getSubcateId(), document.getUserId(), document.getDocSource(),
+		return insert(sql, document.getDocName(), document.getCateId(), document.getSubcateId(), document.getUserId(), document.getDocSource(),
 				document.getCover(),document.getCreatedDate(), document.getModifiedDate());
 	}
 
