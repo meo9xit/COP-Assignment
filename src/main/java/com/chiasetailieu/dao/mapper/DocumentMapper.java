@@ -19,6 +19,8 @@ public class DocumentMapper implements GenericMapper<Document>{
 			doc.setUserId(rs.getInt("user_id"));
 			doc.setDocSource(rs.getString("doc_source"));
 			doc.setCover(rs.getString("doc_cover"));
+			doc.setCreatedDate(rs.getDate("create_date"));
+			doc.setModifiedDate(rs.getDate("edit_date"));
 			return doc;
 		} catch (SQLException e) {
 			// TODO: handle exception
