@@ -1,0 +1,21 @@
+﻿CKEDITOR.plugins.setLang("syntaxhighlight","en",{
+  syntaxhighlight:
+    {
+	 title:"Thêm hoặc cập nhật mã code",
+	 sourceTab:"Mã nguồn",
+	 langLbl:"Chọn ngôn ngữ",
+	 advancedTab:"Nâng cao",
+	 hideGutter:"Hide gutter",
+	 hideGutterLbl:"Hide gutter & line numbers.",
+	 hideControls:"Không có pop-up",
+	 hideControlsLbl:"No pop-up controls at the top of the code block.",
+	 collapse:"Collapse",
+	 collapseLbl:"Collapse the code block by default. (pop-up controls need to be turned on)",
+	 codeTitleLbl:"Tiều đề đoạn code",
+	 htmlScript:"Enable HTML-Script",
+	 htmlScriptLbl:"Highlight HTML/XML code in addition to selected source code language.",
+	 lineCount:"Bắt đầu từ dòng",
+	 highlight:"Highlight lines",
+	 highlightLbl:"Danh sách dòng bạn muốn làm nổi bật cách nhau bởi dấu phẩy, vd: <em>3,10,15</em>."
+	}
+});

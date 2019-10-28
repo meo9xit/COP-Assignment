@@ -24,7 +24,7 @@ public class SecurityConfig {
         // Cấu hình cho vai trò "EMPLOYEE".
         List<String> urlPatterns1 = new ArrayList<String>();
  
-        urlPatterns1.add("/userInfo");
+        urlPatterns1.add("/user-upload");
 //        urlPatterns1.add("/employeeTask");
  
         mapConfig.put(ROLE_USER, urlPatterns1);

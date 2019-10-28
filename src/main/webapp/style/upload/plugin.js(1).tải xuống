@@ -1,0 +1,22 @@
+﻿CKEDITOR.plugins.add('blockimagepaste',
+   {
+       init : function( editor )
+       {
+
+           // Paste from clipboard:
+           editor.on( 'paste', function(e) {
+
+               var html = e.data.html;
+               if (!html)
+                   return;
+
+               // Replace data: images in Firefox and upload them
+               e.data.html = html.replace( /<img( [^>]*)?>/gi, function( img )
+               {
+                   alert('Không được phép dán hình ảnh vào trình soạn thảo này. Hãy tải ảnh nên từ mục "Hình ảnh về code"');
+                   return '';
+               });
+           });
+
+       } //Init
+   } );
