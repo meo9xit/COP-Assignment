@@ -188,10 +188,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                             
                                                 <option value="22">Khác</option>
                                             
-                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 127px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-slSearch-container"><span class="select2-selection__rendered" id="select2-slSearch-container" title="TẤT CẢ CODE">TẤT CẢ CODE</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 127px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-slSearch-container"><span class="select2-selection__rendered" id="select2-slSearch-container" title="TẤT CẢ TÀI LIỆU">TẤT CẢ TÀI LIỆU</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
                                 </div>
                                 <div class="form-group input-serach">
-                                    <input name="ctl00$ctl00$ctl00$txtSearch" type="text" id="txtSearch" class="txt-search txt-auto ui-autocomplete-input" placeholder="Nhập Từ khóa (or) Mã code" autocomplete="off">
+                                    <input name="ctl00$ctl00$ctl00$txtSearch" type="text" id="txtSearch" class="txt-search txt-auto ui-autocomplete-input" placeholder="Nhập Từ khóa (or) Mã tài liệu" autocomplete="off">
                                 </div>
                                 <a id="btnSearch" class="pull-right btn-search" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$btnSearch&#39;,&#39;&#39;)"></a>
                             
@@ -1049,11 +1049,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                     <ul class="vertical-menu-list">
                                         <li>
                                             <a class="parent" href="https://sharecode.vn/thanh-vien-upload.htm#">
-                                                <img class="icon-menu" alt="Thể loại code" src="style/upload/2.png">PHÂN LOẠI CODE</a>
+                                                <img class="icon-menu" alt="Thể loại code" src="style/upload/2.png">PHÂN LOẠI TÀI LIỆU</a>
                                             <div class="vertical-dropdown-menu" style="width: 900px;">
                                                 <div class="vertical-groups col-sm-6 col-md-4">
                                                     <div class="mega-group col-sm-12">
-                                                        <span class="mega-group-header"><span>THỂ LOẠI CODE</span></span>
+                                                        <span class="mega-group-header"><span>THỂ LOẠI TÀI LIỆU</span></span>
                                                         <ul class="group-link-default">
                                                             
                                                                     <li><a class="bold" href="https://sharecode.vn/the-loai-source-code/website-1.htm">Website</a></li>
@@ -1069,7 +1069,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                                 </div>
                                                 <div class="vertical-groups col-sm-6 col-md-5">
                                                     <div class="mega-group col-sm-12">
-                                                        <span class="mega-group-header"><span>SOURCE CODE</span></span>
+                                                        <span class="mega-group-header"><span>TÀI LIỆU</span></span>
                                                         <ul class="group-link-default">
                                                             <li><a href="https://sharecode.vn/code-chat-luong.htm"><strong>Code chất lượng</strong> (&gt;= 100 Xu)</a></li>
                                                             <li><a href="https://sharecode.vn/code-tham-khao.htm"><strong>Code tham khảo</strong> (2 Xu - 99 Xu)</a></li>
@@ -1145,10 +1145,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                     <div id="navbar" class="navbar-collapse collapse">
                                         <ul class="nav navbar-nav">
                                             <li id="mnhome" class="active" title="Trang chủ"><a href="https://sharecode.vn/"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a></li>
-                                            <li id="mntopcode" title="Top code nổi bật"><a href="https://sharecode.vn/top-codes.htm">Top code</a></li>
-                                            <li id="mncodeok" title="Code chất lượng (&gt;= 100 Xu)"><a href="https://sharecode.vn/code-chat-luong.htm">Code chất lượng <span class="notify notify-right"></span></a></li>
-                                            <li id="mncode" title="Code tham khảo (2 Xu - 99 Xu)"><a href="https://sharecode.vn/code-tham-khao.htm">Code tham khảo</a></li>
-                                            <li id="mncodefree" title="Code miễn phí (0 Xu)"><a href="https://sharecode.vn/code-mien-phi.htm">Code miễn phí</a></li>
+                                            <li id="mntopcode" title="Top code nổi bật"><a href="https://sharecode.vn/top-codes.htm">Top tài liệu</a></li>
+                                            <li id="mncodeok" title="Code chất lượng (&gt;= 100 Xu)"><a href="https://sharecode.vn/code-chat-luong.htm">Tài liệu chất lượng <span class="notify notify-right"></span></a></li>
+                                            <li id="mncode" title="Code tham khảo (2 Xu - 99 Xu)"><a href="https://sharecode.vn/code-tham-khao.htm">Tài liệu tham khảo</a></li>
                                             <li id="mndomain" class="dropdown">
                                                 <a href="https://sharecode.vn/hosting-ssd.htm" class="dropdown-toggle">Tên miền - Hosting <span class="notify notify-right"></span></a>
                                                 <ul class="dropdown-menu container-fluid">
@@ -1198,11 +1197,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
     <a href="https://sharecode.vn/thong-tin-ca-nhan.htm" id="mainbody_breadcrumb_breadpage_UserName" class="agreen">meo9xit</a>
     <span class="navigation-pipe">&nbsp;</span>
     <a class="agreen" href="https://sharecode.vn/code-upload-cua-toi.htm">
-        <h2 class="abread">Code tải lên</h2>
+        <h2 class="abread">Tài liệu tải lên</h2>
     </a>
     <span class="navigation-pipe">&nbsp;</span>
     <a href="https://sharecode.vn/thanh-vien-upload.htm" id="mainbody_breadcrumb_breadpage_pathLink" class="agreen">
-        <h2 id="mainbody_breadcrumb_breadpage_pathTitle" class="abread">Tải code lên</h2>
+        <h2 id="mainbody_breadcrumb_breadpage_pathTitle" class="abread">Tải tài liệu lên</h2>
     </a>
 
 
@@ -1215,7 +1214,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
     
     <div class="box-bg">
         <div class="upload_form">
-            <h1 class="title3 bold text-center up-title">UPLOAD CODE CHIA SẺ &amp; KIẾM TIỀN CÙNG SHARECODE.VN</h1>
+            <h1 class="title3 bold text-center up-title">UPLOAD TÀI LIỆU CHIA SẺ </h1>
             <div class="up-note hidden-xs">
                 <div class="col-md-6 up-left">
                     <div class="title3 orange">Chia sẻ nội dung hay để đóng góp cho cộng đồng</div>
@@ -1232,7 +1231,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                 </div>
             </div>
             <div class="up-box">
-            <form >
+            <form enctype="multipart/form-data">
                 <div id="mainbody_contentbody_contentpage_panDefaultButton" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;mainbody_contentbody_contentpage_btnUpload&#39;)">
 	
                     <div class="form-horizontal">
@@ -1274,23 +1273,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-2 control-label bold">Link download <span class="text-error">*</span></label>
+                            <label class="col-md-2 control-label bold">Chọn tài liệu <span class="text-error">*</span></label>
                             <div class="col-md-7">
-                                <input name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$txtLink" type="text" maxlength="300" id="mainbody_contentbody_contentpage_txtLink" title="Link download source code: Mediafile, Fshare, Google drive..." class="form-control" onblur="ValidateLink()" placeholder="Link download: Mediafile, Fshare, Google drive...">
+                                <input name="docfile" type="file" maxlength="300" id="mainbody_contentbody_contentpage_txtLink" class="form-control" onblur="ValidateLink()">
                                 <span class="glyphicon glyphicon-ok form-control-feedback success-ic" aria-hidden="true" id="successLink" style="display: none;"></span>
                             </div>
                             <div class="col-md-3">
                                 <span id="link_error" class="text-error"></span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-2 control-label bold">Link demo</label>
-                            <div class="col-md-4">
-                                <input name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$txtLinkDemo" type="text" maxlength="300" id="mainbody_contentbody_contentpage_txtLinkDemo" title="Link demo sản phẩm thực tế đã triển khai từ code" class="form-control" onblur="ValidateDemo()" placeholder="Link live demo (Nếu có)">
-                                <span class="glyphicon glyphicon-ok form-control-feedback success-ic" aria-hidden="true" id="successDemo" style="display: none;"></span>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-control-static"><span id="demo_error" class="text-error"></span></div>
                             </div>
                         </div>
                         <div class="form-group">
