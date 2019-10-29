@@ -30,12 +30,6 @@ public class SubcateDAO extends GenericDAO<SubCategory> implements ISubcategoryD
 	}
 
 	@Override
-	public SubCategory findOneById(int id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public Long save(SubCategory subcate) {
 		// TODO Auto-generated method stub
 		return null;
@@ -53,6 +47,12 @@ public class SubcateDAO extends GenericDAO<SubCategory> implements ISubcategoryD
 		// TODO Auto-generated method stub
 		String sql = "Delete from subcate where subcate_id = ?";
 		update(sql, subcate.getSubcategoryID());
+	}
+
+	@Override
+	public SubCategory findOneById(long id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }
