@@ -11,8 +11,14 @@ public class Document extends AbstractModel<Document>{
 	private Category category;
 	private SubCategory subcate;
 	private String cover;
+	private String docDescription;
 	
-	
+	public String getDocDescription() {
+		return docDescription;
+	}
+	public void setDocDescription(String docDescription) {
+		this.docDescription = docDescription;
+	}
 	public int getUserId() {
 		return userId;
 	}

@@ -16,10 +16,17 @@ public class CategoryDAO extends GenericDAO<Category> implements ICategoryDAO{
 	}
 
 	@Override
-	public Category findOneById(int id) {
+	public Category findOneById(Long id) {
 		// TODO Auto-generated method stub
 		String sql = "select * from category where cate_id = ?";
 		List<Category> cates = query(sql, new CategoryMapper(), id);
+		return cates.isEmpty()? null : cates.get(0);
+	}
+	@Override
+	public Category findByCategories(String cate_name) {
+		// TODO Auto-generated method stub
+		String sql = "select * from category where cate_name = ?";
+		List<Category> cates = query(sql, new CategoryMapper(), cate_name);
 		return cates.isEmpty()? null : cates.get(0);
 	}
 
