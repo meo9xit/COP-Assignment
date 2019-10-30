@@ -2,6 +2,8 @@ package com.chiasetailieu.controller;
 
 import java.io.File;
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -50,7 +52,7 @@ public class UploadController extends HttpServlet {
 	 
 	  
 	           // Đường dẫn tuyệt đối tới thư mục gốc của web app.
-	           String appPath = request.getServletContext().getRealPath("");
+	           String appPath = request.getServletContext().getRealPath("/");
 	           appPath = appPath.replace('\\', '/');
 	 
 	  
@@ -82,7 +84,7 @@ public class UploadController extends HttpServlet {
 	           }
 	  
 	           // Upload thành công.
-	           response.sendRedirect(request.getContextPath() + "/uploadFileResults");
+	           response.sendRedirect(request.getContextPath() + "/user-upload");
 	       } catch (Exception e) {
 	           e.printStackTrace();
 	           request.setAttribute("errorMessage", "Error: " + e.getMessage());
