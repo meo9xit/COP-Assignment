@@ -13,22 +13,22 @@ import com.chiasetailieu.service.ISubCategoryService;
 public class SubCategoryService implements ISubCategoryService{
 	
 	@Inject
-	ISubcategoryDAO subcategoryDAO;
+	ISubcategoryDAO SubCategoryDAO;
 
 	@Override
 	public SubCategory save(SubCategory subcategory) {
-		Long newID = subcategoryDAO.save(subcategory);
-		return subcategoryDAO.findOneById(newID);
+		Long newID = SubCategoryDAO.save(subcategory);
+		return SubCategoryDAO.findOneById(newID);
 	}
 
 	@Override
 	public List<SubCategory> findAll() {
-		return subcategoryDAO.findAll();
+		return SubCategoryDAO.findAll();
 	}
 
 	@Override
 	public void delete(SubCategory subcategory) {
-		subcategoryDAO.delete(subcategory);
+		SubCategoryDAO.delete(subcategory);
 		
 	}
 

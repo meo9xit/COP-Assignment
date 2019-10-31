@@ -1,10 +1,10 @@
 package com.chiasetailieu.model;
 
-public class SubCategory extends AbstractModel<SubCategory>{
+public class SubCategory {
 	private Long subcategoryID;
 	private String subcategoryName;
 	private Category category;
-	private long categoryId;
+	private int categoryId;
 	public Long getSubcategoryID() {
 		return subcategoryID;
 	}
@@ -23,7 +23,7 @@ public class SubCategory extends AbstractModel<SubCategory>{
 	public void setCategory(Category category) {
 		this.category = category;
 	}
-	public long getCategoryId() {
+	public int getCategoryId() {
 		return categoryId;
 	}
 	public void setCategoryId(int categoryId) {
