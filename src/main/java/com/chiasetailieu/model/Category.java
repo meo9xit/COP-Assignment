@@ -2,7 +2,7 @@ package com.chiasetailieu.model;
 
 import java.util.List;
 
-public class Category extends AbstractModel<Category>{
+public class Category {
 	private Long categoryID;
 	private String categoryName;
 	private List<SubCategory> subcates;
@@ -26,9 +26,4 @@ public class Category extends AbstractModel<Category>{
 	public void setCategoryName(String categoryName) {
 		this.categoryName = categoryName;
 	}
-	@Override
-	public String toString() {
-		return "Category [categoryID=" + categoryID + ", categoryName=" + categoryName + ", subcates=" + subcates + "]";
-	}
-	
 }
