@@ -22,7 +22,6 @@ maxRequestSize = 1024 * 1024 * 50)
 public class UploadController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	public static final String SAVE_DIRECTORY = "uploadDir";
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -52,16 +51,16 @@ public class UploadController extends HttpServlet {
 	 
 	  
 	           // Đường dẫn tuyệt đối tới thư mục gốc của web app.
-	           String appPath = request.getServletContext().getRealPath("/");
+	           String appPath = "C:\\Users\\ACER\\Documents\\uploaded";
 	           appPath = appPath.replace('\\', '/');
 	 
 	  
 	           // Thư mục để save file tải lên.
 	           String fullSavePath = null;
 	           if (appPath.endsWith("/")) {
-	               fullSavePath = appPath + SAVE_DIRECTORY;
+	               fullSavePath = appPath;
 	           } else {
-	               fullSavePath = appPath + "/" + SAVE_DIRECTORY;
+	               fullSavePath = appPath + "/";
 	           }
 	 
 	  
