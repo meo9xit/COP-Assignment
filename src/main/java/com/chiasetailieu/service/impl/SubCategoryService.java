@@ -43,6 +43,11 @@ public class SubCategoryService implements ISubCategoryService{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public SubCategory findOneByID(Long newID) {
+		return SubCategoryDAO.findOneById(newID);
+	}
 	
 	
 }

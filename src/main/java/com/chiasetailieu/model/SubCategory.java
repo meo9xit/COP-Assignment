@@ -1,6 +1,6 @@
 package com.chiasetailieu.model;
 
-public class SubCategory {
+public class SubCategory extends AbstractModel<SubCategory> {
 	private Long subcategoryID;
 	private String subcategoryName;
 	private Category category;

@@ -14,4 +14,5 @@ public interface ISubCategoryService {
 	void delete(SubCategory subcategory);
 	SubCategory findByCategories(Category category);
 	SubCategory findOneByDocument(Document document);
+	SubCategory findOneByID(Long newID);
 }
