@@ -672,14 +672,14 @@
 								<label for="subcategory_id">SubCategory ID</label>
 								<div class="form-group">
 									<div class="form-line">
-										<input type="text" id="subcategoryID" class="form-control"
+										<input type="number" id="subcategoryID" class="form-control"
 											name="subcategoryID" placeholder="Enter subcategory id!"
 											value="${model.subcategoryID}">
 									</div>
 									<label for="category_id">Category ID</label>
 									<div class="form-group">
 										<div class="form-line">
-											<input type="text" id="categoryId" class="form-control"
+											<input type="number" id="categoryId" class="form-control"
 												name="categoryId" placeholder="Enter category id!"
 												value="${model.categoryId}">
 										</div>
