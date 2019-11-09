@@ -10,7 +10,8 @@ public interface ISubcategoryDAO extends IGenericDAO<SubCategory>{
 	List<SubCategory> findAll();
 	List<SubCategory> findByCategories(Category category);
 	List<SubCategory> findOneByDocument(Document document);
-	SubCategory findOneById(int id);
+	List<SubCategory> findOneByID(Long newID);
+	SubCategory findOneById(Long newID);
 	Long save(SubCategory subcate);
 	void update(SubCategory subcate);
 	void delete(SubCategory subcate);

@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import javax.inject.Inject;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,12 +13,8 @@ import com.chiasetailieu.service.ISubCategoryService;
 import com.chiasetailieu.utils.HttpUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-/**
- * Servlet implementation class UserAPI
- */
-@WebServlet(urlPatterns = "/api-admin-subcategory")
-public class SubCategoryAPI extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+public class CommentAPI extends HttpServlet{
+private static final long serialVersionUID = 1L;
        
 	
 	@Inject
@@ -57,7 +52,7 @@ public class SubCategoryAPI extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("application/json");
 		SubCategory subcategory =  HttpUtil.of(request.getReader()).toModel(SubCategory.class);
-		subcategoryService.delete(subcategoryService.findOneByID(subcategory.getSubcategoryID()));
+		subcategoryService.delete(subcategoryService.findByCategories(subcategory.getCategory()));
 		mapper.writeValue(response.getOutputStream(), "{}");
 	}
 

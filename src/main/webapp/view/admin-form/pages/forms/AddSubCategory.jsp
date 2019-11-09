@@ -1,10 +1,10 @@
-﻿<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator"
 	prefix="dec"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<c:url var="APIurl" value="/api-admin-user" />
-<c:url var="NewURL" value="/admin-new" />
+<c:url var="APIurl" value="/api-admin-subcategory" />
+<c:url var="NewURL" value="/subcategory-new" />
 <!DOCTYPE html>
 <html>
 
@@ -645,7 +645,7 @@
 	<section class="content">
 		<div class="container-fluid">
 			<div class="block-header">
-				<h2>Add User</h2>
+				<h2>ADD CATEGORY</h2>
 			</div>
 
 			<!-- Vertical Layout -->
@@ -669,26 +669,33 @@
 						</div>
 						<div class="body">
 							<form id="formSubmit">
-								<label for="email_address">User name</label>
+								<label for="subcategory_id">SubCategory ID</label>
 								<div class="form-group">
 									<div class="form-line">
-										<input type="text" id="username" class="form-control"
-											name="username" placeholder="Enter your email address"
-											value="${model.username}">
+										<input type="number" id="subcategoryID" class="form-control"
+											name="subcategoryID" placeholder="Enter subcategory id!"
+											value="${model.subcategoryID}">
 									</div>
-								</div>
-								<label for="password">Password</label>
-								<div class="form-group">
-									<div class="form-line">
-										<input type="password" id="password" class="form-control"
-											name="password" placeholder="Enter your password"
-											value="${model.password }">
-									</div>
-								</div>
-
-								<br> <input type="button"
-									class="btn btn-primary m-t-15 waves-effect" id="btnAdd"
-									value="Add" />
+									<label for="category_id">Category ID</label>
+									<div class="form-group">
+										<div class="form-line">
+											<input type="number" id="categoryId" class="form-control"
+												name="categoryId" placeholder="Enter category id!"
+												value="${model.categoryId}">
+										</div>
+										<br> <label for="subcategory_name">SubCategory
+											Name</label>
+										<div class="form-group">
+											<div class="form-line">
+												<input type="text" id="subcategoryName" class="form-control"
+													name="subcategoryName"
+													placeholder="Enter subcategory name!"
+													value="${model.subcategoryName}">
+											</div>
+										</div>
+										<br> <input type="button"
+											class="btn btn-primary m-t-15 waves-effect" id="btnAdd"
+											value="Add" />
 							</form>
 						</div>
 					</div>
@@ -725,10 +732,10 @@
 						data : JSON.stringify(data),
 						dataType : 'json',
 						success : function(result) {
-							window.location.href = "/chiasetailieu/admin-user";
+							window.location.href = "/chiasetailieu/admin-subcategory";
 						},
 						error : function(error) {
-							window.location.href = "/chiasetailieu/admin-user?type=add";
+							window.location.href = "/chiasetailieu/admin-subcategory?type=add";
 						}
 					});
 		}
