@@ -1248,7 +1248,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                         <div class="form-group">
                             <label class="col-md-2 control-label bold">Chuyên ngành <span class="text-error">*</span></label>
                             <div class="col-md-4">
-                                <select name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$ddlCategoryLang" id="mainbody_contentbody_contentpage_ddlCategoryLang" class="form-control" onblur="ValidateCate()" onchange="ValidateCate()">
+                                <select name="cate" id="mainbody_contentbody_contentpage_ddlCategoryLang" class="form-control" onblur="ValidateCate()" onchange="ValidateCate()">
 		<option value="0">--Chọn Chuyên ngành--</option>
 		<option value="15">Android</option>
 		<option value="23">iOS</option>
@@ -1274,6 +1274,36 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <div class="form-control-static"><span id="lang_error" class="text-error">&nbsp;</span></div>
                             </div>
                         </div>
+                        <div class="col-md-4">
+                            <label class="col-md-2 control-label bold">Chủ đề <span class="text-error">*</span></label>
+                            <div class="col-md-4">
+                                <select name="subcate" id="mainbody_contentbody_contentpage_ddlCategoryLang" class="form-control" onblur="ValidateCate()" onchange="ValidateCate()">
+		<option value="0">--Chọn Chuyên ngành--</option>
+		<option value="15">Android</option>
+		<option value="23">iOS</option>
+		<option value="26">Windows phone</option>
+		<option value="21">PHP &amp; MySQL</option>
+		<option value="29">WordPress</option>
+		<option value="28">Joomla</option>
+		<option value="17">Visual C#</option>
+		<option value="16">Asp/Asp.Net</option>
+		<option value="20">Java/JSP</option>
+		<option value="19">Visual Basic</option>
+		<option value="24">Cocos2D</option>
+		<option value="27">Unity</option>
+		<option value="18">Visual C++</option>
+		<option value="25">Html &amp; Template</option>
+		<option value="22">Khác</option>
+
+	</select>
+                                <span class="glyphicon glyphicon-ok form-control-feedback success-ic3" aria-hidden="true" id="successCate" style="display: none;"></span>
+                                
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-control-static"><span id="lang_error" class="text-error">&nbsp;</span></div>
+                            </div>
+                        </div>
+                        
                         <div class="form-group">
                             <label class="col-md-2 control-label bold">Chọn tài liệu <span class="text-error">*</span></label>
                             <div class="col-md-7">

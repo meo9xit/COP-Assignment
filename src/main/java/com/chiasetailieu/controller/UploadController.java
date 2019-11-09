@@ -11,6 +11,7 @@ import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
 import javax.imageio.ImageIO;
+import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -20,6 +21,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
+import com.chiasetailieu.model.Document;
+import com.chiasetailieu.model.User;
+import com.chiasetailieu.service.IDocumentService;
+import com.chiasetailieu.utils.AppUtils;
 import com.sun.pdfview.PDFFile;
 import com.sun.pdfview.PDFPage;
 
@@ -33,7 +38,8 @@ maxRequestSize = 1024 * 1024 * 50)
 public class UploadController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-       
+	@Inject
+    IDocumentService docService;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -56,10 +62,17 @@ public class UploadController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		try {
-	           String description = request.getParameter("description");
+	           String description = request.getParameter("docDescription");
+	           Long cateId = Long.parseLong(request.getParameter("cate"));
+	           Long subcateId = Long.parseLong(request.getParameter("subcate"));
 	           String docname = request.getParameter("docName");
 	           System.out.println("Description: " + description);
-	 
+	           User user = AppUtils.getLoginedUser(request.getSession());
+	           Document doc = new Document();
+	           doc.setDocDescription(description);
+	           doc.setCateId(cateId);
+	           doc.setSubcateId(subcateId);
+	           doc.setUserId(user.getUserid());
 	  
 	           // Đường dẫn tuyệt đối tới thư mục gốc của web app.
 	           String appPath = "C:\\Users\\ACER\\Documents\\uploaded";
@@ -84,16 +97,21 @@ public class UploadController extends HttpServlet {
 	           // Danh mục các phần đã upload lên (Có thể là nhiều file).
 	           for (Part part : request.getParts()) {
 	               String fileName = extractFileName(part);
+	               int i = fileName.lastIndexOf('.');
+	               String ext = fileName.substring(i+1);
 	               if (fileName != null && fileName.length() > 0) {
 	                   String filePath = fullSavePath + File.separator + fileName;
 	                   System.out.println("Write attachment to file: " + filePath);
-	  
+	                   doc.setDocSource(filePath);
 	                   // Ghi vào file.
+	                   String imgname = getThumbnail(fileName);
+	                   doc.setCover(imgname);
 	                   part.write(filePath);
 	               }
 	           }
 	  
 	           // Upload thành công.
+	           docService.save(doc);
 	           response.sendRedirect(request.getContextPath() + "/user-upload");
 	       } catch (Exception e) {
 	           e.printStackTrace();
@@ -123,10 +141,10 @@ public class UploadController extends HttpServlet {
 	       return null;
 	   }
 	
-	private String getThumbnail() {
+	private String getThumbnail(String pdfname) {
 		String imgName = "";
 		try {
-			File pdfFile = new File("/path/to/pdf.pdf");
+			File pdfFile = new File("/path/to/"+pdfname);
 			RandomAccessFile raf = new RandomAccessFile(pdfFile, "r");
 			FileChannel channel = raf.getChannel();
 			ByteBuffer buf = channel.map(FileChannel.MapMode.READ_ONLY, 0, channel.size());

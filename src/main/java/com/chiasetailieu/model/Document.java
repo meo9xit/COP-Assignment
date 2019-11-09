@@ -4,9 +4,9 @@ public class Document extends AbstractModel<Document>{
 	private Long docId;
 	private String docName;
 	private String docSource;
-	private int cateId;
-	private int subcateId;
-	private int userId;
+	private Long cateId;
+	private Long subcateId;
+	private Long userId;
 	private User user;
 	private Category category;
 	private SubCategory subcate;
@@ -19,10 +19,10 @@ public class Document extends AbstractModel<Document>{
 	public void setDocDescription(String docDescription) {
 		this.docDescription = docDescription;
 	}
-	public int getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
-	public void setUserId(int userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 	public User getUser() {
@@ -55,16 +55,16 @@ public class Document extends AbstractModel<Document>{
 	public void setDocSource(String docSource) {
 		this.docSource = docSource;
 	}
-	public int getCateId() {
+	public Long getCateId() {
 		return cateId;
 	}
-	public void setCateId(int cateId) {
+	public void setCateId(Long cateId) {
 		this.cateId = cateId;
 	}
-	public int getSubcateId() {
+	public Long getSubcateId() {
 		return subcateId;
 	}
-	public void setSubcateId(int subcateId) {
+	public void setSubcateId(Long subcateId) {
 		this.subcateId = subcateId;
 	}
 	public Category getCategory() {
