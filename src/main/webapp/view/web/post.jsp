@@ -18,13 +18,13 @@
 <meta name="twitter:card" value="summary">
 <meta property="og:site_name" content="Sharecode.vn">
 <link rel="stylesheet" type="text/css"
-	href="./Full code website bán thực phẩm chức năng chuẩn seo_files/bootstrap.min.css">
+	href="./bootstrap.min.css">
 <link rel="stylesheet" type="text/css"
-	href="./Full code website bán thực phẩm chức năng chuẩn seo_files/font-awesome.min.css">
+	href="./font-awesome.min.css">
 <link rel="stylesheet" type="text/css"
-	href="./Full code website bán thực phẩm chức năng chuẩn seo_files/select2.min.css">
+	href="./select2.min.css">
 <link rel="stylesheet" type="text/css"
-	href="./Full code website bán thực phẩm chức năng chuẩn seo_files/owl.carousel.css">
+	href="./owl.carousel.css">
 <link rel="stylesheet" type="text/css"
 	href="./Full code website bán thực phẩm chức năng chuẩn seo_files/jquery-ui.min.css">
 <link rel="stylesheet" type="text/css"

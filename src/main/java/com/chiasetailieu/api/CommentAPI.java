@@ -4,21 +4,23 @@ import java.io.IOException;
 
 import javax.inject.Inject;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.chiasetailieu.model.SubCategory;
-import com.chiasetailieu.service.ISubCategoryService;
+import com.chiasetailieu.model.Comment;
+import com.chiasetailieu.service.ICommentService;
 import com.chiasetailieu.utils.HttpUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+@WebServlet(urlPatterns = "/api-admin-comment")
 public class CommentAPI extends HttpServlet{
 private static final long serialVersionUID = 1L;
        
 	
 	@Inject
-	ISubCategoryService subcategoryService;
+	ICommentService commentService;
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -36,9 +38,9 @@ private static final long serialVersionUID = 1L;
 		ObjectMapper mapper = new ObjectMapper();
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("application/json");
-		SubCategory subcategory =  HttpUtil.of(request.getReader()).toModel(SubCategory.class);
-		subcategory = subcategoryService.save(subcategory);
-		mapper.writeValue(response.getOutputStream(), subcategory);
+		Comment comment =  HttpUtil.of(request.getReader()).toModel(Comment.class);
+		comment = commentService.save(comment);
+		mapper.writeValue(response.getOutputStream(), comment);
 	}
 	
 	protected void doPut(HttpServletRequest request, HttpServletResponse response)
@@ -51,8 +53,8 @@ private static final long serialVersionUID = 1L;
 		ObjectMapper mapper = new ObjectMapper();
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("application/json");
-		SubCategory subcategory =  HttpUtil.of(request.getReader()).toModel(SubCategory.class);
-		subcategoryService.delete(subcategoryService.findByCategories(subcategory.getCategory()));
+		Comment comment =  HttpUtil.of(request.getReader()).toModel(Comment.class);
+		commentService.delete(commentService.findById(comment.getId()));
 		mapper.writeValue(response.getOutputStream(), "{}");
 	}
 

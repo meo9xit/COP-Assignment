@@ -14,9 +14,9 @@ public class DocumentMapper implements GenericMapper<Document>{
 			Document doc = new Document();
 			doc.setDocId(rs.getLong("doc_id"));
 			doc.setDocName(rs.getString("doc_name"));
-			doc.setCateId(rs.getInt("cate_id"));
-			doc.setSubcateId(rs.getInt("subcate_id"));
-			doc.setUserId(rs.getInt("user_id"));
+			doc.setCateId(rs.getLong("cate_id"));
+			doc.setSubcateId(rs.getLong("subcate_id"));
+			doc.setUserId(rs.getLong("user_id"));
 			doc.setDocSource(rs.getString("doc_source"));
 			doc.setCover(rs.getString("doc_cover"));
 			doc.setCreatedDate(rs.getDate("create_date"));
