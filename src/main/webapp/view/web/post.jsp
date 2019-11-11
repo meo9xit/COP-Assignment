@@ -3,8 +3,7 @@
 <html lang="vi" xml:lang="vi" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>bán thực phẩm chức năng chuẩn
-	seo</title>
+<title>bán thực phẩm chức năng chuẩn seo</title>
 <link rel="shortcut icon"
 	href="https://sharecode.vn/assets/images/sharecode.ico"
 	type="image/x-icon">
@@ -40,14 +39,14 @@
 <link rel="stylesheet" type="text/css"
 	href="./Full code website bán thực phẩm chức năng chuẩn seo_files/responsive.css">
 <link
-	href="https://sharecode.vn/source-code/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-23971.htm"
+	href="https://sharecode.vn/source-code/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-23971.html"
 	rel="canonical">
 <meta name="keywords"
-	content="full code website bÃ¡n hÃ ng,code website bÃ¡n hÃ ng,code bÃ¡n hÃ ng chuáº©n seo,Full code bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo,share code bÃ¡n hÃ ng,Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng">
+	content="full code website bÃ¡n hÃ ng,code website bÃ¡n hÃ ng,code bÃ¡n hÃ ng chuáº©n seo,Full code bán thực phẩm chức năng chuẩn seo,share code bÃ¡n hÃ ng,Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng">
 <meta name="description"
 	content="Full source code website bÃ¡n thá»±c pháº©m chá»©c nÄng, tá»i Æ°u tá»c Äá» giao diá»n phÃ¹ há»£p thiáº¿t bá» di Äá»ng, chuáº©n seo">
 <meta property="og:title"
-	content="Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo | Sharecode.vn">
+	content="Full code website bán thực phẩm chức năng chuẩn seo | Sharecode.vn">
 <meta property="og:description"
 	content="Full source code website bÃ¡n thá»±c pháº©m chá»©c nÄng, tá»i Æ°u tá»c Äá» giao diá»n phÃ¹ há»£p thiáº¿t bá» di Äá»ng, chuáº©n seo">
 <meta property="og:url"
@@ -380,7 +379,15 @@ keyframes rotateSpinner { 0%{
 transform
 
 
+
+
+
+
 :rotate(360deg)
+
+
+
+
 
 
 }
@@ -434,7 +441,7 @@ transform
 					title="Facebook Cross Domain Communication Frame" tabindex="-1"
 					frameborder="0" allowtransparency="true" allowfullscreen="true"
 					scrolling="no" allow="encrypted-media"
-					src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/xd_arbiter.html"
+					src="./Full code website bán thực phẩm chức năng chuẩn seo_files/xd_arbiter.html"
 					style="border: none;"></iframe>
 			</div>
 			<div></div>
@@ -442,12 +449,12 @@ transform
 	</div>
 
 	<script
-		src="./Full code website bán thực phẩm chức năng chuẩn seo_files/sdk.js.táº£i xuá»ng"
+		src="./Full code website bán thực phẩm chức năng chuẩn seo_files/sdk.js.tải xuống"
 		async="" crossorigin="anonymous"></script>
 	<script async=""
-		src="./Full code website bán thực phẩm chức năng chuẩn seo_files/analytics.js.táº£i xuá»ng"></script>
+		src="./Full code website bán thực phẩm chức năng chuẩn seo_files/analytics.js.tải xuống"></script>
 	<script id="facebook-jssdk"
-		src="./Full code website bán thực phẩm chức năng chuẩn seo_files/sdk.js(1).táº£i xuá»ng"></script>
+		src="./Full code website bán thực phẩm chức năng chuẩn seo_files/sdk.js(1).tải xuống"></script>
 	<script>
         window.fbAsyncInit = function () {
             FB.init({
@@ -614,7 +621,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 										<li><a class="parent"
 											href="https://sharecode.vn/source-code/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-23971.htm#">
 												<img class="icon-menu" alt="Thá» loáº¡i code"
-												src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/2.png">PHÃN
+												src="./Full code website bán thực phẩm chức năng chuẩn seo_files/2.png">PHÃN
 												LOáº I CODE
 										</a>
 											<div class="vertical-dropdown-menu" style="width: 902px;">
@@ -664,97 +671,97 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 										<li class=""><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/android-15.htm">
 												<img class="icon-menu" alt="Android"
-												src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/3.png">Android
+												src="./Full code website bán thực phẩm chức năng chuẩn seo_files/3.png">Android
 										</a></li>
 
 										<li class=""><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/ios-23.htm">
 												<img class="icon-menu" alt="iOS"
-												src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/3.png">iOS
+												src="./Full code website bán thực phẩm chức năng chuẩn seo_files/3.png">iOS
 										</a></li>
 
 										<li class=""><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/windows-phone-26.htm">
 												<img class="icon-menu" alt="Windows phone"
-												src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/3.png">Windows
+												src="./Full code website bán thực phẩm chức năng chuẩn seo_files/3.png">Windows
 												phone
 										</a></li>
 
 										<li class=""><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/php-mysql-21.htm">
 												<img class="icon-menu" alt="PHP &amp; MySQL"
-												src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/3.png">PHP
+												src="./Full code website bán thực phẩm chức năng chuẩn seo_files/3.png">PHP
 												&amp; MySQL
 										</a></li>
 
 										<li class=""><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">
 												<img class="icon-menu" alt="WordPress"
-												src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/3.png">WordPress
+												src="./Full code website bán thực phẩm chức năng chuẩn seo_files/3.png">WordPress
 										</a></li>
 
 										<li class=""><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/joomla-28.htm">
 												<img class="icon-menu" alt="Joomla"
-												src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/3.png">Joomla
+												src="./Full code website bán thực phẩm chức năng chuẩn seo_files/3.png">Joomla
 										</a></li>
 
 										<li class=""><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-17.htm">
 												<img class="icon-menu" alt="Visual C#"
-												src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/3.png">Visual
+												src="./Full code website bán thực phẩm chức năng chuẩn seo_files/3.png">Visual
 												C#
 										</a></li>
 
 										<li class=""><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/aspaspnet-16.htm">
 												<img class="icon-menu" alt="Asp/Asp.Net"
-												src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/3.png">Asp/Asp.Net
+												src="./Full code website bán thực phẩm chức năng chuẩn seo_files/3.png">Asp/Asp.Net
 										</a></li>
 
 										<li class=""><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/javajsp-20.htm">
 												<img class="icon-menu" alt="Java/JSP"
-												src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/3.png">Java/JSP
+												src="./Full code website bán thực phẩm chức năng chuẩn seo_files/3.png">Java/JSP
 										</a></li>
 
 										<li class=""><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-basic-19.htm">
 												<img class="icon-menu" alt="Visual Basic"
-												src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/3.png">Visual
+												src="./Full code website bán thực phẩm chức năng chuẩn seo_files/3.png">Visual
 												Basic
 										</a></li>
 
 										<li class="cat-link-orther"><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/cocos2d-24.htm">
 												<img class="icon-menu" alt="Cocos2D"
-												src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/3.png">Cocos2D
+												src="./Full code website bán thực phẩm chức năng chuẩn seo_files/3.png">Cocos2D
 										</a></li>
 
 										<li class="cat-link-orther"><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/unity-27.htm">
 												<img class="icon-menu" alt="Unity"
-												src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/3.png">Unity
+												src="./Full code website bán thực phẩm chức năng chuẩn seo_files/3.png">Unity
 										</a></li>
 
 										<li class="cat-link-orther"><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-18.htm">
 												<img class="icon-menu" alt="Visual C++"
-												src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/3.png">Visual
+												src="./Full code website bán thực phẩm chức năng chuẩn seo_files/3.png">Visual
 												C++
 										</a></li>
 
 										<li class="cat-link-orther"><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/html-template-25.htm">
 												<img class="icon-menu" alt="Html &amp; Template"
-												src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/3.png">Html
+												src="./Full code website bán thực phẩm chức năng chuẩn seo_files/3.png">Html
 												&amp; Template
 										</a></li>
 
 										<li class="cat-link-orther"><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/khac-22.htm">
 												<img class="icon-menu" alt="KhÃ¡c"
-												src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/3.png">KhÃ¡c
+												src="./Full code website bán thực phẩm chức năng chuẩn seo_files/3.png">KhÃ¡c
 										</a></li>
 
 									</ul>
@@ -1077,7 +1084,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 										<div
 											style="height: 30px; width: 140px; float: left; margin-left: 10px;">
 											<img
-												src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/captcha.jpg"
+												src="./Full code website bán thực phẩm chức năng chuẩn seo_files/captcha.jpg"
 												alt="captcha" class="imgCaptcha" height="30" width="80">
 											<div class="aorange"
 												style="float: right; width: 60px; margin-top: 6px; padding-left: 5px;"
@@ -1151,7 +1158,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 						href="https://sharecode.vn/source-code/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-23971.htm"
 						id="mainbody_breadcrumb_PathLink" class="agreen"> <span
 						id="mainbody_breadcrumb_PathLinkTitle">Full code website
-							bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo</span>
+							bán thực phẩm chức năng chuẩn seo</span>
 					</a>
 
 				</div>
@@ -1165,10 +1172,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 								<div class="col-sm-4">
 									<div class="img-border">
 										<img id="mainbody_contentbody_CodeImage"
-											title="Download ngay Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo"
+											title="Download ngay Full code website bán thực phẩm chức năng chuẩn seo"
 											class="img-val" itemprop="image"
-											src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-112150.jpg"
-											alt="full code website bÃ¡n hÃ ng,code website bÃ¡n hÃ ng,code bÃ¡n hÃ ng chuáº©n seo,Full code bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo,share code bÃ¡n hÃ ng,Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng">
+											src="./Full code website bán thực phẩm chức năng chuẩn seo_files/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-112150.jpg"
+											alt="full code website bÃ¡n hÃ ng,code website bÃ¡n hÃ ng,code bÃ¡n hÃ ng chuáº©n seo,Full code bán thực phẩm chức năng chuẩn seo,share code bÃ¡n hÃ ng,Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng">
 									</div>
 									<div class="text-center dt-gallery">
 										<a
@@ -1328,8 +1335,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 											href="https://sharecode.vn/tu-khoa/code-ban-hang-chuan-seo-21765.htm">code
 											bÃ¡n hÃ ng chuáº©n seo</a> <a class="dt-tag" target="_blank"
 											href="https://sharecode.vn/tu-khoa/full-code-ban-thuc-pham-chuc-nang-chuan-seo-33907.htm">Full
-											code bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo</a> <a
-											class="dt-tag" target="_blank"
+											code bán thực phẩm chức năng chuẩn seo</a> <a class="dt-tag"
+											target="_blank"
 											href="https://sharecode.vn/tu-khoa/share-code-ban-hang-6214.htm">share
 											code bÃ¡n hÃ ng</a> <a class="dt-tag" target="_blank"
 											href="https://sharecode.vn/tu-khoa/full-code-website-ban-thuc-pham-chuc-nang-33908.htm">Full
@@ -1352,7 +1359,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 										<a href="https://topcode.vn/" target="_blank"> <img
 											alt="Ra máº¯t sÃ n code cháº¥t lÆ°á»£ng cao"
 											class="img-responsive"
-											src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/Ra-mat-topcode-2.jpg"
+											src="./Full code website bán thực phẩm chức năng chuẩn seo_files/Ra-mat-topcode-2.jpg"
 											style="margin: 0px auto 10px auto"></a>
 									</div>
 								</div>
@@ -1361,7 +1368,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 										<a href="https://topcode.vn/" target="_blank"> <img
 											alt="Upload 1 láº§n ÄÄng bÃ¡n trÃªn hai trang topcode.vn vÃ  sharecode.vn"
 											class="img-responsive"
-											src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/Up-1-ban-2-2.jpg"
+											src="./Full code website bán thực phẩm chức năng chuẩn seo_files/Up-1-ban-2-2.jpg"
 											style="margin: 0px auto 10px auto"></a>
 									</div>
 								</div>
@@ -1425,45 +1432,45 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 
 									<div class="text-center">
 										<img
-											src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-112150(1).jpg"
-											alt="full code website bÃ¡n hÃ ng,code website bÃ¡n hÃ ng,code bÃ¡n hÃ ng chuáº©n seo,Full code bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo,share code bÃ¡n hÃ ng,Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng"
-											title="Download Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo ngay!"
+											src="./Full code website bán thực phẩm chức năng chuẩn seo_files/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-112150(1).jpg"
+											alt="full code website bÃ¡n hÃ ng,code website bÃ¡n hÃ ng,code bÃ¡n hÃ ng chuáº©n seo,Full code bán thực phẩm chức năng chuẩn seo,share code bÃ¡n hÃ ng,Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng"
+											title="Download Full code website bán thực phẩm chức năng chuẩn seo ngay!"
 											class="dt-max-img">
 									</div>
 									<br>
 
 									<div class="text-center">
 										<img
-											src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-112151.jpg"
-											alt="full code website bÃ¡n hÃ ng,code website bÃ¡n hÃ ng,code bÃ¡n hÃ ng chuáº©n seo,Full code bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo,share code bÃ¡n hÃ ng,Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng"
-											title="Download Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo ngay!"
+											src="./Full code website bán thực phẩm chức năng chuẩn seo_files/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-112151.jpg"
+											alt="full code website bÃ¡n hÃ ng,code website bÃ¡n hÃ ng,code bÃ¡n hÃ ng chuáº©n seo,Full code bán thực phẩm chức năng chuẩn seo,share code bÃ¡n hÃ ng,Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng"
+											title="Download Full code website bán thực phẩm chức năng chuẩn seo ngay!"
 											class="dt-max-img">
 									</div>
 									<br>
 
 									<div class="text-center">
 										<img
-											src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-112152.jpg"
-											alt="full code website bÃ¡n hÃ ng,code website bÃ¡n hÃ ng,code bÃ¡n hÃ ng chuáº©n seo,Full code bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo,share code bÃ¡n hÃ ng,Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng"
-											title="Download Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo ngay!"
+											src="./Full code website bán thực phẩm chức năng chuẩn seo_files/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-112152.jpg"
+											alt="full code website bÃ¡n hÃ ng,code website bÃ¡n hÃ ng,code bÃ¡n hÃ ng chuáº©n seo,Full code bán thực phẩm chức năng chuẩn seo,share code bÃ¡n hÃ ng,Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng"
+											title="Download Full code website bán thực phẩm chức năng chuẩn seo ngay!"
 											class="dt-max-img">
 									</div>
 									<br>
 
 									<div class="text-center">
 										<img
-											src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-112153.jpg"
-											alt="full code website bÃ¡n hÃ ng,code website bÃ¡n hÃ ng,code bÃ¡n hÃ ng chuáº©n seo,Full code bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo,share code bÃ¡n hÃ ng,Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng"
-											title="Download Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo ngay!"
+											src="./Full code website bán thực phẩm chức năng chuẩn seo_files/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-112153.jpg"
+											alt="full code website bÃ¡n hÃ ng,code website bÃ¡n hÃ ng,code bÃ¡n hÃ ng chuáº©n seo,Full code bán thực phẩm chức năng chuẩn seo,share code bÃ¡n hÃ ng,Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng"
+											title="Download Full code website bán thực phẩm chức năng chuẩn seo ngay!"
 											class="dt-max-img">
 									</div>
 									<br>
 
 									<div class="text-center">
 										<img
-											src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-112154.jpg"
-											alt="full code website bÃ¡n hÃ ng,code website bÃ¡n hÃ ng,code bÃ¡n hÃ ng chuáº©n seo,Full code bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo,share code bÃ¡n hÃ ng,Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng"
-											title="Download Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo ngay!"
+											src="./Full code website bán thực phẩm chức năng chuẩn seo_files/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-112154.jpg"
+											alt="full code website bÃ¡n hÃ ng,code website bÃ¡n hÃ ng,code bÃ¡n hÃ ng chuáº©n seo,Full code bán thực phẩm chức năng chuẩn seo,share code bÃ¡n hÃ ng,Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng"
+											title="Download Full code website bán thực phẩm chức năng chuẩn seo ngay!"
 											class="dt-max-img">
 									</div>
 									<br>
@@ -1526,7 +1533,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 											class="green">sharecode.vn</span> <a
 											onclick="createCaptcha(); return false;"
 											id="mainbody_contentbody_btnLinkMain"
-											title="Download Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo ngay!"
+											title="Download Full code website bán thực phẩm chức năng chuẩn seo ngay!"
 											class="btn2 button-down2" data-target="#Download_now_modal"
 											role="button" data-toggle="modal"
 											href="javascript:__doPostBack(&#39;ctl00$ctl00$mainbody$contentbody$btnLinkMain&#39;,&#39;&#39;)"><div
@@ -1564,7 +1571,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 										<a href="https://sharecode.vn/dang-ki-ten-mien.htm"> <img
 											alt="Kiá»m tra vÃ  ÄÄng kÃ­ tÃªn miá»n"
 											class="img-responsive"
-											src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/banner-domain2.jpg"></a>
+											src="./Full code website bán thực phẩm chức năng chuẩn seo_files/banner-domain2.jpg"></a>
 									</div>
 								</div>
 								<div class="col-sm-6">
@@ -1572,7 +1579,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 										<a href="https://sharecode.vn/hosting-ssd.htm"> <img
 											alt="ÄÄng kÃ­ hosting ssd cháº¥t lÆ°á»£ng cao"
 											class="img-responsive"
-											src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/banner-hosting2.jpg"></a>
+											src="./Full code website bán thực phẩm chức năng chuẩn seo_files/banner-hosting2.jpg"></a>
 									</div>
 								</div>
 							</div>
@@ -1602,7 +1609,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 													href="https://sharecode.vn/source-code/code-website-wwwdohieuvietcom-full-ho-tro-cai-dat-su-dung-20047.htm">
 													<div class="img-box">
 														<img class="img-responsive"
-															src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/code-website-www.dohieuviet.com-full---ho-tro-cai-dat-su-dung-182057.jpg"
+															src="./Full code website bán thực phẩm chức năng chuẩn seo_files/code-website-www.dohieuviet.com-full---ho-tro-cai-dat-su-dung-182057.jpg"
 															alt="Code Website www.dohieuviet.com Full - Há» trá»£ cÃ i Äáº·t &amp; sá»­ dá»¥ng"
 															title="Download Code Website www.dohieuviet.com Full - Há» trá»£ cÃ i Äáº·t &amp; sá»­ dá»¥ng">
 													</div>
@@ -1664,7 +1671,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 													href="https://sharecode.vn/source-code/code-shop-wordpress-chuan-seo-code-shop-ban-hang-cuc-chuan-20286.htm">
 													<div class="img-box">
 														<img class="img-responsive"
-															src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/code-shop-wordpress-chuan-seo-code-website-ban-hang-cuc-chuan-81926.jpg"
+															src="./Full code website bán thực phẩm chức năng chuẩn seo_files/code-shop-wordpress-chuan-seo-code-website-ban-hang-cuc-chuan-81926.jpg"
 															alt="Code shop wordpress chuáº©n seo code website bÃ¡n hÃ ng cá»±c chuáº©n"
 															title="Download Code shop wordpress chuáº©n seo code website bÃ¡n hÃ ng cá»±c chuáº©n">
 													</div>
@@ -1726,7 +1733,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 													href="https://sharecode.vn/source-code/mau-website-sieu-thi-dien-may-giong-bachkhoashop-19668.htm">
 													<div class="img-box">
 														<img class="img-responsive"
-															src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/source-code-website-sieu-thi-dien-may-giong-bachkhoashop-1779.jpg"
+															src="./Full code website bán thực phẩm chức năng chuẩn seo_files/source-code-website-sieu-thi-dien-may-giong-bachkhoashop-1779.jpg"
 															alt="Source code website siÃªu thá» Äiá»n mÃ¡y giá»ng bachkhoashop"
 															title="Download Source code website siÃªu thá» Äiá»n mÃ¡y giá»ng bachkhoashop">
 													</div>
@@ -1787,7 +1794,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 													href="https://sharecode.vn/source-code/source-code-website-tin-tuc-shop-ban-hang-php-19473.htm">
 													<div class="img-box">
 														<img class="img-responsive"
-															src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/source-code-website-tin-tuc-shop-ban-hang-php-152323.jpg"
+															src="./Full code website bán thực phẩm chức năng chuẩn seo_files/source-code-website-tin-tuc-shop-ban-hang-php-152323.jpg"
 															alt="Source code website tin tá»©c, shop bÃ¡n hÃ ng PHP"
 															title="Download Source code website tin tá»©c, shop bÃ¡n hÃ ng PHP">
 													</div>
@@ -1860,7 +1867,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 														href="https://sharecode.vn/source-code/do-an-code-bao-cao-web-kinh-doanh-dong-ho-aspnet-mvc-23364.htm">
 														<div class="img-box">
 															<img class="img-responsive"
-																src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/source-code-bao-cao-web-kinh-doanh-dong-ho-asp.net-mvc-entitty-framework-105226.jpg"
+																src="./Full code website bán thực phẩm chức năng chuẩn seo_files/source-code-bao-cao-web-kinh-doanh-dong-ho-asp.net-mvc-entitty-framework-105226.jpg"
 																alt="Source Code + BÃ¡o cÃ¡o Web kinh doanh Äá»ng há» ASp.net MVC Entitty framework"
 																title="Download Source Code + BÃ¡o cÃ¡o Web kinh doanh Äá»ng há» ASp.net MVC Entitty framework">
 														</div>
@@ -1925,7 +1932,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 														href="https://sharecode.vn/source-code/source-code-bao-cao-xay-dung-blog-voi-django-23362.htm">
 														<div class="img-box">
 															<img class="img-responsive"
-																src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/source-code-bao-cao-xay-dung-blog-voi-django-91525.jpg"
+																src="./Full code website bán thực phẩm chức năng chuẩn seo_files/source-code-bao-cao-xay-dung-blog-voi-django-91525.jpg"
 																alt="Source code + bÃ¡o cÃ¡o xÃ¢y dá»±ng blog vá»i django"
 																title="Download Source code + bÃ¡o cÃ¡o xÃ¢y dá»±ng blog vá»i django">
 														</div>
@@ -1989,7 +1996,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 														href="https://sharecode.vn/source-code/ung-dung-phan-cong-cong-viec-tren-android-giao-dien-dep-de-dung-23360.htm">
 														<div class="img-box">
 															<img class="img-responsive"
-																src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/code-android-ung-dung-phan-cong-cong-viec-102050.jpg"
+																src="./Full code website bán thực phẩm chức năng chuẩn seo_files/code-android-ung-dung-phan-cong-cong-viec-102050.jpg"
 																alt="Code android á»¨ng dá»¥ng phÃ¢n cÃ´ng cÃ´ng viá»c"
 																title="Download Code android á»¨ng dá»¥ng phÃ¢n cÃ´ng cÃ´ng viá»c">
 														</div>
@@ -2053,7 +2060,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 														href="https://sharecode.vn/source-code/full-code-cong-ty-truyen-thong-quang-cao-chuan-seo-23361.htm">
 														<div class="img-box">
 															<img class="img-responsive"
-																src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/full-code-web-cong-ty-truyen-thong-quang-cao-102654.jpg"
+																src="./Full code website bán thực phẩm chức năng chuẩn seo_files/full-code-web-cong-ty-truyen-thong-quang-cao-102654.jpg"
 																alt="Full code web cÃ´ng ty truyá»n thÃ´ng quáº£ng cÃ¡o"
 																title="Download Full code web cÃ´ng ty truyá»n thÃ´ng quáº£ng cÃ¡o">
 														</div>
@@ -2124,7 +2131,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 							<div class="cmt">
 								<div class="cmt-img">
 									<img
-										src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/avanta.png"
+										src="./Full code website bán thực phẩm chức năng chuẩn seo_files/avanta.png"
 										id="mainbody_contentbody_img" width="45" height="45">
 								</div>
 								<div class="cmt-box">
@@ -2143,7 +2150,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 								<div style="display: none;" class="cmt-reply CommentReply">
 									<div class="cmt-img">
 										<img
-											src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/avanta.png"
+											src="./Full code website bán thực phẩm chức năng chuẩn seo_files/avanta.png"
 											id="mainbody_contentbody_img2" width="45" height="45">
 									</div>
 									<div class="cmt-box">
@@ -2501,19 +2508,19 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 															<li role="presentation" class="col-sm-3"><a
 																href="https://sharecode.vn/source-code/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-23971.htm#boxNganLuong"
 																role="tab" data-toggle="tab" class="bg"> <img
-																	src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/vi-ngan-luong.png"></a></li>
+																	src="./Full code website bán thực phẩm chức năng chuẩn seo_files/vi-ngan-luong.png"></a></li>
 															<li role="presentation" class="col-sm-3"><a
 																href="https://sharecode.vn/source-code/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-23971.htm#boxBaoKim"
 																role="tab" data-toggle="tab" class="bg"> <img
-																	src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/vi-bao-kim.png"></a></li>
+																	src="./Full code website bán thực phẩm chức năng chuẩn seo_files/vi-bao-kim.png"></a></li>
 															<li role="presentation" class="col-sm-3"><a
 																href="https://sharecode.vn/source-code/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-23971.htm#boxMomo"
 																role="tab" data-toggle="tab" class="bg"> <img
-																	src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/vi-momo.png"></a></li>
+																	src="./Full code website bán thực phẩm chức năng chuẩn seo_files/vi-momo.png"></a></li>
 															<li role="presentation" class="col-sm-3"><a
 																href="https://sharecode.vn/source-code/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-23971.htm#boxBankPlus"
 																role="tab" data-toggle="tab" class="bg"> <img
-																	src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/vi-bank-plus.png"></a></li>
+																	src="./Full code website bán thực phẩm chức năng chuẩn seo_files/vi-bank-plus.png"></a></li>
 														</ul>
 													</div>
 													<div class="text-center clear">
@@ -2596,7 +2603,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 																		<div
 																			style="height: 30px; width: 140px; float: left; margin-left: 10px;">
 																			<img
-																				src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/captcha.jpg"
+																				src="./Full code website bán thực phẩm chức năng chuẩn seo_files/captcha.jpg"
 																				alt="captcha" class="imgCaptcha" height="30"
 																				width="80">
 																			<div class="aorange"
@@ -2614,9 +2621,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 																		<a onclick="return Check_Paypal();"
 																			id="mainbody_contentbody_btnPaypal"
 																			href="javascript:__doPostBack(&#39;ctl00$ctl00$mainbody$contentbody$btnPaypal&#39;,&#39;&#39;)"><img
-																			src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/btn-paypal.png"
+																			src="./Full code website bán thực phẩm chức năng chuẩn seo_files/btn-paypal.png"
 																			alt="PayPal Checkout"></a> <img
-																			src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/btn-paypal-2.png"
+																			src="./Full code website bán thực phẩm chức năng chuẩn seo_files/btn-paypal-2.png"
 																			alt="PayPal Checkout card" class="paypal-card">
 																	</div>
 																</div>
@@ -2632,7 +2639,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 									<div class="modal-footer">
 										<p class="text-center green bold line-h">
 											<img
-												src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/secure.png"
+												src="./Full code website bán thực phẩm chức năng chuẩn seo_files/secure.png"
 												height="40" alt="secure"> &nbsp;Chá»©ng nháº­n giao
 											dá»ch an toÃ n!
 										</p>
@@ -2649,7 +2656,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 								<div class="block_content">
 									<div class="safe-img">
 										<img
-											src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/safe.png"
+											src="./Full code website bán thực phẩm chức năng chuẩn seo_files/safe.png"
 											style="border: none;"
 											alt="Mua code qua sharecode.vn Äá» ÄÆ°á»£c báº£o vá»">
 									</div>
@@ -2667,7 +2674,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 								<div class="pro-left">
 									<a href="https://sharecode.vn/thanh-vien/lt9x-225030.htm"
 										id="mainbody_contentbody_AvantaLink" target="_blank"> <img
-										src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/143423-le-tu.jpg"
+										src="./Full code website bán thực phẩm chức năng chuẩn seo_files/143423-le-tu.jpg"
 										id="mainbody_contentbody_Avanta" class="prof_img" width="90"
 										height="90" itemprop="image" title="ThÃ nh viÃªn LT" alt="LT">
 									</a>
@@ -2725,7 +2732,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 											aria-expanded="false" aria-controls="boxSendEmail">
 											<div class="share-email">
 												<img
-													src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/share-email.png"
+													src="./Full code website bán thực phẩm chức năng chuẩn seo_files/share-email.png"
 													style="margin-right: 5px"><br> Gá»­i code tá»i
 												email báº¡n bÃ¨
 											</div>
@@ -2733,7 +2740,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 											onclick="createCaptcha();" role="button">
 											<div class="share-save">
 												<img
-													src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/share-save.png"><br>
+													src="./Full code website bán thực phẩm chức năng chuẩn seo_files/share-save.png"><br>
 												LÆ°u láº¡i code cho tÃ´i
 											</div>
 										</a>
@@ -2766,7 +2773,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 												title="fb:like Facebook Social Plugin" frameborder="0"
 												allowtransparency="true" allowfullscreen="true"
 												scrolling="no" allow="encrypted-media"
-												src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/like.html"
+												src="./Full code website bán thực phẩm chức năng chuẩn seo_files/like.html"
 												style="border: none; visibility: visible; width: 126px; height: 20px;"
 												class=""></iframe></span>
 									</div>
@@ -2785,7 +2792,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 													<a
 														href="https://sharecode.vn/source-code/full-code-website-ban-va-gioi-thieu-may-loc-nuoc-23855.htm">
 														<img
-														src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/full-code-website-ban-va-gioi-thieu-may-loc-nuoc-213455.jpg"
+														src="./Full code website bán thực phẩm chức năng chuẩn seo_files/full-code-website-ban-va-gioi-thieu-may-loc-nuoc-213455.jpg"
 														alt="mÃ¡y lá»c nÆ°á»c,website bÃ¡n hÃ ng,web giá»i thiá»u sáº£n pháº©m"
 														title="Download Full Code Website BÃ¡n VÃ  Giá»i Thiá»u MÃ¡y Lá»c NÆ°á»c">
 													</a>
@@ -2842,7 +2849,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 													<a
 														href="https://sharecode.vn/source-code/full-code-website-shop-me-va-be-23854.htm">
 														<img
-														src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/full-code-website-shop-me-va-be-213114.jpg"
+														src="./Full code website bán thực phẩm chức năng chuẩn seo_files/full-code-website-shop-me-va-be-213114.jpg"
 														alt="shop máº¹ vÃ  bÃ©,shop quáº§n Ã¡o,shop tráº» em,Website Shop Máº¹ VÃ  BÃ©"
 														title="Download Full Code Website Shop Máº¹ VÃ  BÃ©">
 													</a>
@@ -2899,7 +2906,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 													<a
 														href="https://sharecode.vn/source-code/full-code-website-gioi-thieu-va-ban-bat-dong-san-23845.htm">
 														<img
-														src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/full-code-website-gioi-thieu-va-ban-bat-dong-san-203759.jpg"
+														src="./Full code website bán thực phẩm chức năng chuẩn seo_files/full-code-website-gioi-thieu-va-ban-bat-dong-san-203759.jpg"
 														alt="web báº¥t Äá»ng sáº£n,share code báº¥t Äá»ng sáº£n,code web báº¥t Äá»ng sáº£n chuáº©n seo"
 														title="Download Full Code Website Giá»i Thiá»u VÃ  BÃ¡n Báº¥t Äá»ng Sáº£n">
 													</a>
@@ -2956,7 +2963,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 													<a
 														href="https://sharecode.vn/source-code/full-code-website-ban-mat-ong-2-23835.htm">
 														<img
-														src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/full-code-website-ban-mat-ong-giao-dien-khac-94941.jpg"
+														src="./Full code website bán thực phẩm chức năng chuẩn seo_files/full-code-website-ban-mat-ong-giao-dien-khac-94941.jpg"
 														alt="bÃ¡n máº­t ong,bÃ¡n hÃ ng,website bÃ¡n hÃ ng,website bÃ¡n máº­t ong,website máº­t ong"
 														title="Download Full Code Website BÃ¡n Máº­t Ong giao diá»n khÃ¡c">
 													</a>
@@ -3013,7 +3020,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 													<a
 														href="https://sharecode.vn/source-code/full-code-website-gioi-thieu-san-pham-va-ban-duoc-pham-23836.htm">
 														<img
-														src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/full-code-website-gioi-thieu-san-pham-va-ban-duoc-pham-155932.jpg"
+														src="./Full code website bán thực phẩm chức năng chuẩn seo_files/full-code-website-gioi-thieu-san-pham-va-ban-duoc-pham-155932.jpg"
 														alt="website giá»i thiá»u dÆ°á»£c pháº©m,web dÆ°á»£c pháº©m,web bÃ¡n thuá»c"
 														title="Download Full Code Website Giá»i Thiá»u Sáº£n Pháº©m VÃ  BÃ¡n DÆ°á»£c Pháº©m">
 													</a>
@@ -3082,7 +3089,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 
 
 		<script
-			src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/floater_xlib.js.táº£i xuá»ng"></script>
+			src="./Full code website bán thực phẩm chức năng chuẩn seo_files/floater_xlib.js.tải xuống"></script>
 		<script type="text/javascript">
 
     var slideTime = 600;
@@ -3136,7 +3143,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 				<a
 					href="https://sharecode.vn/kien-thuc-lap-trinh/dich-vu-thiet-ke-website-chuyen-nghiep-voi-gia-cuc-re-va-nhieu-uu-dai-tai-sharecodevn-880.htm"
 					target="_blank"> <img
-					src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/thiet-ke-web-gia-re.jpg"
+					src="./Full code website bán thực phẩm chức năng chuẩn seo_files/thiet-ke-web-gia-re.jpg"
 					border="0" width="120" alt=""></a><br>
 			</div>
 		</div>
@@ -3144,7 +3151,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 			style="text-align: left; position: fixed; overflow: hidden; width: 120px; z-index: 99999; left: 1299.5px; top: 60px; display: none;">
 			<div id="Div2">
 				<a href="https://topcode.vn/" target="_blank"> <img
-					src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/Ra-mat-topcode.jpg"
+					src="./Full code website bán thực phẩm chức năng chuẩn seo_files/Ra-mat-topcode.jpg"
 					border="0" width="120" alt=""></a><br>
 			</div>
 		</div>
@@ -3164,7 +3171,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 						<div class="col-md-3">
 							<div id="address-box">
 								<a href="https://sharecode.vn/"> <img
-									src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/logo.png"
+									src="./Full code website bán thực phẩm chức năng chuẩn seo_files/logo.png"
 									alt="Sharecode.vn"></a>
 								<div id="address-list">
 									<div class="tit-name">Hotline:</div>
@@ -3272,28 +3279,28 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 							<ul id="trademark-list">
 								<li id="payment-methods">Thanh toÃ¡n Äáº£m báº£o</li>
 								<li><img
-									src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/b1.png"
+									src="./Full code website bán thực phẩm chức năng chuẩn seo_files/b1.png"
 									alt="ngan luong"></li>
 								<li><img
-									src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/b10.png"
+									src="./Full code website bán thực phẩm chức năng chuẩn seo_files/b10.png"
 									alt="bao kim"></li>
 								<li><img
-									src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/b11.png"
+									src="./Full code website bán thực phẩm chức năng chuẩn seo_files/b11.png"
 									alt="momo"></li>
 								<li><img
-									src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/b8.png"
+									src="./Full code website bán thực phẩm chức năng chuẩn seo_files/b8.png"
 									alt="paypal"></li>
 								<li><img
-									src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/b5.png"
+									src="./Full code website bán thực phẩm chức năng chuẩn seo_files/b5.png"
 									alt="vietcombank"></li>
 								<li><img
-									src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/b9.png"
+									src="./Full code website bán thực phẩm chức năng chuẩn seo_files/b9.png"
 									alt="vietin bank"></li>
 								<li><img
-									src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/b6.png"
+									src="./Full code website bán thực phẩm chức năng chuẩn seo_files/b6.png"
 									alt="agribank"></li>
 								<li><img
-									src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/b7.png"
+									src="./Full code website bán thực phẩm chức năng chuẩn seo_files/b7.png"
 									alt="bidv"></li>
 
 							</ul>
@@ -3325,10 +3332,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 							vá» báº£n quyá»n <a
 								href="https://www.dmca.com/Protection/Status.aspx?ID=e3cfb854-1733-4462-a9e8-0ef4661d6600&amp;refurl=https://sharecode.vn/source-code/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-23971.htm"
 								title="DMCA.com Protection Status" class="dmca-badge"> <img
-								src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/dmca-badge-w150-5x1-09.png"
+								src="./Full code website bán thực phẩm chức năng chuẩn seo_files/dmca-badge-w150-5x1-09.png"
 								alt="DMCA.com Protection Status"></a>
 							<script
-								src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/DMCABadgeHelper.min.js.táº£i xuá»ng"> </script>
+								src="./Full code website bán thực phẩm chức năng chuẩn seo_files/DMCABadgeHelper.min.js.tải xuống"> </script>
 						</p>
 					</div>
 				</div>
@@ -3342,19 +3349,19 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 		class="scroll_top" title="LÃªn Äáº§u" style="display: inline;"></a>
 	<!-- Script-->
 	<script type="text/javascript"
-		src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/jquery-1.11.2.min.js.táº£i xuá»ng"></script>
+		src="./Full code website bán thực phẩm chức năng chuẩn seo_files/jquery-1.11.2.min.js.tải xuống"></script>
 	<script type="text/javascript"
-		src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/bootstrap.min.js.táº£i xuá»ng"></script>
+		src="./Full code website bán thực phẩm chức năng chuẩn seo_files/bootstrap.min.js.tải xuống"></script>
 	<script type="text/javascript"
-		src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/select2.min.js.táº£i xuá»ng"></script>
+		src="./Full code website bán thực phẩm chức năng chuẩn seo_files/select2.min.js.tải xuống"></script>
 	<script type="text/javascript"
-		src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/owl.carousel.min.js.táº£i xuá»ng"></script>
+		src="./Full code website bán thực phẩm chức năng chuẩn seo_files/owl.carousel.min.js.tải xuống"></script>
 	<script type="text/javascript"
-		src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/jquery.actual.min.js.táº£i xuá»ng"></script>
+		src="./Full code website bán thực phẩm chức năng chuẩn seo_files/jquery.actual.min.js.tải xuống"></script>
 	<script type="text/javascript"
-		src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/theme-script.js.táº£i xuá»ng"></script>
+		src="./Full code website bán thực phẩm chức năng chuẩn seo_files/theme-script.js.tải xuống"></script>
 	<script type="text/javascript"
-		src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/jquery-ui.min.js.táº£i xuá»ng"></script>
+		src="./Full code website bán thực phẩm chức năng chuẩn seo_files/jquery-ui.min.js.tải xuống"></script>
 	<script type="text/javascript">
         $('#slSearch').on('change', function () {
             $('#hdLangFilter').val($("#slSearch").val());
@@ -3441,7 +3448,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
     </script>
 	<!-- Äáº·t tháº» nÃ y vÃ o pháº§n Äáº§u hoáº·c ngay trÆ°á»c tháº» ÄÃ³ng pháº§n ná»i dung cá»§a báº¡n. -->
 	<script
-		src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/platform.js.táº£i xuá»ng"
+		src="./Full code website bán thực phẩm chức năng chuẩn seo_files/platform.js.tải xuống"
 		async="" defer="" gapi_processed="true">
   {lang: 'vi'}
     </script>
@@ -3478,7 +3485,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 						title="fb:page Facebook Social Plugin" frameborder="0"
 						allowtransparency="true" allowfullscreen="true" scrolling="no"
 						allow="encrypted-media"
-						src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/page.html"
+						src="./Full code website bán thực phẩm chức năng chuẩn seo_files/page.html"
 						style="border: none; visibility: visible; width: 250px; height: 350px;"
 						class=""></iframe></span>
 			</div>
@@ -3555,15 +3562,15 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
     </script>
 
 	<link
-		href="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/iosOverlay.css"
+		href="./Full code website bán thực phẩm chức năng chuẩn seo_files/iosOverlay.css"
 		rel="stylesheet">
 	<script
-		src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/iosOverlay.js.táº£i xuá»ng"></script>
+		src="./Full code website bán thực phẩm chức năng chuẩn seo_files/iosOverlay.js.tải xuống"></script>
 	<link
-		href="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/rateit.css"
+		href="./Full code website bán thực phẩm chức năng chuẩn seo_files/rateit.css"
 		rel="stylesheet">
 	<script
-		src="./Full code website bÃ¡n thá»±c pháº©m chá»©c nÄng chuáº©n seo_files/jquery.rateit.min.js.táº£i xuá»ng"></script>
+		src="./Full code website bán thực phẩm chức năng chuẩn seo_files/jquery.rateit.min.js.tải xuống"></script>
 
 
 
