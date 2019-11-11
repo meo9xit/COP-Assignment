@@ -683,7 +683,7 @@
 							<div class="table-responsive">
 								<a href='<c:url value="/admin-comment?type=edit"/>'>
 									<button type="button" class="btn bg-blue waves-effect">
-										<i class="material-icons">verified_user</i> <span>Edit
+										<i class="material-icons">verified_comment</i> <span>Edit
 											Comment</span>
 									</button>
 								</a>
@@ -818,7 +818,9 @@
 				type : 'DELETE',
 				contentType : 'application/json',
 				data : JSON.stringify(data),
-				};
+				success : function() {
+
+				},
 				error : function() {
 				}
 			});
