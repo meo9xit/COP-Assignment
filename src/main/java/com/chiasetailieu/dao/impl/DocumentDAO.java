@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.chiasetailieu.dao.IDocumentDAO;
 import com.chiasetailieu.dao.mapper.DocumentMapper;
+import com.chiasetailieu.model.Category;
 import com.chiasetailieu.model.Document;
 
 public class DocumentDAO extends GenericDAO<Document> implements IDocumentDAO{
@@ -53,6 +54,14 @@ public class DocumentDAO extends GenericDAO<Document> implements IDocumentDAO{
 		// TODO Auto-generated method stub
 		String sql = "delete from document where doc_id = ?";
 		delete(sql, document.getDocId());
+	}
+
+	@Override
+	public List<Document> findByCategory(Category cate) {
+		// TODO Auto-generated method stub
+		String sql = "select * from document where cate_id = ?";
+		List<Document> docs = query(sql, new DocumentMapper(), cate.getCategoryID());
+		return docs;
 	}
 
 }

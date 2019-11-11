@@ -6,9 +6,9 @@ import javax.inject.Inject;
 
 import com.chiasetailieu.dao.IDocumentDAO;
 import com.chiasetailieu.model.Document;
-import com.chiasetailieu.service.IDocumentDService;
+import com.chiasetailieu.service.IDocumentService;
 
-public class DocumentService implements IDocumentDService{
+public class DocumentService implements IDocumentService{
 	
 	@Inject
 	IDocumentDAO documentDAO;

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.jboss.weld.context.http.HttpRequestContext;
 
 import com.chiasetailieu.model.Document;
-import com.chiasetailieu.service.IDocumentDService;
+import com.chiasetailieu.service.IDocumentService;
 import com.chiasetailieu.utils.HttpUtil;
 import com.chiasetailieu.model.User;
 import com.chiasetailieu.utils.SessionUtil;
@@ -34,7 +34,7 @@ public class DocumentAPI extends HttpServlet {
     }
     
     @Inject
-    IDocumentDService documentService;
+    IDocumentService documentService;
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)

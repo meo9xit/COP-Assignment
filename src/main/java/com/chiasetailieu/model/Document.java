@@ -12,7 +12,21 @@ public class Document extends AbstractModel<Document>{
 	private SubCategory subcate;
 	private String cover;
 	private String docDescription;
+	private Long view;
+	private Long download_count;
 	
+	public Long getView() {
+		return view;
+	}
+	public void setView(Long view) {
+		this.view = view;
+	}
+	public Long getDownload_count() {
+		return download_count;
+	}
+	public void setDownload_count(Long download_count) {
+		this.download_count = download_count;
+	}
 	public String getDocDescription() {
 		return docDescription;
 	}
