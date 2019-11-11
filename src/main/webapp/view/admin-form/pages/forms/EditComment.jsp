@@ -687,8 +687,7 @@
 										<div class="form-group">
 											<div class="form-line">
 												<input type="number" id="doc_id" class="form-control"
-													name="docId"
-													placeholder="Enter doc id!"
+													name="docId" placeholder="Enter doc id!"
 													value="${model.docId}">
 											</div>
 										</div>

@@ -16,23 +16,24 @@ import com.chiasetailieu.service.ICommentService;
 import com.chiasetailieu.utils.FormUtil;
 
 @WebServlet("/admin-comment")
-public class AdminComment extends HttpServlet{
+public class AdminComment extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    
+
 	@Inject
 	private ICommentService commentService;
-	
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		Comment model = FormUtil.toModel(Comment.class, request);
 		String url = "";
-		if(model.getClass()==null) {			
+		if (model.getClass() == null) {
+//			url = "/view/admin-form/pages/tables/Table_Comment.jsp";
 			url = "/view/admin-form/pages/forms/EditComment.jsp";
 			model.setListResult(commentService.findAll());
-		}
-		else {
+		} else {
 			url = "/view/admin-form/pages/tables/Table_Comment.jsp";
+//			url = "/view/admin-form/pages/forms/EditComment.jsp";
 		}
 		request.setAttribute("model", model);
 		RequestDispatcher rd = request.getRequestDispatcher(url);
@@ -40,9 +41,11 @@ public class AdminComment extends HttpServlet{
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}

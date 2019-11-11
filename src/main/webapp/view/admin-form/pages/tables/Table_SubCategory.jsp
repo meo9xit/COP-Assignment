@@ -686,7 +686,7 @@
 										<i class="material-icons">verified_user</i> <span>ADD
 											Sub Category</span>
 									</button>
-								</a> <a href='<c:url value="/admin-subcategory?type=add"/>'>
+								</a> <a href='<c:url value="/admin-subcategory?type=edit"/>'>
 									<button type="button" class="btn bg-blue waves-effect">
 										<i class="material-icons">verified_user</i> <span>Edit
 											Sub Category</span>
