@@ -35,7 +35,7 @@ public class AdminEditSubCate extends HttpServlet {
 		String subcate_id = req.getParameter("subcate_id");
 		req.setAttribute("subcate_id", subcate_id);
 		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher(
-				"/view/admin-form/pages/tables/Table_SubCategory.jsp");
+				"/view/admin-form/pages/forms/UpdateSubCategory.jsp");
 
 		dispatcher.forward(req, resp);
 	}
@@ -62,7 +62,7 @@ public class AdminEditSubCate extends HttpServlet {
 
 		} else {
 			request.getRequestDispatcher(
-					"/view/admin-form/pages/forms/AddSubCategory.jsp")
+					"/view/admin-form/pages/forms/UpdateSubCategory.jsp")
 					.forward(request, response);
 		}
 	}

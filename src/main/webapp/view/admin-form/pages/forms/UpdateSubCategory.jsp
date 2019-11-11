@@ -676,26 +676,26 @@
 											name="subcategoryID" placeholder="Enter subcategory id!"
 											value="${model.subcategoryID}">
 									</div>
-									<label for="category_id">Category ID</label>
-									<div class="form-group">
-										<div class="form-line">
-											<input type="text" id="categoryId" class="form-control"
-												name="categoryId" placeholder="Enter category id!"
-												value="${model.categoryId}">
-										</div>
-										<br> <label for="subcategory_name">SubCategory
-											Name</label>
-										<div class="form-group">
-											<div class="form-line">
-												<input type="text" id="subcategoryName" class="form-control"
-													name="subcategoryName"
-													placeholder="Enter subcategory name!"
-													value="${model.subcategoryName}">
-											</div>
-										</div>
-										<br> <input type="button"
-											class="btn btn-primary m-t-15 waves-effect" id="btnUpdate"
-											value="Update" />
+								</div>
+								<label for="category_id">Category ID</label>
+								<div class="form-group">
+									<div class="form-line">
+										<input type="text" id="categoryId" class="form-control"
+											name="categoryId" placeholder="Enter category id!"
+											value="${model.categoryId}">
+									</div>
+								</div>
+								<br> <label for="subcategory_name">SubCategory Name</label>
+								<div class="form-group">
+									<div class="form-line">
+										<input type="text" id="subcategoryName" class="form-control"
+											name="subcategoryName" placeholder="Enter subcategory name!"
+											value="${model.subcategoryName}">
+									</div>
+								</div>
+								<br> <input type="button"
+									class="btn btn-primary m-t-15 waves-effect" id="btnEdit"
+									value="Edit" />
 							</form>
 						</div>
 					</div>
@@ -713,7 +713,7 @@
 	<script src="style/admin/plugins/jquery/jquery.min.js"></script>
 
 	<script>
-		$('#btnUpdate').click(function(e) {
+		$('#btnEdit').click(function(e) {
 			e.preventDefault();
 			var data = {};
 			var formData = $('#formSubmit').serializeArray();
@@ -721,9 +721,9 @@
 				data["" + v.name + ""] = v.value;
 			});
 			console.info(data);
-			updateNew(data);
+			editNew(data);
 		});
-		function updateNew(data) {
+		function editNew(data) {
 			$
 					.ajax({
 						url : '${APIurl}',
@@ -735,7 +735,7 @@
 							window.location.href = "/chiasetailieu/admin-subcategory";
 						},
 						error : function(error) {
-							window.location.href = "/chiasetailieu/admin-subcategory?type=update";
+							window.location.href = "/chiasetailieu/admin-subcategory?type=edit";
 						}
 					});
 		}
