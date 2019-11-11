@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.chiasetailieu.model.Document;
 
-public interface IDocumentDService {
+public interface IDocumentService {
 	Document save(Document doc);
 	Document findOneById(Long id);
 	List<Document> findByName(String name);
