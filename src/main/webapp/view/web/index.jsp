@@ -810,7 +810,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                             <!-- PRODUCT LIST -->
                             
                                 <ul class="row product-list style2 grid">
-                                    <c:forEach var = "doc" items = "alldocs">
+                                    <c:forEach var = "doc" items = "docs">
                                             <li class="col-sx-12 col-sm-3" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/Product">
                                                 <div class="product-container">
                                                     <div class="left-block">
@@ -924,7 +924,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
     <p class="title_block">CODE NỔI BẬT</p>
     <div class="block_content">
         <ul class="products-block best-sell">
-				<c:forEach>            
+				<c:forEach var = "topdoc" items = "topdocs">            
                     <li>
                         <div class="products-block-left">
                             <a href="https://sharecode.vn/source-code/full-source-code-app-webview-vovinam-martial-arts-already-release-appstore-ch-play-23708.htm">

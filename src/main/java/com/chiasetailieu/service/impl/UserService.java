@@ -47,4 +47,10 @@ public class UserService implements IUserService{
 		return userDAO.findByUserNameAndPassword(username, password);
 	}
 
+	@Override
+	public void update(User user) {
+		// TODO Auto-generated method stub
+		userDAO.update(user);
+	}
+
 }
