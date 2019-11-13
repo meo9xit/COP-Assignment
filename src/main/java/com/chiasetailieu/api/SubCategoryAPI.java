@@ -48,7 +48,12 @@ public class SubCategoryAPI extends HttpServlet {
 	
 	protected void doPut(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+		ObjectMapper mapper = new ObjectMapper();
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("application/json");
+		SubCategory subcategory =  HttpUtil.of(request.getReader()).toModel(SubCategory.class);
+		subcategoryService.update(subcategory);
+		mapper.writeValue(response.getOutputStream(), subcategory);
 	}
 	
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) 

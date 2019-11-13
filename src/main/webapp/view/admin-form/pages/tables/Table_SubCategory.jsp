@@ -727,7 +727,7 @@
 														</button></td>
 													<td><button value="${subcategory.subcategoryID}"
 															onClick="btnUpdateClick(this)">
-															<img src="style/admin/images/edit-icon.png" />
+															<img src="style/admin/images/Delete_16x16.png" />
 														</button></td>
 												</tr>
 											</c:forEach>

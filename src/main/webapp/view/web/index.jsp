@@ -379,7 +379,11 @@ keyframes rotateSpinner { 0%{
 
 100%{
 transform
+
+
 :rotate(360deg)
+
+
 }
 }
 .fb_iframe_widget {
@@ -451,7 +455,6 @@ transform
             });
             FB.AppEvents.logPageView();
         };
-
         (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) { return; }
@@ -1698,7 +1701,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
 							<p class="title_block">CODE NỔI BẬT</p>
 							<div class="block_content">
 								<ul class="products-block best-sell">
-									<c:forEach>
+									<c:forEach var="doc" items="alldocs">
 										<li>
 											<div class="products-block-left">
 												<a
@@ -1876,12 +1879,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
 
 		<script src="style/web-style/floater_xlib.js.tải xuống"></script>
 		<script type="text/javascript">
-
     var slideTime = 600;
     var floatAtBottom = false;
     function pepsi_floating_init() {
         xMoveTo('floating_banner_right', 887 - (1024 - screen.width), 0);
-
         winOnResize(); // set initial position
         xAddEventListener(window, 'resize', winOnResize, false);
         xAddEventListener(window, 'scroll', winOnScroll, false);
@@ -1920,7 +1921,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
             document.getElementById('bannerCenter').style.display = 'none';
         }
     }
-
 </script>
 		<div id="floating_banner_left"
 			style="text-align: right; position: fixed; overflow: hidden; width: 120px; z-index: 99999; display: none; left: -70.5px; top: 60px;">
@@ -1941,9 +1941,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
 			</div>
 		</div>
 		<script>
-
       pepsi_floating_init();
-
 </script>
 
 		<div id="ctl24">

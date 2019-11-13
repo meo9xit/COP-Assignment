@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.chiasetailieu.dao.impl.SubcateDAO;
 import com.chiasetailieu.model.SubCategory;
+import com.chiasetailieu.service.impl.SubCategoryService;
 
 @WebServlet("/admin-edit-subcategory")
 public class AdminEditSubCate extends HttpServlet {
@@ -26,16 +27,19 @@ public class AdminEditSubCate extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
-	
+
 	@Inject
 	private SubcateDAO subcategoryDAO;
 	
+	@Inject
+	private SubCategoryService subcategoryService;
+
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String subcate_id = req.getParameter("subcate_id");
 		req.setAttribute("subcate_id", subcate_id);
-		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher(
-				"/view/admin-form/pages/forms/UpdateSubCategory.jsp");
+		RequestDispatcher dispatcher = this.getServletContext()
+				.getRequestDispatcher("/view/admin-form/pages/forms/UpdateSubCategory.jsp");
 
 		dispatcher.forward(req, resp);
 	}
@@ -61,9 +65,8 @@ public class AdminEditSubCate extends HttpServlet {
 			response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/"));
 
 		} else {
-			request.getRequestDispatcher(
-					"/view/admin-form/pages/forms/UpdateSubCategory.jsp")
-					.forward(request, response);
+			request.getRequestDispatcher("/view/admin-form/pages/forms/UpdateSubCategory.jsp").forward(request,
+					response);
 		}
 	}
 }
