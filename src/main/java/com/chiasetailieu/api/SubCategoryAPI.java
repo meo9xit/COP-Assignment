@@ -52,7 +52,7 @@ public class SubCategoryAPI extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("application/json");
 		SubCategory subcategory =  HttpUtil.of(request.getReader()).toModel(SubCategory.class);
-		subcategoryService.update(subcategory);
+		subcategoryService.save(subcategory);
 		mapper.writeValue(response.getOutputStream(), subcategory);
 	}
 	
