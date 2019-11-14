@@ -727,7 +727,7 @@
 			$
 					.ajax({
 						url : '${APIurl}',
-						type : 'POST',
+						type : 'PUT',
 						contentType : 'application/json',
 						data : JSON.stringify(data),
 						dataType : 'json',
