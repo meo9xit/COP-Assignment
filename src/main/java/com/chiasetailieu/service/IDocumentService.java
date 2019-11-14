@@ -9,6 +9,7 @@ public interface IDocumentService {
 	Document findOneById(Long id);
 	List<Document> findByName(String name);
 	List<Document> findByCategory(String category);
+	List<Document> findAll();
 	void delete (Document doc);
 	void update (Document doc);
 }

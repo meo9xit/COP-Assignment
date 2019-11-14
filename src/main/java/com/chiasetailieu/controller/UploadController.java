@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
+import java.util.List;
 
 import javax.imageio.ImageIO;
 import javax.inject.Inject;
@@ -21,9 +22,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
+import com.chiasetailieu.model.Category;
 import com.chiasetailieu.model.Document;
+import com.chiasetailieu.model.SubCategory;
 import com.chiasetailieu.model.User;
+import com.chiasetailieu.service.ICategoryService;
 import com.chiasetailieu.service.IDocumentService;
+import com.chiasetailieu.service.ISubCategoryService;
 import com.chiasetailieu.utils.AppUtils;
 import com.sun.pdfview.PDFFile;
 import com.sun.pdfview.PDFPage;
@@ -37,9 +42,15 @@ maxFileSize = 1024 * 1024 * 10,
 maxRequestSize = 1024 * 1024 * 50)
 public class UploadController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+	private static String uploadDir = "C:\\Users\\ACER\\Documents";
 	@Inject
     IDocumentService docService;
+	
+	@Inject
+	ICategoryService cateService;
+	
+	@Inject
+	ISubCategoryService subcateService;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -53,6 +64,10 @@ public class UploadController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		List<Category> categories = cateService.findAll();
+		List<SubCategory> subcates = subcateService.findAll();
+		request.setAttribute("categories", categories);
+		request.setAttribute("subcates", subcates);
 		request.getRequestDispatcher("/view/web/upload.jsp").forward(request, response);
 	}
 
@@ -63,8 +78,8 @@ public class UploadController extends HttpServlet {
 		// TODO Auto-generated method stub
 		try {
 	           String description = request.getParameter("docDescription");
-	           Long cateId = Long.parseLong(request.getParameter("cate"));
-	           Long subcateId = Long.parseLong(request.getParameter("subcate"));
+	           Long cateId = Long.parseLong(request.getParameter("cateId"));
+	           Long subcateId = Long.parseLong(request.getParameter("subcateId"));
 	           String docname = request.getParameter("docName");
 	           System.out.println("Description: " + description);
 	           User user = AppUtils.getLoginedUser(request.getSession());
@@ -73,11 +88,13 @@ public class UploadController extends HttpServlet {
 	           doc.setCateId(cateId);
 	           doc.setSubcateId(subcateId);
 	           doc.setUserId(user.getUserid());
-	  
+	           doc.setDocName(docname);
+	           String ss = request.getServletContext().getRealPath("");
+	           System.out.println("Paht: " + ss);
 	           // Đường dẫn tuyệt đối tới thư mục gốc của web app.
-	           String appPath = "C:\\Users\\ACER\\Documents\\uploaded";
+	           String appPath = uploadDir+"\\uploaded";
 	           appPath = appPath.replace('\\', '/');
-	 
+	           System.out.println("Description: " + appPath);
 	  
 	           // Thư mục để save file tải lên.
 	           String fullSavePath = null;
@@ -97,17 +114,27 @@ public class UploadController extends HttpServlet {
 	           // Danh mục các phần đã upload lên (Có thể là nhiều file).
 	           for (Part part : request.getParts()) {
 	               String fileName = extractFileName(part);
-	               int i = fileName.lastIndexOf('.');
-	               String ext = fileName.substring(i+1);
-	               if (fileName != null && fileName.length() > 0) {
-	                   String filePath = fullSavePath + File.separator + fileName;
-	                   System.out.println("Write attachment to file: " + filePath);
-	                   doc.setDocSource(filePath);
-	                   // Ghi vào file.
-	                   String imgname = getThumbnail(fileName);
-	                   doc.setCover(imgname);
-	                   part.write(filePath);
-	               }
+	               System.out.println("File name: " + fileName);
+	               String ext = getExtension(fileName);
+	               if(ext != null)
+	            	  if(ext.contains("doc") || ext.contains("pdf")) {
+	            	   
+			               if (fileName != null && fileName.length() > 0) {
+			                   String filePath = fullSavePath + File.separator + fileName;
+			                   System.out.println("Write attachment to file: " + filePath);
+			                   doc.setDocSource(filePath);
+			                   // Ghi vào file.
+			                   String imgname = getThumbnail(fileName);
+			                   doc.setCover(imgname);
+			                   part.write(filePath);
+			                   if(ext.contains("doc")) {
+			                	   
+			                   }
+			               }
+		               } else { 
+		            	   request.setAttribute("message", "Website chỉ cho phép upload file MS Word hoặc PDF!");
+		            	   return;
+		               }
 	           }
 	  
 	           // Upload thành công.
@@ -116,7 +143,7 @@ public class UploadController extends HttpServlet {
 	       } catch (Exception e) {
 	           e.printStackTrace();
 	           request.setAttribute("errorMessage", "Error: " + e.getMessage());
-	           RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/jsps/uploadFile.jsp");
+	           RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/jsp/upload.jsp");
 	           dispatcher.forward(request, response);
 	       }
 	}
@@ -143,12 +170,27 @@ public class UploadController extends HttpServlet {
 	
 	private String getThumbnail(String pdfname) {
 		String imgName = "";
+		String imgPath = uploadDir+"\\cover";
+		imgPath = imgPath.replace('\\', '/');
+		String fullpath = "";
 		try {
-			File pdfFile = new File("/path/to/"+pdfname);
+			
+			if (imgPath.endsWith("/")) {
+				fullpath = imgPath;
+	           } else {
+	        	   fullpath = imgPath + "/";
+	           }
+			File fileSaveDir = new File(fullpath);
+	        if (!fileSaveDir.exists()) {
+	        	fileSaveDir.mkdir();
+	        }
+			File pdfFile = new File(pdfname);
 			RandomAccessFile raf = new RandomAccessFile(pdfFile, "r");
 			FileChannel channel = raf.getChannel();
 			ByteBuffer buf = channel.map(FileChannel.MapMode.READ_ONLY, 0, channel.size());
 			PDFFile pdf = new PDFFile(buf);
+			int i = pdfname.lastIndexOf('.');
+			imgName = pdfname.substring(0,i-1) + ".jpg";
 			PDFPage page = pdf.getPage(0);
 	
 			// create the image
@@ -165,12 +207,21 @@ public class UploadController extends HttpServlet {
 			);
 			Graphics2D bufImageGraphics = bufferedImage.createGraphics();
 			bufImageGraphics.drawImage(image, 0, 0, null);
-			ImageIO.write(bufferedImage, "jpg", new File( "/path/to/image.jpg" ));
+			ImageIO.write(bufferedImage, "jpg", new File( fullpath + File.separator + imgName ));
 		}
 		catch(IOException e) {
 			System.out.println("Exception occured :" + e.getMessage());
 		}
-		return imgName;
+		return fullpath + File.separator + imgName;
+	}
+	
+	private String getExtension(String filename) {
+		if(filename == null)
+			return null;
+		String ext = "";
+		int i = filename.lastIndexOf('.');
+		ext = filename.substring(i+1);
+		return ext;
 	}
 
 }

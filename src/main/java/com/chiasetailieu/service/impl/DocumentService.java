@@ -49,4 +49,10 @@ public class DocumentService implements IDocumentService{
 		
 	}
 
+	@Override
+	public List<Document> findAll() {
+		// TODO Auto-generated method stub
+		return documentDAO.findAll();
+	}
+
 }

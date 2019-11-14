@@ -1,5 +1,7 @@
 package com.chiasetailieu.model;
 
+import java.util.List;
+
 public class Document extends AbstractModel<Document>{
 	private Long docId;
 	private String docName;
@@ -14,6 +16,7 @@ public class Document extends AbstractModel<Document>{
 	private String docDescription;
 	private Long view;
 	private Long download_count;
+	private List<Comment> comments;
 	
 	public Long getView() {
 		return view;
