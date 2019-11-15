@@ -14,7 +14,7 @@ import com.chiasetailieu.service.ICommentService;
 import com.chiasetailieu.utils.HttpUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-@WebServlet(urlPatterns = "/api-admin-comment")
+@WebServlet(urlPatterns = "/api-comment")
 public class CommentAPI extends HttpServlet{
 private static final long serialVersionUID = 1L;
        

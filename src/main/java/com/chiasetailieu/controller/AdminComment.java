@@ -15,7 +15,7 @@ import com.chiasetailieu.model.Comment;
 import com.chiasetailieu.service.ICommentService;
 import com.chiasetailieu.utils.FormUtil;
 
-@WebServlet("/admin-comment")
+@WebServlet("/comment")
 public class AdminComment extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -28,12 +28,10 @@ public class AdminComment extends HttpServlet {
 		Comment model = FormUtil.toModel(Comment.class, request);
 		String url = "";
 		if (model.getClass() == null) {
-//			url = "/view/admin-form/pages/tables/Table_Comment.jsp";
-			url = "/view/admin-form/pages/forms/EditComment.jsp";
+			url = "/view/web/post.jsp";
 			model.setListResult(commentService.findAll());
 		} else {
-			url = "/view/admin-form/pages/tables/Table_Comment.jsp";
-//			url = "/view/admin-form/pages/forms/EditComment.jsp";
+			url = "/view/web/post.jsp";
 		}
 		request.setAttribute("model", model);
 		RequestDispatcher rd = request.getRequestDispatcher(url);
