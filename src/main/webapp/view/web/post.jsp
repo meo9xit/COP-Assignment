@@ -27,8 +27,7 @@
 	href="style/post/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css"
 	href="style/post/font-awesome.min.css" />
-<link rel="stylesheet" type="text/css"
-	href="style/post/select2.min.css" />
+<link rel="stylesheet" type="text/css" href="style/post/select2.min.css" />
 <link rel="stylesheet" type="text/css"
 	href="style/post/owl.carousel.css" />
 <link rel="stylesheet" type="text/css"
@@ -289,8 +288,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 								<div class="vertical-menu-content is-home">
 									<ul class="vertical-menu-list">
 										<li><a class="parent" href="#"> <img
-												class="icon-menu" alt="Thể loại code"
-												src="style/post/2.png" />PHÂN LOẠI CODE
+												class="icon-menu" alt="Thể loại code" src="style/post/2.png" />PHÂN
+												LOẠI CODE
 										</a>
 											<div class="vertical-dropdown-menu">
 												<div class="vertical-groups col-sm-6 col-md-4">
@@ -335,8 +334,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 											</div></li>
 
 										<li class=""><a href='/ngon-ngu-lap-trinh/android-15.htm'>
-												<img class="icon-menu" alt="Android"
-												src="style/post/3.png">Android
+												<img class="icon-menu" alt="Android" src="style/post/3.png">Android
 										</a></li>
 
 										<li class=""><a href='/ngon-ngu-lap-trinh/ios-23.htm'>
@@ -345,14 +343,14 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 
 										<li class=""><a
 											href='/ngon-ngu-lap-trinh/windows-phone-26.htm'> <img
-												class="icon-menu" alt="Windows phone"
-												src="style/post/3.png">Windows phone
+												class="icon-menu" alt="Windows phone" src="style/post/3.png">Windows
+												phone
 										</a></li>
 
 										<li class=""><a
 											href='/ngon-ngu-lap-trinh/php-mysql-21.htm'> <img
-												class="icon-menu" alt="PHP & MySQL"
-												src="style/post/3.png">PHP & MySQL
+												class="icon-menu" alt="PHP & MySQL" src="style/post/3.png">PHP
+												& MySQL
 										</a></li>
 
 										<li class=""><a
@@ -361,8 +359,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 										</a></li>
 
 										<li class=""><a href='/ngon-ngu-lap-trinh/joomla-28.htm'>
-												<img class="icon-menu" alt="Joomla"
-												src="style/post/3.png">Joomla
+												<img class="icon-menu" alt="Joomla" src="style/post/3.png">Joomla
 										</a></li>
 
 										<li class=""><a
@@ -373,19 +370,17 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 
 										<li class=""><a
 											href='/ngon-ngu-lap-trinh/aspaspnet-16.htm'> <img
-												class="icon-menu" alt="Asp/Asp.Net"
-												src="style/post/3.png">Asp/Asp.Net
+												class="icon-menu" alt="Asp/Asp.Net" src="style/post/3.png">Asp/Asp.Net
 										</a></li>
 
 										<li class=""><a href='/ngon-ngu-lap-trinh/javajsp-20.htm'>
-												<img class="icon-menu" alt="Java/JSP"
-												src="style/post/3.png">Java/JSP
+												<img class="icon-menu" alt="Java/JSP" src="style/post/3.png">Java/JSP
 										</a></li>
 
 										<li class=""><a
 											href='/ngon-ngu-lap-trinh/visual-basic-19.htm'> <img
-												class="icon-menu" alt="Visual Basic"
-												src="style/post/3.png">Visual Basic
+												class="icon-menu" alt="Visual Basic" src="style/post/3.png">Visual
+												Basic
 										</a></li>
 
 										<li class="cat-link-orther"><a
@@ -400,8 +395,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 
 										<li class="cat-link-orther"><a
 											href='/ngon-ngu-lap-trinh/visual-c-18.htm'> <img
-												class="icon-menu" alt="Visual C++"
-												src="style/post/3.png">Visual C++
+												class="icon-menu" alt="Visual C++" src="style/post/3.png">Visual
+												C++
 										</a></li>
 
 										<li class="cat-link-orther"><a
@@ -1272,8 +1267,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 									<div class="banner-boder-zoom">
 										<a href="/hosting-ssd.htm"> <img
 											alt="Đăng kí hosting ssd chất lượng cao"
-											class="img-responsive"
-											src="style/post/banner-hosting2.jpg" /></a>
+											class="img-responsive" src="style/post/banner-hosting2.jpg" /></a>
 									</div>
 								</div>
 							</div>
@@ -1725,25 +1719,19 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 											<img width="45" height="45" src="style/post/avanta.png" />
 										</a>
 									</div>
-									<div class="cmt-box cmt-border">
-										<div class="cmt-head">
-											<a href='/thanh-vien/thanh-chu-240350.htm' target="_blank"
-												class="bold agreen">Thành Chu</a><span
-												class="text-nowrap cmt-right"><span
-												class="orange cmt-action" onclick="ReplyID(15186,15186)"><i
-													class="fa fa-reply" aria-hidden="true"></i> Trả lời </span><span
-												class="cmt-unlike"> <a
-													href="javascript:__doPostBack(&#39;ctl00$ctl00$mainbody$contentbody$rptComment$ctl00$ctl00&#39;,&#39;&#39;)">Thích</a></span>&nbsp;<span
-												class="txt-colo"><i class="fa fa-thumbs-up"
-													aria-hidden="true"></i> 1</span></span><span
-												class="txt-colo cmt-right  cmt-date">21:27 -
-												8/11/2019</span>
+									<form action="<c:url value='/comment'/>"
+										id="formSubmit" method="get">
+										<div class="cmt-box cmt-border">
+											<c:forEach var="comment" items="${model.listResult}">
+												<div class="cmt-head">
+													<a href='/thanh-vien/thanh-chu-240350.htm' target="_blank"
+														class="bold agreen">${comment.user.username}</a><span
+														class="txt-colo cmt-right  cmt-date">${comment.docId}</span>
+												</div>
+												<div class="cmt-content">${comment.content}</div>
+											</c:forEach>
 										</div>
-										<div class="cmt-content">Mình thấy giao diện này rất đẹp
-											!!!</div>
-
-									</div>
-
+									</form>
 								</div>
 								<div id="Parent15186"></div>
 
@@ -1889,6 +1877,29 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 
     }
             </script>
+            <script>
+		function btnDeleteClick(obj) {
+			var data = {};
+			var ids = obj.value;
+			data['subcategoryID'] = ids;
+			deleteSubCategory(data);
+			location.href = location.href;
+		};
+
+		function deleteSubCategory(data) {
+			$.ajax({
+				url : '${APIurl}',
+				type : 'DELETE',
+				contentType : 'application/json',
+				data : JSON.stringify(data),
+				success : function() {
+
+				},
+				error : function() {
+				}
+			});
+		}
+	</script>
 						<!-- Popup Download ngay không cần đăng nhập -->
 						<div class="modal fade custom2" id="Download_now_modal"
 							tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
@@ -1965,19 +1976,20 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 														<ul class="tab-child nav nav-tabs" role="tablist">
 															<li role="presentation" class="col-sm-3"><a
 																href="#boxNganLuong" role="tab" data-toggle="tab"
-																class="bg"> <img
-																	src="style/post/vi-ngan-luong.png" /></a></li>
+																class="bg"> <img src="style/post/vi-ngan-luong.png" />
+															</a></li>
 															<li role="presentation" class="col-sm-3"><a
 																href="#boxBaoKim" role="tab" data-toggle="tab"
-																class="bg"> <img src="style/post/vi-bao-kim.png" /></a></li>
+																class="bg"> <img src="style/post/vi-bao-kim.png" />
+															</a></li>
 															<li role="presentation" class="col-sm-3"><a
 																href="#boxMomo" role="tab" data-toggle="tab" class="bg">
 																	<img src="style/post/vi-momo.png" />
 															</a></li>
 															<li role="presentation" class="col-sm-3"><a
 																href="#boxBankPlus" role="tab" data-toggle="tab"
-																class="bg"> <img
-																	src="style/post/vi-bank-plus.png" /></a></li>
+																class="bg"> <img src="style/post/vi-bank-plus.png" />
+															</a></li>
 														</ul>
 													</div>
 													<div class="text-center clear">
@@ -2072,9 +2084,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 																		<a href="#"></a> <a onclick="return Check_Paypal();"
 																			id="mainbody_contentbody_btnPaypal"
 																			href="javascript:__doPostBack(&#39;ctl00$ctl00$mainbody$contentbody$btnPaypal&#39;,&#39;&#39;)"><img
-																			src="style/post/btn-paypal.png"
-																			alt="PayPal Checkout"></a> <img
-																			src="style/post/btn-paypal-2.png"
+																			src="style/post/btn-paypal.png" alt="PayPal Checkout"></a>
+																		<img src="style/post/btn-paypal-2.png"
 																			alt="PayPal Checkout card" class="paypal-card">
 																	</div>
 																</div>
@@ -2182,8 +2193,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 										</a> <a data-toggle="modal" data-target="#LoginForm"
 											onclick="createCaptcha();" role="button">
 											<div class="share-save">
-												<img src="style/post/share-save.png" /><br /> Lưu lại
-												code cho tôi
+												<img src="style/post/share-save.png" /><br /> Lưu lại code
+												cho tôi
 											</div>
 										</a>
 
@@ -2452,17 +2463,15 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 			<div id="floating_banner_left_content">
 				<a
 					href="/kien-thuc-lap-trinh/dich-vu-thiet-ke-website-chuyen-nghiep-voi-gia-cuc-re-va-nhieu-uu-dai-tai-sharecodevn-880.htm"
-					target="_blank"> <img
-					src="style/post/thiet-ke-web-gia-re.jpg" border="0" width="120"
-					alt="" /></a><br />
+					target="_blank"> <img src="style/post/thiet-ke-web-gia-re.jpg"
+					border="0" width="120" alt="" /></a><br />
 			</div>
 		</div>
 		<div id="floating_banner_right"
 			style="text-align: left; position: absolute; overflow: hidden; width: 120px; z-index: 99999">
 			<div id="Div2">
 				<a href="https://topcode.vn/" target="_blank"> <img
-					src="style/post/Ra-mat-topcode.jpg" border="0" width="120"
-					alt="" /></a><br />
+					src="style/post/Ra-mat-topcode.jpg" border="0" width="120" alt="" /></a><br />
 			</div>
 		</div>
 		<script>
@@ -2581,10 +2590,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 								<li><img src="style/post/b10.png" alt="bao kim" /></li>
 								<li><img src="style/post/b11.png" alt="momo" /></li>
 								<li><img src="style/post/b8.png" alt="paypal" /></li>
-								<li><img src="style/post/b5.png" alt="vietcombank" />
-								</li>
-								<li><img src="style/post/b9.png" alt="vietin bank" />
-								</li>
+								<li><img src="style/post/b5.png" alt="vietcombank" /></li>
+								<li><img src="style/post/b9.png" alt="vietin bank" /></li>
 								<li><img src="style/post/b6.png" alt="agribank" /></li>
 								<li><img src="style/post/b7.png" alt="bidv" /></li>
 
@@ -2630,8 +2637,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 		src="style/post/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript"
 		src="style/post/select2/js/select2.min.js"></script>
-	<script type="text/javascript"
-		src="style/post/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="style/post/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="style/post/jquery.actual.min.js"></script>
 	<script type="text/javascript" src="style/post/theme-script.js"></script>
 	<script type="text/javascript"

@@ -20,6 +20,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @WebServlet("/CategoryAPI")
 public class CategoryAPI extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
      @Inject  
     ICategoryService categoryService;
 

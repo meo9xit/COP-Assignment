@@ -1,7 +1,6 @@
 package com.chiasetailieu.controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -15,12 +14,12 @@ import com.chiasetailieu.model.Comment;
 import com.chiasetailieu.service.ICommentService;
 import com.chiasetailieu.utils.FormUtil;
 
-@WebServlet("/comment")
+@WebServlet("/admin-comment")
 public class AdminComment extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Inject
-	private ICommentService commentService;
+	private ICommentService CommentService;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -28,10 +27,10 @@ public class AdminComment extends HttpServlet {
 		Comment model = FormUtil.toModel(Comment.class, request);
 		String url = "";
 		if (model.getClass() == null) {
-			url = "/view/web/post.jsp";
-			model.setListResult(commentService.findAll());
+			url = "/view/admin-form/pages/tables/Table_Comment.jsp";
+			model.setListResult(CommentService.findAll());
 		} else {
-			url = "/view/web/post.jsp";
+			url = "/view/admin-form/pages/tables/Table_Comment.jsp";
 		}
 		request.setAttribute("model", model);
 		RequestDispatcher rd = request.getRequestDispatcher(url);

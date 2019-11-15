@@ -3,7 +3,7 @@
 	prefix="dec"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<c:url var="APIurl" value="/api-admin-comment" />
+<c:url var="APIurl" value="/api-comment" />
 <!DOCTYPE html>
 <html>
 
@@ -681,14 +681,19 @@
 						</div>
 						<div class="body">
 							<div class="table-responsive">
-								<a href='<c:url value="/admin-comment?type=edit"/>'>
+								<a href='<c:url value="/admin-comment?type=add"/>'>
 									<button type="button" class="btn bg-blue waves-effect">
-										<i class="material-icons">verified_comment</i> <span>Edit
-											Comment</span>
+										<i class="material-icons">verified_user</i> <span>ADD
+											Sub Category</span>
+									</button>
+								</a> <a href='<c:url value="/admin-comment?type=edit"/>'>
+									<button type="button" class="btn bg-blue waves-effect">
+										<i class="material-icons">verified_user</i> <span>Edit
+											Sub Category</span>
 									</button>
 								</a>
-								<form action="<c:url value='/admin-comment'/>" id="formSubmit"
-									method="get">
+								<form action="<c:url value='/admin-comment'/>"
+									id="formSubmit" method="get">
 									<table
 										class="table table-bordered table-striped table-hover js-basic-example dataTable">
 										<thead>
@@ -697,10 +702,9 @@
 												<th>Comment_ID</th>
 												<th>User_ID</th>
 												<th>Doc_ID</th>
-												<th>Create_date</th>
+												<th>Created_Date</th>
 												<th>Edit_Date</th>
-												<th>Content</th>
-											</tr>
+												<th>Content</th>											</tr>
 										</thead>
 										<tfoot>
 											<tr>
@@ -708,27 +712,28 @@
 												<th>Comment_ID</th>
 												<th>User_ID</th>
 												<th>Doc_ID</th>
-												<th>Create_date</th>
+												<th>Created_Date</th>
 												<th>Edit_Date</th>
-												<th>Content</th>
+												<th>Content</th>	
 											</tr>
 										</tfoot>
 										<tbody>
 											<c:forEach var="comment" items="${model.listResult}">
 												<tr>
-													<td><input type="checkbox" id="checkbox_${comment.id}"
+													<td><input type="checkbox"
+														id="checkbox_${comment.id}"
 														value="${comment.id}" /></td>
 													<td>${comment.id}</td>
 													<td>${comment.userId}</td>
 													<td>${comment.docId}</td>
-													<td>${comment.createdDate }</td>
-													<td>${comment.modifiedDate }</td>
-													<td>${comment.content }</td>
+													<td>${comment.createdDate}</td>
+													<td>${comment.modifiedDate}</td>
+													<td>${comment.content}</td>
 													<td><button value="${comment.id}"
 															onClick="btnDeleteClick(this)">
 															<img src="style/admin/images/Delete_16x16.png" />
 														</button></td>
-
+													
 												</tr>
 											</c:forEach>
 										</tbody>
@@ -792,6 +797,7 @@
 											<td>2011/04/25</td>
 											<td>$320,800</td>
 										</tr>
+
 									</tbody>
 								</table>
 							</div>

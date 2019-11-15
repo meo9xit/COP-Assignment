@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.chiasetailieu.model.Comment;
 
-public interface ICommentDAO {
+public interface ICommentDAO extends IGenericDAO<Comment>{
 	List<Comment> findAll();
 	Long save(Comment cmt);
 	void delete(Comment cmt);
