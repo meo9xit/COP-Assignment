@@ -302,50 +302,18 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                     <div id="form-search-opntop">
                     <div class="form-inline search-h">
                             <div id="regPanel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnSearch&#39;)">
-	
-                                <div class="form-group form-category">
-                                    <input type="hidden" name="ctl00$hdLangFilter" id="hdLangFilter">
-                                    <select class="select-category select2-hidden-accessible" id="slSearch" tabindex="-1" aria-hidden="true">
-                                        <option value="0">TẤT CẢ CODE</option>
-                                        
-                                                <option value="15">Android</option>
-                                            
-                                                <option value="23">iOS</option>
-                                            
-                                                <option value="26">Windows phone</option>
-                                            
-                                                <option value="21">PHP &amp; MySQL</option>
-                                            
-                                                <option value="29">WordPress</option>
-                                            
-                                                <option value="28">Joomla</option>
-                                            
-                                                <option value="17">Visual C#</option>
-                                            
-                                                <option value="16">Asp/Asp.Net</option>
-                                            
-                                                <option value="20">Java/JSP</option>
-                                            
-                                                <option value="19">Visual Basic</option>
-                                            
-                                                <option value="24">Cocos2D</option>
-                                            
-                                                <option value="27">Unity</option>
-                                            
-                                                <option value="18">Visual C++</option>
-                                            
-                                                <option value="25">Html &amp; Template</option>
-                                            
-                                                <option value="22">Khác</option>
-                                            
-                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 127px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-slSearch-container"><span class="select2-selection__rendered" id="select2-slSearch-container" title="TẤT CẢ CODE">TẤT CẢ CODE</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+							<form id = "searchform" action = "<c:url value="/search"/>" >
+                                <div class="form-group input-serach">r">
+                                    <input name="key" type="text" id="txtSearch" class="txt-search txt-auto ui-autocomplete-input" placeholder="Nhập Từ k (or) Mã codehóa" autocomplete="off">
                                 </div>
-                                <div class="form-group input-serach">
-                                    <input name="ctl00$txtSearch" type="text" id="txtSearch" class="txt-search txt-auto ui-autocomplete-input" placeholder="Nhập Từ khóa (or) Mã code" autocomplete="off">
-                                </div>
-                                <a id="btnSearch" class="pull-right btn-search" href="javascript:__doPostBack(&#39;ctl00$btnSearch&#39;,&#39;&#39;)"></a>
-                            
+                                <a id="btnSearch" class="pull-right btn-searchref=" onclick="submitSearch()"></a>
+                            </form>                        
 </div>
+<script>
+function submitSearch() {
+	  document.getElementById("searchform").submit();
+	}
+</script>
                         </div></div>
                     <div id="user-info-opntop">
                     <div id="user-info-top" class="user-info pull-right">
