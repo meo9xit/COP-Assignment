@@ -30,6 +30,7 @@ import com.chiasetailieu.service.ICategoryService;
 import com.chiasetailieu.service.IDocumentService;
 import com.chiasetailieu.service.ISubCategoryService;
 import com.chiasetailieu.utils.AppUtils;
+import com.chiasetailieu.utils.DocConverter;
 import com.sun.pdfview.PDFFile;
 import com.sun.pdfview.PDFPage;
 
@@ -116,25 +117,37 @@ public class UploadController extends HttpServlet {
 	               String fileName = extractFileName(part);
 	               System.out.println("File name: " + fileName);
 	               String ext = getExtension(fileName);
-	               if(ext != null)
+	               if(ext != null) {
 	            	  if(ext.contains("doc") || ext.contains("pdf")) {
-	            	   
+	            		   
 			               if (fileName != null && fileName.length() > 0) {
+			            	   
+			            	   
+			            	   
 			                   String filePath = fullSavePath + File.separator + fileName;
 			                   System.out.println("Write attachment to file: " + filePath);
-			                   doc.setDocSource(filePath);
+			                   String temp = filePath;
+			                   
 			                   // Ghi vào file.
-			                   String imgname = getThumbnail(fileName);
-			                   doc.setCover(imgname);
+			                   
 			                   part.write(filePath);
 			                   if(ext.contains("doc")) {
-			                	   
+			                	   if(ext.equals("docx"))
+			                		   filePath = filePath.replaceAll(".docx", ".pdf");
+			                	   else 
+			                		   filePath = filePath.replaceAll(".doc", ".pdf");
+			                	   DocConverter.ConvertToPDF(temp, filePath);
 			                   }
+			                   String imgname = getThumbnail(filePath);
+			                   doc.setCover(imgname);
+			                   doc.setDocSource(filePath);
+			                   
 			               }
 		               } else { 
 		            	   request.setAttribute("message", "Website chỉ cho phép upload file MS Word hoặc PDF!");
 		            	   return;
 		               }
+	               }
 	           }
 	  
 	           // Upload thành công.
