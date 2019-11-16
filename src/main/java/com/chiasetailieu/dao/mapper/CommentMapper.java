@@ -14,6 +14,9 @@ public class CommentMapper implements GenericMapper<Comment>{
 			cmt.setId(rs.getLong("comment_id"));
 			cmt.setUserId(rs.getLong("user_id"));
 			cmt.setDocId(rs.getLong("doc_id"));
+			cmt.setCreatedDate(rs.getDate("create_date"));
+			cmt.setModifiedDate(rs.getDate("edit_date"));
+			cmt.setContent(rs.getString("content"));
 			return cmt;
 		} catch(SQLException ex) {
 			return null;

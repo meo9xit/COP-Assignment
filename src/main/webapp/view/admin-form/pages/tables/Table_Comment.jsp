@@ -3,7 +3,7 @@
 	prefix="dec"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<c:url var="APIurl" value="/api-admin-subcategory" />
+<c:url var="APIurl" value="/api-comment" />
 <!DOCTYPE html>
 <html>
 
@@ -12,7 +12,7 @@
 <meta
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
 	name="viewport">
-<title>SubCategory | Bootstrap Based Admin Template - Material
+<title>Comment | Bootstrap Based Admin Template - Material
 	Design</title>
 <!-- Favicon-->
 <link rel="icon" href="../../favicon.ico" type="image/x-icon">
@@ -681,54 +681,59 @@
 						</div>
 						<div class="body">
 							<div class="table-responsive">
-								<a href='<c:url value="/admin-subcategory?type=add"/>'>
+								<a href='<c:url value="/admin-comment?type=add"/>'>
 									<button type="button" class="btn bg-blue waves-effect">
 										<i class="material-icons">verified_user</i> <span>ADD
 											Sub Category</span>
 									</button>
-								</a> <a href='<c:url value="/admin-subcategory?type=edit"/>'>
+								</a> <a href='<c:url value="/admin-comment?type=edit"/>'>
 									<button type="button" class="btn bg-blue waves-effect">
 										<i class="material-icons">verified_user</i> <span>Edit
 											Sub Category</span>
 									</button>
 								</a>
-								<form action="<c:url value='/admin-subcategory'/>"
+								<form action="<c:url value='/admin-comment'/>"
 									id="formSubmit" method="get">
 									<table
 										class="table table-bordered table-striped table-hover js-basic-example dataTable">
 										<thead>
 											<tr>
 												<th><input type="checkbox" id="checkAll"></th>
-												<th>SubCate_ID</th>
-												<th>Cate_ID</th>
-												<th>Cate_Name</th>
-											</tr>
+												<th>Comment_ID</th>
+												<th>User_ID</th>
+												<th>Doc_ID</th>
+												<th>Created_Date</th>
+												<th>Edit_Date</th>
+												<th>Content</th>											</tr>
 										</thead>
 										<tfoot>
 											<tr>
 												<th></th>
-												<th>SubCate_ID</th>
-												<th>Cate_ID</th>
-												<th>Cate_Name</th>
+												<th>Comment_ID</th>
+												<th>User_ID</th>
+												<th>Doc_ID</th>
+												<th>Created_Date</th>
+												<th>Edit_Date</th>
+												<th>Content</th>	
 											</tr>
 										</tfoot>
 										<tbody>
-											<c:forEach var="subcategory" items="${model.listResult}">
+											<c:forEach var="comment" items="${model.listResult}">
 												<tr>
 													<td><input type="checkbox"
-														id="checkbox_${subcategory.subcategoryID}"
-														value="${subcategory.subcategoryID}" /></td>
-													<td>${subcategory.subcategoryID}</td>
-													<td>${subcategory.categoryId}</td>
-													<td>${subcategory.subcategoryName}</td>
-													<td><button value="${subcategory.subcategoryID}"
+														id="checkbox_${comment.id}"
+														value="${comment.id}" /></td>
+													<td>${comment.id}</td>
+													<td>${comment.userId}</td>
+													<td>${comment.docId}</td>
+													<td>${comment.createdDate}</td>
+													<td>${comment.modifiedDate}</td>
+													<td>${comment.content}</td>
+													<td><button value="${comment.id}"
 															onClick="btnDeleteClick(this)">
 															<img src="style/admin/images/Delete_16x16.png" />
 														</button></td>
-													<td><button value="${subcategory.subcategoryID}"
-															onClick="btnUpdateClick(this)">
-															<img src="style/admin/images/Delete_16x16.png" />
-														</button></td>
+													
 												</tr>
 											</c:forEach>
 										</tbody>
@@ -808,12 +813,12 @@
 		function btnDeleteClick(obj) {
 			var data = {};
 			var ids = obj.value;
-			data['subcategoryID'] = ids;
-			deleteSubCategory(data);
+			data['id'] = ids;
+			deleteComment(data);
 			location.href = location.href;
 		};
 
-		function deleteSubCategory(data) {
+		function deleteComment(data) {
 			$.ajax({
 				url : '${APIurl}',
 				type : 'DELETE',

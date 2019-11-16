@@ -1,3 +1,4 @@
+
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="dec"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -304,7 +305,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                             <div id="regPanel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnSearch&#39;)">
 							<form id = "searchform" action = "<c:url value="/search"/>" >
                                 <div class="form-group input-serach">r">
-                                    <input name="key" type="text" id="txtSearch" class="txt-search txt-auto ui-autocomplete-input" placeholder="Nhập Từ k (or) Mã codehóa" autocomplete="off">
+                                    <input name="key" type="text" id="txtSearch" class="txt-search txt-auto ui-autocomplete-input" placeholder="Nhập Từ khóa" autocomplete="off">
                                 </div>
                                 <a id="btnSearch" class="pull-right btn-searchref=" onclick="submitSearch()"></a>
                             </form>                        

@@ -4,7 +4,9 @@ import java.util.List;
 
 import com.chiasetailieu.dao.ICommentDAO;
 import com.chiasetailieu.dao.mapper.CommentMapper;
+import com.chiasetailieu.dao.mapper.SubcateMapper;
 import com.chiasetailieu.model.Comment;
+import com.chiasetailieu.model.SubCategory;
 
 public class CommentDAO extends GenericDAO<Comment> implements ICommentDAO{
 
@@ -16,10 +18,10 @@ public class CommentDAO extends GenericDAO<Comment> implements ICommentDAO{
 	}
 
 	@Override
-	public void save(Comment cmt) {
+	public Long save(Comment cmt) {
 		// TODO Auto-generated method stub
-		String sql = "insert into comment (comment_id,user_id,doc_id,content) values (?,?,?,?)";
-		insert(sql, cmt.getId(),cmt.getUserId(),cmt.getDocId(),cmt.getContent());
+		String sql = "insert into user (comment_id, user_id, doc_id, create_date, edit_date, content) values (?,?,?,?,?,?)";
+		return insert(sql, cmt.getId(), cmt.getUserId(), cmt.getDocId(), cmt.getCreatedDate(), cmt.getModifiedDate(), cmt.getContent());
 	}
 
 	@Override
@@ -35,5 +37,11 @@ public class CommentDAO extends GenericDAO<Comment> implements ICommentDAO{
 		String sql = "update comment set content = ? where comment_id = ?";
 		update(sql, cmt.getContent(),cmt.getId());
 	}
-
+	
+	@Override
+	public Comment findById(Long id) {
+		String sql = "select * from comment where comment_id = ?";
+		List<Comment> comments = query(sql, new CommentMapper(), id);
+		return comments.isEmpty()? null : comments.get(0);
+	}
 }

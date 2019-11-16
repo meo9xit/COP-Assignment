@@ -3,7 +3,8 @@
 	prefix="dec"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<c:url var="APIurl" value="/api-admin-subcategory" />
+<c:url var="APIurl" value="/api-admin-comment" />
+<c:url var="NewURL" value="/comment-edit" />
 <!DOCTYPE html>
 <html>
 
@@ -12,10 +13,10 @@
 <meta
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
 	name="viewport">
-<title>SubCategory | Bootstrap Based Admin Template - Material
+<title>Form Examples | Bootstrap Based Admin Template - Material
 	Design</title>
 <!-- Favicon-->
-<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+<link rel="icon" href="style/admin/favicon.ico" type="image/x-icon">
 
 <!-- Google Fonts -->
 <link
@@ -35,10 +36,9 @@
 <link href="style/admin/plugins/animate-css/animate.css"
 	rel="stylesheet" />
 
-<!-- JQuery DataTable Css -->
-<link
-	href="style/admin/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css"
-	rel="stylesheet">
+<!-- Sweet Alert Css -->
+<link href="style/admin/plugins/sweetalert/sweetalert.css"
+	rel="stylesheet" />
 
 <!-- Custom Css -->
 <link href="style/admin/css/style.css" rel="stylesheet">
@@ -86,8 +86,8 @@
 				<a href="javascript:void(0);" class="navbar-toggle collapsed"
 					data-toggle="collapse" data-target="#navbar-collapse"
 					aria-expanded="false"></a> <a href="javascript:void(0);"
-					class="bars"></a> <a class="navbar-brand"
-					href="view/admin-form/index.html">ADMINBSB - MATERIAL DESIGN</a>
+					class="bars"></a> <a class="navbar-brand" href="../../index.html">ADMINBSB
+					- MATERIAL DESIGN</a>
 			</div>
 			<div class="collapse navbar-collapse" id="navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
@@ -306,13 +306,13 @@
 			<div class="menu">
 				<ul class="list">
 					<li class="header">MAIN NAVIGATION</li>
-					<li><a href="view/admin-form/index.html"> <i
-							class="material-icons">home</i> <span>Home</span>
+					<li><a href="../../index.html"> <i class="material-icons">home</i>
+							<span>Home</span>
 					</a></li>
-					<li><a href="view/admin-form/pages/typography.html"> <i
+					<li><a href="../../pages/typography.html"> <i
 							class="material-icons">text_fields</i> <span>Typography</span>
 					</a></li>
-					<li><a href="view/admin-form/pages/helper-classes.html"> <i
+					<li><a href="../../pages/helper-classes.html"> <i
 							class="material-icons">layers</i> <span>Helper Classes</span>
 					</a></li>
 					<li><a href="javascript:void(0);" class="menu-toggle"> <i
@@ -322,33 +322,25 @@
 							<li><a href="javascript:void(0);" class="menu-toggle"> <span>Cards</span>
 							</a>
 								<ul class="ml-menu">
-									<li><a
-										href="view/admin-form/pages/widgets/cards/basic.html">Basic</a>
+									<li><a href="../../pages/widgets/cards/basic.html">Basic</a>
 									</li>
-									<li><a
-										href="view/admin-form/pages/widgets/cards/colored.html">Colored</a>
+									<li><a href="../../pages/widgets/cards/colored.html">Colored</a>
 									</li>
-									<li><a
-										href="view/admin-form/pages/widgets/cards/no-header.html">No
+									<li><a href="../../pages/widgets/cards/no-header.html">No
 											Header</a></li>
 								</ul></li>
 							<li><a href="javascript:void(0);" class="menu-toggle"> <span>Infobox</span>
 							</a>
 								<ul class="ml-menu">
-									<li><a
-										href="view/admin-form/pages/widgets/infobox/infobox-1.html">Infobox-1</a>
+									<li><a href="../../pages/widgets/infobox/infobox-1.html">Infobox-1</a>
 									</li>
-									<li><a
-										href="view/admin-form/pages/widgets/infobox/infobox-2.html">Infobox-2</a>
+									<li><a href="../../pages/widgets/infobox/infobox-2.html">Infobox-2</a>
 									</li>
-									<li><a
-										href="view/admin-form/pages/widgets/infobox/infobox-3.html">Infobox-3</a>
+									<li><a href="../../pages/widgets/infobox/infobox-3.html">Infobox-3</a>
 									</li>
-									<li><a
-										href="view/admin-form/pages/widgets/infobox/infobox-4.html">Infobox-4</a>
+									<li><a href="../../pages/widgets/infobox/infobox-4.html">Infobox-4</a>
 									</li>
-									<li><a
-										href="view/admin-form/pages/widgets/infobox/infobox-5.html">Infobox-5</a>
+									<li><a href="../../pages/widgets/infobox/infobox-5.html">Infobox-5</a>
 									</li>
 								</ul></li>
 						</ul></li>
@@ -357,14 +349,12 @@
 								(UI)</span>
 					</a>
 						<ul class="ml-menu">
-							<li><a href="view/admin-form/pages/ui/alerts.html">Alerts</a>
+							<li><a href="../../pages/ui/alerts.html">Alerts</a></li>
+							<li><a href="../../pages/ui/animations.html">Animations</a>
 							</li>
-							<li><a href="view/admin-form/pages/ui/animations.html">Animations</a>
-							</li>
-							<li><a href="view/admin-form/pages/ui/badges.html">Badges</a>
-							</li>
+							<li><a href="../../pages/ui/badges.html">Badges</a></li>
 
-							<li><a href="view/admin-form/pages/ui/breadcrumbs.html">Breadcrumbs</a>
+							<li><a href="../../pages/ui/breadcrumbs.html">Breadcrumbs</a>
 							</li>
 							<li><a href="../../pages/ui/buttons.html">Buttons</a></li>
 							<li><a href="../../pages/ui/collapse.html">Collapse</a></li>
@@ -396,30 +386,30 @@
 									& Popovers</a></li>
 							<li><a href="../../pages/ui/waves.html">Waves</a></li>
 						</ul></li>
-					<li><a href="javascript:void(0);" class="menu-toggle"> <i
-							class="material-icons">assignment</i> <span>Forms</span>
+					<li class="active"><a href="javascript:void(0);"
+						class="menu-toggle"> <i class="material-icons">assignment</i>
+							<span>Forms</span>
 					</a>
 						<ul class="ml-menu">
 							<li><a href="../../pages/forms/basic-form-elements.html">Basic
 									Form Elements</a></li>
 							<li><a href="../../pages/forms/advanced-form-elements.html">Advanced
 									Form Elements</a></li>
-							<li><a href="../../pages/forms/form-examples.html">Form
-									Examples</a></li>
+							<li class="active"><a
+								href="../../pages/forms/form-examples.html">Form Examples</a></li>
 							<li><a href="../../pages/forms/form-validation.html">Form
 									Validation</a></li>
 							<li><a href="../../pages/forms/form-wizard.html">Form
 									Wizard</a></li>
 							<li><a href="../../pages/forms/editors.html">Editors</a></li>
 						</ul></li>
-					<li class="active"><a href="javascript:void(0);"
-						class="menu-toggle"> <i class="material-icons">view_list</i> <span>Tables</span>
+					<li><a href="javascript:void(0);" class="menu-toggle"> <i
+							class="material-icons">view_list</i> <span>Tables</span>
 					</a>
 						<ul class="ml-menu">
 							<li><a href="../../pages/tables/normal-tables.html">Normal
 									Tables</a></li>
-							<li class="active"><a
-								href="../../pages/tables/jquery-datatable.html">Jquery
+							<li><a href="../../pages/tables/jquery-datatable.html">Jquery
 									Datatables</a></li>
 							<li><a href="../../pages/tables/editable-table.html">Editable
 									Tables</a></li>
@@ -655,181 +645,99 @@
 	<section class="content">
 		<div class="container-fluid">
 			<div class="block-header">
-				<h2>
-					JQUERY DATATABLES <small>Taken from <a
-						href="https://datatables.net/" target="_blank">datatables.net</a></small>
-				</h2>
+				<h2>EDIT CATEGORY</h2>
 			</div>
-			<!-- Basic Examples -->
-			<div class="row clearfix">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<div class="card">
-						<div class="header">
-							<h2>BASIC EXAMPLE</h2>
-							<ul class="header-dropdown m-r--5">
-								<li class="dropdown"><a href="javascript:void(0);"
-									class="dropdown-toggle" data-toggle="dropdown" role="button"
-									aria-haspopup="true" aria-expanded="false"> <i
-										class="material-icons">more_vert</i>
-								</a>
-									<ul class="dropdown-menu pull-right">
-										<li><a href="javascript:void(0);">Action</a></li>
-										<li><a href="javascript:void(0);">Another action</a></li>
-										<li><a href="javascript:void(0);">Something else here</a></li>
-									</ul></li>
-							</ul>
-						</div>
-						<div class="body">
-							<div class="table-responsive">
-								<a href='<c:url value="/admin-subcategory?type=add"/>'>
-									<button type="button" class="btn bg-blue waves-effect">
-										<i class="material-icons">verified_user</i> <span>ADD
-											Sub Category</span>
-									</button>
-								</a> <a href='<c:url value="/admin-subcategory?type=edit"/>'>
-									<button type="button" class="btn bg-blue waves-effect">
-										<i class="material-icons">verified_user</i> <span>Edit
-											Sub Category</span>
-									</button>
-								</a>
-								<form action="<c:url value='/admin-subcategory'/>"
-									id="formSubmit" method="get">
-									<table
-										class="table table-bordered table-striped table-hover js-basic-example dataTable">
-										<thead>
-											<tr>
-												<th><input type="checkbox" id="checkAll"></th>
-												<th>SubCate_ID</th>
-												<th>Cate_ID</th>
-												<th>Cate_Name</th>
-											</tr>
-										</thead>
-										<tfoot>
-											<tr>
-												<th></th>
-												<th>SubCate_ID</th>
-												<th>Cate_ID</th>
-												<th>Cate_Name</th>
-											</tr>
-										</tfoot>
-										<tbody>
-											<c:forEach var="subcategory" items="${model.listResult}">
-												<tr>
-													<td><input type="checkbox"
-														id="checkbox_${subcategory.subcategoryID}"
-														value="${subcategory.subcategoryID}" /></td>
-													<td>${subcategory.subcategoryID}</td>
-													<td>${subcategory.categoryId}</td>
-													<td>${subcategory.subcategoryName}</td>
-													<td><button value="${subcategory.subcategoryID}"
-															onClick="btnDeleteClick(this)">
-															<img src="style/admin/images/Delete_16x16.png" />
-														</button></td>
-													<td><button value="${subcategory.subcategoryID}"
-															onClick="btnUpdateClick(this)">
-															<img src="style/admin/images/Delete_16x16.png" />
-														</button></td>
-												</tr>
-											</c:forEach>
-										</tbody>
-									</table>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- #END# Basic Examples -->
-			<!-- Exportable Table -->
-			<div class="row clearfix">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<div class="card">
-						<div class="header">
-							<h2>EXPORTABLE TABLE</h2>
-							<ul class="header-dropdown m-r--5">
-								<li class="dropdown"><a href="javascript:void(0);"
-									class="dropdown-toggle" data-toggle="dropdown" role="button"
-									aria-haspopup="true" aria-expanded="false"> <i
-										class="material-icons">more_vert</i>
-								</a>
-									<ul class="dropdown-menu pull-right">
-										<li><a href="javascript:void(0);">Action</a></li>
-										<li><a href="javascript:void(0);">Another action</a></li>
-										<li><a href="javascript:void(0);">Something else here</a></li>
-									</ul></li>
-							</ul>
-						</div>
-						<div class="body">
-							<div class="table-responsive">
-								<table
-									class="table table-bordered table-striped table-hover dataTable js-exportable">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Position</th>
-											<th>Office</th>
-											<th>Age</th>
-											<th>Start date</th>
-											<th>Salary</th>
-										</tr>
-									</thead>
-									<tfoot>
-										<tr>
-											<th>Name</th>
-											<th>Position</th>
-											<th>Office</th>
-											<th>Age</th>
-											<th>Start date</th>
-											<th>Salary</th>
-										</tr>
-									</tfoot>
-									<tbody>
-										<tr>
-											<td>Tiger Nixon</td>
-											<td>System Architect</td>
-											<td>Edinburgh</td>
-											<td>61</td>
-											<td>2011/04/25</td>
-											<td>$320,800</td>
-										</tr>
 
-									</tbody>
-								</table>
-							</div>
+			<!-- Vertical Layout -->
+			<div class="row clearfix">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="card">
+						<div class="header">
+							<h2>Nhập thông tin</h2>
+							<ul class="header-dropdown m-r--5">
+								<li class="dropdown"><a href="javascript:void(0);"
+									class="dropdown-toggle" data-toggle="dropdown" role="button"
+									aria-haspopup="true" aria-expanded="false"> <i
+										class="material-icons">more_vert</i>
+								</a>
+									<ul class="dropdown-menu pull-right">
+										<li><a href="javascript:void(0);">Action</a></li>
+										<li><a href="javascript:void(0);">Another action</a></li>
+										<li><a href="javascript:void(0);">Something else here</a></li>
+									</ul></li>
+							</ul>
+						</div>
+						<div class="body">
+							<form id="formSubmit">
+								<label for="comment_id">Comment ID</label>
+								<div class="form-group">
+									<div class="form-line">
+										<input type="number" id="commentID" class="form-control"
+											name="commentID" placeholder="Enter comment id!"
+											value="${model.id}">
+									</div>
+									<label for="user_id">User ID</label>
+									<div class="form-group">
+										<div class="form-line">
+											<input type="number" id="userId" class="form-control"
+												name="userId" placeholder="Enter user id!"
+												value="${model.userId}">
+										</div>
+										<br> <label for="doc_id">Doc ID</label>
+										<div class="form-group">
+											<div class="form-line">
+												<input type="number" id="doc_id" class="form-control"
+													name="docId" placeholder="Enter doc id!"
+													value="${model.docId}">
+											</div>
+										</div>
+										<br> <input type="button"
+											class="btn btn-primary m-t-15 waves-effect" id="btnEdit"
+											value="Edit" />
+							</form>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- #END# Exportable Table -->
+			<!-- #END# Vertical Layout -->
+			<!-- Vertical Layout | With Floating Label -->
+
+
+			<!-- #END# Multi Column -->
 		</div>
 	</section>
 
-	<script>
-		function btnDeleteClick(obj) {
-			var data = {};
-			var ids = obj.value;
-			data['subcategoryID'] = ids;
-			deleteSubCategory(data);
-			location.href = location.href;
-		};
-
-		function deleteSubCategory(data) {
-			$.ajax({
-				url : '${APIurl}',
-				type : 'DELETE',
-				contentType : 'application/json',
-				data : JSON.stringify(data),
-				success : function() {
-
-				},
-				error : function() {
-				}
-			});
-		}
-	</script>
-
 	<!-- Jquery Core Js -->
 	<script src="style/admin/plugins/jquery/jquery.min.js"></script>
+
+	<script>
+		$('#btnEdit').click(function(e) {
+			e.preventDefault();
+			var data = {};
+			var formData = $('#formSubmit').serializeArray();
+			$.each(formData, function(i, v) {
+				data["" + v.name + ""] = v.value;
+			});
+			console.info(data);
+			editNew(data);
+		});
+		function editNew(data) {
+			$
+					.ajax({
+						url : '${APIurl}',
+						type : 'POST',
+						contentType : 'application/json',
+						data : JSON.stringify(data),
+						dataType : 'json',
+						success : function(result) {
+							window.location.href = "/chiasetailieu/admin-comment";
+						},
+						error : function(error) {
+							window.location.href = "/chiasetailieu/admin-comment?type=edit";
+						}
+					});
+		}
+	</script>
 
 	<!-- Bootstrap Core Js -->
 	<script src="style/admin/plugins/bootstrap/js/bootstrap.js"></script>
@@ -845,28 +753,8 @@
 	<!-- Waves Effect Plugin Js -->
 	<script src="style/admin/plugins/node-waves/waves.js"></script>
 
-	<!-- Jquery DataTable Plugin Js -->
-	<script src="style/admin/plugins/jquery-datatable/jquery.dataTables.js"></script>
-	<script
-		src="style/admin/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js"></script>
-	<script
-		src="style/admin/plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js"></script>
-	<script
-		src="style/admin/plugins/jquery-datatable/extensions/export/buttons.flash.min.js"></script>
-	<script
-		src="style/admin/plugins/jquery-datatable/extensions/export/jszip.min.js"></script>
-	<script
-		src="style/admin/plugins/jquery-datatable/extensions/export/pdfmake.min.js"></script>
-	<script
-		src="style/admin/plugins/jquery-datatable/extensions/export/vfs_fonts.js"></script>
-	<script
-		src="style/admin/plugins/jquery-datatable/extensions/export/buttons.html5.min.js"></script>
-	<script
-		src="style/admin/plugins/jquery-datatable/extensions/export/buttons.print.min.js"></script>
-
 	<!-- Custom Js -->
 	<script src="style/admin/js/admin.js"></script>
-	<script src="style/admin/js/pages/tables/jquery-datatable.js"></script>
 
 	<!-- Demo Js -->
 	<script src="style/admin/js/demo.js"></script>

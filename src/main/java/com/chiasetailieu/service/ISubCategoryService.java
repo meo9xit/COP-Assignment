@@ -7,7 +7,6 @@ import com.chiasetailieu.model.Document;
 import com.chiasetailieu.model.SubCategory;
 
 
-
 public interface ISubCategoryService {
 	SubCategory save(SubCategory subcategory);
 	List<SubCategory> findAll();
