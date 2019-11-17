@@ -14,6 +14,7 @@ public class Document extends AbstractModel<Document>{
 	private SubCategory subcate;
 	private String cover;
 	private String docDescription;
+	private String alt;
 	private Long view;
 	private Long download_count;
 	private List<Comment> comments;

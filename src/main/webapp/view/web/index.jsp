@@ -783,7 +783,7 @@ function submitSearch() {
                                             <li class="col-sx-12 col-sm-3" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/Product">
                                                 <div class="product-container">
                                                     <div class="left-block">
-                                                        <a href="https://sharecode.vn/source-code/ma-nguon-web-thi-trac-nghiem-truc-tuyen-codeigniter-23731.htm">
+                                                        <a href="<c:url value = "/post?id = ${doc.id } "/>" >
                                                             <div class="img-box">
                                                                 <img class="img-responsive" itemprop="image" src="${doc.cover }" alt="${doc.docName }" title="Download ${doc.docName }">
                                                             </div>
@@ -801,7 +801,7 @@ function submitSearch() {
                                                         <a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/php-mysql-21.htm">PHP &amp; MySQL</a>
                                                     </div>
                                                     <div class="right-block">
-                                                        <a itemprop="url" href="https://sharecode.vn/source-code/ma-nguon-web-thi-trac-nghiem-truc-tuyen-codeigniter-23731.htm">
+                                                        <a itemprop="url" href="<c:url value = "/post?id = ${doc.id } "/>">
                                                             <h2 itemprop="name" class="product-name bold" title="Download ${doc.docName }">${doc.docName }</h2>
                                                         </a>
                                                         <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"><meta itemprop="ratingValue" content="5"><meta itemprop="reviewCount" content="1"><button id="rateit-reset-2" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-2" style="display: none;"><span></span></button><div id="rateit-range-2" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-2" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
@@ -852,25 +852,25 @@ function submitSearch() {
                                                     <li class="col-sx-12 col-sm-3">
                                                         <div class="product-container">
                                                             <div class="left-block">
-                                                                <a href="https://sharecode.vn/source-code/full-code-tin-tuc-wordpress-cuc-load-cuc-nhanh-nhe-mien-phi-23642.htm">
+                                                                <a href="<c:url value = "/post?id = ${topviewdoc.id } "/>">
                                                                     <div class="img-box">
                                                                         <img class="img-responsive" src="style/web-style/full-code-tin-tuc-wordpress-cuc-load-cuc-nhanh-nhe-mien-phi-111544.jpg" alt="Full code tin tức wordpress cực load cực nhanh" title="Download Full code tin tức wordpress cực load cực nhanh">
                                                                     </div>
                                                                 </a>
                                                                 <div class="quick-view">
-                                                                    <a title="Download code" class="search" href="https://sharecode.vn/source-code/full-code-tin-tuc-wordpress-cuc-load-cuc-nhanh-nhe-mien-phi-23642.htm#Download"></a>
+                                                                    <a title="Download code" class="search" href="<c:url value = "/post?id = ${topviewdoc.id } "/>"></a>
                                                                     <a id="mainbody_rptHot_dtlCode_0_Button4_0" title="Yêu thích code này" class="heart LikeSuccess" href="javascript:__doPostBack(&#39;ctl00$mainbody$rptHot$ctl00$dtlCode$ctl00$Button4&#39;,&#39;&#39;)"></a>
                                                                     <a onclick="createCaptcha();" id="mainbody_rptHot_dtlCode_0_Button5_0" title="Lưu code lại cho tôi" class="compare" data-toggle="modal" data-target="#LoginForm" role="button" href="javascript:__doPostBack(&#39;ctl00$mainbody$rptHot$ctl00$dtlCode$ctl00$Button5&#39;,&#39;&#39;)"></a>
                                                                     
                                                                 </div>
                                                                 <div class="downview">
-                                                                    <span class="view-count2">784</span>
-                                                                    <span class="down-count2">98</span>
+                                                                    <span class="view-count2">${topviewdoc.view }</span>
+                                                                    <span class="down-count2">${topviewdoc.download_count }</span>
                                                                 </div>
                                                                 <a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">WordPress</a>
                                                             </div>
                                                             <div class="right-block">
-                                                                <a href="https://sharecode.vn/source-code/full-code-tin-tuc-wordpress-cuc-load-cuc-nhanh-nhe-mien-phi-23642.htm">
+                                                                <a href="<c:url value = "/post?id = ${topviewdoc.id } "/>">
                                                                     <h3 class="product-name bold" title="Download Full code tin tức wordpress cực load cực nhanh">Full code tin tức wordpress cực load cực nhanh</h3>
                                                                 </a>
                                                               <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"><meta itemprop="ratingValue" content="5"><meta itemprop="reviewCount" content="1"><button id="rateit-reset-14" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-14" style="display: none;"><span></span></button><div id="rateit-range-14" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-14" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
@@ -896,13 +896,13 @@ function submitSearch() {
 				<c:forEach var = "topdoc" items = "topdocs">            
                     <li>
                         <div class="products-block-left">
-                            <a href="https://sharecode.vn/source-code/full-source-code-app-webview-vovinam-martial-arts-already-release-appstore-ch-play-23708.htm">
-                                <img src="style/web-style/full-source-code-app-webview-vovinam-martial-arts-already-release-appstore-ch-play-133518.jpg" alt="App,web,web app,app view,web store app" title="Download Full Source CODE app webview Vovinam Martial Arts ( Already Release AppStore, CH Play)">
+                            <a href="<c:url value = "/post?id = ${topdoc.id } "/>">
+                                <img src="${topdoc.cover }" alt="App,web,web app,app view,web store app" title="Download Full Source CODE app webview Vovinam Martial Arts ( Already Release AppStore, CH Play)">
                             </a>
                         </div>
                         <div class="products-block-right">
                             <p class="product-name">
-                                <a href="https://sharecode.vn/source-code/full-source-code-app-webview-vovinam-martial-arts-already-release-appstore-ch-play-23708.htm">
+                                <a href="<c:url value = "/post?id = ${topviewdoc.id } "/>">
                                     </a></p><h3 class="title2 bold" title="Download Full Source CODE app webview Vovinam Martial Arts ( Already Release AppStore, CH Play)"><a href="https://sharecode.vn/source-code/full-source-code-app-webview-vovinam-martial-arts-already-release-appstore-ch-play-23708.htm">Full Source CODE app webview Vovinam Martial Arts ( Already Release AppStore, CH Play)</a></h3><a href="https://sharecode.vn/source-code/full-source-code-app-webview-vovinam-martial-arts-already-release-appstore-ch-play-23708.htm">
                                 </a>
                             <p></p>

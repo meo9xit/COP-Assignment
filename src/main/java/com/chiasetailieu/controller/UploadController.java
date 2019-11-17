@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
+import java.sql.Date;
 import java.util.List;
 
 import javax.imageio.ImageIO;
@@ -90,6 +91,10 @@ public class UploadController extends HttpServlet {
 	           doc.setSubcateId(subcateId);
 	           doc.setUserId(user.getUserid());
 	           doc.setDocName(docname);
+	           doc.setView(0l);
+	           java.util.Date date = new java.util.Date();
+	           doc.setCreatedDate(new java.sql.Date(date.getTime()));
+	           doc.setModifiedDate(doc.getCreatedDate());
 	           String ss = request.getServletContext().getRealPath("");
 	           System.out.println("Paht: " + ss);
 	           // Đường dẫn tuyệt đối tới thư mục gốc của web app.

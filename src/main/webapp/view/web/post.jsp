@@ -708,9 +708,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 					</span> <span class="navigation-pipe">&nbsp;</span> <a
 						href="/source-code/full-code-website-ban-hang-laptop-dien-thoai-linh-kien-bang-framework-codeigniter-full-100-23988.htm"
 						id="mainbody_breadcrumb_PathLink" class="agreen"> <span
-						id="mainbody_breadcrumb_PathLinkTitle">Full code website
-							b&#225;n h&#224;ng laptop, điện thoại, linh kiện bằng framework
-							codeigniter (full 100%)</span>
+						id="mainbody_breadcrumb_PathLinkTitle">${doc.docName }</span>
 					</a>
 
 				</div>
@@ -726,7 +724,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 										<img id="mainbody_contentbody_CodeImage"
 											title="Download ngay Full code website bán hàng laptop, điện thoại, linh kiện bằng framework codeigniter (full 100%)"
 											class="img-val" itemprop="image"
-											src="/FilesUpload/Code/[tac-gia-vui-long-bo-sung-video-cai-dat-source]-full-code-website-ban-hang-laptop-dien-thoai-linh-kien-bang-framework-codeigniter-full-100-11655.jpg"
+											src="${doc.cover }"
 											alt="framework codeigniter,website,full code,bán laptop,bán hàng điện thoại linh kiện máy tính,CI" />
 									</div>
 									<div class="text-center dt-gallery">
@@ -737,82 +735,37 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 								</div>
 								<div class="col-sm-8 dt-center">
 									<h1 id="mainbody_contentbody_TitleCode" class="dt-title bold"
-										itemprop="name">Full code website b&#225;n h&#224;ng
-										laptop, điện thoại, linh kiện bằng framework codeigniter (full
-										100%)</h1>
-									<span class="green dt-title bold text-nowrap">[Mã code <span
-										id="mainbody_contentbody_Code" itemprop="productID">23988</span>]
-									</span>
+										itemprop="name">${doc.docName }</h1>
 									<div class="row title5">
-										<div class="col-md-6 col-lg-7 dt-sta-vie">
-											<div class="rateit rate-po" data-rateit-value="5"
-												data-rateit-readonly="true"></div>
-											&nbsp;&nbsp;<span id="mainbody_contentbody_totalRate"
-												class="text-nowrap">1 Đ&#225;nh gi&#225;</span>&nbsp;&nbsp;
-											<a href="#danh-gia" class="text-nowrap"><i
-												class="fa fa-pencil" aria-hidden="true"></i>&nbsp;Viết đánh
-												giá</a>
-										</div>
 										<div class="col-md-6 col-lg-5 dt-sta-vie2 orange">
 											<i class="fa fa-download" aria-hidden="true"></i>&nbsp;<b
-												id="mainbody_contentbody_DownloadCount">0</b>&nbsp;&nbsp;&nbsp;&nbsp;
+												id="mainbody_contentbody_DownloadCount">${doc.download_count }</b>&nbsp;&nbsp;&nbsp;&nbsp;
 											<span class="dt-vie-ic">&nbsp;<b
-												id="mainbody_contentbody_Views">215</b></span>&nbsp;&nbsp;&nbsp;&nbsp;
-											<span class="text-nowrap"><i class="fa fa-heart"
-												aria-hidden="true"></i>&nbsp;<b
-												id="mainbody_contentbody_Likes">0</b></span>
+												id="mainbody_contentbody_Views">${doc.view }</b></span>&nbsp;&nbsp;&nbsp;&nbsp;
 										</div>
 									</div>
-									<div class="line"></div>
-									<div class="row">
-										<div class="col-sm-10 col-md-8 dt-price">
-											<span class="bold">Phí tải: <span
-												id="mainbody_contentbody_Copyright" class="green">200
-													Xu</span></span> <em id="mainbody_contentbody_lblQuydoi" class="txt-em">(1Xu
-												= 1.000đ)</em>
-										</div>
-										<div class="col-sm-2 col-md-4 dt-pri-btn text-center">
-											<a id="mainbody_contentbody_btnLike"
-												title="Yêu thích code này"
-												class="button-orange button-small LikeSuccess"
-												href="javascript:__doPostBack(&#39;ctl00$ctl00$mainbody$contentbody$btnLike&#39;,&#39;&#39;)"><i
-												class="fa fa-heart line-h20" aria-hidden="true"></i><span
-												class="hidden-sm">&nbsp; YÊU THÍCH</span></a>&nbsp;
-
-										</div>
-									</div>
+									
 									<div class="line"></div>
 									<div class="row">
 										<div class="col-md-7 dt-des">
 											<meta itemprop="brand" content="sharecode.vn" />
 											<meta itemprop="productionDate" content="2019-11-05T10:23" />
-											<div class="dt-col">Danh mục</div>
+											<div class="dt-col">Chuyên ngành</div>
 											<div itemprop="category">
 												<a href="/ngon-ngu-lap-trinh/php-mysql-21.htm"
 													id="mainbody_contentbody_Lang2" class="aorange"
-													target="_blank">PHP &amp; MySQL</a>
+													target="_blank">${doc.category.categoryName }</a>
 											</div>
-											<div class="dt-col">Thể loại</div>
+											<div class="dt-col">Chủ đề</div>
 											<div itemprop="material">
 												<a href="/the-loai-source-code/website-1.htm"
 													id="mainbody_contentbody_Category2" class="aorange"
-													target="_blank">Website</a>
-											</div>
-											<div class="dt-col">Nhóm code</div>
-											<div>
-												<a href="/code-chat-luong.htm"
-													id="mainbody_contentbody_Group2" class="agreen"
-													target="_blank">Code chất lượng</a> <span class="txt-colo"
-													data-toggle="tooltip" data-placement="top"
-													title="1-CODE MIỄN PHÍ (0Xu): Code học hỏi. 2-CODE THAM KHẢO (2Xu đến 99Xu): Phí tải code để tham khảo và phát triển. 3-CODE CHẤT LƯỢNG (>=100Xu): Code đảm bảo, thường có demo trực tiếp và được cam kết hỗ trợ từ tác giả."><i
-													class="fa fa-info-circle" aria-hidden="true"></i></span>
+													target="_blank">${doc.subcate.categoryName }</a>
 											</div>
 											<div class="dt-col">Ngày đăng</div>
-											<div id="mainbody_contentbody_Date2">05-11-2019</div>
-											<div class="dt-col">Loại file</div>
-											<div id="mainbody_contentbody_Type2">Full code</div>
-											<div class="dt-col">Dung lượng</div>
-											<div id="mainbody_contentbody_Size">25.7 MB</div>
+											<div id="mainbody_contentbody_Date2">${doc.createdDate }</div>
+											<div class="dt-col">Người đăng</div>
+											<div id="mainbody_contentbody_Size">${doc.user.username }</div>
 										</div>
 										<div class="col-md-5 dt-dow-vie">
 											<a href="#Download" class="btn2 button-down bold"
@@ -824,386 +777,24 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-sm-8 col-sm-push-4">
-									<div class="dt-help">
-										<b>Hướng dẫn: &nbsp;&nbsp;</b> <a
-											href="https://sharecode.vn/cau-hoi/huong-dan-cach-tai-code-mien-phi-14.htm"
-											target="_blank" class="dt-tag">Tải code miễn phí</a> <a
-											href="https://sharecode.vn/cau-hoi/huong-dan-cach-tai-code-co-phi-15.htm"
-											target="_blank" class="dt-tag">Tải code có phí</a> <a
-											href="https://sharecode.vn/cau-hoi/huong-dan-ho-tro-ki-thuat-16.htm"
-											target="_blank" class="dt-tag">Hỗ trợ kĩ thuật</a>
-									</div>
-									<div class="dt-chk orange">
-
-										<div id="mainbody_contentbody_chkCodeOK" class="it-chk">Cam
-											kết hỗ trợ</div>
-										<div class="it-chk">Không chứa mã độc</div>
-
-										<div id="mainbody_contentbody_chkConfig" class="it-chk">Có
-											hướng dẫn cài đặt</div>
-
-									</div>
-								</div>
-								<div class="col-sm-4 col-sm-pull-8">
-									<div class="text-center dt-same">
-										<a href="#code-giong"><span class="hidden-sm">Xem
-												thêm </span><strong>CODE GẦN GIỐNG</strong></a>
-									</div>
-									<div class="dt-help">
-
-										<a class="dt-tag" target="_blank"
-											href='/tu-khoa/framework-codeigniter-6863.htm'
-											class="search_tagkey2">Framework codeigniter</a> <a
-											class="dt-tag" target="_blank"
-											href='/tu-khoa/website-1640.htm' class="search_tagkey2">website</a>
-
-										<a class="dt-tag" target="_blank"
-											href='/tu-khoa/full-code-1067.htm' class="search_tagkey2">full
-											code</a> <a class="dt-tag" target="_blank"
-											href='/tu-khoa/ban-laptop-27246.htm' class="search_tagkey2">bán
-											laptop</a> <a class="dt-tag" target="_blank"
-											href='/tu-khoa/ban-hang-dien-thoai-linh-kien-may-tinh-33926.htm'
-											class="search_tagkey2">bán hàng điện thoại linh kiện máy
-											tính</a> <a class="dt-tag" target="_blank"
-											href='/tu-khoa/ci-1990.htm' class="search_tagkey2">ci</a>
-
-									</div>
-								</div>
+								
 							</div>
 							<br />
 							<div class="dt-sub" title="Mô tả ngắn">
-								<h4 class="title1" itemprop="description">Website bán hàng
-									được viết bằng framework codeigniter (CI) với đầy đủ các chức
-									năng cơ bản + nâng cao</h4>
+								<h4 class="title1" itemprop="description">${doc.description }</h4>
 							</div>
 
-							<div class="row banner-bottom" style="display: block !important"
-								id="bannerCenter">
-								<div class="col-xs-12 col-sm-6">
-									<div class="banner-boder-zoom">
-										<a href="https://topcode.vn/" target="_blank"> <img
-											alt="Ra mắt sàn code chất lượng cao" class="img-responsive"
-											src="style/post/Ra-mat-topcode-2.jpg"
-											style="margin: 0px auto 10px auto" /></a>
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-6">
-									<div class="banner-boder-zoom">
-										<a href="https://topcode.vn/" target="_blank"> <img
-											alt="Upload 1 lần đăng bán trên hai trang topcode.vn và sharecode.vn"
-											class="img-responsive" src="style/post/Up-1-ban-2-2.jpg"
-											style="margin: 0px auto 10px auto" /></a>
-									</div>
-								</div>
-							</div>
-							<br /> <span class="dt-box-title bold">MÔ TẢ CHI TIẾT</span>
+							<br /> <span class="dt-box-title bold">Preview</span>
 							<div class="dt-box entry-detail">
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									<span style="color: #ff0000;"><span
-										style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; font-weight: inherit; outline: 0px; vertical-align: top;">Backend:</span></span>
-								</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									- Quản lý danh mục&nbsp;loại đa cấp</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									-&nbsp;Quản lý nhà cung tấp (Cập nhật Trạng thái, Thêm, Sửa,
-									Xóa, Nhập hàng)</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									- Quản lý sản phẩm&nbsp;<span
-										style="color: rgb(140, 102, 53); font-family: Arial, Verdana, sans-serif;">(Cập
-										nhật Trạng thái, Thêm, Sửa, Xóa, Nhập hàng)</span>
-								</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									<span
-										style="color: rgb(140, 102, 53); font-family: Arial, Verdana, sans-serif;">-&nbsp;</span><span
-										style="color: rgb(140, 102, 53); font-family: Arial, Verdana, sans-serif;">Quản
-										lý bài viết (Cập nhật Trạng thái, Thêm, Sửa, Xóa)</span>
-								</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									<span
-										style="color: rgb(140, 102, 53); font-family: Arial, Verdana, sans-serif;">-
-										Quản lý Liên hệ (Xem, Xóa)</span>
-								</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									-&nbsp;Quản lý đơn hàng (Xem chi tiết đơn hàng, Trạng thái đơn
-									hàng, Hủy đơn, Lưu đơn, In hóa đơn)</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									-&nbsp;Quản lý mã giảm giá (Thêm, Sửa, Xóa)</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									- Quản lý khách hàng</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									- Quản lý thành viên, banner, slider ....</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									-&nbsp;Cấu hình phí giao hàng</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									- Quản lý kho hàng,&nbsp;<span
-										style="color: rgb(140, 102, 53); font-family: Arial, Verdana, sans-serif;">Lược
-										đồ thống kê đơn hàng theo tháng (Số sản phẩm, Số đơn hàng
-										trong tháng, đã giao, số tiền theo tháng)</span>
-								</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									<span
-										style="color: rgb(140, 102, 53); font-family: Arial, Verdana, sans-serif;">-&nbsp;</span><span
-										style="color: rgb(140, 102, 53); font-family: Arial, Verdana, sans-serif;">Cập
-										nhật số lượng sản phẩm trong kho theo từng đơn hàng bán thành
-										công</span>
-								</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									<span
-										style="color: rgb(140, 102, 53); font-family: Arial, Verdana, sans-serif;">-&nbsp;</span><span
-										style="color: rgb(140, 102, 53); font-family: Arial, Verdana, sans-serif;">Cập
-										nhật lần nhập mã giảm giá còn lại của 1 mã khi khách đặt hàng</span>
-								</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									&nbsp;</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									<span style="color: #ff0000;">Front-end</span>
-								</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									- Hiển thị sản phẩm</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									- Chi tiết sản phẩm</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									- Tin tức</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									- Chi tiết tin tức</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									- Giỏ hàng, đặt hàng, ajax tự động cập nhật số lượng sản phẩm
-									....</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									-&nbsp;Chat trực tiếp với cửa hàng bằng tài khoản Facebook
-									(muốn chat phải chạy trên host thật)</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									- Gửi mail thanh toán đơn hàng</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									-&nbsp;Thông báo và theo dõi trạng thái đơn đặt hàng đã mua</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									-&nbsp;Hỗ trợ Lấy lại mật khẩu, Đổi mật khẩu&nbsp;</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									và các chức năng cần thiết của một website bán hàng.</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									Sourcecode là dự án thực tế đang sử dụng !</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									Công nghệ sử dụng : framework codeigniter, php mysql, bootstrap
-									3, css, ajax, jquery...</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									Code chuẩn không lỗi lầm + full chức năng</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									&nbsp;</p>
-								<p
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									Bộ code sử dụng frameword codeigniter (CI) dùng để làm&nbsp;<b
-										style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top;">Đồ
-										Á</b><strong
-										style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top;">n&nbsp;Thực
-										Tập&nbsp;</strong>và bảo vệ&nbsp;<strong
-										style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top;">Đồ
-										Án Tốt Nghiệp&nbsp;</strong>và có thể phát triển thành trang web cho
-									chính công ty cũng như cửa hàng cá nhân của các bạn .
-								</p>
-
-								<p id="mainbody_contentbody_boxTextConfig">
-									<br /> XEM THÊM ==> <a href="#huong-dan-cai-dat"
-										class="aorange">Hướng dẫn cài đặt chi tiết</a>
-								</p>
-								<p id="anh-demo">&nbsp;</p>
-								<div id="mainbody_contentbody_divGalleryImage" class="dt-img">
-									<b>HÌNH ẢNH DEMO</b> <br /> <br />
-
-									<div class="text-center">
-										<image
-											src='/FilesUpload/CodeUpload/[tac-gia-vui-long-bo-sung-video-cai-dat-source]-full-code-website-ban-hang-laptop-dien-thoai-linh-kien-bang-framework-codeigniter-full-100-11655.jpg'
-											alt="framework codeigniter,website,full code,bán laptop,bán hàng điện thoại linh kiện máy tính,CI"
-											title="Download Full code website bán hàng laptop, điện thoại, linh kiện bằng framework codeigniter (full 100%) ngay!"
-											class="dt-max-img"></image>
-									</div>
-									<br />
-
-									<div class="text-center">
-										<image
-											src='/FilesUpload/CodeUpload/[tac-gia-vui-long-bo-sung-video-cai-dat-source]-full-code-website-ban-hang-laptop-dien-thoai-linh-kien-bang-framework-codeigniter-full-100-11656.jpg'
-											alt="framework codeigniter,website,full code,bán laptop,bán hàng điện thoại linh kiện máy tính,CI"
-											title="Download Full code website bán hàng laptop, điện thoại, linh kiện bằng framework codeigniter (full 100%) ngay!"
-											class="dt-max-img"></image>
-									</div>
-									<br />
-
-									<div class="text-center">
-										<image
-											src='/FilesUpload/CodeUpload/[tac-gia-vui-long-bo-sung-video-cai-dat-source]-full-code-website-ban-hang-laptop-dien-thoai-linh-kien-bang-framework-codeigniter-full-100-11657.jpg'
-											alt="framework codeigniter,website,full code,bán laptop,bán hàng điện thoại linh kiện máy tính,CI"
-											title="Download Full code website bán hàng laptop, điện thoại, linh kiện bằng framework codeigniter (full 100%) ngay!"
-											class="dt-max-img"></image>
-									</div>
-									<br />
-
-									<div class="text-center">
-										<image
-											src='/FilesUpload/CodeUpload/[tac-gia-vui-long-bo-sung-video-cai-dat-source]-full-code-website-ban-hang-laptop-dien-thoai-linh-kien-bang-framework-codeigniter-full-100-11658.jpg'
-											alt="framework codeigniter,website,full code,bán laptop,bán hàng điện thoại linh kiện máy tính,CI"
-											title="Download Full code website bán hàng laptop, điện thoại, linh kiện bằng framework codeigniter (full 100%) ngay!"
-											class="dt-max-img"></image>
-									</div>
-									<br />
-
-									<div class="text-center">
-										<image
-											src='/FilesUpload/CodeUpload/[tac-gia-vui-long-bo-sung-video-cai-dat-source]-full-code-website-ban-hang-laptop-dien-thoai-linh-kien-bang-framework-codeigniter-full-100-11659.jpg'
-											alt="framework codeigniter,website,full code,bán laptop,bán hàng điện thoại linh kiện máy tính,CI"
-											title="Download Full code website bán hàng laptop, điện thoại, linh kiện bằng framework codeigniter (full 100%) ngay!"
-											class="dt-max-img"></image>
-									</div>
-									<br />
-
-									<div class="text-center">
-										<image
-											src='/FilesUpload/CodeUpload/[tac-gia-vui-long-bo-sung-video-cai-dat-source]-full-code-website-ban-hang-laptop-dien-thoai-linh-kien-bang-framework-codeigniter-full-100-1170.jpg'
-											alt="framework codeigniter,website,full code,bán laptop,bán hàng điện thoại linh kiện máy tính,CI"
-											title="Download Full code website bán hàng laptop, điện thoại, linh kiện bằng framework codeigniter (full 100%) ngay!"
-											class="dt-max-img"></image>
-									</div>
-									<br />
-
-									<div class="text-center">
-										<image
-											src='/FilesUpload/CodeUpload/[tac-gia-vui-long-bo-sung-video-cai-dat-source]-full-code-website-ban-hang-laptop-dien-thoai-linh-kien-bang-framework-codeigniter-full-100-1171.jpg'
-											alt="framework codeigniter,website,full code,bán laptop,bán hàng điện thoại linh kiện máy tính,CI"
-											title="Download Full code website bán hàng laptop, điện thoại, linh kiện bằng framework codeigniter (full 100%) ngay!"
-											class="dt-max-img"></image>
-									</div>
-									<br />
-
-									<div class="text-center">
-										<image
-											src='/FilesUpload/CodeUpload/[tac-gia-vui-long-bo-sung-video-cai-dat-source]-full-code-website-ban-hang-laptop-dien-thoai-linh-kien-bang-framework-codeigniter-full-100-1172.jpg'
-											alt="framework codeigniter,website,full code,bán laptop,bán hàng điện thoại linh kiện máy tính,CI"
-											title="Download Full code website bán hàng laptop, điện thoại, linh kiện bằng framework codeigniter (full 100%) ngay!"
-											class="dt-max-img"></image>
-									</div>
-									<br />
-
-									<div class="text-center">
-										<image
-											src='/FilesUpload/CodeUpload/[tac-gia-vui-long-bo-sung-video-cai-dat-source]-full-code-website-ban-hang-laptop-dien-thoai-linh-kien-bang-framework-codeigniter-full-100-1173.jpg'
-											alt="framework codeigniter,website,full code,bán laptop,bán hàng điện thoại linh kiện máy tính,CI"
-											title="Download Full code website bán hàng laptop, điện thoại, linh kiện bằng framework codeigniter (full 100%) ngay!"
-											class="dt-max-img"></image>
-									</div>
-									<br />
-
-									<div class="text-center">
-										<image
-											src='/FilesUpload/CodeUpload/[tac-gia-vui-long-bo-sung-video-cai-dat-source]-full-code-website-ban-hang-laptop-dien-thoai-linh-kien-bang-framework-codeigniter-full-100-1174.jpg'
-											alt="framework codeigniter,website,full code,bán laptop,bán hàng điện thoại linh kiện máy tính,CI"
-											title="Download Full code website bán hàng laptop, điện thoại, linh kiện bằng framework codeigniter (full 100%) ngay!"
-											class="dt-max-img"></image>
-									</div>
-									<br />
-
-								</div>
-								<p class="alignright" id="huong-dan-cai-dat">Nguồn:
-									Sharecode.vn</p>
+								<embed src="${doc.docSource }" type="application/pdf"   height="700px" width="500">
 							</div>
 							<br /> <br /> <span class="dt-box-title bold">HƯỚNG DẪN
 								CÀI ĐẶT</span>
-							<div class="dt-box entry-detail">
-								<div
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									<span style="background-color: transparent;">+ Import cơ
-										sở dữ liệu vào phpmyadmin&nbsp; =&gt;&nbsp;</span><span
-										style="color: rgb(140, 102, 53); font-family: Arial, Verdana, sans-serif;">file
-										database : db_shop.sql</span>
-								</div>
-								<div
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									+ Copy source vào xampp hoặc wampp =&gt; mình dùng xampp thui</div>
-								<div
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									+&nbsp;<span
-										style="color: rgb(140, 102, 53); font-family: Arial, Verdana, sans-serif;">Cấu
-										hình đường dẫn trong application/config/config.php
-										($config['base_url'] = 'đường dẫn của máy hoặc đường dẫn
-										host')</span>
-								</div>
-								<div
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									<span
-										style="color: rgb(140, 102, 53); font-family: Arial, Verdana, sans-serif;">+&nbsp;</span><span
-										style="color: rgb(140, 102, 53); font-family: Arial, Verdana, sans-serif;">Cấu
-										hình database trong application/database.php</span>
-								</div>
-								<div
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									<span
-										style="color: rgb(140, 102, 53); font-family: Arial, Verdana, sans-serif;">+&nbsp;</span><span
-										style="color: rgb(140, 102, 53); font-family: Arial, Verdana, sans-serif;">Cấu
-										hình đường dẫn ckediter : public/ckeditor/config.js</span>
-								</div>
-								<div
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									<span
-										style="color: rgb(140, 102, 53); font-family: Arial, Verdana, sans-serif;">+&nbsp;</span><span
-										style="color: rgb(140, 102, 53); font-family: Arial, Verdana, sans-serif;">Cấu
-										hình đường dẫn ckfinder: public/ckfinder/config.php (baseUrl)</span>
-								</div>
-								<div
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									<span
-										style="color: rgb(140, 102, 53); font-family: Arial, Verdana, sans-serif;">-
-										Đường dẫn vào trang quản trị /admin</span>
-								</div>
-								<div
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									<strong
-										style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top;">+
-										Tài khoản đăng nhập admin: username: admin / password:&nbsp;</strong>123456
-								</div>
-								<div
-									style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; background: transparent; outline: 0px; vertical-align: top; color: rgb(126, 89, 42); font-family: Tahoma, Arial, sans-serif;">
-									<strong>+ Tài khoản demo khách hàng : TK: foxrainsad
-										MK: foxrainsad</strong>
-								</div>
-
-								<span id="Download">&nbsp;</span> <br />
-							</div>
 							<div class="clear" style="height: 40px;">&nbsp;</div>
 							<div class="dt-down">
 								<div class="dt-down2">
 									<div class="col-sm-7 col-md-8">
 										<div class="bold title3">LINK DOWNLOAD</div>
-										<h2 id="mainbody_contentbody_FileName" class="dt-file">
-											DO-AN-TN-2019.zip <span>[25.7 MB]</span>
-										</h2>
 										<div id="mainbody_contentbody_Status" class="dt-true-ic bold">File
 											đ&#227; kiểm duyệt</div>
 										<a id="code-giong" class="aorange  text-nowrap dt-action"
@@ -1218,19 +809,17 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 
 									</div>
 									<div class="col-sm-5 col-md-4 text-center">
-										<strong>Pass giải nén</strong> (Nếu có):<br /> <span
-											class="green">sharecode.vn</span> <a
+										 <a
 											onclick="createCaptcha(); return false;"
 											id="mainbody_contentbody_btnLinkMain"
-											title="Download Full code website bán hàng laptop, điện thoại, linh kiện bằng framework codeigniter (full 100%) ngay!"
+											title="Download ${doc.docName }"
 											class="btn2 button-down2" data-target="#Download_now_modal"
 											role="button" data-toggle="modal"
-											href="javascript:__doPostBack(&#39;ctl00$ctl00$mainbody$contentbody$btnLinkMain&#39;,&#39;&#39;)"><div
+											href="<c:url value = "/download?id = ${doc.id }" />" ><div
 												class="btn-box">
 												<div class="btn-ic"></div>
 												<div class="btn-txt bold">
-													DOWNLOAD<br /> <span id="mainbody_contentbody_divPrice2">(200
-														Xu)</span>
+													DOWNLOAD<br /> <span id="mainbody_contentbody_divPrice2"></span>
 												</div>
 											</div></a>
 
@@ -1255,22 +844,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 									</div>
 								</div>
 							</div>
-							<div class="row banner-bottom">
-								<div class="col-sm-6">
-									<div class="banner-boder-zoom">
-										<a href="/dang-ki-ten-mien.htm"> <img
-											alt="Kiểm tra và đăng kí tên miền" class="img-responsive"
-											src="style/post/banner-domain2.jpg" /></a>
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="banner-boder-zoom">
-										<a href="/hosting-ssd.htm"> <img
-											alt="Đăng kí hosting ssd chất lượng cao"
-											class="img-responsive" src="style/post/banner-hosting2.jpg" /></a>
-									</div>
-								</div>
-							</div>
 							<input type="hidden"
 								name="ctl00$ctl00$mainbody$contentbody$hdCodeId"
 								id="mainbody_contentbody_hdCodeId" value="23988" /> <input
@@ -1286,7 +859,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 
 							<div id="view-product-list" class="view-product-list">
 								<h2 class="page-heading">
-									<span class="page-heading-title">CODE GẦN GIỐNG</span>
+									<span class="page-heading-title">TÀI LIỆU CÙNG CHỦ ĐỀ</span>
 								</h2>
 								<ul class="row product-list style2 grid">
 

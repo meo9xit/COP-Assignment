@@ -6,9 +6,10 @@ import com.chiasetailieu.dao.IDocumentDAO;
 import com.chiasetailieu.dao.mapper.DocumentMapper;
 import com.chiasetailieu.model.Category;
 import com.chiasetailieu.model.Document;
+import com.chiasetailieu.model.SubCategory;
 
 public class DocumentDAO extends GenericDAO<Document> implements IDocumentDAO{
-
+	
 	@Override
 	public List<Document> findAll() {
 		String sql = "select * from Document";
@@ -20,7 +21,16 @@ public class DocumentDAO extends GenericDAO<Document> implements IDocumentDAO{
 		// TODO Auto-generated method stub
 		String sql = "select * from Document where doc_id = ?";
 		List<Document> docs = query(sql, new DocumentMapper(), id);
-		return docs.isEmpty()?null:docs.get(0);
+		Document doc = docs.isEmpty()?null:docs.get(0);
+		if(doc!=null) {
+			CategoryDAO cateDao = new CategoryDAO();
+			Category cate = cateDao.findOneById(doc.getCateId());
+			SubcateDAO subDao = new SubcateDAO();
+			SubCategory subcate = subDao.findOneById(doc.getSubcateId());
+			doc.setSubcate(subcate);
+			doc.setCategory(cate);
+		}
+		return doc;
 	}
 
 	@Override
