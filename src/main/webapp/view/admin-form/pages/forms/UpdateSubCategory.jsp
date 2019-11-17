@@ -673,7 +673,7 @@
 								<div class="form-group">
 									<div class="form-line">
 										<input type="text" id="subcate_id" class="form-control"
-											name="subcate_id" placeholder="Enter subcategory id!"
+											name="subcateid" placeholder="Enter subcategory id!"
 											value="${model.subcategoryID}">
 									</div>
 								</div>
@@ -681,7 +681,7 @@
 								<div class="form-group">
 									<div class="form-line">
 										<input type="text" id="cate_id" class="form-control"
-											name="cate_id" placeholder="Enter category id!"
+											name="cateid" placeholder="Enter category id!"
 											value="${model.categoryId}">
 									</div>
 								</div>
@@ -689,7 +689,7 @@
 								<div class="form-group">
 									<div class="form-line">
 										<input type="text" id="subcate_name" class="form-control"
-											name="subcate_name" placeholder="Enter subcategory name!"
+											name="subcatename" placeholder="Enter subcategory name!"
 											value="${model.subcategoryName}">
 									</div>
 								</div>
@@ -735,7 +735,7 @@
 							window.location.href = "/chiasetailieu/admin-subcategory";
 						},
 						error : function(error) {
-							window.location.href = "/chiasetailieu/admin-subcategory?type=edit";
+							window.location.href = "/chiasetailieu/admin-subcategory?type=update";
 						}
 					});
 		}
