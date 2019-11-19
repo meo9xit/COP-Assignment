@@ -94,11 +94,7 @@ function __doPostBack(eventTarget, eventArgument) {
 
 <script src="style/web-style/ScriptResource.axd" type="text/javascript"></script>
 <script src="style/web-style/ScriptResource(1).axd" type="text/javascript"></script>
-<div class="aspNetHidden">
 
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="8D0E13E6">
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAEbkXnhSkc4EVqdiJgcC9sxp4alCATtUgKswFNqVSw8A6uPt1qWUDW/Nq87Nip0964dVekZAH7n66iWui6apxhYLp/1ZHE3M6wdgnyx4Z+G5i4FBZYDVNXrnB/9WmjDFKj50bvVn2GvXaJItSBO72RlcFSRNOfSAyddM8lsIZ/lKPXxA6BiuUWfRK7/Jk9mf0vxJFlVS07VoTH9RU2b8vaINNs9QAbgfKEraSvXP56CAgLG5SSeKl4fU5wo/PQkukd3yF2nCH2aef/lxJhQqwAnjLa94hRLqucG30c9rnPLd0saZQIiOQwSEqd87G7R6GVCsX3QscqB+YBKz/ywA3pA7Lc6bL1aGFnDSFVxL10O4UWKm/HOUm5WtIYkXmXNdij+n6aIyroNNmPoUZZqTNc3GTSdQyKg7iZoswF+JumYQrWc72evHvcPzwzLaG/UJMuy8aDW5+AaREbUMoYxD3N9DO9e6jWeEKxHFeZ7BAVPSECeGr/qKuEXQ0lJjwZB1IJimRIZ4uPUq/ql9La6RLaBYmjVNEVzdb3eSAnZ+UIynsoodIusXe/txI2hT0skzfIlr9MiWLvKohAvmza5QXRAEX4M2pvsBKu0YJl6Rv33lptHDHtGI4blvk1FBnb3K1QT/FJcNoEd9DyacwoYOiKKRvNpHrh8VUOW2S2w8fQ7HPjd0WE7wptM/myoyWCR33Q1xpSAOu758cFpnhcbRvP25Me/DDBVX5JtEUdhGQKJU8KZZr3nBlD+4MAIjAXSpnS6l9VpblP5eYbnCcTU7gkhg4dbpbLjk44ZeronaR99nO32wcMquy3fjCHSDbF5H1eBpE5ENb1DypzAYNq4J9oZ2gD8m4LhqDhE30IYVz02jSDqusOnZoydybM/YSPgy1ClYJbcrievYhBcmwUGvYW8ize72jOiOdS1NbwifF1oF/Xh4EiJrzqVISTEq58+96vRLYZ25GP0LqeqD8Mpp424IFH2652wzPgIosGEAtUSxxcsFrn6JpANl0wMEcIwlOZQ0CAtgkzPRVqRZHdl0N8dmve850ugYvYHahhKWCuTxACQ7livrz1Ae3QT/lKTawCYr2Ypei5GRgN/rMSEgtPCw5MnBSQ6oigNLjtEiLOQQeJrQleIsxWi0bDnf31tcB2nKXC9CHDeIJrc/ny0c9IQE+VPkf5AW8D9z44KeZ1/wev36oFFAz6lBofVmy4wIRoMlDgSWsxXse45HfxkvjWUKXzkzZcNhOQVMO1CXCnVUD2THpXQm48NToEqpBFLyVtfCbuaYLQKAB3i1m5IrWptQ3d84s+gOo58ODnfVbkTVrXX+ONiluZTvLnngrmVsiP8xFo6/YIPA+h5Ud7IEW0pU2IsKlkuQtNdTUlSSwdqh9UyJ8wa6oruUXtgOa9bsnykcFyyuSXCzXzXpcoZF3D+bRGqg2khDAG6iLj5lAwbDcy9k7UkwJkb9fLL1YRTjwRtufUFQz7X0BGPeICydmaESDALidxC32h/GG+BPilKIm4dTmxs=">
-</div>
         <script type="text/javascript">
 //<![CDATA[
 Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['tctl00$mainbody$upPannel','mainbody_upPannel','tctl00$ctl24','ctl24'], [], [], 90, 'ctl00');
@@ -171,20 +167,20 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-3" id="box-vertical-megamenus">
-                            <div class="box-vertical-megamenus">
+                        <div class="box-vertical-megamenus">
                                 <h4 class="title">
                                     <span class="title-menu">Danh mục</span>
                                     <span class="btn-open-mobile pull-right home-page"><i class="fa fa-bars"></i></span>
                                 </h4>
-                                <div class="vertical-menu-content is-home">
+                                <div class="vertical-menu-content is-home" style="display: none;">
                                     <ul class="vertical-menu-list">
                                         <li>
-                                            <a class="parent" href="https://sharecode.vn/#">
-                                                <img class="icon-menu" alt="Thể loại code" src="style/web-style/2.png">PHÂN LOẠI CODE</a>
-                                            <div class="vertical-dropdown-menu" style="width: 902px;">
+                                            <a class="parent" href="https://sharecode.vn/thanh-vien-upload.htm#">
+                                                <img class="icon-menu" alt="Thể loại code" src="style/upload/2.png">PHÂN LOẠI TÀI LIỆU</a>
+                                            <div class="vertical-dropdown-menu" style="width: 900px;">
                                                 <div class="vertical-groups col-sm-6 col-md-4">
                                                     <div class="mega-group col-sm-12">
-                                                        <span class="mega-group-header"><span>THỂ LOẠI CODE</span></span>
+                                                        <span class="mega-group-header"><span>THỂ LOẠI TÀI LIỆU</span></span>
                                                         <ul class="group-link-default">
                                                             
                                                                     <li><a class="bold" href="https://sharecode.vn/the-loai-source-code/website-1.htm">Website</a></li>
@@ -200,7 +196,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                                 </div>
                                                 <div class="vertical-groups col-sm-6 col-md-5">
                                                     <div class="mega-group col-sm-12">
-                                                        <span class="mega-group-header"><span>SOURCE CODE</span></span>
+                                                        <span class="mega-group-header"><span>TÀI LIỆU</span></span>
                                                         <ul class="group-link-default">
                                                             <li><a href="https://sharecode.vn/code-chat-luong.htm"><strong>Code chất lượng</strong> (&gt;= 100 Xu)</a></li>
                                                             <li><a href="https://sharecode.vn/code-tham-khao.htm"><strong>Code tham khảo</strong> (2 Xu - 99 Xu)</a></li>
@@ -215,49 +211,49 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                         </li>
                                         
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/android-15.htm">
-                                                    <img class="icon-menu" alt="Android" src="style/web-style/3.png">Android</a></li>
+                                                    <img class="icon-menu" alt="Android" src="style/upload/3.png">Android</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/ios-23.htm">
-                                                    <img class="icon-menu" alt="iOS" src="style/web-style/3.png">iOS</a></li>
+                                                    <img class="icon-menu" alt="iOS" src="style/upload/3.png">iOS</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/windows-phone-26.htm">
-                                                    <img class="icon-menu" alt="Windows phone" src="style/web-style/3.png">Windows phone</a></li>
+                                                    <img class="icon-menu" alt="Windows phone" src="style/upload/3.png">Windows phone</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/php-mysql-21.htm">
-                                                    <img class="icon-menu" alt="PHP &amp; MySQL" src="style/web-style/3.png">PHP &amp; MySQL</a></li>
+                                                    <img class="icon-menu" alt="PHP &amp; MySQL" src="style/upload/3.png">PHP &amp; MySQL</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">
-                                                    <img class="icon-menu" alt="WordPress" src="style/web-style/3.png">WordPress</a></li>
+                                                    <img class="icon-menu" alt="WordPress" src="style/upload/3.png">WordPress</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/joomla-28.htm">
-                                                    <img class="icon-menu" alt="Joomla" src="style/web-style/3.png">Joomla</a></li>
+                                                    <img class="icon-menu" alt="Joomla" src="style/upload/3.png">Joomla</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-17.htm">
-                                                    <img class="icon-menu" alt="Visual C#" src="style/web-style/3.png">Visual C#</a></li>
+                                                    <img class="icon-menu" alt="Visual C#" src="style/upload/3.png">Visual C#</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/aspaspnet-16.htm">
-                                                    <img class="icon-menu" alt="Asp/Asp.Net" src="style/web-style/3.png">Asp/Asp.Net</a></li>
+                                                    <img class="icon-menu" alt="Asp/Asp.Net" src="style/upload/3.png">Asp/Asp.Net</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/javajsp-20.htm">
-                                                    <img class="icon-menu" alt="Java/JSP" src="style/web-style/3.png">Java/JSP</a></li>
+                                                    <img class="icon-menu" alt="Java/JSP" src="style/upload/3.png">Java/JSP</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-basic-19.htm">
-                                                    <img class="icon-menu" alt="Visual Basic" src="style/web-style/3.png">Visual Basic</a></li>
+                                                    <img class="icon-menu" alt="Visual Basic" src="style/upload/3.png">Visual Basic</a></li>
                                             
                                                 <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/cocos2d-24.htm">
-                                                    <img class="icon-menu" alt="Cocos2D" src="style/web-style/3.png">Cocos2D</a></li>
+                                                    <img class="icon-menu" alt="Cocos2D" src="style/upload/3.png">Cocos2D</a></li>
                                             
                                                 <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/unity-27.htm">
-                                                    <img class="icon-menu" alt="Unity" src="style/web-style/3.png">Unity</a></li>
+                                                    <img class="icon-menu" alt="Unity" src="style/upload/3.png">Unity</a></li>
                                             
                                                 <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-18.htm">
-                                                    <img class="icon-menu" alt="Visual C++" src="style/web-style/3.png">Visual C++</a></li>
+                                                    <img class="icon-menu" alt="Visual C++" src="style/upload/3.png">Visual C++</a></li>
                                             
                                                 <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/html-template-25.htm">
-                                                    <img class="icon-menu" alt="Html &amp; Template" src="style/web-style/3.png">Html &amp; Template</a></li>
+                                                    <img class="icon-menu" alt="Html &amp; Template" src="style/upload/3.png">Html &amp; Template</a></li>
                                             
                                                 <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/khac-22.htm">
-                                                    <img class="icon-menu" alt="Khác" src="style/web-style/3.png">Khác</a></li>
+                                                    <img class="icon-menu" alt="Khác" src="style/upload/3.png">Khác</a></li>
                                             
                                     </ul>
                                     <div class="all-category"><span class="open-cate">Xem tất cả</span></div>
@@ -503,201 +499,6 @@ function submitSearch() {
 
         
     
-    <div id="home-slider" class="page-home">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 slider-left"></div>
-                <div class="col-sm-9 header-top-right">
-                    <div class="homeslider">
-                        <div class="content-slide">
-                            <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 450px;"><ul id="contenhomeslider" style="width: 415%; position: relative; transition-duration: 0.5s; transform: translate3d(-1332px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 666px;" class="bx-clone">
-                                    <img alt="Phân biệt sharecode.vn và topcode.vn" src="style/web-style/Sharecode-vs-topcode.jpg" title="Sharecode.vn thư viện code tham khảo và Topcode.vn sàn code chất lượng cao"></li>
-                                <li style="float: left; list-style: none; position: relative; width: 666px;">
-                                    <img alt="sharecode cộng đồng download source code" src="style/web-style/share-code-1.jpg" title="Thư viện download code hàng đầu Việt Nam - Upload mỗi ngày!"></li>
-                              
-                                <li style="float: left; list-style: none; position: relative; width: 666px;">
-                                    <img alt="Phân biệt sharecode.vn và topcode.vn" src="style/web-style/Sharecode-vs-topcode.jpg" title="Sharecode.vn thư viện code tham khảo và Topcode.vn sàn code chất lượng cao"></li>
-                                
-                            <li style="float: left; list-style: none; position: relative; width: 666px;" class="bx-clone">
-                                    <img alt="sharecode cộng đồng download source code" src="style/web-style/share-code-1.jpg" title="Thư viện download code hàng đầu Việt Nam - Upload mỗi ngày!"></li></ul></div><div class="bx-controls bx-has-pager bx-has-controls-direction"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="https://sharecode.vn/" data-slide-index="0" class="bx-pager-link">1</a></div><div class="bx-pager-item"><a href="https://sharecode.vn/" data-slide-index="1" class="bx-pager-link active">2</a></div></div><div class="bx-controls-direction"><a class="bx-prev" href="https://sharecode.vn/"><i class="fa fa-angle-left"></i></a><a class="bx-next" href="https://sharecode.vn/"><i class="fa fa-angle-right"></i></a></div></div></div>
-                        </div>
-                    </div>
-                    <div class="header-banner banner-opacity">
-                        
-
-<style>
-    /*Hoạt động gần đây*/
-    .action {
-        height: 70%;
-        overflow: hidden;
-        border: 1px solid #e2d8c7;
-        font-size: 13px;
-        background: #faf8f1;
-        border-radius: 0px 0px 4px 0px;
-    }
-
-        .action .title_ac {
-            height: 32px;
-            text-align: center;
-            background: #e2d8c7;
-            padding-top: 8px;
-            border-radius: 16px;
-            -moz-border-radius: 16px;
-            -webkit-border-radius: 16px;
-            margin: 8px 0px;
-        }
-
-    .log_re {
-        height: 30%;
-        color: #ff8401;
-        background: #faf8f1;
-        border-right: 1px solid #e2d8c7;
-            border-left: 1px solid #e2d8c7;
-            padding-right: 0px;
-    }
-    .log_re .pad15 {
-            padding-right: 15px;
-    }
-        .log_re .fa_go {
-            height: 30%;
-            color: #fff;
-            padding: 5px 13px;
-        }
-
-        .log_re .lo_re {
-            height: 70%;
-            text-align: center;
-        }
-
-
-        .log_re .logi {
-            padding-top: 25px;
-            color: #84c52c;
-            height: 100%;
-            padding-bottom:7px;
-            border-right: 1px solid #e2d8c7;
-        }
-         .log_re .logi:hover {
-            color: #648d03;
-        }
-
-            .log_re .logi:before {
-                font: normal normal normal 27px/1 FontAwesome;
-                content: "\f090 ";
-            }
-
-        .log_re .regt {
-            padding-top: 25px;
-            height: 100%;
-        }
-        .log_re .regt:hover {
-            color: #db6200;
-        }
-            .log_re .regt:before {
-                font: normal normal normal 27px/1 FontAwesome;
-                content: "\f234";
-            }
-
-    .action_box {
-        color: #d5c6ae;
-    }
-
-        .action_box ul {
-            width: 100%;
-        }
-
-        .action_box li {
-            background: url('/Image/marker.png') no-repeat left 0px top 14px;
-            list-style: none;
-            padding: 7px 0px 6px 13px;
-            line-height: 15px;
-        }
-
-            .action_box li .lnkGreen {
-                color: #84c52c;
-                text-decoration: none;
-                font-weight: bold;
-                font-size: 12px;
-            }
-
-                .action_box li .lnkGreen:hover {
-                    text-decoration: underline;
-                }
-
-            .action_box li .lnkOrange {
-                color: #a9834f;
-                text-decoration: none;
-            }
-
-                .action_box li .lnkOrange:hover {
-                    color: #ff8401;
-                }
-
-            .action_box li .Orange {
-                color: #ff8401;
-            }
-
-            .action_box li .Green {
-                color: #84c52c;
-            }
-</style>
-<div class="col-md-12 log_re">
-    <div id="mainbody_ucAction_divLogin" class="pad15">
-        <div class="row fa_go">
-            <a id="mainbody_ucAction_LinkButton1" title="Đăng nhập nhanh bằng tài khoản Facebook" class="loginBtn loginBtn-facebook alignleft" href="javascript:__doPostBack(&#39;ctl00$mainbody$ucAction$LinkButton1&#39;,&#39;&#39;)">Log in</a>
-            <a id="mainbody_ucAction_LinkButton2" title="Đăng nhập nhanh bằng tài khoản Google" class="loginBtn loginBtn-google alignright" href="javascript:__doPostBack(&#39;ctl00$mainbody$ucAction$LinkButton2&#39;,&#39;&#39;)">Log in</a>
-        </div>
-        <div class="row lo_re">
-            <div class="col-md-6 logi" data-toggle="modal" data-target="#LoginForm" onclick="createCaptcha();" role="button">
-                <p>Đăng nhập</p>
-            </div> <a href="https://sharecode.vn/dang-ki-tai-khoan.htm" class="orange">
-            <div class="col-md-6 regt">
-                <p>Đăng kí</p>
-            </div></a>
-        </div>
-    </div>
-    
-</div>
-<div class="col-md-12 action">
-    <div class="title_ac bold">
-        HOẠT ĐỘNG GẦN ĐÂY
-    </div>
-    <div class="action_box" style="position: relative; height: 638px; overflow: hidden; display: block;">
-        <ul style="margin: 0px; position: absolute; top: 0px;"><li style="margin: 0px; display: list-item;"><a href="https://sharecode.vn/thanh-vien/hung-18884.htm" target="_blank" class="lnkGreen">Nguyễn Thế Hùng</a> vừa đăng bán <a href="https://sharecode.vn/source-code/ma-nguon-web-thi-trac-nghiem-truc-tuyen-codeigniter-23731.htm" target="_blank" class="lnkOrange">"Mã nguồn web thi trắc nghiệm trực tuyến CodeIgniter"</a></li><li style="margin: 0px; display: list-item;"><a href="https://sharecode.vn/thanh-vien/tuyen-291418.htm" target="_blank" class="lnkGreen">tuyensp</a> vừa đăng bán <a href="https://sharecode.vn/source-code/source-code-do-an-website-ban-thuc-pham-tay-bac-bang-laravel-23717.htm" target="_blank" class="lnkOrange">"Source code đồ án website bán thực phẩm tây bắc bằng laravel"</a></li>
-            
-                    <li style="margin: 0px;"><a href="https://sharecode.vn/thanh-vien/do-tl-161263.htm" target="_blank" class="lnkGreen">Đỗ T.L</a> vừa download <a href="https://sharecode.vn/source-code/A536DA94-code-quan-ly-hoa-don-nha-hang-full-code-c-bao-cao-105.htm" target="_blank" class="lnkOrange">"Code quản lý hóa đơn nhà hàng full code C# + báo cáo"</a></li>
-                
-                    <li style="margin: 0px;"><a href="https://sharecode.vn/thanh-vien/cong-nguyen-nguyen-297862.htm" target="_blank" class="lnkGreen">Công Nguyên Nguyễn</a> vừa trở thành <span class="Orange">thành viên mới</span> của Sharecode.vn</li>
-                
-                    <li style="margin: 0px;"><a href="https://sharecode.vn/thanh-vien/le-thien-khiem-b1509690-297861.htm" target="_blank" class="lnkGreen">Le Thien Khiem B1509690</a> vừa trở thành <span class="Orange">thành viên mới</span> của Sharecode.vn</li>
-                
-                    <li style="margin: 0px;"><a href="https://sharecode.vn/thanh-vien/nguyen-hanh-152092.htm" target="_blank" class="lnkGreen">Hạnh Hạnh</a> vừa download <a href="https://sharecode.vn/source-code/code-xu-ly-anh-bang-c-full-code-bao-cao-pp-app-7763.htm" target="_blank" class="lnkOrange">"Code xử lý ảnh bằng C# (Full Code + Báo cáo + PP + App)"</a></li>
-                
-                    <li style="margin: 0px;"><a href="https://sharecode.vn/thanh-vien/tuan-thanh-172707.htm" target="_blank" class="lnkGreen">tuan thanh</a> vừa download <a href="https://sharecode.vn/source-code/source-code-website-tin-tuc-aspnet-bao-cao-227.htm" target="_blank" class="lnkOrange">"Source code website tin tức Asp.Net + Báo cáo"</a></li>
-                
-                    <li style="margin: 0px;"><a href="https://sharecode.vn/thanh-vien/nguyen-hoang-128270.htm" target="_blank" class="lnkGreen">Nguyễn Hoàng Long</a> vừa có thêm <span class="Orange">4 XU</span> vào tài khoản</li>
-                
-                    <li style="margin: 0px;"><a href="https://sharecode.vn/thanh-vien/lt9x-225030.htm" target="_blank" class="lnkGreen">Kiến Gạo</a> vừa có thêm <span class="Orange">210 XU</span> vào tài khoản</li>
-                
-                    <li style="margin: 0px;"><a href="https://sharecode.vn/thanh-vien/lkss89-177738.htm" target="_blank" class="lnkGreen">LKSS89</a> vừa có thêm <span class="Orange">7 XU</span> vào tài khoản</li>
-                
-                    <li style="margin: 0px;"><a href="https://sharecode.vn/thanh-vien/doi-164370.htm" target="_blank" class="lnkGreen">share_code</a> vừa đăng bán <a href="https://sharecode.vn/source-code/share-code-mau-gioi-thieu-nha-hang-quan-an-woordpress-23716.htm" target="_blank" class="lnkOrange">"Share code mẫu giới thiệu nhà hàng quán ăn woordpress"</a></li>
-                
-                    
-                
-                    
-                
-            
-        </ul>
-    </div>
-</div>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     
     <div class="container">
         <div class="service ">
@@ -779,11 +580,11 @@ function submitSearch() {
                             <!-- PRODUCT LIST -->
                             
                                 <ul class="row product-list style2 grid">
-                                    <c:forEach var = "doc" items = "docs">
+                                    <c:forEach var = "doc" items = "${ docs}">
                                             <li class="col-sx-12 col-sm-3" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/Product">
                                                 <div class="product-container">
                                                     <div class="left-block">
-                                                        <a href="<c:url value = "/post?id = ${doc.id } "/>" >
+                                                        <a href="<c:url value = "/post" ><c:param name="id" value="${doc.docId }" /></c:url>" >
                                                             <div class="img-box">
                                                                 <img class="img-responsive" itemprop="image" src="${doc.cover }" alt="${doc.docName }" title="Download ${doc.docName }">
                                                             </div>
@@ -801,7 +602,7 @@ function submitSearch() {
                                                         <a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/php-mysql-21.htm">PHP &amp; MySQL</a>
                                                     </div>
                                                     <div class="right-block">
-                                                        <a itemprop="url" href="<c:url value = "/post?id = ${doc.id } "/>">
+                                                       <a href="<c:url value = "/post" ><c:param name="id" value="${doc.docId }" /></c:url>" >
                                                             <h2 itemprop="name" class="product-name bold" title="Download ${doc.docName }">${doc.docName }</h2>
                                                         </a>
                                                         <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"><meta itemprop="ratingValue" content="5"><meta itemprop="reviewCount" content="1"><button id="rateit-reset-2" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-2" style="display: none;"><span></span></button><div id="rateit-range-2" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-2" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
@@ -848,11 +649,11 @@ function submitSearch() {
                                             <span class="page-heading-title">Website NỔI BẬT</span>
                                         </h2>
                                         <ul class="row product-list style2 grid">
-                                            <c:forEach var = "topviewdoc" items = "topviewdocs" begin = "0" end = "3">
+                                            <c:forEach var = "topviewdoc" items = "${topviewdocs}" begin = "0" end = "3">
                                                     <li class="col-sx-12 col-sm-3">
                                                         <div class="product-container">
                                                             <div class="left-block">
-                                                                <a href="<c:url value = "/post?id = ${topviewdoc.id } "/>">
+                                                                <a href="<c:url value = "/post" ><c:param name="id" value="${topviewdoc.docId }" /></c:url>" >
                                                                     <div class="img-box">
                                                                         <img class="img-responsive" src="style/web-style/full-code-tin-tuc-wordpress-cuc-load-cuc-nhanh-nhe-mien-phi-111544.jpg" alt="Full code tin tức wordpress cực load cực nhanh" title="Download Full code tin tức wordpress cực load cực nhanh">
                                                                     </div>
@@ -870,7 +671,7 @@ function submitSearch() {
                                                                 <a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">WordPress</a>
                                                             </div>
                                                             <div class="right-block">
-                                                                <a href="<c:url value = "/post?id = ${topviewdoc.id } "/>">
+                                                                <a href="<c:url value = "/post" ><c:param name="id" value="${topviewdoc.docId }" /></c:url>" >
                                                                     <h3 class="product-name bold" title="Download Full code tin tức wordpress cực load cực nhanh">Full code tin tức wordpress cực load cực nhanh</h3>
                                                                 </a>
                                                               <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"><meta itemprop="ratingValue" content="5"><meta itemprop="reviewCount" content="1"><button id="rateit-reset-14" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-14" style="display: none;"><span></span></button><div id="rateit-range-14" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-14" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
@@ -893,16 +694,16 @@ function submitSearch() {
     <p class="title_block">CODE NỔI BẬT</p>
     <div class="block_content">
         <ul class="products-block best-sell">
-				<c:forEach var = "topdoc" items = "topdocs">            
+				<c:forEach var = "topdoc" items = "${topdocs}">            
                     <li>
                         <div class="products-block-left">
-                            <a href="<c:url value = "/post?id = ${topdoc.id } "/>">
+                           <a href="<c:url value = "/post" ><c:param name="id" value="${topdoc.docId }" /></c:url>" >
                                 <img src="${topdoc.cover }" alt="App,web,web app,app view,web store app" title="Download Full Source CODE app webview Vovinam Martial Arts ( Already Release AppStore, CH Play)">
                             </a>
                         </div>
                         <div class="products-block-right">
                             <p class="product-name">
-                                <a href="<c:url value = "/post?id = ${topviewdoc.id } "/>">
+                                <a href="<c:url value = "/post" ><c:param name="id" value="${topdoc.docId }" /></c:url>" >
                                     </a></p><h3 class="title2 bold" title="Download Full Source CODE app webview Vovinam Martial Arts ( Already Release AppStore, CH Play)"><a href="https://sharecode.vn/source-code/full-source-code-app-webview-vovinam-martial-arts-already-release-appstore-ch-play-23708.htm">Full Source CODE app webview Vovinam Martial Arts ( Already Release AppStore, CH Play)</a></h3><a href="https://sharecode.vn/source-code/full-source-code-app-webview-vovinam-martial-arts-already-release-appstore-ch-play-23708.htm">
                                 </a>
                             <p></p>
