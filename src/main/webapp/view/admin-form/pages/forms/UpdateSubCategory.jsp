@@ -669,27 +669,27 @@
 						</div>
 						<div class="body">
 							<form id="formSubmit">
-								<label for="subcategory_id">SubCategory ID</label>
+								<label for="subcategoryID">SubCategory ID</label>
 								<div class="form-group">
 									<div class="form-line">
-										<input type="text" id="subcate_id" class="form-control"
-											name="subcateid" placeholder="Enter subcategory id!"
+										<input type="text" id="subcategoryID" class="form-control"
+											name="subcategoryID" placeholder="Enter subcategory id!"
 											value="${model.subcategoryID}">
 									</div>
 								</div>
-								<label for="category_id">Category ID</label>
+								<label for="categoryId">Category ID</label>
 								<div class="form-group">
 									<div class="form-line">
-										<input type="text" id="cate_id" class="form-control"
-											name="cateid" placeholder="Enter category id!"
+										<input type="text" id="categoryId" class="form-control"
+											name="categoryId" placeholder="Enter category id!"
 											value="${model.categoryId}">
 									</div>
 								</div>
-								<br> <label for="subcategory_name">SubCategory Name</label>
+								<br> <label for="subcategoryName">SubCategory Name</label>
 								<div class="form-group">
 									<div class="form-line">
-										<input type="text" id="subcate_name" class="form-control"
-											name="subcatename" placeholder="Enter subcategory name!"
+										<input type="text" id="subcategoryName" class="form-control"
+											name="subcategoryName" placeholder="Enter subcategory name!"
 											value="${model.subcategoryName}">
 									</div>
 								</div>
@@ -727,7 +727,7 @@
 			$
 					.ajax({
 						url : '${APIurl}',
-						type : 'POST',
+						type : 'PUT',
 						contentType : 'application/json',
 						data : JSON.stringify(data),
 						dataType : 'json',
