@@ -4,7 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <c:url var="APIurl" value="/api-admin-subcategory" />
-<c:url var="NewURL" value="/subcategory-new" />
+<c:url var="NewURL" value="/subcategory-update" />
 <!DOCTYPE html>
 <html>
 
@@ -727,7 +727,7 @@
 			$
 					.ajax({
 						url : '${APIurl}',
-						type : 'UPDATE',
+						type : 'POST',
 						contentType : 'application/json',
 						data : JSON.stringify(data),
 						dataType : 'json',
