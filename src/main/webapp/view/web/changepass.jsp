@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <!-- saved from url=(0042)https://sharecode.vn/thong-tin-ca-nhan.htm -->
 <html lang="vi" xml:lang="vi" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
-	Thông tin cá nhân
+	Đổi mật khẩu
 </title><link rel="shortcut icon" href="https://sharecode.vn/assets/images/sharecode.ico" type="image/x-icon"><meta name="robots" content="noodp,index,follow"><meta name="revisit-after" content="1 days"><meta content="sharecode.vn" name="author"><meta content="Global" name="distribution"><meta content="sharecode.vn" name="copyright"><meta name="dc.creator" content="ShareCode"><meta name="generator" content="Sharecode.vn"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="twitter:card" value="summary"><meta property="og:site_name" content="Sharecode.vn"><link rel="stylesheet" type="text/css" href="style/userinfo/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="style/userinfo/font-awesome.min.css"><link rel="stylesheet" type="text/css" href="style/userinfo/select2.min.css"><link rel="stylesheet" type="text/css" href="style/userinfo/owl.carousel.css"><link rel="stylesheet" type="text/css" href="style/userinfo/jquery-ui.min.css"><link rel="stylesheet" type="text/css" href="style/userinfo/animate.css"><link rel="stylesheet" type="text/css" href="style/userinfo/reset.css"><link rel="stylesheet" type="text/css" href="style/userinfo/style.css">
     
     <link href="style/userinfo/profile.css" rel="stylesheet">
@@ -1415,7 +1415,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
     <a href="https://sharecode.vn/thong-tin-ca-nhan.htm" id="mainbody_breadcrumb_breadpage_UserName" class="agreen">meo9xit</a>
     <span class="navigation-pipe">&nbsp;</span>
     <a class="agreen" href="https://sharecode.vn/thong-tin-ca-nhan.htm">
-        <h2 class="abread">Cài đặt thông tin cá nhân</h2>
+        <h2 class="abread">Đổi mật khẩu</h2>
     </a>
 
 
@@ -1427,7 +1427,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
             
     <div class="bg-title">
         <a href="https://sharecode.vn/thong-tin-ca-nhan.htm" class="search_title alignleft">
-            <h1 class="search_title">CÀI ĐẶT THÔNG TIN</h1>
+            <h1 class="search_title">ĐỔI MẬT KHẨU</h1>
         </a>
     </div>
     <br>
@@ -1436,47 +1436,66 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 	
         <div class="form-horizontal">
             <div class="form-group">
-                <label class="col-sm-5 control-label">Email đăng kí</label>
-                <div class="col-sm-5  pro-top7">
-                    <b id="mainbody_contentbody_contentpage_updateEmail" class="green">meo9xit@gmail.com</b>
+                <label class="col-sm-5 control-label">Mật khẩu cũ</label>
+                <div class="col-sm-5">
+                    <input name="oldpass" type="password" id="pass_old" placeholder="******" maxlength="32" autocomplete="off" class="form-control" />
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-5 control-label">Họ và tên<span class="text-error">*</span></label>
+                <label class="col-sm-5 control-label">Mật khẩu mới<span class="text-error">*</span></label>
                 <div class="col-sm-4">
-                    <input name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$updateFullName" type="text" id="mainbody_contentbody_contentpage_updateFullName" maxlength="40" placeholder="VD: Trần Thanh Tâm" class="form-control" value="Hà Duy Hưng">
+                    <input name="newpass" type="password" id="pass_new" placeholder="******" maxlength="32" autocomplete="off" class="form-control" />
                 </div>
                 <div class="col-sm-3">
                     <div id="updateFullName_error" class="text-error pro-top7">&nbsp;</div>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-5 control-label">Tên hiển thị<span class="text-error">*</span></label>
+                <label class="col-sm-5 control-label">Nhập lại mật khẩu mới<span class="text-error">*</span></label>
                 <div class="col-sm-4">
-                    <input name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$updateUserName" type="text" id="mainbody_contentbody_contentpage_updateUserName" placeholder="VD: ThanhTam92" maxlength="40" class="form-control" value="meo9xit">
+                    <input name="renewpass" type="password" id="repass_new" placeholder="******" maxlength="32" autocomplete="off" class="form-control" />
                 </div>
                 <div class="col-sm-3">
                     <div id="updateUserName_error" class="text-error pro-top7">&nbsp;</div>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-5 control-label">Số điện thoại<span class="text-error">*</span></label>
-                <div class="col-sm-3">
-                    <input name="phonenumber" type="text" id="mainbody_contentbody_contentpage_updatePhone" maxlength="10" placeholder="VD: 03... or 09.." class="form-control" value="0328864555">
-                </div>
-                <div id="mainbody_contentbody_contentpage_updatePhone_error" class="text-error col-sm-4 pro-top7">&nbsp;</div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-5 control-label">Ảnh đại diện</label>
-                <div class="col-sm-5">
-                    <img src="style/userinfo/avanta2.png" id="mainbody_contentbody_contentpage_Avanta" class="pro-img" width="90" height="90" alt="meo9xit - Hà Duy Hưng" title="Hà Duy Hưng">
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-offset-5 col-sm-6">
-                    <a href="https://sharecode.vn/doi-mat-khau.htm" class="aorange">Đổi mật khẩu mới</a>
-                </div>
-            </div>
+                        <div class="col-sm-offset-5 col-sm-6">
+                            <div id="updatePass_error" class="text-error">&nbsp;</div>
+                        </div>
+                    </div>
+             <div class="form-group">
+                        <div class="col-sm-offset-5 col-sm-6">
+                            <input name="performsubmit" type="text" maxlength="4" id="performsubmit" class="form-control alignleft" placeholder="Xác nhận" style="width:90px;" />
+             		</div>
+             </div>
+<script type="text/javascript">
+function validate_changepass() {
+    jQuery('#updatePass_error').html('');
+    jQuery('input[type="password"]').removeClass('validation-failed');
+
+    var po = jQuery('#pass_old');
+     var pn = jQuery('#pass_new');
+     var rp = jQuery('#repass_new');
+     if (po.val().length < 6 || po.val().length > 32) {
+         jQuery('#updatePass_error').html('Vui lòng nhập mật khẩu có độ dài từ 6-32 ký tự.');
+         po.addClass('validation-failed');
+         po.focus();
+         return false;
+     }
+     if (pn.val().length < 6 || pn.val().length > 32) {
+         jQuery('#updatePass_error').html('Vui lòng nhập mật khẩu có độ dài từ 6-32 ký tự.');
+         pn.addClass('validation-failed');
+         pn.focus();
+         return false;
+     }
+     if (pn.val() != rp.val()) {
+         jQuery('#updatePass_error').html('Mật khẩu xác nhận không đúng.');
+         rp.addClass('validation-failed');
+         rp.focus();
+         return false;
+     }
+</script>
 
             <div class="form-group line-h">
                 <div class="col-sm-offset-5 col-sm-6">

@@ -10,6 +10,8 @@ public class User extends AbstractModel<User>{
 	private String password;
 	private Long roleId;
 	private Role role;
+	private String realname;
+	private String phonenumber;
 	private List<Document> documents;
 	
 	

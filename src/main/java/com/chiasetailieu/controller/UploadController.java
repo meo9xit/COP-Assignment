@@ -10,6 +10,7 @@ import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.List;
 
 import javax.imageio.ImageIO;
@@ -23,6 +24,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.rendering.PDFRenderer;
+
 import com.chiasetailieu.model.Category;
 import com.chiasetailieu.model.Document;
 import com.chiasetailieu.model.SubCategory;
@@ -32,8 +36,7 @@ import com.chiasetailieu.service.IDocumentService;
 import com.chiasetailieu.service.ISubCategoryService;
 import com.chiasetailieu.utils.AppUtils;
 import com.chiasetailieu.utils.DocConverter;
-import com.sun.pdfview.PDFFile;
-import com.sun.pdfview.PDFPage;
+
 
 /**
  * Servlet implementation class UploadController
@@ -92,9 +95,6 @@ public class UploadController extends HttpServlet {
 	           doc.setUserId(user.getUserid());
 	           doc.setDocName(docname);
 	           doc.setView(0l);
-	           java.util.Date date = new java.util.Date();
-	           doc.setCreatedDate(new java.sql.Date(date.getTime()));
-	           doc.setModifiedDate(doc.getCreatedDate());
 	           String ss = request.getServletContext().getRealPath("");
 	           System.out.println("Paht: " + ss);
 	           // Đường dẫn tuyệt đối tới thư mục gốc của web app.
@@ -202,30 +202,16 @@ public class UploadController extends HttpServlet {
 	        if (!fileSaveDir.exists()) {
 	        	fileSaveDir.mkdir();
 	        }
-			File pdfFile = new File(pdfname);
-			RandomAccessFile raf = new RandomAccessFile(pdfFile, "r");
-			FileChannel channel = raf.getChannel();
-			ByteBuffer buf = channel.map(FileChannel.MapMode.READ_ONLY, 0, channel.size());
-			PDFFile pdf = new PDFFile(buf);
-			int i = pdfname.lastIndexOf('.');
-			imgName = pdfname.substring(0,i-1) + ".jpg";
-			PDFPage page = pdf.getPage(0);
+	        File file = new File(pdfname); 
+	        PDDocument document = PDDocument.load(file);
+			Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+			imgName = String.valueOf(timestamp.getTime()) + ".jpg";
+			PDFRenderer renderer = new PDFRenderer(document);
 	
 			// create the image
-			Rectangle rect = new Rectangle(0, 0, (int) page.getBBox().getWidth(),
-			                                 (int) page.getBBox().getHeight());
-			BufferedImage bufferedImage = new BufferedImage(rect.width, rect.height,
-			                                  BufferedImage.TYPE_INT_RGB);
-	
-			Image image = page.getImage(rect.width, rect.height,    // width & height
-			                            rect,                       // clip rect
-			                            null,                       // null for the ImageObserver
-			                            true,                       // fill background with white
-			                            true                        // block until drawing is done
-			);
-			Graphics2D bufImageGraphics = bufferedImage.createGraphics();
-			bufImageGraphics.drawImage(image, 0, 0, null);
-			ImageIO.write(bufferedImage, "jpg", new File( fullpath + File.separator + imgName ));
+			BufferedImage image = renderer.renderImage(0);
+			ImageIO.write(image, "jpg", new File( fullpath + File.separator + imgName ));
+			document.close();
 		}
 		catch(IOException e) {
 			System.out.println("Exception occured :" + e.getMessage());

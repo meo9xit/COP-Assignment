@@ -1,33 +1,27 @@
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="dec"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
-
 <!DOCTYPE html>
-<!-- saved from url=(0042)https://sharecode.vn/thong-tin-ca-nhan.htm -->
+<!-- saved from url=(0044)https://sharecode.vn/code-upload-cua-toi.htm -->
 <html lang="vi" xml:lang="vi" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
-	Thông tin cá nhân
-</title><link rel="shortcut icon" href="https://sharecode.vn/assets/images/sharecode.ico" type="image/x-icon"><meta name="robots" content="noodp,index,follow"><meta name="revisit-after" content="1 days"><meta content="sharecode.vn" name="author"><meta content="Global" name="distribution"><meta content="sharecode.vn" name="copyright"><meta name="dc.creator" content="ShareCode"><meta name="generator" content="Sharecode.vn"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="twitter:card" value="summary"><meta property="og:site_name" content="Sharecode.vn"><link rel="stylesheet" type="text/css" href="style/userinfo/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="style/userinfo/font-awesome.min.css"><link rel="stylesheet" type="text/css" href="style/userinfo/select2.min.css"><link rel="stylesheet" type="text/css" href="style/userinfo/owl.carousel.css"><link rel="stylesheet" type="text/css" href="style/userinfo/jquery-ui.min.css"><link rel="stylesheet" type="text/css" href="style/userinfo/animate.css"><link rel="stylesheet" type="text/css" href="style/userinfo/reset.css"><link rel="stylesheet" type="text/css" href="style/userinfo/style.css">
+	Code tải lên của tôi
+</title><link rel="shortcut icon" href="https://sharecode.vn/assets/images/sharecode.ico" type="image/x-icon"><meta name="robots" content="noodp,index,follow"><meta name="revisit-after" content="1 days"><meta content="sharecode.vn" name="author"><meta content="Global" name="distribution"><meta content="sharecode.vn" name="copyright"><meta name="dc.creator" content="ShareCode"><meta name="generator" content="Sharecode.vn"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="twitter:card" value="summary"><meta property="og:site_name" content="Sharecode.vn"><link rel="stylesheet" type="text/css" href="./Code tải lên của tôi_files/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="./Code tải lên của tôi_files/font-awesome.min.css"><link rel="stylesheet" type="text/css" href="./Code tải lên của tôi_files/select2.min.css"><link rel="stylesheet" type="text/css" href="./Code tải lên của tôi_files/owl.carousel.css"><link rel="stylesheet" type="text/css" href="./Code tải lên của tôi_files/jquery-ui.min.css"><link rel="stylesheet" type="text/css" href="./Code tải lên của tôi_files/animate.css"><link rel="stylesheet" type="text/css" href="./Code tải lên của tôi_files/reset.css"><link rel="stylesheet" type="text/css" href="./Code tải lên của tôi_files/style.css">
     
-    <link href="style/userinfo/profile.css" rel="stylesheet">
+    <link href="./Code tải lên của tôi_files/profile.css" rel="stylesheet">
     
     
-    <meta name="description" content="Trang thông tin cá nhân của tôi">
-    <meta name="keywords" content="Thông tin cá nhân, tài khoản người dùng, thông tin tài khoản, trang cá nhân,  thông tin của tôi">
+    <meta name="description" content="Chia sẻ code - Upload source code và quản lý danh sách source code của bạn">
+    <meta name="keywords" content="Chia sẻ source code, upload code, tải source code, up mã nguồn, quản lý code của tôi">
     <meta property="og:image" content="https://sharecode.vn/assets/images/logo_sharecode.png">
     
-    <link href="https://sharecode.vn/thong-tin-ca-nhan.htm" rel="canonical">
+    <link href="https://sharecode.vn/code-upload-cua-toi.htm" rel="canonical">
 
 
-<link rel="stylesheet" type="text/css" href="style/userinfo/responsive.css"><style type="text/css"></style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+<link rel="stylesheet" type="text/css" href="./Code tải lên của tôi_files/responsive.css"><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
 .fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 .fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
 <body class="category-page">
     
-    <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="style/userinfo/xd_arbiter.html" style="border: none;"></iframe></div><div></div></div></div>
+    <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Code tải lên của tôi_files/xd_arbiter.html" style="border: none;"></iframe></div><div></div></div></div>
     
-    <script src="style/userinfo/sdk.js.tải xuống" async="" crossorigin="anonymous"></script><script async="" src="style/userinfo/analytics.js.tải xuống"></script><script id="facebook-jssdk" src="style/userinfo/sdk.js(1).tải xuống"></script><script>
+    <script async="" src="./Code tải lên của tôi_files/analytics.js.tải xuống"></script><script src="./Code tải lên của tôi_files/sdk.js.tải xuống" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="./Code tải lên của tôi_files/sdk.js(1).tải xuống"></script><script>
         window.fbAsyncInit = function () {
             FB.init({
                 appId: '1938824166400762',
@@ -46,11 +40,12 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    <form method="post" action="https://sharecode.vn/thong-tin-ca-nhan.htm" id="form1" enctype="multipart/form-data">
+    <form method="post" action="https://sharecode.vn/code-upload-cua-toi.htm" id="form1">
 <div class="aspNetHidden">
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTU1MjIxMjEwOQ9kFgJmD2QWAmYPZBYCZg9kFgICAQ8WBB4GYWN0aW9uBRYvdGhvbmctdGluLWNhLW5oYW4uaHRtHgdlbmN0eXBlBRNtdWx0aXBhcnQvZm9ybS1kYXRhFhACAQ8WAh4HVmlzaWJsZWhkAgMPZBYCAgEPFgIeBXRpdGxlBRJYaW4gY2jDoG8sIG1lbzl4aXQWAgIBDxYCHglpbm5lcmh0bWwFDjxiPm1lbzl4aXQ8L2I+ZAIEDxYCHwJoZAIFD2QWAgIDDxYCHgtfIUl0ZW1Db3VudAIPFh5mD2QWAmYPFQICMTUHQW5kcm9pZGQCAQ9kFgJmDxUCAjIzA2lPU2QCAg9kFgJmDxUCAjI2DVdpbmRvd3MgcGhvbmVkAgMPZBYCZg8VAgIyMQtQSFAgJiBNeVNRTGQCBA9kFgJmDxUCAjI5CVdvcmRQcmVzc2QCBQ9kFgJmDxUCAjI4Bkpvb21sYWQCBg9kFgJmDxUCAjE3CVZpc3VhbCBDI2QCBw9kFgJmDxUCAjE2C0FzcC9Bc3AuTmV0ZAIID2QWAmYPFQICMjAISmF2YS9KU1BkAgkPZBYCZg8VAgIxOQxWaXN1YWwgQmFzaWNkAgoPZBYCZg8VAgIyNAdDb2NvczJEZAILD2QWAmYPFQICMjcFVW5pdHlkAgwPZBYCZg8VAgIxOApWaXN1YWwgQysrZAIND2QWAmYPFQICMjUPSHRtbCAmIFRlbXBsYXRlZAIOD2QWAmYPFQICMjIFS2jDoWNkAgYPZBYUAgEPFgIfBAU4IEgmIzIyNDsgRHV5IEjGsG5nIChNJiMyMjc7IHRoJiMyMjQ7bmggdmkmIzIzNDtuIDI5OTk3MSlkAgIPFgIfBAUSIG1lbzl4aXRAZ21haWwuY29tZAIDDxYCHwQFBSAwIFh1ZAIEDxYCHwQFBDAgWHVkAgYPFgIfBAUGMjk5OTcxZAIHDxYCHwQFBjI5OTk3MWQCCQ8WAh8EBQYyOTk5NzFkAgoPFgIfBAUGMjk5OTcxZAIMDxYCHwQFBjI5OTk3MWQCDQ8WAh8EBQYyOTk5NzFkAgcPFgIfBQIEFghmD2QWAmYPFQIidGhlLWxvYWktc291cmNlLWNvZGUvd2Vic2l0ZS0xLmh0bQdXZWJzaXRlZAIBD2QWAmYPFQIsdGhlLWxvYWktc291cmNlLWNvZGUvcGhhbi1tZW0tdW5nLWR1bmctMi5odG0bUGjhuqduIG3hu4FtIC0g4buobmcgZOG7pW5nZAICD2QWAmYPFQIfdGhlLWxvYWktc291cmNlLWNvZGUvZ2FtZS0zLmh0bQRHYW1lZAIDD2QWAmYPFQIfdGhlLWxvYWktc291cmNlLWNvZGUva2hhYy00Lmh0bQVLaMOhY2QCCA8WAh8FAg8WHmYPZBYCZg8VBAAiL25nb24tbmd1LWxhcC10cmluaC9hbmRyb2lkLTE1Lmh0bQdBbmRyb2lkB0FuZHJvaWRkAgEPZBYCZg8VBAAeL25nb24tbmd1LWxhcC10cmluaC9pb3MtMjMuaHRtA2lPUwNpT1NkAgIPZBYCZg8VBAAoL25nb24tbmd1LWxhcC10cmluaC93aW5kb3dzLXBob25lLTI2Lmh0bQ1XaW5kb3dzIHBob25lDVdpbmRvd3MgcGhvbmVkAgMPZBYCZg8VBAAkL25nb24tbmd1LWxhcC10cmluaC9waHAtbXlzcWwtMjEuaHRtC1BIUCAmIE15U1FMC1BIUCAmIE15U1FMZAIED2QWAmYPFQQAJC9uZ29uLW5ndS1sYXAtdHJpbmgvd29yZHByZXNzLTI5Lmh0bQlXb3JkUHJlc3MJV29yZFByZXNzZAIFD2QWAmYPFQQAIS9uZ29uLW5ndS1sYXAtdHJpbmgvam9vbWxhLTI4Lmh0bQZKb29tbGEGSm9vbWxhZAIGD2QWAmYPFQQAIy9uZ29uLW5ndS1sYXAtdHJpbmgvdmlzdWFsLWMtMTcuaHRtCVZpc3VhbCBDIwlWaXN1YWwgQyNkAgcPZBYCZg8VBAAkL25nb24tbmd1LWxhcC10cmluaC9hc3Bhc3BuZXQtMTYuaHRtC0FzcC9Bc3AuTmV0C0FzcC9Bc3AuTmV0ZAIID2QWAmYPFQQAIi9uZ29uLW5ndS1sYXAtdHJpbmgvamF2YWpzcC0yMC5odG0ISmF2YS9KU1AISmF2YS9KU1BkAgkPZBYCZg8VBAAnL25nb24tbmd1LWxhcC10cmluaC92aXN1YWwtYmFzaWMtMTkuaHRtDFZpc3VhbCBCYXNpYwxWaXN1YWwgQmFzaWNkAgoPZBYCZg8VBA9jYXQtbGluay1vcnRoZXIiL25nb24tbmd1LWxhcC10cmluaC9jb2NvczJkLTI0Lmh0bQdDb2NvczJEB0NvY29zMkRkAgsPZBYCZg8VBA9jYXQtbGluay1vcnRoZXIgL25nb24tbmd1LWxhcC10cmluaC91bml0eS0yNy5odG0FVW5pdHkFVW5pdHlkAgwPZBYCZg8VBA9jYXQtbGluay1vcnRoZXIjL25nb24tbmd1LWxhcC10cmluaC92aXN1YWwtYy0xOC5odG0KVmlzdWFsIEMrKwpWaXN1YWwgQysrZAIND2QWAmYPFQQPY2F0LWxpbmstb3J0aGVyKC9uZ29uLW5ndS1sYXAtdHJpbmgvaHRtbC10ZW1wbGF0ZS0yNS5odG0PSHRtbCAmIFRlbXBsYXRlD0h0bWwgJiBUZW1wbGF0ZWQCDg9kFgJmDxUED2NhdC1saW5rLW9ydGhlch8vbmdvbi1uZ3UtbGFwLXRyaW5oL2toYWMtMjIuaHRtBUtow6FjBUtow6FjZAIKD2QWBAIBD2QWAgIBD2QWAgIBDxYCHwQFB21lbzl4aXRkAgMPZBYKAgEPFgIfAmhkAgMPZBYCAgEPZBYEAgEPFgIfBAURbWVvOXhpdEBnbWFpbC5jb21kAg0PFgQeA2FsdAUXbWVvOXhpdCAtIEjDoCBEdXkgSMawbmcfAwUNSMOgIER1eSBIxrBuZ2QCBQ9kFhQCAQ8WBB8GBRdtZW85eGl0IC0gSMOgIER1eSBIxrBuZx8DBRdtZW85eGl0IC0gSMOgIER1eSBIxrBuZ2QCAw8WAh8EBRFIJiMyMjQ7IER1eSBIxrBuZ2QCBQ8WAh8EBQEwZAIHDxYEHwQFATAfAwVHU+G7kSBYVSDEkWFuZyBi4buLIHThuqFtIGdp4buvIGNobyBnaWFvIGThu4tjaCBjb2RlIHbhu6thIMSRxrDhu6NjIGLDoW5kAgkPFgIfAwVHU+G7kSBYVSDEkWFuZyBi4buLIHThuqFtIGdp4buvIGNobyBnaWFvIGThu4tjaCBjb2RlIHbhu6thIMSRxrDhu6NjIGLDoW5kAgsPFgIfBAUBMGQCDQ8WAh4EaHJlZgUeL3RoYW5oLXZpZW4vbWVvOXhpdC0yOTk5NzEuaHRtZAIPDxYCHwQFATBkAhEPFgIfBAUBMGQCFQ8WAh8EBQEwZAIHD2QWAmYPZBYCAgEPFgIfBQIDFgZmD2QWAmYPFQRCaHR0cDovL3NoYXJlY29kZS52bi9jYXUtaG9pL2h1b25nLWRhbi1uYXAtdGllbi12YW8tdGFpLWtob2FuLTguaHRtNEZpbGVzVXBsb2FkL0Jhbm5lci8xM180OV8zN19uYXAgeHUgdmFvIHRhaSBraG9hbi5qcGdpTuG6oXAgeHUsIG7huqFwIHRp4buBbiwgcXV5IMSR4buVaSwgbuG6oXAgdGjhursgY8OgbywgbuG6oXAgcXVhIG5nw6JuIGjDoG5nLCBu4bqhcCBxdWEgdsOtIG5nw6JuIGzGsOG7o25nIE7huqFwIFhVIHbDoG8gdMOgaSBraG/huqNuIG5nYXkhZAIBD2QWAmYPFQRNaHR0cDovL3NoYXJlY29kZS52bi9jYXUtaG9pL21lby1naXVwLWJhbi10YW5nLWRvYW5oLXRodS1iYW4tc291cmNlLWNvZGUtOS5odG07RmlsZXNVcGxvYWQvQmFubmVyLzE1XzE5XzE4X21lbyB0YW5nIGRvYW5oIHRodSBiYW4gY29kZS5qcGc0RG9hbmggdGh1LCB0xINuZyBkb2FuaCB0aHUsIGzhu6NpIG5odeG6rW4sIGLDoW4gY29kZS9N4bq5byBnacO6cCB0xINuZyBET0FOSCBUSFUgYsOhbiBDT0RFIGNobyBi4bqhbmQCAg9kFgJmDxUETi9zdS1raWVuL3V1LWRhaS10dW5nLWJ1bmctdGFuZy10aHVvbmcta2hpLXVwbG9hZC12YS11cGxvYWQtY29kZS1kYXQtbW9jLTExLmh0bTVGaWxlc1VwbG9hZC9CYW5uZXIvMF8yMl81X3NoYXJlY29kZSB0YW5nIHRodW9uZyAyLmpwZzFz4buxIGtp4buHbiwgZXZlbnQsIHThurduZyB0aMaw4bufbmcsIHVwbG9hZCBjb2RlWVPhu7Ega2nhu4duOiBN4burbmcgbmfDoHkgZ2nhu5cgdOG7lSAxMC8zIC0gVOG6t25nIHRoxrDhu59uZyBraGkgdXBsb2FkIGNvZGUgxJHhuqF0IG3hu5FjZAIJD2QWAgIBDxYCHwUCBRYKZg9kFgJmDxUENy9jYXUtaG9pL2NhY2gtdXBsb2FkLWNvZGUtaGlldS1xdWEtdmEtdG9pLXV1LXNlby0xMC5odG02Q8OhY2ggVVBMT0FEIGNvZGUgaGnhu4d1IHF14bqjIHbDoCB04buRaSDGsHUgU0VPIC0gRkFRMEPDoWNoIFVQTE9BRCBjb2RlIGhp4buHdSBxdeG6oyB2w6AgdOG7kWkgxrB1IFNFTwZpY19ob3RkAgEPZBYCZg8VBDovY2F1LWhvaS9tZW8tZ2l1cC1iYW4tdGFuZy1kb2FuaC10aHUtYmFuLXNvdXJjZS1jb2RlLTkuaHRtOE3hurlvIGdpw7pwIGLhuqFuIFTEgk5HIERPQU5IIFRIVSBiw6FuIHNvdXJjZSBjb2RlIC0gRkFRMk3hurlvIGdpw7pwIGLhuqFuIFTEgk5HIERPQU5IIFRIVSBiw6FuIHNvdXJjZSBjb2RlBmljX2hvdGQCAg9kFgJmDxUELy9jYXUtaG9pL2h1b25nLWRhbi1uYXAtdGllbi12YW8tdGFpLWtob2FuLTguaHRtM0jGsOG7m25nIGThuqtuIE7huqBQIFRJ4buATiB2w6BvIHTDoGkga2hv4bqjbiAtIEZBUS1IxrDhu5tuZyBk4bqrbiBO4bqgUCBUSeG7gE4gdsOgbyB0w6BpIGtob+G6o24AZAIDD2QWAmYPFQQuL2NhdS1ob2kvaHVvbmctZGFuLXJ1dC10aWVuLXR1LXRhaS1raG9hbi03Lmh0bTJIxrDhu5tuZyBk4bqrbiBSw5pUIFRJ4buATiB04burIHTDoGkga2hv4bqjbiAtIEZBUSxIxrDhu5tuZyBk4bqrbiBSw5pUIFRJ4buATiB04burIHTDoGkga2hv4bqjbgBkAgQPZBYCZg8VBEAvY2F1LWhvaS9odW9uZy1kYW4tY2FjaC1jaGF5LXdlYnNpdGUtYXNwbmV0LXRyZW4tbG9jYWxob3N0LTIuaHRtQUjGsOG7m25nIGThuqtuIGPDoWNoIGNo4bqheSB3ZWJzaXRlIEFTUC5OZXQgdHLDqm4gTG9jYWxob3N0IC0gRkFRO0jGsOG7m25nIGThuqtuIGPDoWNoIGNo4bqheSB3ZWJzaXRlIEFTUC5OZXQgdHLDqm4gTG9jYWxob3N0AGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgcFP2N0bDAwJGN0bDAwJGN0bDAwJG1haW5ib2R5JGNvbnRlbnRib2R5JGNvbnRlbnRwYWdlJENoZWNrYm94RnJlZQU/Y3RsMDAkY3RsMDAkY3RsMDAkbWFpbmJvZHkkY29udGVudGJvZHkkY29udGVudHBhZ2UkQ2hlY2tib3hDb2RlBT9jdGwwMCRjdGwwMCRjdGwwMCRtYWluYm9keSRjb250ZW50Ym9keSRjb250ZW50cGFnZSRDaGVja2JveFNlbmQFP2N0bDAwJGN0bDAwJGN0bDAwJG1haW5ib2R5JGNvbnRlbnRib2R5JGNvbnRlbnRwYWdlJENoZWNrYm94U2F2ZQVFY3RsMDAkY3RsMDAkY3RsMDAkbWFpbmJvZHkkY29udGVudGJvZHkkY29udGVudHBhZ2UkQ2hlY2tib3hVcGxvYWRXYWl0BUdjdGwwMCRjdGwwMCRjdGwwMCRtYWluYm9keSRjb250ZW50Ym9keSRjb250ZW50cGFnZSRDaGVja2JveFVwbG9hZFRlc3RlZAVCY3RsMDAkY3RsMDAkY3RsMDAkbWFpbmJvZHkkY29udGVudGJvZHkkY29udGVudHBhZ2UkQ2hlY2tib3hNZXNzYWdlGLMWB7ncdJMBzZNtfHDwoRYrIYE=">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2OTczNDE2OTkPZBYCZg9kFgJmD2QWAmYPZBYCAgEPFgIeBmFjdGlvbgUYL2NvZGUtdXBsb2FkLWN1YS10b2kuaHRtFhACAQ8WAh4HVmlzaWJsZWhkAgMPZBYCAgEPFgIeBXRpdGxlBRJYaW4gY2jDoG8sIG1lbzl4aXQWAgIBDxYCHglpbm5lcmh0bWwFDjxiPm1lbzl4aXQ8L2I+ZAIEDxYCHwFoZAIFD2QWAgIDDxYCHgtfIUl0ZW1Db3VudAIPFh5mD2QWAmYPFQICMTUHQW5kcm9pZGQCAQ9kFgJmDxUCAjIzA2lPU2QCAg9kFgJmDxUCAjI2DVdpbmRvd3MgcGhvbmVkAgMPZBYCZg8VAgIyMQtQSFAgJiBNeVNRTGQCBA9kFgJmDxUCAjI5CVdvcmRQcmVzc2QCBQ9kFgJmDxUCAjI4Bkpvb21sYWQCBg9kFgJmDxUCAjE3CVZpc3VhbCBDI2QCBw9kFgJmDxUCAjE2C0FzcC9Bc3AuTmV0ZAIID2QWAmYPFQICMjAISmF2YS9KU1BkAgkPZBYCZg8VAgIxOQxWaXN1YWwgQmFzaWNkAgoPZBYCZg8VAgIyNAdDb2NvczJEZAILD2QWAmYPFQICMjcFVW5pdHlkAgwPZBYCZg8VAgIxOApWaXN1YWwgQysrZAIND2QWAmYPFQICMjUPSHRtbCAmIFRlbXBsYXRlZAIOD2QWAmYPFQICMjIFS2jDoWNkAgYPZBYUAgEPFgIfAwU4IEgmIzIyNDsgRHV5IEjGsG5nIChNJiMyMjc7IHRoJiMyMjQ7bmggdmkmIzIzNDtuIDI5OTk3MSlkAgIPFgIfAwUSIG1lbzl4aXRAZ21haWwuY29tZAIDDxYCHwMFBSAwIFh1ZAIEDxYCHwMFBDAgWHVkAgYPFgIfAwUGMjk5OTcxZAIHDxYCHwMFBjI5OTk3MWQCCQ8WAh8DBQYyOTk5NzFkAgoPFgIfAwUGMjk5OTcxZAIMDxYCHwMFBjI5OTk3MWQCDQ8WAh8DBQYyOTk5NzFkAgcPFgIfBAIEFghmD2QWAmYPFQIidGhlLWxvYWktc291cmNlLWNvZGUvd2Vic2l0ZS0xLmh0bQdXZWJzaXRlZAIBD2QWAmYPFQIsdGhlLWxvYWktc291cmNlLWNvZGUvcGhhbi1tZW0tdW5nLWR1bmctMi5odG0bUGjhuqduIG3hu4FtIC0g4buobmcgZOG7pW5nZAICD2QWAmYPFQIfdGhlLWxvYWktc291cmNlLWNvZGUvZ2FtZS0zLmh0bQRHYW1lZAIDD2QWAmYPFQIfdGhlLWxvYWktc291cmNlLWNvZGUva2hhYy00Lmh0bQVLaMOhY2QCCA8WAh8EAg8WHmYPZBYCZg8VBAAiL25nb24tbmd1LWxhcC10cmluaC9hbmRyb2lkLTE1Lmh0bQdBbmRyb2lkB0FuZHJvaWRkAgEPZBYCZg8VBAAeL25nb24tbmd1LWxhcC10cmluaC9pb3MtMjMuaHRtA2lPUwNpT1NkAgIPZBYCZg8VBAAoL25nb24tbmd1LWxhcC10cmluaC93aW5kb3dzLXBob25lLTI2Lmh0bQ1XaW5kb3dzIHBob25lDVdpbmRvd3MgcGhvbmVkAgMPZBYCZg8VBAAkL25nb24tbmd1LWxhcC10cmluaC9waHAtbXlzcWwtMjEuaHRtC1BIUCAmIE15U1FMC1BIUCAmIE15U1FMZAIED2QWAmYPFQQAJC9uZ29uLW5ndS1sYXAtdHJpbmgvd29yZHByZXNzLTI5Lmh0bQlXb3JkUHJlc3MJV29yZFByZXNzZAIFD2QWAmYPFQQAIS9uZ29uLW5ndS1sYXAtdHJpbmgvam9vbWxhLTI4Lmh0bQZKb29tbGEGSm9vbWxhZAIGD2QWAmYPFQQAIy9uZ29uLW5ndS1sYXAtdHJpbmgvdmlzdWFsLWMtMTcuaHRtCVZpc3VhbCBDIwlWaXN1YWwgQyNkAgcPZBYCZg8VBAAkL25nb24tbmd1LWxhcC10cmluaC9hc3Bhc3BuZXQtMTYuaHRtC0FzcC9Bc3AuTmV0C0FzcC9Bc3AuTmV0ZAIID2QWAmYPFQQAIi9uZ29uLW5ndS1sYXAtdHJpbmgvamF2YWpzcC0yMC5odG0ISmF2YS9KU1AISmF2YS9KU1BkAgkPZBYCZg8VBAAnL25nb24tbmd1LWxhcC10cmluaC92aXN1YWwtYmFzaWMtMTkuaHRtDFZpc3VhbCBCYXNpYwxWaXN1YWwgQmFzaWNkAgoPZBYCZg8VBA9jYXQtbGluay1vcnRoZXIiL25nb24tbmd1LWxhcC10cmluaC9jb2NvczJkLTI0Lmh0bQdDb2NvczJEB0NvY29zMkRkAgsPZBYCZg8VBA9jYXQtbGluay1vcnRoZXIgL25nb24tbmd1LWxhcC10cmluaC91bml0eS0yNy5odG0FVW5pdHkFVW5pdHlkAgwPZBYCZg8VBA9jYXQtbGluay1vcnRoZXIjL25nb24tbmd1LWxhcC10cmluaC92aXN1YWwtYy0xOC5odG0KVmlzdWFsIEMrKwpWaXN1YWwgQysrZAIND2QWAmYPFQQPY2F0LWxpbmstb3J0aGVyKC9uZ29uLW5ndS1sYXAtdHJpbmgvaHRtbC10ZW1wbGF0ZS0yNS5odG0PSHRtbCAmIFRlbXBsYXRlD0h0bWwgJiBUZW1wbGF0ZWQCDg9kFgJmDxUED2NhdC1saW5rLW9ydGhlch8vbmdvbi1uZ3UtbGFwLXRyaW5oL2toYWMtMjIuaHRtBUtow6FjBUtow6FjZAIKD2QWBAIBD2QWAgIBD2QWBgIBDxYCHwMFB21lbzl4aXRkAgMPFgIfAWhkAgUPFgIfAWhkAgMPZBYKAgEPFgIfAWhkAgMPZBYEAgUPZBYOAgEPZBYCAgEPFgIfAwUBMGQCAw9kFgICAQ8WAh8DBQEwZAIFD2QWAgIBDxYCHwMFATBkAgcPZBYCAgEPFgIfAwUBMGQCCQ9kFgICAQ8WAh8DBQEwZAILD2QWAgIBDxYCHwMFATBkAg0PZBYCAgEPFgIfAwUBMGQCBw9kFgJmD2QWCgIBDxYCHwRmZAICDxYCHwMFBTAgLSAwZAIDDxYCHwMFATBkAgQPFgIfA2VkAgUPZBYCAgEPEGRkFgFmZAIFD2QWFAIBDxYEHgNhbHQFF21lbzl4aXQgLSBIw6AgRHV5IEjGsG5nHwIFF21lbzl4aXQgLSBIw6AgRHV5IEjGsG5nZAIDDxYCHwMFEUgmIzIyNDsgRHV5IEjGsG5nZAIFDxYCHwMFATBkAgcPFgQfAwUBMB8CBUdT4buRIFhVIMSRYW5nIGLhu4sgdOG6oW0gZ2nhu68gY2hvIGdpYW8gZOG7i2NoIGNvZGUgduG7q2EgxJHGsOG7o2MgYsOhbmQCCQ8WAh8CBUdT4buRIFhVIMSRYW5nIGLhu4sgdOG6oW0gZ2nhu68gY2hvIGdpYW8gZOG7i2NoIGNvZGUgduG7q2EgxJHGsOG7o2MgYsOhbmQCCw8WAh8DBQEwZAINDxYCHgRocmVmBR4vdGhhbmgtdmllbi9tZW85eGl0LTI5OTk3MS5odG1kAg8PFgIfAwUBMGQCEQ8WAh8DBQEwZAIVDxYCHwMFATBkAgcPZBYCZg9kFgICAQ8WAh8EAgMWBmYPZBYCZg8VBEJodHRwOi8vc2hhcmVjb2RlLnZuL2NhdS1ob2kvaHVvbmctZGFuLW5hcC10aWVuLXZhby10YWkta2hvYW4tOC5odG00RmlsZXNVcGxvYWQvQmFubmVyLzEzXzQ5XzM3X25hcCB4dSB2YW8gdGFpIGtob2FuLmpwZ2lO4bqhcCB4dSwgbuG6oXAgdGnhu4FuLCBxdXkgxJHhu5VpLCBu4bqhcCB0aOG6uyBjw6BvLCBu4bqhcCBxdWEgbmfDom4gaMOgbmcsIG7huqFwIHF1YSB2w60gbmfDom4gbMaw4bujbmcgTuG6oXAgWFUgdsOgbyB0w6BpIGtob+G6o24gbmdheSFkAgEPZBYCZg8VBE1odHRwOi8vc2hhcmVjb2RlLnZuL2NhdS1ob2kvbWVvLWdpdXAtYmFuLXRhbmctZG9hbmgtdGh1LWJhbi1zb3VyY2UtY29kZS05Lmh0bTtGaWxlc1VwbG9hZC9CYW5uZXIvMTVfMTlfMThfbWVvIHRhbmcgZG9hbmggdGh1IGJhbiBjb2RlLmpwZzREb2FuaCB0aHUsIHTEg25nIGRvYW5oIHRodSwgbOG7o2kgbmh14bqtbiwgYsOhbiBjb2RlL03hurlvIGdpw7pwIHTEg25nIERPQU5IIFRIVSBiw6FuIENPREUgY2hvIGLhuqFuZAICD2QWAmYPFQROL3N1LWtpZW4vdXUtZGFpLXR1bmctYnVuZy10YW5nLXRodW9uZy1raGktdXBsb2FkLXZhLXVwbG9hZC1jb2RlLWRhdC1tb2MtMTEuaHRtNUZpbGVzVXBsb2FkL0Jhbm5lci8wXzIyXzVfc2hhcmVjb2RlIHRhbmcgdGh1b25nIDIuanBnMXPhu7Ega2nhu4duLCBldmVudCwgdOG6t25nIHRoxrDhu59uZywgdXBsb2FkIGNvZGVZU+G7sSBraeG7h246IE3hu6tuZyBuZ8OgeSBnaeG7lyB04buVIDEwLzMgLSBU4bq3bmcgdGjGsOG7n25nIGtoaSB1cGxvYWQgY29kZSDEkeG6oXQgbeG7kWNkAgkPZBYCAgEPFgIfBAIFFgpmD2QWAmYPFQQ3L2NhdS1ob2kvY2FjaC11cGxvYWQtY29kZS1oaWV1LXF1YS12YS10b2ktdXUtc2VvLTEwLmh0bTZDw6FjaCBVUExPQUQgY29kZSBoaeG7h3UgcXXhuqMgdsOgIHThu5FpIMawdSBTRU8gLSBGQVEwQ8OhY2ggVVBMT0FEIGNvZGUgaGnhu4d1IHF14bqjIHbDoCB04buRaSDGsHUgU0VPBmljX2hvdGQCAQ9kFgJmDxUEOi9jYXUtaG9pL21lby1naXVwLWJhbi10YW5nLWRvYW5oLXRodS1iYW4tc291cmNlLWNvZGUtOS5odG04TeG6uW8gZ2nDunAgYuG6oW4gVMSCTkcgRE9BTkggVEhVIGLDoW4gc291cmNlIGNvZGUgLSBGQVEyTeG6uW8gZ2nDunAgYuG6oW4gVMSCTkcgRE9BTkggVEhVIGLDoW4gc291cmNlIGNvZGUGaWNfaG90ZAICD2QWAmYPFQQvL2NhdS1ob2kvaHVvbmctZGFuLW5hcC10aWVuLXZhby10YWkta2hvYW4tOC5odG0zSMaw4bubbmcgZOG6q24gTuG6oFAgVEnhu4BOIHbDoG8gdMOgaSBraG/huqNuIC0gRkFRLUjGsOG7m25nIGThuqtuIE7huqBQIFRJ4buATiB2w6BvIHTDoGkga2hv4bqjbgBkAgMPZBYCZg8VBC4vY2F1LWhvaS9odW9uZy1kYW4tcnV0LXRpZW4tdHUtdGFpLWtob2FuLTcuaHRtMkjGsOG7m25nIGThuqtuIFLDmlQgVEnhu4BOIHThu6sgdMOgaSBraG/huqNuIC0gRkFRLEjGsOG7m25nIGThuqtuIFLDmlQgVEnhu4BOIHThu6sgdMOgaSBraG/huqNuAGQCBA9kFgJmDxUEQC9jYXUtaG9pL2h1b25nLWRhbi1jYWNoLWNoYXktd2Vic2l0ZS1hc3BuZXQtdHJlbi1sb2NhbGhvc3QtMi5odG1BSMaw4bubbmcgZOG6q24gY8OhY2ggY2jhuqF5IHdlYnNpdGUgQVNQLk5ldCB0csOqbiBMb2NhbGhvc3QgLSBGQVE7SMaw4bubbmcgZOG6q24gY8OhY2ggY2jhuqF5IHdlYnNpdGUgQVNQLk5ldCB0csOqbiBMb2NhbGhvc3QAZGTQkw/PF87whDLwinilAfZlKQx8CA==">
 </div>
 
 <script type="text/javascript">
@@ -70,19 +65,19 @@ function __doPostBack(eventTarget, eventArgument) {
 </script>
 
 
-<script src="style/userinfo/WebResource.axd" type="text/javascript"></script>
+<script src="./Code tải lên của tôi_files/WebResource.axd" type="text/javascript"></script>
 
 
-<script src="style/userinfo/ScriptResource.axd" type="text/javascript"></script>
-<script src="style/userinfo/ScriptResource(1).axd" type="text/javascript"></script>
+<script src="./Code tải lên của tôi_files/ScriptResource.axd" type="text/javascript"></script>
+<script src="./Code tải lên của tôi_files/ScriptResource(1).axd" type="text/javascript"></script>
 <div class="aspNetHidden">
 
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A7F7659A">
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAB1QEuSAFyzCDFW8IP2STEYzicdokvXrko/HzcC2ytH5LOUCRZ2fmNYwaJ6nLB+QKRfzqgylkSC105WTXjqRLBEiMXn6wy/zBjWQF3IX0QM3eVgqnuNz7Lzf3zDBlOJhlOuHO3xHfyQR+G0qbZsvpNAEjrwKKnvjgCf57LqzCGJNBPXj45ZamvHmOwHWXD3mrR3RL2til5QvRKSl4G1aNFRFkDxGQm9jX45jK/gKvuqaclfrbia0bMSM36db9JONvphx0r/lyxYpMZxnmYJv0Fm1pl75Bzox8RS/AzS0H8EoA2Fhqq5ns9Hmb0qtoUwUbDzZs1FXucZeMU67d4Xxc1oCiBFA5PgfglHz4eMI8PtosR3ogPnCVwiixDy9XCe/abwir5+0uESG4EWrZvt3DgqD4eHYSCRc8NYGaU7l3ZuQCVHus69Vz66HfY3/KvUwLgvrCiW02UJB8Fu45rhc7J26fESkRdhpFQF03P7IvayCDexLsyauIjF5yQKNpODF9VoC0Fdzz3/Gbei4zgM/dOpTbwwalfUXke6DU6MbAlT7M/rRrh15SmTdiYpYuIlt3vVoUeL50O6GcvxIODsHBDBgvEzshNcK6dl8iHt2OtYwpxZkd5i+KF6NQWt5gM1LlrIjrbNp">
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="40C6AFAF">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdACGx0UoQf30dA4n7USqdJTFnicdokvXrko/HzcC2ytH5LOUCRZ2fmNYwaJ6nLB+QKRfzqgylkSC105WTXjqRLBEiMXn6wy/zBjWQF3IX0QM3eVgqnuNz7Lzf3zDBlOJhlOuHO3xHfyQR+G0qbZsvpNAEjrwKKnvjgCf57LqzCGJNBPXj45ZamvHmOwHWXD3mrR3RL2til5QvRKSl4G1aNFRFkDxGQm9jX45jK/gKvuqaclfrbia0bMSM36db9JONvphx0r/lyxYpMZxnmYJv0Fm1pl75Bzox8RS/AzS0H8EoA2Fhqq5ns9Hmb0qtoUwUbDz8URKrmU5sMOZpTFAUMIH2eWqPMAuKBu3TJU+72rNd5djolJpz+ylyqaoQ8wJs6/2R58kv+Q8ifuwptBxrrGZ6nNAMop5vPoSKw1tc606hEUDAfyz9ZHvIcW9doNoM8K/R/uGxu1UZZlLqO8VlSmlATVsrvEhcxKPgj+Xmb9aDhz4va1JqsqdzMyeRlVuPHE8Zs78gQ0SaaLloHzIuXQlPUouR5yUp8OGSA5MrE5nxQwKmIN40u11q/UjvQjGAwT6vgMR5f7pINEF4exLzgv/JqKEDuTX9bP3e22cYj7AuMDRDZWtSdB7YtP6rZA1mnRI/OLf0NMRDhaqnVHtN+ORzaFHi+dDuhnL8SDg7BwQwYLxM7ITXCunZfIh7djrWMKdN0ADAvzvZnVbIYaZ8+oHrV1mApQ==">
 </div>
         <script type="text/javascript">
 //<![CDATA[
-Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 'form1', ['tctl00$ctl00$ctl00$ctl24','ctl24'], [], [], 90, 'ctl00$ctl00$ctl00');
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 'form1', ['tctl00$ctl00$ctl00$mainbody$contentbody$contentpage$upPannel','mainbody_contentbody_contentpage_upPannel','tctl00$ctl00$ctl00$ctl24','ctl24'], [], [], 90, 'ctl00$ctl00$ctl00');
 //]]>
 </script>
 
@@ -90,21 +85,21 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
         <div class="row-fluid">
             <div id="myCarousel" class="carousel slide vertical">
                 <div class="carousel-inner">
-                    <div class="item" style="background: #86bd3b;">
+                    <div class="item next left" style="background: #86bd3b;">
                         
                         <a href="https://sharecode.vn/thanh-vien-upload.htm" title="UPLOAD source code KIẾM TIỀN cùng Sharecode.vn">
-                            <img src="style/userinfo/code-hay-upload-kiem-tien.jpg">
+                            <img src="./Code tải lên của tôi_files/code-hay-upload-kiem-tien.jpg">
                         </a>
                         
                     </div>
-                     <div class="item active" style="background: #2175ba;">
+                     <div class="item" style="background: #2175ba;">
                         <a href="https://sharecode.vn/kien-thuc-lap-trinh/dich-vu-thiet-ke-website-chuyen-nghiep-voi-gia-cuc-re-va-nhieu-uu-dai-tai-sharecodevn-880.htm" title="Dịch vụ thiết kế website" target="_blank">
-                            <img src="style/userinfo/thiet-ke-website.jpg">
+                            <img src="./Code tải lên của tôi_files/thiet-ke-website.jpg">
                         </a>
                     </div>
-                   <div class="item" style="background: #34a5cd;">
+                   <div class="item active left" style="background: #34a5cd;">
                                 <a href="https://sharecode.vn/vps-may-chu-ao.htm" title="Đăng kí CLOULD VPS NGAY!">
-                                <img src="style/userinfo/share-code-clould-vps.jpg"> </a>
+                                <img src="./Code tải lên của tôi_files/share-code-clould-vps.jpg"> </a>
                             </div>
                           
                    
@@ -117,9 +112,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                 <div class="container">                    
                     <div class="nav-top-links">
                         <a class="first-item" href="tel:+84981282756" title="Click gọi ngay!">
-                            <img alt="hotline" src="style/userinfo/phone.png">0981.282.756</a>
+                            <img alt="hotline" src="./Code tải lên của tôi_files/phone.png">0981.282.756</a>
                         <a href="mailto:sharecode.contact@gmail.com" title="Click để gửi email!">
-                            <img alt="email sharecode" src="style/userinfo/email.png">Sharecode.contact@gmail.com</a>
+                            <img alt="email sharecode" src="./Code tải lên của tôi_files/email.png">Sharecode.contact@gmail.com</a>
                         <a href="https://sharecode.vn/kien-thuc-lap-trinh.htm">Kiến thức lập trình</a>
                         <a href="https://sharecode.vn/su-kien.htm">Sự kiện</a>
                     </div>
@@ -128,79 +123,17 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                         <a id="btnExit" class="aorange" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$btnExit&#39;,&#39;&#39;)">[Thoát]</a>
                     </div>
                     
-                <div id="user-info-top" class="user-info pull-right">
-                        <div id="AcInfo" class="dropdown">
-                            <a href="https://sharecode.vn/code-upload-cua-toi.htm" id="UserName2" class="current-open" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Xin chào, meo9xit"><span>Xin chào, </span><span id="UserName"><b>meo9xit</b></span></a>
-                            <ul class="dropdown-menu mega_dropdown" role="menu">
-                                <li><a href="https://sharecode.vn/code-upload-cua-toi.htm"><i class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp;Code tải lên</a></li>
-                                <li><a href="https://sharecode.vn/code-da-luu.htm"><i class="fa fa-folder-open" aria-hidden="true"></i>&nbsp;&nbsp;Code đã lưu</a></li>
-                                <li><a href="https://sharecode.vn/code-download.htm"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;Code đã mua</a></li>
-                                <li><a href="https://sharecode.vn/doanh-thu-ban-code.htm"><i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp;Doanh thu bán code</a></li>
-                                <li><a href="https://sharecode.vn/lich-su-giao-dich.htm"><i class="fa fa-history" aria-hidden="true"></i>&nbsp;&nbsp;Lịch sử nạp tiền</a></li>
-                                <li><a href="https://sharecode.vn/rut-tien.htm"><i class="fa fa-money" aria-hidden="true"></i>&nbsp;Rút tiền</a></li>
-                                <li><a href="https://me.sharecode.vn/" target="_blank"><i class="fa fa-server" aria-hidden="true"></i>&nbsp;Quản lý Domain - Hosting</a></li>
-                                <li><a href="https://sharecode.vn/binh-luan.htm" class="orange"><i class="fa fa-comment" aria-hidden="true"></i>&nbsp;Bình luận</a></li>
-                                <li><a href="https://sharecode.vn/thong-tin-ca-nhan.htm" class="green"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Cài đặt thông tin</a></li>
-                            </ul>
-                        </div>
-                        
-                    </div></div>
+                </div>
             </div>
             <div class="container main-header">
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 col-md-3 logo">
                         <a href="https://sharecode.vn/">
-                            <img alt="Trang chủ sharecode.vn" title="Sharecode.vn" src="style/userinfo/logo.png"></a>
+                            <img alt="Trang chủ sharecode.vn" title="Sharecode.vn" src="./Code tải lên của tôi_files/logo.png"></a>
                     </div>
                     <div class="col-xs-7 col-sm-7 col-md-6 header-search-box">
                         
-                    <div class="form-inline search-h">
-                            <div id="regPanel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnSearch&#39;)">
-	
-                                <div class="form-group form-category">
-                                    <input type="hidden" name="ctl00$ctl00$ctl00$hdLangFilter" id="hdLangFilter">
-                                    <select class="select-category select2-hidden-accessible" id="slSearch" tabindex="-1" aria-hidden="true">
-                                        <option value="0">TẤT CẢ CODE</option>
-                                        
-                                                <option value="15">Android</option>
-                                            
-                                                <option value="23">iOS</option>
-                                            
-                                                <option value="26">Windows phone</option>
-                                            
-                                                <option value="21">PHP &amp; MySQL</option>
-                                            
-                                                <option value="29">WordPress</option>
-                                            
-                                                <option value="28">Joomla</option>
-                                            
-                                                <option value="17">Visual C#</option>
-                                            
-                                                <option value="16">Asp/Asp.Net</option>
-                                            
-                                                <option value="20">Java/JSP</option>
-                                            
-                                                <option value="19">Visual Basic</option>
-                                            
-                                                <option value="24">Cocos2D</option>
-                                            
-                                                <option value="27">Unity</option>
-                                            
-                                                <option value="18">Visual C++</option>
-                                            
-                                                <option value="25">Html &amp; Template</option>
-                                            
-                                                <option value="22">Khác</option>
-                                            
-                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 127px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-slSearch-container"><span class="select2-selection__rendered" id="select2-slSearch-container" title="TẤT CẢ CODE">TẤT CẢ CODE</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                                </div>
-                                <div class="form-group input-serach">
-                                    <input name="ctl00$ctl00$ctl00$txtSearch" type="text" id="txtSearch" class="txt-search txt-auto ui-autocomplete-input" placeholder="Nhập Từ khóa (or) Mã code" autocomplete="off">
-                                </div>
-                                <a id="btnSearch" class="pull-right btn-search" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$btnSearch&#39;,&#39;&#39;)"></a>
-                            
-</div>
-                        </div></div>
+                    </div>
                     <div class="col-xs-5 col-sm-2 col-md-3 shopping-cart-box btn-align">
                         
                         <a data-toggle="modal" data-target="#AddMoney" role="button" class="button-green" onclick="createCaptcha();" title="Nạp tiền vào tài khoản"><i class="fa fa-money fa-lg" aria-hidden="true"></i>&nbsp; NẠP XU</a>&nbsp;&nbsp;
@@ -440,11 +373,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                 <div class="row bg-tab">
                     <div class="col-xs-12">
                         <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="bold active"><a href="https://sharecode.vn/thong-tin-ca-nhan.htm#mnATM" role="tab" data-toggle="tab">1 - THẺ ATM ONLINE</a></li>
-                            <li role="presentation" class="bold"><a href="https://sharecode.vn/thong-tin-ca-nhan.htm#mnSendATM" role="tab" data-toggle="tab">2 - CHUYỂN KHOẢN</a></li>
-                            <li role="presentation" class="bold"><a href="https://sharecode.vn/thong-tin-ca-nhan.htm#mnNL" role="tab" data-toggle="tab">3 - VÍ ĐIỆN TỬ</a></li>
-                            <li role="presentation" class="bold"><a href="https://sharecode.vn/thong-tin-ca-nhan.htm#mnPay" role="tab" data-toggle="tab">4 - PAYPAL</a></li>
-                            <li role="presentation" class="bold"><a href="https://sharecode.vn/thong-tin-ca-nhan.htm#mnVisa" role="tab" data-toggle="tab">5 - THẺ TÍN DỤNG</a></li>
+                            <li role="presentation" class="bold active"><a href="https://sharecode.vn/code-upload-cua-toi.htm#mnATM" role="tab" data-toggle="tab">1 - THẺ ATM ONLINE</a></li>
+                            <li role="presentation" class="bold"><a href="https://sharecode.vn/code-upload-cua-toi.htm#mnSendATM" role="tab" data-toggle="tab">2 - CHUYỂN KHOẢN</a></li>
+                            <li role="presentation" class="bold"><a href="https://sharecode.vn/code-upload-cua-toi.htm#mnNL" role="tab" data-toggle="tab">3 - VÍ ĐIỆN TỬ</a></li>
+                            <li role="presentation" class="bold"><a href="https://sharecode.vn/code-upload-cua-toi.htm#mnPay" role="tab" data-toggle="tab">4 - PAYPAL</a></li>
+                            <li role="presentation" class="bold"><a href="https://sharecode.vn/code-upload-cua-toi.htm#mnVisa" role="tab" data-toggle="tab">5 - THẺ TÍN DỤNG</a></li>
                             
                         </ul>
                     </div>
@@ -688,7 +621,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
     }
 </script>
 <div style="height: 30px; width: 140px; float: left; margin-left: 10px;">
-    <img src="style/userinfo/captcha.jpg" alt="captcha" class="imgCaptcha" height="30" width="80">
+    <img src="./Code tải lên của tôi_files/captcha.jpg" alt="captcha" class="imgCaptcha" height="30" width="80">
     <div class="aorange" style="float: right; width: 60px; margin-top: 6px; padding-left: 5px;" onclick="return createCaptcha();">
         Mã khác
     </div>
@@ -724,15 +657,15 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                         <div role="tabpanel" class="row tab-pane fade" id="mnNL">
                             <div class="col-xs-12">
                                 <ul class="tab-child nav nav-tabs" role="tablist">
-                                    <li role="presentation" class="col-sm-3 active"><a href="https://sharecode.vn/thong-tin-ca-nhan.htm#boxMomo" role="tab" data-toggle="tab">
-                                        <img src="style/userinfo/vi-momo.png"></a></li>
-                                    <li role="presentation" class="col-sm-3"><a href="https://sharecode.vn/thong-tin-ca-nhan.htm#boxNganLuong" role="tab" data-toggle="tab">
-                                        <img src="style/userinfo/vi-ngan-luong.png"></a></li>
-                                    <li role="presentation" class="col-sm-3"><a href="https://sharecode.vn/thong-tin-ca-nhan.htm#boxBaoKim" role="tab" data-toggle="tab">
-                                        <img src="style/userinfo/vi-bao-kim.png"></a></li>
+                                    <li role="presentation" class="col-sm-3 active"><a href="https://sharecode.vn/code-upload-cua-toi.htm#boxMomo" role="tab" data-toggle="tab">
+                                        <img src="./Code tải lên của tôi_files/vi-momo.png"></a></li>
+                                    <li role="presentation" class="col-sm-3"><a href="https://sharecode.vn/code-upload-cua-toi.htm#boxNganLuong" role="tab" data-toggle="tab">
+                                        <img src="./Code tải lên của tôi_files/vi-ngan-luong.png"></a></li>
+                                    <li role="presentation" class="col-sm-3"><a href="https://sharecode.vn/code-upload-cua-toi.htm#boxBaoKim" role="tab" data-toggle="tab">
+                                        <img src="./Code tải lên của tôi_files/vi-bao-kim.png"></a></li>
                                     
-                                    <li role="presentation" class="col-sm-3"><a href="https://sharecode.vn/thong-tin-ca-nhan.htm#boxBankPlus" role="tab" data-toggle="tab">
-                                        <img src="style/userinfo/vi-bank-plus.png"></a></li>
+                                    <li role="presentation" class="col-sm-3"><a href="https://sharecode.vn/code-upload-cua-toi.htm#boxBankPlus" role="tab" data-toggle="tab">
+                                        <img src="./Code tải lên của tôi_files/vi-bank-plus.png"></a></li>
                                 </ul>
                             </div>
 
@@ -813,7 +746,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
     }
 </script>
 <div style="height: 30px; width: 140px; float: left; margin-left: 10px;">
-    <img src="style/userinfo/captcha.jpg" alt="captcha" class="imgCaptcha" height="30" width="80">
+    <img src="./Code tải lên của tôi_files/captcha.jpg" alt="captcha" class="imgCaptcha" height="30" width="80">
     <div class="aorange" style="float: right; width: 60px; margin-top: 6px; padding-left: 5px;" onclick="return createCaptcha();">
         Mã khác
     </div>
@@ -922,7 +855,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
     }
 </script>
 <div style="height: 30px; width: 140px; float: left; margin-left: 10px;">
-    <img src="style/userinfo/captcha.jpg" alt="captcha" class="imgCaptcha" height="30" width="80">
+    <img src="./Code tải lên của tôi_files/captcha.jpg" alt="captcha" class="imgCaptcha" height="30" width="80">
     <div class="aorange" style="float: right; width: 60px; margin-top: 6px; padding-left: 5px;" onclick="return createCaptcha();">
         Mã khác
     </div>
@@ -933,9 +866,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                         </div>
                                         <div class="form-group">
                                             <div class="col-xs-12 line-h">
-                                                <a href="https://sharecode.vn/thong-tin-ca-nhan.htm#"></a>
-                                                <a onclick="return Check_Paypal();" id="ucPopupMoney_btnPaypal" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$ucPopupMoney$btnPaypal&#39;,&#39;&#39;)"><img src="style/userinfo/btn-paypal.png" alt="PayPal Checkout"></a>
-                                                <img src="style/userinfo/btn-paypal-2.png" alt="PayPal Checkout card" class="paypal-card">
+                                                <a href="https://sharecode.vn/code-upload-cua-toi.htm#"></a>
+                                                <a onclick="return Check_Paypal();" id="ucPopupMoney_btnPaypal" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$ucPopupMoney$btnPaypal&#39;,&#39;&#39;)"><img src="./Code tải lên của tôi_files/btn-paypal.png" alt="PayPal Checkout"></a>
+                                                <img src="./Code tải lên của tôi_files/btn-paypal-2.png" alt="PayPal Checkout card" class="paypal-card">
                                             </div>
                                         </div>
                                     </div>
@@ -956,7 +889,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <br>
                                 <div class="clear">
                                     <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-vcb.png">
+                                        <img src="./Code tải lên của tôi_files/bank-vcb.png">
                                     </div>
                                     <div style="float: left;">
                                         <strong class="green">VIETCOMBANK</strong><br>
@@ -970,7 +903,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <br>
                                 <div class="clear">
                                     <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-bidv.png">
+                                        <img src="./Code tải lên của tôi_files/bank-bidv.png">
                                     </div>
                                     <div style="float: left;">
                                         <strong class="green">BIDV</strong><br>
@@ -984,7 +917,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <br>
                                 <div class="clear">
                                     <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-vtb.png">
+                                        <img src="./Code tải lên của tôi_files/bank-vtb.png">
                                     </div>
                                     <div style="float: left;">
                                         <strong class="green">VIETTINBANK</strong><br>
@@ -998,7 +931,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <br>
                                 <div class="clear">
                                     <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-scb.png">
+                                        <img src="./Code tải lên của tôi_files/bank-scb.png">
                                     </div>
                                     <div style="float: left;">
                                         <strong class="green">SACOMBANK</strong><br>
@@ -1012,7 +945,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <br>
                                 <div class="clear">
                                     <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-tech.png">
+                                        <img src="./Code tải lên của tôi_files/bank-tech.png">
                                     </div>
                                     <div style="float: left;">
                                         <strong class="green">TECHCOMBANK</strong><br>
@@ -1026,7 +959,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <br>
                                 <div class="clear">
                                     <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-acb.png">
+                                        <img src="./Code tải lên của tôi_files/bank-acb.png">
                                     </div>
                                     <div style="float: left;">
                                         <strong class="green">Á CHÂU</strong><br>
@@ -1040,7 +973,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <br>
                                 <div class="clear">
                                     <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-tpb.png">
+                                        <img src="./Code tải lên của tôi_files/bank-tpb.png">
                                     </div>
                                     <div style="float: left;">
                                         <strong class="green">TPBANK</strong><br>
@@ -1054,7 +987,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <br>
                                 <div class="clear">
                                     <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-mb.png">
+                                        <img src="./Code tải lên của tôi_files/bank-mb.png">
                                     </div>
                                     <div style="float: left;">
                                         <strong class="green">MBBANK</strong><br>
@@ -1068,7 +1001,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <br>
                                 <div class="clear">
                                     <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-agri.png">
+                                        <img src="./Code tải lên của tôi_files/bank-agri.png">
                                     </div>
                                     <div style="float: left;">
                                         <strong class="green">AGRIBANK</strong><br>
@@ -1082,7 +1015,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <br>
                                 <div class="clear">
                                     <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-vp.png">
+                                        <img src="./Code tải lên của tôi_files/bank-vp.png">
                                     </div>
                                     <div style="float: left;">
                                         <strong class="green">VPBANK</strong><br>
@@ -1096,7 +1029,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <br>
                                 <div class="clear">
                                     <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-shb.png">
+                                        <img src="./Code tải lên của tôi_files/bank-shb.png">
                                     </div>
                                     <div style="float: left;">
                                         <strong class="green">SHB</strong><br>
@@ -1110,7 +1043,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <br>
                                 <div class="clear">
                                     <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-mar.png">
+                                        <img src="./Code tải lên của tôi_files/bank-mar.png">
                                     </div>
                                     <div style="float: left;">
                                         <strong class="green">MARITIME BANK</strong><br>
@@ -1145,7 +1078,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                             <div class="text-center line-h" style="margin-top:10px">
                             Hỗ trợ Thanh toán bằng thẻ tín dụng ghi nợ quốc tế
                             <br>
-                            <img src="style/userinfo/credit-card.png"></div>
+                            <img src="./Code tải lên của tôi_files/credit-card.png"></div>
                                     <div id="ucPopupMoney_Panel4" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ucPopupMoney_btnVISA&#39;)">
 	
                                         <div class="col-sm-7">
@@ -1209,7 +1142,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
     }
 </script>
 <div style="height: 30px; width: 140px; float: left; margin-left: 10px;">
-    <img src="style/userinfo/captcha.jpg" alt="captcha" class="imgCaptcha" height="30" width="80">
+    <img src="./Code tải lên của tôi_files/captcha.jpg" alt="captcha" class="imgCaptcha" height="30" width="80">
     <div class="aorange" style="float: right; width: 60px; margin-top: 6px; padding-left: 5px;" onclick="return createCaptcha();">
         Mã khác
     </div>
@@ -1240,7 +1173,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
             <div class="line_orn"></div>
             <div class="modal-footer">
                 <p class="text-center green bold line-h">
-                    <img src="style/userinfo/secure.png" height="40" alt="secure">
+                    <img src="./Code tải lên của tôi_files/secure.png" height="40" alt="secure">
                     &nbsp;Chứng nhận giao dịch an toàn!
                 </p>
             </div>
@@ -1253,7 +1186,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                     </div>
                 </div>
             </div>
-            <div id="nav-top-menu" class="nav-top-menu">
+            <div id="nav-top-menu" class="nav-top-menu nav-ontop">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-3" id="box-vertical-megamenus">
@@ -1265,9 +1198,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <div class="vertical-menu-content is-home" style="display: none;">
                                     <ul class="vertical-menu-list">
                                         <li>
-                                            <a class="parent" href="https://sharecode.vn/thong-tin-ca-nhan.htm#">
-                                                <img class="icon-menu" alt="Thể loại code" src="style/userinfo/2.png">PHÂN LOẠI CODE</a>
-                                            <div class="vertical-dropdown-menu" style="width: 900px;">
+                                            <a class="parent" href="https://sharecode.vn/code-upload-cua-toi.htm#">
+                                                <img class="icon-menu" alt="Thể loại code" src="./Code tải lên của tôi_files/2.png">PHÂN LOẠI CODE</a>
+                                            <div class="vertical-dropdown-menu" style="width: 902px;">
                                                 <div class="vertical-groups col-sm-6 col-md-4">
                                                     <div class="mega-group col-sm-12">
                                                         <span class="mega-group-header"><span>THỂ LOẠI CODE</span></span>
@@ -1301,49 +1234,49 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                         </li>
                                         
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/android-15.htm">
-                                                    <img class="icon-menu" alt="Android" src="style/userinfo/3.png">Android</a></li>
+                                                    <img class="icon-menu" alt="Android" src="./Code tải lên của tôi_files/3.png">Android</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/ios-23.htm">
-                                                    <img class="icon-menu" alt="iOS" src="style/userinfo/3.png">iOS</a></li>
+                                                    <img class="icon-menu" alt="iOS" src="./Code tải lên của tôi_files/3.png">iOS</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/windows-phone-26.htm">
-                                                    <img class="icon-menu" alt="Windows phone" src="style/userinfo/3.png">Windows phone</a></li>
+                                                    <img class="icon-menu" alt="Windows phone" src="./Code tải lên của tôi_files/3.png">Windows phone</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/php-mysql-21.htm">
-                                                    <img class="icon-menu" alt="PHP &amp; MySQL" src="style/userinfo/3.png">PHP &amp; MySQL</a></li>
+                                                    <img class="icon-menu" alt="PHP &amp; MySQL" src="./Code tải lên của tôi_files/3.png">PHP &amp; MySQL</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">
-                                                    <img class="icon-menu" alt="WordPress" src="style/userinfo/3.png">WordPress</a></li>
+                                                    <img class="icon-menu" alt="WordPress" src="./Code tải lên của tôi_files/3.png">WordPress</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/joomla-28.htm">
-                                                    <img class="icon-menu" alt="Joomla" src="style/userinfo/3.png">Joomla</a></li>
+                                                    <img class="icon-menu" alt="Joomla" src="./Code tải lên của tôi_files/3.png">Joomla</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-17.htm">
-                                                    <img class="icon-menu" alt="Visual C#" src="style/userinfo/3.png">Visual C#</a></li>
+                                                    <img class="icon-menu" alt="Visual C#" src="./Code tải lên của tôi_files/3.png">Visual C#</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/aspaspnet-16.htm">
-                                                    <img class="icon-menu" alt="Asp/Asp.Net" src="style/userinfo/3.png">Asp/Asp.Net</a></li>
+                                                    <img class="icon-menu" alt="Asp/Asp.Net" src="./Code tải lên của tôi_files/3.png">Asp/Asp.Net</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/javajsp-20.htm">
-                                                    <img class="icon-menu" alt="Java/JSP" src="style/userinfo/3.png">Java/JSP</a></li>
+                                                    <img class="icon-menu" alt="Java/JSP" src="./Code tải lên của tôi_files/3.png">Java/JSP</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-basic-19.htm">
-                                                    <img class="icon-menu" alt="Visual Basic" src="style/userinfo/3.png">Visual Basic</a></li>
+                                                    <img class="icon-menu" alt="Visual Basic" src="./Code tải lên của tôi_files/3.png">Visual Basic</a></li>
                                             
                                                 <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/cocos2d-24.htm">
-                                                    <img class="icon-menu" alt="Cocos2D" src="style/userinfo/3.png">Cocos2D</a></li>
+                                                    <img class="icon-menu" alt="Cocos2D" src="./Code tải lên của tôi_files/3.png">Cocos2D</a></li>
                                             
                                                 <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/unity-27.htm">
-                                                    <img class="icon-menu" alt="Unity" src="style/userinfo/3.png">Unity</a></li>
+                                                    <img class="icon-menu" alt="Unity" src="./Code tải lên của tôi_files/3.png">Unity</a></li>
                                             
                                                 <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-18.htm">
-                                                    <img class="icon-menu" alt="Visual C++" src="style/userinfo/3.png">Visual C++</a></li>
+                                                    <img class="icon-menu" alt="Visual C++" src="./Code tải lên của tôi_files/3.png">Visual C++</a></li>
                                             
                                                 <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/html-template-25.htm">
-                                                    <img class="icon-menu" alt="Html &amp; Template" src="style/userinfo/3.png">Html &amp; Template</a></li>
+                                                    <img class="icon-menu" alt="Html &amp; Template" src="./Code tải lên của tôi_files/3.png">Html &amp; Template</a></li>
                                             
                                                 <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/khac-22.htm">
-                                                    <img class="icon-menu" alt="Khác" src="style/userinfo/3.png">Khác</a></li>
+                                                    <img class="icon-menu" alt="Khác" src="./Code tải lên của tôi_files/3.png">Khác</a></li>
                                             
                                     </ul>
                                     <div class="all-category"><span class="open-cate">Xem tất cả</span></div>
@@ -1357,7 +1290,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                                             <i class="fa fa-bars"></i>
                                         </button>
-                                        <a class="navbar-brand" href="https://sharecode.vn/thong-tin-ca-nhan.htm#">MENU</a>
+                                        <a class="navbar-brand" href="https://sharecode.vn/code-upload-cua-toi.htm#">MENU</a>
                                     </div>
                                     <div id="navbar" class="navbar-collapse collapse">
                                         <ul class="nav navbar-nav">
@@ -1387,11 +1320,73 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                         </div>
                     </div>
                     <div id="form-search-opntop">
-                    </div>
+                    <div class="form-inline search-h">
+                            <div id="regPanel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnSearch&#39;)">
+	
+                                <div class="form-group form-category">
+                                    <input type="hidden" name="ctl00$ctl00$ctl00$hdLangFilter" id="hdLangFilter">
+                                    <select class="select-category select2-hidden-accessible" id="slSearch" tabindex="-1" aria-hidden="true">
+                                        <option value="0">TẤT CẢ CODE</option>
+                                        
+                                                <option value="15">Android</option>
+                                            
+                                                <option value="23">iOS</option>
+                                            
+                                                <option value="26">Windows phone</option>
+                                            
+                                                <option value="21">PHP &amp; MySQL</option>
+                                            
+                                                <option value="29">WordPress</option>
+                                            
+                                                <option value="28">Joomla</option>
+                                            
+                                                <option value="17">Visual C#</option>
+                                            
+                                                <option value="16">Asp/Asp.Net</option>
+                                            
+                                                <option value="20">Java/JSP</option>
+                                            
+                                                <option value="19">Visual Basic</option>
+                                            
+                                                <option value="24">Cocos2D</option>
+                                            
+                                                <option value="27">Unity</option>
+                                            
+                                                <option value="18">Visual C++</option>
+                                            
+                                                <option value="25">Html &amp; Template</option>
+                                            
+                                                <option value="22">Khác</option>
+                                            
+                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 127px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-slSearch-container"><span class="select2-selection__rendered" id="select2-slSearch-container" title="TẤT CẢ CODE">TẤT CẢ CODE</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </div>
+                                <div class="form-group input-serach">
+                                    <input name="ctl00$ctl00$ctl00$txtSearch" type="text" id="txtSearch" class="txt-search txt-auto ui-autocomplete-input" placeholder="Nhập Từ khóa (or) Mã code" autocomplete="off">
+                                </div>
+                                <a id="btnSearch" class="pull-right btn-search" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$btnSearch&#39;,&#39;&#39;)"></a>
+                            
+</div>
+                        </div></div>
                     <div id="user-info-opntop">
-                    </div>
+                    <div id="user-info-top" class="user-info pull-right">
+                        <div id="AcInfo" class="dropdown">
+                            <a href="https://sharecode.vn/code-upload-cua-toi.htm" id="UserName2" class="current-open" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Xin chào, meo9xit"><span>Xin chào, </span><span id="UserName"><b>meo9xit</b></span></a>
+                            <ul class="dropdown-menu mega_dropdown" role="menu">
+                                <li><a href="https://sharecode.vn/code-upload-cua-toi.htm"><i class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp;Code tải lên</a></li>
+                                <li><a href="https://sharecode.vn/code-da-luu.htm"><i class="fa fa-folder-open" aria-hidden="true"></i>&nbsp;&nbsp;Code đã lưu</a></li>
+                                <li><a href="https://sharecode.vn/code-download.htm"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;Code đã mua</a></li>
+                                <li><a href="https://sharecode.vn/doanh-thu-ban-code.htm"><i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp;Doanh thu bán code</a></li>
+                                <li><a href="https://sharecode.vn/lich-su-giao-dich.htm"><i class="fa fa-history" aria-hidden="true"></i>&nbsp;&nbsp;Lịch sử nạp tiền</a></li>
+                                <li><a href="https://sharecode.vn/rut-tien.htm"><i class="fa fa-money" aria-hidden="true"></i>&nbsp;Rút tiền</a></li>
+                                <li><a href="https://me.sharecode.vn/" target="_blank"><i class="fa fa-server" aria-hidden="true"></i>&nbsp;Quản lý Domain - Hosting</a></li>
+                                <li><a href="https://sharecode.vn/binh-luan.htm" class="orange"><i class="fa fa-comment" aria-hidden="true"></i>&nbsp;Bình luận</a></li>
+                                <li><a href="https://sharecode.vn/thong-tin-ca-nhan.htm" class="green"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Cài đặt thông tin</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div></div>
                     
-                    <div id="shopping-cart-box-ontop" style="display: none;">
+                    <div id="shopping-cart-box-ontop" style="display: block;">
                         <a href="https://sharecode.vn/binh-luan.htm">
                             <i class="fa fa-comment"></i>
                             
@@ -1414,9 +1409,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
     
     <a href="https://sharecode.vn/thong-tin-ca-nhan.htm" id="mainbody_breadcrumb_breadpage_UserName" class="agreen">meo9xit</a>
     <span class="navigation-pipe">&nbsp;</span>
-    <a class="agreen" href="https://sharecode.vn/thong-tin-ca-nhan.htm">
-        <h2 class="abread">Cài đặt thông tin cá nhân</h2>
+    <a class="agreen" href="https://sharecode.vn/code-upload-cua-toi.htm">
+        <h2 class="abread">Code tải lên</h2>
     </a>
+    
+    
 
 
             </div>
@@ -1425,69 +1422,90 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
     <div class="row">
         <div class="center_column col-xs-12 col-sm-9" id="center_column">
             
+
     <div class="bg-title">
-        <a href="https://sharecode.vn/thong-tin-ca-nhan.htm" class="search_title alignleft">
-            <h1 class="search_title">CÀI ĐẶT THÔNG TIN</h1>
+        <a href="https://sharecode.vn/code-upload-cua-toi.htm" class="search_title alignleft">
+            <h1 class="search_title">CODE TẢI LÊN</h1>
         </a>
+        <div id="mainbody_contentbody_contentpage_regPanel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;mainbody_contentbody_contentpage_btnSearch&#39;)">
+	
+            <input name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$txtSearch" type="text" id="mainbody_contentbody_contentpage_txtSearch" class="search_textbox form-control" placeholder="Tìm code tải lên">
+            <input type="submit" name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnSearch" value="" id="mainbody_contentbody_contentpage_btnSearch" class="btn_hide">
+        
+</div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-sm-5 col-md-7">
+        </div>
+        <div class="col-sm-7 col-md-5">
+            <div id="mainbody_contentbody_contentpage_Panel1" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;mainbody_contentbody_contentpage_btnEdit&#39;)">
+	
+                <div class="input-group">
+                    <input name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$txtCode" type="text" id="mainbody_contentbody_contentpage_txtCode" class="form-control" placeholder="Mã code">
+                    <span class="input-group-btn">
+                        <input type="submit" name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnEdit" value="Sửa nhanh" id="mainbody_contentbody_contentpage_btnEdit" class="btn btn-inline-orange">
+                        <input type="submit" name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnView" value="Xem nhanh" id="mainbody_contentbody_contentpage_btnView" class="btn btn-inline-orange">
+                    </span>
+                </div>
+            
+</div>
+        </div>
     </div>
     <br>
+    <div id="mainbody_contentbody_contentpage_divOption" class="btn-group alignright bold" role="group">
+        <a id="mainbody_contentbody_contentpage_btnAll" class="btn btn-option bold select" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnAll&#39;,&#39;&#39;)">Tất cả <span id="mainbody_contentbody_contentpage_badAll" class="badge bagde-green">0</span></a>
+        <a id="mainbody_contentbody_contentpage_btnPremium" class="btn btn-option bold" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnPremium&#39;,&#39;&#39;)">Có phí <span id="mainbody_contentbody_contentpage_badPremium" class="badge bagde-green">0</span></a>
+        <a id="mainbody_contentbody_contentpage_btnFree" class="btn btn-option bold" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnFree&#39;,&#39;&#39;)">Miễn phí <span id="mainbody_contentbody_contentpage_badFree" class="badge bagde-green">0</span></a>
+        <a id="mainbody_contentbody_contentpage_btnHide" class="btn btn-option bold" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnHide&#39;,&#39;&#39;)">Đang ẩn <span id="mainbody_contentbody_contentpage_badHide" class="badge bagde-green">0</span></a>
+        <a id="mainbody_contentbody_contentpage_btnWait" class="btn btn-option bold" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnWait&#39;,&#39;&#39;)">Chờ duyệt <span id="mainbody_contentbody_contentpage_badWait" class="badge bagde-green">0</span></a>
+        <a id="mainbody_contentbody_contentpage_btnWaitPrice" class="btn btn-option bold" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnWaitPrice&#39;,&#39;&#39;)">Chờ duyệt phí tải <span id="mainbody_contentbody_contentpage_badWaitPrice" class="badge bagde-green">0</span></a>
+        <a id="mainbody_contentbody_contentpage_btnNotOk" class="btn btn-option bold" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnNotOk&#39;,&#39;&#39;)">Từ chối <span id="mainbody_contentbody_contentpage_badNotOk" class="badge bagde-green">0</span></a>
+    </div>
+    <div class="clear"></div>
     <br>
-    <div id="mainbody_contentbody_contentpage_panDefaultButton" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;mainbody_contentbody_contentpage_btnUpdate&#39;)">
+    <div id="mainbody_contentbody_contentpage_upPannel">
 	
-        <div class="form-horizontal">
-            <div class="form-group">
-                <label class="col-sm-5 control-label">Email đăng kí</label>
-                <div class="col-sm-5  pro-top7">
-                    <b id="mainbody_contentbody_contentpage_updateEmail" class="green">meo9xit@gmail.com</b>
+            <div class="col-xs-12 bold pro-row-head pro-line14">
+                <div class="col-md-6 pro-col2">
+                    <div class="pro-20">MÃ</div>
+                    <div class="pro-80">SOURCE CODE</div>
+                </div>
+                <div class="col-md-6 pro-col2">
+                    <div class="pro-20">PHÍ TẢI</div>
+                     
+                                <div class="pro-20">TẢI</div>
+                    <div class="pro-20">XEM</div>
+                    <div class="pro-15">DUYỆT</div>
+                                    
+                    <div class="pro-25 text-center"><i class="fa fa-cog" aria-hidden="true"></i></div>
                 </div>
             </div>
-            <div class="form-group">
-                <label class="col-sm-5 control-label">Họ và tên<span class="text-error">*</span></label>
-                <div class="col-sm-4">
-                    <input name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$updateFullName" type="text" id="mainbody_contentbody_contentpage_updateFullName" maxlength="40" placeholder="VD: Trần Thanh Tâm" class="form-control" value="Hà Duy Hưng">
+            <div class="clear"></div>
+            <div id="mainbody_contentbody_contentpage_noResult" class="noresult"></div>
+            
+            <div class="col-xs-12 bold pro-row-foot"></div>
+            <div class="clear"></div>
+            <div class="sortPagiBar clearfix clear">
+                <span class="page-noite"><b id="mainbody_contentbody_contentpage_lblTotalPage">0 - 0</b>&nbsp;/ Tổng số <b id="mainbody_contentbody_contentpage_lblTotalCode">0</b>&nbsp;CODE</span>
+                <div class="bottom-pagination">
+                    <nav id="mainbody_contentbody_contentpage_PaggingBottom"></nav>
                 </div>
-                <div class="col-sm-3">
-                    <div id="updateFullName_error" class="text-error pro-top7">&nbsp;</div>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-5 control-label">Tên hiển thị<span class="text-error">*</span></label>
-                <div class="col-sm-4">
-                    <input name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$updateUserName" type="text" id="mainbody_contentbody_contentpage_updateUserName" placeholder="VD: ThanhTam92" maxlength="40" class="form-control" value="meo9xit">
-                </div>
-                <div class="col-sm-3">
-                    <div id="updateUserName_error" class="text-error pro-top7">&nbsp;</div>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-5 control-label">Số điện thoại<span class="text-error">*</span></label>
-                <div class="col-sm-3">
-                    <input name="phonenumber" type="text" id="mainbody_contentbody_contentpage_updatePhone" maxlength="10" placeholder="VD: 03... or 09.." class="form-control" value="0328864555">
-                </div>
-                <div id="mainbody_contentbody_contentpage_updatePhone_error" class="text-error col-sm-4 pro-top7">&nbsp;</div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-5 control-label">Ảnh đại diện</label>
-                <div class="col-sm-5">
-                    <img src="style/userinfo/avanta2.png" id="mainbody_contentbody_contentpage_Avanta" class="pro-img" width="90" height="90" alt="meo9xit - Hà Duy Hưng" title="Hà Duy Hưng">
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-offset-5 col-sm-6">
-                    <a href="https://sharecode.vn/doi-mat-khau.htm" class="aorange">Đổi mật khẩu mới</a>
-                </div>
-            </div>
+                <div id="mainbody_contentbody_contentpage_divSort" class="sort-product">
+                    <select name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$ddlSort" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$ddlSort\&#39;,\&#39;\&#39;)&#39;, 0)" id="mainbody_contentbody_contentpage_ddlSort">
+		<option selected="selected" value="New">Mới nhất</option>
+		<option value="View">Xem nhiều</option>
+		<option value="Down">Tải nhiều</option>
 
-            <div class="form-group line-h">
-                <div class="col-sm-offset-5 col-sm-6">
-                    <a onclick="return validate_update();" id="mainbody_contentbody_contentpage_btnUpdate" class="button-orange" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnUpdate&#39;,&#39;&#39;)"><i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp; Cập nhật thông tin</a>
+	</select>
+                    <div class="sort-product-icon">
+                        <i class="fa fa-sort-alpha-asc"></i>
+                    </div>
                 </div>
             </div>
-        </div>
-    
+            <br>
+        
 </div>
-    <br>
-    <br>
 
         </div>
         <div class="column col-xs-12 col-sm-3" id="left_column">
@@ -1495,7 +1513,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 <div class="block left-module box-border2">
     <div class="pro-left">
         <a href="https://sharecode.vn/thong-tin-ca-nhan.htm">
-            <img src="style/userinfo/avanta2.png" id="mainbody_contentbody_ucProfile_Avanta" class="prof_img" alt="meo9xit - Hà Duy Hưng" width="90" height="90" title="meo9xit - Hà Duy Hưng">
+            <img src="./Code tải lên của tôi_files/avanta2.png" id="mainbody_contentbody_ucProfile_Avanta" class="prof_img" alt="meo9xit - Hà Duy Hưng" width="90" height="90" title="meo9xit - Hà Duy Hưng">
         </a>
     </div>
     <div class="pro-right">
@@ -1517,7 +1535,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
         <a href="https://sharecode.vn/binh-luan.htm" class="aorange pro-line14"><i class="fa fa-comment" aria-hidden="true"></i>&nbsp;Bình luận <span id="mainbody_contentbody_ucProfile_CmtCount" class="badge bagde-green badge-link">0</span></a>
     </div>
     <ul class="pro-list">
-        <li id="mnCodeUpload">
+        <li id="mnCodeUpload" class="pro-select">
             <a href="https://sharecode.vn/code-upload-cua-toi.htm">Code tải lên (<strong id="mainbody_contentbody_ucProfile_UploadCount">0</strong>)</a>
         </li>
         <li id="mnCodeSave">
@@ -1551,14 +1569,14 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
             
                 
             
-    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1200px, 0px, 0px); transition: all 0s ease 0s; width: 2100px;"><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm" rel="nofollow" target="_blank">
-                    <img src="style/userinfo/15_19_18_meo tang doanh thu ban code.jpg" alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code" title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li></div><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="https://sharecode.vn/su-kien/uu-dai-tung-bung-tang-thuong-khi-upload-va-upload-code-dat-moc-11.htm" rel="nofollow" target="_blank">
-                    <img src="style/userinfo/0_22_5_sharecode tang thuong 2.jpg" alt="sự kiện, event, tặng thưởng, upload code" title="Sự kiện: Mừng ngày giỗ tổ 10/3 - Tặng thưởng khi upload code đạt mốc"></a></li></div><div class="owl-item" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/huong-dan-nap-tien-vao-tai-khoan-8.htm" rel="nofollow" target="_blank">
-                    <img src="style/userinfo/13_49_37_nap xu vao tai khoan.jpg" alt="Nạp xu, nạp tiền, quy đổi, nạp thẻ cào, nạp qua ngân hàng, nạp qua ví ngân lượng" title="Nạp XU vào tài khoản ngay!"></a></li></div><div class="owl-item" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm" rel="nofollow" target="_blank">
-                    <img src="style/userinfo/15_19_18_meo tang doanh thu ban code.jpg" alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code" title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li></div><div class="owl-item active" style="width: 270px; margin-right: 30px;"><li><a href="https://sharecode.vn/su-kien/uu-dai-tung-bung-tang-thuong-khi-upload-va-upload-code-dat-moc-11.htm" rel="nofollow" target="_blank">
-                    <img src="style/userinfo/0_22_5_sharecode tang thuong 2.jpg" alt="sự kiện, event, tặng thưởng, upload code" title="Sự kiện: Mừng ngày giỗ tổ 10/3 - Tặng thưởng khi upload code đạt mốc"></a></li></div><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/huong-dan-nap-tien-vao-tai-khoan-8.htm" rel="nofollow" target="_blank">
-                    <img src="style/userinfo/13_49_37_nap xu vao tai khoan.jpg" alt="Nạp xu, nạp tiền, quy đổi, nạp thẻ cào, nạp qua ngân hàng, nạp qua ví ngân lượng" title="Nạp XU vào tài khoản ngay!"></a></li></div><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm" rel="nofollow" target="_blank">
-                    <img src="style/userinfo/15_19_18_meo tang doanh thu ban code.jpg" alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code" title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li></div></div></div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;"><i class="fa fa-angle-left"></i></div><div class="owl-next" style="display: none;"><i class="fa fa-angle-right"></i></div></div><div class="owl-dots" style=""><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot active"><span></span></div></div></div></ul>
+    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-900px, 0px, 0px); transition: all 0s ease 0s; width: 2100px;"><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm" rel="nofollow" target="_blank">
+                    <img src="./Code tải lên của tôi_files/15_19_18_meo tang doanh thu ban code.jpg" alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code" title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li></div><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="https://sharecode.vn/su-kien/uu-dai-tung-bung-tang-thuong-khi-upload-va-upload-code-dat-moc-11.htm" rel="nofollow" target="_blank">
+                    <img src="./Code tải lên của tôi_files/0_22_5_sharecode tang thuong 2.jpg" alt="sự kiện, event, tặng thưởng, upload code" title="Sự kiện: Mừng ngày giỗ tổ 10/3 - Tặng thưởng khi upload code đạt mốc"></a></li></div><div class="owl-item" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/huong-dan-nap-tien-vao-tai-khoan-8.htm" rel="nofollow" target="_blank">
+                    <img src="./Code tải lên của tôi_files/13_49_37_nap xu vao tai khoan.jpg" alt="Nạp xu, nạp tiền, quy đổi, nạp thẻ cào, nạp qua ngân hàng, nạp qua ví ngân lượng" title="Nạp XU vào tài khoản ngay!"></a></li></div><div class="owl-item active" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm" rel="nofollow" target="_blank">
+                    <img src="./Code tải lên của tôi_files/15_19_18_meo tang doanh thu ban code.jpg" alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code" title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li></div><div class="owl-item" style="width: 270px; margin-right: 30px;"><li><a href="https://sharecode.vn/su-kien/uu-dai-tung-bung-tang-thuong-khi-upload-va-upload-code-dat-moc-11.htm" rel="nofollow" target="_blank">
+                    <img src="./Code tải lên của tôi_files/0_22_5_sharecode tang thuong 2.jpg" alt="sự kiện, event, tặng thưởng, upload code" title="Sự kiện: Mừng ngày giỗ tổ 10/3 - Tặng thưởng khi upload code đạt mốc"></a></li></div><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/huong-dan-nap-tien-vao-tai-khoan-8.htm" rel="nofollow" target="_blank">
+                    <img src="./Code tải lên của tôi_files/13_49_37_nap xu vao tai khoan.jpg" alt="Nạp xu, nạp tiền, quy đổi, nạp thẻ cào, nạp qua ngân hàng, nạp qua ví ngân lượng" title="Nạp XU vào tài khoản ngay!"></a></li></div><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm" rel="nofollow" target="_blank">
+                    <img src="./Code tải lên của tôi_files/15_19_18_meo tang doanh thu ban code.jpg" alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code" title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li></div></div></div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;"><i class="fa fa-angle-left"></i></div><div class="owl-next" style="display: none;"><i class="fa fa-angle-right"></i></div></div><div class="owl-dots" style=""><div class="owl-dot"><span></span></div><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div></div></div></ul>
 </div>
             
 <div class="block left-module">
@@ -1602,7 +1620,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
      
 
         
-<script src="style/userinfo/floater_xlib.js.tải xuống"></script>
+<script src="./Code tải lên của tôi_files/floater_xlib.js.tải xuống"></script>
 <script type="text/javascript">
 
     var slideTime = 600;
@@ -1650,16 +1668,16 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
     }
 
 </script>
-<div id="floating_banner_left" style="text-align: right; position: fixed; overflow: hidden; width: 120px; z-index: 99999; display: none; left: -70.5px; top: 300px;">
+<div id="floating_banner_left" style="text-align: right; position: fixed; overflow: hidden; width: 120px; z-index: 99999; display: none; left: -70.5px; top: 60px;">
     <div id="floating_banner_left_content">
         <a href="https://sharecode.vn/kien-thuc-lap-trinh/dich-vu-thiet-ke-website-chuyen-nghiep-voi-gia-cuc-re-va-nhieu-uu-dai-tai-sharecodevn-880.htm" target="_blank">
-            <img src="style/userinfo/thiet-ke-web-gia-re.jpg" border="0" width="120" alt=""></a><br>
+            <img src="./Code tải lên của tôi_files/thiet-ke-web-gia-re.jpg" border="0" width="120" alt=""></a><br>
     </div>
 </div>
-<div id="floating_banner_right" style="text-align: left; position: fixed; overflow: hidden; width: 120px; z-index: 99999; left: 1299.5px; top: 300px; display: none;">
+<div id="floating_banner_right" style="text-align: left; position: fixed; overflow: hidden; width: 120px; z-index: 99999; left: 1299.5px; top: 60px; display: none;">
     <div id="Div2">
         <a href="https://topcode.vn/" target="_blank">
-            <img src="style/userinfo/Ra-mat-topcode.jpg" border="0" width="120" alt=""></a><br>
+            <img src="./Code tải lên của tôi_files/Ra-mat-topcode.jpg" border="0" width="120" alt=""></a><br>
     </div>
 </div>
   <script>
@@ -1678,7 +1696,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                             <div class="col-md-3">
                                 <div id="address-box">
                                     <a href="https://sharecode.vn/">
-                                        <img src="style/userinfo/logo.png" alt="Sharecode.vn"></a>
+                                        <img src="./Code tải lên của tôi_files/logo.png" alt="Sharecode.vn"></a>
                                     <div id="address-list">
                                         <div class="tit-name">Hotline:</div>
                                         <div class="tit-contain"><a href="tel:+84981282756" title="Click gọi ngay!">0981.282.756</a></div>
@@ -1748,28 +1766,28 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <ul id="trademark-list">
                                     <li id="payment-methods">Thanh toán đảm bảo</li>
                                     <li>
-                                        <img src="style/userinfo/b1.png" alt="ngan luong">
+                                        <img src="./Code tải lên của tôi_files/b1.png" alt="ngan luong">
                                     </li>
                                     <li>
-                                        <img src="style/userinfo/b10.png" alt="bao kim">
+                                        <img src="./Code tải lên của tôi_files/b10.png" alt="bao kim">
                                     </li>
                                     <li>
-                                        <img src="style/userinfo/b11.png" alt="momo">
+                                        <img src="./Code tải lên của tôi_files/b11.png" alt="momo">
                                     </li>
                                     <li>
-                                        <img src="style/userinfo/b8.png" alt="paypal">
+                                        <img src="./Code tải lên của tôi_files/b8.png" alt="paypal">
                                     </li>
                                     <li>
-                                        <img src="style/userinfo/b5.png" alt="vietcombank">
+                                        <img src="./Code tải lên của tôi_files/b5.png" alt="vietcombank">
                                     </li>
                                     <li>
-                                        <img src="style/userinfo/b9.png" alt="vietin bank">
+                                        <img src="./Code tải lên của tôi_files/b9.png" alt="vietin bank">
                                     </li>
                                     <li>
-                                        <img src="style/userinfo/b6.png" alt="agribank">
+                                        <img src="./Code tải lên của tôi_files/b6.png" alt="agribank">
                                     </li>
                                     <li>
-                                        <img src="style/userinfo/b7.png" alt="bidv">
+                                        <img src="./Code tải lên của tôi_files/b7.png" alt="bidv">
                                     </li>
                                     
                                 </ul>
@@ -1790,9 +1808,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                         <div id="footer-menu-box">
                             <p class="text-center">
                                 Copyrights © 2014 Sharecode.vn - Nội dung đã được bảo vệ bản quyền
-                                <a href="https://www.dmca.com/Protection/Status.aspx?ID=e3cfb854-1733-4462-a9e8-0ef4661d6600&amp;refurl=https://sharecode.vn/thong-tin-ca-nhan.htm" title="DMCA.com Protection Status" class="dmca-badge">
-                                    <img src="style/userinfo/dmca-badge-w150-5x1-09.png" alt="DMCA.com Protection Status"></a>
-                                <script src="style/userinfo/DMCABadgeHelper.min.js.tải xuống"> </script>
+                                <a href="https://www.dmca.com/Protection/Status.aspx?ID=e3cfb854-1733-4462-a9e8-0ef4661d6600&amp;refurl=https://sharecode.vn/code-upload-cua-toi.htm" title="DMCA.com Protection Status" class="dmca-badge">
+                                    <img src="./Code tải lên của tôi_files/dmca-badge-w150-5x1-09.png" alt="DMCA.com Protection Status"></a>
+                                <script src="./Code tải lên của tôi_files/DMCABadgeHelper.min.js.tải xuống"> </script>
                             </p>
                         </div>
                     </div>
@@ -1801,15 +1819,15 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 </div>
     </form>
 
-    <a href="https://sharecode.vn/thong-tin-ca-nhan.htm#" class="scroll_top" title="Lên đầu" style="display: none;"></a>
+    <a href="https://sharecode.vn/code-upload-cua-toi.htm#" class="scroll_top" title="Lên đầu" style="display: inline;"></a>
     <!-- Script-->
-    <script type="text/javascript" src="style/userinfo/jquery-1.11.2.min.js.tải xuống"></script>
-    <script type="text/javascript" src="style/userinfo/bootstrap.min.js.tải xuống"></script>
-    <script type="text/javascript" src="style/userinfo/select2.min.js.tải xuống"></script>
-    <script type="text/javascript" src="style/userinfo/owl.carousel.min.js.tải xuống"></script>
-    <script type="text/javascript" src="style/userinfo/jquery.actual.min.js.tải xuống"></script>
-    <script type="text/javascript" src="style/userinfo/theme-script.js.tải xuống"></script>
-    <script type="text/javascript" src="style/userinfo/jquery-ui.min.js.tải xuống"></script>
+    <script type="text/javascript" src="./Code tải lên của tôi_files/jquery-1.11.2.min.js.tải xuống"></script>
+    <script type="text/javascript" src="./Code tải lên của tôi_files/bootstrap.min.js.tải xuống"></script>
+    <script type="text/javascript" src="./Code tải lên của tôi_files/select2.min.js.tải xuống"></script>
+    <script type="text/javascript" src="./Code tải lên của tôi_files/owl.carousel.min.js.tải xuống"></script>
+    <script type="text/javascript" src="./Code tải lên của tôi_files/jquery.actual.min.js.tải xuống"></script>
+    <script type="text/javascript" src="./Code tải lên của tôi_files/theme-script.js.tải xuống"></script>
+    <script type="text/javascript" src="./Code tải lên của tôi_files/jquery-ui.min.js.tải xuống"></script>
     <script type="text/javascript">
         $('#slSearch').on('change', function () {
             $('#hdLangFilter').val($("#slSearch").val());
@@ -1895,7 +1913,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
         ga('send', 'pageview');
     </script>
     <!-- Đặt thẻ này vào phần đầu hoặc ngay trước thẻ đóng phần nội dung của bạn. -->
-    <script src="style/userinfo/platform.js.tải xuống" async="" defer="" gapi_processed="true">
+    <script src="./Code tải lên của tôi_files/platform.js.tải xuống" async="" defer="" gapi_processed="true">
   {lang: 'vi'}
     </script>
     <script type="application/ld+json">
@@ -1918,7 +1936,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
     <div class="hisella-messages" style="bottom: -350px; right: -30px;">
         <div class="hisella-messages-outer">
             <div id="hisella-minimize">&nbsp;HỖ TRỢ TRỰC TUYẾN</div>
-            <div id="hisella-facebook" class="fb-page fb_iframe_widget" data-adapt-container-width="true" data-height="350" data-hide-cover="false" data-href="https://www.facebook.com/sharecode.vn" data-show-facepile="true" data-show-posts="false" data-small-header="false" data-tabs="messages" data-width="250" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=1938824166400762&amp;container_width=0&amp;height=350&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fsharecode.vn&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;small_header=false&amp;tabs=messages&amp;width=250" style="opacity: 0;"><span style="vertical-align: bottom; width: 250px; height: 350px;"><iframe name="f2be400245f53e" width="250px" height="350px" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="style/userinfo/page.html" style="border: none; visibility: visible; width: 250px; height: 350px;" class=""></iframe></span></div>
+            <div id="hisella-facebook" class="fb-page fb_iframe_widget" data-adapt-container-width="true" data-height="350" data-hide-cover="false" data-href="https://www.facebook.com/sharecode.vn" data-show-facepile="true" data-show-posts="false" data-small-header="false" data-tabs="messages" data-width="250" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=1938824166400762&amp;container_width=0&amp;height=350&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fsharecode.vn&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;small_header=false&amp;tabs=messages&amp;width=250" style="opacity: 0;"><span style="vertical-align: bottom; width: 250px; height: 350px;"><iframe name="f2f2f1c6338b97c" width="250px" height="350px" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Code tải lên của tôi_files/page.html" style="border: none; visibility: visible; width: 250px; height: 350px;" class=""></iframe></span></div>
         </div>
     </div>
     
@@ -1953,58 +1971,37 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
         })
     </script>
     
-    <script type="text/javascript">
-        function ImageURL() {
-            var url = this.document.getElementById('mainbody_contentbody_contentpage_fulImage').value;
-            if ((url.lastIndexOf('.jpg') == -1) && (url.lastIndexOf('.JPG') == -1) && (url.lastIndexOf('.png') == -1) && (url.lastIndexOf('.PNG') == -1) && (url.lastIndexOf('.gif') == -1) && (url.lastIndexOf('.GIF') == -1)) {
-                alert('Chỉ được chọn file ảnh');
-                this.document.getElementById('mainbody_contentbody_contentpage_fulImage').value = "";
-               return false;
-           }
-       }
-       function validate_update() {
-           jQuery('input[type="text"]').removeClass('validation-failed');
-           jQuery('#updateFullName_error').html('');
-           var require_fullname = jQuery('#mainbody_contentbody_contentpage_updateFullName');
-           if (require_fullname.val() == '') {
-               jQuery('#updateFullName_error').html('Chưa nhập');
-               require_fullname.addClass('validation-failed');
-               require_fullname.focus();
-               return false;
-           }
-           jQuery('#updateUserName_error').html('');
-           var require_username = jQuery('#mainbody_contentbody_contentpage_updateUserName');
-           if (require_username.val() == '') {
-               jQuery('#updateUserName_error').html('Chưa nhập');
-               require_username.addClass('validation-failed');
-               require_username.focus();
-               return false;
-           }
-           jQuery('#updateFullName_error').html('');
-           var email = jQuery('#mainbody_contentbody_contentpage_updateEmailMoney');
-            email_pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-            if (email.val() != "" && !email.val().match(email_pattern)) {
-                email.addClass('validation-failed');
-                jQuery('#updateFullName_error').html('Email không hợp lệ.');
-                email.focus();
-                return false;
+    <script>
+        function ComfirmDelete(btn) {
+
+            if (confirm("Bạn có thực sự muốn xóa code này? Liên hệ với BQT nếu muốn khôi phục.") == true) {
+                jQuery(btn).addClass('function_delete DeleteSuccess');//hiển thị thông báo thành công
+                return true;
             }
-            jQuery('#mainbody_contentbody_contentpage_updatePhone_error').html('');
-            var phone = jQuery('#mainbody_contentbody_contentpage_updatePhone');
-           phone_pattern = /^(\+84|0)(([0-9]{9}))$/;
-           if (phone.val() != "" && !phone.val().match(phone_pattern)) {
-               phone.addClass('validation-failed');
-               jQuery('#mainbody_contentbody_contentpage_updatePhone_error').html('Số ĐT không hợp lệ.');
-               phone.focus();
-               return false;
-           }
-           jQuery('#mainbody_contentbody_contentpage_btnUpdate').addClass('popup_btn SaveSuccess');
-           return true;
-       }
+            return false;
+        }
+        $(document).ready(function () {
+            jQuery("#mnCodeUpload").addClass("pro-select");
+            var option = 'All';
+            if (option == "All")
+                jQuery("#mainbody_contentbody_contentpage_btnAll").addClass("select");
+            else if (option == "Premium")
+                jQuery("#mainbody_contentbody_contentpage_btnPremium").addClass("select");
+            else if (option == "Free")
+                jQuery("#mainbody_contentbody_contentpage_btnFree").addClass("select");
+            else if (option == "Hide")
+                jQuery("#mainbody_contentbody_contentpage_btnHide").addClass("select");
+            else if (option == "Wait")
+                jQuery("#mainbody_contentbody_contentpage_btnWait").addClass("select");
+            else if (option == "NotOk") {
+                jQuery("#mainbody_contentbody_contentpage_btnNotOk").addClass("select");
+                $(".titlecode").each(function (index) {
+                    $(this).html($(this).html().replace("[", "<span class='red'>["));
+                    $(this).html($(this).html().replace("]", "]</span>"));
+                });
+            }
+        });
     </script>
-    
-    <link href="style/userinfo/iosOverlay.css" rel="stylesheet">
-    <script src="style/userinfo/iosOverlay.js.tải xuống"></script>
 
 
 
