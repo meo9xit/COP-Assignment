@@ -14,7 +14,7 @@ import com.chiasetailieu.model.Comment;
 import com.chiasetailieu.service.ICommentService;
 import com.chiasetailieu.utils.FormUtil;
 
-@WebServlet("/admin-comment")
+@WebServlet(urlPatterns = "/admin-comment")
 public class AdminComment extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
