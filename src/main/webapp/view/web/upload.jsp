@@ -475,6 +475,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <div class="form-control-static"><span id="lang_error" class="text-error">&nbsp;</span></div>
                             </div>
                         </div>
+                      <div class="form-group">
                         <div class="col-md-4">
                             <label class="col-md-2 control-label bold">Chủ đề <span class="text-error">*</span></label>
                             <div class="col-md-4">
@@ -491,7 +492,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <div class="form-control-static"><span id="lang_error" class="text-error">&nbsp;</span></div>
                             </div>
                         </div>
-                        
+                     </div>   
                         <div class="form-group">
                             <label class="col-md-2 control-label bold">Chọn tài liệu <span class="text-error">*</span></label>
                             <div class="col-md-7">
