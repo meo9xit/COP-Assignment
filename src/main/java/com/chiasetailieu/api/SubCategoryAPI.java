@@ -15,7 +15,7 @@ import com.chiasetailieu.utils.HttpUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
- * Servlet implementation class UserAPI
+ * Servlet implementation class SubCategoryAPI
  */
 @WebServlet(urlPatterns = "/api-admin-subcategory")
 public class SubCategoryAPI extends HttpServlet {

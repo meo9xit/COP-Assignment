@@ -4,9 +4,7 @@ import java.util.List;
 
 import com.chiasetailieu.dao.ICommentDAO;
 import com.chiasetailieu.dao.mapper.CommentMapper;
-import com.chiasetailieu.dao.mapper.SubcateMapper;
 import com.chiasetailieu.model.Comment;
-import com.chiasetailieu.model.SubCategory;
 
 public class CommentDAO extends GenericDAO<Comment> implements ICommentDAO{
 

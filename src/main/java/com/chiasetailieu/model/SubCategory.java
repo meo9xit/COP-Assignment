@@ -4,7 +4,7 @@ public class SubCategory extends AbstractModel<SubCategory> {
 	private Long subcategoryID;
 	private String subcategoryName;
 	private Category category;
-	private long categoryId;
+	private Long categoryId;
 
 	public Long getSubcategoryID() {
 		return subcategoryID;
@@ -30,12 +30,12 @@ public class SubCategory extends AbstractModel<SubCategory> {
 		this.category = category;
 	}
 
-	public long getCategoryId() {
+	public Long getCategoryId() {
 		return categoryId;
 	}
 
-	public void setCategoryId(long l) {
-		this.categoryId = l;
+	public void setCategoryId(Long categoryId) {
+		this.categoryId = categoryId;
 	}
 
 }
