@@ -29,7 +29,7 @@ public class AdminSubCategory extends HttpServlet {
 		if (model.getType() == null) {
 			url = "/view/admin-form/pages/tables/Table_SubCategory.jsp";
 			model.setListResult(subcategoryService.findAll());
-		} else if (model.getType() == "ADD"){
+		} else if (model.getType() == "add"){
 			url = "/view/admin-form/pages/forms/AddSubCategory.jsp";
 		}
 		else {
