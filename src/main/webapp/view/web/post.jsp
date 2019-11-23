@@ -723,8 +723,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 									<div class="img-border">
 										<img id="mainbody_contentbody_CodeImage"
 											title="Download ngay Full code website bán hàng laptop, điện thoại, linh kiện bằng framework codeigniter (full 100%)"
-											class="img-val" itemprop="image"
-											src="${doc.cover }"
+											class="img-val" itemprop="image" src="${doc.cover }"
 											alt="framework codeigniter,website,full code,bán laptop,bán hàng điện thoại linh kiện máy tính,CI" />
 									</div>
 									<div class="text-center dt-gallery">
@@ -744,7 +743,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 												id="mainbody_contentbody_Views">${doc.view }</b></span>&nbsp;&nbsp;&nbsp;&nbsp;
 										</div>
 									</div>
-									
+
 									<div class="line"></div>
 									<div class="row">
 										<div class="col-md-7 dt-des">
@@ -776,9 +775,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 									<div class="line"></div>
 								</div>
 							</div>
-							<div class="row">
-								
-							</div>
+							<div class="row"></div>
 							<br />
 							<div class="dt-sub" title="Mô tả ngắn">
 								<h4 class="title1" itemprop="description">${doc.description }</h4>
@@ -786,7 +783,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 
 							<br /> <span class="dt-box-title bold">Preview</span>
 							<div class="dt-box entry-detail">
-								<embed src="${doc.docSource }" type="application/pdf"   height="700px" width="500">
+								<embed src="${doc.docSource }" type="application/pdf"
+									height="700px" width="500">
 							</div>
 							<br /> <br /> <span class="dt-box-title bold">HƯỚNG DẪN
 								CÀI ĐẶT</span>
@@ -809,13 +807,12 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 
 									</div>
 									<div class="col-sm-5 col-md-4 text-center">
-										 <a
-											onclick="createCaptcha(); return false;"
+										<a onclick="createCaptcha(); return false;"
 											id="mainbody_contentbody_btnLinkMain"
-											title="Download ${doc.docName }"
-											class="btn2 button-down2" data-target="#Download_now_modal"
-											role="button" data-toggle="modal"
-											href="<c:url value = "/download?id = ${doc.id }" />" ><div
+											title="Download ${doc.docName }" class="btn2 button-down2"
+											data-target="#Download_now_modal" role="button"
+											data-toggle="modal"
+											href="<c:url value = "/download?id = ${doc.id }" />"><div
 												class="btn-box">
 												<div class="btn-ic"></div>
 												<div class="btn-txt bold">
@@ -1246,30 +1243,31 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 									<img src="..style/post/avanta.png"
 										id="mainbody_contentbody_img" width="45" height="45" />
 								</div>
-								<div class="cmt-box">
-									<textarea name="ctl00$ctl00$mainbody$contentbody$txtComment"
-										rows="3" cols="20" id="mainbody_contentbody_txtComment"
-										class="form-control send-sp" placeholder="Nhập nội dung...">
-</textarea>
-
-									<a data-toggle="modal" data-target="#LoginForm"
-										onclick="createCaptcha();" role="button"
-										class="button-orange button-small alignright"><i
-										class="fa fa-comment line-h20" aria-hidden="true"></i>&nbsp;BÌNH
-										LUẬN</a>&nbsp;&nbsp;
-
-								</div>
+								<form id="formSubmit">
+									<div class="form-group">
+										<div class="form-line">
+											<input type="text" id="content" class="form-control"
+												name="content" placeholder="Enter Your Comment!"
+												value="${model.content}">
+										</div>
+									</div>
+									<br> <input type="button"
+										class="btn btn-primary m-t-15 waves-effect" id="btnAdd"
+										value="Bình Luận" />
+								</form>
 								<div style="display: none;" class="cmt-reply CommentReply">
 									<div class="cmt-img">
 										<img src="..style/post/avanta.png"
 											id="mainbody_contentbody_img2" width="45" height="45" />
 									</div>
 									<div class="cmt-box">
-										<textarea
-											name="ctl00$ctl00$mainbody$contentbody$txtCommentReply"
-											rows="2" cols="20" id="mainbody_contentbody_txtCommentReply"
-											class="form-control send-sp" placeholder="Nhập nội dung...">
-</textarea>
+										<div class="form-group">
+											<div class="form-line">
+												<input type="number" id="subcategoryID" class="form-control"
+													name="subcategoryID" placeholder="Enter subcategory id!"
+													value="${model.content}">
+											</div>
+										</div>
 
 										<a data-toggle="modal" data-target="#LoginForm"
 											onclick="createCaptcha();" role="button"
@@ -1292,14 +1290,17 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 											<img width="45" height="45" src="style/post/avanta.png" />
 										</a>
 									</div>
-									<form action="<c:url value='/comment'/>"
-										id="formSubmit" method="get">
+									<form action="<c:url value='/comment'/>" id="formSubmit"
+										method="get">
 										<div class="cmt-box cmt-border">
 											<c:forEach var="comment" items="${model.listResult}">
 												<div class="cmt-head">
-													<a href='/thanh-vien/thanh-chu-240350.htm' target="_blank"
-														class="bold agreen">${comment.user.username}</a><span
-														class="txt-colo cmt-right  cmt-date">${comment.docId}</span>
+													<span class="txt-colo cmt-right  cmt-date">Người
+														nhập: ${comment.user.getUsername()}</span><span
+														class="txt-colo cmt-right  cmt-date">Mã tài liệu:
+														${comment.docId}</span> <span
+														class="txt-colo cmt-right  cmt-date">Ngày viết:
+														${comment.createdDate}</span>
 												</div>
 												<div class="cmt-content">${comment.content}</div>
 											</c:forEach>
@@ -1450,7 +1451,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 
     }
             </script>
-            <script>
+						<script>
 		function btnDeleteClick(obj) {
 			var data = {};
 			var ids = obj.value;
@@ -2332,7 +2333,34 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 		</div>
 	</div>
 
-
+	<script>
+		$('#btnAdd').click(function(e) {
+			e.preventDefault();
+			var data = {};
+			var formData = $('#formSubmit').serializeArray();
+			$.each(formData, function(i, v) {
+				data["" + v.name + ""] = v.value;
+			});
+			console.info(data);
+			addNew(data);
+		});
+		function addNew(data) {
+			$
+					.ajax({
+						url : '${APIurl}',
+						type : 'POST',
+						contentType : 'application/json',
+						data : JSON.stringify(data),
+						dataType : 'json',
+						success : function(result) {
+							window.location.href = "/chiasetailieu/comment";
+						},
+						error : function(error) {
+							window.location.href = "/chiasetailieu/comment";
+						}
+					});
+		}
+	</script>
 	<script>
         //Lấy cookie trạng thái tài khoản
         function getCookieACC() {

@@ -33,7 +33,9 @@ public class AdminComment extends HttpServlet {
 			model.setListResult(commentService.findAll());
 		} else {
 			/* url = "/view/admin-form/pages/forms/AddUser.jsp"; */
-			url = "/view/admin-form/pages/tables/Table_Comment.jsp";
+			url = "/view/web/post.jsp";
+			model.setListResult(commentService.findAll());
+
 
 		}
 		request.setAttribute("model", model);

@@ -729,11 +729,10 @@
 													<td>${comment.createdDate}</td>
 													<td>${comment.modifiedDate}</td>
 													<td>${comment.content}</td>
-													<td><button value="${comment.comment_id}"
+													<td><button value="${comment.id}"
 															onClick="btnDeleteClick(this)">
 															<img src="style/admin/images/Delete_16x16.png" />
 														</button></td>
-
 												</tr>
 											</c:forEach>
 										</tbody>

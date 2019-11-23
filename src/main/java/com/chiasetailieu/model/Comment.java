@@ -47,10 +47,4 @@ public class Comment extends AbstractModel<Comment> {
 		this.content = content;
 	}
 
-	@Override
-	public String toString() {
-		return "Comment [user=" + user + ", userId=" + userId + ", docId=" + docId + ", doc=" + doc + ", content="
-				+ content + "]";
-	}
-
 }
