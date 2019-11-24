@@ -87,22 +87,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
         <div class="row-fluid">
             <div id="myCarousel" class="carousel slide vertical">
                 <div class="carousel-inner">
-                    <div class="item active" style="background: #86bd3b;">
-                        
-                        <a href="https://sharecode.vn/thanh-vien-upload.htm" title="UPLOAD source code KIẾM TIỀN cùng Sharecode.vn">
-                            <img src="style/upload/code-hay-upload-kiem-tien.jpg">
-                        </a>
-                        
-                    </div>
-                     <div class="item" style="background: #2175ba;">
-                        <a href="https://sharecode.vn/kien-thuc-lap-trinh/dich-vu-thiet-ke-website-chuyen-nghiep-voi-gia-cuc-re-va-nhieu-uu-dai-tai-sharecodevn-880.htm" title="Dịch vụ thiết kế website" target="_blank">
-                            <img src="style/upload/thiet-ke-website.jpg">
-                        </a>
-                    </div>
-                   <div class="item" style="background: #34a5cd;">
-                                <a href="https://sharecode.vn/vps-may-chu-ao.htm" title="Đăng kí CLOULD VPS NGAY!">
-                                <img src="style/upload/share-code-clould-vps.jpg"> </a>
-                            </div>
                           
                    
                 </div>
@@ -113,12 +97,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
             <div class="top-header">
                 <div class="container">                    
                     <div class="nav-top-links">
-                        <a class="first-item" href="tel:+84981282756" title="Click gọi ngay!">
-                            <img alt="hotline" src="style/upload/phone.png">0981.282.756</a>
-                        <a href="mailto:sharecode.contact@gmail.com" title="Click để gửi email!">
-                            <img alt="email sharecode" src="style/upload/email.png">Sharecode.contact@gmail.com</a>
-                        <a href="https://sharecode.vn/kien-thuc-lap-trinh.htm">Kiến thức lập trình</a>
-                        <a href="https://sharecode.vn/su-kien.htm">Sự kiện</a>
                     </div>
                     
                     <div id="ExitBox" class="support-link">
@@ -129,13 +107,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                             <a href="https://sharecode.vn/code-upload-cua-toi.htm" id="UserName2" class="current-open" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Xin chào, ${loginedUser.username}"><span>Xin chào, </span><span id="UserName"><b>${loginedUser.username }</b></span></a>
                             <ul class="dropdown-menu mega_dropdown" role="menu">
                                 <li><a href="https://sharecode.vn/code-upload-cua-toi.htm"><i class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp;Code tải lên</a></li>
-                                <li><a href="https://sharecode.vn/code-da-luu.htm"><i class="fa fa-folder-open" aria-hidden="true"></i>&nbsp;&nbsp;Code đã lưu</a></li>
-                                <li><a href="https://sharecode.vn/code-download.htm"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;Code đã mua</a></li>
-                                <li><a href="https://sharecode.vn/doanh-thu-ban-code.htm"><i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp;Doanh thu bán code</a></li>
-                                <li><a href="https://sharecode.vn/lich-su-giao-dich.htm"><i class="fa fa-history" aria-hidden="true"></i>&nbsp;&nbsp;Lịch sử nạp tiền</a></li>
-                                <li><a href="https://sharecode.vn/rut-tien.htm"><i class="fa fa-money" aria-hidden="true"></i>&nbsp;Rút tiền</a></li>
-                                <li><a href="https://me.sharecode.vn/" target="_blank"><i class="fa fa-server" aria-hidden="true"></i>&nbsp;Quản lý Domain - Hosting</a></li>
-                                <li><a href="https://sharecode.vn/binh-luan.htm" class="orange"><i class="fa fa-comment" aria-hidden="true"></i>&nbsp;Bình luận</a></li>
                                 <li><a href="https://sharecode.vn/thong-tin-ca-nhan.htm" class="green"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Cài đặt thông tin</a></li>
                             </ul>
                         </div>
@@ -153,43 +124,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                         <div class="form-inline search-h">
                             <div id="regPanel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnSearch&#39;)">
 	
-                                <div class="form-group form-category">
-                                    <input type="hidden" name="ctl00$ctl00$ctl00$hdLangFilter" id="hdLangFilter">
-                                    <select class="select-category select2-hidden-accessible" id="slSearch" tabindex="-1" aria-hidden="true">
-                                        <option value="0">TẤT CẢ CODE</option>
-                                        
-                                                <option value="15">Android</option>
-                                            
-                                                <option value="23">iOS</option>
-                                            
-                                                <option value="26">Windows phone</option>
-                                            
-                                                <option value="21">PHP &amp; MySQL</option>
-                                            
-                                                <option value="29">WordPress</option>
-                                            
-                                                <option value="28">Joomla</option>
-                                            
-                                                <option value="17">Visual C#</option>
-                                            
-                                                <option value="16">Asp/Asp.Net</option>
-                                            
-                                                <option value="20">Java/JSP</option>
-                                            
-                                                <option value="19">Visual Basic</option>
-                                            
-                                                <option value="24">Cocos2D</option>
-                                            
-                                                <option value="27">Unity</option>
-                                            
-                                                <option value="18">Visual C++</option>
-                                            
-                                                <option value="25">Html &amp; Template</option>
-                                            
-                                                <option value="22">Khác</option>
-                                            
-                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 127px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-slSearch-container"><span class="select2-selection__rendered" id="select2-slSearch-container" title="TẤT CẢ TÀI LIỆU">TẤT CẢ TÀI LIỆU</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                                </div>
                                 <div class="form-group input-serach">
                                     <input name="ctl00$ctl00$ctl00$txtSearch" type="text" id="txtSearch" class="txt-search txt-auto ui-autocomplete-input" placeholder="Nhập Từ khóa (or) Mã tài liệu" autocomplete="off">
                                 </div>
@@ -203,46 +137,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                         <a data-toggle="modal" data-target="#AddMoney" role="button" class="button-green" onclick="createCaptcha();" title="Nạp tiền vào tài khoản"><i class="fa fa-money fa-lg" aria-hidden="true"></i>&nbsp; NẠP XU</a>&nbsp;&nbsp;
                         
 
-<div class="modal fade custom" id="AddMoney" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header popup_header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                <p class="modal-title text-center" id="myModalLabel">NẠP TIỀN VÀO TÀI KHOẢN</p>
-
-            </div>
-            <div class="modal-body">
-                <div class="row bg-pop-info">
-                    <div class="col-xs-12">
-                        <span><i class="fa fa-user fa-lg" aria-hidden="true"></i><span id="ucPopupMoney_moneyUser"> Hà Duy Hưng (Mã thành viên 299971)</span></span>&nbsp;&nbsp;&nbsp;
-                        <span><i class="fa fa-envelope fa-lg" aria-hidden="true"></i><span id="ucPopupMoney_moneyEmail"> meo9xit@gmail.com</span></span>&nbsp;&nbsp;&nbsp;
-                        <span>Tài khoản: <b id="ucPopupMoney_moneyMoney"> 0 Xu</b> </span>&nbsp;&nbsp;&nbsp;
-                        <span>Khả dụng: <b id="ucPopupMoney_moneyAllow" class="agreen">0 Xu</b></span>
-                    </div>
-                </div>
-                <div class="row bg-tab">
-                    <div class="col-xs-12">
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="bold active"><a href="https://sharecode.vn/thanh-vien-upload.htm#mnATM" role="tab" data-toggle="tab">1 - THẺ ATM ONLINE</a></li>
-                            <li role="presentation" class="bold"><a href="https://sharecode.vn/thanh-vien-upload.htm#mnSendATM" role="tab" data-toggle="tab">2 - CHUYỂN KHOẢN</a></li>
-                            <li role="presentation" class="bold"><a href="https://sharecode.vn/thanh-vien-upload.htm#mnNL" role="tab" data-toggle="tab">3 - VÍ ĐIỆN TỬ</a></li>
-                            <li role="presentation" class="bold"><a href="https://sharecode.vn/thanh-vien-upload.htm#mnPay" role="tab" data-toggle="tab">4 - PAYPAL</a></li>
-                            <li role="presentation" class="bold"><a href="https://sharecode.vn/thanh-vien-upload.htm#mnVisa" role="tab" data-toggle="tab">5 - THẺ TÍN DỤNG</a></li>
-                            
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="tab-content col-xs-12">
-                       
-
-                    </div>
-                </div>
-            </div>
-            <div class="line_orn"></div>
-        </div>
-    </div>
-</div>
 
                         <a href="https://sharecode.vn/thanh-vien-upload.htm" class="button-orange" title="Upload code kiếm tiền"><i class="fa fa-cloud-upload fa-lg" aria-hidden="true"></i>&nbsp; TẢI LÊN</a>
                         
@@ -361,20 +255,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                             <li id="mntopcode" title="Top code nổi bật"><a href="https://sharecode.vn/top-codes.htm">Top tài liệu</a></li>
                                             <li id="mncodeok" title="Code chất lượng (&gt;= 100 Xu)"><a href="https://sharecode.vn/code-chat-luong.htm">Tài liệu chất lượng <span class="notify notify-right"></span></a></li>
                                             <li id="mncode" title="Code tham khảo (2 Xu - 99 Xu)"><a href="https://sharecode.vn/code-tham-khao.htm">Tài liệu tham khảo</a></li>
-                                            <li id="mndomain" class="dropdown">
-                                                <a href="https://sharecode.vn/hosting-ssd.htm" class="dropdown-toggle">Tên miền - Hosting <span class="notify notify-right"></span></a>
-                                                <ul class="dropdown-menu container-fluid">
-                                                    <li class="block-container">
-                                                        <ul class="block">
-                                                            <li class="link_container"><a href="https://sharecode.vn/dang-ki-ten-mien.htm">Đăng kí tên miền</a></li>
-                                                            <li class="link_container"><a href="https://sharecode.vn/hosting-ssd.htm">Hosting SSD</a></li>
-                                                            <li class="link_container"><a href="https://sharecode.vn/vps-may-chu-ao.htm">Clould VPS</a></li>
-                                                            <li class="link_container"><a href="https://sharecode.vn/email-server.htm">Email server</a></li>
-                                                            <li class="link_container"><a href="https://sharecode.vn/chung-thuc-ssl.htm">Chứng thực SSL</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
+             
                                         </ul>
                                     </div>
                                 </div>

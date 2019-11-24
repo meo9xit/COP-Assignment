@@ -71,11 +71,7 @@ function __doPostBack(eventTarget, eventArgument) {
 
 <script src="style/userinfo/ScriptResource.axd" type="text/javascript"></script>
 <script src="style/userinfo/ScriptResource(1).axd" type="text/javascript"></script>
-<div class="aspNetHidden">
 
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A7F7659A">
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAB1QEuSAFyzCDFW8IP2STEYzicdokvXrko/HzcC2ytH5LOUCRZ2fmNYwaJ6nLB+QKRfzqgylkSC105WTXjqRLBEiMXn6wy/zBjWQF3IX0QM3eVgqnuNz7Lzf3zDBlOJhlOuHO3xHfyQR+G0qbZsvpNAEjrwKKnvjgCf57LqzCGJNBPXj45ZamvHmOwHWXD3mrR3RL2til5QvRKSl4G1aNFRFkDxGQm9jX45jK/gKvuqaclfrbia0bMSM36db9JONvphx0r/lyxYpMZxnmYJv0Fm1pl75Bzox8RS/AzS0H8EoA2Fhqq5ns9Hmb0qtoUwUbDzZs1FXucZeMU67d4Xxc1oCiBFA5PgfglHz4eMI8PtosR3ogPnCVwiixDy9XCe/abwir5+0uESG4EWrZvt3DgqD4eHYSCRc8NYGaU7l3ZuQCVHus69Vz66HfY3/KvUwLgvrCiW02UJB8Fu45rhc7J26fESkRdhpFQF03P7IvayCDexLsyauIjF5yQKNpODF9VoC0Fdzz3/Gbei4zgM/dOpTbwwalfUXke6DU6MbAlT7M/rRrh15SmTdiYpYuIlt3vVoUeL50O6GcvxIODsHBDBgvEzshNcK6dl8iHt2OtYwpxZkd5i+KF6NQWt5gM1LlrIjrbNp">
-</div>
         <script type="text/javascript">
 //<![CDATA[
 Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 'form1', ['tctl00$ctl00$ctl00$ctl24','ctl24'], [], [], 90, 'ctl00$ctl00$ctl00');
@@ -199,7 +195,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                         </div></div>
                     <div class="col-xs-5 col-sm-2 col-md-3 shopping-cart-box btn-align">
                         
-                        <a data-toggle="modal" data-target="#AddMoney" role="button" class="button-green" onclick="createCaptcha();" title="Nạp tiền vào tài khoản"><i class="fa fa-money fa-lg" aria-hidden="true"></i>&nbsp; NẠP XU</a>&nbsp;&nbsp;
                         
 <script type="text/javascript">   
     function Check_ATM() {
@@ -1483,7 +1478,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 
             <div class="form-group line-h">
                 <div class="col-sm-offset-5 col-sm-6">
-                    <a onclick="return validate_update();" id="mainbody_contentbody_contentpage_btnUpdate" class="button-orange" ><i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp; Cập nhật thông tin</a>
+                    <a onclick="performsubmit();" id="mainbody_contentbody_contentpage_btnUpdate" class="button-orange" ><i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp; Cập nhật thông tin</a>
                 </div>
             </div>
         </div>
@@ -1511,43 +1506,13 @@ function performsubmit() {
     <div class="pro-right">
         <h2 id="mainbody_contentbody_ucProfile_FullName" class="pro-title green bold">Hà Duy Hưng</h2>
         <div class="line"></div>
-        <div class="pro-money">
-            <div>Tài khoản&nbsp;<strong id="mainbody_contentbody_ucProfile_Money">0</strong> Xu</div>
-            <div>Tạm giữ&nbsp;&nbsp;&nbsp;&nbsp;<span class="aorange"><strong id="mainbody_contentbody_ucProfile_MoneyKeep" title="Số XU đang bị tạm giữ cho giao dịch code vừa được bán">0</strong> Xu</span> <i id="mainbody_contentbody_ucProfile_InfoKeep" class="fa fa-info-circle" aria-hidden="true" title="Số XU đang bị tạm giữ cho giao dịch code vừa được bán"></i></div>
-             <div>Khả dụng&nbsp;&nbsp;<span class="agreen"><strong id="mainbody_contentbody_ucProfile_MoneyAllow" title="Số XU tối đa có thể sử dụng để mua code (hoặc) rút tiền">0</strong> Xu</span> <i title="Số XU tối đa có thể sử dụng để mua code (hoặc) rút tiền" class="fa fa-info-circle" aria-hidden="true"></i></div>
-            
-        </div>
     </div>
     <div class="pro-link clear pro-link-first">
         <a href="https://sharecode.vn/thong-tin-ca-nhan.htm" class="aorange"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Cài đặt TT</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://sharecode.vn/thanh-vien/meo9xit-299971.htm" id="mainbody_contentbody_ucProfile_LinkPageUser" class="aorange"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;Trang cá nhân</a>
-    </div>
-     <div class="pro-link">
-        <a href="https://sharecode.vn/bao-code-trung.htm" class="aorange"><i class="fa fa-clipboard" aria-hidden="true"></i>&nbsp;Báo bản quyền </a>&nbsp;&nbsp;
-        <a href="https://sharecode.vn/binh-luan.htm" class="aorange pro-line14"><i class="fa fa-comment" aria-hidden="true"></i>&nbsp;Bình luận <span id="mainbody_contentbody_ucProfile_CmtCount" class="badge bagde-green badge-link">0</span></a>
     </div>
     <ul class="pro-list">
         <li id="mnCodeUpload">
-            <a href="https://sharecode.vn/code-upload-cua-toi.htm">Code tải lên (<strong id="mainbody_contentbody_ucProfile_UploadCount">0</strong>)</a>
-        </li>
-        <li id="mnCodeSave">
-            <a href="https://sharecode.vn/code-da-luu.htm">Code đã lưu (<strong id="mainbody_contentbody_ucProfile_SaveCount">0</strong>)</a>
-        </li>
-         <li id="mnCodeDown">
-            <a href="https://sharecode.vn/code-download.htm">Code đã mua (<strong id="mainbody_contentbody_ucProfile_BuyCount">0</strong>)</a>
-        </li>
-        <li id="mnCodeSell">
-            <a href="https://sharecode.vn/doanh-thu-ban-code.htm">Doanh thu bán code</a>
-        </li>
-       
-        <li id="mnAddMoney">
-            <a href="https://sharecode.vn/lich-su-giao-dich.htm">Lịch sử nạp tiền</a>
-        </li>
-        <li id="mnGetMoney">
-            <a href="https://sharecode.vn/rut-tien.htm">Rút tiền</a>
-        </li>
-          <li id="Li1">
-            <a href="https://me.sharecode.vn/" target="_blank">Quản lý Domain - Hosting</a>
+            <a href="https://sharecode.vn/code-upload-cua-toi.htm">Tài liệu đăng tải(<strong id="mainbody_contentbody_ucProfile_UploadCount">0</strong>)</a>
         </li>
     </ul>
 </div>
