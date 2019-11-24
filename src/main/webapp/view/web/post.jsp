@@ -1255,28 +1255,28 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 										class="btn btn-primary m-t-15 waves-effect" id="btnAdd"
 										value="Bình Luận" />
 								</form>
-								<div style="display: none;" class="cmt-reply CommentReply">
-									<div class="cmt-img">
-										<img src="..style/post/avanta.png"
-											id="mainbody_contentbody_img2" width="45" height="45" />
-									</div>
-									<div class="cmt-box">
-										<div class="form-group">
-											<div class="form-line">
-												<input type="number" id="subcategoryID" class="form-control"
-													name="subcategoryID" placeholder="Enter subcategory id!"
-													value="${model.content}">
-											</div>
+								<form id="formSubmit">
+									<div style="display: none;" class="cmt-reply CommentReply">
+										<div class="cmt-img">
+											<img src="..style/post/avanta.png"
+												id="mainbody_contentbody_img2" width="45" height="45" />
 										</div>
+										<div class="cmt-box">
+											<div class="form-group">
+												<div class="form-line">
+													<input type="text" id="content" class="form-control"
+														name="content" placeholder="Enter your content!"
+														value="${model.content}">
+												</div>
+											</div>
 
-										<a data-toggle="modal" data-target="#LoginForm"
-											onclick="createCaptcha();" role="button"
-											class="button-orange button-small alignright"><i
-											class="fa fa-comment line-h20" aria-hidden="true"></i>&nbsp;BÌNH
-											LUẬN</a>&nbsp;&nbsp;
+											<input type="button"
+												class="btn btn-primary m-t-15 waves-effect" id="btnAdd"
+												value="Bình luận" />
 
+										</div>
 									</div>
-								</div>
+								</form>
 								<input type="hidden"
 									name="ctl00$ctl00$mainbody$contentbody$hdCommentParent"
 									id="mainbody_contentbody_hdCommentParent" /> <input
