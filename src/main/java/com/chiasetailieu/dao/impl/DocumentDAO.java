@@ -77,4 +77,12 @@ public class DocumentDAO extends GenericDAO<Document> implements IDocumentDAO{
 		return docs;
 	}
 
+	@Override
+	public List<Document> findDocuments(int curpage, int docperpage) {
+		// TODO Auto-generated method stub
+		int start = curpage*docperpage - docperpage;
+		String sql = "select * from Document limit ?, ?";
+		return query(sql, new DocumentMapper(), start, docperpage);
+	}
+
 }

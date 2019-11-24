@@ -47,11 +47,7 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
     <form method="post" action="https://sharecode.vn/thong-tin-ca-nhan.htm" id="form1" enctype="multipart/form-data">
-<div class="aspNetHidden">
-<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
-<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTU1MjIxMjEwOQ9kFgJmD2QWAmYPZBYCZg9kFgICAQ8WBB4GYWN0aW9uBRYvdGhvbmctdGluLWNhLW5oYW4uaHRtHgdlbmN0eXBlBRNtdWx0aXBhcnQvZm9ybS1kYXRhFhACAQ8WAh4HVmlzaWJsZWhkAgMPZBYCAgEPFgIeBXRpdGxlBRJYaW4gY2jDoG8sIG1lbzl4aXQWAgIBDxYCHglpbm5lcmh0bWwFDjxiPm1lbzl4aXQ8L2I+ZAIEDxYCHwJoZAIFD2QWAgIDDxYCHgtfIUl0ZW1Db3VudAIPFh5mD2QWAmYPFQICMTUHQW5kcm9pZGQCAQ9kFgJmDxUCAjIzA2lPU2QCAg9kFgJmDxUCAjI2DVdpbmRvd3MgcGhvbmVkAgMPZBYCZg8VAgIyMQtQSFAgJiBNeVNRTGQCBA9kFgJmDxUCAjI5CVdvcmRQcmVzc2QCBQ9kFgJmDxUCAjI4Bkpvb21sYWQCBg9kFgJmDxUCAjE3CVZpc3VhbCBDI2QCBw9kFgJmDxUCAjE2C0FzcC9Bc3AuTmV0ZAIID2QWAmYPFQICMjAISmF2YS9KU1BkAgkPZBYCZg8VAgIxOQxWaXN1YWwgQmFzaWNkAgoPZBYCZg8VAgIyNAdDb2NvczJEZAILD2QWAmYPFQICMjcFVW5pdHlkAgwPZBYCZg8VAgIxOApWaXN1YWwgQysrZAIND2QWAmYPFQICMjUPSHRtbCAmIFRlbXBsYXRlZAIOD2QWAmYPFQICMjIFS2jDoWNkAgYPZBYUAgEPFgIfBAU4IEgmIzIyNDsgRHV5IEjGsG5nIChNJiMyMjc7IHRoJiMyMjQ7bmggdmkmIzIzNDtuIDI5OTk3MSlkAgIPFgIfBAUSIG1lbzl4aXRAZ21haWwuY29tZAIDDxYCHwQFBSAwIFh1ZAIEDxYCHwQFBDAgWHVkAgYPFgIfBAUGMjk5OTcxZAIHDxYCHwQFBjI5OTk3MWQCCQ8WAh8EBQYyOTk5NzFkAgoPFgIfBAUGMjk5OTcxZAIMDxYCHwQFBjI5OTk3MWQCDQ8WAh8EBQYyOTk5NzFkAgcPFgIfBQIEFghmD2QWAmYPFQIidGhlLWxvYWktc291cmNlLWNvZGUvd2Vic2l0ZS0xLmh0bQdXZWJzaXRlZAIBD2QWAmYPFQIsdGhlLWxvYWktc291cmNlLWNvZGUvcGhhbi1tZW0tdW5nLWR1bmctMi5odG0bUGjhuqduIG3hu4FtIC0g4buobmcgZOG7pW5nZAICD2QWAmYPFQIfdGhlLWxvYWktc291cmNlLWNvZGUvZ2FtZS0zLmh0bQRHYW1lZAIDD2QWAmYPFQIfdGhlLWxvYWktc291cmNlLWNvZGUva2hhYy00Lmh0bQVLaMOhY2QCCA8WAh8FAg8WHmYPZBYCZg8VBAAiL25nb24tbmd1LWxhcC10cmluaC9hbmRyb2lkLTE1Lmh0bQdBbmRyb2lkB0FuZHJvaWRkAgEPZBYCZg8VBAAeL25nb24tbmd1LWxhcC10cmluaC9pb3MtMjMuaHRtA2lPUwNpT1NkAgIPZBYCZg8VBAAoL25nb24tbmd1LWxhcC10cmluaC93aW5kb3dzLXBob25lLTI2Lmh0bQ1XaW5kb3dzIHBob25lDVdpbmRvd3MgcGhvbmVkAgMPZBYCZg8VBAAkL25nb24tbmd1LWxhcC10cmluaC9waHAtbXlzcWwtMjEuaHRtC1BIUCAmIE15U1FMC1BIUCAmIE15U1FMZAIED2QWAmYPFQQAJC9uZ29uLW5ndS1sYXAtdHJpbmgvd29yZHByZXNzLTI5Lmh0bQlXb3JkUHJlc3MJV29yZFByZXNzZAIFD2QWAmYPFQQAIS9uZ29uLW5ndS1sYXAtdHJpbmgvam9vbWxhLTI4Lmh0bQZKb29tbGEGSm9vbWxhZAIGD2QWAmYPFQQAIy9uZ29uLW5ndS1sYXAtdHJpbmgvdmlzdWFsLWMtMTcuaHRtCVZpc3VhbCBDIwlWaXN1YWwgQyNkAgcPZBYCZg8VBAAkL25nb24tbmd1LWxhcC10cmluaC9hc3Bhc3BuZXQtMTYuaHRtC0FzcC9Bc3AuTmV0C0FzcC9Bc3AuTmV0ZAIID2QWAmYPFQQAIi9uZ29uLW5ndS1sYXAtdHJpbmgvamF2YWpzcC0yMC5odG0ISmF2YS9KU1AISmF2YS9KU1BkAgkPZBYCZg8VBAAnL25nb24tbmd1LWxhcC10cmluaC92aXN1YWwtYmFzaWMtMTkuaHRtDFZpc3VhbCBCYXNpYwxWaXN1YWwgQmFzaWNkAgoPZBYCZg8VBA9jYXQtbGluay1vcnRoZXIiL25nb24tbmd1LWxhcC10cmluaC9jb2NvczJkLTI0Lmh0bQdDb2NvczJEB0NvY29zMkRkAgsPZBYCZg8VBA9jYXQtbGluay1vcnRoZXIgL25nb24tbmd1LWxhcC10cmluaC91bml0eS0yNy5odG0FVW5pdHkFVW5pdHlkAgwPZBYCZg8VBA9jYXQtbGluay1vcnRoZXIjL25nb24tbmd1LWxhcC10cmluaC92aXN1YWwtYy0xOC5odG0KVmlzdWFsIEMrKwpWaXN1YWwgQysrZAIND2QWAmYPFQQPY2F0LWxpbmstb3J0aGVyKC9uZ29uLW5ndS1sYXAtdHJpbmgvaHRtbC10ZW1wbGF0ZS0yNS5odG0PSHRtbCAmIFRlbXBsYXRlD0h0bWwgJiBUZW1wbGF0ZWQCDg9kFgJmDxUED2NhdC1saW5rLW9ydGhlch8vbmdvbi1uZ3UtbGFwLXRyaW5oL2toYWMtMjIuaHRtBUtow6FjBUtow6FjZAIKD2QWBAIBD2QWAgIBD2QWAgIBDxYCHwQFB21lbzl4aXRkAgMPZBYKAgEPFgIfAmhkAgMPZBYCAgEPZBYEAgEPFgIfBAURbWVvOXhpdEBnbWFpbC5jb21kAg0PFgQeA2FsdAUXbWVvOXhpdCAtIEjDoCBEdXkgSMawbmcfAwUNSMOgIER1eSBIxrBuZ2QCBQ9kFhQCAQ8WBB8GBRdtZW85eGl0IC0gSMOgIER1eSBIxrBuZx8DBRdtZW85eGl0IC0gSMOgIER1eSBIxrBuZ2QCAw8WAh8EBRFIJiMyMjQ7IER1eSBIxrBuZ2QCBQ8WAh8EBQEwZAIHDxYEHwQFATAfAwVHU+G7kSBYVSDEkWFuZyBi4buLIHThuqFtIGdp4buvIGNobyBnaWFvIGThu4tjaCBjb2RlIHbhu6thIMSRxrDhu6NjIGLDoW5kAgkPFgIfAwVHU+G7kSBYVSDEkWFuZyBi4buLIHThuqFtIGdp4buvIGNobyBnaWFvIGThu4tjaCBjb2RlIHbhu6thIMSRxrDhu6NjIGLDoW5kAgsPFgIfBAUBMGQCDQ8WAh4EaHJlZgUeL3RoYW5oLXZpZW4vbWVvOXhpdC0yOTk5NzEuaHRtZAIPDxYCHwQFATBkAhEPFgIfBAUBMGQCFQ8WAh8EBQEwZAIHD2QWAmYPZBYCAgEPFgIfBQIDFgZmD2QWAmYPFQRCaHR0cDovL3NoYXJlY29kZS52bi9jYXUtaG9pL2h1b25nLWRhbi1uYXAtdGllbi12YW8tdGFpLWtob2FuLTguaHRtNEZpbGVzVXBsb2FkL0Jhbm5lci8xM180OV8zN19uYXAgeHUgdmFvIHRhaSBraG9hbi5qcGdpTuG6oXAgeHUsIG7huqFwIHRp4buBbiwgcXV5IMSR4buVaSwgbuG6oXAgdGjhursgY8OgbywgbuG6oXAgcXVhIG5nw6JuIGjDoG5nLCBu4bqhcCBxdWEgdsOtIG5nw6JuIGzGsOG7o25nIE7huqFwIFhVIHbDoG8gdMOgaSBraG/huqNuIG5nYXkhZAIBD2QWAmYPFQRNaHR0cDovL3NoYXJlY29kZS52bi9jYXUtaG9pL21lby1naXVwLWJhbi10YW5nLWRvYW5oLXRodS1iYW4tc291cmNlLWNvZGUtOS5odG07RmlsZXNVcGxvYWQvQmFubmVyLzE1XzE5XzE4X21lbyB0YW5nIGRvYW5oIHRodSBiYW4gY29kZS5qcGc0RG9hbmggdGh1LCB0xINuZyBkb2FuaCB0aHUsIGzhu6NpIG5odeG6rW4sIGLDoW4gY29kZS9N4bq5byBnacO6cCB0xINuZyBET0FOSCBUSFUgYsOhbiBDT0RFIGNobyBi4bqhbmQCAg9kFgJmDxUETi9zdS1raWVuL3V1LWRhaS10dW5nLWJ1bmctdGFuZy10aHVvbmcta2hpLXVwbG9hZC12YS11cGxvYWQtY29kZS1kYXQtbW9jLTExLmh0bTVGaWxlc1VwbG9hZC9CYW5uZXIvMF8yMl81X3NoYXJlY29kZSB0YW5nIHRodW9uZyAyLmpwZzFz4buxIGtp4buHbiwgZXZlbnQsIHThurduZyB0aMaw4bufbmcsIHVwbG9hZCBjb2RlWVPhu7Ega2nhu4duOiBN4burbmcgbmfDoHkgZ2nhu5cgdOG7lSAxMC8zIC0gVOG6t25nIHRoxrDhu59uZyBraGkgdXBsb2FkIGNvZGUgxJHhuqF0IG3hu5FjZAIJD2QWAgIBDxYCHwUCBRYKZg9kFgJmDxUENy9jYXUtaG9pL2NhY2gtdXBsb2FkLWNvZGUtaGlldS1xdWEtdmEtdG9pLXV1LXNlby0xMC5odG02Q8OhY2ggVVBMT0FEIGNvZGUgaGnhu4d1IHF14bqjIHbDoCB04buRaSDGsHUgU0VPIC0gRkFRMEPDoWNoIFVQTE9BRCBjb2RlIGhp4buHdSBxdeG6oyB2w6AgdOG7kWkgxrB1IFNFTwZpY19ob3RkAgEPZBYCZg8VBDovY2F1LWhvaS9tZW8tZ2l1cC1iYW4tdGFuZy1kb2FuaC10aHUtYmFuLXNvdXJjZS1jb2RlLTkuaHRtOE3hurlvIGdpw7pwIGLhuqFuIFTEgk5HIERPQU5IIFRIVSBiw6FuIHNvdXJjZSBjb2RlIC0gRkFRMk3hurlvIGdpw7pwIGLhuqFuIFTEgk5HIERPQU5IIFRIVSBiw6FuIHNvdXJjZSBjb2RlBmljX2hvdGQCAg9kFgJmDxUELy9jYXUtaG9pL2h1b25nLWRhbi1uYXAtdGllbi12YW8tdGFpLWtob2FuLTguaHRtM0jGsOG7m25nIGThuqtuIE7huqBQIFRJ4buATiB2w6BvIHTDoGkga2hv4bqjbiAtIEZBUS1IxrDhu5tuZyBk4bqrbiBO4bqgUCBUSeG7gE4gdsOgbyB0w6BpIGtob+G6o24AZAIDD2QWAmYPFQQuL2NhdS1ob2kvaHVvbmctZGFuLXJ1dC10aWVuLXR1LXRhaS1raG9hbi03Lmh0bTJIxrDhu5tuZyBk4bqrbiBSw5pUIFRJ4buATiB04burIHTDoGkga2hv4bqjbiAtIEZBUSxIxrDhu5tuZyBk4bqrbiBSw5pUIFRJ4buATiB04burIHTDoGkga2hv4bqjbgBkAgQPZBYCZg8VBEAvY2F1LWhvaS9odW9uZy1kYW4tY2FjaC1jaGF5LXdlYnNpdGUtYXNwbmV0LXRyZW4tbG9jYWxob3N0LTIuaHRtQUjGsOG7m25nIGThuqtuIGPDoWNoIGNo4bqheSB3ZWJzaXRlIEFTUC5OZXQgdHLDqm4gTG9jYWxob3N0IC0gRkFRO0jGsOG7m25nIGThuqtuIGPDoWNoIGNo4bqheSB3ZWJzaXRlIEFTUC5OZXQgdHLDqm4gTG9jYWxob3N0AGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgcFP2N0bDAwJGN0bDAwJGN0bDAwJG1haW5ib2R5JGNvbnRlbnRib2R5JGNvbnRlbnRwYWdlJENoZWNrYm94RnJlZQU/Y3RsMDAkY3RsMDAkY3RsMDAkbWFpbmJvZHkkY29udGVudGJvZHkkY29udGVudHBhZ2UkQ2hlY2tib3hDb2RlBT9jdGwwMCRjdGwwMCRjdGwwMCRtYWluYm9keSRjb250ZW50Ym9keSRjb250ZW50cGFnZSRDaGVja2JveFNlbmQFP2N0bDAwJGN0bDAwJGN0bDAwJG1haW5ib2R5JGNvbnRlbnRib2R5JGNvbnRlbnRwYWdlJENoZWNrYm94U2F2ZQVFY3RsMDAkY3RsMDAkY3RsMDAkbWFpbmJvZHkkY29udGVudGJvZHkkY29udGVudHBhZ2UkQ2hlY2tib3hVcGxvYWRXYWl0BUdjdGwwMCRjdGwwMCRjdGwwMCRtYWluYm9keSRjb250ZW50Ym9keSRjb250ZW50cGFnZSRDaGVja2JveFVwbG9hZFRlc3RlZAVCY3RsMDAkY3RsMDAkY3RsMDAkbWFpbmJvZHkkY29udGVudGJvZHkkY29udGVudHBhZ2UkQ2hlY2tib3hNZXNzYWdlGLMWB7ncdJMBzZNtfHDwoRYrIYE=">
-</div>
+
 
 <script type="text/javascript">
 //<![CDATA[
@@ -1432,19 +1428,20 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
     </div>
     <br>
     <br>
+    <form id = "userinfo-form" enctype="multipart/form-data">
     <div id="mainbody_contentbody_contentpage_panDefaultButton" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;mainbody_contentbody_contentpage_btnUpdate&#39;)">
 	
         <div class="form-horizontal">
             <div class="form-group">
                 <label class="col-sm-5 control-label">Email đăng kí</label>
                 <div class="col-sm-5  pro-top7">
-                    <b id="mainbody_contentbody_contentpage_updateEmail" class="green">meo9xit@gmail.com</b>
+                    <b id="mainbody_contentbody_contentpage_updateEmail" class="green">${loginedUser.email }</b>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-5 control-label">Họ và tên<span class="text-error">*</span></label>
                 <div class="col-sm-4">
-                    <input name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$updateFullName" type="text" id="mainbody_contentbody_contentpage_updateFullName" maxlength="40" placeholder="VD: Trần Thanh Tâm" class="form-control" value="Hà Duy Hưng">
+                    <input name="name" type="text" id="mainbody_contentbody_contentpage_updateFullName" maxlength="40" placeholder="VD: Trần Thanh Tâm" class="form-control" value="Hà Duy Hưng">
                 </div>
                 <div class="col-sm-3">
                     <div id="updateFullName_error" class="text-error pro-top7">&nbsp;</div>
@@ -1453,7 +1450,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
             <div class="form-group">
                 <label class="col-sm-5 control-label">Tên hiển thị<span class="text-error">*</span></label>
                 <div class="col-sm-4">
-                    <input name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$updateUserName" type="text" id="mainbody_contentbody_contentpage_updateUserName" placeholder="VD: ThanhTam92" maxlength="40" class="form-control" value="meo9xit">
+                    <input name="username" type="text" id="mainbody_contentbody_contentpage_updateUserName" placeholder="VD: ThanhTam92" maxlength="40" class="form-control" value="meo9xit">
                 </div>
                 <div class="col-sm-3">
                     <div id="updateUserName_error" class="text-error pro-top7">&nbsp;</div>
@@ -1473,6 +1470,12 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                 </div>
             </div>
             <div class="form-group">
+                <label class="col-sm-5 control-label">Chọn ảnh khác</label>
+                <div class="col-sm-5  pro-top7">
+                    <input type="file" name="avatar" id="mainbody_contentbody_contentpage_fulImage" title="Bạn hãy chọn ảnh ở đây" onchange="javascript:ImageURL();" />
+                </div>
+            </div>
+            <div class="form-group">
                 <div class="col-sm-offset-5 col-sm-6">
                     <a href="https://sharecode.vn/doi-mat-khau.htm" class="aorange">Đổi mật khẩu mới</a>
                 </div>
@@ -1480,12 +1483,19 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 
             <div class="form-group line-h">
                 <div class="col-sm-offset-5 col-sm-6">
-                    <a onclick="return validate_update();" id="mainbody_contentbody_contentpage_btnUpdate" class="button-orange" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnUpdate&#39;,&#39;&#39;)"><i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp; Cập nhật thông tin</a>
+                    <a onclick="return validate_update();" id="mainbody_contentbody_contentpage_btnUpdate" class="button-orange" ><i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp; Cập nhật thông tin</a>
                 </div>
             </div>
         </div>
     
 </div>
+</form>
+<script type="text/javascript">
+function performsubmit() {
+	if(validate_update())
+	  	document.getElementById("userinfo-form").submit();
+	}
+</script>
     <br>
     <br>
 

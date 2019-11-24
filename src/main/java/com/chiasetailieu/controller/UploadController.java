@@ -81,6 +81,8 @@ public class UploadController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		response.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("UTF-8");
 		try {
 	           String description = request.getParameter("docDescription");
 	           Long cateId = Long.parseLong(request.getParameter("cateId"));
@@ -178,9 +180,14 @@ public class UploadController extends HttpServlet {
 	               String clientFileName = s.substring(s.indexOf("=") + 2, s.length() - 1);
 	               clientFileName = clientFileName.replace("\\", "/");
 	               int i = clientFileName.lastIndexOf('/');
+	               int j = clientFileName.lastIndexOf('.');
+	               String pre = clientFileName.substring(i+1,j-1);
+	               Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+	               String post =  String.valueOf(timestamp.getTime());
+	               String filename = clientFileName.substring(i + 1);
 	               // file1.zip
 	               // file2.zip
-	               return clientFileName.substring(i + 1);
+	               return filename.replaceAll(pre, post);
 	           }
 	       }
 	       return null;
