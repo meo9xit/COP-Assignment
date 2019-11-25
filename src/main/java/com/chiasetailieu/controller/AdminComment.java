@@ -54,17 +54,19 @@ public class AdminComment extends HttpServlet {
 			throws ServletException, IOException {
 		response.setCharacterEncoding("UTF-8");
 		request.setCharacterEncoding("UTF-8");
-		
+
 //		String comment_id = request.getParameter("commentId");
 //		String user_id = request.getParameter("user_id");
 //		String doc_id = request.getParameter("doc_id");
+		
 		/*
 		 * // YearMonth create_date =
 		 * YearMonth.from(today.toInstant().atZone(ZoneId.systemDefault()).toLocalDate()
 		 * ); // YearMonth edit_date =
 		 * YearMonth.from(today.toInstant().atZone(ZoneId.systemDefault()).toLocalDate()
 		 * );
-		 */		
+		 */
+		
 		String content = request.getParameter("content");
 		Comment comment = new Comment();
 		long millis = System.currentTimeMillis();
@@ -84,8 +86,7 @@ public class AdminComment extends HttpServlet {
 			commentDAO.save(comment);
 			response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/"));
 		} 
-//		else 
-//		{
+//		else {
 //			request.getRequestDispatcher("/view/web/post.jsp").forward(request, response);
 //		}
 //		doGet(request, response);

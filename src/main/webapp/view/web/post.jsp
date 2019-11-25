@@ -4,6 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <c:url var="APIurl" value="/api-comment" />
+<c:url var="NewURL" value="/comment-add" />
 
 <!DOCTYPE html>
 <html lang="vi" xml:lang="vi" xmlns="http://www.w3.org/1999/xhtml">
@@ -1240,8 +1241,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 							<br />
 							<div class="cmt">
 								<div class="cmt-img">
-									<img src="..style/post/avanta.png"
-										id="mainbody_contentbody_img" width="45" height="45" />
+									<img width="45" height="45" src="style/post/avanta.png" />
 								</div>
 								<form id="formSubmit">
 									<div class="form-group">
@@ -1255,10 +1255,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 										class="btn btn-primary m-t-15 waves-effect" id="btnAdd"
 										value="Bình Luận" />
 								</form>
-								<form id="formSubmit">
+								<%-- <form id="formSubmit">
 									<div style="display: none;" class="cmt-reply CommentReply">
 										<div class="cmt-img">
-											<img src="..style/post/avanta.png"
+											<img src="style/post/avanta.png"
 												id="mainbody_contentbody_img2" width="45" height="45" />
 										</div>
 										<div class="cmt-box">
@@ -1276,7 +1276,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 
 										</div>
 									</div>
-								</form>
+								</form> --%>
 								<input type="hidden"
 									name="ctl00$ctl00$mainbody$contentbody$hdCommentParent"
 									id="mainbody_contentbody_hdCommentParent" /> <input
@@ -1285,18 +1285,25 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 									id="mainbody_contentbody_hdCommentReply" />
 
 								<div class="cmt-item " id="cmt-15186">
-									<div class="cmt-img">
+									<!-- <div class="cmt-img">
 										<a href='/thanh-vien/thanh-chu-240350.htm' target="_blank">
 											<img width="45" height="45" src="style/post/avanta.png" />
 										</a>
-									</div>
+									</div> -->
+
 									<form action="<c:url value='/comment'/>" id="formSubmit"
 										method="get">
+
 										<div class="cmt-box cmt-border">
 											<c:forEach var="comment" items="${model.listResult}">
 												<div class="cmt-head">
+													<div class="cmt-img">
+														<a href='/thanh-vien/thanh-chu-240350.htm' target="_blank">
+															<img width="45" height="45" src="style/post/avanta.png" />
+														</a>
+													</div>
 													<span class="txt-colo cmt-right  cmt-date">Người
-														nhập: ${comment.user.getUsername()}</span><span
+														nhập: ${comment.userId}</span><span
 														class="txt-colo cmt-right  cmt-date">Mã tài liệu:
 														${comment.docId}</span> <span
 														class="txt-colo cmt-right  cmt-date">Ngày viết:
@@ -1306,10 +1313,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 											</c:forEach>
 										</div>
 									</form>
+
 								</div>
 								<div id="Parent15186"></div>
 
-								<div class="sortPagiBar clear">
+								<!-- <div class="sortPagiBar clear">
 									<div class="bottom-pagination">
 										<nav id="mainbody_contentbody_PaggingBottom">
 											<ul class='pagination'>
@@ -1317,7 +1325,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 											</ul>
 										</nav>
 									</div>
-								</div>
+								</div> -->
 							</div>
 							<br />
 							<h2 class="page-heading" id="danh-gia">
