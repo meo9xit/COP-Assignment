@@ -18,8 +18,9 @@ public class CommentDAO extends GenericDAO<Comment> implements ICommentDAO{
 	@Override
 	public Long save(Comment cmt) {
 		// TODO Auto-generated method stub
-		String sql = "insert into user (comment_id, user_id, doc_id, create_date, edit_date, content) values (?,?,?,?,?,?)";
-		return insert(sql, cmt.getId(), cmt.getUserId(), cmt.getDocId(), cmt.getCreatedDate(), cmt.getModifiedDate(), cmt.getContent());
+		String sql = "insert into comment (comment_id, user_id, doc_id, create_date, edit_date, content) values (?,?,?,?,?,?)";
+//		return insert(sql, cmt.getId(), cmt.getUserId(), cmt.getDocId(), cmt.getCreatedDate(), cmt.getModifiedDate(), cmt.getContent());
+		return insert(sql, 4, 4, 1, "2019-10-02", "2019-10-02", cmt.getContent());
 	}
 
 	@Override

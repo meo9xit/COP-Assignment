@@ -4,7 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <c:url var="APIurl" value="/api-comment" />
-<c:url var="NewURL" value="/comment-add" />
+<c:url var="NewURL" value="/comment-new" />
 
 <!DOCTYPE html>
 <html lang="vi" xml:lang="vi" xmlns="http://www.w3.org/1999/xhtml">
@@ -1244,16 +1244,17 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 									<img width="45" height="45" src="style/post/avanta.png" />
 								</div>
 								<form id="formSubmit">
+									<label for="content">Comment content</label>
 									<div class="form-group">
 										<div class="form-line">
 											<input type="text" id="content" class="form-control"
-												name="content" placeholder="Enter Your Comment!"
+												name="content" placeholder="Enter content!"
 												value="${model.content}">
 										</div>
 									</div>
 									<br> <input type="button"
 										class="btn btn-primary m-t-15 waves-effect" id="btnAdd"
-										value="Bình Luận" />
+										value="Add" />
 								</form>
 								<%-- <form id="formSubmit">
 									<div style="display: none;" class="cmt-reply CommentReply">
@@ -2353,22 +2354,22 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 			addNew(data);
 		});
 		function addNew(data) {
-			$
-					.ajax({
-						url : '${APIurl}',
-						type : 'POST',
-						contentType : 'application/json',
-						data : JSON.stringify(data),
-						dataType : 'json',
-						success : function(result) {
-							window.location.href = "/chiasetailieu/comment";
-						},
-						error : function(error) {
-							window.location.href = "/chiasetailieu/comment";
-						}
-					});
+			$.ajax({
+				url : '${APIurl}',
+				type : 'POST',
+				contentType : 'application/json',
+				data : JSON.stringify(data),
+				dataType : 'json',
+				success : function(result) {
+					window.location.href = "/chiasetailieu/comment";
+				},
+				error : function(error) {
+					window.location.href = "/chiasetailieu/home";
+				}
+			});
 		}
 	</script>
+
 	<script>
         //Lấy cookie trạng thái tài khoản
         function getCookieACC() {

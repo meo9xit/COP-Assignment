@@ -681,12 +681,12 @@
 						</div>
 						<div class="body">
 							<div class="table-responsive">
-								<a href='<c:url value="/admin-comment?type=add"/>'>
+								<a href='<c:url value="/comment?type=add"/>'>
 									<button type="button" class="btn bg-blue waves-effect">
 										<i class="material-icons">verified_user</i> <span>ADD
 											Sub Category</span>
 									</button>
-								</a> <a href='<c:url value="/admin-comment?type=edit"/>'>
+								</a> <a href='<c:url value="/comment?type=edit"/>'>
 									<button type="button" class="btn bg-blue waves-effect">
 										<i class="material-icons">verified_user</i> <span>Edit
 											Sub Category</span>
