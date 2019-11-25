@@ -19,6 +19,18 @@ public class Document extends AbstractModel<Document>{
 	private Long download_count;
 	private List<Comment> comments;
 	
+	public String getAlt() {
+		return alt;
+	}
+	public void setAlt(String alt) {
+		this.alt = alt;
+	}
+	public List<Comment> getComments() {
+		return comments;
+	}
+	public void setComments(List<Comment> comments) {
+		this.comments = comments;
+	}
 	public Long getView() {
 		return view;
 	}

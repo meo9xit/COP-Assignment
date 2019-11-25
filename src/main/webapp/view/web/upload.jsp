@@ -434,29 +434,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
             <img src="style/upload/loading.gif">
             <div>Đang xử lý...</div>
         </div>
-        <div class="modal fade" id="PopupImage" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content text-center">
-                    <div class="text-center up-pad">
-                        <strong class="orange title4 text-uppercase">Kéo để chọn vùng ảnh đẹp nhất</strong><br>
-                        <em>(Đặt chuột vào các ô vuông và "Kéo")</em>
-                    </div>
-                    <img id="Image1" src="https://sharecode.vn/thanh-vien-upload.htm" alt="" style="display: none; margin: 0px auto;">
-                    <div class="text-center up-pad">
-                        <input type="button" id="btnCrop" class="button-green button-small" value="Chọn ảnh">
-                        <input type="button" id="btnCancel" class="button-orange button-small" value="  Hủy bỏ  ">
-                    </div>
-                    <input type="hidden" name="imgX1" id="imgX1">
-                    <input type="hidden" name="imgY1" id="imgY1">
-                    <input type="hidden" name="imgWidth" id="imgWidth">
-                    <input type="hidden" name="imgHeight" id="imgHeight">
-                    <input type="hidden" name="imgCropped" id="imgCropped">
-                </div>
-            </div>
-        </div>
     </div>
     </form>
-    <input type="hidden" name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$hdCodeId" id="mainbody_contentbody_contentpage_hdCodeId" value="0">
     <br>
     <br>
 
@@ -472,43 +451,15 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
     <div class="pro-right">
         <h2 id="mainbody_contentbody_ucProfile_FullName" class="pro-title green bold">Hà Duy Hưng</h2>
         <div class="line"></div>
-        <div class="pro-money">
-            <div>Tài khoản&nbsp;<strong id="mainbody_contentbody_ucProfile_Money">0</strong> Xu</div>
-            <div>Tạm giữ&nbsp;&nbsp;&nbsp;&nbsp;<span class="aorange"><strong id="mainbody_contentbody_ucProfile_MoneyKeep" title="Số XU đang bị tạm giữ cho giao dịch code vừa được bán">0</strong> Xu</span> <i id="mainbody_contentbody_ucProfile_InfoKeep" class="fa fa-info-circle" aria-hidden="true" title="Số XU đang bị tạm giữ cho giao dịch code vừa được bán"></i></div>
-             <div>Khả dụng&nbsp;&nbsp;<span class="agreen"><strong id="mainbody_contentbody_ucProfile_MoneyAllow" title="Số XU tối đa có thể sử dụng để mua code (hoặc) rút tiền">0</strong> Xu</span> <i title="Số XU tối đa có thể sử dụng để mua code (hoặc) rút tiền" class="fa fa-info-circle" aria-hidden="true"></i></div>
-            
-        </div>
     </div>
     <div class="pro-link clear pro-link-first">
         <a href="https://sharecode.vn/thong-tin-ca-nhan.htm" class="aorange"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Cài đặt TT</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://sharecode.vn/thanh-vien/meo9xit-299971.htm" id="mainbody_contentbody_ucProfile_LinkPageUser" class="aorange"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;Trang cá nhân</a>
     </div>
      <div class="pro-link">
-        <a href="https://sharecode.vn/bao-code-trung.htm" class="aorange"><i class="fa fa-clipboard" aria-hidden="true"></i>&nbsp;Báo bản quyền </a>&nbsp;&nbsp;
-        <a href="https://sharecode.vn/binh-luan.htm" class="aorange pro-line14"><i class="fa fa-comment" aria-hidden="true"></i>&nbsp;Bình luận <span id="mainbody_contentbody_ucProfile_CmtCount" class="badge bagde-green badge-link">0</span></a>
     </div>
     <ul class="pro-list">
         <li id="mnCodeUpload">
-            <a href="https://sharecode.vn/code-upload-cua-toi.htm">Code tải lên (<strong id="mainbody_contentbody_ucProfile_UploadCount">0</strong>)</a>
-        </li>
-        <li id="mnCodeSave">
-            <a href="https://sharecode.vn/code-da-luu.htm">Code đã lưu (<strong id="mainbody_contentbody_ucProfile_SaveCount">0</strong>)</a>
-        </li>
-         <li id="mnCodeDown">
-            <a href="https://sharecode.vn/code-download.htm">Code đã mua (<strong id="mainbody_contentbody_ucProfile_BuyCount">0</strong>)</a>
-        </li>
-        <li id="mnCodeSell">
-            <a href="https://sharecode.vn/doanh-thu-ban-code.htm">Doanh thu bán code</a>
-        </li>
-       
-        <li id="mnAddMoney">
-            <a href="https://sharecode.vn/lich-su-giao-dich.htm">Lịch sử nạp tiền</a>
-        </li>
-        <li id="mnGetMoney">
-            <a href="https://sharecode.vn/rut-tien.htm">Rút tiền</a>
-        </li>
-          <li id="Li1">
-            <a href="https://me.sharecode.vn/" target="_blank">Quản lý Domain - Hosting</a>
+            <a href="https://sharecode.vn/code-upload-cua-toi.htm">Code tải lên</a>
         </li>
     </ul>
 </div>

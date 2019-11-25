@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.chiasetailieu.model.User;
-import com.chiasetailieu.service.impl.UserService;
+import com.chiasetailieu.service.IUserService;
 import com.chiasetailieu.utils.AppUtils;
 
 /**
@@ -20,7 +20,7 @@ import com.chiasetailieu.utils.AppUtils;
 public class ChangepassController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     @Inject
-    UserService userService;
+    IUserService userService;
     /**
      * @see HttpServlet#HttpServlet()
      */

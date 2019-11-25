@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.chiasetailieu.model.Document;
+import com.chiasetailieu.model.User;
 import com.chiasetailieu.service.IDocumentService;
+import com.chiasetailieu.service.IUserService;
 
 @WebServlet("/post")
 public class PostController extends HttpServlet{
@@ -18,6 +20,9 @@ public class PostController extends HttpServlet{
     
 	@Inject
 	IDocumentService docService;
+	
+	@Inject
+	IUserService userService;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -35,6 +40,10 @@ public class PostController extends HttpServlet{
 		request.setCharacterEncoding("UTF-8");
 		Long id = Long.parseLong(request.getParameter("id"));
 		Document doc = docService.findOneById(id);
+		Long userid = doc.getUserId();
+		User user = userService.findById(userid);
+		doc.setUser(user);
+		doc.setView(doc.getView()+1);
 		request.setAttribute("doc", doc);
 		request.getRequestDispatcher("/view/web/post.jsp").forward(request, response);
 	}
