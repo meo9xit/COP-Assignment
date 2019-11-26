@@ -18,7 +18,7 @@ import com.chiasetailieu.utils.AppUtils;
 /**
  * Servlet implementation class HomeController
  */
-@WebServlet(urlPatterns = {"/home","/"})
+@WebServlet("/")
 public class HomeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
