@@ -5,7 +5,6 @@
     pageEncoding="UTF-8"%>
     
 <!DOCTYPE html>
-<!-- saved from url=(0021)https://sharecode.vn/ -->
 <html lang="vi" xml:lang="vi" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
 	Cộng đồng chia sẻ và download source code, mã nguồn, đồ án miễn phí
 </title><link rel="shortcut icon" href="https://sharecode.vn/assets/images/sharecode.ico" type="image/x-icon">
@@ -18,13 +17,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="twitter:card" value="summary">
 <meta property="og:site_name" content="Sharecode.vn">
-<link rel="stylesheet" type="text/css" href="style/web-style/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="style/web-style/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="style/web-style/select2.min.css">
-<link rel="stylesheet" type="text/css" href="style/web-style/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="style/web-style/jquery-ui.min.css">
-<link rel="stylesheet" type="text/css" href="style/web-style/animate.css">
-<link rel="stylesheet" type="text/css" href="style/web-style/reset.css">
-<link rel="stylesheet" type="text/css" href="style/web-style/style.css">
+<link rel="stylesheet" type="text/css" href="<c:url value = "/style/web-style/bootstrap.min.css" />"><link rel="stylesheet" type="text/css" href="style/web-style/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="<c:url value = "/style/web-style/select2.min.css" />">
+<link rel="stylesheet" type="text/css" href="<c:url value = "/style/web-style/owl.carousel.css" />">
+<link rel="stylesheet" type="text/css" href="<c:url value = "/style/web-style/jquery-ui.min.css" />">
+<link rel="stylesheet" type="text/css" href="<c:url value = "/style/web-style/animate.css" />">
+<link rel="stylesheet" type="text/css" href="<c:url value = "/style/web-style/reset.css" />">
+<link rel="stylesheet" type="text/css" href="<c:url value = "/style/web-style/style.css" />">
     <meta name="description" content="Thư viện chia sẻ và download source code, upload code kiếm tiền, tổng hợp các mã nguồn và đồ án, kiến thức lập trình chuyên nghành công nghệ thông tin">
     <meta name="keywords" content="Downloads source code, đồ án, mã nguồn, source code web, do an lap trinh, Source Code free, source web bán hàng,share code">
     <meta property="og:image" content="https://sharecode.vn/assets/images/logo_sharecode.png">
@@ -34,8 +33,8 @@
     <meta property="og:description" content="Thư viện chia sẻ và download source code, upload code kiếm tiền, tổng hợp các mã nguồn và đồ án, kiến thức lập trình chuyên nghành công nghệ thông tin">
     
     <link href="https://sharecode.vn/" rel="canonical">
-    <link rel="stylesheet" type="text/css" href="style/web-style/jquery.bxslider.css">
-<link rel="stylesheet" type="text/css" href="style/web-style/responsive.css">
+    <link rel="stylesheet" type="text/css" href="<c:url value = "/style/web-style/jquery.bxslider.css" />">
+<link rel="stylesheet" type="text/css" href="<c:url value = "/style/web-style/responsive.css"/>">
 <style type="text/css"></style>
 <style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
 .fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
@@ -176,7 +175,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                     <ul class="vertical-menu-list">
                                         <li>
                                             <a class="parent" href="https://sharecode.vn/thanh-vien-upload.htm#">
-                                                <img class="icon-menu" alt="Thể loại code" src="style/upload/2.png">PHÂN LOẠI TÀI LIỆU</a>
+                                                <img class="icon-menu" alt="Thể loại code" src="style/web-style/2.png">PHÂN LOẠI TÀI LIỆU</a>
                                             <div class="vertical-dropdown-menu" style="width: 900px;">
                                                 <div class="vertical-groups col-sm-6 col-md-4">
                                                     <div class="mega-group col-sm-12">
@@ -211,49 +210,49 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
                                         </li>
                                         
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/android-15.htm">
-                                                    <img class="icon-menu" alt="Android" src="style/upload/3.png">Android</a></li>
+                                                    <img class="icon-menu" alt="Android" src="style/web-style/3.png">Android</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/ios-23.htm">
-                                                    <img class="icon-menu" alt="iOS" src="style/upload/3.png">iOS</a></li>
+                                                    <img class="icon-menu" alt="iOS" src="style/web-style/3.png">iOS</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/windows-phone-26.htm">
-                                                    <img class="icon-menu" alt="Windows phone" src="style/upload/3.png">Windows phone</a></li>
+                                                    <img class="icon-menu" alt="Windows phone" src="style/web-style/3.png">Windows phone</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/php-mysql-21.htm">
-                                                    <img class="icon-menu" alt="PHP &amp; MySQL" src="style/upload/3.png">PHP &amp; MySQL</a></li>
+                                                    <img class="icon-menu" alt="PHP &amp; MySQL" src="style/web-style/3.png">PHP &amp; MySQL</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">
-                                                    <img class="icon-menu" alt="WordPress" src="style/upload/3.png">WordPress</a></li>
+                                                    <img class="icon-menu" alt="WordPress" src="style/web-style/3.png">WordPress</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/joomla-28.htm">
-                                                    <img class="icon-menu" alt="Joomla" src="style/upload/3.png">Joomla</a></li>
+                                                    <img class="icon-menu" alt="Joomla" src="style/web-style/3.png">Joomla</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-17.htm">
-                                                    <img class="icon-menu" alt="Visual C#" src="style/upload/3.png">Visual C#</a></li>
+                                                    <img class="icon-menu" alt="Visual C#" src="style/web-style/3.png">Visual C#</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/aspaspnet-16.htm">
-                                                    <img class="icon-menu" alt="Asp/Asp.Net" src="style/upload/3.png">Asp/Asp.Net</a></li>
+                                                    <img class="icon-menu" alt="Asp/Asp.Net" src="style/web-style/3.png">Asp/Asp.Net</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/javajsp-20.htm">
-                                                    <img class="icon-menu" alt="Java/JSP" src="style/upload/3.png">Java/JSP</a></li>
+                                                    <img class="icon-menu" alt="Java/JSP" src="style/web-style/3.png">Java/JSP</a></li>
                                             
                                                 <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-basic-19.htm">
-                                                    <img class="icon-menu" alt="Visual Basic" src="style/upload/3.png">Visual Basic</a></li>
+                                                    <img class="icon-menu" alt="Visual Basic" src="style/web-style/3.png">Visual Basic</a></li>
                                             
                                                 <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/cocos2d-24.htm">
-                                                    <img class="icon-menu" alt="Cocos2D" src="style/upload/3.png">Cocos2D</a></li>
+                                                    <img class="icon-menu" alt="Cocos2D" src="style/web-style/3.png">Cocos2D</a></li>
                                             
                                                 <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/unity-27.htm">
-                                                    <img class="icon-menu" alt="Unity" src="style/upload/3.png">Unity</a></li>
+                                                    <img class="icon-menu" alt="Unity" src="style/web-style/3.png">Unity</a></li>
                                             
                                                 <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-18.htm">
-                                                    <img class="icon-menu" alt="Visual C++" src="style/upload/3.png">Visual C++</a></li>
+                                                    <img class="icon-menu" alt="Visual C++" src="style/web-style/3.png">Visual C++</a></li>
                                             
                                                 <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/html-template-25.htm">
-                                                    <img class="icon-menu" alt="Html &amp; Template" src="style/upload/3.png">Html &amp; Template</a></li>
+                                                    <img class="icon-menu" alt="Html &amp; Template" src="style/web-style/3.png">Html &amp; Template</a></li>
                                             
                                                 <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/khac-22.htm">
-                                                    <img class="icon-menu" alt="Khác" src="style/upload/3.png">Khác</a></li>
+                                                    <img class="icon-menu" alt="Khác" src="style/web-style/3.png">Khác</a></li>
                                             
                                     </ul>
                                     <div class="all-category"><span class="open-cate">Xem tất cả</span></div>

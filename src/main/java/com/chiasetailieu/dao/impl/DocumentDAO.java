@@ -47,8 +47,8 @@ public class DocumentDAO extends GenericDAO<Document> implements IDocumentDAO{
 		// TODO Auto-generated method stub
 		java.util.Calendar cal = java.util.Calendar.getInstance(); 
 		java.sql.Date timeNow = new Date(cal.getTimeInMillis());
-		String sql = "insert into document (`doc_name`, `cate_id`, `subcate_id`, `user_id`, `doc_source`, `doc_cover`, `create_date`, `edit_date`)"
-				+ " values (?,?,?,?,?,?,?,?)";
+		String sql = "insert into document (`doc_name`, `cate_id`, `subcate_id`, `user_id`, `doc_source`, `doc_cover`, `create_date`, `edit_date`,`view`,`download`)"
+				+ " values (?,?,?,?,?,?,?,?,0,0)";
 		return insert(sql, document.getDocName(), document.getCateId(), document.getSubcateId(), document.getUserId(), document.getDocSource(),
 				document.getCover(),timeNow, timeNow);
 	}

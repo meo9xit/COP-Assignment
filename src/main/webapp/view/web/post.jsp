@@ -660,7 +660,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 											<div itemprop="material">
 												<a href="/the-loai-source-code/website-1.htm"
 													id="mainbody_contentbody_Category2" class="aorange"
-													target="_blank">${doc.subcate.categoryName }</a>
+													target="_blank">${doc.subcate.subcategoryName }</a>
 											</div>
 											<div class="dt-col">Ngày đăng</div>
 											<div id="mainbody_contentbody_Date2">${doc.createdDate }</div>
@@ -681,7 +681,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 							</div>
 							<br />
 							<div class="dt-sub" title="Mô tả ngắn">
-								<h4 class="title1" itemprop="description">${doc.description }</h4>
+								<h4 class="title1" itemprop="description">${doc.docDescription }</h4>
 							</div>
 
 							<br /> <span class="dt-box-title bold">Preview</span>
