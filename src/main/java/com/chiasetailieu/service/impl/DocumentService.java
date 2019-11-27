@@ -16,7 +16,8 @@ public class DocumentService implements IDocumentService{
 	@Override
 	public Document save(Document doc) {
 		// TODO Auto-generated method stub
-		return documentDAO.findById(documentDAO.save(doc));
+		Long id = documentDAO.save(doc);
+		return documentDAO.findById(id);
 	}
 
 	@Override

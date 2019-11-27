@@ -48,6 +48,12 @@ public class SubCategoryService implements ISubCategoryService{
 	public SubCategory findOneByID(Long newID) {
 		return SubCategoryDAO.findOneById(newID);
 	}
+
+	@Override
+	public void update(SubCategory subcategory) {
+		// TODO Auto-generated method stub
+		SubCategoryDAO.update(subcategory);
+	}
 	
 	
 }

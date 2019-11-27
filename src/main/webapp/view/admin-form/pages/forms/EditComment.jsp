@@ -3,8 +3,8 @@
 	prefix="dec"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<c:url var="APIurl" value="/api-admin-comment" />
-<c:url var="NewURL" value="/comment-edit" />
+<c:url var="APIurl" value="/api-comment" />
+<c:url var="NewURL" value="/comment-new" />
 <!DOCTYPE html>
 <html>
 
@@ -669,31 +669,34 @@
 						</div>
 						<div class="body">
 							<form id="formSubmit">
-								<label for="comment_id">Comment ID</label>
+								<label for="content">Comment content</label>
 								<div class="form-group">
 									<div class="form-line">
-										<input type="number" id="commentID" class="form-control"
-											name="commentID" placeholder="Enter comment id!"
-											value="${model.id}">
+										<input type="text" id="content" class="form-control"
+											name="content" placeholder="Enter content!"
+											value="${model.content}">
 									</div>
-									<label for="user_id">User ID</label>
-									<div class="form-group">
-										<div class="form-line">
-											<input type="number" id="userId" class="form-control"
-												name="userId" placeholder="Enter user id!"
-												value="${model.userId}">
-										</div>
-										<br> <label for="doc_id">Doc ID</label>
-										<div class="form-group">
-											<div class="form-line">
-												<input type="number" id="doc_id" class="form-control"
-													name="docId" placeholder="Enter doc id!"
-													value="${model.docId}">
-											</div>
-										</div>
-										<br> <input type="button"
-											class="btn btn-primary m-t-15 waves-effect" id="btnEdit"
-											value="Edit" />
+								</div>
+								<%-- <label for="user_id">User ID</label>
+								<div class="form-group">
+									<div class="form-line">
+										<input type="number" id="userId" class="form-control"
+											name="userId" placeholder="Enter user id!"
+											value="${model.userId}">
+									</div>
+								</div>
+								<br> <label for="doc_id">Doc ID</label>
+								<div class="form-group">
+									<div class="form-line">
+										<input type="number" id="doc_id" class="form-control"
+											name="docId" placeholder="Enter doc id!"
+											value="${model.docId}">
+									</div>
+								</div> --%>
+								
+								<br> <input type="button"
+									class="btn btn-primary m-t-15 waves-effect" id="btnAdd"
+									value="Add" />
 							</form>
 						</div>
 					</div>
@@ -711,7 +714,7 @@
 	<script src="style/admin/plugins/jquery/jquery.min.js"></script>
 
 	<script>
-		$('#btnEdit').click(function(e) {
+		$('#btnAdd').click(function(e) {
 			e.preventDefault();
 			var data = {};
 			var formData = $('#formSubmit').serializeArray();
@@ -719,23 +722,22 @@
 				data["" + v.name + ""] = v.value;
 			});
 			console.info(data);
-			editNew(data);
+			addNew(data);
 		});
-		function editNew(data) {
-			$
-					.ajax({
-						url : '${APIurl}',
-						type : 'POST',
-						contentType : 'application/json',
-						data : JSON.stringify(data),
-						dataType : 'json',
-						success : function(result) {
-							window.location.href = "/chiasetailieu/admin-comment";
-						},
-						error : function(error) {
-							window.location.href = "/chiasetailieu/admin-comment?type=edit";
-						}
-					});
+		function addNew(data) {
+			$.ajax({
+				url : '${APIurl}',
+				type : 'POST',
+				contentType : 'application/json',
+				data : JSON.stringify(data),
+				dataType : 'json',
+				success : function(result) {
+					window.location.href = "/chiasetailieu/comment";
+				},
+				error : function(error) {
+					window.location.href = "/chiasetailieu/comment?type=add";
+				}
+			});
 		}
 	</script>
 

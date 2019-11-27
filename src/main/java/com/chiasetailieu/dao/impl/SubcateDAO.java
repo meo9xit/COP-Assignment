@@ -3,14 +3,10 @@ package com.chiasetailieu.dao.impl;
 import java.util.List;
 
 import com.chiasetailieu.dao.ISubcategoryDAO;
-import com.chiasetailieu.dao.mapper.CategoryMapper;
 import com.chiasetailieu.dao.mapper.SubcateMapper;
-import com.chiasetailieu.dao.mapper.UserMapper;
 import com.chiasetailieu.model.Category;
 import com.chiasetailieu.model.Document;
-import com.chiasetailieu.model.Role;
 import com.chiasetailieu.model.SubCategory;
-import com.chiasetailieu.model.User;
 
 public class SubcateDAO extends GenericDAO<SubCategory> implements ISubcategoryDAO{
 

@@ -15,7 +15,7 @@ import com.chiasetailieu.utils.HttpUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
- * Servlet implementation class UserAPI
+ * Servlet implementation class SubCategoryAPI
  */
 @WebServlet(urlPatterns = "/api-admin-subcategory")
 public class SubCategoryAPI extends HttpServlet {
@@ -55,7 +55,7 @@ public class SubCategoryAPI extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("application/json");
 		SubCategory subcategory = HttpUtil.of(request.getReader()).toModel(SubCategory.class);
-		subcategoryService.save(subcategory);
+		subcategoryService.update(subcategory);
 		mapper.writeValue(response.getOutputStream(), subcategory);
 	}
 

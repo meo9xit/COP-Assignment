@@ -4,7 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <c:url var="APIurl" value="/api-admin-subcategory" />
-<c:url var="NewURL" value="/subcategory-new" />
+<c:url var="NewURL" value="/subcategory-update" />
 <!DOCTYPE html>
 <html>
 
@@ -669,7 +669,7 @@
 						</div>
 						<div class="body">
 							<form id="formSubmit">
-								<label for="subcategory_id">SubCategory ID</label>
+								<label for="subcategoryID">SubCategory ID</label>
 								<div class="form-group">
 									<div class="form-line">
 										<input type="text" id="subcategoryID" class="form-control"
@@ -677,7 +677,7 @@
 											value="${model.subcategoryID}">
 									</div>
 								</div>
-								<label for="category_id">Category ID</label>
+								<label for="categoryId">Category ID</label>
 								<div class="form-group">
 									<div class="form-line">
 										<input type="text" id="categoryId" class="form-control"
@@ -685,7 +685,7 @@
 											value="${model.categoryId}">
 									</div>
 								</div>
-								<br> <label for="subcategory_name">SubCategory Name</label>
+								<br> <label for="subcategoryName">SubCategory Name</label>
 								<div class="form-group">
 									<div class="form-line">
 										<input type="text" id="subcategoryName" class="form-control"
@@ -735,7 +735,7 @@
 							window.location.href = "/chiasetailieu/admin-subcategory";
 						},
 						error : function(error) {
-							window.location.href = "/chiasetailieu/admin-subcategory?type=edit";
+							window.location.href = "/chiasetailieu/admin-subcategory?type=update";
 						}
 					});
 		}

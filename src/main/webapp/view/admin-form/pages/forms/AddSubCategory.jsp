@@ -13,7 +13,7 @@
 <meta
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
 	name="viewport">
-<title>Form Examples | Bootstrap Based Admin Template - Material
+<title> New SubCategory | Bootstrap Based Admin Template - Material
 	Design</title>
 <!-- Favicon-->
 <link rel="icon" href="style/admin/favicon.ico" type="image/x-icon">
@@ -676,26 +676,26 @@
 											name="subcategoryID" placeholder="Enter subcategory id!"
 											value="${model.subcategoryID}">
 									</div>
-									<label for="category_id">Category ID</label>
-									<div class="form-group">
-										<div class="form-line">
-											<input type="number" id="categoryId" class="form-control"
-												name="categoryId" placeholder="Enter category id!"
-												value="${model.categoryId}">
-										</div>
-										<br> <label for="subcategory_name">SubCategory
-											Name</label>
-										<div class="form-group">
-											<div class="form-line">
-												<input type="text" id="subcategoryName" class="form-control"
-													name="subcategoryName"
-													placeholder="Enter subcategory name!"
-													value="${model.subcategoryName}">
-											</div>
-										</div>
-										<br> <input type="button"
-											class="btn btn-primary m-t-15 waves-effect" id="btnAdd"
-											value="Add" />
+								</div>
+								<label for="category_id">Category ID</label>
+								<div class="form-group">
+									<div class="form-line">
+										<input type="number" id="categoryId" class="form-control"
+											name="categoryId" placeholder="Enter category id!"
+											value="${model.categoryId}">
+									</div>
+								</div>
+								<br> <label for="subcategory_name">SubCategory Name</label>
+								<div class="form-group">
+									<div class="form-line">
+										<input type="text" id="subcategoryName" class="form-control"
+											name="subcategoryName" placeholder="Enter subcategory name!"
+											value="${model.subcategoryName}">
+									</div>
+								</div>
+								<br> <input type="button"
+									class="btn btn-primary m-t-15 waves-effect" id="btnAdd"
+									value="Add" />
 							</form>
 						</div>
 					</div>

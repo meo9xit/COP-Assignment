@@ -11,28 +11,28 @@ import com.chiasetailieu.service.ICommentService;
 public class CommentService implements ICommentService{
 
 	@Inject
-	ICommentDAO CommentDAO;
+	ICommentDAO commentDAO;
 	
 	@Override
 	public Comment save(Comment comment) {
-		Long newID = CommentDAO.save(comment);
-		return CommentDAO.findById(newID);
+		Long newID = commentDAO.save(comment);
+		return commentDAO.findById(newID);
 	}
 
 	@Override
 	public List<Comment> findAll() {
-		return CommentDAO.findAll();
+		return commentDAO.findAll();
 	}
 
 	@Override
 	public void delete(Comment comment) {
-		CommentDAO.delete(comment);
+		commentDAO.delete(comment);
 		
 	}
 
 	@Override
 	public Comment findById(Long newID) {
-		Comment ret = CommentDAO.findById(newID);
+		Comment ret = commentDAO.findById(newID);
 		return ret;
 	}
 

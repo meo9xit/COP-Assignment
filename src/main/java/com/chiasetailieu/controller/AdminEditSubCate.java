@@ -53,9 +53,9 @@ public class AdminEditSubCate extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setCharacterEncoding("UTF-8");
 		request.setCharacterEncoding("UTF-8");
-		String subcate_id = request.getParameter("subcate_id");
-		String cate_id = request.getParameter("cate_id");
-		String subcate_name = request.getParameter("subcate_name");
+		String subcate_id = request.getParameter("subcategoryID");
+		String cate_id = request.getParameter("categoryId");
+		String subcate_name = request.getParameter("subcategoryName");
 		SubCategory subcategory = new SubCategory();
 		subcategory.setSubcategoryID(Long.parseLong(subcate_id));
 		subcategory.setCategoryId(Long.parseLong(cate_id));

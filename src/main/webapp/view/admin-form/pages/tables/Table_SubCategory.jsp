@@ -725,10 +725,13 @@
 															onClick="btnDeleteClick(this)">
 															<img src="style/admin/images/Delete_16x16.png" />
 														</button></td>
-													<td><button value="${subcategory.subcategoryID}"
-															onClick="btnUpdateClick(this)">
-															<img src="style/admin/images/Delete_16x16.png" />
-														</button></td>
+													<td><a
+														href='<c:url value="/admin-subcategory?type=edit"/>'>
+															<button type="button" class="btn bg-blue waves-effect">
+																<i class="material-icons">verified_user</i> <span>Edit
+																	Sub Category</span>
+															</button>
+													</a></td>
 												</tr>
 											</c:forEach>
 										</tbody>
