@@ -681,48 +681,48 @@
 						</div>
 						<div class="body">
 							<div class="table-responsive">
-								<a href='<c:url value="/admin-comment?type=add"/>'>
+								<a href='<c:url value="/comment?type=add"/>'>
 									<button type="button" class="btn bg-blue waves-effect">
 										<i class="material-icons">verified_user</i> <span>ADD
 											Sub Category</span>
 									</button>
-								</a> <a href='<c:url value="/admin-comment?type=edit"/>'>
+								</a> <a href='<c:url value="/comment?type=edit"/>'>
 									<button type="button" class="btn bg-blue waves-effect">
 										<i class="material-icons">verified_user</i> <span>Edit
 											Sub Category</span>
 									</button>
 								</a>
-								<form action="<c:url value='/admin-comment'/>"
-									id="formSubmit" method="get">
+								<form action="<c:url value='/comment'/>" id="formSubmit"
+									method="get">
 									<table
 										class="table table-bordered table-striped table-hover js-basic-example dataTable">
 										<thead>
 											<tr>
-												<th><input type="checkbox" id="checkAll"></th>
+												<!-- <th><input type="checkbox" id="checkAll"></th> -->
 												<th>Comment_ID</th>
 												<th>User_ID</th>
 												<th>Doc_ID</th>
 												<th>Created_Date</th>
 												<th>Edit_Date</th>
-												<th>Content</th>											</tr>
+												<th>Content</th>
+											</tr>
 										</thead>
 										<tfoot>
 											<tr>
-												<th></th>
+												<!-- <th></th> -->
 												<th>Comment_ID</th>
 												<th>User_ID</th>
 												<th>Doc_ID</th>
 												<th>Created_Date</th>
 												<th>Edit_Date</th>
-												<th>Content</th>	
+												<th>Content</th>
 											</tr>
 										</tfoot>
 										<tbody>
 											<c:forEach var="comment" items="${model.listResult}">
 												<tr>
-													<td><input type="checkbox"
-														id="checkbox_${comment.id}"
-														value="${comment.id}" /></td>
+													<%-- <td><input type="checkbox" id="checkbox_${comment.id}"
+														value="${comment.id}" /></td> --%>
 													<td>${comment.id}</td>
 													<td>${comment.userId}</td>
 													<td>${comment.docId}</td>
@@ -733,7 +733,6 @@
 															onClick="btnDeleteClick(this)">
 															<img src="style/admin/images/Delete_16x16.png" />
 														</button></td>
-													
 												</tr>
 											</c:forEach>
 										</tbody>

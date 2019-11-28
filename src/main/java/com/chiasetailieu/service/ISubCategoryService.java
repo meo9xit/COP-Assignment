@@ -14,4 +14,5 @@ public interface ISubCategoryService {
 	SubCategory findByCategories(Category category);
 	SubCategory findOneByDocument(Document document);
 	SubCategory findOneByID(Long newID);
+	void update(SubCategory subcategory);
 }

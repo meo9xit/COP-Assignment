@@ -13,7 +13,7 @@ public class SubcateMapper implements GenericMapper<SubCategory>{
 		try {
 			SubCategory subcate = new SubCategory();
 			subcate.setSubcategoryID(rs.getLong("subcate_id"));
-			subcate.setCategoryId(rs.getInt("cate_id"));
+			subcate.setCategoryId(rs.getLong("cate_id"));
 			subcate.setSubcategoryName(rs.getString("subcate_name"));
 			return subcate;
 		} catch (SQLException e) {

@@ -4,6 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <c:url var="APIurl" value="/api-comment" />
+<c:url var="NewURL" value="/comment-new" />
 
 <!DOCTYPE html>
 <html lang="vi" xml:lang="vi" xmlns="http://www.w3.org/1999/xhtml">
@@ -624,8 +625,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 									<div class="img-border">
 										<img id="mainbody_contentbody_CodeImage"
 											title="Download ngay Full code website bán hàng laptop, điện thoại, linh kiện bằng framework codeigniter (full 100%)"
-											class="img-val" itemprop="image"
-											src="${doc.cover }"
+											class="img-val" itemprop="image" src="${doc.cover }"
 											alt="framework codeigniter,website,full code,bán laptop,bán hàng điện thoại linh kiện máy tính,CI" />
 									</div>
 									<div class="text-center dt-gallery">
@@ -644,7 +644,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 												id="mainbody_contentbody_Views">${doc.view }</b></span>&nbsp;&nbsp;&nbsp;&nbsp;
 										</div>
 									</div>
-									
+
 									<div class="line"></div>
 									<div class="row">
 										<div class="col-md-7 dt-des">
@@ -676,9 +676,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 									<div class="line"></div>
 								</div>
 							</div>
-							<div class="row">
-								
-							</div>
+							<div class="row"></div>
 							<br />
 							<div class="dt-sub" title="Mô tả ngắn">
 								<h4 class="title1" itemprop="description">${doc.docDescription }</h4>
@@ -686,7 +684,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 
 							<br /> <span class="dt-box-title bold">Preview</span>
 							<div class="dt-box entry-detail">
-								<embed src="${doc.docSource }" type="application/pdf"   height="700px" width="500">
+								<embed src="${doc.docSource }" type="application/pdf"
+									height="700px" width="500">
 							</div>
 							<br /> <br />
 							<div class="clear" style="height: 40px;">&nbsp;</div>
@@ -1133,42 +1132,43 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 							<br />
 							<div class="cmt">
 								<div class="cmt-img">
-									<img src="..style/post/avanta.png"
-										id="mainbody_contentbody_img" width="45" height="45" />
+									<img width="45" height="45" src="style/post/avanta.png" />
 								</div>
-								<div class="cmt-box">
-									<textarea name="ctl00$ctl00$mainbody$contentbody$txtComment"
-										rows="3" cols="20" id="mainbody_contentbody_txtComment"
-										class="form-control send-sp" placeholder="Nhập nội dung...">
-</textarea>
-
-									<a data-toggle="modal" data-target="#LoginForm"
-										onclick="createCaptcha();" role="button"
-										class="button-orange button-small alignright"><i
-										class="fa fa-comment line-h20" aria-hidden="true"></i>&nbsp;BÌNH
-										LUẬN</a>&nbsp;&nbsp;
-
-								</div>
-								<div style="display: none;" class="cmt-reply CommentReply">
-									<div class="cmt-img">
-										<img src="..style/post/avanta.png"
-											id="mainbody_contentbody_img2" width="45" height="45" />
+								<form id="formSubmit">
+									<label for="content">Comment content</label>
+									<div class="form-group">
+										<div class="form-line">
+											<input type="text" id="content" class="form-control"
+												name="content" placeholder="Enter content!"
+												value="${model.content}">
+										</div>
 									</div>
-									<div class="cmt-box">
-										<textarea
-											name="ctl00$ctl00$mainbody$contentbody$txtCommentReply"
-											rows="2" cols="20" id="mainbody_contentbody_txtCommentReply"
-											class="form-control send-sp" placeholder="Nhập nội dung...">
-</textarea>
+									<br> <input type="button"
+										class="btn btn-primary m-t-15 waves-effect" id="btnAdd"
+										value="Add" />
+								</form>
+								<%-- <form id="formSubmit">
+									<div style="display: none;" class="cmt-reply CommentReply">
+										<div class="cmt-img">
+											<img src="style/post/avanta.png"
+												id="mainbody_contentbody_img2" width="45" height="45" />
+										</div>
+										<div class="cmt-box">
+											<div class="form-group">
+												<div class="form-line">
+													<input type="text" id="content" class="form-control"
+														name="content" placeholder="Enter your content!"
+														value="${model.content}">
+												</div>
+											</div>
 
-										<a data-toggle="modal" data-target="#LoginForm"
-											onclick="createCaptcha();" role="button"
-											class="button-orange button-small alignright"><i
-											class="fa fa-comment line-h20" aria-hidden="true"></i>&nbsp;BÌNH
-											LUẬN</a>&nbsp;&nbsp;
+											<input type="button"
+												class="btn btn-primary m-t-15 waves-effect" id="btnAdd"
+												value="Bình luận" />
 
+										</div>
 									</div>
-								</div>
+								</form> --%>
 								<input type="hidden"
 									name="ctl00$ctl00$mainbody$contentbody$hdCommentParent"
 									id="mainbody_contentbody_hdCommentParent" /> <input
@@ -1177,28 +1177,39 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 									id="mainbody_contentbody_hdCommentReply" />
 
 								<div class="cmt-item " id="cmt-15186">
-									<div class="cmt-img">
+									<!-- <div class="cmt-img">
 										<a href='/thanh-vien/thanh-chu-240350.htm' target="_blank">
 											<img width="45" height="45" src="style/post/avanta.png" />
 										</a>
-									</div>
-									<form action="<c:url value='/comment'/>"
-										id="formSubmit" method="get">
+									</div> -->
+
+									<form action="<c:url value='/comment'/>" id="formSubmit"
+										method="get">
+
 										<div class="cmt-box cmt-border">
 											<c:forEach var="comment" items="${model.listResult}">
 												<div class="cmt-head">
-													<a href='/thanh-vien/thanh-chu-240350.htm' target="_blank"
-														class="bold agreen">${comment.user.username}</a><span
-														class="txt-colo cmt-right  cmt-date">${comment.docId}</span>
+													<div class="cmt-img">
+														<a href='/thanh-vien/thanh-chu-240350.htm' target="_blank">
+															<img width="45" height="45" src="style/post/avanta.png" />
+														</a>
+													</div>
+													<span class="txt-colo cmt-right  cmt-date">Người
+														nhập: ${comment.userId}</span><span
+														class="txt-colo cmt-right  cmt-date">Mã tài liệu:
+														${comment.docId}</span> <span
+														class="txt-colo cmt-right  cmt-date">Ngày viết:
+														${comment.createdDate}</span>
 												</div>
 												<div class="cmt-content">${comment.content}</div>
 											</c:forEach>
 										</div>
 									</form>
+
 								</div>
 								<div id="Parent15186"></div>
 
-								<div class="sortPagiBar clear">
+								<!-- <div class="sortPagiBar clear">
 									<div class="bottom-pagination">
 										<nav id="mainbody_contentbody_PaggingBottom">
 											<ul class='pagination'>
@@ -1206,7 +1217,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 											</ul>
 										</nav>
 									</div>
-								</div>
+								</div> -->
 							</div>
 							<br />
 							<h2 class="page-heading" id="danh-gia">
@@ -1340,7 +1351,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 
     }
             </script>
-            <script>
+						<script>
 		function btnDeleteClick(obj) {
 			var data = {};
 			var ids = obj.value;
@@ -2156,6 +2167,33 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 		</div>
 	</div>
 
+	<script>
+		$('#btnAdd').click(function(e) {
+			e.preventDefault();
+			var data = {};
+			var formData = $('#formSubmit').serializeArray();
+			$.each(formData, function(i, v) {
+				data["" + v.name + ""] = v.value;
+			});
+			console.info(data);
+			addNew(data);
+		});
+		function addNew(data) {
+			$.ajax({
+				url : '${APIurl}',
+				type : 'POST',
+				contentType : 'application/json',
+				data : JSON.stringify(data),
+				dataType : 'json',
+				success : function(result) {
+					window.location.href = "/chiasetailieu/comment";
+				},
+				error : function(error) {
+					window.location.href = "/chiasetailieu/home";
+				}
+			});
+		}
+	</script>
 
 	<script>
         //Lấy cookie trạng thái tài khoản
