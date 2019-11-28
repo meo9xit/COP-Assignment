@@ -10,9 +10,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.chiasetailieu.model.Category;
 import com.chiasetailieu.model.Document;
 import com.chiasetailieu.model.User;
-import com.chiasetailieu.service.impl.DocumentService;
+import com.chiasetailieu.service.ICategoryService;
+import com.chiasetailieu.service.IDocumentService;
 import com.chiasetailieu.utils.AppUtils;
 
 /**
@@ -23,7 +25,10 @@ public class HomeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	@Inject
-	DocumentService docService;
+	IDocumentService docService;
+	
+	@Inject
+	ICategoryService cateService;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -40,6 +45,7 @@ public class HomeController extends HttpServlet {
 		// TODO Auto-generated method stub
 		User user = AppUtils.getLoginedUser(request.getSession());
 		List<Document> docs = docService.findAll();
+		List<Category> cates = cateService.findAll();
 		request.setAttribute("docs", docs);
 		request.setAttribute("topviewdocs", docs);
 		request.setAttribute("topdocs", docs );

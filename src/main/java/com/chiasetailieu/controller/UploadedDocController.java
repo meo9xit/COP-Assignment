@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class UploadedDocController
  */
-@WebServlet("/UploadedDocController")
+@WebServlet("/doc-manage")
 public class UploadedDocController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

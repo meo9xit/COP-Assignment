@@ -130,14 +130,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
             <div class="top-header">
                 <div class="container">                    
                     <div class="nav-top-links">
-                        <a class="first-item" href="tel:+84981282756" title="Click gọi ngay!">
-                            <img alt="hotline" src="style/web-style/phone.png">0981.282.756</a>
-                        <a href="mailto:sharecode.contact@gmail.com" title="Click để gửi email!">
-                            <img alt="email sharecode" src="style/web-style/email.png">Sharecode.contact@gmail.com</a>
-                        <a href="https://sharecode.vn/kien-thuc-lap-trinh.htm">Kiến thức lập trình</a>
-                        <a href="https://sharecode.vn/su-kien.htm">Sự kiện</a>
                     </div>
                     <div id="LoginBox" class="support-link">
+
                         <a data-toggle="modal" data-target="#LoginForm" onclick="createCaptcha();" role="button">Đăng nhập</a>
                         <a href="https://sharecode.vn/dang-ki-tai-khoan.htm">Đăng kí</a>
                     </div>
@@ -414,7 +409,6 @@ function submitSearch() {
                         <div class="modal-body">
                             <div class="row line-h">
                                 <div class="col-sm-4 title3 bold">ĐĂNG NHẬP</div>
-                                <div class="col-sm-8">(Hoặc) Đăng nhập &nbsp;<a title="Đăng nhập nhanh bằng tài khoản Facebook" class="loginBtn loginBtn-facebook" href="javascript:__doPostBack(&#39;ctl00$ctl23&#39;,&#39;&#39;)">Log in</a>&nbsp;<a id="LinkButton1" title="Đăng nhập nhanh bằng tài khoản Google" class="loginBtn loginBtn-google" href="javascript:__doPostBack(&#39;ctl00$LinkButton1&#39;,&#39;&#39;)">Log in</a></div>
                             </div>
                             <div class="line"></div>
                             <br>
@@ -562,7 +556,7 @@ function submitSearch() {
                     <div class="center_column col-xs-12 col-sm-9" id="center_column">
                         <div id="view-product-list" class="view-product-list">
                             <h1 class="page-heading">
-                                <span class="page-heading-title" itemprop="name">SOURCE CODE</span>
+                                <span class="page-heading-title" itemprop="name">DANH SÁCH TÀI LIỆU</span>
                             </h1>
                             <link itemprop="url" href="https://sharecode.vn/">
                             <meta itemprop="description" content="Thư viện chia sẻ và download source code, upload code kiếm tiền, tổng hợp các mã nguồn và đồ án, kiến thức lập trình chuyên nghành công nghệ thông tin">
@@ -645,7 +639,7 @@ function submitSearch() {
                             
                                     <div id="view-product-list" class="view-product-list">
                                         <h2 class="page-heading">
-                                            <span class="page-heading-title">Website NỔI BẬT</span>
+                                            <span class="page-heading-title">TÀI LIỆU NỔI BẬT</span>
                                         </h2>
                                         <ul class="row product-list style2 grid">
                                             <c:forEach var = "topviewdoc" items = "${topviewdocs}" begin = "0" end = "3">

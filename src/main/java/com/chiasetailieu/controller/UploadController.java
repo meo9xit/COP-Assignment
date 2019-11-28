@@ -131,7 +131,7 @@ public class UploadController extends HttpServlet {
 			            	   
 			            	   
 			            	   
-			                   String filePath = fullSavePath + File.separator + fileName;
+			                   String filePath = fullSavePath + fileName;
 			                   System.out.println("Write attachment to file: " + filePath);
 			                   String temp = filePath;
 			                   
@@ -217,7 +217,7 @@ public class UploadController extends HttpServlet {
 	
 			// create the image
 			BufferedImage image = renderer.renderImage(0);
-			ImageIO.write(image, "jpg", new File( fullpath + File.separator + imgName ));
+			ImageIO.write(image, "jpg", new File( fullpath + imgName ));
 			document.close();
 		}
 		catch(IOException e) {
