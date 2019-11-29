@@ -584,8 +584,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
 							<div class="box-vertical-megamenus">
 								<h4 class="title">
 									<span class="title-menu">Danh mục</span> <span
-										class="btn-open-mobile pull-right home-page"><!-- <i
-										class="fa fa-bars"></i> --></span>
+										class="btn-open-mobile pull-right home-page"><i
+										class="fa fa-bars"></i></span>
 								</h4>
 								<div class="vertical-menu-content is-home"
 									style="display: none;">
