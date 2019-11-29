@@ -6,6 +6,10 @@
 	pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
+<<<<<<< Updated upstream
+=======
+<!-- saved from url=(0021)https://sharecode.vn/ -->
+>>>>>>> Stashed changes
 <html lang="vi" xml:lang="vi" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -25,6 +29,7 @@
 <meta name="twitter:card" value="summary">
 <meta property="og:site_name" content="Sharecode.vn">
 <link rel="stylesheet" type="text/css"
+<<<<<<< Updated upstream
 	href="<c:url value = "/style/web-style/bootstrap.min.css" />">
 <link rel="stylesheet" type="text/css"
 	href="style/web-style/font-awesome.min.css">
@@ -40,6 +45,21 @@
 	href="<c:url value = "/style/web-style/reset.css" />">
 <link rel="stylesheet" type="text/css"
 	href="<c:url value = "/style/web-style/style.css" />">
+=======
+	href="style/web-style/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="style/web-style/font-awesome.min.css">
+<link rel="stylesheet" type="text/css"
+	href="style/web-style/select2.min.css">
+<link rel="stylesheet" type="text/css"
+	href="style/web-style/owl.carousel.css">
+<link rel="stylesheet" type="text/css"
+	href="style/web-style/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css"
+	href="style/web-style/animate.css">
+<link rel="stylesheet" type="text/css" href="style/web-style/reset.css">
+<link rel="stylesheet" type="text/css" href="style/web-style/style.css">
+>>>>>>> Stashed changes
 <meta name="description"
 	content="Thư viện chia sẻ và download source code, upload code kiếm tiền, tổng hợp các mã nguồn và đồ án, kiến thức lập trình chuyên nghành công nghệ thông tin">
 <meta name="keywords"
@@ -55,9 +75,15 @@
 
 <link href="https://sharecode.vn/" rel="canonical">
 <link rel="stylesheet" type="text/css"
+<<<<<<< Updated upstream
 	href="<c:url value = "/style/web-style/jquery.bxslider.css" />">
 <link rel="stylesheet" type="text/css"
 	href="<c:url value = "/style/web-style/responsive.css"/>">
+=======
+	href="style/web-style/jquery.bxslider.css">
+<link rel="stylesheet" type="text/css"
+	href="style/web-style/responsive.css">
+>>>>>>> Stashed changes
 <style type="text/css"></style>
 <style type="text/css">
 .fb_hidden {
@@ -538,9 +564,24 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
 		<div id="header" class="header">
 			<div class="top-header">
 				<div class="container">
+<<<<<<< Updated upstream
 					<div class="nav-top-links"></div>
 					<div id="LoginBox" class="support-link">
 
+=======
+					<div class="nav-top-links">
+						<a class="first-item" href="tel:+84981282756"
+							title="Click gọi ngay!"> <img alt="hotline"
+							src="style/web-style/phone.png">0981.282.756
+						</a> <a href="mailto:sharecode.contact@gmail.com"
+							title="Click để gửi email!"> <img alt="email sharecode"
+							src="style/web-style/email.png">Sharecode.contact@gmail.com
+						</a> <a href="https://sharecode.vn/kien-thuc-lap-trinh.htm">Kiến
+							thức lập trình</a> <a href="https://sharecode.vn/su-kien.htm">Sự
+							kiện</a>
+					</div>
+					<div id="LoginBox" class="support-link">
+>>>>>>> Stashed changes
 						<a data-toggle="modal" data-target="#LoginForm"
 							onclick="createCaptcha();" role="button">Đăng nhập</a> <a
 							href="https://sharecode.vn/dang-ki-tai-khoan.htm">Đăng kí</a>
@@ -561,12 +602,21 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
 
 						<a data-toggle="modal" data-target="#LoginForm"
 							onclick="createCaptcha();" role="button" class="button-green"
+<<<<<<< Updated upstream
 							title="Nạp tiền vào tài khoản"><i class="fa fa-money fa-lg"
 							aria-hidden="true"></i>&nbsp; NẠP XU</a>&nbsp;&nbsp; <a
 							data-toggle="modal" data-target="#LoginForm"
 							onclick="createCaptcha();" role="button" class="button-orange"
 							title="Tặng thêm 5 Point cho mỗi Upload"><i
 							class="fa fa-cloud-upload fa-lg" aria-hidden="true"></i>&nbsp;
+=======
+							title="Nạp tiền vào tài khoản">&nbsp; NẠP XU</a>
+							&nbsp;&nbsp; 
+							<a
+							data-toggle="modal" data-target="#LoginForm"
+							onclick="createCaptcha();" role="button" class="button-orange"
+							title="Tặng thêm 5 Point cho mỗi Upload">&nbsp;
+>>>>>>> Stashed changes
 							TẢI LÊN</a>
 
 					</div>
@@ -586,9 +636,15 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
 									style="display: none;">
 									<ul class="vertical-menu-list">
 										<li><a class="parent"
+<<<<<<< Updated upstream
 											href="https://sharecode.vn/thanh-vien-upload.htm#"> <img
 												class="icon-menu" alt="Thể loại code"
 												src="style/web-style/2.png">PHÂN LOẠI TÀI LIỆU
+=======
+											href="https://sharecode.vn/thanh-vien-upload.htm#"> <!-- <img
+												class="icon-menu" alt="Thể loại code"
+												src="style/upload/2.png"> -->PHÂN LOẠI TÀI LIỆU
+>>>>>>> Stashed changes
 										</a>
 											<div class="vertical-dropdown-menu" style="width: 900px;">
 												<div class="vertical-groups col-sm-6 col-md-4">
@@ -637,90 +693,150 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
 										<li class=""><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/android-15.htm">
 												<img class="icon-menu" alt="Android"
+<<<<<<< Updated upstream
 												src="style/web-style/3.png">Android
+=======
+												src="style/upload/3.png">Android
+>>>>>>> Stashed changes
 										</a></li>
 
 										<li class=""><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/ios-23.htm">
+<<<<<<< Updated upstream
 												<img class="icon-menu" alt="iOS" src="style/web-style/3.png">iOS
+=======
+												<img class="icon-menu" alt="iOS" src="style/upload/3.png">iOS
+>>>>>>> Stashed changes
 										</a></li>
 
 										<li class=""><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/windows-phone-26.htm">
 												<img class="icon-menu" alt="Windows phone"
+<<<<<<< Updated upstream
 												src="style/web-style/3.png">Windows phone
+=======
+												src="style/upload/3.png">Windows phone
+>>>>>>> Stashed changes
 										</a></li>
 
 										<li class=""><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/php-mysql-21.htm">
 												<img class="icon-menu" alt="PHP &amp; MySQL"
+<<<<<<< Updated upstream
 												src="style/web-style/3.png">PHP &amp; MySQL
+=======
+												src="style/upload/3.png">PHP &amp; MySQL
+>>>>>>> Stashed changes
 										</a></li>
 
 										<li class=""><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">
 												<img class="icon-menu" alt="WordPress"
+<<<<<<< Updated upstream
 												src="style/web-style/3.png">WordPress
+=======
+												src="style/upload/3.png">WordPress
+>>>>>>> Stashed changes
 										</a></li>
 
 										<li class=""><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/joomla-28.htm">
+<<<<<<< Updated upstream
 												<img class="icon-menu" alt="Joomla"
 												src="style/web-style/3.png">Joomla
+=======
+												<img class="icon-menu" alt="Joomla" src="style/upload/3.png">Joomla
+>>>>>>> Stashed changes
 										</a></li>
 
 										<li class=""><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-17.htm">
 												<img class="icon-menu" alt="Visual C#"
+<<<<<<< Updated upstream
 												src="style/web-style/3.png">Visual C#
+=======
+												src="style/upload/3.png">Visual C#
+>>>>>>> Stashed changes
 										</a></li>
 
 										<li class=""><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/aspaspnet-16.htm">
 												<img class="icon-menu" alt="Asp/Asp.Net"
+<<<<<<< Updated upstream
 												src="style/web-style/3.png">Asp/Asp.Net
+=======
+												src="style/upload/3.png">Asp/Asp.Net
+>>>>>>> Stashed changes
 										</a></li>
 
 										<li class=""><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/javajsp-20.htm">
 												<img class="icon-menu" alt="Java/JSP"
+<<<<<<< Updated upstream
 												src="style/web-style/3.png">Java/JSP
+=======
+												src="style/upload/3.png">Java/JSP
+>>>>>>> Stashed changes
 										</a></li>
 
 										<li class=""><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-basic-19.htm">
 												<img class="icon-menu" alt="Visual Basic"
+<<<<<<< Updated upstream
 												src="style/web-style/3.png">Visual Basic
+=======
+												src="style/upload/3.png">Visual Basic
+>>>>>>> Stashed changes
 										</a></li>
 
 										<li class="cat-link-orther"><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/cocos2d-24.htm">
 												<img class="icon-menu" alt="Cocos2D"
+<<<<<<< Updated upstream
 												src="style/web-style/3.png">Cocos2D
+=======
+												src="style/upload/3.png">Cocos2D
+>>>>>>> Stashed changes
 										</a></li>
 
 										<li class="cat-link-orther"><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/unity-27.htm">
+<<<<<<< Updated upstream
 												<img class="icon-menu" alt="Unity"
 												src="style/web-style/3.png">Unity
+=======
+												<img class="icon-menu" alt="Unity" src="style/upload/3.png">Unity
+>>>>>>> Stashed changes
 										</a></li>
 
 										<li class="cat-link-orther"><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-18.htm">
 												<img class="icon-menu" alt="Visual C++"
+<<<<<<< Updated upstream
 												src="style/web-style/3.png">Visual C++
+=======
+												src="style/upload/3.png">Visual C++
+>>>>>>> Stashed changes
 										</a></li>
 
 										<li class="cat-link-orther"><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/html-template-25.htm">
 												<img class="icon-menu" alt="Html &amp; Template"
+<<<<<<< Updated upstream
 												src="style/web-style/3.png">Html &amp; Template
+=======
+												src="style/upload/3.png">Html &amp; Template
+>>>>>>> Stashed changes
 										</a></li>
 
 										<li class="cat-link-orther"><a
 											href="https://sharecode.vn/ngon-ngu-lap-trinh/khac-22.htm">
+<<<<<<< Updated upstream
 												<img class="icon-menu" alt="Khác"
 												src="style/web-style/3.png">Khác
+=======
+												<img class="icon-menu" alt="Khác" src="style/upload/3.png">Khác
+>>>>>>> Stashed changes
 										</a></li>
 
 									</ul>
@@ -737,15 +853,23 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
 										<button type="button" class="navbar-toggle collapsed"
 											data-toggle="collapse" data-target="#navbar"
 											aria-expanded="false" aria-controls="navbar">
+<<<<<<< Updated upstream
 											<i class="fa fa-bars"></i>
+=======
+											
+>>>>>>> Stashed changes
 										</button>
 										<a class="navbar-brand" href="https://sharecode.vn/#">MENU</a>
 									</div>
 									<div id="navbar" class="navbar-collapse collapse">
 										<ul class="nav navbar-nav">
 											<li id="mnhome" class="active" title="Trang chủ"><a
+<<<<<<< Updated upstream
 												href="https://sharecode.vn/"><i class="fa fa-home fa-lg"
 													aria-hidden="true"></i></a></li>
+=======
+												href="https://sharecode.vn/"></i></a></li>
+>>>>>>> Stashed changes
 											<li id="mntopcode" title="Top code nổi bật"><a
 												href="https://sharecode.vn/top-codes.htm">Top code</a></li>
 											<li id="mncodeok" title="Code chất lượng (&gt;= 100 Xu)"><a
@@ -760,8 +884,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
 													phí</a></li>
 											<li id="mndomain" class="dropdown"><a
 												href="https://sharecode.vn/hosting-ssd.htm"
+<<<<<<< Updated upstream
 												class="dropdown-toggle">Tên miền - Hosting <span
 													class="notify notify-right"></span></a>
+=======
+												class="dropdown-toggle">Tên miền - Hosting <!-- <span
+													class="notify notify-right"></span> --></a>
+>>>>>>> Stashed changes
 												<ul class="dropdown-menu container-fluid">
 													<li class="block-container">
 														<ul class="block">
@@ -925,6 +1054,20 @@ function submitSearch() {
 						<div class="modal-body">
 							<div class="row line-h">
 								<div class="col-sm-4 title3 bold">ĐĂNG NHẬP</div>
+<<<<<<< Updated upstream
+=======
+								<div class="col-sm-8">
+									(Hoặc) Đăng nhập &nbsp;<a
+										title="Đăng nhập nhanh bằng tài khoản Facebook"
+										class="loginBtn loginBtn-facebook"
+										href="javascript:__doPostBack(&#39;ctl00$ctl23&#39;,&#39;&#39;)">Log
+										in</a>&nbsp;<a id="LinkButton1"
+										title="Đăng nhập nhanh bằng tài khoản Google"
+										class="loginBtn loginBtn-google"
+										href="javascript:__doPostBack(&#39;ctl00$LinkButton1&#39;,&#39;&#39;)">Log
+										in</a>
+								</div>
+>>>>>>> Stashed changes
 							</div>
 							<div class="line"></div>
 							<br>
@@ -1100,8 +1243,13 @@ function submitSearch() {
 					<div class="center_column col-xs-12 col-sm-9" id="center_column">
 						<div id="view-product-list" class="view-product-list">
 							<h1 class="page-heading">
+<<<<<<< Updated upstream
 								<span class="page-heading-title" itemprop="name">DANH
 									SÁCH TÀI LIỆU</span>
+=======
+								<span class="page-heading-title" itemprop="name">SOURCE
+									CODE</span>
+>>>>>>> Stashed changes
 							</h1>
 							<link itemprop="url" href="https://sharecode.vn/">
 							<meta itemprop="description"
@@ -1240,7 +1388,11 @@ function submitSearch() {
 
 							<div id="view-product-list" class="view-product-list">
 								<h2 class="page-heading">
+<<<<<<< Updated upstream
 									<span class="page-heading-title">TÀI LIỆU NỔI BẬT</span>
+=======
+									<span class="page-heading-title">Website NỔI BẬT</span>
+>>>>>>> Stashed changes
 								</h2>
 								<ul class="row product-list style2 grid">
 									<c:forEach var="topviewdoc" items="${topviewdocs}" begin="0"
