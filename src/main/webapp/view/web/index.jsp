@@ -383,7 +383,11 @@ keyframes rotateSpinner { 0%{
 transform
 
 
+
+
 :rotate(360deg)
+
+
 
 
 }
@@ -448,24 +452,27 @@ transform
 		crossorigin="anonymous"></script>
 	<script id="facebook-jssdk" src="style/web-style/sdk.js(1).tải xuống"></script>
 	<script>
-        window.fbAsyncInit = function () {
-            FB.init({
-                appId: '1938824166400762',
-                cookie: true,
-                xfbml: true,
-                version: 'v2.8'
-            });
-            FB.AppEvents.logPageView();
-        };
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId : '1938824166400762',
+				cookie : true,
+				xfbml : true,
+				version : 'v2.8'
+			});
+			FB.AppEvents.logPageView();
+		};
 
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) { return; }
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {
+				return;
+			}
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 	<form method="post" action="https://sharecode.vn/" id="form1">
 		<div class="aspNetHidden">
 			<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
@@ -477,20 +484,20 @@ transform
 		</div>
 
 		<script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['form1'];
-if (!theForm) {
-    theForm = document.form1;
-}
-function __doPostBack(eventTarget, eventArgument) {
-    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-        theForm.__EVENTTARGET.value = eventTarget;
-        theForm.__EVENTARGUMENT.value = eventArgument;
-        theForm.submit();
-    }
-}
-//]]>
-</script>
+			//<![CDATA[
+			var theForm = document.forms['form1'];
+			if (!theForm) {
+				theForm = document.form1;
+			}
+			function __doPostBack(eventTarget, eventArgument) {
+				if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+					theForm.__EVENTTARGET.value = eventTarget;
+					theForm.__EVENTARGUMENT.value = eventArgument;
+					theForm.submit();
+				}
+			}
+			//]]>
+		</script>
 
 
 		<script src="style/web-style/WebResource.axd" type="text/javascript"></script>
@@ -502,10 +509,12 @@ function __doPostBack(eventTarget, eventArgument) {
 			type="text/javascript"></script>
 
 		<script type="text/javascript">
-//<![CDATA[
-Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['tctl00$mainbody$upPannel','mainbody_upPannel','tctl00$ctl24','ctl24'], [], [], 90, 'ctl00');
-//]]>
-</script>
+			//<![CDATA[
+			Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1',
+					'form1', [ 'tctl00$mainbody$upPannel', 'mainbody_upPannel',
+							'tctl00$ctl24', 'ctl24' ], [], [], 90, 'ctl00');
+			//]]>
+		</script>
 
 
 		<div class="row-fluid">
@@ -566,175 +575,117 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
 
 						<a data-toggle="modal" data-target="#LoginForm"
 							onclick="createCaptcha();" role="button" class="button-green"
-							title="Nạp tiền vào tài khoản"><!-- <i class="fa fa-money fa-lg"
-							aria-hidden="true"></i> -->&nbsp; NẠP XU</a>&nbsp;&nbsp; <a
-							data-toggle="modal" data-target="#LoginForm"
+							title="Nạp tiền vào tài khoản">
+							<!-- <i class="fa fa-money fa-lg"
+							aria-hidden="true"></i> -->&nbsp; NẠP XU
+						</a>&nbsp;&nbsp; <a data-toggle="modal" data-target="#LoginForm"
 							onclick="createCaptcha();" role="button" class="button-orange"
-							title="Tặng thêm 5 Point cho mỗi Upload"><!-- <i
+							title="Tặng thêm 5 Point cho mỗi Upload">
+							<!-- <i
 							class="fa fa-cloud-upload fa-lg" aria-hidden="true"></i> -->&nbsp;
-							TẢI LÊN</a>
+							TẢI LÊN
+						</a>
 
 					</div>
 				</div>
 			</div>
-			<div id="nav-top-menu" class="nav-top-menu nav-ontop">
+			<div id="nav-top-menu" class="nav-top-menu">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-3" id="box-vertical-megamenus">
-							<div class="box-vertical-megamenus">
-								<h4 class="title">
-									<span class="title-menu">Danh mục</span> <span
-										class="btn-open-mobile pull-right home-page"><i
-										class="fa fa-bars"></i></span>
-								</h4>
-								<div class="vertical-menu-content is-home"
-									style="display: none;">
-									<ul class="vertical-menu-list">
-										<li><a class="parent"
-											href="https://sharecode.vn/thanh-vien-upload.htm#"> <img
-												class="icon-menu" alt="Thể loại code"
-												src="style/web-style/2.png">PHÂN LOẠI TÀI LIỆU
-										</a>
-											<div class="vertical-dropdown-menu" style="width: 900px;">
-												<div class="vertical-groups col-sm-6 col-md-4">
-													<div class="mega-group col-sm-12">
-														<span class="mega-group-header"><span>THỂ
-																LOẠI TÀI LIỆU</span></span>
-														<ul class="group-link-default">
-
-															<li><a class="bold"
-																href="https://sharecode.vn/the-loai-source-code/website-1.htm">Website</a></li>
-
-															<li><a class="bold"
-																href="https://sharecode.vn/the-loai-source-code/phan-mem-ung-dung-2.htm">Phần
-																	mềm - Ứng dụng</a></li>
-
-															<li><a class="bold"
-																href="https://sharecode.vn/the-loai-source-code/game-3.htm">Game</a></li>
-
-															<li><a class="bold"
-																href="https://sharecode.vn/the-loai-source-code/khac-4.htm">Khác</a></li>
-
-														</ul>
-													</div>
-												</div>
-												<div class="vertical-groups col-sm-6 col-md-5">
-													<div class="mega-group col-sm-12">
-														<span class="mega-group-header"><span>TÀI
-																LIỆU</span></span>
-														<ul class="group-link-default">
-															<li><a
-																href="https://sharecode.vn/code-chat-luong.htm"><strong>Code
-																		chất lượng</strong> (&gt;= 100 Xu)</a></li>
-															<li><a
-																href="https://sharecode.vn/code-tham-khao.htm"><strong>Code
-																		tham khảo</strong> (2 Xu - 99 Xu)</a></li>
-															<li><a href="https://sharecode.vn/code-mien-phi.htm"><strong>Code
-																		miễn phí</strong> (0 Xu)</a></li>
+                            <div class="box-vertical-megamenus">
+                                <h4 class="title">
+                                    <span class="title-menu">Danh mục</span>
+                                    <span class="btn-open-mobile pull-right home-page"><i class="fa fa-bars"></i></span>
+                                </h4>
+                                <div class="vertical-menu-content is-home">
+                                    <ul class="vertical-menu-list">
+                                        <li>
+                                            <a class="parent" href="#">
+                                                <img class="icon-menu" alt="Thể loại code" src="/assets/images/2.png" />PHÂN LOẠI CODE</a>
+                                            <div class="vertical-dropdown-menu">
+                                                <div class="vertical-groups col-sm-6 col-md-4">
+                                                    <div class="mega-group col-sm-12">
+                                                        <span class="mega-group-header"><span>THỂ LOẠI CODE</span></span>
+                                                        <ul class="group-link-default">
+                                                            
+                                                                    <li><a class="bold" href='/the-loai-source-code/website-1.htm'>Website</a></li>
+                                                                
+                                                                    <li><a class="bold" href='/the-loai-source-code/phan-mem-ung-dung-2.htm'>Phần mềm - Ứng dụng</a></li>
+                                                                
+                                                                    <li><a class="bold" href='/the-loai-source-code/game-3.htm'>Game</a></li>
+                                                                
+                                                                    <li><a class="bold" href='/the-loai-source-code/khac-4.htm'>Khác</a></li>
+                                                                
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="vertical-groups col-sm-6 col-md-5">
+                                                    <div class="mega-group col-sm-12">
+                                                        <span class="mega-group-header"><span>SOURCE CODE</span></span>
+                                                        <ul class="group-link-default">
+                                                            <li><a href="/code-chat-luong.htm"><strong>Code chất lượng</strong> (>= 100 Xu)</a></li>
+                                                            <li><a href="/code-tham-khao.htm"><strong>Code tham khảo</strong> (2 Xu - 99 Xu)</a></li>
+                                                            <li><a href="/code-mien-phi.htm"><strong>Code miễn phí</strong> (0 Xu)</a></li>
 
 
-														</ul>
-													</div>
+                                                        </ul>
+                                                    </div>
 
-												</div>
-											</div></li>
-
-										<li class=""><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/android-15.htm">
-												<img class="icon-menu" alt="Android"
-												src="style/web-style/3.png">Android
-										</a></li>
-
-										<li class=""><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/ios-23.htm">
-												<img class="icon-menu" alt="iOS" src="style/web-style/3.png">iOS
-										</a></li>
-
-										<li class=""><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/windows-phone-26.htm">
-												<img class="icon-menu" alt="Windows phone"
-												src="style/web-style/3.png">Windows phone
-										</a></li>
-
-										<li class=""><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/php-mysql-21.htm">
-												<img class="icon-menu" alt="PHP &amp; MySQL"
-												src="style/web-style/3.png">PHP &amp; MySQL
-										</a></li>
-
-										<li class=""><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">
-												<img class="icon-menu" alt="WordPress"
-												src="style/web-style/3.png">WordPress
-										</a></li>
-
-										<li class=""><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/joomla-28.htm">
-												<img class="icon-menu" alt="Joomla"
-												src="style/web-style/3.png">Joomla
-										</a></li>
-
-										<li class=""><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-17.htm">
-												<img class="icon-menu" alt="Visual C#"
-												src="style/web-style/3.png">Visual C#
-										</a></li>
-
-										<li class=""><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/aspaspnet-16.htm">
-												<img class="icon-menu" alt="Asp/Asp.Net"
-												src="style/web-style/3.png">Asp/Asp.Net
-										</a></li>
-
-										<li class=""><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/javajsp-20.htm">
-												<img class="icon-menu" alt="Java/JSP"
-												src="style/web-style/3.png">Java/JSP
-										</a></li>
-
-										<li class=""><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-basic-19.htm">
-												<img class="icon-menu" alt="Visual Basic"
-												src="style/web-style/3.png">Visual Basic
-										</a></li>
-
-										<li class="cat-link-orther"><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/cocos2d-24.htm">
-												<img class="icon-menu" alt="Cocos2D"
-												src="style/web-style/3.png">Cocos2D
-										</a></li>
-
-										<li class="cat-link-orther"><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/unity-27.htm">
-												<img class="icon-menu" alt="Unity"
-												src="style/web-style/3.png">Unity
-										</a></li>
-
-										<li class="cat-link-orther"><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-18.htm">
-												<img class="icon-menu" alt="Visual C++"
-												src="style/web-style/3.png">Visual C++
-										</a></li>
-
-										<li class="cat-link-orther"><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/html-template-25.htm">
-												<img class="icon-menu" alt="Html &amp; Template"
-												src="style/web-style/3.png">Html &amp; Template
-										</a></li>
-
-										<li class="cat-link-orther"><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/khac-22.htm">
-												<img class="icon-menu" alt="Khác"
-												src="style/web-style/3.png">Khác
-										</a></li>
-
-									</ul>
-									<div class="all-category">
-										<span class="open-cate">Xem tất cả</span>
-									</div>
-								</div>
-							</div>
-						</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                                <li class=""><a href='/ngon-ngu-lap-trinh/android-15.htm'>
+                                                    <img class="icon-menu" alt="Android" src="/assets/images/3.png">Android</a></li>
+                                            
+                                                <li class=""><a href='/ngon-ngu-lap-trinh/ios-23.htm'>
+                                                    <img class="icon-menu" alt="iOS" src="/assets/images/3.png">iOS</a></li>
+                                            
+                                                <li class=""><a href='/ngon-ngu-lap-trinh/windows-phone-26.htm'>
+                                                    <img class="icon-menu" alt="Windows phone" src="/assets/images/3.png">Windows phone</a></li>
+                                            
+                                                <li class=""><a href='/ngon-ngu-lap-trinh/php-mysql-21.htm'>
+                                                    <img class="icon-menu" alt="PHP & MySQL" src="/assets/images/3.png">PHP & MySQL</a></li>
+                                            
+                                                <li class=""><a href='/ngon-ngu-lap-trinh/wordpress-29.htm'>
+                                                    <img class="icon-menu" alt="WordPress" src="/assets/images/3.png">WordPress</a></li>
+                                            
+                                                <li class=""><a href='/ngon-ngu-lap-trinh/joomla-28.htm'>
+                                                    <img class="icon-menu" alt="Joomla" src="/assets/images/3.png">Joomla</a></li>
+                                            
+                                                <li class=""><a href='/ngon-ngu-lap-trinh/visual-c-17.htm'>
+                                                    <img class="icon-menu" alt="Visual C#" src="/assets/images/3.png">Visual C#</a></li>
+                                            
+                                                <li class=""><a href='/ngon-ngu-lap-trinh/aspaspnet-16.htm'>
+                                                    <img class="icon-menu" alt="Asp/Asp.Net" src="/assets/images/3.png">Asp/Asp.Net</a></li>
+                                            
+                                                <li class=""><a href='/ngon-ngu-lap-trinh/javajsp-20.htm'>
+                                                    <img class="icon-menu" alt="Java/JSP" src="/assets/images/3.png">Java/JSP</a></li>
+                                            
+                                                <li class=""><a href='/ngon-ngu-lap-trinh/visual-basic-19.htm'>
+                                                    <img class="icon-menu" alt="Visual Basic" src="/assets/images/3.png">Visual Basic</a></li>
+                                            
+                                                <li class="cat-link-orther"><a href='/ngon-ngu-lap-trinh/cocos2d-24.htm'>
+                                                    <img class="icon-menu" alt="Cocos2D" src="/assets/images/3.png">Cocos2D</a></li>
+                                            
+                                                <li class="cat-link-orther"><a href='/ngon-ngu-lap-trinh/unity-27.htm'>
+                                                    <img class="icon-menu" alt="Unity" src="/assets/images/3.png">Unity</a></li>
+                                            
+                                                <li class="cat-link-orther"><a href='/ngon-ngu-lap-trinh/visual-c-18.htm'>
+                                                    <img class="icon-menu" alt="Visual C++" src="/assets/images/3.png">Visual C++</a></li>
+                                            
+                                                <li class="cat-link-orther"><a href='/ngon-ngu-lap-trinh/html-template-25.htm'>
+                                                    <img class="icon-menu" alt="Html & Template" src="/assets/images/3.png">Html & Template</a></li>
+                                            
+                                                <li class="cat-link-orther"><a href='/ngon-ngu-lap-trinh/khac-22.htm'>
+                                                    <img class="icon-menu" alt="Khác" src="/assets/images/3.png">Khác</a></li>
+                                            
+                                    </ul>
+                                    <div class="all-category"><span class="open-cate">Xem tất cả</span></div>
+                                </div>
+                            </div>
+                        </div>
 						<div id="main-menu" class="col-sm-9 main-menu">
 							<nav class="navbar navbar-default">
 								<div class="container-fluid">
@@ -796,8 +747,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
 					</div>
 					<div id="form-search-opntop">
 						<div class="form-inline search-h">
-							<div id="regPanel"
-								onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnSearch&#39;)">
+							<div id="regPanel" onkeypress="WebForm_FireDefaultButton">
 								<form id="searchform" action="<c:url value="/search"/>">
 									<div class="form-group input-serach">
 										<input name="key" type="text" id="txtSearch"
@@ -809,10 +759,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'form1', ['t
 								</form>
 							</div>
 							<script>
-function submitSearch() {
-	  document.getElementById("searchform").submit();
-	}
-</script>
+								function submitSearch() {
+									document.getElementById("searchform")
+											.submit();
+								}
+							</script>
 						</div>
 					</div>
 					<div id="user-info-opntop">
@@ -824,11 +775,16 @@ function submitSearch() {
 									href="https://sharecode.vn/code-upload-cua-toi.htm"></a> -->
 								<ul class="dropdown-menu mega_dropdown" role="menu">
 									<li><a data-toggle="modal" data-target="#LoginForm"
-										onclick="createCaptcha();" role="button"><!-- <i
-											class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;&nbsp; --> Đăng
-											nhập</a></li>
-									<li><a href="https://sharecode.vn/dang-ki-tai-khoan.htm"><!-- <i
-											class="fa fa-user-plus" aria-hidden="true"></i>&nbsp; -->Đăng kí</a></li>
+										onclick="createCaptcha();" role="button">
+											<!-- <i
+											class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;&nbsp; -->
+											Đăng nhập
+									</a></li>
+									<li><a href="https://sharecode.vn/dang-ki-tai-khoan.htm">
+											<!-- <i
+											class="fa fa-user-plus" aria-hidden="true"></i>&nbsp; -->Đăng
+											kí
+									</a></li>
 								</ul>
 							</div>
 						</div>
@@ -839,79 +795,92 @@ function submitSearch() {
 		</div>
 
 		<script type="text/javascript">
-            function fosp_login() {
-                jQuery('#login_error').html('');
-                jQuery('input[type="text"], input[type="password"]').removeClass('validation-failed');
-                email = jQuery('#log_username').val();
-                pass = jQuery('#log_password').val();
-                if (email == '') {
-                    jQuery('#log_username').addClass('validation-failed');
-                    jQuery('#login_error').html('Vui lòng nhập địa chỉ email.');
-                    jQuery('#log_username').focus();
-                    return false;
-                }
-                email_pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-                if (!email.match(email_pattern)) {
-                    jQuery('#log_username').addClass('validation-failed');
-                    jQuery('#login_error').html('Địa chỉ email không hợp lệ.');
-                    jQuery('#log_username').focus();
-                    return false;
-                }
-                if (pass == '') {
-                    jQuery('#log_password').addClass('validation-failed');
-                    jQuery('#login_error').html('Vui lòng nhập mật khẩu đăng nhập.');
-                    jQuery('#log_password').focus();
-                    return false;
-                }
-                captcha = jQuery('#txtCaptcha').val();
-        if (captcha == '') {
-            jQuery('#txtCaptcha').addClass('validation-failed');
-            jQuery('#login_error').html('Chưa nhập mã xác nhận.');
-            jQuery('#txtCaptcha').focus();
-            return false;
-        }
-                jQuery.ajax({
-                    type: "POST",
-                    url: "/Ajax/CheckAccount.aspx/CheckAccountLogin",
-                    data: '{email: "' + email + '", password: "' + pass + '", captcha: "' + captcha + '" }',
-                    contentType: "application/json; charset=utf-8",
-                    dataType: "json",
-                    async: false,
-                    success: function (data) {
-                        if (data.d == '1') {
-                            jQuery('#login_error').html('Mật khẩu không đúng.');
-                            jQuery('#log_password').addClass('validation-failed');
-                            jQuery('#log_password').focus();
-                        }
-                        else if (data.d == '2') {
-                            jQuery('#login_error').html('Email không tồn tại vui lòng nhập lại.');
-                            jQuery('#log_username').addClass('validation-failed');
-                            jQuery('#log_username').focus();
-                        }
-                        else if (data.d == '3') {
-                            jQuery('#login_error').html('Tài khoản chưa kích hoạt: KÍCH HOẠT (or dùng) QUÊN MẬT KHẨU?.');
-                            jQuery('#log_username').addClass('validation-failed');
-                            jQuery('#log_username').focus();
-                        }
-                        else if (data.d == '4') {
-                            jQuery('#login_error').html('Tài khoản đã bị khóa! Liên hệ với BQT để được hỗ trợ.');
-                            jQuery('#log_username').addClass('validation-failed');
-                            jQuery('#log_username').focus();
-                        }
-                        else if (data.d == '-1') {
-                            jQuery('#login_error').html('Mã xác nhận không đúng.');
-                            jQuery('#txtCaptcha').addClass('validation-failed');
-                            jQuery('#txtCaptcha').focus();
-                        }
-                    }
-                });
-                if (jQuery('#login_error').html() != '') {
-                    return false;
-                } else {
-                    return true;
-                }
-            }
-        </script>
+			function fosp_login() {
+				jQuery('#login_error').html('');
+				jQuery('input[type="text"], input[type="password"]')
+						.removeClass('validation-failed');
+				email = jQuery('#log_username').val();
+				pass = jQuery('#log_password').val();
+				if (email == '') {
+					jQuery('#log_username').addClass('validation-failed');
+					jQuery('#login_error').html('Vui lòng nhập địa chỉ email.');
+					jQuery('#log_username').focus();
+					return false;
+				}
+				email_pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+				if (!email.match(email_pattern)) {
+					jQuery('#log_username').addClass('validation-failed');
+					jQuery('#login_error').html('Địa chỉ email không hợp lệ.');
+					jQuery('#log_username').focus();
+					return false;
+				}
+				if (pass == '') {
+					jQuery('#log_password').addClass('validation-failed');
+					jQuery('#login_error').html(
+							'Vui lòng nhập mật khẩu đăng nhập.');
+					jQuery('#log_password').focus();
+					return false;
+				}
+				captcha = jQuery('#txtCaptcha').val();
+				if (captcha == '') {
+					jQuery('#txtCaptcha').addClass('validation-failed');
+					jQuery('#login_error').html('Chưa nhập mã xác nhận.');
+					jQuery('#txtCaptcha').focus();
+					return false;
+				}
+				jQuery
+						.ajax({
+							type : "POST",
+							url : "/Ajax/CheckAccount.aspx/CheckAccountLogin",
+							data : '{email: "' + email + '", password: "'
+									+ pass + '", captcha: "' + captcha + '" }',
+							contentType : "application/json; charset=utf-8",
+							dataType : "json",
+							async : false,
+							success : function(data) {
+								if (data.d == '1') {
+									jQuery('#login_error').html(
+											'Mật khẩu không đúng.');
+									jQuery('#log_password').addClass(
+											'validation-failed');
+									jQuery('#log_password').focus();
+								} else if (data.d == '2') {
+									jQuery('#login_error')
+											.html(
+													'Email không tồn tại vui lòng nhập lại.');
+									jQuery('#log_username').addClass(
+											'validation-failed');
+									jQuery('#log_username').focus();
+								} else if (data.d == '3') {
+									jQuery('#login_error')
+											.html(
+													'Tài khoản chưa kích hoạt: KÍCH HOẠT (or dùng) QUÊN MẬT KHẨU?.');
+									jQuery('#log_username').addClass(
+											'validation-failed');
+									jQuery('#log_username').focus();
+								} else if (data.d == '4') {
+									jQuery('#login_error')
+											.html(
+													'Tài khoản đã bị khóa! Liên hệ với BQT để được hỗ trợ.');
+									jQuery('#log_username').addClass(
+											'validation-failed');
+									jQuery('#log_username').focus();
+								} else if (data.d == '-1') {
+									jQuery('#login_error').html(
+											'Mã xác nhận không đúng.');
+									jQuery('#txtCaptcha').addClass(
+											'validation-failed');
+									jQuery('#txtCaptcha').focus();
+								}
+							}
+						});
+				if (jQuery('#login_error').html() != '') {
+					return false;
+				} else {
+					return true;
+				}
+			}
+		</script>
 
 		<div class="modal fade" id="LoginForm" tabindex="-1" role="dialog"
 			aria-labelledby="myModalLabel">
@@ -968,24 +937,33 @@ function submitSearch() {
 											placeholder="Xác nhận" style="width: 90px;">
 
 										<script type="text/javascript">
-    function createCaptcha() {
-        jQuery.ajax({
-            type: "POST",
-            url: "/Ajax/CreateCaptcha.aspx/CaptchaUrl",
-            data: '{}',
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            async: false,
-            success: function (data) {
-                if (data.d != '') {
-                    $('.imgCaptcha').attr('src', data.d);
-                }
-                else
-                    $('.imgCaptcha').attr('src', '/Image/captcha.jpg');
-            }
-        });
-    }
-</script>
+											function createCaptcha() {
+												jQuery
+														.ajax({
+															type : "POST",
+															url : "/Ajax/CreateCaptcha.aspx/CaptchaUrl",
+															data : '{}',
+															contentType : "application/json; charset=utf-8",
+															dataType : "json",
+															async : false,
+															success : function(
+																	data) {
+																if (data.d != '') {
+																	$(
+																			'.imgCaptcha')
+																			.attr(
+																					'src',
+																					data.d);
+																} else
+																	$(
+																			'.imgCaptcha')
+																			.attr(
+																					'src',
+																					'/Image/captcha.jpg');
+															}
+														});
+											}
+										</script>
 										<div
 											style="height: 30px; width: 140px; float: left; margin-left: 10px;">
 											<img src="style/web-style/captcha.jpg" alt="captcha"
@@ -1228,8 +1206,7 @@ function submitSearch() {
 							</div>
 							<div class="sort-product">
 								<select name="ctl00$mainbody$ddlSort"
-									onchange="javascript:setTimeout"
-									id="mainbody_ddlSort">
+									onchange="javascript:setTimeout" id="mainbody_ddlSort">
 									<option selected="selected" value="New">Mới nhất</option>
 									<option value="View">Xem nhiều</option>
 									<option value="Down">Tải nhiều</option>
@@ -1509,52 +1486,56 @@ function submitSearch() {
 
 		<script src="style/web-style/floater_xlib.js.tải xuống"></script>
 		<script type="text/javascript">
+			var slideTime = 600;
+			var floatAtBottom = false;
+			function pepsi_floating_init() {
+				xMoveTo('floating_banner_right', 887 - (1024 - screen.width), 0);
 
-    var slideTime = 600;
-    var floatAtBottom = false;
-    function pepsi_floating_init() {
-        xMoveTo('floating_banner_right', 887 - (1024 - screen.width), 0);
-
-        winOnResize(); // set initial position
-        xAddEventListener(window, 'resize', winOnResize, false);
-        xAddEventListener(window, 'scroll', winOnScroll, false);
-    }
-    function winOnResize() {
-        checkScreenWidth();
-        winOnScroll(); // initial slide
-    }
-    function winOnScroll() {
-        var y = xScrollTop();
-        if (floatAtBottom) {
-            y += xClientHeight() - xHeight('floating_banner_left');
-        }
-        document.getElementById('floating_banner_left').style.position = 'fixed';
-        document.getElementById('floating_banner_right').style.position = 'fixed';
-            if (y >= 185) {
-                xSlideTo('floating_banner_left', (document.body.clientWidth - 20 - 1170) / 2 - 150, 60, slideTime);
-                xSlideTo('floating_banner_right', (document.body.clientWidth - 20 + 1170) / 2 +50, 60, slideTime);
-            }
-            else {
-                xSlideTo('floating_banner_left', (document.body.clientWidth - 20 - 1170) / 2 - 150, 300 - y, slideTime);
-                xSlideTo('floating_banner_right', (document.body.clientWidth - 20 + 1170) / 2 +50, 300 - y, slideTime);
-            }
-    }
-    function checkScreenWidth() {
-        if (document.body.clientWidth < (1530)) {
-            document.getElementById('floating_banner_left').style.display = 'none';
-            document.getElementById('floating_banner_right').style.display = 'none';
-            if (document.getElementById('bannerCenter')!=null)
-            document.getElementById('bannerCenter').style.display = 'block';
-        }
-        else {
-            document.getElementById('floating_banner_left').style.display = '';
-            document.getElementById('floating_banner_right').style.display = '';
-            if (document.getElementById('bannerCenter') != null)
-            document.getElementById('bannerCenter').style.display = 'none';
-        }
-    }
-
-</script>
+				winOnResize(); // set initial position
+				xAddEventListener(window, 'resize', winOnResize, false);
+				xAddEventListener(window, 'scroll', winOnScroll, false);
+			}
+			function winOnResize() {
+				checkScreenWidth();
+				winOnScroll(); // initial slide
+			}
+			function winOnScroll() {
+				var y = xScrollTop();
+				if (floatAtBottom) {
+					y += xClientHeight() - xHeight('floating_banner_left');
+				}
+				document.getElementById('floating_banner_left').style.position = 'fixed';
+				document.getElementById('floating_banner_right').style.position = 'fixed';
+				if (y >= 185) {
+					xSlideTo('floating_banner_left',
+							(document.body.clientWidth - 20 - 1170) / 2 - 150,
+							60, slideTime);
+					xSlideTo('floating_banner_right',
+							(document.body.clientWidth - 20 + 1170) / 2 + 50,
+							60, slideTime);
+				} else {
+					xSlideTo('floating_banner_left',
+							(document.body.clientWidth - 20 - 1170) / 2 - 150,
+							300 - y, slideTime);
+					xSlideTo('floating_banner_right',
+							(document.body.clientWidth - 20 + 1170) / 2 + 50,
+							300 - y, slideTime);
+				}
+			}
+			function checkScreenWidth() {
+				if (document.body.clientWidth < (1530)) {
+					document.getElementById('floating_banner_left').style.display = 'none';
+					document.getElementById('floating_banner_right').style.display = 'none';
+					if (document.getElementById('bannerCenter') != null)
+						document.getElementById('bannerCenter').style.display = 'block';
+				} else {
+					document.getElementById('floating_banner_left').style.display = '';
+					document.getElementById('floating_banner_right').style.display = '';
+					if (document.getElementById('bannerCenter') != null)
+						document.getElementById('bannerCenter').style.display = 'none';
+				}
+			}
+		</script>
 		<div id="floating_banner_left"
 			style="text-align: right; position: fixed; overflow: hidden; width: 120px; z-index: 99999; display: none; left: -70.5px; top: 60px;">
 			<div id="floating_banner_left_content">
@@ -1574,10 +1555,8 @@ function submitSearch() {
 			</div>
 		</div>
 		<script>
-
-      pepsi_floating_init();
-
-</script>
+			pepsi_floating_init();
+		</script>
 
 		<div id="ctl24">
 
@@ -1684,12 +1663,14 @@ function submitSearch() {
 										class="fa fa-paper-plane fa-lg" aria-hidden="true"></i>&nbsp;
 										GỬI NHANH</a>
 								</div>
-								<br> <!-- <a href="https://sharecode.vn/dang-ki-nhan-code.htm"
+								<br>
+								<!-- <a href="https://sharecode.vn/dang-ki-nhan-code.htm"
 									class="agreen title5"><i class="fa fa-envelope-o"
 									aria-hidden="true"></i>&nbsp;Yêu cầu và Đăng kí nhận code</a>
- -->							</div>
+ -->
+							</div>
 						</div>
-					</div> 
+					</div>
 					<!-- <div id="trademark-box" class="row">
 						<div class="col-sm-12">
 							<ul id="trademark-list">
@@ -1766,94 +1747,170 @@ function submitSearch() {
 	<script type="text/javascript"
 		src="style/web-style/jquery-ui.min.js.tải xuống"></script>
 	<script type="text/javascript">
-        $('#slSearch').on('change', function () {
-            $('#hdLangFilter').val($("#slSearch").val());
-        });
-    </script>
+		$('#slSearch').on('change', function() {
+			$('#hdLangFilter').val($("#slSearch").val());
+		});
+	</script>
 
 	<script type="text/javascript">
-        $('.carousel').carousel({
-            interval: 5000
-        })
-        $(document).ready(function () {
-            //duy tri alive: 5 minutes
-            setInterval("KeepSessionAlive()", 300000);
-            $('.txt-auto').autocomplete({
-                source: TagSuggest,
-                minLength: 2,
-                html: true
-            });
-            //chat face
-            $('.hisella-messages').animate({ bottom: '-350px' }).animate({ right: '-30px' }, 400, function () { $('#hisella-facebook').css('opacity', 0) }); $('#hisella-minimize').click(function () { if ($('#hisella-facebook').css('opacity') == 0) { $('#hisella-facebook').css('opacity', 1); $('.hisella-messages').animate({ right: '0' }).animate({ bottom: '0' }); } else { $('.hisella-messages').animate({ bottom: '-350px' }).animate({ right: '-30px' }, 400, function () { $('#hisella-facebook').css('opacity', 0) }); } })
-        });
-        //auto
-        (function ($) { var proto = $.ui.autocomplete.prototype, initSource = proto._initSource; function filter(array, term) { var matcher = new RegExp($.ui.autocomplete.escapeRegex(term), "i"); return $.grep(array, function (value) { return matcher.test($("<div>").html(value.label || value.value || value).text()); }); } $.extend(proto, { _initSource: function () { if (this.options.html && $.isArray(this.options.source)) { this.source = function (request, response) { response(filter(this.options.source, request.term)); }; } else { initSource.call(this); } }, _renderItem: function (ul, item) { return $("<li></li>").data("item.autocomplete", item).append($("<a></a>")[this.options.html ? "html" : "text"](item.label)).appendTo(ul); } }); })(jQuery);
-        var cache = {};
-        function TagSuggest(request, response) {
-            var term = request.term.toLowerCase();
-            if (term in cache) { response(cache[term]); return; }
-            $.ajax({
-                type: "POST",
-                url: "/Ajax/TagSuggest.aspx/TagAutocomplete",
-                data: '{tagname: "' + term + '"}',
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                async: false,
-                success: function (data) {
-                    var suggestions = [];
-                    var results = data.d;
-                    $.each(results, function (index, item) {
-                        try {
-                            var s = item.toLowerCase();
-                            suggestions.push({ label: s.replace(term, '<b>' + term + '</b>'), value: s });
-                        } catch (e) { }
-                    });
-                    cache[term] = suggestions;
-                    response(suggestions);
-                }
-            });
-        }
-        //fix đường dẫn khi login bằng facebook
-        if (window.location.hash == '#_=_') {
-            history.replaceState
-                ? history.replaceState(null, null, window.location.href.split('#')[0])
-                : window.location.hash = '';
-        }
-        function KeepSessionAlive() {
-            url = "/KeepSessionAlive.ashx?";
-            var xmlHttp = new XMLHttpRequest();
-            xmlHttp.open("GET", url, true);
-            xmlHttp.send();
-        }
-        function fosp_cmt() {
-            jQuery('#errCmt').html('');
-            jQuery('#errCmt').removeClass();
-            jQuery('#txtComment').removeClass('validation-failed');
-            if (jQuery('#txtComment').val() == '') {
-                jQuery('#errCmt').addClass('text-error');
-                jQuery('#txtComment').addClass('validation-failed');
-                jQuery('#errCmt').html('Vui lòng nhập nội dung và email của bạn.');
-                jQuery('#txtComment').focus();
-                return false;
-            }
-        }
-    </script>
+		$('.carousel').carousel({
+			interval : 5000
+		})
+		$(document).ready(function() {
+			//duy tri alive: 5 minutes
+			setInterval("KeepSessionAlive()", 300000);
+			$('.txt-auto').autocomplete({
+				source : TagSuggest,
+				minLength : 2,
+				html : true
+			});
+			//chat face
+			$('.hisella-messages').animate({
+				bottom : '-350px'
+			}).animate({
+				right : '-30px'
+			}, 400, function() {
+				$('#hisella-facebook').css('opacity', 0)
+			});
+			$('#hisella-minimize').click(function() {
+				if ($('#hisella-facebook').css('opacity') == 0) {
+					$('#hisella-facebook').css('opacity', 1);
+					$('.hisella-messages').animate({
+						right : '0'
+					}).animate({
+						bottom : '0'
+					});
+				} else {
+					$('.hisella-messages').animate({
+						bottom : '-350px'
+					}).animate({
+						right : '-30px'
+					}, 400, function() {
+						$('#hisella-facebook').css('opacity', 0)
+					});
+				}
+			})
+		});
+		//auto
+		(function($) {
+			var proto = $.ui.autocomplete.prototype, initSource = proto._initSource;
+			function filter(array, term) {
+				var matcher = new RegExp($.ui.autocomplete.escapeRegex(term),
+						"i");
+				return $.grep(array, function(value) {
+					return matcher.test($("<div>").html(
+							value.label || value.value || value).text());
+				});
+			}
+			$
+					.extend(
+							proto,
+							{
+								_initSource : function() {
+									if (this.options.html
+											&& $.isArray(this.options.source)) {
+										this.source = function(request,
+												response) {
+											response(filter(
+													this.options.source,
+													request.term));
+										};
+									} else {
+										initSource.call(this);
+									}
+								},
+								_renderItem : function(ul, item) {
+									return $("<li></li>")
+											.data("item.autocomplete", item)
+											.append(
+													$("<a></a>")[this.options.html ? "html"
+															: "text"]
+															(item.label))
+											.appendTo(ul);
+								}
+							});
+		})(jQuery);
+		var cache = {};
+		function TagSuggest(request, response) {
+			var term = request.term.toLowerCase();
+			if (term in cache) {
+				response(cache[term]);
+				return;
+			}
+			$.ajax({
+				type : "POST",
+				url : "/Ajax/TagSuggest.aspx/TagAutocomplete",
+				data : '{tagname: "' + term + '"}',
+				contentType : "application/json; charset=utf-8",
+				dataType : "json",
+				async : false,
+				success : function(data) {
+					var suggestions = [];
+					var results = data.d;
+					$.each(results, function(index, item) {
+						try {
+							var s = item.toLowerCase();
+							suggestions.push({
+								label : s.replace(term, '<b>' + term + '</b>'),
+								value : s
+							});
+						} catch (e) {
+						}
+					});
+					cache[term] = suggestions;
+					response(suggestions);
+				}
+			});
+		}
+		//fix đường dẫn khi login bằng facebook
+		if (window.location.hash == '#_=_') {
+			history.replaceState ? history.replaceState(null, null,
+					window.location.href.split('#')[0])
+					: window.location.hash = '';
+		}
+		function KeepSessionAlive() {
+			url = "/KeepSessionAlive.ashx?";
+			var xmlHttp = new XMLHttpRequest();
+			xmlHttp.open("GET", url, true);
+			xmlHttp.send();
+		}
+		function fosp_cmt() {
+			jQuery('#errCmt').html('');
+			jQuery('#errCmt').removeClass();
+			jQuery('#txtComment').removeClass('validation-failed');
+			if (jQuery('#txtComment').val() == '') {
+				jQuery('#errCmt').addClass('text-error');
+				jQuery('#txtComment').addClass('validation-failed');
+				jQuery('#errCmt').html(
+						'Vui lòng nhập nội dung và email của bạn.');
+				jQuery('#txtComment').focus();
+				return false;
+			}
+		}
+	</script>
 
 	<script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-52977022-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script',
+				'//www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-52977022-1', 'auto');
+		ga('send', 'pageview');
+	</script>
 	<!-- Đặt thẻ này vào phần đầu hoặc ngay trước thẻ đóng phần nội dung của bạn. -->
 	<script src="style/web-style/platform.js.tải xuống" async="" defer=""
 		gapi_processed="true">
-  {lang: 'vi'}
-    </script>
+		{
+			lang: 'vi'
+		}
+	</script>
 	<script type="application/ld+json">
 { "@context" : "http://schema.org",
   "@type" : "Organization",
@@ -1873,8 +1930,9 @@ function submitSearch() {
     </script>
 	<div class="hisella-messages" style="bottom: -350px; right: -30px;">
 		<div class="hisella-messages-outer">
-<!-- 			<div id="hisella-minimize">&nbsp;HỖ TRỢ TRỰC TUYẾN</div>
- -->			<div id="hisella-facebook" class="fb-page fb_iframe_widget"
+			<!-- 			<div id="hisella-minimize">&nbsp;HỖ TRỢ TRỰC TUYẾN</div>
+ -->
+			<div id="hisella-facebook" class="fb-page fb_iframe_widget"
 				data-adapt-container-width="true" data-height="350"
 				data-hide-cover="false"
 				data-href="https://www.facebook.com/sharecode.vn"
@@ -1897,27 +1955,31 @@ function submitSearch() {
 
 	<script src="style/web-style/jquery.easy-ticker.js.tải xuống"></script>
 	<script type="text/javascript">
-        $(document).ready(function () {
-            var dd = $('.action_box').easyTicker({
-                direction: 'down',
-                easing: 'easeInOutBack',
-                speed: 'slow',
-                interval: 5000,
-                height: 'auto',
-                visible: 0,
-                mousePause: 0,
-                controls: {
-                    up: '.up',
-                    down: '.down',
-                    toggle: '.toggle',
-                    stopText: 'Stop !!!'
-                }
-            }).data('easyTicker');
-        });
-        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function (evt, args) {
-            $('.rateit').rateit({ max: 5, step: 1 });
-        });
-    </script>
+		$(document).ready(function() {
+			var dd = $('.action_box').easyTicker({
+				direction : 'down',
+				easing : 'easeInOutBack',
+				speed : 'slow',
+				interval : 5000,
+				height : 'auto',
+				visible : 0,
+				mousePause : 0,
+				controls : {
+					up : '.up',
+					down : '.down',
+					toggle : '.toggle',
+					stopText : 'Stop !!!'
+				}
+			}).data('easyTicker');
+		});
+		Sys.WebForms.PageRequestManager.getInstance().add_endRequest(
+				function(evt, args) {
+					$('.rateit').rateit({
+						max : 5,
+						step : 1
+					});
+				});
+	</script>
 
 	<link href="style/web-style/iosOverlay.css" rel="stylesheet">
 	<script src="style/web-style/iosOverlay.js.tải xuống"></script>
