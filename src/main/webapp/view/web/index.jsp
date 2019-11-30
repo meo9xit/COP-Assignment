@@ -1,4 +1,3 @@
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator"
 	prefix="dec"%>
@@ -65,16 +64,13 @@
 	top: -10000px;
 	z-index: 10001
 }
-
 .fb_reposition {
 	overflow: hidden;
 	position: relative
 }
-
 .fb_invisible {
 	display: none
 }
-
 .fb_reset {
 	background: none;
 	border: 0;
@@ -101,44 +97,36 @@
 	white-space: normal;
 	word-spacing: normal
 }
-
 .fb_reset>div {
 	overflow: hidden
 }
-
 @
 keyframes fb_transform {
 	from {opacity: 0;
 	transform: scale(.95)
 }
-
 to {
 	opacity: 1;
 	transform: scale(1)
 }
-
 }
 .fb_animate {
 	animation: fb_transform .3s forwards
 }
-
 .fb_dialog {
 	background: rgba(82, 82, 82, .7);
 	position: absolute;
 	top: -10000px;
 	z-index: 10001
 }
-
 .fb_dialog_advanced {
 	border-radius: 8px;
 	padding: 10px
 }
-
 .fb_dialog_content {
 	background: #fff;
 	color: #373737
 }
-
 .fb_dialog_close_icon {
 	background:
 		url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png)
@@ -151,36 +139,30 @@ to {
 	top: 17px;
 	width: 15px
 }
-
 .fb_dialog_mobile .fb_dialog_close_icon {
 	left: 5px;
 	right: auto;
 	top: 5px
 }
-
 .fb_dialog_padding {
 	background-color: transparent;
 	position: absolute;
 	width: 1px;
 	z-index: -1
 }
-
 .fb_dialog_close_icon:hover {
 	background:
 		url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png)
 		no-repeat scroll 0 -15px transparent
 }
-
 .fb_dialog_close_icon:active {
 	background:
 		url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png)
 		no-repeat scroll 0 -30px transparent
 }
-
 .fb_dialog_iframe {
 	line-height: 0
 }
-
 .fb_dialog_content .dialog_title {
 	background: #6d84b4;
 	border: 1px solid #365899;
@@ -189,7 +171,6 @@ to {
 	font-weight: bold;
 	margin: 0
 }
-
 .fb_dialog_content .dialog_title>span {
 	background:
 		url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif)
@@ -197,7 +178,6 @@ to {
 	float: left;
 	padding: 5px 0 7px 26px
 }
-
 body.fb_hidden {
 	height: 100%;
 	left: 0;
@@ -208,7 +188,6 @@ body.fb_hidden {
 	transform: none;
 	width: 100%
 }
-
 .fb_dialog.fb_dialog_mobile.loading {
 	background:
 		url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif)
@@ -220,7 +199,6 @@ body.fb_hidden {
 	top: 0;
 	z-index: 10001
 }
-
 .fb_dialog.fb_dialog_mobile.loading.centered {
 	background: none;
 	height: auto;
@@ -228,15 +206,12 @@ body.fb_hidden {
 	min-width: initial;
 	width: auto
 }
-
 .fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner {
 	width: 100%
 }
-
 .fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content {
 	background: none
 }
-
 .loading.centered #fb_dialog_loader_close {
 	clear: both;
 	color: #fff;
@@ -244,7 +219,6 @@ body.fb_hidden {
 	font-size: 18px;
 	padding-top: 20px
 }
-
 #fb-root #fb_dialog_ipad_overlay {
 	background: rgba(0, 0, 0, .4);
 	bottom: 0;
@@ -256,20 +230,16 @@ body.fb_hidden {
 	width: 100%;
 	z-index: 10000
 }
-
 #fb-root #fb_dialog_ipad_overlay.hidden {
 	display: none
 }
-
 .fb_dialog.fb_dialog_mobile.loading iframe {
 	visibility: hidden
 }
-
 .fb_dialog_mobile .fb_dialog_iframe {
 	position: sticky;
 	top: 0
 }
-
 .fb_dialog_content .dialog_header {
 	background: linear-gradient(from(#738aba), to(#2c4987));
 	border-bottom: 1px solid;
@@ -282,26 +252,22 @@ body.fb_hidden {
 	vertical-align: middle;
 	white-space: nowrap
 }
-
 .fb_dialog_content .dialog_header table {
 	height: 43px;
 	width: 100%
 }
-
 .fb_dialog_content .dialog_header td.header_left {
 	font-size: 12px;
 	padding-left: 5px;
 	vertical-align: middle;
 	width: 60px
 }
-
 .fb_dialog_content .dialog_header td.header_right {
 	font-size: 12px;
 	padding-right: 5px;
 	vertical-align: middle;
 	width: 60px
 }
-
 .fb_dialog_content .touchable_button {
 	background: linear-gradient(from(#4267B2), to(#2a4887));
 	background-clip: padding-box;
@@ -314,7 +280,6 @@ body.fb_hidden {
 	padding: 4px 12px;
 	position: relative
 }
-
 .fb_dialog_content .dialog_header .touchable_button input {
 	background: none;
 	border: none;
@@ -324,7 +289,6 @@ body.fb_hidden {
 	padding: 2px 6px 3px 6px;
 	text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
 }
-
 .fb_dialog_content .dialog_header .header_center {
 	color: #fff;
 	font-size: 16px;
@@ -333,7 +297,6 @@ body.fb_hidden {
 	text-align: center;
 	vertical-align: middle
 }
-
 .fb_dialog_content .dialog_content {
 	background:
 		url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif)
@@ -343,26 +306,21 @@ body.fb_hidden {
 	border-top: 0;
 	height: 150px
 }
-
 .fb_dialog_content .dialog_footer {
 	background: #f5f6f7;
 	border: 1px solid #4a4a4a;
 	border-top-color: #ccc;
 	height: 40px
 }
-
 #fb_dialog_loader_close {
 	float: left
 }
-
 .fb_dialog.fb_dialog_mobile .fb_dialog_close_button {
 	text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
 }
-
 .fb_dialog.fb_dialog_mobile .fb_dialog_close_icon {
 	visibility: hidden
 }
-
 #fb_dialog_loader_spinner {
 	animation: rotateSpinner 1.2s linear infinite;
 	background-color: transparent;
@@ -373,58 +331,41 @@ body.fb_hidden {
 	height: 24px;
 	width: 24px
 }
-
 @
 keyframes rotateSpinner { 0%{
 	transform: rotate(0deg)
 }
-
 100%{
 transform
-
-
-
-
 :rotate(360deg)
-
-
-
-
 }
 }
 .fb_iframe_widget {
 	display: inline-block;
 	position: relative
 }
-
 .fb_iframe_widget span {
 	display: inline-block;
 	position: relative;
 	text-align: justify
 }
-
 .fb_iframe_widget iframe {
 	position: absolute
 }
-
 .fb_iframe_widget_fluid_desktop, .fb_iframe_widget_fluid_desktop span,
 	.fb_iframe_widget_fluid_desktop iframe {
 	max-width: 100%
 }
-
 .fb_iframe_widget_fluid_desktop iframe {
 	min-width: 220px;
 	position: relative
 }
-
 .fb_iframe_widget_lift {
 	z-index: 1
 }
-
 .fb_iframe_widget_fluid {
 	display: inline
 }
-
 .fb_iframe_widget_fluid span {
 	width: 100%
 }
@@ -461,7 +402,6 @@ transform
 			});
 			FB.AppEvents.logPageView();
 		};
-
 		(function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
 			if (d.getElementById(id)) {
@@ -1090,13 +1030,11 @@ transform
 							<meta itemprop="description"
 								content="Thư viện chia sẻ và download source code, upload code kiếm tiền, tổng hợp các mã nguồn và đồ án, kiến thức lập trình chuyên nghành công nghệ thông tin">
 							<!-- <ul class="display-product-option">
-
 								<li class="view-as-grid selected"><a
 									onclick="document.getElementById.click();"
 									id="mainbody_btnViewBase1" title="Xem danh sách"
 									href="javascript:__doPostBack(&#39;ctl00$mainbody$btnViewBase1&#39;,&#39;&#39;)"><span>grid</span></a>
 								</li>
-
 								<li class="view-as-list"><a
 									onclick="document.getElementById(&#39;mainbody_bntViewDetail&#39;).click();"
 									id="mainbody_bntViewDetail1" title="Xem chi tiết"
@@ -1490,7 +1428,6 @@ transform
 			var floatAtBottom = false;
 			function pepsi_floating_init() {
 				xMoveTo('floating_banner_right', 887 - (1024 - screen.width), 0);
-
 				winOnResize(); // set initial position
 				xAddEventListener(window, 'resize', winOnResize, false);
 				xAddEventListener(window, 'scroll', winOnScroll, false);
@@ -1586,7 +1523,6 @@ transform
 										class="fa fa-facebook"></i></a> <a
 										href="https://www.youtube.com/channel/UCrmDzitLIGfSLYQsSe-j6WA"><i
 										class="fa fa-youtube-play"></i></a>
-
 								</div>
 							</div>
 						</div>
@@ -1688,7 +1624,6 @@ transform
 								<li><img src="style/web-style/b6.png" alt="agribank">
 								</li>
 								<li><img src="style/web-style/b7.png" alt="bidv"></li>
-
 							</ul>
 						</div>
 					</div>
