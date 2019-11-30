@@ -5,6 +5,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 import com.chiasetailieu.dao.IDocumentDAO;
+import com.chiasetailieu.model.Category;
 import com.chiasetailieu.model.Document;
 import com.chiasetailieu.service.IDocumentService;
 
@@ -33,9 +34,9 @@ public class DocumentService implements IDocumentService{
 	}
 
 	@Override
-	public List<Document> findByCategory(String category) {
+	public List<Document> findByCategory(Category cate, int curpage, int docperpage) {
 		// TODO Auto-generated method stub
-		return null;
+		return documentDAO.findByCategory(cate, curpage, docperpage);
 	}
 
 	@Override
@@ -54,6 +55,30 @@ public class DocumentService implements IDocumentService{
 	public List<Document> findAll() {
 		// TODO Auto-generated method stub
 		return documentDAO.findAll();
+	}
+
+	@Override
+	public List<Document> findDocuments(int curpage, int docperpage) {
+		// TODO Auto-generated method stub
+		return documentDAO.findDocuments(curpage, docperpage);
+	}
+
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return documentDAO.getCount();
+	}
+
+	@Override
+	public List<Document> findByView(int curpage, int docperpage) {
+		// TODO Auto-generated method stub
+		return documentDAO.findByView(curpage, docperpage);
+	}
+
+	@Override
+	public List<Document> findByDownload(int curpage, int docperpage) {
+		// TODO Auto-generated method stub
+		return documentDAO.findByDownload(curpage, docperpage);
 	}
 
 }

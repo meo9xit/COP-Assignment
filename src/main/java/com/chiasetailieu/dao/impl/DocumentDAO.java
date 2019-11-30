@@ -70,10 +70,10 @@ public class DocumentDAO extends GenericDAO<Document> implements IDocumentDAO{
 	}
 
 	@Override
-	public List<Document> findByCategory(Category cate) {
+	public List<Document> findByCategory(Category cate, int curpage, int docperpage) {
 		// TODO Auto-generated method stub
-		String sql = "select * from document where cate_id = ?";
-		List<Document> docs = query(sql, new DocumentMapper(), cate.getCategoryID());
+		String sql = "select * from document where cate_id = ? limit ?, ?";
+		List<Document> docs = query(sql, new DocumentMapper(), cate.getCategoryID(), curpage, docperpage);
 		return docs;
 	}
 
@@ -82,6 +82,29 @@ public class DocumentDAO extends GenericDAO<Document> implements IDocumentDAO{
 		// TODO Auto-generated method stub
 		int start = curpage*docperpage - docperpage;
 		String sql = "select * from Document limit ?, ?";
+		return query(sql, new DocumentMapper(), start, docperpage);
+	}
+
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		String sql = "select count(*) from document";
+		return count(sql);
+	}
+
+	@Override
+	public List<Document> findByView(int curpage, int docperpage) {
+		// TODO Auto-generated method stub
+		int start = curpage*docperpage - docperpage;
+		String sql = "SELECT * FROM Document ORDER BY view DESC LIMIT ?, ?";
+		return query(sql, new DocumentMapper(), start, docperpage);
+	}
+
+	@Override
+	public List<Document> findByDownload(int curpage, int docperpage) {
+		// TODO Auto-generated method stub
+		int start = curpage*docperpage - docperpage;
+		String sql = "SELECT * FROM Document ORDER BY download DESC LIMIT ?, ?";
 		return query(sql, new DocumentMapper(), start, docperpage);
 	}
 

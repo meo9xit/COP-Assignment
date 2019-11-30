@@ -16,22 +16,20 @@ import com.chiasetailieu.service.ICategoryService;
 import com.chiasetailieu.service.IDocumentService;
 
 /**
- * Servlet implementation class HomeController
+ * Servlet implementation class TopViewController
  */
-@WebServlet("/home")
-public class HomeController extends HttpServlet {
+@WebServlet("/topview")
+public class TopViewController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+       
 	@Inject
 	IDocumentService docService;
-	
 	@Inject
 	ICategoryService cateService;
-       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public HomeController() {
+    public TopViewController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -48,8 +46,9 @@ public class HomeController extends HttpServlet {
 		} else {
 			curpage = 1;
 		}
-		
-		List<Document> docs = docService.findDocuments(curpage, 12);
+		Long id = Long.parseLong(request.getParameter("id"));
+		Category cate = cateService.findById(id);
+		List<Document> docs = docService.findByView(curpage, 12);
 		List<Category> cates = cateService.findAll();
 		List<Document> topdownload = docService.findByDownload(1, 4);
 		List<Document> topview = docService.findByView(1, 4);
@@ -60,7 +59,7 @@ public class HomeController extends HttpServlet {
 		request.setAttribute("docs", docs);
 		request.setAttribute("topviewdocs", topview);
 		request.setAttribute("topdocs", topdownload );
-		request.getRequestDispatcher("/view/web/index.jsp").forward(request, response);
+		request.getRequestDispatcher("/view/web/search-cate.jsp").forward(request, response);
 	}
 
 	/**
