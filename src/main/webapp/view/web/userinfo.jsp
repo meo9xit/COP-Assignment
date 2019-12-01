@@ -713,19 +713,19 @@ function performsubmit() {
             
                 
             
-    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1200px, 0px, 0px); transition: all 0s ease 0s; width: 2100px;"><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm" rel="nofollow" target="_blank">
+    <!-- <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1200px, 0px, 0px); transition: all 0s ease 0s; width: 2100px;"><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm" rel="nofollow" target="_blank">
                     <img src="style/userinfo/15_19_18_meo tang doanh thu ban code.jpg" alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code" title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li></div><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="https://sharecode.vn/su-kien/uu-dai-tung-bung-tang-thuong-khi-upload-va-upload-code-dat-moc-11.htm" rel="nofollow" target="_blank">
                     <img src="style/userinfo/0_22_5_sharecode tang thuong 2.jpg" alt="sự kiện, event, tặng thưởng, upload code" title="Sự kiện: Mừng ngày giỗ tổ 10/3 - Tặng thưởng khi upload code đạt mốc"></a></li></div><div class="owl-item" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/huong-dan-nap-tien-vao-tai-khoan-8.htm" rel="nofollow" target="_blank">
                     <img src="style/userinfo/13_49_37_nap xu vao tai khoan.jpg" alt="Nạp xu, nạp tiền, quy đổi, nạp thẻ cào, nạp qua ngân hàng, nạp qua ví ngân lượng" title="Nạp XU vào tài khoản ngay!"></a></li></div><div class="owl-item" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm" rel="nofollow" target="_blank">
                     <img src="style/userinfo/15_19_18_meo tang doanh thu ban code.jpg" alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code" title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li></div><div class="owl-item active" style="width: 270px; margin-right: 30px;"><li><a href="https://sharecode.vn/su-kien/uu-dai-tung-bung-tang-thuong-khi-upload-va-upload-code-dat-moc-11.htm" rel="nofollow" target="_blank">
                     <img src="style/userinfo/0_22_5_sharecode tang thuong 2.jpg" alt="sự kiện, event, tặng thưởng, upload code" title="Sự kiện: Mừng ngày giỗ tổ 10/3 - Tặng thưởng khi upload code đạt mốc"></a></li></div><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/huong-dan-nap-tien-vao-tai-khoan-8.htm" rel="nofollow" target="_blank">
                     <img src="style/userinfo/13_49_37_nap xu vao tai khoan.jpg" alt="Nạp xu, nạp tiền, quy đổi, nạp thẻ cào, nạp qua ngân hàng, nạp qua ví ngân lượng" title="Nạp XU vào tài khoản ngay!"></a></li></div><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm" rel="nofollow" target="_blank">
-                    <img src="style/userinfo/15_19_18_meo tang doanh thu ban code.jpg" alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code" title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li></div></div></div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;"><i class="fa fa-angle-left"></i></div><div class="owl-next" style="display: none;"><i class="fa fa-angle-right"></i></div></div><div class="owl-dots" style=""><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot active"><span></span></div></div></div></ul>
+                    <img src="style/userinfo/15_19_18_meo tang doanh thu ban code.jpg" alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code" title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li></div></div></div> --><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;"><i class="fa fa-angle-left"></i></div><div class="owl-next" style="display: none;"><i class="fa fa-angle-right"></i></div></div><div class="owl-dots" style=""><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot active"><span></span></div></div></div></ul>
 </div>
             
 <div class="block left-module">
-    <p class="title_block">THÔNG BÁO</p>
-    <div class="block_content">
+    <!-- <p class="title_block">THÔNG BÁO</p> -->
+    <!-- <div class="block_content">
         <div class="layered layered-category">
             <div class="layered-content">
                 <ul class="tree-menu">
@@ -753,7 +753,7 @@ function performsubmit() {
                 </ul>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 
         </div>
@@ -834,131 +834,147 @@ function performsubmit() {
 	
                 <!-- Footer -->
                 <footer id="footer">
-                    <div class="container">
-                        <!-- introduce-box -->
-                        <div id="introduce-box" class="row">
-                            <div class="col-md-3">
-                                <div id="address-box">
-                                    <a href="https://sharecode.vn/">
-                                        <img src="style/userinfo/logo.png" alt="Sharecode.vn"></a>
-                                    <div id="address-list">
-                                        <div class="tit-name">Hotline:</div>
-                                        <div class="tit-contain"><a href="tel:+84981282756" title="Click gọi ngay!">0981.282.756</a></div>
-                                        <div class="tit-name">Email:</div>
-                                        <div class="tit-contain"><a href="mailto:sharecode.contact@gmail.com" title="Click để gửi email!">Sharecode.contact@gmail.com</a></div>
-                                    </div>
-                                    <br>
-                                    <div class="social-link">
-                                        <a href="https://www.facebook.com/sharecode.vn"><i class="fa fa-facebook"></i></a>
-                                        <a href="https://www.youtube.com/channel/UCrmDzitLIGfSLYQsSe-j6WA"><i class="fa fa-youtube-play"></i></a>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="introduce-title">VỀ CHÚNG TÔI</div>
-                                        <ul id="introduce-company" class="introduce-list">
-                                            <li><a href="https://sharecode.vn/gioi-thieu.htm">Giới thiệu</a></li>
-                                            <li><a href="https://sharecode.vn/quy-dinh-chung.htm">Quy định chung</a></li>
-                                            <li><a href="https://sharecode.vn/chinh-sach-ban-code.htm">Chính sách bán code</a></li>
-                                            <li><a href="https://sharecode.vn/cau-hoi.htm">Câu hỏi thường gặp</a></li>
-                                            <li><a href="https://sharecode.vn/su-kien.htm">Sự kiện</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="introduce-title">HƯỚNG DẪN</div>
-                                        <ul id="introduce-Account" class="introduce-list">
-                                            <li><a href="https://sharecode.vn/cau-hoi/huong-dan-cach-tai-code-mien-phi-14.htm">Tải code miễn phí</a></li>
-                                            <li><a href="https://sharecode.vn/cau-hoi/huong-dan-cach-tai-code-co-phi-15.htm">Tải code có phí</a></li>
-                                            <li><a href="https://sharecode.vn/cau-hoi/huong-dan-nap-tien-vao-tai-khoan-8.htm">Hướng dẫn nạp tiền</a></li>
-                                            <li><a href="https://sharecode.vn/cau-hoi/huong-dan-rut-tien-tu-tai-khoan-7.htm">Hướng dẫn rút tiền</a></li>
-                                            <li><a href="https://sharecode.vn/cau-hoi/huong-dan-ho-tro-ki-thuat-16.htm">Hỗ trợ kĩ thuật</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="introduce-title">DỊCH VỤ MÁY CHỦ</div>
-                                        <ul id="Ul1" class="introduce-list">
-                                            <li><a href="https://sharecode.vn/dang-ki-ten-mien.htm">Đăng kí tên miền</a></li>
-                                            <li><a href="https://sharecode.vn/hosting-ssd.htm">Hosting SSD</a></li>
-                                            <li><a href="https://sharecode.vn/vps-may-chu-ao.htm">Clould VPS</a></li>
-                                            <li><a href="https://sharecode.vn/email-server.htm">Email Server</a></li>
-                                            <li><a href="https://sharecode.vn/chung-thuc-ssl.htm">Chứng thực SSL</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div id="contact-box">
-                                    <div class="introduce-title">Gửi hỗ trợ - Góp ý</div>
-                                    <div>
-                                        <textarea name="ctl00$ctl00$ctl00$txtComment" rows="2" cols="20" id="txtComment" class="form-control send-sp" placeholder="Nội dung &amp; liên hệ của bạn (Email, ĐT)" style="height:60px;width:100%;"></textarea>
-                                        <div id="errCmt" class="text-error"></div>
-                                    </div>
-                                    <br>
-                                    <div>
-                                        <a onclick=" return fosp_cmt();" id="btnSend" class="button-orange" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$btnSend&#39;,&#39;&#39;)"><i class="fa fa-paper-plane fa-lg" aria-hidden="true"></i>&nbsp; GỬI NHANH</a>
-                                    </div>
-                                    <br>
-                                    <a href="https://sharecode.vn/dang-ki-nhan-code.htm" class="agreen title5"><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;Yêu cầu và Đăng kí nhận code</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="trademark-box" class="row">
-                            <div class="col-sm-12">
-                                <ul id="trademark-list">
-                                    <li id="payment-methods">Thanh toán đảm bảo</li>
-                                    <li>
-                                        <img src="style/userinfo/b1.png" alt="ngan luong">
-                                    </li>
-                                    <li>
-                                        <img src="style/userinfo/b10.png" alt="bao kim">
-                                    </li>
-                                    <li>
-                                        <img src="style/userinfo/b11.png" alt="momo">
-                                    </li>
-                                    <li>
-                                        <img src="style/userinfo/b8.png" alt="paypal">
-                                    </li>
-                                    <li>
-                                        <img src="style/userinfo/b5.png" alt="vietcombank">
-                                    </li>
-                                    <li>
-                                        <img src="style/userinfo/b9.png" alt="vietin bank">
-                                    </li>
-                                    <li>
-                                        <img src="style/userinfo/b6.png" alt="agribank">
-                                    </li>
-                                    <li>
-                                        <img src="style/userinfo/b7.png" alt="bidv">
-                                    </li>
-                                    
-                                </ul>
-                            </div>
-                        </div>
-                        <div id="trademark-text-box" class="row">
-                            <div class="col-sm-12">
-                                <ul id="trademark-search-list" class="trademark-list">
-                                    <li class="trademark-text-tit">Top tìm kiếm</li>
-                                    <li><a href="https://sharecode.vn/tu-khoa/game-3.htm">Game</a></li>
-                                    <li><a href="https://sharecode.vn/tu-khoa/phan-men-quan-ly-4.htm">Phần mền quản lý</a></li>
-                                    <li><a href="https://sharecode.vn/tu-khoa/website-gioi-thieu-32.htm">Website giới thiệu</a></li>
-                                    <li><a href="https://sharecode.vn/tu-khoa/quan-ly-sach-54.htm">Quản lý sách</a></li>
-                                    <li><a href="https://sharecode.vn/tu-khoa/web-tin-tuc-183.htm">Web tin tức</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div id="footer-menu-box">
-                            <p class="text-center">
-                                Copyrights © 2014 Sharecode.vn - Nội dung đã được bảo vệ bản quyền
-                                <a href="https://www.dmca.com/Protection/Status.aspx?ID=e3cfb854-1733-4462-a9e8-0ef4661d6600&amp;refurl=https://sharecode.vn/thong-tin-ca-nhan.htm" title="DMCA.com Protection Status" class="dmca-badge">
-                                    <img src="style/userinfo/dmca-badge-w150-5x1-09.png" alt="DMCA.com Protection Status"></a>
-                                <script src="style/userinfo/DMCABadgeHelper.min.js.tải xuống"> </script>
-                            </p>
-                        </div>
-                    </div>
-                </footer>
+						<div class="container">
+							<!-- introduce-box -->
+							<div id="introduce-box" class="row">
+								<div class="col-md-3">
+									<div id="address-box">
+										<a href="https://sharecode.vn/"> <img
+											src="style/upload/logo.png" alt="Sharecode.vn"></a>
+										<div id="address-list"></div>
+										<br>
+										<div class="social-link"></div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="row">
+										<div class="col-sm-4">
+											<div class="introduce-title">VỀ CHÚNG TÔI</div>
+											<ul id="introduce-company" class="introduce-list">
+												<li>Hà Duy Hưng</li>
+												<li>Vũ Thị Thu Hường</li>
+												<li>Chu Tuấn Thành</li>
+												<!-- <li><a href="https://sharecode.vn/cau-hoi.htm">Câu
+														hỏi thường gặp</a></li>
+												<li><a href="https://sharecode.vn/su-kien.htm">Sự
+														kiện</a></li>
+ -->											</ul>
+										</div>
+										<!-- <div class="col-sm-4">
+											<div class="introduce-title">HƯỚNG DẪN</div>
+											<ul id="introduce-Account" class="introduce-list">
+												<li><a
+													href="https://sharecode.vn/cau-hoi/huong-dan-cach-tai-code-mien-phi-14.htm">Tải
+														code miễn phí</a></li>
+												<li><a
+													href="https://sharecode.vn/cau-hoi/huong-dan-cach-tai-code-co-phi-15.htm">Tải
+														code có phí</a></li>
+												<li><a
+													href="https://sharecode.vn/cau-hoi/huong-dan-nap-tien-vao-tai-khoan-8.htm">Hướng
+														dẫn nạp tiền</a></li>
+												<li><a
+													href="https://sharecode.vn/cau-hoi/huong-dan-rut-tien-tu-tai-khoan-7.htm">Hướng
+														dẫn rút tiền</a></li>
+												<li><a
+													href="https://sharecode.vn/cau-hoi/huong-dan-ho-tro-ki-thuat-16.htm">Hỗ
+														trợ kĩ thuật</a></li>
+											</ul>
+										</div>
+										<div class="col-sm-4">
+											<div class="introduce-title">DỊCH VỤ MÁY CHỦ</div>
+											<ul id="Ul1" class="introduce-list">
+												<li><a href="https://sharecode.vn/dang-ki-ten-mien.htm">Đăng
+														kí tên miền</a></li>
+												<li><a href="https://sharecode.vn/hosting-ssd.htm">Hosting
+														SSD</a></li>
+												<li><a href="https://sharecode.vn/vps-may-chu-ao.htm">Clould
+														VPS</a></li>
+												<li><a href="https://sharecode.vn/email-server.htm">Email
+														Server</a></li>
+												<li><a href="https://sharecode.vn/chung-thuc-ssl.htm">Chứng
+														thực SSL</a></li>
+											</ul>
+										</div> -->
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div id="contact-box">
+										<div class="introduce-title">Gửi hỗ trợ - Góp ý</div>
+										<div>
+											<textarea name="ctl00$ctl00$ctl00$txtComment" rows="2"
+												cols="20" id="txtComment" class="form-control send-sp"
+												placeholder="Nội dung &amp; liên hệ của bạn (Email, ĐT)"
+												style="height: 60px; width: 100%;"></textarea>
+											<div id="errCmt" class="text-error"></div>
+										</div>
+										<br>
+										<div>
+											<a onclick=" return fosp_cmt();" id="btnSend"
+												class="button-orange"
+												href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$btnSend&#39;,&#39;&#39;)"><i
+												class="fa fa-paper-plane fa-lg" aria-hidden="true"></i>&nbsp;
+												GỬI NHANH</a>
+										</div>
+										<br> <!-- <a href="https://sharecode.vn/dang-ki-nhan-code.htm"
+											class="agreen title5"><i class="fa fa-envelope-o"
+											aria-hidden="true"></i>&nbsp;Yêu cầu và Đăng kí nhận code</a>
+ -->									</div>
+								</div>
+							</div>
+							<!-- <div id="trademark-box" class="row">
+								<div class="col-sm-12">
+									<ul id="trademark-list">
+										<li id="payment-methods">Thanh toán đảm bảo</li>
+										<li><img src="style/upload/b1.png" alt="ngan luong">
+										</li>
+										<li><img src="style/upload/b10.png" alt="bao kim">
+										</li>
+										<li><img src="style/upload/b11.png" alt="momo"></li>
+										<li><img src="style/upload/b8.png" alt="paypal"></li>
+										<li><img src="style/upload/b5.png" alt="vietcombank">
+										</li>
+										<li><img src="style/upload/b9.png" alt="vietin bank">
+										</li>
+										<li><img src="style/upload/b6.png" alt="agribank">
+										</li>
+										<li><img src="style/upload/b7.png" alt="bidv"></li>
+
+									</ul>
+								</div>
+							</div>
+							<div id="trademark-text-box" class="row">
+								<div class="col-sm-12">
+									<ul id="trademark-search-list" class="trademark-list">
+										<li class="trademark-text-tit">Top tìm kiếm</li>
+										<li><a href="https://sharecode.vn/tu-khoa/game-3.htm">Game</a></li>
+										<li><a
+											href="https://sharecode.vn/tu-khoa/phan-men-quan-ly-4.htm">Phần
+												mền quản lý</a></li>
+										<li><a
+											href="https://sharecode.vn/tu-khoa/website-gioi-thieu-32.htm">Website
+												giới thiệu</a></li>
+										<li><a
+											href="https://sharecode.vn/tu-khoa/quan-ly-sach-54.htm">Quản
+												lý sách</a></li>
+										<li><a
+											href="https://sharecode.vn/tu-khoa/web-tin-tuc-183.htm">Web
+												tin tức</a></li>
+									</ul>
+								</div>
+							</div>
+							<div id="footer-menu-box">
+								<p class="text-center">
+									Copyrights © 2014 Sharecode.vn - Nội dung đã được bảo vệ bản
+									quyền <a
+										href="https://www.dmca.com/Protection/Status.aspx?ID=e3cfb854-1733-4462-a9e8-0ef4661d6600&amp;refurl=https://sharecode.vn/thanh-vien-upload.htm"
+										title="DMCA.com Protection Status" class="dmca-badge"> <img
+										src="style/upload/dmca-badge-w150-5x1-09.png"
+										alt="DMCA.com Protection Status"></a>
+									<script src="style/upload/DMCABadgeHelper.min.js.tải xuống"> </script>
+								</p>
+							</div> -->
+						</div>
+					</footer>
             
 </div>
     </form>
@@ -1077,12 +1093,12 @@ function performsubmit() {
   } 
 }
     </script>
-    <div class="hisella-messages" style="bottom: -350px; right: -30px;">
+    <!-- <div class="hisella-messages" style="bottom: -350px; right: -30px;">
         <div class="hisella-messages-outer">
             <div id="hisella-minimize">&nbsp;HỖ TRỢ TRỰC TUYẾN</div>
             <div id="hisella-facebook" class="fb-page fb_iframe_widget" data-adapt-container-width="true" data-height="350" data-hide-cover="false" data-href="https://www.facebook.com/sharecode.vn" data-show-facepile="true" data-show-posts="false" data-small-header="false" data-tabs="messages" data-width="250" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=1938824166400762&amp;container_width=0&amp;height=350&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fsharecode.vn&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;small_header=false&amp;tabs=messages&amp;width=250" style="opacity: 0;"><span style="vertical-align: bottom; width: 250px; height: 350px;"><iframe name="f2be400245f53e" width="250px" height="350px" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="style/userinfo/page.html" style="border: none; visibility: visible; width: 250px; height: 350px;" class=""></iframe></span></div>
         </div>
-    </div>
+    </div> -->
     
     
     <script type="text/javascript">
