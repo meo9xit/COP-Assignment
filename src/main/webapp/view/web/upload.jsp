@@ -505,28 +505,26 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 												</div>
 											</div>
 											<div class="form-group">
+												<label class="col-md-2 control-label bold">Chủ đề <span
+													class="text-error">*</span>
+												</label>
 												<div class="col-md-4">
-													<label class="col-md-2 control-label bold">Chủ đề <span
-														class="text-error">*</span></label>
-													<div class="col-md-4">
-														<select name="subcateId"
-															id="mainbody_contentbody_contentpage_ddlCategoryLang"
-															class="form-control" onblur="ValidateCate()"
-															onchange="ValidateCate()">
-															<option value="0">--Chọn Chủ đề--</option>
-															<c:forEach var="subcate" items="${subcates}">
-																<option value="${subcate.subcategoryID }">${subcate.subcategoryName }</option>
-															</c:forEach>
-														</select> <span
-															class="glyphicon glyphicon-ok form-control-feedback success-ic3"
-															aria-hidden="true" id="successCate"
-															style="display: none;"></span>
+													<select name="subcateId"
+														id="mainbody_contentbody_contentpage_ddlCategoryLang"
+														class="form-control" onblur="ValidateCate()"
+														onchange="ValidateCate()">
+														<option value="0">--Chọn Chủ đề--</option>
+														<c:forEach var="subcate" items="${subcates}">
+															<option value="${subcate.subcategoryID }">${subcate.subcategoryName }</option>
+														</c:forEach>
+													</select> <span
+														class="glyphicon glyphicon-ok form-control-feedback success-ic3"
+														aria-hidden="true" id="successCate" style="display: none;"></span>
 
-													</div>
-													<div class="col-md-6">
-														<div class="form-control-static">
-															<span id="lang_error" class="text-error">&nbsp;</span>
-														</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-control-static">
+														<span id="lang_error" class="text-error">&nbsp;</span>
 													</div>
 												</div>
 											</div>
@@ -768,7 +766,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 														hỏi thường gặp</a></li>
 												<li><a href="https://sharecode.vn/su-kien.htm">Sự
 														kiện</a></li>
- -->											</ul>
+ -->
+											</ul>
 										</div>
 										<!-- <div class="col-sm-4">
 											<div class="introduce-title">HƯỚNG DẪN</div>
@@ -825,10 +824,12 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 												class="fa fa-paper-plane fa-lg" aria-hidden="true"></i>&nbsp;
 												GỬI NHANH</a>
 										</div>
-										<br> <!-- <a href="https://sharecode.vn/dang-ki-nhan-code.htm"
+										<br>
+										<!-- <a href="https://sharecode.vn/dang-ki-nhan-code.htm"
 											class="agreen title5"><i class="fa fa-envelope-o"
 											aria-hidden="true"></i>&nbsp;Yêu cầu và Đăng kí nhận code</a>
- -->									</div>
+ -->
+									</div>
 								</div>
 							</div>
 							<!-- <div id="trademark-box" class="row">
