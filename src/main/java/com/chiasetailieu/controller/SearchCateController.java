@@ -9,22 +9,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.chiasetailieu.model.User;
-import com.chiasetailieu.service.IUserService;
-import com.chiasetailieu.utils.AppUtils;
+import com.chiasetailieu.model.Category;
+import com.chiasetailieu.service.ICategoryService;
 
 /**
- * Servlet implementation class ChangepassController
+ * Servlet implementation class SearchCateController
  */
-@WebServlet("/change-pass")
-public class ChangepassController extends HttpServlet {
+@WebServlet("/category")
+public class SearchCateController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    @Inject
-    IUserService userService;
+       
+	@Inject
+	ICategoryService cateService;
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ChangepassController() {
+    public SearchCateController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,7 +34,9 @@ public class ChangepassController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("/view/web/changepass.jsp").forward(request, response);
+		Long id = Long.parseLong(request.getParameter("id"));
+		Category cate = cateService.findById(id);
+		
 	}
 
 	/**
@@ -42,14 +44,7 @@ public class ChangepassController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.setCharacterEncoding("UTF-8");
-		request.setCharacterEncoding("UTF-8");
-		User user = AppUtils.getLoginedUser(request.getSession());
-		String newpass = request.getParameter("newpass");
-		user.setPassword(newpass);
-		userService.update(user);
-		request.setAttribute("message", "Đổi mật khẩu thành công");
-		request.getRequestDispatcher("/view/web/changepass.jsp").forward(request, response);
+		doGet(request, response);
 	}
 
 }

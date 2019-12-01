@@ -25,15 +25,15 @@ public class UserDAO extends GenericDAO<User> implements IUserDAO{
 	@Override
 	public Long save(User user) {
 		// TODO Auto-generated method stub
-		String sql = "insert into user (user_name, password, role_id) values (?,?,2)";
-		return insert(sql, user.getUsername(), user.getPassword());
+		String sql = "insert into user (user_name, password, role_id, realname, email, avatar) values (?,?,2,?,?,'style/userinfo/avanta2.png')";
+		return insert(sql, user.getUsername(), user.getPassword(),user.getRealname(),user.getEmail());
 	}
 
 	@Override
 	public void update(User user) {
 		// TODO Auto-generated method stub
-		String sql = "update user set user_name = ?, password = ? where user_id = ?";
-		update(sql, user.getUsername(), user.getPassword(), user.getUserid());
+		String sql = "update user set user_name = ?, password = ?, realname = ?, avatar = ? where user_id = ?";
+		update(sql, user.getUsername(), user.getPassword(), user.getUserid(),user.getRealname(),user.getAvatar());
 	}
 
 	@Override

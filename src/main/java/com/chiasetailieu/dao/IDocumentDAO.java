@@ -12,5 +12,9 @@ public interface IDocumentDAO extends IGenericDAO<Document>{
 	Long save(Document document);
 	void update(Document document);
 	void delete(Document document);
-	List<Document> findByCategory(Category cate);
+	List<Document> findByCategory(Category cate, int curpage, int docperpage);
+	List<Document> findDocuments(int curpage, int docperpage);
+	int getCount();
+	List<Document> findByView(int curpage, int docperpage);
+	List<Document> findByDownload(int curpage, int docperpage);
 }

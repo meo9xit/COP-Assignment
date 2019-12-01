@@ -47,8 +47,8 @@ public class DocumentDAO extends GenericDAO<Document> implements IDocumentDAO{
 		// TODO Auto-generated method stub
 		java.util.Calendar cal = java.util.Calendar.getInstance(); 
 		java.sql.Date timeNow = new Date(cal.getTimeInMillis());
-		String sql = "insert into document (`doc_name`, `cate_id`, `subcate_id`, `user_id`, `doc_source`, `doc_cover`, `create_date`, `edit_date`)"
-				+ " values (?,?,?,?,?,?,?,?)";
+		String sql = "insert into document (`doc_name`, `cate_id`, `subcate_id`, `user_id`, `doc_source`, `doc_cover`, `create_date`, `edit_date`,`view`,`download`)"
+				+ " values (?,?,?,?,?,?,?,?,0,0)";
 		return insert(sql, document.getDocName(), document.getCateId(), document.getSubcateId(), document.getUserId(), document.getDocSource(),
 				document.getCover(),timeNow, timeNow);
 	}
@@ -70,11 +70,42 @@ public class DocumentDAO extends GenericDAO<Document> implements IDocumentDAO{
 	}
 
 	@Override
-	public List<Document> findByCategory(Category cate) {
+	public List<Document> findByCategory(Category cate, int curpage, int docperpage) {
 		// TODO Auto-generated method stub
-		String sql = "select * from document where cate_id = ?";
-		List<Document> docs = query(sql, new DocumentMapper(), cate.getCategoryID());
+		String sql = "select * from document where cate_id = ? limit ?, ?";
+		List<Document> docs = query(sql, new DocumentMapper(), cate.getCategoryID(), curpage, docperpage);
 		return docs;
+	}
+
+	@Override
+	public List<Document> findDocuments(int curpage, int docperpage) {
+		// TODO Auto-generated method stub
+		int start = curpage*docperpage - docperpage;
+		String sql = "select * from Document limit ?, ?";
+		return query(sql, new DocumentMapper(), start, docperpage);
+	}
+
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		String sql = "select count(*) from document";
+		return count(sql);
+	}
+
+	@Override
+	public List<Document> findByView(int curpage, int docperpage) {
+		// TODO Auto-generated method stub
+		int start = curpage*docperpage - docperpage;
+		String sql = "SELECT * FROM Document ORDER BY view DESC LIMIT ?, ?";
+		return query(sql, new DocumentMapper(), start, docperpage);
+	}
+
+	@Override
+	public List<Document> findByDownload(int curpage, int docperpage) {
+		// TODO Auto-generated method stub
+		int start = curpage*docperpage - docperpage;
+		String sql = "SELECT * FROM Document ORDER BY download DESC LIMIT ?, ?";
+		return query(sql, new DocumentMapper(), start, docperpage);
 	}
 
 }

@@ -47,11 +47,7 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
     <form method="post" action="https://sharecode.vn/thong-tin-ca-nhan.htm" id="form1" enctype="multipart/form-data">
-<div class="aspNetHidden">
-<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
-<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTU1MjIxMjEwOQ9kFgJmD2QWAmYPZBYCZg9kFgICAQ8WBB4GYWN0aW9uBRYvdGhvbmctdGluLWNhLW5oYW4uaHRtHgdlbmN0eXBlBRNtdWx0aXBhcnQvZm9ybS1kYXRhFhACAQ8WAh4HVmlzaWJsZWhkAgMPZBYCAgEPFgIeBXRpdGxlBRJYaW4gY2jDoG8sIG1lbzl4aXQWAgIBDxYCHglpbm5lcmh0bWwFDjxiPm1lbzl4aXQ8L2I+ZAIEDxYCHwJoZAIFD2QWAgIDDxYCHgtfIUl0ZW1Db3VudAIPFh5mD2QWAmYPFQICMTUHQW5kcm9pZGQCAQ9kFgJmDxUCAjIzA2lPU2QCAg9kFgJmDxUCAjI2DVdpbmRvd3MgcGhvbmVkAgMPZBYCZg8VAgIyMQtQSFAgJiBNeVNRTGQCBA9kFgJmDxUCAjI5CVdvcmRQcmVzc2QCBQ9kFgJmDxUCAjI4Bkpvb21sYWQCBg9kFgJmDxUCAjE3CVZpc3VhbCBDI2QCBw9kFgJmDxUCAjE2C0FzcC9Bc3AuTmV0ZAIID2QWAmYPFQICMjAISmF2YS9KU1BkAgkPZBYCZg8VAgIxOQxWaXN1YWwgQmFzaWNkAgoPZBYCZg8VAgIyNAdDb2NvczJEZAILD2QWAmYPFQICMjcFVW5pdHlkAgwPZBYCZg8VAgIxOApWaXN1YWwgQysrZAIND2QWAmYPFQICMjUPSHRtbCAmIFRlbXBsYXRlZAIOD2QWAmYPFQICMjIFS2jDoWNkAgYPZBYUAgEPFgIfBAU4IEgmIzIyNDsgRHV5IEjGsG5nIChNJiMyMjc7IHRoJiMyMjQ7bmggdmkmIzIzNDtuIDI5OTk3MSlkAgIPFgIfBAUSIG1lbzl4aXRAZ21haWwuY29tZAIDDxYCHwQFBSAwIFh1ZAIEDxYCHwQFBDAgWHVkAgYPFgIfBAUGMjk5OTcxZAIHDxYCHwQFBjI5OTk3MWQCCQ8WAh8EBQYyOTk5NzFkAgoPFgIfBAUGMjk5OTcxZAIMDxYCHwQFBjI5OTk3MWQCDQ8WAh8EBQYyOTk5NzFkAgcPFgIfBQIEFghmD2QWAmYPFQIidGhlLWxvYWktc291cmNlLWNvZGUvd2Vic2l0ZS0xLmh0bQdXZWJzaXRlZAIBD2QWAmYPFQIsdGhlLWxvYWktc291cmNlLWNvZGUvcGhhbi1tZW0tdW5nLWR1bmctMi5odG0bUGjhuqduIG3hu4FtIC0g4buobmcgZOG7pW5nZAICD2QWAmYPFQIfdGhlLWxvYWktc291cmNlLWNvZGUvZ2FtZS0zLmh0bQRHYW1lZAIDD2QWAmYPFQIfdGhlLWxvYWktc291cmNlLWNvZGUva2hhYy00Lmh0bQVLaMOhY2QCCA8WAh8FAg8WHmYPZBYCZg8VBAAiL25nb24tbmd1LWxhcC10cmluaC9hbmRyb2lkLTE1Lmh0bQdBbmRyb2lkB0FuZHJvaWRkAgEPZBYCZg8VBAAeL25nb24tbmd1LWxhcC10cmluaC9pb3MtMjMuaHRtA2lPUwNpT1NkAgIPZBYCZg8VBAAoL25nb24tbmd1LWxhcC10cmluaC93aW5kb3dzLXBob25lLTI2Lmh0bQ1XaW5kb3dzIHBob25lDVdpbmRvd3MgcGhvbmVkAgMPZBYCZg8VBAAkL25nb24tbmd1LWxhcC10cmluaC9waHAtbXlzcWwtMjEuaHRtC1BIUCAmIE15U1FMC1BIUCAmIE15U1FMZAIED2QWAmYPFQQAJC9uZ29uLW5ndS1sYXAtdHJpbmgvd29yZHByZXNzLTI5Lmh0bQlXb3JkUHJlc3MJV29yZFByZXNzZAIFD2QWAmYPFQQAIS9uZ29uLW5ndS1sYXAtdHJpbmgvam9vbWxhLTI4Lmh0bQZKb29tbGEGSm9vbWxhZAIGD2QWAmYPFQQAIy9uZ29uLW5ndS1sYXAtdHJpbmgvdmlzdWFsLWMtMTcuaHRtCVZpc3VhbCBDIwlWaXN1YWwgQyNkAgcPZBYCZg8VBAAkL25nb24tbmd1LWxhcC10cmluaC9hc3Bhc3BuZXQtMTYuaHRtC0FzcC9Bc3AuTmV0C0FzcC9Bc3AuTmV0ZAIID2QWAmYPFQQAIi9uZ29uLW5ndS1sYXAtdHJpbmgvamF2YWpzcC0yMC5odG0ISmF2YS9KU1AISmF2YS9KU1BkAgkPZBYCZg8VBAAnL25nb24tbmd1LWxhcC10cmluaC92aXN1YWwtYmFzaWMtMTkuaHRtDFZpc3VhbCBCYXNpYwxWaXN1YWwgQmFzaWNkAgoPZBYCZg8VBA9jYXQtbGluay1vcnRoZXIiL25nb24tbmd1LWxhcC10cmluaC9jb2NvczJkLTI0Lmh0bQdDb2NvczJEB0NvY29zMkRkAgsPZBYCZg8VBA9jYXQtbGluay1vcnRoZXIgL25nb24tbmd1LWxhcC10cmluaC91bml0eS0yNy5odG0FVW5pdHkFVW5pdHlkAgwPZBYCZg8VBA9jYXQtbGluay1vcnRoZXIjL25nb24tbmd1LWxhcC10cmluaC92aXN1YWwtYy0xOC5odG0KVmlzdWFsIEMrKwpWaXN1YWwgQysrZAIND2QWAmYPFQQPY2F0LWxpbmstb3J0aGVyKC9uZ29uLW5ndS1sYXAtdHJpbmgvaHRtbC10ZW1wbGF0ZS0yNS5odG0PSHRtbCAmIFRlbXBsYXRlD0h0bWwgJiBUZW1wbGF0ZWQCDg9kFgJmDxUED2NhdC1saW5rLW9ydGhlch8vbmdvbi1uZ3UtbGFwLXRyaW5oL2toYWMtMjIuaHRtBUtow6FjBUtow6FjZAIKD2QWBAIBD2QWAgIBD2QWAgIBDxYCHwQFB21lbzl4aXRkAgMPZBYKAgEPFgIfAmhkAgMPZBYCAgEPZBYEAgEPFgIfBAURbWVvOXhpdEBnbWFpbC5jb21kAg0PFgQeA2FsdAUXbWVvOXhpdCAtIEjDoCBEdXkgSMawbmcfAwUNSMOgIER1eSBIxrBuZ2QCBQ9kFhQCAQ8WBB8GBRdtZW85eGl0IC0gSMOgIER1eSBIxrBuZx8DBRdtZW85eGl0IC0gSMOgIER1eSBIxrBuZ2QCAw8WAh8EBRFIJiMyMjQ7IER1eSBIxrBuZ2QCBQ8WAh8EBQEwZAIHDxYEHwQFATAfAwVHU+G7kSBYVSDEkWFuZyBi4buLIHThuqFtIGdp4buvIGNobyBnaWFvIGThu4tjaCBjb2RlIHbhu6thIMSRxrDhu6NjIGLDoW5kAgkPFgIfAwVHU+G7kSBYVSDEkWFuZyBi4buLIHThuqFtIGdp4buvIGNobyBnaWFvIGThu4tjaCBjb2RlIHbhu6thIMSRxrDhu6NjIGLDoW5kAgsPFgIfBAUBMGQCDQ8WAh4EaHJlZgUeL3RoYW5oLXZpZW4vbWVvOXhpdC0yOTk5NzEuaHRtZAIPDxYCHwQFATBkAhEPFgIfBAUBMGQCFQ8WAh8EBQEwZAIHD2QWAmYPZBYCAgEPFgIfBQIDFgZmD2QWAmYPFQRCaHR0cDovL3NoYXJlY29kZS52bi9jYXUtaG9pL2h1b25nLWRhbi1uYXAtdGllbi12YW8tdGFpLWtob2FuLTguaHRtNEZpbGVzVXBsb2FkL0Jhbm5lci8xM180OV8zN19uYXAgeHUgdmFvIHRhaSBraG9hbi5qcGdpTuG6oXAgeHUsIG7huqFwIHRp4buBbiwgcXV5IMSR4buVaSwgbuG6oXAgdGjhursgY8OgbywgbuG6oXAgcXVhIG5nw6JuIGjDoG5nLCBu4bqhcCBxdWEgdsOtIG5nw6JuIGzGsOG7o25nIE7huqFwIFhVIHbDoG8gdMOgaSBraG/huqNuIG5nYXkhZAIBD2QWAmYPFQRNaHR0cDovL3NoYXJlY29kZS52bi9jYXUtaG9pL21lby1naXVwLWJhbi10YW5nLWRvYW5oLXRodS1iYW4tc291cmNlLWNvZGUtOS5odG07RmlsZXNVcGxvYWQvQmFubmVyLzE1XzE5XzE4X21lbyB0YW5nIGRvYW5oIHRodSBiYW4gY29kZS5qcGc0RG9hbmggdGh1LCB0xINuZyBkb2FuaCB0aHUsIGzhu6NpIG5odeG6rW4sIGLDoW4gY29kZS9N4bq5byBnacO6cCB0xINuZyBET0FOSCBUSFUgYsOhbiBDT0RFIGNobyBi4bqhbmQCAg9kFgJmDxUETi9zdS1raWVuL3V1LWRhaS10dW5nLWJ1bmctdGFuZy10aHVvbmcta2hpLXVwbG9hZC12YS11cGxvYWQtY29kZS1kYXQtbW9jLTExLmh0bTVGaWxlc1VwbG9hZC9CYW5uZXIvMF8yMl81X3NoYXJlY29kZSB0YW5nIHRodW9uZyAyLmpwZzFz4buxIGtp4buHbiwgZXZlbnQsIHThurduZyB0aMaw4bufbmcsIHVwbG9hZCBjb2RlWVPhu7Ega2nhu4duOiBN4burbmcgbmfDoHkgZ2nhu5cgdOG7lSAxMC8zIC0gVOG6t25nIHRoxrDhu59uZyBraGkgdXBsb2FkIGNvZGUgxJHhuqF0IG3hu5FjZAIJD2QWAgIBDxYCHwUCBRYKZg9kFgJmDxUENy9jYXUtaG9pL2NhY2gtdXBsb2FkLWNvZGUtaGlldS1xdWEtdmEtdG9pLXV1LXNlby0xMC5odG02Q8OhY2ggVVBMT0FEIGNvZGUgaGnhu4d1IHF14bqjIHbDoCB04buRaSDGsHUgU0VPIC0gRkFRMEPDoWNoIFVQTE9BRCBjb2RlIGhp4buHdSBxdeG6oyB2w6AgdOG7kWkgxrB1IFNFTwZpY19ob3RkAgEPZBYCZg8VBDovY2F1LWhvaS9tZW8tZ2l1cC1iYW4tdGFuZy1kb2FuaC10aHUtYmFuLXNvdXJjZS1jb2RlLTkuaHRtOE3hurlvIGdpw7pwIGLhuqFuIFTEgk5HIERPQU5IIFRIVSBiw6FuIHNvdXJjZSBjb2RlIC0gRkFRMk3hurlvIGdpw7pwIGLhuqFuIFTEgk5HIERPQU5IIFRIVSBiw6FuIHNvdXJjZSBjb2RlBmljX2hvdGQCAg9kFgJmDxUELy9jYXUtaG9pL2h1b25nLWRhbi1uYXAtdGllbi12YW8tdGFpLWtob2FuLTguaHRtM0jGsOG7m25nIGThuqtuIE7huqBQIFRJ4buATiB2w6BvIHTDoGkga2hv4bqjbiAtIEZBUS1IxrDhu5tuZyBk4bqrbiBO4bqgUCBUSeG7gE4gdsOgbyB0w6BpIGtob+G6o24AZAIDD2QWAmYPFQQuL2NhdS1ob2kvaHVvbmctZGFuLXJ1dC10aWVuLXR1LXRhaS1raG9hbi03Lmh0bTJIxrDhu5tuZyBk4bqrbiBSw5pUIFRJ4buATiB04burIHTDoGkga2hv4bqjbiAtIEZBUSxIxrDhu5tuZyBk4bqrbiBSw5pUIFRJ4buATiB04burIHTDoGkga2hv4bqjbgBkAgQPZBYCZg8VBEAvY2F1LWhvaS9odW9uZy1kYW4tY2FjaC1jaGF5LXdlYnNpdGUtYXNwbmV0LXRyZW4tbG9jYWxob3N0LTIuaHRtQUjGsOG7m25nIGThuqtuIGPDoWNoIGNo4bqheSB3ZWJzaXRlIEFTUC5OZXQgdHLDqm4gTG9jYWxob3N0IC0gRkFRO0jGsOG7m25nIGThuqtuIGPDoWNoIGNo4bqheSB3ZWJzaXRlIEFTUC5OZXQgdHLDqm4gTG9jYWxob3N0AGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgcFP2N0bDAwJGN0bDAwJGN0bDAwJG1haW5ib2R5JGNvbnRlbnRib2R5JGNvbnRlbnRwYWdlJENoZWNrYm94RnJlZQU/Y3RsMDAkY3RsMDAkY3RsMDAkbWFpbmJvZHkkY29udGVudGJvZHkkY29udGVudHBhZ2UkQ2hlY2tib3hDb2RlBT9jdGwwMCRjdGwwMCRjdGwwMCRtYWluYm9keSRjb250ZW50Ym9keSRjb250ZW50cGFnZSRDaGVja2JveFNlbmQFP2N0bDAwJGN0bDAwJGN0bDAwJG1haW5ib2R5JGNvbnRlbnRib2R5JGNvbnRlbnRwYWdlJENoZWNrYm94U2F2ZQVFY3RsMDAkY3RsMDAkY3RsMDAkbWFpbmJvZHkkY29udGVudGJvZHkkY29udGVudHBhZ2UkQ2hlY2tib3hVcGxvYWRXYWl0BUdjdGwwMCRjdGwwMCRjdGwwMCRtYWluYm9keSRjb250ZW50Ym9keSRjb250ZW50cGFnZSRDaGVja2JveFVwbG9hZFRlc3RlZAVCY3RsMDAkY3RsMDAkY3RsMDAkbWFpbmJvZHkkY29udGVudGJvZHkkY29udGVudHBhZ2UkQ2hlY2tib3hNZXNzYWdlGLMWB7ncdJMBzZNtfHDwoRYrIYE=">
-</div>
+
 
 <script type="text/javascript">
 //<![CDATA[
@@ -75,11 +71,7 @@ function __doPostBack(eventTarget, eventArgument) {
 
 <script src="style/userinfo/ScriptResource.axd" type="text/javascript"></script>
 <script src="style/userinfo/ScriptResource(1).axd" type="text/javascript"></script>
-<div class="aspNetHidden">
 
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A7F7659A">
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAB1QEuSAFyzCDFW8IP2STEYzicdokvXrko/HzcC2ytH5LOUCRZ2fmNYwaJ6nLB+QKRfzqgylkSC105WTXjqRLBEiMXn6wy/zBjWQF3IX0QM3eVgqnuNz7Lzf3zDBlOJhlOuHO3xHfyQR+G0qbZsvpNAEjrwKKnvjgCf57LqzCGJNBPXj45ZamvHmOwHWXD3mrR3RL2til5QvRKSl4G1aNFRFkDxGQm9jX45jK/gKvuqaclfrbia0bMSM36db9JONvphx0r/lyxYpMZxnmYJv0Fm1pl75Bzox8RS/AzS0H8EoA2Fhqq5ns9Hmb0qtoUwUbDzZs1FXucZeMU67d4Xxc1oCiBFA5PgfglHz4eMI8PtosR3ogPnCVwiixDy9XCe/abwir5+0uESG4EWrZvt3DgqD4eHYSCRc8NYGaU7l3ZuQCVHus69Vz66HfY3/KvUwLgvrCiW02UJB8Fu45rhc7J26fESkRdhpFQF03P7IvayCDexLsyauIjF5yQKNpODF9VoC0Fdzz3/Gbei4zgM/dOpTbwwalfUXke6DU6MbAlT7M/rRrh15SmTdiYpYuIlt3vVoUeL50O6GcvxIODsHBDBgvEzshNcK6dl8iHt2OtYwpxZkd5i+KF6NQWt5gM1LlrIjrbNp">
-</div>
         <script type="text/javascript">
 //<![CDATA[
 Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 'form1', ['tctl00$ctl00$ctl00$ctl24','ctl24'], [], [], 90, 'ctl00$ctl00$ctl00');
@@ -203,7 +195,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                         </div></div>
                     <div class="col-xs-5 col-sm-2 col-md-3 shopping-cart-box btn-align">
                         
-                        <a data-toggle="modal" data-target="#AddMoney" role="button" class="button-green" onclick="createCaptcha();" title="Nạp tiền vào tài khoản"><i class="fa fa-money fa-lg" aria-hidden="true"></i>&nbsp; NẠP XU</a>&nbsp;&nbsp;
                         
 <script type="text/javascript">   
     function Check_ATM() {
@@ -419,834 +410,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
             $("#boxQRPay").hide();
     }
 </script>
-<input type="hidden" name="ctl00$ctl00$ctl00$ucPopupMoney$hdUserId" id="ucPopupMoney_hdUserId" value="299971">
-<div class="modal fade custom" id="AddMoney" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header popup_header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                <p class="modal-title text-center" id="myModalLabel">NẠP TIỀN VÀO TÀI KHOẢN</p>
-
-            </div>
-            <div class="modal-body">
-                <div class="row bg-pop-info">
-                    <div class="col-xs-12">
-                        <span><i class="fa fa-user fa-lg" aria-hidden="true"></i><span id="ucPopupMoney_moneyUser"> Hà Duy Hưng (Mã thành viên 299971)</span></span>&nbsp;&nbsp;&nbsp;
-                        <span><i class="fa fa-envelope fa-lg" aria-hidden="true"></i><span id="ucPopupMoney_moneyEmail"> meo9xit@gmail.com</span></span>&nbsp;&nbsp;&nbsp;
-                        <span>Tài khoản: <b id="ucPopupMoney_moneyMoney"> 0 Xu</b> </span>&nbsp;&nbsp;&nbsp;
-                        <span>Khả dụng: <b id="ucPopupMoney_moneyAllow" class="agreen">0 Xu</b></span>
-                    </div>
-                </div>
-                <div class="row bg-tab">
-                    <div class="col-xs-12">
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="bold active"><a href="https://sharecode.vn/thong-tin-ca-nhan.htm#mnATM" role="tab" data-toggle="tab">1 - THẺ ATM ONLINE</a></li>
-                            <li role="presentation" class="bold"><a href="https://sharecode.vn/thong-tin-ca-nhan.htm#mnSendATM" role="tab" data-toggle="tab">2 - CHUYỂN KHOẢN</a></li>
-                            <li role="presentation" class="bold"><a href="https://sharecode.vn/thong-tin-ca-nhan.htm#mnNL" role="tab" data-toggle="tab">3 - VÍ ĐIỆN TỬ</a></li>
-                            <li role="presentation" class="bold"><a href="https://sharecode.vn/thong-tin-ca-nhan.htm#mnPay" role="tab" data-toggle="tab">4 - PAYPAL</a></li>
-                            <li role="presentation" class="bold"><a href="https://sharecode.vn/thong-tin-ca-nhan.htm#mnVisa" role="tab" data-toggle="tab">5 - THẺ TÍN DỤNG</a></li>
-                            
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="tab-content col-xs-12">
-                       
-                        <div role="tabpanel" class=" row tab-pane fade in active" id="mnATM">
-                            <div id="ucPopupMoney_Panel1" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ucPopupMoney_btnATM&#39;)">
-	
-                                <div class="col-sm-6" style="overflow: hidden;">
-                                    <div id="boxBankATM" class="bank-box">
-                                         <ul class="bankList">
-
-                                            <li class="bank-online-methods ">
-                                                <label for="vcb_ck_on">
-                                                    <i class="VCB" title="Ngân hàng TMCP Ngoại Thương Việt Nam"></i>
-                                                    <input id="Radio29" type="radio" name="bankcode" value="VCB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-
-                                            <li class="bank-online-methods ">
-                                                <label for="vnbc_ck_on">
-                                                    <i class="DAB" title="Ngân hàng Đông Á"></i>
-                                                    <input id="Radio28" type="radio" name="bankcode" value="DAB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-
-                                            <li class="bank-online-methods ">
-                                                <label for="tcb_ck_on">
-                                                    <i class="TCB" title="Ngân hàng Kỹ Thương"></i>
-                                                    <input id="Radio27" type="radio" name="bankcode" value="TCB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-
-                                            <li class="bank-online-methods ">
-                                                <label for="sml_atm_mb_ck_on">
-                                                    <i class="MB" title="Ngân hàng Quân Đội"></i>
-                                                    <input id="Radio26" type="radio" name="bankcode" value="MB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-
-                                            <li class="bank-online-methods ">
-                                                <label for="shb_ck_on">
-                                                    <i class="SHB" title="Ngân hàng Sài Gòn - Hà Nội"></i>
-                                                    <input id="Radio25" type="radio" name="bankcode" value="SHB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-
-                                            <li class="bank-online-methods ">
-                                                <label for="sml_atm_vib_ck_on">
-                                                    <i class="VIB" title="Ngân hàng Quốc tế"></i>
-                                                    <input id="Radio24" type="radio" name="bankcode" value="VIB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-
-                                            <li class="bank-online-methods ">
-                                                <label for="sml_atm_vtb_ck_on">
-                                                    <i class="ICB" title="Ngân hàng Công Thương Việt Nam"></i>
-                                                    <input id="Radio23" type="radio" name="bankcode" value="ICB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-
-                                            <li class="bank-online-methods ">
-                                                <label for="sml_atm_exb_ck_on">
-                                                    <i class="EXB" title="Ngân hàng Xuất Nhập Khẩu"></i>
-                                                    <input id="Radio22" type="radio" name="bankcode" value="EXB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-
-                                            <li class="bank-online-methods ">
-                                                <label for="sml_atm_acb_ck_on">
-                                                    <i class="ACB" title="Ngân hàng Á Châu"></i>
-                                                    <input id="Radio21" type="radio" name="bankcode" value="ACB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-
-                                            <li class="bank-online-methods ">
-                                                <label for="sml_atm_hdb_ck_on">
-                                                    <i class="HDB" title="Ngân hàng Phát triển Nhà TPHCM"></i>
-                                                    <input id="Radio20" type="radio" name="bankcode" value="HDB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-
-                                            <li class="bank-online-methods ">
-                                                <label for="sml_atm_msb_ck_on">
-                                                    <i class="MSB" title="Ngân hàng Hàng Hải"></i>
-                                                    <input id="Radio19" type="radio" name="bankcode" value="MSB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-
-                                            <li class="bank-online-methods ">
-                                                <label for="sml_atm_nvb_ck_on">
-                                                    <i class="NVB" title="Ngân hàng Nam Việt"></i>
-                                                    <input id="Radio18" type="radio" name="bankcode" value="NVB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-
-                                            <li class="bank-online-methods ">
-                                                <label for="sml_atm_vab_ck_on">
-                                                    <i class="VAB" title="Ngân hàng Việt Á"></i>
-                                                    <input id="Radio17" type="radio" name="bankcode" value="VAB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-
-                                            <li class="bank-online-methods ">
-                                                <label for="sml_atm_vpb_ck_on">
-                                                    <i class="VPB" title="Ngân Hàng Việt Nam Thịnh Vượng"></i>
-                                                    <input id="Radio16" type="radio" name="bankcode" value="VPB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-
-                                            <li class="bank-online-methods ">
-                                                <label for="sml_atm_scb_ck_on">
-                                                    <i class="SCB" title="Ngân hàng Sài Gòn Thương tín"></i>
-                                                    <input id="Radio15" type="radio" name="bankcode" value="SCB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-
-                                            <li class="bank-online-methods ">
-                                                <label for="ojb_ck_on">
-                                                    <i class="OJB" title="Ngân hàng Đại Dương"></i>
-                                                    <input id="Radio14" type="radio" name="bankcode" value="OJB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-
-                                            <li class="bank-online-methods ">
-                                                <label for="bnt_atm_pgb_ck_on">
-                                                    <i class="PGB" title="Ngân hàng Xăng dầu Petrolimex"></i>
-                                                    <input id="Radio13" type="radio" name="bankcode" value="PGB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-
-                                            <li class="bank-online-methods ">
-                                                <label for="bnt_atm_gpb_ck_on">
-                                                    <i class="GPB" title="Ngân hàng TMCP Dầu khí Toàn Cầu"></i>
-                                                    <input id="Radio12" type="radio" name="bankcode" value="GPB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-
-                                            <li class="bank-online-methods ">
-                                                <label for="bnt_atm_agb_ck_on">
-                                                    <i class="AGB" title="Ngân hàng Nông nghiệp &amp; Phát triển nông thôn"></i>
-                                                    <input id="Radio11" type="radio" name="bankcode" value="AGB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-
-                                            <li class="bank-online-methods ">
-                                                <label for="bnt_atm_sgb_ck_on">
-                                                    <i class="SGB" title="Ngân hàng Sài Gòn Công Thương"></i>
-                                                    <input id="Radio10" type="radio" name="bankcode" value="SGB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-
-                                            <li class="bank-online-methods ">
-                                                <label for="bnt_atm_nab_ck_on">
-                                                    <i class="NAB" title="Ngân hàng Nam Á"></i>
-                                                    <input id="Radio9" type="radio" name="bankcode" value="NAB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-
-                                            <li class="bank-online-methods ">
-                                                <label for="sml_atm_bab_ck_on">
-                                                    <i class="BAB" title="Ngân hàng Bắc Á"></i>
-                                                    <input id="Radio8" type="radio" name="bankcode" value="BAB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-                                            <li class="bank-online-methods ">
-                                                <label for="sml_atm_bidv_ck_on">
-                                                    <i class="BIDV" title="Ngân hàng Đầu tư và Phát triển Việt Nam"></i>
-                                                    <input id="Radio7" type="radio" name="bankcode" value="BIDV" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-                                            <li class="bank-online-methods ">
-                                                <label for="sml_atm_tpb_ck_on">
-                                                    <i class="TPB" title="Ngân hàng TMCP Tiên Phong"></i>
-                                                    <input id="Radio6" type="radio" name="bankcode" value="TPB" onclick="handleClick(this);">
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <br>
-                                    <b>LƯU Ý:</b> Quá trình bạn thao tác sẽ được cổng thanh toán Ngân Lượng bảo vệ và chuyển tới Ngân hàng bạn đã chọn, sau đó trả lại kết quả về Sharecode.vn. Để đảm bảo an toàn tuyệt đối cho khách hàng Ngân Lượng được chọn vì hiện đang là cổng thanh toán uy tín nhất Việt Nam.
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="bg-pop" id="boxMoneyATM">
-                                        <div class="note"><b class="green">SỐ TIỀN NẠP</b> <em class="orange">(1 Xu = 1.000 đ)</em></div>
-                                        <div>
-                                            <input id="Radio1" type="radio" name="moneyATM" value="20000">
-                                            <span>Nạp</span> <b>20.000 đ</b>&nbsp;&nbsp;&nbsp;&nbsp;<em>(+20 Xu vào tài khoản)</em>
-                                        </div>
-                                        <div>
-                                            <input id="Radio2" type="radio" name="moneyATM" value="50000">
-                                            <span>Nạp</span> <b>50.000 đ</b>&nbsp;&nbsp;&nbsp;&nbsp;<em>(+50 Xu vào tài khoản)</em>
-                                        </div>
-                                        <div>
-                                            <input id="Radio3" type="radio" name="moneyATM" value="100000" checked="">
-                                            <span>Nạp</span> <b>100.000 đ</b>&nbsp;&nbsp;&nbsp;&nbsp;<em>(+100 Xu vào tài khoản)</em>
-                                        </div>
-                                        <div>
-                                            <input id="Radio4" type="radio" name="moneyATM" value="200000">
-                                            <span>Nạp</span> <b>200.000 đ</b>&nbsp;&nbsp;&nbsp;&nbsp;<em>(+200 Xu vào tài khoản)</em>
-                                        </div>
-                                        <div>
-                                            <input id="Radio5" type="radio" name="moneyATM" value="500000">
-                                            <span>Nạp</span> <b>500.000 đ</b>&nbsp;&nbsp;&nbsp;&nbsp;<em>(+500 Xu vào tài khoản)</em>
-                                        </div>
-                                        <div>
-                                            <input id="Radio36" type="radio" name="moneyATM" value="1000000">
-                                            <span>Nạp</span> <b>1.000.000 đ</b>&nbsp;&nbsp;&nbsp;&nbsp;<em>(+1.000 Xu vào tài khoản)</em>
-                                        </div>
-                                         <div class="div-number">
-                                                    <input id="Radio38" type="radio" name="moneyATM" value="0">
-                                                    <span>Tự nhập số Xu muốn nạp </span><input id="txtnumberATM" name="numberATM" class="number-money" type="number" onclick="$(&#39;#Radio38&#39;).prop(&#39;checked&#39;, true);"> <b>Xu</b>
-                                                </div>
-                                    </div>
-                                    <div class="form-horizontal" style="margin-top: 15px;">
-                                        <div class="text-error" id="errATM"></div>
-
-                                        <div class="form-group">
-                                            <div class="col-xs-12">
-                                                <input name="ctl00$ctl00$ctl00$ucPopupMoney$txtCaptchaATM" type="text" maxlength="4" id="ucPopupMoney_txtCaptchaATM" class="form-control alignleft" placeholder="Xác nhận" style="width:90px;">
-                                                
-<script type="text/javascript">
-    function createCaptcha() {
-        jQuery.ajax({
-            type: "POST",
-            url: "/Ajax/CreateCaptcha.aspx/CaptchaUrl",
-            data: '{}',
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            async: false,
-            success: function (data) {
-                if (data.d != '') {
-                    $('.imgCaptcha').attr('src', data.d);
-                }
-                else
-                    $('.imgCaptcha').attr('src', '/Image/captcha.jpg');
-            }
-        });
-    }
-</script>
-<div style="height: 30px; width: 140px; float: left; margin-left: 10px;">
-    <img src="style/userinfo/captcha.jpg" alt="captcha" class="imgCaptcha" height="30" width="80">
-    <div class="aorange" style="float: right; width: 60px; margin-top: 6px; padding-left: 5px;" onclick="return createCaptcha();">
-        Mã khác
-    </div>
-</div>
-
-
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-xs-12 line-h">
-                                                <a onclick="return Check_ATM();" id="ucPopupMoney_btnATM" class="button-orange" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$ucPopupMoney$btnATM&#39;,&#39;&#39;)">NẠP TIỀN BẰNG SỐ THẺ ATM &nbsp;<i class="fa fa-credit-card fa-lg" aria-hidden="true"></i></a>
-                                                <div id="boxQRPay">
-                                                (Hoặc) Nạp <b>NHANH</b> bằng Mobile APP ngân hàng<br>
-                                                <a onclick="return Check_ATM();" id="ucPopupMoney_bnlQRPay" class="button-orange" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$ucPopupMoney$bnlQRPay&#39;,&#39;&#39;)">NẠP TIỀN NHANH BẰNG QR Pay &nbsp;<i class="fa fa-qrcode fa-lg" aria-hidden="true"></i></a>
-                                                    </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12">
-                                    <div class="bg-pop">
-                                        <ul class="introduce-list">
-                                            <li>Thẻ của bạn phải đã đăng ký Internet-Banking hoặc dịch vụ thanh toán trực tuyến.</li>
-                                            <li>Sau khi giao dịch thành công hệ thống sẽ tự động cộng xu cho bạn vui lòng ko ngắt trang cho tới khi thông báo thành công trên trang sharecode.vn.</li>
-                                            <li>Xem lịch sử nạp tiền của bạn <a href="https://sharecode.vn/lich-su-giao-dich.htm" class="aorange" target="_blank">tại đây</a> (Hoặc) <a href="https://sharecode.vn/cau-hoi/huong-dan-nap-tien-vao-tai-khoan-8.htm#qua-atm" class="aorange" target="_blank">Hướng dẫn nạp tiền qua thẻ ATM</a>.</li>
-                                            <li>Hotline hỗ trợ giao dịch 24/7: <a class="bold" href="tel:+84981282756" title="Click gọi ngay!">0981.282.756</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            
-</div>
-                        </div>
-                        <div role="tabpanel" class="row tab-pane fade" id="mnNL">
-                            <div class="col-xs-12">
-                                <ul class="tab-child nav nav-tabs" role="tablist">
-                                    <li role="presentation" class="col-sm-3 active"><a href="https://sharecode.vn/thong-tin-ca-nhan.htm#boxMomo" role="tab" data-toggle="tab">
-                                        <img src="style/userinfo/vi-momo.png"></a></li>
-                                    <li role="presentation" class="col-sm-3"><a href="https://sharecode.vn/thong-tin-ca-nhan.htm#boxNganLuong" role="tab" data-toggle="tab">
-                                        <img src="style/userinfo/vi-ngan-luong.png"></a></li>
-                                    <li role="presentation" class="col-sm-3"><a href="https://sharecode.vn/thong-tin-ca-nhan.htm#boxBaoKim" role="tab" data-toggle="tab">
-                                        <img src="style/userinfo/vi-bao-kim.png"></a></li>
-                                    
-                                    <li role="presentation" class="col-sm-3"><a href="https://sharecode.vn/thong-tin-ca-nhan.htm#boxBankPlus" role="tab" data-toggle="tab">
-                                        <img src="style/userinfo/vi-bank-plus.png"></a></li>
-                                </ul>
-                            </div>
-
-                            <div class="tab-content tab-child-content">
-                                <div role="tabpanel" class="row tab-pane fade in active" id="boxMomo">
-                                    <div class="col-xs-12">
-                                <br>
-                                <br>
-                                <div class="text-center">
-                                    <span>Nếu bạn đang sử dụng ví MOMO vui lòng chuyển số tiền cần nạp tới số điện thoại nhận tiền: </span><br> <strong style="font-size: 30px; line-height: 30px;">0973.975.886</strong><br><br>
-                                    <span>Và Nhập tin nhắn (or) Nội dung chuyển tiền là:</span><br> <strong class="orange" style="font-size: 30px; line-height: 30px;">sha <span id="ucPopupMoney_moneyID4">299971</span></strong><br><br>
-                                    <em>(Trong đó <strong id="ucPopupMoney_moneyID3">299971</strong> là Mã thành viên của bạn, Hệ thống sẽ biết và cộng tiền cho bạn)</em>
-                                </div>
-                                <br>
-                            </div>
-                                </div>
-                                <div role="tabpanel" class="row tab-pane fade" id="boxNganLuong">
-                                    <div id="ucPopupMoney_Panel2" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ucPopupMoney_btnNganLuong&#39;)">
-	
-                                        <div class="col-sm-7">
-                                            <div class="bg-pop" id="boxMoneyNL">
-                                                <div class="note"><b class="green">SỐ TIỀN NẠP</b> <em class="orange">(1 Xu = 1.000 đ)</em></div>
-                                                <div>
-                                                    <input id="Radio54" type="radio" name="moneyNL" value="20000">
-                                                    <span>Nạp</span> <b>20.000 đ</b>&nbsp;&nbsp;&nbsp;&nbsp;<em>(+20 Xu vào tài khoản)</em>
-                                                </div>
-                                                <div>
-                                                    <input id="Radio55" type="radio" name="moneyNL" value="50000">
-                                                    <span>Nạp</span> <b>50.000 đ</b>&nbsp;&nbsp;&nbsp;&nbsp;<em>(+50 Xu vào tài khoản)</em>
-                                                </div>
-                                                <div>
-                                                    <input id="Radio56" type="radio" name="moneyNL" value="100000" checked="">
-                                                    <span>Nạp</span> <b>100.000 đ</b>&nbsp;&nbsp;&nbsp;&nbsp;<em>(+100 Xu vào tài khoản)</em>
-                                                </div>
-                                                <div>
-                                                    <input id="Radio57" type="radio" name="moneyNL" value="200000">
-                                                    <span>Nạp</span> <b>200.000 đ</b>&nbsp;&nbsp;&nbsp;&nbsp;<em>(+200 Xu vào tài khoản)</em>
-                                                </div>
-                                                <div>
-                                                    <input id="Radio58" type="radio" name="moneyNL" value="500000">
-                                                    <span>Nạp</span> <b>500.000 đ</b>&nbsp;&nbsp;&nbsp;&nbsp;<em>(+500 Xu vào tài khoản)</em>
-                                                </div>
-                                                <div>
-                                                    <input id="Radio37" type="radio" name="moneyNL" value="1000000">
-                                                    <span>Nạp</span> <b>1.000.000 đ</b>&nbsp;&nbsp;&nbsp;&nbsp;<em>(+1.000 Xu vào tài khoản)</em>
-                                                </div>
-                                                <div class="div-number">
-                                                    <input id="Radio40" type="radio" name="moneyNL" value="0">
-                                                    <span>Tự nhập số Xu muốn nạp </span><input id="txtnumberNL" name="numberNL" class="number-money" type="number" onclick="$(&#39;#Radio40&#39;).prop(&#39;checked&#39;, true);"> <b>Xu</b>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-sm-5">
-                                            <div class="form-horizontal" style="margin-top: 15px;">
-                                                <div class="text-error" id="errNL"></div>
-                                                <div class="form-group">
-                                                    <div class="col-xs-12">
-                                                        <input name="ctl00$ctl00$ctl00$ucPopupMoney$txtCaptchaNL" type="text" maxlength="4" id="ucPopupMoney_txtCaptchaNL" class="form-control alignleft" placeholder="Xác nhận" style="width:90px;">
-                                                        
-<script type="text/javascript">
-    function createCaptcha() {
-        jQuery.ajax({
-            type: "POST",
-            url: "/Ajax/CreateCaptcha.aspx/CaptchaUrl",
-            data: '{}',
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            async: false,
-            success: function (data) {
-                if (data.d != '') {
-                    $('.imgCaptcha').attr('src', data.d);
-                }
-                else
-                    $('.imgCaptcha').attr('src', '/Image/captcha.jpg');
-            }
-        });
-    }
-</script>
-<div style="height: 30px; width: 140px; float: left; margin-left: 10px;">
-    <img src="style/userinfo/captcha.jpg" alt="captcha" class="imgCaptcha" height="30" width="80">
-    <div class="aorange" style="float: right; width: 60px; margin-top: 6px; padding-left: 5px;" onclick="return createCaptcha();">
-        Mã khác
-    </div>
-</div>
-
-
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="col-xs-12 line-h">
-                                                        <a onclick="return Check_NL();" id="ucPopupMoney_btnNganLuong" class="button-orange" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$ucPopupMoney$btnNganLuong&#39;,&#39;&#39;)">NẠP TIỀN VÀO TÀI KHOẢN &nbsp;<i class="fa fa-money fa-lg" aria-hidden="true"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    
-</div>
-                                </div>
-                                <div role="tabpanel" class="row tab-pane fade" id="boxBaoKim">
-                                    <div class="text-center clear">
-                                        <br><br>
-                                    <em>Chức năng đang nâng cấp... Vui lòng trở lại sau!</em><br><br><br><br>
-                                </div>
-                                </div>
-                                
-                                <div role="tabpanel" class="row tab-pane fade" id="boxBankPlus">
-                                    <div class="col-xs-12">
-                                <br>
-                                <br>
-                                <div class="text-center">
-                                    <span>Nếu bạn đang sử dụng BankPlus vui lòng chuyển số tiền cần nạp tới số điện thoại nhận tiền: </span><br> <strong style="font-size: 30px; line-height: 30px;">0973.975.886</strong><br><br>
-                                    <span>Và Nhập tin nhắn (or) Nội dung chuyển tiền là:</span><br> <strong class="orange" style="font-size: 30px; line-height: 30px;">sha <span id="ucPopupMoney_moneyID5">299971</span></strong><br><br>
-                                    <em>(Trong đó <strong id="ucPopupMoney_moneyID6">299971</strong> là Mã thành viên của bạn, Hệ thống sẽ biết và cộng tiền cho bạn)</em>
-                                </div>
-                                <br>
-                            </div>
-                                </div>
-
-                            </div>
-                            <div class="col-xs-12">
-                                <div class="bg-pop">
-                                    <ul class="introduce-list">
-                                        <li>Xem lịch sử nạp tiền của bạn <a href="https://sharecode.vn/lich-su-giao-dich.htm" class="aorange" target="_blank">tại đây</a> (Hoặc) <a href="https://sharecode.vn/cau-hoi/huong-dan-nap-tien-vao-tai-khoan-8.htm#vi-dien-tu" class="aorange" target="_blank">Hướng dẫn nạp tiền qua ví điện tử: Ngân Lượng, Bảo Kim, Momo hoặc BankPlus</a>.</li>
-                                        <li>Hệ thống sẽ tự động cộng xu vào tài khoản cho bạn ngay sau khi nhận được tiền, trường hợp sau 10 phút bạn không nhận được tiền vui lòng gọi tới số hotline <a class="bold" href="tel:+84981282756" title="Click gọi ngay!">0981.282.756</a>.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="tabpanel" class="row tab-pane fade" id="mnPay">
-                            <div id="ucPopupMoney_Panel3" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ucPopupMoney_btnPaypal&#39;)">
-	
-                                <div class="col-sm-7">
-                                    <div class="bg-pop" id="boxMoneyPaypal">
-                                        <div class="note"><b class="green">SỐ TIỀN NẠP</b></div>
-                                        <div>
-                                            <input id="Radio34" type="radio" name="moneyPay" value="5">
-                                            <span>Nạp</span> <b>5$</b>&nbsp;&nbsp;&nbsp;&nbsp;<em>(+80 Xu vào tài khoản)</em>
-                                        </div>
-                                        <div>
-                                            <input id="Radio35" type="radio" name="moneyPay" value="10">
-                                            <span>Nạp</span> <b>10$</b>&nbsp;&nbsp;&nbsp;&nbsp;<em>(+160 Xu vào tài khoản)</em>
-                                        </div>
-                                        <div>
-                                            <input id="Radio30" type="radio" name="moneyPay" value="20">
-                                            <span>Nạp</span> <b>20$</b>&nbsp;&nbsp;&nbsp;&nbsp;<em>(+320 Xu vào tài khoản)</em>
-                                        </div>
-                                        <div>
-                                            <input id="Radio31" type="radio" name="moneyPay" value="50">
-                                            <span>Nạp</span> <b>50$</b>&nbsp;&nbsp;&nbsp;&nbsp;<em>(+800 Xu vào tài khoản)</em>
-                                        </div>
-                                        <div>
-                                            <input id="Radio32" type="radio" name="moneyPay" value="100" checked="">
-                                            <span>Nạp</span> <b>100$</b>&nbsp;&nbsp;&nbsp;&nbsp;<em>(+1600 Xu vào tài khoản)</em>
-                                        </div>
-                                        <div>
-                                            <input id="Radio33" type="radio" name="moneyPay" value="200">
-                                            <span>Nạp</span> <b>200$</b>&nbsp;&nbsp;&nbsp;&nbsp;<em>(+3200 Xu vào tài khoản)</em>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="col-sm-5">
-                                    <div class="form-horizontal" style="margin-top: 15px;">
-                                        <div class="text-error" id="errPaypal"></div>
-                                        <div class="form-group">
-                                            <div class="col-xs-12">
-                                                <input name="ctl00$ctl00$ctl00$ucPopupMoney$txtCaptchaPaypal" type="text" maxlength="4" id="ucPopupMoney_txtCaptchaPaypal" class="form-control alignleft" placeholder="Xác nhận" style="width:90px;">
-                                                
-<script type="text/javascript">
-    function createCaptcha() {
-        jQuery.ajax({
-            type: "POST",
-            url: "/Ajax/CreateCaptcha.aspx/CaptchaUrl",
-            data: '{}',
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            async: false,
-            success: function (data) {
-                if (data.d != '') {
-                    $('.imgCaptcha').attr('src', data.d);
-                }
-                else
-                    $('.imgCaptcha').attr('src', '/Image/captcha.jpg');
-            }
-        });
-    }
-</script>
-<div style="height: 30px; width: 140px; float: left; margin-left: 10px;">
-    <img src="style/userinfo/captcha.jpg" alt="captcha" class="imgCaptcha" height="30" width="80">
-    <div class="aorange" style="float: right; width: 60px; margin-top: 6px; padding-left: 5px;" onclick="return createCaptcha();">
-        Mã khác
-    </div>
-</div>
-
-
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-xs-12 line-h">
-                                                <a href="https://sharecode.vn/thong-tin-ca-nhan.htm#"></a>
-                                                <a onclick="return Check_Paypal();" id="ucPopupMoney_btnPaypal" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$ucPopupMoney$btnPaypal&#39;,&#39;&#39;)"><img src="style/userinfo/btn-paypal.png" alt="PayPal Checkout"></a>
-                                                <img src="style/userinfo/btn-paypal-2.png" alt="PayPal Checkout card" class="paypal-card">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12">
-                                    <div class="bg-pop">
-                                        <ul class="introduce-list">
-                                            <li>Xem lịch sử nạp tiền của bạn <a href="https://sharecode.vn/lich-su-giao-dich.htm" class="aorange" target="_blank">tại đây</a> (Hoặc) <a href="https://sharecode.vn/cau-hoi/huong-dan-nap-tien-vao-tai-khoan-8.htm#paypal" class="aorange" target="_blank">Hướng dẫn nạp tiền qua Paypal</a>.</li>
-                                            <li>Hotline hỗ trợ giao dịch 24/7: <a class="bold" href="tel:+84981282756" title="Click gọi ngay!">0981.282.756</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            
-</div>
-                        </div>
-                        <div role="tabpanel" class="row tab-pane fade" id="mnSendATM">
-                            <div class="col-sm-4">
-                                <br>
-                                <div class="clear">
-                                    <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-vcb.png">
-                                    </div>
-                                    <div style="float: left;">
-                                        <strong class="green">VIETCOMBANK</strong><br>
-                                        0451000272261<br>
-                                        CN Thành Công - Hà Nội
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-sm-4">
-                                <br>
-                                <div class="clear">
-                                    <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-bidv.png">
-                                    </div>
-                                    <div style="float: left;">
-                                        <strong class="green">BIDV</strong><br>
-                                        46610000592052<br>
-                                        CN Bắc Hưng Yên
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-sm-4">
-                                <br>
-                                <div class="clear">
-                                    <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-vtb.png">
-                                    </div>
-                                    <div style="float: left;">
-                                        <strong class="green">VIETTINBANK</strong><br>
-                                        108868647721<br>
-                                        CN Mỹ Hào - Hưng Yên
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-sm-4">
-                                <br>
-                                <div class="clear">
-                                    <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-scb.png">
-                                    </div>
-                                    <div style="float: left;">
-                                        <strong class="green">SACOMBANK</strong><br>
-                                        030046936562<br>
-                                        CN Yên Mỹ - Hưng Yên
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-sm-4">
-                                <br>
-                                <div class="clear">
-                                    <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-tech.png">
-                                    </div>
-                                    <div style="float: left;">
-                                        <strong class="green">TECHCOMBANK</strong><br>
-                                        19031509002014<br>
-                                        CN Yên Mỹ - Hưng Yên
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-sm-4">
-                                <br>
-                                <div class="clear">
-                                    <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-acb.png">
-                                    </div>
-                                    <div style="float: left;">
-                                        <strong class="green">Á CHÂU</strong><br>
-                                        1115077<br>
-                                        CN Hưng Yên
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-sm-4">
-                                <br>
-                                <div class="clear">
-                                    <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-tpb.png">
-                                    </div>
-                                    <div style="float: left;">
-                                        <strong class="green">TPBANK</strong><br>
-                                        00072413001<br>
-                                        CN Duy Tân - Hà Nội
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-sm-4">
-                                <br>
-                                <div class="clear">
-                                    <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-mb.png">
-                                    </div>
-                                    <div style="float: left;">
-                                        <strong class="green">MBBANK</strong><br>
-                                        7420104067004<br>
-                                        CN Phố Nối - Hưng Yên
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-sm-4">
-                                <br>
-                                <div class="clear">
-                                    <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-agri.png">
-                                    </div>
-                                    <div style="float: left;">
-                                        <strong class="green">AGRIBANK</strong><br>
-                                        2404205154592<br>
-                                        CN Yên Mỹ - Hưng Yên
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-sm-4">
-                                <br>
-                                <div class="clear">
-                                    <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-vp.png">
-                                    </div>
-                                    <div style="float: left;">
-                                        <strong class="green">VPBANK</strong><br>
-                                        158657902<br>
-                                        CN Phố Nối - Hưng Yên
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-sm-4">
-                                <br>
-                                <div class="clear">
-                                    <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-shb.png">
-                                    </div>
-                                    <div style="float: left;">
-                                        <strong class="green">SHB</strong><br>
-                                        1011995323<br>
-                                        CN Hưng Yên
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-sm-4">
-                                <br>
-                                <div class="clear">
-                                    <div style="float: left; margin: 2px 10px 0 0;">
-                                        <img src="style/userinfo/bank-mar.png">
-                                    </div>
-                                    <div style="float: left;">
-                                        <strong class="green">MARITIME BANK</strong><br>
-                                        41001010905391<br>
-                                        CN Hưng Yên
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-xs-12">
-                                <br>
-                                <br>
-                                <div class="text-center">
-                                    <strong>Chủ tài khoản:</strong> Đinh Văn Hiển<br>
-                                    <strong style="line-height: 30px;">Nội dung chuyển khoản: <span class="orange" style="font-size: 30px; line-height: 23px;">sha <span id="ucPopupMoney_moneyID">299971</span></span></strong><br>
-                                    <em>(Trong đó <strong id="ucPopupMoney_moneyID2">299971</strong> là Mã thành viên của bạn, Hệ thống sẽ biết và cộng tiền cho bạn)</em>
-                                </div>
-                                <br>
-                            </div>
-
-                            <div class="col-xs-12">
-                                <div class="bg-pop">
-                                    <ul class="introduce-list">
-                                        <li>Bạn có thể sử dụng nội dung CK là <strong>sha email_tai_khoan_cua_ban</strong> để thay thế nếu ko biết Mã người dùng.</li>
-                                        <li>Hệ thống sẽ dựa vào nội dung chuyển khoản của bạn nhập để cộng xu cho bạn ngay sau khi nhận được tiền, trường hợp sau 10 phút bạn không nhận được tiền vui lòng gọi tới số hotline <a class="bold" href="tel:+84981282756" title="Click gọi ngay!">0981.282.756</a>.</li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                         <div role="tabpanel" class="row tab-pane fade" id="mnVisa">
-                            <div class="text-center line-h" style="margin-top:10px">
-                            Hỗ trợ Thanh toán bằng thẻ tín dụng ghi nợ quốc tế
-                            <br>
-                            <img src="style/userinfo/credit-card.png"></div>
-                                    <div id="ucPopupMoney_Panel4" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ucPopupMoney_btnVISA&#39;)">
-	
-                                        <div class="col-sm-7">
-                                            <div class="bg-pop" id="boxMoneyVISA">
-                                                <div class="note"><b class="green">SỐ TIỀN NẠP</b></div>
-                                                <div>
-                                                    <input id="Radio543" type="radio" name="moneyVISA" value="20000">
-                                                    <span>Nạp</span> <b>20.000 đ</b>
-                                                </div>
-                                                <div>
-                                                    <input id="Radio553" type="radio" name="moneyVISA" value="50000">
-                                                    <span>Nạp</span> <b>50.000 đ</b>
-                                                </div>
-                                                <div>
-                                                    <input id="Radio563" type="radio" name="moneyVISA" value="100000" checked="">
-                                                    <span>Nạp</span> <b>100.000 đ</b>
-                                                </div>
-                                                <div>
-                                                    <input id="Radio573" type="radio" name="moneyVISA" value="200000">
-                                                    <span>Nạp</span> <b>200.000 đ</b>
-                                                </div>
-                                                <div>
-                                                    <input id="Radio583" type="radio" name="moneyVISA" value="500000">
-                                                    <span>Nạp</span> <b>500.000 đ</b>
-                                                </div>
-                                                <div>
-                                                    <input id="Radio373" type="radio" name="moneyVISA" value="1000000">
-                                                    <span>Nạp</span> <b>1.000.000 đ</b>
-                                                </div>
-                                                <div class="div-number">
-                                                    <input id="Radio403" type="radio" name="moneyVISA" value="0">
-                                                    <span>Tự nhập số tiền muốn nạp </span><input id="txtnumberVISA" name="numberVISA" class="number-money" type="number" onclick="$(&#39;#Radio403&#39;).prop(&#39;checked&#39;, true);"> <b>.000đ</b>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-sm-5">
-                                            <div class="form-horizontal" style="margin-top: 15px;">
-                                                <div class="text-error" id="errVISA"></div>
-                                                <div class="form-group">
-                                                    <div class="col-xs-12">
-                                                        <input name="ctl00$ctl00$ctl00$ucPopupMoney$txtCaptchaVISA" type="text" maxlength="4" id="ucPopupMoney_txtCaptchaVISA" class="form-control alignleft" placeholder="Xác nhận" style="width:90px;">
-                                                        
-<script type="text/javascript">
-    function createCaptcha() {
-        jQuery.ajax({
-            type: "POST",
-            url: "/Ajax/CreateCaptcha.aspx/CaptchaUrl",
-            data: '{}',
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            async: false,
-            success: function (data) {
-                if (data.d != '') {
-                    $('.imgCaptcha').attr('src', data.d);
-                }
-                else
-                    $('.imgCaptcha').attr('src', '/Image/captcha.jpg');
-            }
-        });
-    }
-</script>
-<div style="height: 30px; width: 140px; float: left; margin-left: 10px;">
-    <img src="style/userinfo/captcha.jpg" alt="captcha" class="imgCaptcha" height="30" width="80">
-    <div class="aorange" style="float: right; width: 60px; margin-top: 6px; padding-left: 5px;" onclick="return createCaptcha();">
-        Mã khác
-    </div>
-</div>
-
-
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="col-xs-12 line-h">
-                                                        <a onclick="return Check_VISA();" id="ucPopupMoney_btnVISA" class="button-orange" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$ucPopupMoney$btnVISA&#39;,&#39;&#39;)">NẠP TIỀN VÀO TÀI KHOẢN &nbsp;<i class="fa fa-money fa-lg" aria-hidden="true"></i></a>
-                                                    </div>
-                                                </div>
-                                                <br>
-                                                <b>Chú ý:</b> Phí nạp tiền là <b>6.000đ + 3% GD</b>
-                                                <br><em class="txt-colo">VD: Nạp 100.000đ thì phí nạp tiền là (6.000đ + 3.000đ) = 9.000đ</em>
-                                                <br>
-                                                <br>
-                                                <span class="orange">Khuyến khích sử dụng các hình thức 1, 2, 3</span>
-                                            </div>
-                                        </div>
-                                    
-</div>
-                                </div>
-                    </div>
-                </div>
-            </div>
-            <div class="line_orn"></div>
-            <div class="modal-footer">
-                <p class="text-center green bold line-h">
-                    <img src="style/userinfo/secure.png" height="40" alt="secure">
-                    &nbsp;Chứng nhận giao dịch an toàn!
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
 
                         <a href="https://sharecode.vn/thanh-vien-upload.htm" class="button-orange" title="Upload code kiếm tiền"><i class="fa fa-cloud-upload fa-lg" aria-hidden="true"></i>&nbsp; TẢI LÊN</a>
                         
@@ -1432,19 +595,26 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
     </div>
     <br>
     <br>
+    <c:if test = "${actiontype eq 'edit' }" >
+    	<c:set var = "actionlink" value = "/user-info" />
+    </c:if>
+    <c:if test = "${actiontype eq 'create' }">
+    	<c:set var = "actionlink" value = "/register" />
+    </c:if>
+    <form id = "userinfo-form" action="<c:url value = "${actionlink }"/> " method = "post" enctype="multipart/form-data" >
     <div id="mainbody_contentbody_contentpage_panDefaultButton" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;mainbody_contentbody_contentpage_btnUpdate&#39;)">
 	
         <div class="form-horizontal">
             <div class="form-group">
                 <label class="col-sm-5 control-label">Email đăng kí</label>
                 <div class="col-sm-5  pro-top7">
-                    <b id="mainbody_contentbody_contentpage_updateEmail" class="green">meo9xit@gmail.com</b>
+                    <b id="mainbody_contentbody_contentpage_updateEmail" class="green">${loginedUser.email }</b>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-5 control-label">Họ và tên<span class="text-error">*</span></label>
                 <div class="col-sm-4">
-                    <input name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$updateFullName" type="text" id="mainbody_contentbody_contentpage_updateFullName" maxlength="40" placeholder="VD: Trần Thanh Tâm" class="form-control" value="Hà Duy Hưng">
+                    <input name="name" type="text" id="mainbody_contentbody_contentpage_updateFullName" maxlength="40" placeholder="VD: Trần Thanh Tâm" class="form-control" value="Hà Duy Hưng">
                 </div>
                 <div class="col-sm-3">
                     <div id="updateFullName_error" class="text-error pro-top7">&nbsp;</div>
@@ -1453,7 +623,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
             <div class="form-group">
                 <label class="col-sm-5 control-label">Tên hiển thị<span class="text-error">*</span></label>
                 <div class="col-sm-4">
-                    <input name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$updateUserName" type="text" id="mainbody_contentbody_contentpage_updateUserName" placeholder="VD: ThanhTam92" maxlength="40" class="form-control" value="meo9xit">
+                    <input name="username" type="text" id="mainbody_contentbody_contentpage_updateUserName" placeholder="VD: ThanhTam92" maxlength="40" class="form-control" value="meo9xit">
                 </div>
                 <div class="col-sm-3">
                     <div id="updateUserName_error" class="text-error pro-top7">&nbsp;</div>
@@ -1466,10 +636,17 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                 </div>
                 <div id="mainbody_contentbody_contentpage_updatePhone_error" class="text-error col-sm-4 pro-top7">&nbsp;</div>
             </div>
+            <c:if test = "${actiontype eq 'edit' }" >
             <div class="form-group">
                 <label class="col-sm-5 control-label">Ảnh đại diện</label>
                 <div class="col-sm-5">
                     <img src="style/userinfo/avanta2.png" id="mainbody_contentbody_contentpage_Avanta" class="pro-img" width="90" height="90" alt="meo9xit - Hà Duy Hưng" title="Hà Duy Hưng">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-5 control-label">Chọn ảnh khác</label>
+                <div class="col-sm-5  pro-top7">
+                    <input type="file" name="avatar" id="mainbody_contentbody_contentpage_fulImage" title="Bạn hãy chọn ảnh ở đây" onchange="javascript:ImageURL();" />
                 </div>
             </div>
             <div class="form-group">
@@ -1480,12 +657,27 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 
             <div class="form-group line-h">
                 <div class="col-sm-offset-5 col-sm-6">
-                    <a onclick="return validate_update();" id="mainbody_contentbody_contentpage_btnUpdate" class="button-orange" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnUpdate&#39;,&#39;&#39;)"><i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp; Cập nhật thông tin</a>
+                    <a onclick="performsubmit();" id="mainbody_contentbody_contentpage_btnUpdate" class="button-orange" ><i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp; Cập nhật thông tin</a>
                 </div>
             </div>
+            </c:if>
+            <c:if test = "${actiontype eq 'create' }" >
+            	<div class="form-group line-h">
+                	<div class="col-sm-offset-5 col-sm-6">
+                    	<a onclick="performsubmit();" id="mainbody_contentbody_contentpage_btnUpdate" class="button-orange" ><i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp; Đăng ký</a>
+                	</div>
+            	</div>
+            </c:if>
         </div>
     
 </div>
+</form>
+<script type="text/javascript">
+function performsubmit() {
+	if(validate_update())
+	  	document.getElementById("userinfo-form").submit();
+	}
+</script>
     <br>
     <br>
 
@@ -1501,43 +693,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
     <div class="pro-right">
         <h2 id="mainbody_contentbody_ucProfile_FullName" class="pro-title green bold">Hà Duy Hưng</h2>
         <div class="line"></div>
-        <div class="pro-money">
-            <div>Tài khoản&nbsp;<strong id="mainbody_contentbody_ucProfile_Money">0</strong> Xu</div>
-            <div>Tạm giữ&nbsp;&nbsp;&nbsp;&nbsp;<span class="aorange"><strong id="mainbody_contentbody_ucProfile_MoneyKeep" title="Số XU đang bị tạm giữ cho giao dịch code vừa được bán">0</strong> Xu</span> <i id="mainbody_contentbody_ucProfile_InfoKeep" class="fa fa-info-circle" aria-hidden="true" title="Số XU đang bị tạm giữ cho giao dịch code vừa được bán"></i></div>
-             <div>Khả dụng&nbsp;&nbsp;<span class="agreen"><strong id="mainbody_contentbody_ucProfile_MoneyAllow" title="Số XU tối đa có thể sử dụng để mua code (hoặc) rút tiền">0</strong> Xu</span> <i title="Số XU tối đa có thể sử dụng để mua code (hoặc) rút tiền" class="fa fa-info-circle" aria-hidden="true"></i></div>
-            
-        </div>
     </div>
     <div class="pro-link clear pro-link-first">
         <a href="https://sharecode.vn/thong-tin-ca-nhan.htm" class="aorange"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Cài đặt TT</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://sharecode.vn/thanh-vien/meo9xit-299971.htm" id="mainbody_contentbody_ucProfile_LinkPageUser" class="aorange"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;Trang cá nhân</a>
-    </div>
-     <div class="pro-link">
-        <a href="https://sharecode.vn/bao-code-trung.htm" class="aorange"><i class="fa fa-clipboard" aria-hidden="true"></i>&nbsp;Báo bản quyền </a>&nbsp;&nbsp;
-        <a href="https://sharecode.vn/binh-luan.htm" class="aorange pro-line14"><i class="fa fa-comment" aria-hidden="true"></i>&nbsp;Bình luận <span id="mainbody_contentbody_ucProfile_CmtCount" class="badge bagde-green badge-link">0</span></a>
     </div>
     <ul class="pro-list">
         <li id="mnCodeUpload">
-            <a href="https://sharecode.vn/code-upload-cua-toi.htm">Code tải lên (<strong id="mainbody_contentbody_ucProfile_UploadCount">0</strong>)</a>
-        </li>
-        <li id="mnCodeSave">
-            <a href="https://sharecode.vn/code-da-luu.htm">Code đã lưu (<strong id="mainbody_contentbody_ucProfile_SaveCount">0</strong>)</a>
-        </li>
-         <li id="mnCodeDown">
-            <a href="https://sharecode.vn/code-download.htm">Code đã mua (<strong id="mainbody_contentbody_ucProfile_BuyCount">0</strong>)</a>
-        </li>
-        <li id="mnCodeSell">
-            <a href="https://sharecode.vn/doanh-thu-ban-code.htm">Doanh thu bán code</a>
-        </li>
-       
-        <li id="mnAddMoney">
-            <a href="https://sharecode.vn/lich-su-giao-dich.htm">Lịch sử nạp tiền</a>
-        </li>
-        <li id="mnGetMoney">
-            <a href="https://sharecode.vn/rut-tien.htm">Rút tiền</a>
-        </li>
-          <li id="Li1">
-            <a href="https://me.sharecode.vn/" target="_blank">Quản lý Domain - Hosting</a>
+            <a href="https://sharecode.vn/code-upload-cua-toi.htm">Tài liệu đăng tải(<strong id="mainbody_contentbody_ucProfile_UploadCount">0</strong>)</a>
         </li>
     </ul>
 </div>

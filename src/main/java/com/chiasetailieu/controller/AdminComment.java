@@ -58,8 +58,10 @@ public class AdminComment extends HttpServlet {
 		request.getParameter("user_id"); // String doc_id =
 		request.getParameter("doc_id");
 
-		// YearMonth create_date = YearMonth.from(today.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
-		// YearMonth edit_date = YearMonth.from(today.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
+		// YearMonth create_date =
+		// YearMonth.from(today.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
+		// YearMonth edit_date =
+		// YearMonth.from(today.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
 
 		String content = request.getParameter("content");
 		Comment comment = new Comment();

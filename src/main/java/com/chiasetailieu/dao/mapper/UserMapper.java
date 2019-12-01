@@ -17,6 +17,8 @@ public class UserMapper implements GenericMapper<User> {
 			user.setUsername(rs.getString("user_name"));
 			user.setPassword(rs.getString("password"));
 			user.setRoleId(rs.getLong("role_id"));
+			user.setRealname(rs.getString("realname"));
+			user.setEmail(rs.getString("email"));
 			return user;
 		} catch (SQLException e) {
 			// TODO: handle exception

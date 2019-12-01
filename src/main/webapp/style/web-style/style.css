@@ -1,4 +1,4 @@
-﻿/*------------------------------------------------------------------
+/*------------------------------------------------------------------
 [Table of contents]
 
     faf8f1 xám nhạt
@@ -743,6 +743,7 @@ img.alignright {
 
             .nav-ontop #box-vertical-megamenus .vertical-menu-content .vertical-menu-list {
                 border-left: none;
+                display: none;
             }
 
             .nav-ontop #box-vertical-megamenus .vertical-menu-content .all-category {
@@ -1222,7 +1223,7 @@ span.notify-right {
     }
 
 .home .box-vertical-megamenus .vertical-menu-content {
-    display: block;
+    display: none;
 }
 
 .box-vertical-megamenus .vertical-menu-list {
@@ -1237,7 +1238,7 @@ span.notify-right {
     }
 
     .box-vertical-megamenus .vertical-menu-list li {
-        display: block;
+        display: none;
         line-height: 34px;
         margin-left: -1px;
         position: relative;
@@ -1302,7 +1303,7 @@ span.notify-right {
 
 .box-vertical-megamenus .vertical-menu-content ul li:hover .vertical-dropdown-menu {
     visibility: visible;
-    display: block;
+    display: none;
     height: auto;
     -webkit-transform: translate(0,0);
     -moz-transform: translate(0,0);

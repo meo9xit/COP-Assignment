@@ -11,7 +11,26 @@ public class User extends AbstractModel<User>{
 	private Long roleId;
 	private Role role;
 	private String realname;
-	private String phonenumber;
+	private String email;
+	private String avatar;
+	public String getAvatar() {
+		return avatar;
+	}
+	public void setAvatar(String avatar) {
+		this.avatar = avatar;
+	}
+	public String getRealname() {
+		return realname;
+	}
+	public void setRealname(String realname) {
+		this.realname = realname;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	private List<Document> documents;
 	
 	

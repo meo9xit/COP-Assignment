@@ -81,6 +81,8 @@ public class UploadController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		response.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("UTF-8");
 		try {
 	           String description = request.getParameter("docDescription");
 	           Long cateId = Long.parseLong(request.getParameter("cateId"));
@@ -129,7 +131,7 @@ public class UploadController extends HttpServlet {
 			            	   
 			            	   
 			            	   
-			                   String filePath = fullSavePath + File.separator + fileName;
+			                   String filePath = fullSavePath + fileName;
 			                   System.out.println("Write attachment to file: " + filePath);
 			                   String temp = filePath;
 			                   
@@ -150,7 +152,11 @@ public class UploadController extends HttpServlet {
 			               }
 		               } else { 
 		            	   request.setAttribute("message", "Website chỉ cho phép upload file MS Word hoặc PDF!");
-		            	   return;
+		            	   List<Category> categories = cateService.findAll();
+			           		List<SubCategory> subcates = subcateService.findAll();
+			           		request.setAttribute("categories", categories);
+			           		request.setAttribute("subcates", subcates);
+			           		request.getRequestDispatcher("/view/web/upload.jsp").forward(request, response);
 		               }
 	               }
 	           }
@@ -161,8 +167,11 @@ public class UploadController extends HttpServlet {
 	       } catch (Exception e) {
 	           e.printStackTrace();
 	           request.setAttribute("errorMessage", "Error: " + e.getMessage());
-	           RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/jsp/upload.jsp");
-	           dispatcher.forward(request, response);
+	           List<Category> categories = cateService.findAll();
+		   	   List<SubCategory> subcates = subcateService.findAll();
+		   	   request.setAttribute("categories", categories);
+		   	   request.setAttribute("subcates", subcates);
+		   	   request.getRequestDispatcher("/view/web/upload.jsp").forward(request, response);
 	       }
 	}
 	
@@ -178,9 +187,14 @@ public class UploadController extends HttpServlet {
 	               String clientFileName = s.substring(s.indexOf("=") + 2, s.length() - 1);
 	               clientFileName = clientFileName.replace("\\", "/");
 	               int i = clientFileName.lastIndexOf('/');
+	               int j = clientFileName.lastIndexOf('.');
+	               String pre = clientFileName.substring(i+1,j-1);
+	               Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+	               String post =  String.valueOf(timestamp.getTime());
+	               String filename = clientFileName.substring(i + 1);
 	               // file1.zip
 	               // file2.zip
-	               return clientFileName.substring(i + 1);
+	               return filename.replaceAll(pre, post);
 	           }
 	       }
 	       return null;
@@ -210,7 +224,7 @@ public class UploadController extends HttpServlet {
 	
 			// create the image
 			BufferedImage image = renderer.renderImage(0);
-			ImageIO.write(image, "jpg", new File( fullpath + File.separator + imgName ));
+			ImageIO.write(image, "jpg", new File( fullpath + imgName ));
 			document.close();
 		}
 		catch(IOException e) {

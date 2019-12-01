@@ -1369,7 +1369,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
         </a>
     </div>
     <div class="pro-right">
-        <h2 id="mainbody_contentbody_ucProfile_FullName" class="pro-title green bold">Hà Duy Hưng</h2>
+        <h2 id="mainbody_contentbody_ucProfile_FullName" class="pro-title green bold">${loginedUser.realname }</h2>
         <div class="line"></div>
         <div class="pro-money">
             <div>Tài khoản&nbsp;<strong id="mainbody_contentbody_ucProfile_Money">0</strong> Xu</div>
