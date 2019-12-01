@@ -59,6 +59,7 @@ public class TopViewController extends HttpServlet {
 		request.setAttribute("docs", docs);
 		request.setAttribute("topviewdocs", topview);
 		request.setAttribute("topdocs", topdownload );
+		request.setAttribute("title", "Tài liệu được xem nhiều nhất");
 		request.getRequestDispatcher("/view/web/search-cate.jsp").forward(request, response);
 	}
 

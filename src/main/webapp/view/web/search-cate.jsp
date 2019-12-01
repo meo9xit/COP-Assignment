@@ -6,22 +6,28 @@
 <!DOCTYPE html>
 <!-- saved from url=(0056)https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm -->
 <html lang="vi" xml:lang="vi" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
-	Thư viện tổng hợp mã nguồn website đẹp bằng WordPress
-</title><link rel="shortcut icon" href="https://sharecode.vn/assets/images/sharecode.ico" type="image/x-icon"><meta name="robots" content="noodp,index,follow"><meta name="revisit-after" content="1 days"><meta content="sharecode.vn" name="author"><meta content="Global" name="distribution"><meta content="sharecode.vn" name="copyright"><meta name="dc.creator" content="ShareCode"><meta name="generator" content="Sharecode.vn"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="twitter:card" value="summary"><meta property="og:site_name" content="Sharecode.vn"><link rel="stylesheet" type="text/css" href="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/font-awesome.min.css"><link rel="stylesheet" type="text/css" href="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/select2.min.css"><link rel="stylesheet" type="text/css" href="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/owl.carousel.css"><link rel="stylesheet" type="text/css" href="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/jquery-ui.min.css"><link rel="stylesheet" type="text/css" href="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/animate.css"><link rel="stylesheet" type="text/css" href="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/reset.css"><link rel="stylesheet" type="text/css" href="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/style.css">
+	${title }
+</title><link rel="shortcut icon" href="https://sharecode.vn/assets/images/sharecode.ico" type="image/x-icon"><meta name="robots" content="noodp,index,follow"><meta name="revisit-after" content="1 days"><meta content="sharecode.vn" name="author"><meta content="Global" name="distribution"><meta content="sharecode.vn" name="copyright"><meta name="dc.creator" content="ShareCode"><meta name="generator" content="Sharecode.vn"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="twitter:card" value="summary"><meta property="og:site_name" content="Sharecode.vn"><link rel="stylesheet" type="text/css" href="style/search-cate/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="style/search-cate/select2.min.css">
+<link rel="stylesheet" type="text/css" href="style/search-cate/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="style/search-cate/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="style/search-cate/animate.css">
+<link rel="stylesheet" type="text/css" href="style/search-cate/reset.css"><link rel="stylesheet" type="text/css" href="style/search-cate/style.css">
     
     
     <meta property="og:image" content="https://sharecode.vn/assets/images/logo_sharecode.png">
     <meta property="og:type" content="website">
 
 
-<link rel="stylesheet" type="text/css" href="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/responsive.css"><link href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm" rel="canonical"><meta name="keywords" content="WordPress template, WordPress tiếng việt, website WordPress, mã nguồn WordPress, code WordPress"><meta name="description" content="Thư viện tổng hợp mã nguồn website đẹp bằng WordPress, Hướng dẫn bạn cách cài đặt module &amp; sử dụng trong WordPress"><meta property="og:url" content="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm"><meta property="og:title" content="Danh mục WordPress"><meta property="og:description" content="Thư viện tổng hợp mã nguồn website đẹp bằng WordPress, Hướng dẫn bạn cách cài đặt module &amp; sử dụng trong WordPress"><style type="text/css"></style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+<link rel="stylesheet" type="text/css" href="style/search-cate/responsive.css"><link href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm" rel="canonical"><meta name="keywords" content="WordPress template, WordPress tiếng việt, website WordPress, mã nguồn WordPress, code WordPress"><meta name="description" content="Thư viện tổng hợp mã nguồn website đẹp bằng WordPress, Hướng dẫn bạn cách cài đặt module &amp; sử dụng trong WordPress"><meta property="og:url" content="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm"><meta property="og:title" content="Danh mục WordPress"><meta property="og:description" content="Thư viện tổng hợp mã nguồn website đẹp bằng WordPress, Hướng dẫn bạn cách cài đặt module &amp; sử dụng trong WordPress"><style type="text/css"></style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
 .fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 .fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
 <body class="category-page">
     
-    <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/xd_arbiter.html" style="border: none;"></iframe></div><div></div></div></div>
+    <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="style/search-cate/xd_arbiter.html" style="border: none;"></iframe></div><div></div></div></div>
     
-    <script async="" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/analytics.js.tải xuống"></script><script src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/sdk.js.tải xuống" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/sdk.js(1).tải xuống"></script><script>
+    <script async="" src="style/search-cate/analytics.js.tải xuống"></script><script src="style/search-cate/sdk.js.tải xuống" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="style/search-cate/sdk.js(1).tải xuống"></script><script>
         window.fbAsyncInit = function () {
             FB.init({
                 appId: '1938824166400762',
@@ -65,11 +71,11 @@ function __doPostBack(eventTarget, eventArgument) {
 </script>
 
 
-<script src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/WebResource.axd" type="text/javascript"></script>
+<script src="style/search-cate/WebResource.axd" type="text/javascript"></script>
 
 
-<script src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/ScriptResource.axd" type="text/javascript"></script>
-<script src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/ScriptResource(1).axd" type="text/javascript"></script>
+<script src="style/search-cate/ScriptResource.axd" type="text/javascript"></script>
+<script src="style/search-cate/ScriptResource(1).axd" type="text/javascript"></script>
 <div class="aspNetHidden">
 
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3989C74E">
@@ -88,18 +94,18 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                     <div class="item next left" style="background: #86bd3b;">
                         
                         <a data-toggle="modal" data-target="#LoginForm" onclick="createCaptcha();" title="UPLOAD source code KIẾM TIỀN cùng Sharecode.vn">
-                            <img src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/code-hay-upload-kiem-tien.jpg">
+                            <img src="style/search-cate/code-hay-upload-kiem-tien.jpg">
                         </a>
                         
                     </div>
                      <div class="item" style="background: #2175ba;">
                         <a href="https://sharecode.vn/kien-thuc-lap-trinh/dich-vu-thiet-ke-website-chuyen-nghiep-voi-gia-cuc-re-va-nhieu-uu-dai-tai-sharecodevn-880.htm" title="Dịch vụ thiết kế website" target="_blank">
-                            <img src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/thiet-ke-website.jpg">
+                            <img src="style/search-cate/thiet-ke-website.jpg">
                         </a>
                     </div>
                    <div class="item active left" style="background: #34a5cd;">
                                 <a href="https://sharecode.vn/vps-may-chu-ao.htm" title="Đăng kí CLOULD VPS NGAY!">
-                                <img src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/share-code-clould-vps.jpg"> </a>
+                                <img src="style/search-cate/share-code-clould-vps.jpg"> </a>
                             </div>
                           
                    
@@ -112,17 +118,33 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                 <div class="container">                    
                     <div class="nav-top-links">
                         <a class="first-item" href="tel:+84981282756" title="Click gọi ngay!">
-                            <img alt="hotline" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/phone.png">0981.282.756</a>
+                            <img alt="hotline" src="style/search-cate/phone.png">0981.282.756</a>
                         <a href="mailto:sharecode.contact@gmail.com" title="Click để gửi email!">
-                            <img alt="email sharecode" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/email.png">Sharecode.contact@gmail.com</a>
+                            <img alt="email sharecode" src="style/search-cate/email.png">Sharecode.contact@gmail.com</a>
                         <a href="https://sharecode.vn/kien-thuc-lap-trinh.htm">Kiến thức lập trình</a>
                         <a href="https://sharecode.vn/su-kien.htm">Sự kiện</a>
                     </div>
+                    <c:if test = ${empty loginedUser }>
                     <div id="LoginBox" class="support-link">
-                        <a data-toggle="modal" data-target="#LoginForm" onclick="createCaptcha();" role="button">Đăng nhập</a>
+                        <a href="<c:url value = "/login"/>" role="button">Đăng nhập</a>
                         <a href="https://sharecode.vn/dang-ki-tai-khoan.htm">Đăng kí</a>
                     </div>
-                    
+                    </c:if>
+                    <c:if test = ${not empty loginedUser }>
+                    	<div id="ExitBox" class="support-link">
+                        	<a id="btnExit" class="aorange" href="<c:url value ="/logout"/>">[Thoát]</a>
+                    	</div>
+                    	<div id="user-info-top" class="user-info pull-right">
+                        <div id="AcInfo" class="dropdown">
+                            <a href="/code-upload-cua-toi.htm" id="UserName2" class="current-open" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Xin chào, ${loginedUser.username }"><span>Xin chào, </span><span id="UserName"><b>${loginedUser.username }</b></span></a>
+                            <ul class="dropdown-menu mega_dropdown" role="menu">
+                                <li><a href="<c:url value = "/doc-manage"/>"><i class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp;Tài liệu tải lên</a></li>
+                                <li><a href="<c:url value = "/user-info"/>" class="green"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Cài đặt thông tin</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    </c:if>
                     
                 </div>
             </div>
@@ -130,14 +152,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 col-md-3 logo">
                         <a href="https://sharecode.vn/">
-                            <img alt="Trang chủ sharecode.vn" title="Sharecode.vn" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/logo.png"></a>
+                            <img alt="Trang chủ sharecode.vn" title="Sharecode.vn" src="style/search-cate/logo.png"></a>
                     </div>
                     <div class="col-xs-7 col-sm-7 col-md-6 header-search-box">
                         
                     </div>
                     <div class="col-xs-5 col-sm-2 col-md-3 shopping-cart-box btn-align">
                         
-                        <a data-toggle="modal" data-target="#LoginForm" onclick="createCaptcha();" role="button" class="button-green" title="Nạp tiền vào tài khoản"><i class="fa fa-money fa-lg" aria-hidden="true"></i>&nbsp; NẠP XU</a>&nbsp;&nbsp;
                         <a data-toggle="modal" data-target="#LoginForm" onclick="createCaptcha();" role="button" class="button-orange" title="Tặng thêm 5 Point cho mỗi Upload"><i class="fa fa-cloud-upload fa-lg" aria-hidden="true"></i>&nbsp; TẢI LÊN</a>
                         
                     </div>
@@ -154,87 +175,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 </h4>
                                 <div class="vertical-menu-content is-home">
                                     <ul class="vertical-menu-list">
-                                        <li>
-                                            <a class="parent" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm#">
-                                                <img class="icon-menu" alt="Thể loại code" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/2.png">PHÂN LOẠI CODE</a>
-                                            <div class="vertical-dropdown-menu" style="width: 902px;">
-                                                <div class="vertical-groups col-sm-6 col-md-4">
-                                                    <div class="mega-group col-sm-12">
-                                                        <span class="mega-group-header"><span>THỂ LOẠI CODE</span></span>
-                                                        <ul class="group-link-default">
-                                                            
-                                                                    <li><a class="bold" href="https://sharecode.vn/the-loai-source-code/website-1.htm">Website</a></li>
-                                                                
-                                                                    <li><a class="bold" href="https://sharecode.vn/the-loai-source-code/phan-mem-ung-dung-2.htm">Phần mềm - Ứng dụng</a></li>
-                                                                
-                                                                    <li><a class="bold" href="https://sharecode.vn/the-loai-source-code/game-3.htm">Game</a></li>
-                                                                
-                                                                    <li><a class="bold" href="https://sharecode.vn/the-loai-source-code/khac-4.htm">Khác</a></li>
-                                                                
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-groups col-sm-6 col-md-5">
-                                                    <div class="mega-group col-sm-12">
-                                                        <span class="mega-group-header"><span>SOURCE CODE</span></span>
-                                                        <ul class="group-link-default">
-                                                            <li><a href="https://sharecode.vn/code-chat-luong.htm"><strong>Code chất lượng</strong> (&gt;= 100 Xu)</a></li>
-                                                            <li><a href="https://sharecode.vn/code-tham-khao.htm"><strong>Code tham khảo</strong> (2 Xu - 99 Xu)</a></li>
-                                                            <li><a href="https://sharecode.vn/code-mien-phi.htm"><strong>Code miễn phí</strong> (0 Xu)</a></li>
-
-
-                                                        </ul>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                                <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/android-15.htm">
-                                                    <img class="icon-menu" alt="Android" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/3.png">Android</a></li>
-                                            
-                                                <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/ios-23.htm">
-                                                    <img class="icon-menu" alt="iOS" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/3.png">iOS</a></li>
-                                            
-                                                <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/windows-phone-26.htm">
-                                                    <img class="icon-menu" alt="Windows phone" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/3.png">Windows phone</a></li>
-                                            
-                                                <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/php-mysql-21.htm">
-                                                    <img class="icon-menu" alt="PHP &amp; MySQL" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/3.png">PHP &amp; MySQL</a></li>
-                                            
-                                                <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">
-                                                    <img class="icon-menu" alt="WordPress" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/3.png">WordPress</a></li>
-                                            
-                                                <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/joomla-28.htm">
-                                                    <img class="icon-menu" alt="Joomla" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/3.png">Joomla</a></li>
-                                            
-                                                <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-17.htm">
-                                                    <img class="icon-menu" alt="Visual C#" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/3.png">Visual C#</a></li>
-                                            
-                                                <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/aspaspnet-16.htm">
-                                                    <img class="icon-menu" alt="Asp/Asp.Net" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/3.png">Asp/Asp.Net</a></li>
-                                            
-                                                <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/javajsp-20.htm">
-                                                    <img class="icon-menu" alt="Java/JSP" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/3.png">Java/JSP</a></li>
-                                            
-                                                <li class=""><a href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-basic-19.htm">
-                                                    <img class="icon-menu" alt="Visual Basic" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/3.png">Visual Basic</a></li>
-                                            
-                                                <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/cocos2d-24.htm">
-                                                    <img class="icon-menu" alt="Cocos2D" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/3.png">Cocos2D</a></li>
-                                            
-                                                <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/unity-27.htm">
-                                                    <img class="icon-menu" alt="Unity" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/3.png">Unity</a></li>
-                                            
-                                                <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-18.htm">
-                                                    <img class="icon-menu" alt="Visual C++" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/3.png">Visual C++</a></li>
-                                            
-                                                <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/html-template-25.htm">
-                                                    <img class="icon-menu" alt="Html &amp; Template" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/3.png">Html &amp; Template</a></li>
-                                            
-                                                <li class="cat-link-orther"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/khac-22.htm">
-                                                    <img class="icon-menu" alt="Khác" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/3.png">Khác</a></li>
-                                            
+                                        <c:forEach var = "category" items="${cates }">
+                                                <li class=""><a href="<c:url value = "/post"><c:param name = "id" value = "${category.categoryID }"/></c:url>">
+                                                    <img class="icon-menu" alt="${category.categoryName }" src="style/search-cate/3.png">${category.categoryName }</a></li>
+                                        </c:forEach>    
+                                                
                                     </ul>
                                     <div class="all-category"><span class="open-cate">Xem tất cả</span></div>
                                 </div>
@@ -256,20 +201,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                             <li id="mncodeok" title="Code chất lượng (&gt;= 100 Xu)"><a href="https://sharecode.vn/code-chat-luong.htm">Code chất lượng <span class="notify notify-right"></span></a></li>
                                             <li id="mncode" title="Code tham khảo (2 Xu - 99 Xu)"><a href="https://sharecode.vn/code-tham-khao.htm">Code tham khảo</a></li>
                                             <li id="mncodefree" title="Code miễn phí (0 Xu)"><a href="https://sharecode.vn/code-mien-phi.htm">Code miễn phí</a></li>
-                                            <li id="mndomain" class="dropdown">
-                                                <a href="https://sharecode.vn/hosting-ssd.htm" class="dropdown-toggle">Tên miền - Hosting <span class="notify notify-right"></span></a>
-                                                <ul class="dropdown-menu container-fluid">
-                                                    <li class="block-container">
-                                                        <ul class="block">
-                                                            <li class="link_container"><a href="https://sharecode.vn/dang-ki-ten-mien.htm">Đăng kí tên miền</a></li>
-                                                            <li class="link_container"><a href="https://sharecode.vn/hosting-ssd.htm">Hosting SSD</a></li>
-                                                            <li class="link_container"><a href="https://sharecode.vn/vps-may-chu-ao.htm">Clould VPS</a></li>
-                                                            <li class="link_container"><a href="https://sharecode.vn/email-server.htm">Email server</a></li>
-                                                            <li class="link_container"><a href="https://sharecode.vn/chung-thuc-ssl.htm">Chứng thực SSL</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -280,43 +211,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                     <div class="form-inline search-h">
                             <div id="regPanel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnSearch&#39;)">
 	
-                                <div class="form-group form-category">
-                                    <input type="hidden" name="ctl00$ctl00$ctl00$hdLangFilter" id="hdLangFilter">
-                                    <select class="select-category select2-hidden-accessible" id="slSearch" tabindex="-1" aria-hidden="true">
-                                        <option value="0">TẤT CẢ CODE</option>
-                                        
-                                                <option value="15">Android</option>
-                                            
-                                                <option value="23">iOS</option>
-                                            
-                                                <option value="26">Windows phone</option>
-                                            
-                                                <option value="21">PHP &amp; MySQL</option>
-                                            
-                                                <option value="29">WordPress</option>
-                                            
-                                                <option value="28">Joomla</option>
-                                            
-                                                <option value="17">Visual C#</option>
-                                            
-                                                <option value="16">Asp/Asp.Net</option>
-                                            
-                                                <option value="20">Java/JSP</option>
-                                            
-                                                <option value="19">Visual Basic</option>
-                                            
-                                                <option value="24">Cocos2D</option>
-                                            
-                                                <option value="27">Unity</option>
-                                            
-                                                <option value="18">Visual C++</option>
-                                            
-                                                <option value="25">Html &amp; Template</option>
-                                            
-                                                <option value="22">Khác</option>
-                                            
-                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 127px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-slSearch-container"><span class="select2-selection__rendered" id="select2-slSearch-container" title="TẤT CẢ CODE">TẤT CẢ CODE</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                                </div>
                                 <div class="form-group input-serach">
                                     <input name="ctl00$ctl00$ctl00$txtSearch" type="text" id="txtSearch" class="txt-search txt-auto ui-autocomplete-input" placeholder="Nhập Từ khóa (or) Mã code" autocomplete="off">
                                 </div>
@@ -327,13 +221,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                     <div id="user-info-opntop">
                     <div id="user-info-top" class="user-info pull-right">
                         
-                        <div id="AcLogin" class="dropdown">
-                            <a class="current-open" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="https://sharecode.vn/code-upload-cua-toi.htm"><span></span></a>
-                            <ul class="dropdown-menu mega_dropdown" role="menu">
-                                <li><a data-toggle="modal" data-target="#LoginForm" onclick="createCaptcha();" role="button"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;&nbsp;Đăng nhập</a></li>
-                                <li><a href="https://sharecode.vn/dang-ki-tai-khoan.htm"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Đăng kí</a></li>
-                            </ul>
-                        </div>
                     </div></div>
                     
                 </div>
@@ -472,7 +359,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
     }
 </script>
 <div style="height: 30px; width: 140px; float: left; margin-left: 10px;">
-    <img src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/captcha.jpg" alt="captcha" class="imgCaptcha" height="30" width="80">
+    <img src="style/search-cate/captcha.jpg" alt="captcha" class="imgCaptcha" height="30" width="80">
     <div class="aorange" style="float: right; width: 60px; margin-top: 6px; padding-left: 5px;" onclick="return createCaptcha();">
         Mã khác
     </div>
@@ -546,21 +433,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
             <a id="mainbody_contentbody_contentpage_bntViewDetail" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$bntViewDetail&#39;,&#39;&#39;)"></a>
             <div id="view-product-list" class="view-product-list">
                 <div class="page-heading3">&nbsp;</div>
-                 <span class="box-sort">
-                SẮP XẾP &nbsp;
-                <a id="mainbody_contentbody_contentpage_btnSortNew" class="btn-sort selected" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnSortNew&#39;,&#39;&#39;)">Mới nhất</a>
-                <a id="mainbody_contentbody_contentpage_btnSortView" class="btn-sort" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnSortView&#39;,&#39;&#39;)">Xem nhiều</a>
-                <a id="mainbody_contentbody_contentpage_btnSortDown" class="btn-sort" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnSortDown&#39;,&#39;&#39;)">Tải nhiều</a>
-                    </span>
+                 
                 <ul class="display-product-option">
                     
-                        <li class="view-as-grid selected">
-                            <a onclick="document.getElementById(&#39;mainbody_contentbody_contentpage_btnViewBase&#39;).click();" id="mainbody_contentbody_contentpage_btnViewBase1" title="Xem danh sách" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnViewBase1&#39;,&#39;&#39;)"><span>grid</span></a>
-                        </li>
-                        
-                            <li class="view-as-list">
-                                <a onclick="document.getElementById(&#39;mainbody_contentbody_contentpage_bntViewDetail&#39;).click();" id="mainbody_contentbody_contentpage_bntViewDetail1" title="Xem chi tiết" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$bntViewDetail1&#39;,&#39;&#39;)"><span>list</span></a>
-                            </li>
                 </ul>
                 
                     <ul class="row product-list style2 grid mar-top4">
@@ -570,7 +445,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                         <div class="left-block">
                                             <a href="https://sharecode.vn/source-code/ban-code-web-tui-sach-dep-nhat-hien-nay-24066.htm">
                                                 <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/full-code-web-ban-tui-xach-thoi-trang-103635.jpg" alt="Full code web bán túi xách thời trang" title="Download Full code web bán túi xách thời trang">
+                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/full-code-web-ban-tui-xach-thoi-trang-103635.jpg" alt="Full code web bán túi xách thời trang" title="Download Full code web bán túi xách thời trang">
                                                 </div>
                                             </a>
                                             <div class="quick-view">
@@ -610,7 +485,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                         <div class="left-block">
                                             <a href="https://sharecode.vn/source-code/full-code-thuong-mai-dien-tu-moi-24063.htm">
                                                 <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/ban-full-code-website-thuong-mai-dien-tu-moi-103256.jpg" alt="Bán full code website thương mại điện tử mới" title="Download Bán full code website thương mại điện tử mới">
+                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/ban-full-code-website-thuong-mai-dien-tu-moi-103256.jpg" alt="Bán full code website thương mại điện tử mới" title="Download Bán full code website thương mại điện tử mới">
                                                 </div>
                                             </a>
                                             <div class="quick-view">
@@ -650,7 +525,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                         <div class="left-block">
                                             <a href="https://sharecode.vn/source-code/code-website-ban-thoi-trang-cuc-dep-24062.htm">
                                                 <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/ban-code-website-ban-phu-kien-thoi-trang-102749.jpg" alt="Bán code website bán phụ kiện thời trang" title="Download Bán code website bán phụ kiện thời trang">
+                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/ban-code-website-ban-phu-kien-thoi-trang-102749.jpg" alt="Bán code website bán phụ kiện thời trang" title="Download Bán code website bán phụ kiện thời trang">
                                                 </div>
                                             </a>
                                             <div class="quick-view">
@@ -690,7 +565,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                         <div class="left-block">
                                             <a href="https://sharecode.vn/source-code/full-code-thuong-mai-nuoc-mam-phu-quoc-24061.htm">
                                                 <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/full-code-website-thuong-mai-nuoc-mam-phu-quoc-102116.jpg" alt="Full code website thương mại nước mắm phú quốc" title="Download Full code website thương mại nước mắm phú quốc">
+                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/full-code-website-thuong-mai-nuoc-mam-phu-quoc-102116.jpg" alt="Full code website thương mại nước mắm phú quốc" title="Download Full code website thương mại nước mắm phú quốc">
                                                 </div>
                                             </a>
                                             <div class="quick-view">
@@ -730,7 +605,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                         <div class="left-block">
                                             <a href="https://sharecode.vn/source-code/code-gioi-thieu-quan-ao-dep-24060.htm">
                                                 <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/code-website-gioi-thieu-quan-ao-dep-10644.jpg" alt="Code website giới thiệu quần áo đẹp" title="Download Code website giới thiệu quần áo đẹp">
+                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/code-website-gioi-thieu-quan-ao-dep-10644.jpg" alt="Code website giới thiệu quần áo đẹp" title="Download Code website giới thiệu quần áo đẹp">
                                                 </div>
                                             </a>
                                             <div class="quick-view">
@@ -770,7 +645,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                         <div class="left-block">
                                             <a href="https://sharecode.vn/source-code/code-ban-xe-o-to-dep-24059.htm">
                                                 <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/full-code-code-website-ban-xe-o-to-14033.jpg" alt="Full code Code website bán xe ô tô" title="Download Full code Code website bán xe ô tô">
+                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/full-code-code-website-ban-xe-o-to-14033.jpg" alt="Full code Code website bán xe ô tô" title="Download Full code Code website bán xe ô tô">
                                                 </div>
                                             </a>
                                             <div class="quick-view">
@@ -810,7 +685,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                         <div class="left-block">
                                             <a href="https://sharecode.vn/source-code/full-code-website-wordpress-ban-van-phong-pham-chuan-seo-hien-thi-tot-tren-mobile-24057.htm">
                                                 <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/full-code-website-wordpress-ban-van-phong-pham-chuan-seo-hien-thi-tot-tren-mobile-125358.jpg" alt="Full code website wordpress bán văn phòng phẩm chuẩn seo hiển thị tốt trên mobile" title="Download Full code website wordpress bán văn phòng phẩm chuẩn seo hiển thị tốt trên mobile">
+                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/full-code-website-wordpress-ban-van-phong-pham-chuan-seo-hien-thi-tot-tren-mobile-125358.jpg" alt="Full code website wordpress bán văn phòng phẩm chuẩn seo hiển thị tốt trên mobile" title="Download Full code website wordpress bán văn phòng phẩm chuẩn seo hiển thị tốt trên mobile">
                                                 </div>
                                             </a>
                                             <div class="quick-view">
@@ -850,7 +725,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                         <div class="left-block">
                                             <a href="https://sharecode.vn/source-code/website-gioi-thieu-nuoc-son-nha-24056.htm">
                                                 <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/[link-trung-lap-20455]-website-gioi-thieu-nuoc-son-nha-11237.jpg" alt="Website giới thiệu nước sơn nhà" title="Download Website giới thiệu nước sơn nhà">
+                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/[link-trung-lap-20455]-website-gioi-thieu-nuoc-son-nha-11237.jpg" alt="Website giới thiệu nước sơn nhà" title="Download Website giới thiệu nước sơn nhà">
                                                 </div>
                                             </a>
                                             <div class="quick-view">
@@ -890,7 +765,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                         <div class="left-block">
                                             <a href="https://sharecode.vn/source-code/code-website-thiet-ke-noi-that-nha-dep-24055.htm">
                                                 <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/[link-trung-lap-20456]-code-website-thiet-ke-noi-that-nha-dep-11217.jpg" alt="Code website thiết kế nội thất nhà đẹp" title="Download Code website thiết kế nội thất nhà đẹp">
+                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/[link-trung-lap-20456]-code-website-thiet-ke-noi-that-nha-dep-11217.jpg" alt="Code website thiết kế nội thất nhà đẹp" title="Download Code website thiết kế nội thất nhà đẹp">
                                                 </div>
                                             </a>
                                             <div class="quick-view">
@@ -930,7 +805,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                         <div class="left-block">
                                             <a href="https://sharecode.vn/source-code/code-nha-hang-dep-va-chuan-24054.htm">
                                                 <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/full-code-web-nha-hang-dep-va-chuan-11105.jpg" alt="Full Code web nhà hàng đẹp và chuẩn" title="Download Full Code web nhà hàng đẹp và chuẩn">
+                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/full-code-web-nha-hang-dep-va-chuan-11105.jpg" alt="Full Code web nhà hàng đẹp và chuẩn" title="Download Full Code web nhà hàng đẹp và chuẩn">
                                                 </div>
                                             </a>
                                             <div class="quick-view">
@@ -970,7 +845,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                         <div class="left-block">
                                             <a href="https://sharecode.vn/source-code/code-phong-kham-dong-y-dep-24053.htm">
                                                 <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/code-phong-kham-dong-y-dep-102039.jpg" alt="Code phòng khám đông y đẹp" title="Download Code phòng khám đông y đẹp">
+                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/code-phong-kham-dong-y-dep-102039.jpg" alt="Code phòng khám đông y đẹp" title="Download Code phòng khám đông y đẹp">
                                                 </div>
                                             </a>
                                             <div class="quick-view">
@@ -1010,7 +885,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                         <div class="left-block">
                                             <a href="https://sharecode.vn/source-code/ban-full-code-cho-thue-xe-dep-24052.htm">
                                                 <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/ban-full-code-web-cho-thue-xe-dep-105626.jpg" alt="Bán full code web cho thuê xe đẹp" title="Download Bán full code web cho thuê xe đẹp">
+                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/ban-full-code-web-cho-thue-xe-dep-105626.jpg" alt="Bán full code web cho thuê xe đẹp" title="Download Bán full code web cho thuê xe đẹp">
                                                 </div>
                                             </a>
                                             <div class="quick-view">
@@ -1079,7 +954,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <div class="left-block">
                                     <a href="https://sharecode.vn/source-code/chat-in-lan-by-progaming-c-7056.htm">
                                         <div class="img-box">
-                                            <img class="img-responsive" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/img_code.jpg" alt="Chat In Lan By Progaming C#" title="Download Chat In Lan By Progaming C#">
+                                            <img class="img-responsive" src="style/search-cate/img_code.jpg" alt="Chat In Lan By Progaming C#" title="Download Chat In Lan By Progaming C#">
                                         </div>
                                     </a>
                                     <div class="quick-view">
@@ -1108,7 +983,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <div class="left-block">
                                     <a href="https://sharecode.vn/source-code/he-thong-quan-ly-so-dien-thoai-7061.htm">
                                         <div class="img-box">
-                                            <img class="img-responsive" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/he-thong-quan-ly-so-dien-thoai-114448.jpg" alt="HỆ THỐNG QUẢN LÝ SỐ ĐIỆN THOẠI" title="Download HỆ THỐNG QUẢN LÝ SỐ ĐIỆN THOẠI">
+                                            <img class="img-responsive" src="style/search-cate/he-thong-quan-ly-so-dien-thoai-114448.jpg" alt="HỆ THỐNG QUẢN LÝ SỐ ĐIỆN THOẠI" title="Download HỆ THỐNG QUẢN LÝ SỐ ĐIỆN THOẠI">
                                         </div>
                                     </a>
                                     <div class="quick-view">
@@ -1137,7 +1012,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <div class="left-block">
                                     <a href="https://sharecode.vn/source-code/full-code-bao-cao-phan-mem-quan-ly-rap-chieu-phim-c-7062.htm">
                                         <div class="img-box">
-                                            <img class="img-responsive" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/full-code-bao-cao-phan-mem-quan-ly-rap-chieu-phim-c-114312.jpg" alt="Full code + báo cáo " phần="" mềm="" quản="" lý="" rạp="" chiếu="" phim"="" (c#)"="" title="Download Full code + báo cáo ">
+                                            <img class="img-responsive" src="style/search-cate/full-code-bao-cao-phan-mem-quan-ly-rap-chieu-phim-c-114312.jpg" alt="Full code + báo cáo " phần="" mềm="" quản="" lý="" rạp="" chiếu="" phim"="" (c#)"="" title="Download Full code + báo cáo ">
                                         </div>
                                     </a>
                                     <div class="quick-view">
@@ -1166,7 +1041,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <div class="left-block">
                                     <a href="https://sharecode.vn/source-code/code-shop-thiet-bi-may-van-phong-dang-giao-dien-phang-ho-tro-mobile-7063.htm">
                                         <div class="img-box">
-                                            <img class="img-responsive" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/code-shop-thiet-bi-may-van-phong-dang-giao-dien-phang-ho-tro-mobile-113857.jpg" alt="Code shop thiết bị máy văn phòng dạng giao diện phẳng hỗ trợ mobile" title="Download Code shop thiết bị máy văn phòng dạng giao diện phẳng hỗ trợ mobile">
+                                            <img class="img-responsive" src="style/search-cate/code-shop-thiet-bi-may-van-phong-dang-giao-dien-phang-ho-tro-mobile-113857.jpg" alt="Code shop thiết bị máy văn phòng dạng giao diện phẳng hỗ trợ mobile" title="Download Code shop thiết bị máy văn phòng dạng giao diện phẳng hỗ trợ mobile">
                                         </div>
                                     </a>
                                     <div class="quick-view">
@@ -1207,7 +1082,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                     <li>
                         <div class="products-block-left">
                             <a href="https://sharecode.vn/source-code/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-23971.htm">
-                                <img src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-112150.jpg" alt="full code website bán hàng,code website bán hàng,code bán hàng chuẩn seo,Full code bán thực phẩm chức năng chuẩn seo,share code bán hàng,Full code website bán thực phẩm chức năng" title="Download Full code website bán thực phẩm chức năng chuẩn seo">
+                                <img src="style/search-cate/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-112150.jpg" alt="full code website bán hàng,code website bán hàng,code bán hàng chuẩn seo,Full code bán thực phẩm chức năng chuẩn seo,share code bán hàng,Full code website bán thực phẩm chức năng" title="Download Full code website bán thực phẩm chức năng chuẩn seo">
                             </a>
                         </div>
                         <div class="products-block-right">
@@ -1230,7 +1105,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                     <li>
                         <div class="products-block-left">
                             <a href="https://sharecode.vn/source-code/full-code-website-thuong-mai-dien-tu-ban-phu-kien-chuan-seo-23921.htm">
-                                <img src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/full-code-website-thuong-mai-dien-tu-ban-phu-kien-chuan-seo-151054.jpg" alt="chuẩn seo,Code thương mại điện tử,seo chuẩn,thương mại,Full Code Website thương mại điện tử" title="Download Full Code Website thương mại điện tử bán phụ kiện chuẩn seo">
+                                <img src="style/search-cate/full-code-website-thuong-mai-dien-tu-ban-phu-kien-chuan-seo-151054.jpg" alt="chuẩn seo,Code thương mại điện tử,seo chuẩn,thương mại,Full Code Website thương mại điện tử" title="Download Full Code Website thương mại điện tử bán phụ kiện chuẩn seo">
                             </a>
                         </div>
                         <div class="products-block-right">
@@ -1253,7 +1128,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                     <li>
                         <div class="products-block-left">
                             <a href="https://sharecode.vn/source-code/mau-website-dang-tin-bat-dong-san-hien-thi-tot-tren-cac-thiet-bi-mobile-24003.htm">
-                                <img src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/mau-website-dang-tin-bat-dong-san-hien-thi-tot-tren-cac-thiet-bi-mobile-151317.jpg" alt="đăng tin,web bất động sản,website bất động sản" title="Download Mẫu website đăng tin bất động sản hiển thị tốt trên các thiết bị mobile">
+                                <img src="style/search-cate/mau-website-dang-tin-bat-dong-san-hien-thi-tot-tren-cac-thiet-bi-mobile-151317.jpg" alt="đăng tin,web bất động sản,website bất động sản" title="Download Mẫu website đăng tin bất động sản hiển thị tốt trên các thiết bị mobile">
                             </a>
                         </div>
                         <div class="products-block-right">
@@ -1276,7 +1151,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                     <li>
                         <div class="products-block-left">
                             <a href="https://sharecode.vn/source-code/source-code-website-ban-hang-thuc-pham-hoa-qua-23966.htm">
-                                <img src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/[yeu-cau-bo-sung-video-demo]-source-code-website-ban-hang-thuc-pham-hoa-qua-82825.jpg" alt="code web ẩm thực,Source website,code bán hàng thực phẩm,code website bán hàng,code bán hàng,Source code website bán hàng thực phẩm hoa quả" title="Download Source code website bán hàng thực phẩm hoa quả">
+                                <img src="style/search-cate/[yeu-cau-bo-sung-video-demo]-source-code-website-ban-hang-thuc-pham-hoa-qua-82825.jpg" alt="code web ẩm thực,Source website,code bán hàng thực phẩm,code website bán hàng,code bán hàng,Source code website bán hàng thực phẩm hoa quả" title="Download Source code website bán hàng thực phẩm hoa quả">
                             </a>
                         </div>
                         <div class="products-block-right">
@@ -1299,7 +1174,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                     <li>
                         <div class="products-block-left">
                             <a href="https://sharecode.vn/source-code/code-ban-dien-thoai-cuc-dep-23934.htm">
-                                <img src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/code-website-ban-dien-thoai-cuc-dep-9563.jpg" alt="source code bán điện thoại đẹp,web bán điện thoại,code web bán điện thoại,code web điện thoại" title="Download Code website bán điện thoại cực đẹp">
+                                <img src="style/search-cate/code-website-ban-dien-thoai-cuc-dep-9563.jpg" alt="source code bán điện thoại đẹp,web bán điện thoại,code web bán điện thoại,code web điện thoại" title="Download Code website bán điện thoại cực đẹp">
                             </a>
                         </div>
                         <div class="products-block-right">
@@ -1365,7 +1240,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
      
 
         
-<script src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/floater_xlib.js.tải xuống"></script>
+<script src="style/search-cate/floater_xlib.js.tải xuống"></script>
 <script type="text/javascript">
 
     var slideTime = 600;
@@ -1416,13 +1291,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 <div id="floating_banner_left" style="text-align: right; position: fixed; overflow: hidden; width: 120px; z-index: 99999; display: none; left: -70.5px; top: 60px;">
     <div id="floating_banner_left_content">
         <a href="https://sharecode.vn/kien-thuc-lap-trinh/dich-vu-thiet-ke-website-chuyen-nghiep-voi-gia-cuc-re-va-nhieu-uu-dai-tai-sharecodevn-880.htm" target="_blank">
-            <img src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/thiet-ke-web-gia-re.jpg" border="0" width="120" alt=""></a><br>
+            <img src="style/search-cate/thiet-ke-web-gia-re.jpg" border="0" width="120" alt=""></a><br>
     </div>
 </div>
 <div id="floating_banner_right" style="text-align: left; position: fixed; overflow: hidden; width: 120px; z-index: 99999; left: 1299.5px; top: 60px; display: none;">
     <div id="Div2">
         <a href="https://topcode.vn/" target="_blank">
-            <img src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/Ra-mat-topcode.jpg" border="0" width="120" alt=""></a><br>
+            <img src="style/search-cate/Ra-mat-topcode.jpg" border="0" width="120" alt=""></a><br>
     </div>
 </div>
   <script>
@@ -1441,7 +1316,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                             <div class="col-md-3">
                                 <div id="address-box">
                                     <a href="https://sharecode.vn/">
-                                        <img src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/logo.png" alt="Sharecode.vn"></a>
+                                        <img src="style/search-cate/logo.png" alt="Sharecode.vn"></a>
                                     <div id="address-list">
                                         <div class="tit-name">Hotline:</div>
                                         <div class="tit-contain"><a href="tel:+84981282756" title="Click gọi ngay!">0981.282.756</a></div>
@@ -1511,28 +1386,28 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                 <ul id="trademark-list">
                                     <li id="payment-methods">Thanh toán đảm bảo</li>
                                     <li>
-                                        <img src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/b1.png" alt="ngan luong">
+                                        <img src="style/search-cate/b1.png" alt="ngan luong">
                                     </li>
                                     <li>
-                                        <img src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/b10.png" alt="bao kim">
+                                        <img src="style/search-cate/b10.png" alt="bao kim">
                                     </li>
                                     <li>
-                                        <img src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/b11.png" alt="momo">
+                                        <img src="style/search-cate/b11.png" alt="momo">
                                     </li>
                                     <li>
-                                        <img src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/b8.png" alt="paypal">
+                                        <img src="style/search-cate/b8.png" alt="paypal">
                                     </li>
                                     <li>
-                                        <img src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/b5.png" alt="vietcombank">
+                                        <img src="style/search-cate/b5.png" alt="vietcombank">
                                     </li>
                                     <li>
-                                        <img src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/b9.png" alt="vietin bank">
+                                        <img src="style/search-cate/b9.png" alt="vietin bank">
                                     </li>
                                     <li>
-                                        <img src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/b6.png" alt="agribank">
+                                        <img src="style/search-cate/b6.png" alt="agribank">
                                     </li>
                                     <li>
-                                        <img src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/b7.png" alt="bidv">
+                                        <img src="style/search-cate/b7.png" alt="bidv">
                                     </li>
                                     
                                 </ul>
@@ -1554,8 +1429,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                             <p class="text-center">
                                 Copyrights © 2014 Sharecode.vn - Nội dung đã được bảo vệ bản quyền
                                 <a href="https://www.dmca.com/Protection/Status.aspx?ID=e3cfb854-1733-4462-a9e8-0ef4661d6600&amp;refurl=https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm" title="DMCA.com Protection Status" class="dmca-badge">
-                                    <img src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/dmca-badge-w150-5x1-09.png" alt="DMCA.com Protection Status"></a>
-                                <script src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/DMCABadgeHelper.min.js.tải xuống"> </script>
+                                    <img src="style/search-cate/dmca-badge-w150-5x1-09.png" alt="DMCA.com Protection Status"></a>
+                                <script src="style/search-cate/DMCABadgeHelper.min.js.tải xuống"> </script>
                             </p>
                         </div>
                     </div>
@@ -1566,13 +1441,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 
     <a href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm#" class="scroll_top" title="Lên đầu" style="display: inline;"></a>
     <!-- Script-->
-    <script type="text/javascript" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/jquery-1.11.2.min.js.tải xuống"></script>
-    <script type="text/javascript" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/bootstrap.min.js.tải xuống"></script>
-    <script type="text/javascript" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/select2.min.js.tải xuống"></script>
-    <script type="text/javascript" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/owl.carousel.min.js.tải xuống"></script>
-    <script type="text/javascript" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/jquery.actual.min.js.tải xuống"></script>
-    <script type="text/javascript" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/theme-script.js.tải xuống"></script>
-    <script type="text/javascript" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/jquery-ui.min.js.tải xuống"></script>
+    <script type="text/javascript" src="style/search-cate/jquery-1.11.2.min.js.tải xuống"></script>
+    <script type="text/javascript" src="style/search-cate/bootstrap.min.js.tải xuống"></script>
+    <script type="text/javascript" src="style/search-cate/select2.min.js.tải xuống"></script>
+    <script type="text/javascript" src="style/search-cate/owl.carousel.min.js.tải xuống"></script>
+    <script type="text/javascript" src="style/search-cate/jquery.actual.min.js.tải xuống"></script>
+    <script type="text/javascript" src="style/search-cate/theme-script.js.tải xuống"></script>
+    <script type="text/javascript" src="style/search-cate/jquery-ui.min.js.tải xuống"></script>
     <script type="text/javascript">
         $('#slSearch').on('change', function () {
             $('#hdLangFilter').val($("#slSearch").val());
@@ -1658,7 +1533,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
         ga('send', 'pageview');
     </script>
     <!-- Đặt thẻ này vào phần đầu hoặc ngay trước thẻ đóng phần nội dung của bạn. -->
-    <script src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/platform.js.tải xuống" async="" defer="" gapi_processed="true">
+    <script src="style/search-cate/platform.js.tải xuống" async="" defer="" gapi_processed="true">
   {lang: 'vi'}
     </script>
     <script type="application/ld+json">
@@ -1681,7 +1556,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
     <div class="hisella-messages" style="bottom: -350px; right: -30px;">
         <div class="hisella-messages-outer">
             <div id="hisella-minimize">&nbsp;HỖ TRỢ TRỰC TUYẾN</div>
-            <div id="hisella-facebook" class="fb-page fb_iframe_widget" data-adapt-container-width="true" data-height="350" data-hide-cover="false" data-href="https://www.facebook.com/sharecode.vn" data-show-facepile="true" data-show-posts="false" data-small-header="false" data-tabs="messages" data-width="250" style="opacity: 0;" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=1938824166400762&amp;container_width=0&amp;height=350&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fsharecode.vn&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;small_header=false&amp;tabs=messages&amp;width=250"><span style="vertical-align: bottom; width: 250px; height: 350px;"><iframe name="fef9b2814d4d1c" width="250px" height="350px" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/page.html" style="border: none; visibility: visible; width: 250px; height: 350px;" class=""></iframe></span></div>
+            <div id="hisella-facebook" class="fb-page fb_iframe_widget" data-adapt-container-width="true" data-height="350" data-hide-cover="false" data-href="https://www.facebook.com/sharecode.vn" data-show-facepile="true" data-show-posts="false" data-small-header="false" data-tabs="messages" data-width="250" style="opacity: 0;" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=1938824166400762&amp;container_width=0&amp;height=350&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fsharecode.vn&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;small_header=false&amp;tabs=messages&amp;width=250"><span style="vertical-align: bottom; width: 250px; height: 350px;"><iframe name="fef9b2814d4d1c" width="250px" height="350px" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="style/search-cate/page.html" style="border: none; visibility: visible; width: 250px; height: 350px;" class=""></iframe></span></div>
         </div>
     </div>
     
@@ -1693,10 +1568,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
         });
     </script>
     
-    <link href="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/iosOverlay.css" rel="stylesheet">
-    <script src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/iosOverlay.js.tải xuống"></script>
-     <link href="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/rateit.css" rel="stylesheet">
-    <script src="./Thư viện tổng hợp mã nguồn website đẹp bằng WordPress_files/jquery.rateit.min.js.tải xuống"></script>
+    <link href="style/search-cate/iosOverlay.css" rel="stylesheet">
+    <script src="style/search-cate/iosOverlay.js.tải xuống"></script>
+     <link href="style/search-cate/rateit.css" rel="stylesheet">
+    <script src="style/search-cate/jquery.rateit.min.js.tải xuống"></script>
 
 
 

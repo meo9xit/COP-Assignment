@@ -59,6 +59,8 @@ public class TopDownloadController extends HttpServlet {
 		request.setAttribute("docs", docs);
 		request.setAttribute("topviewdocs", topview);
 		request.setAttribute("topdocs", topdownload );
+		request.setAttribute("title", "Tài liệu được tải nhiều nhất");
+		request.setAttribute("cates", cates);
 		request.getRequestDispatcher("/view/web/search-cate.jsp").forward(request, response);
 	}
 

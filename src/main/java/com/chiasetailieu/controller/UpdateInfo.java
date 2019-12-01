@@ -41,6 +41,7 @@ public class UpdateInfo extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		request.setAttribute("actiontype", "edit");
 		request.getRequestDispatcher("/view/web/userinfo.jsp").forward(request, response);
 	}
 

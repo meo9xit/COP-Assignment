@@ -152,7 +152,11 @@ public class UploadController extends HttpServlet {
 			               }
 		               } else { 
 		            	   request.setAttribute("message", "Website chỉ cho phép upload file MS Word hoặc PDF!");
-		            	   return;
+		            	   List<Category> categories = cateService.findAll();
+			           		List<SubCategory> subcates = subcateService.findAll();
+			           		request.setAttribute("categories", categories);
+			           		request.setAttribute("subcates", subcates);
+			           		request.getRequestDispatcher("/view/web/upload.jsp").forward(request, response);
 		               }
 	               }
 	           }
@@ -163,8 +167,11 @@ public class UploadController extends HttpServlet {
 	       } catch (Exception e) {
 	           e.printStackTrace();
 	           request.setAttribute("errorMessage", "Error: " + e.getMessage());
-	           RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/jsp/upload.jsp");
-	           dispatcher.forward(request, response);
+	           List<Category> categories = cateService.findAll();
+		   	   List<SubCategory> subcates = subcateService.findAll();
+		   	   request.setAttribute("categories", categories);
+		   	   request.setAttribute("subcates", subcates);
+		   	   request.getRequestDispatcher("/view/web/upload.jsp").forward(request, response);
 	       }
 	}
 	
