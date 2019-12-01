@@ -117,20 +117,14 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
             <div class="top-header">
                 <div class="container">                    
                     <div class="nav-top-links">
-                        <a class="first-item" href="tel:+84981282756" title="Click gọi ngay!">
-                            <img alt="hotline" src="style/search-cate/phone.png">0981.282.756</a>
-                        <a href="mailto:sharecode.contact@gmail.com" title="Click để gửi email!">
-                            <img alt="email sharecode" src="style/search-cate/email.png">Sharecode.contact@gmail.com</a>
-                        <a href="https://sharecode.vn/kien-thuc-lap-trinh.htm">Kiến thức lập trình</a>
-                        <a href="https://sharecode.vn/su-kien.htm">Sự kiện</a>
                     </div>
-                    <c:if test = ${empty loginedUser }>
+                    <c:if test = "${empty loginedUser }">
                     <div id="LoginBox" class="support-link">
                         <a href="<c:url value = "/login"/>" role="button">Đăng nhập</a>
                         <a href="https://sharecode.vn/dang-ki-tai-khoan.htm">Đăng kí</a>
                     </div>
                     </c:if>
-                    <c:if test = ${not empty loginedUser }>
+                    <c:if test = "${not empty loginedUser }">
                     	<div id="ExitBox" class="support-link">
                         	<a id="btnExit" class="aorange" href="<c:url value ="/logout"/>">[Thoát]</a>
                     	</div>
@@ -158,9 +152,12 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                         
                     </div>
                     <div class="col-xs-5 col-sm-2 col-md-3 shopping-cart-box btn-align">
-                        
-                        <a data-toggle="modal" data-target="#LoginForm" onclick="createCaptcha();" role="button" class="button-orange" title="Tặng thêm 5 Point cho mỗi Upload"><i class="fa fa-cloud-upload fa-lg" aria-hidden="true"></i>&nbsp; TẢI LÊN</a>
-                        
+                        <c:if test = "${empty loginedUser }">
+                        	<a href = "<c:url value = "/login" />" role="button" class="button-orange" title="Tải lên"><i class="fa fa-cloud-upload fa-lg" aria-hidden="true"></i>&nbsp; TẢI LÊN</a>
+                        </c:if>
+                        <c:if test = "${not empty loginedUser }">
+                        	<a href="/user-upload" class="button-orange" title="Upload code kiếm tiền"><i class="fa fa-cloud-upload fa-lg" aria-hidden="true"></i>&nbsp; TẢI LÊN</a>
+                    	</c:if>
                     </div>
                 </div>
             </div>
@@ -177,7 +174,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                     <ul class="vertical-menu-list">
                                         <c:forEach var = "category" items="${cates }">
                                                 <li class=""><a href="<c:url value = "/post"><c:param name = "id" value = "${category.categoryID }"/></c:url>">
-                                                    <img class="icon-menu" alt="${category.categoryName }" src="style/search-cate/3.png">${category.categoryName }</a></li>
+                                                    <img class="icon-menu" alt="${category.categoryName }" src="style/search-cate/3.png" > ${category.categoryName }</a></li>
                                         </c:forEach>    
                                                 
                                     </ul>
@@ -196,11 +193,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                                     </div>
                                     <div id="navbar" class="navbar-collapse collapse">
                                         <ul class="nav navbar-nav">
-                                            <li id="mnhome" class="active" title="Trang chủ"><a href="https://sharecode.vn/"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a></li>
-                                            <li id="mntopcode" title="Top code nổi bật"><a href="https://sharecode.vn/top-codes.htm">Top code</a></li>
-                                            <li id="mncodeok" title="Code chất lượng (&gt;= 100 Xu)"><a href="https://sharecode.vn/code-chat-luong.htm">Code chất lượng <span class="notify notify-right"></span></a></li>
-                                            <li id="mncode" title="Code tham khảo (2 Xu - 99 Xu)"><a href="https://sharecode.vn/code-tham-khao.htm">Code tham khảo</a></li>
-                                            <li id="mncodefree" title="Code miễn phí (0 Xu)"><a href="https://sharecode.vn/code-mien-phi.htm">Code miễn phí</a></li>
+                                            <li id="mnhome" class="active" title="Trang chủ"><a href="<c:url value = "/home"></c:url>"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a></li>
+                                            <li id="mntopcode" title="Tài liệu xem nhiều"><a href="<c:url value = "/topview"></c:url>"> Được xem nhiều </a></li>
+                                            <li id="mncodeok" title="Tài liệu tải nhiều"><a href="<c:url value = "/topdownload"></c:url>">  Được tải nhiều <span class="notify notify-right"></span></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -209,14 +204,23 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                     </div>
                     <div id="form-search-opntop">
                     <div class="form-inline search-h">
-                            <div id="regPanel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnSearch&#39;)">
-	
-                                <div class="form-group input-serach">
-                                    <input name="ctl00$ctl00$ctl00$txtSearch" type="text" id="txtSearch" class="txt-search txt-auto ui-autocomplete-input" placeholder="Nhập Từ khóa (or) Mã code" autocomplete="off">
-                                </div>
-                                <a id="btnSearch" class="pull-right btn-search" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$btnSearch&#39;,&#39;&#39;)"></a>
-                            
-</div>
+                            <div id="regPanel" onkeypress="WebForm_FireDefaultButton">
+								<form id="searchform" action="<c:url value="/search"/>" >
+									<div class="form-group input-serach">
+										<input name="key" type="text" id="txtSearch"
+											class="txt-search txt-auto ui-autocomplete-input"
+											placeholder="Nhập Từ khóa" autocomplete="off">
+									</div>
+									<a id="btnSearch" class="pull-right btn-search" href=""
+										onclick="submitSearch()"></a>
+								</form>
+							</div>
+							<script>
+								function submitSearch() {
+									document.getElementById("searchform")
+											.submit();
+								}
+							</script>
                         </div></div>
                     <div id="user-info-opntop">
                     <div id="user-info-top" class="user-info pull-right">
@@ -439,500 +443,128 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                 </ul>
                 
                     <ul class="row product-list style2 grid mar-top4">
-                        
+                        <c:forEach var = "doc" items = "${docs }">
                                 <li class="col-sx-12 col-sm-3" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/Product">
                                     <div class="product-container">
                                         <div class="left-block">
-                                            <a href="https://sharecode.vn/source-code/ban-code-web-tui-sach-dep-nhat-hien-nay-24066.htm">
+                                            <a href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
                                                 <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/full-code-web-ban-tui-xach-thoi-trang-103635.jpg" alt="Full code web bán túi xách thời trang" title="Download Full code web bán túi xách thời trang">
+                                                    <img class="img-responsive" itemprop="image" src="${doc.cover }" alt="${doc.docName }" title="Download Full code web bán túi xách thời trang">
                                                 </div>
                                             </a>
-                                            <div class="quick-view">
-                                                <a title="Download code" class="search" href="https://sharecode.vn/source-code/ban-code-web-tui-sach-dep-nhat-hien-nay-24066.htm#Download"></a>
-                                                <a id="mainbody_contentbody_contentpage_rptList_Button4_0" title="Yêu thích code này" class="heart LikeSuccess" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl00$Button4&#39;,&#39;&#39;)"></a>
-                                                <a onclick="createCaptcha();" id="mainbody_contentbody_contentpage_rptList_Button5_0" title="Lưu code lại cho tôi" class="compare" data-toggle="modal" data-target="#LoginForm" role="button" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl00$Button5&#39;,&#39;&#39;)"></a>
-                                                
-                                            </div>
+                                            
                                             <div class="downview">
-                                                <span class="view-count2">18</span>
-                                                <span class="down-count2">0</span>
+                                                <span class="view-count2">${doc.view }</span>
+                                                <span class="down-count2">${doc.download }</span>
                                             </div>
-                                            <a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">WordPress</a>
+                                            <a class="cate" href="<c:url value = "/category"><c:param name = "id" value = "${doc.cateId }"/></c:url>">${doc.category.categoryName }</a>
                                         </div>
                                         <div class="right-block">
-                                            <a itemprop="url" href="https://sharecode.vn/source-code/ban-code-web-tui-sach-dep-nhat-hien-nay-24066.htm">
-                                                <h2 class="product-name bold" itemprop="name" title="Download Full code web bán túi xách thời trang">Full code web bán túi xách thời trang</h2>
+                                            <a itemprop="url" href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
+                                                <h2 class="product-name bold" itemprop="name" title="${doc.docName }">${doc.docName }</h2>
                                             </a>
-                                            <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"><meta itemprop="ratingValue" content="5"><meta itemprop="reviewCount" content="1"><button id="rateit-reset-2" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-2" style="display: none;"><span></span></button><div id="rateit-range-2" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-2" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
                                             
                                         </div>
                                     </div>
-                                    <meta itemprop="productID" content="24066">
-                                        <meta itemprop="brand" content="sharecode.vn">
-                                        <meta itemprop="productionDate" content="2019-11-16T02:33">
-                                        <meta itemprop="category" content="WordPress">
-                                        <meta itemprop="material" content="Website">
-                                        <span itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                            <meta itemprop="priceCurrency" content="Xu">
-                                            <meta itemprop="price" content="400">
-                                            <link itemprop="availability" href="http://schema.org/InStock">
-                                        </span>
                                 </li>
-                            
-                                <li class="col-sx-12 col-sm-3" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/Product">
-                                    <div class="product-container">
-                                        <div class="left-block">
-                                            <a href="https://sharecode.vn/source-code/full-code-thuong-mai-dien-tu-moi-24063.htm">
-                                                <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/ban-full-code-website-thuong-mai-dien-tu-moi-103256.jpg" alt="Bán full code website thương mại điện tử mới" title="Download Bán full code website thương mại điện tử mới">
-                                                </div>
-                                            </a>
-                                            <div class="quick-view">
-                                                <a title="Download code" class="search" href="https://sharecode.vn/source-code/full-code-thuong-mai-dien-tu-moi-24063.htm#Download"></a>
-                                                <a id="mainbody_contentbody_contentpage_rptList_Button4_1" title="Yêu thích code này" class="heart LikeSuccess" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl01$Button4&#39;,&#39;&#39;)"></a>
-                                                <a onclick="createCaptcha();" id="mainbody_contentbody_contentpage_rptList_Button5_1" title="Lưu code lại cho tôi" class="compare" data-toggle="modal" data-target="#LoginForm" role="button" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl01$Button5&#39;,&#39;&#39;)"></a>
-                                                
-                                            </div>
-                                            <div class="downview">
-                                                <span class="view-count2">22</span>
-                                                <span class="down-count2">0</span>
-                                            </div>
-                                            <a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">WordPress</a>
-                                        </div>
-                                        <div class="right-block">
-                                            <a itemprop="url" href="https://sharecode.vn/source-code/full-code-thuong-mai-dien-tu-moi-24063.htm">
-                                                <h2 class="product-name bold" itemprop="name" title="Download Bán full code website thương mại điện tử mới">Bán full code website thương mại điện tử mới</h2>
-                                            </a>
-                                            <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"><meta itemprop="ratingValue" content="5"><meta itemprop="reviewCount" content="1"><button id="rateit-reset-3" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-3" style="display: none;"><span></span></button><div id="rateit-range-3" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-3" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
-                                            
-                                        </div>
-                                    </div>
-                                    <meta itemprop="productID" content="24063">
-                                        <meta itemprop="brand" content="sharecode.vn">
-                                        <meta itemprop="productionDate" content="2019-11-16T02:02">
-                                        <meta itemprop="category" content="WordPress">
-                                        <meta itemprop="material" content="Website">
-                                        <span itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                            <meta itemprop="priceCurrency" content="Xu">
-                                            <meta itemprop="price" content="800">
-                                            <link itemprop="availability" href="http://schema.org/InStock">
-                                        </span>
-                                </li>
-                            
-                                <li class="col-sx-12 col-sm-3" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/Product">
-                                    <div class="product-container">
-                                        <div class="left-block">
-                                            <a href="https://sharecode.vn/source-code/code-website-ban-thoi-trang-cuc-dep-24062.htm">
-                                                <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/ban-code-website-ban-phu-kien-thoi-trang-102749.jpg" alt="Bán code website bán phụ kiện thời trang" title="Download Bán code website bán phụ kiện thời trang">
-                                                </div>
-                                            </a>
-                                            <div class="quick-view">
-                                                <a title="Download code" class="search" href="https://sharecode.vn/source-code/code-website-ban-thoi-trang-cuc-dep-24062.htm#Download"></a>
-                                                <a id="mainbody_contentbody_contentpage_rptList_Button4_2" title="Yêu thích code này" class="heart LikeSuccess" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl02$Button4&#39;,&#39;&#39;)"></a>
-                                                <a onclick="createCaptcha();" id="mainbody_contentbody_contentpage_rptList_Button5_2" title="Lưu code lại cho tôi" class="compare" data-toggle="modal" data-target="#LoginForm" role="button" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl02$Button5&#39;,&#39;&#39;)"></a>
-                                                
-                                            </div>
-                                            <div class="downview">
-                                                <span class="view-count2">8</span>
-                                                <span class="down-count2">0</span>
-                                            </div>
-                                            <a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">WordPress</a>
-                                        </div>
-                                        <div class="right-block">
-                                            <a itemprop="url" href="https://sharecode.vn/source-code/code-website-ban-thoi-trang-cuc-dep-24062.htm">
-                                                <h2 class="product-name bold" itemprop="name" title="Download Bán code website bán phụ kiện thời trang">Bán code website bán phụ kiện thời trang</h2>
-                                            </a>
-                                            <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"><meta itemprop="ratingValue" content="5"><meta itemprop="reviewCount" content="1"><button id="rateit-reset-4" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-4" style="display: none;"><span></span></button><div id="rateit-range-4" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-4" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
-                                            
-                                        </div>
-                                    </div>
-                                    <meta itemprop="productID" content="24062">
-                                        <meta itemprop="brand" content="sharecode.vn">
-                                        <meta itemprop="productionDate" content="2019-11-16T01:58">
-                                        <meta itemprop="category" content="WordPress">
-                                        <meta itemprop="material" content="Website">
-                                        <span itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                            <meta itemprop="priceCurrency" content="Xu">
-                                            <meta itemprop="price" content="600">
-                                            <link itemprop="availability" href="http://schema.org/InStock">
-                                        </span>
-                                </li>
-                            
-                                <li class="col-sx-12 col-sm-3" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/Product">
-                                    <div class="product-container">
-                                        <div class="left-block">
-                                            <a href="https://sharecode.vn/source-code/full-code-thuong-mai-nuoc-mam-phu-quoc-24061.htm">
-                                                <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/full-code-website-thuong-mai-nuoc-mam-phu-quoc-102116.jpg" alt="Full code website thương mại nước mắm phú quốc" title="Download Full code website thương mại nước mắm phú quốc">
-                                                </div>
-                                            </a>
-                                            <div class="quick-view">
-                                                <a title="Download code" class="search" href="https://sharecode.vn/source-code/full-code-thuong-mai-nuoc-mam-phu-quoc-24061.htm#Download"></a>
-                                                <a id="mainbody_contentbody_contentpage_rptList_Button4_3" title="Yêu thích code này" class="heart LikeSuccess" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl03$Button4&#39;,&#39;&#39;)"></a>
-                                                <a onclick="createCaptcha();" id="mainbody_contentbody_contentpage_rptList_Button5_3" title="Lưu code lại cho tôi" class="compare" data-toggle="modal" data-target="#LoginForm" role="button" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl03$Button5&#39;,&#39;&#39;)"></a>
-                                                
-                                            </div>
-                                            <div class="downview">
-                                                <span class="view-count2">12</span>
-                                                <span class="down-count2">0</span>
-                                            </div>
-                                            <a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">WordPress</a>
-                                        </div>
-                                        <div class="right-block">
-                                            <a itemprop="url" href="https://sharecode.vn/source-code/full-code-thuong-mai-nuoc-mam-phu-quoc-24061.htm">
-                                                <h2 class="product-name bold" itemprop="name" title="Download Full code website thương mại nước mắm phú quốc">Full code website thương mại nước mắm phú quốc</h2>
-                                            </a>
-                                            <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"><meta itemprop="ratingValue" content="5"><meta itemprop="reviewCount" content="1"><button id="rateit-reset-5" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-5" style="display: none;"><span></span></button><div id="rateit-range-5" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-5" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
-                                            
-                                        </div>
-                                    </div>
-                                    <meta itemprop="productID" content="24061">
-                                        <meta itemprop="brand" content="sharecode.vn">
-                                        <meta itemprop="productionDate" content="2019-11-16T01:49">
-                                        <meta itemprop="category" content="WordPress">
-                                        <meta itemprop="material" content="Website">
-                                        <span itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                            <meta itemprop="priceCurrency" content="Xu">
-                                            <meta itemprop="price" content="400">
-                                            <link itemprop="availability" href="http://schema.org/InStock">
-                                        </span>
-                                </li>
-                            
-                                <li class="col-sx-12 col-sm-3" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/Product">
-                                    <div class="product-container">
-                                        <div class="left-block">
-                                            <a href="https://sharecode.vn/source-code/code-gioi-thieu-quan-ao-dep-24060.htm">
-                                                <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/code-website-gioi-thieu-quan-ao-dep-10644.jpg" alt="Code website giới thiệu quần áo đẹp" title="Download Code website giới thiệu quần áo đẹp">
-                                                </div>
-                                            </a>
-                                            <div class="quick-view">
-                                                <a title="Download code" class="search" href="https://sharecode.vn/source-code/code-gioi-thieu-quan-ao-dep-24060.htm#Download"></a>
-                                                <a id="mainbody_contentbody_contentpage_rptList_Button4_4" title="Yêu thích code này" class="heart LikeSuccess" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl04$Button4&#39;,&#39;&#39;)"></a>
-                                                <a onclick="createCaptcha();" id="mainbody_contentbody_contentpage_rptList_Button5_4" title="Lưu code lại cho tôi" class="compare" data-toggle="modal" data-target="#LoginForm" role="button" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl04$Button5&#39;,&#39;&#39;)"></a>
-                                                
-                                            </div>
-                                            <div class="downview">
-                                                <span class="view-count2">8</span>
-                                                <span class="down-count2">0</span>
-                                            </div>
-                                            <a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">WordPress</a>
-                                        </div>
-                                        <div class="right-block">
-                                            <a itemprop="url" href="https://sharecode.vn/source-code/code-gioi-thieu-quan-ao-dep-24060.htm">
-                                                <h2 class="product-name bold" itemprop="name" title="Download Code website giới thiệu quần áo đẹp">Code website giới thiệu quần áo đẹp</h2>
-                                            </a>
-                                            <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"><meta itemprop="ratingValue" content="5"><meta itemprop="reviewCount" content="1"><button id="rateit-reset-6" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-6" style="display: none;"><span></span></button><div id="rateit-range-6" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-6" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
-                                            
-                                        </div>
-                                    </div>
-                                    <meta itemprop="productID" content="24060">
-                                        <meta itemprop="brand" content="sharecode.vn">
-                                        <meta itemprop="productionDate" content="2019-11-16T01:44">
-                                        <meta itemprop="category" content="WordPress">
-                                        <meta itemprop="material" content="Website">
-                                        <span itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                            <meta itemprop="priceCurrency" content="Xu">
-                                            <meta itemprop="price" content="200">
-                                            <link itemprop="availability" href="http://schema.org/InStock">
-                                        </span>
-                                </li>
-                            
-                                <li class="col-sx-12 col-sm-3" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/Product">
-                                    <div class="product-container">
-                                        <div class="left-block">
-                                            <a href="https://sharecode.vn/source-code/code-ban-xe-o-to-dep-24059.htm">
-                                                <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/full-code-code-website-ban-xe-o-to-14033.jpg" alt="Full code Code website bán xe ô tô" title="Download Full code Code website bán xe ô tô">
-                                                </div>
-                                            </a>
-                                            <div class="quick-view">
-                                                <a title="Download code" class="search" href="https://sharecode.vn/source-code/code-ban-xe-o-to-dep-24059.htm#Download"></a>
-                                                <a id="mainbody_contentbody_contentpage_rptList_Button4_5" title="Yêu thích code này" class="heart LikeSuccess" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl05$Button4&#39;,&#39;&#39;)"></a>
-                                                <a onclick="createCaptcha();" id="mainbody_contentbody_contentpage_rptList_Button5_5" title="Lưu code lại cho tôi" class="compare" data-toggle="modal" data-target="#LoginForm" role="button" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl05$Button5&#39;,&#39;&#39;)"></a>
-                                                
-                                            </div>
-                                            <div class="downview">
-                                                <span class="view-count2">46</span>
-                                                <span class="down-count2">0</span>
-                                            </div>
-                                            <a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">WordPress</a>
-                                        </div>
-                                        <div class="right-block">
-                                            <a itemprop="url" href="https://sharecode.vn/source-code/code-ban-xe-o-to-dep-24059.htm">
-                                                <h2 class="product-name bold" itemprop="name" title="Download Full code Code website bán xe ô tô">Full code Code website bán xe ô tô</h2>
-                                            </a>
-                                            <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"><meta itemprop="ratingValue" content="5"><meta itemprop="reviewCount" content="1"><button id="rateit-reset-7" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-7" style="display: none;"><span></span></button><div id="rateit-range-7" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-7" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
-                                            
-                                        </div>
-                                    </div>
-                                    <meta itemprop="productID" content="24059">
-                                        <meta itemprop="brand" content="sharecode.vn">
-                                        <meta itemprop="productionDate" content="2019-11-16T01:40">
-                                        <meta itemprop="category" content="WordPress">
-                                        <meta itemprop="material" content="Website">
-                                        <span itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                            <meta itemprop="priceCurrency" content="Xu">
-                                            <meta itemprop="price" content="300">
-                                            <link itemprop="availability" href="http://schema.org/InStock">
-                                        </span>
-                                </li>
-                            
-                                <li class="col-sx-12 col-sm-3" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/Product">
-                                    <div class="product-container">
-                                        <div class="left-block">
-                                            <a href="https://sharecode.vn/source-code/full-code-website-wordpress-ban-van-phong-pham-chuan-seo-hien-thi-tot-tren-mobile-24057.htm">
-                                                <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/full-code-website-wordpress-ban-van-phong-pham-chuan-seo-hien-thi-tot-tren-mobile-125358.jpg" alt="Full code website wordpress bán văn phòng phẩm chuẩn seo hiển thị tốt trên mobile" title="Download Full code website wordpress bán văn phòng phẩm chuẩn seo hiển thị tốt trên mobile">
-                                                </div>
-                                            </a>
-                                            <div class="quick-view">
-                                                <a title="Download code" class="search" href="https://sharecode.vn/source-code/full-code-website-wordpress-ban-van-phong-pham-chuan-seo-hien-thi-tot-tren-mobile-24057.htm#Download"></a>
-                                                <a id="mainbody_contentbody_contentpage_rptList_Button4_6" title="Yêu thích code này" class="heart LikeSuccess" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl06$Button4&#39;,&#39;&#39;)"></a>
-                                                <a onclick="createCaptcha();" id="mainbody_contentbody_contentpage_rptList_Button5_6" title="Lưu code lại cho tôi" class="compare" data-toggle="modal" data-target="#LoginForm" role="button" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl06$Button5&#39;,&#39;&#39;)"></a>
-                                                
-                                            </div>
-                                            <div class="downview">
-                                                <span class="view-count2">37</span>
-                                                <span class="down-count2">0</span>
-                                            </div>
-                                            <a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">WordPress</a>
-                                        </div>
-                                        <div class="right-block">
-                                            <a itemprop="url" href="https://sharecode.vn/source-code/full-code-website-wordpress-ban-van-phong-pham-chuan-seo-hien-thi-tot-tren-mobile-24057.htm">
-                                                <h2 class="product-name bold" itemprop="name" title="Download Full code website wordpress bán văn phòng phẩm chuẩn seo hiển thị tốt trên mobile">Full code website wordpress bán văn phòng phẩm chuẩn seo hiển thị tốt trên mobile</h2>
-                                            </a>
-                                            <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"><meta itemprop="ratingValue" content="5"><meta itemprop="reviewCount" content="1"><button id="rateit-reset-8" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-8" style="display: none;"><span></span></button><div id="rateit-range-8" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-8" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
-                                            
-                                        </div>
-                                    </div>
-                                    <meta itemprop="productID" content="24057">
-                                        <meta itemprop="brand" content="sharecode.vn">
-                                        <meta itemprop="productionDate" content="2019-11-16T12:54">
-                                        <meta itemprop="category" content="WordPress">
-                                        <meta itemprop="material" content="Website">
-                                        <span itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                            <meta itemprop="priceCurrency" content="Xu">
-                                            <meta itemprop="price" content="300">
-                                            <link itemprop="availability" href="http://schema.org/InStock">
-                                        </span>
-                                </li>
-                            
-                                <li class="col-sx-12 col-sm-3" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/Product">
-                                    <div class="product-container">
-                                        <div class="left-block">
-                                            <a href="https://sharecode.vn/source-code/website-gioi-thieu-nuoc-son-nha-24056.htm">
-                                                <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/[link-trung-lap-20455]-website-gioi-thieu-nuoc-son-nha-11237.jpg" alt="Website giới thiệu nước sơn nhà" title="Download Website giới thiệu nước sơn nhà">
-                                                </div>
-                                            </a>
-                                            <div class="quick-view">
-                                                <a title="Download code" class="search" href="https://sharecode.vn/source-code/website-gioi-thieu-nuoc-son-nha-24056.htm#Download"></a>
-                                                <a id="mainbody_contentbody_contentpage_rptList_Button4_7" title="Yêu thích code này" class="heart LikeSuccess" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl07$Button4&#39;,&#39;&#39;)"></a>
-                                                <a onclick="createCaptcha();" id="mainbody_contentbody_contentpage_rptList_Button5_7" title="Lưu code lại cho tôi" class="compare" data-toggle="modal" data-target="#LoginForm" role="button" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl07$Button5&#39;,&#39;&#39;)"></a>
-                                                
-                                            </div>
-                                            <div class="downview">
-                                                <span class="view-count2">35</span>
-                                                <span class="down-count2">0</span>
-                                            </div>
-                                            <a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">WordPress</a>
-                                        </div>
-                                        <div class="right-block">
-                                            <a itemprop="url" href="https://sharecode.vn/source-code/website-gioi-thieu-nuoc-son-nha-24056.htm">
-                                                <h2 class="product-name bold" itemprop="name" title="Download Website giới thiệu nước sơn nhà">Website giới thiệu nước sơn nhà</h2>
-                                            </a>
-                                            <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"><meta itemprop="ratingValue" content="5"><meta itemprop="reviewCount" content="1"><button id="rateit-reset-9" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-9" style="display: none;"><span></span></button><div id="rateit-range-9" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-9" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
-                                            
-                                        </div>
-                                    </div>
-                                    <meta itemprop="productID" content="24056">
-                                        <meta itemprop="brand" content="sharecode.vn">
-                                        <meta itemprop="productionDate" content="2019-11-16T10:57">
-                                        <meta itemprop="category" content="WordPress">
-                                        <meta itemprop="material" content="Website">
-                                        <span itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                            <meta itemprop="priceCurrency" content="Xu">
-                                            <meta itemprop="price" content="150">
-                                            <link itemprop="availability" href="http://schema.org/InStock">
-                                        </span>
-                                </li>
-                            
-                                <li class="col-sx-12 col-sm-3" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/Product">
-                                    <div class="product-container">
-                                        <div class="left-block">
-                                            <a href="https://sharecode.vn/source-code/code-website-thiet-ke-noi-that-nha-dep-24055.htm">
-                                                <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/[link-trung-lap-20456]-code-website-thiet-ke-noi-that-nha-dep-11217.jpg" alt="Code website thiết kế nội thất nhà đẹp" title="Download Code website thiết kế nội thất nhà đẹp">
-                                                </div>
-                                            </a>
-                                            <div class="quick-view">
-                                                <a title="Download code" class="search" href="https://sharecode.vn/source-code/code-website-thiet-ke-noi-that-nha-dep-24055.htm#Download"></a>
-                                                <a id="mainbody_contentbody_contentpage_rptList_Button4_8" title="Yêu thích code này" class="heart LikeSuccess" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl08$Button4&#39;,&#39;&#39;)"></a>
-                                                <a onclick="createCaptcha();" id="mainbody_contentbody_contentpage_rptList_Button5_8" title="Lưu code lại cho tôi" class="compare" data-toggle="modal" data-target="#LoginForm" role="button" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl08$Button5&#39;,&#39;&#39;)"></a>
-                                                
-                                            </div>
-                                            <div class="downview">
-                                                <span class="view-count2">25</span>
-                                                <span class="down-count2">0</span>
-                                            </div>
-                                            <a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">WordPress</a>
-                                        </div>
-                                        <div class="right-block">
-                                            <a itemprop="url" href="https://sharecode.vn/source-code/code-website-thiet-ke-noi-that-nha-dep-24055.htm">
-                                                <h2 class="product-name bold" itemprop="name" title="Download Code website thiết kế nội thất nhà đẹp">Code website thiết kế nội thất nhà đẹp</h2>
-                                            </a>
-                                            <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"><meta itemprop="ratingValue" content="5"><meta itemprop="reviewCount" content="1"><button id="rateit-reset-10" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-10" style="display: none;"><span></span></button><div id="rateit-range-10" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-10" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
-                                            
-                                        </div>
-                                    </div>
-                                    <meta itemprop="productID" content="24055">
-                                        <meta itemprop="brand" content="sharecode.vn">
-                                        <meta itemprop="productionDate" content="2019-11-16T10:51">
-                                        <meta itemprop="category" content="WordPress">
-                                        <meta itemprop="material" content="Website">
-                                        <span itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                            <meta itemprop="priceCurrency" content="Xu">
-                                            <meta itemprop="price" content="150">
-                                            <link itemprop="availability" href="http://schema.org/InStock">
-                                        </span>
-                                </li>
-                            
-                                <li class="col-sx-12 col-sm-3" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/Product">
-                                    <div class="product-container">
-                                        <div class="left-block">
-                                            <a href="https://sharecode.vn/source-code/code-nha-hang-dep-va-chuan-24054.htm">
-                                                <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/full-code-web-nha-hang-dep-va-chuan-11105.jpg" alt="Full Code web nhà hàng đẹp và chuẩn" title="Download Full Code web nhà hàng đẹp và chuẩn">
-                                                </div>
-                                            </a>
-                                            <div class="quick-view">
-                                                <a title="Download code" class="search" href="https://sharecode.vn/source-code/code-nha-hang-dep-va-chuan-24054.htm#Download"></a>
-                                                <a id="mainbody_contentbody_contentpage_rptList_Button4_9" title="Yêu thích code này" class="heart LikeSuccess" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl09$Button4&#39;,&#39;&#39;)"></a>
-                                                <a onclick="createCaptcha();" id="mainbody_contentbody_contentpage_rptList_Button5_9" title="Lưu code lại cho tôi" class="compare" data-toggle="modal" data-target="#LoginForm" role="button" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl09$Button5&#39;,&#39;&#39;)"></a>
-                                                
-                                            </div>
-                                            <div class="downview">
-                                                <span class="view-count2">30</span>
-                                                <span class="down-count2">0</span>
-                                            </div>
-                                            <a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">WordPress</a>
-                                        </div>
-                                        <div class="right-block">
-                                            <a itemprop="url" href="https://sharecode.vn/source-code/code-nha-hang-dep-va-chuan-24054.htm">
-                                                <h2 class="product-name bold" itemprop="name" title="Download Full Code web nhà hàng đẹp và chuẩn">Full Code web nhà hàng đẹp và chuẩn</h2>
-                                            </a>
-                                            <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"><meta itemprop="ratingValue" content="5"><meta itemprop="reviewCount" content="1"><button id="rateit-reset-11" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-11" style="display: none;"><span></span></button><div id="rateit-range-11" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-11" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
-                                            
-                                        </div>
-                                    </div>
-                                    <meta itemprop="productID" content="24054">
-                                        <meta itemprop="brand" content="sharecode.vn">
-                                        <meta itemprop="productionDate" content="2019-11-16T10:43">
-                                        <meta itemprop="category" content="WordPress">
-                                        <meta itemprop="material" content="Website">
-                                        <span itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                            <meta itemprop="priceCurrency" content="Xu">
-                                            <meta itemprop="price" content="150">
-                                            <link itemprop="availability" href="http://schema.org/InStock">
-                                        </span>
-                                </li>
-                            
-                                <li class="col-sx-12 col-sm-3" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/Product">
-                                    <div class="product-container">
-                                        <div class="left-block">
-                                            <a href="https://sharecode.vn/source-code/code-phong-kham-dong-y-dep-24053.htm">
-                                                <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/code-phong-kham-dong-y-dep-102039.jpg" alt="Code phòng khám đông y đẹp" title="Download Code phòng khám đông y đẹp">
-                                                </div>
-                                            </a>
-                                            <div class="quick-view">
-                                                <a title="Download code" class="search" href="https://sharecode.vn/source-code/code-phong-kham-dong-y-dep-24053.htm#Download"></a>
-                                                <a id="mainbody_contentbody_contentpage_rptList_Button4_10" title="Yêu thích code này" class="heart LikeSuccess" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl10$Button4&#39;,&#39;&#39;)"></a>
-                                                <a onclick="createCaptcha();" id="mainbody_contentbody_contentpage_rptList_Button5_10" title="Lưu code lại cho tôi" class="compare" data-toggle="modal" data-target="#LoginForm" role="button" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl10$Button5&#39;,&#39;&#39;)"></a>
-                                                
-                                            </div>
-                                            <div class="downview">
-                                                <span class="view-count2">18</span>
-                                                <span class="down-count2">0</span>
-                                            </div>
-                                            <a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">WordPress</a>
-                                        </div>
-                                        <div class="right-block">
-                                            <a itemprop="url" href="https://sharecode.vn/source-code/code-phong-kham-dong-y-dep-24053.htm">
-                                                <h2 class="product-name bold" itemprop="name" title="Download Code phòng khám đông y đẹp">Code phòng khám đông y đẹp</h2>
-                                            </a>
-                                            <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"><meta itemprop="ratingValue" content="5"><meta itemprop="reviewCount" content="1"><button id="rateit-reset-12" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-12" style="display: none;"><span></span></button><div id="rateit-range-12" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-12" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
-                                            
-                                        </div>
-                                    </div>
-                                    <meta itemprop="productID" content="24053">
-                                        <meta itemprop="brand" content="sharecode.vn">
-                                        <meta itemprop="productionDate" content="2019-11-16T10:20">
-                                        <meta itemprop="category" content="WordPress">
-                                        <meta itemprop="material" content="Website">
-                                        <span itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                            <meta itemprop="priceCurrency" content="Xu">
-                                            <meta itemprop="price" content="150">
-                                            <link itemprop="availability" href="http://schema.org/InStock">
-                                        </span>
-                                </li>
-                            
-                                <li class="col-sx-12 col-sm-3" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/Product">
-                                    <div class="product-container">
-                                        <div class="left-block">
-                                            <a href="https://sharecode.vn/source-code/ban-full-code-cho-thue-xe-dep-24052.htm">
-                                                <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="style/search-cate/ban-full-code-web-cho-thue-xe-dep-105626.jpg" alt="Bán full code web cho thuê xe đẹp" title="Download Bán full code web cho thuê xe đẹp">
-                                                </div>
-                                            </a>
-                                            <div class="quick-view">
-                                                <a title="Download code" class="search" href="https://sharecode.vn/source-code/ban-full-code-cho-thue-xe-dep-24052.htm#Download"></a>
-                                                <a id="mainbody_contentbody_contentpage_rptList_Button4_11" title="Yêu thích code này" class="heart LikeSuccess" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl11$Button4&#39;,&#39;&#39;)"></a>
-                                                <a onclick="createCaptcha();" id="mainbody_contentbody_contentpage_rptList_Button5_11" title="Lưu code lại cho tôi" class="compare" data-toggle="modal" data-target="#LoginForm" role="button" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl11$Button5&#39;,&#39;&#39;)"></a>
-                                                
-                                            </div>
-                                            <div class="downview">
-                                                <span class="view-count2">29</span>
-                                                <span class="down-count2">0</span>
-                                            </div>
-                                            <a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">WordPress</a>
-                                        </div>
-                                        <div class="right-block">
-                                            <a itemprop="url" href="https://sharecode.vn/source-code/ban-full-code-cho-thue-xe-dep-24052.htm">
-                                                <h2 class="product-name bold" itemprop="name" title="Download Bán full code web cho thuê xe đẹp">Bán full code web cho thuê xe đẹp</h2>
-                                            </a>
-                                            <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"><meta itemprop="ratingValue" content="5"><meta itemprop="reviewCount" content="1"><button id="rateit-reset-13" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-13" style="display: none;"><span></span></button><div id="rateit-range-13" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-13" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
-                                            
-                                        </div>
-                                    </div>
-                                    <meta itemprop="productID" content="24052">
-                                        <meta itemprop="brand" content="sharecode.vn">
-                                        <meta itemprop="productionDate" content="2019-11-16T10:10">
-                                        <meta itemprop="category" content="WordPress">
-                                        <meta itemprop="material" content="Website">
-                                        <span itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                            <meta itemprop="priceCurrency" content="Xu">
-                                            <meta itemprop="price" content="250">
-                                            <link itemprop="availability" href="http://schema.org/InStock">
-                                        </span>
-                                </li>
-                            
+                            </c:forEach>
+                                
                     </ul>
             </div>
             <div class="sortPagiBar">
                 <div class="bottom-pagination">
-                    <nav id="mainbody_contentbody_contentpage_PaggingBottom"><ul class="pagination"><li class="active"><a href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm?page=1">1</a></li><li><a href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm?page=2">2</a></li><li><a href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm?page=3">3</a></li><li><a href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm?page=4">4</a></li><li><a href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm?page=5">5</a></li><li><a href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm?page=6">6</a></li><li><a href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm?page=2">»</a></li><li><a href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm?page=111"> Trang Cuối </a></li></ul></nav>
+                    <nav id="mainbody_contentbody_contentpage_PaggingBottom">
+                    	<ul class="pagination">
+                    		<c:if test = "${totalpages > 7 }">
+	                    		<c:if test = "${curpage > 1 }">
+	                    			<li><a href="<c:url value = "${req }"><c:param name = "page" value = "1"/><c:param name = "key" value = "${key }"/></c:url>">Trang đầu</a></li>
+	                    			<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${curpage-1 }"/><c:param name = "key" value = "${key }"/></c:url>">«</a></li>
+	                    		</c:if>
+		                    	<c:if test = "${curpage == 1 }">
+		                   			<c:forEach var = "num" begin = "1" end = "6">
+		                   				<c:if test = "${num == 1 }">
+		                   					<li class="active"><a href="<c:url value = "${req }"><c:param name = "page" value = "1"/><c:param name = "key" value = "${key }"/></c:url>">1</a></li>
+		                   				</c:if>
+			                    		<c:if test = "${num != 1 }">
+			                    			<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
+			                    		</c:if>
+		                    		
+		                   			</c:forEach>
+		                   		</c:if>
+		                   		<c:if test = "${curpage == totalpages }">
+		                   			<c:forEach var = "num" begin = "${totalpages-6 }" end = "${totalpages }">
+		                   				<c:if test = "${num == totalpages }">
+		                   					<li class="active"><a href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
+		                   				</c:if>
+			                    		<c:if test = "${num != totalpages }">
+			                    			<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
+			                    		</c:if>
+		                    		
+		                   			</c:forEach>
+		                   		</c:if>
+		                   		<c:if test = "${curpage != 1 && curpage != totalpages }">
+		                   			<c:forEach var = "num" begin = "${curpage - 3 }" end = "${curpage + 3 }">
+			                    		<c:if test = "${num == curpage }">
+		                   					<li class="active"><a href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
+		                   				</c:if>
+			                    		<c:if test = "${num != curpage }">
+			                    			<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
+			                    		</c:if>
+		                   			</c:forEach>
+		                   		</c:if>
+		                   		
+								<c:if test = "${curpage != totalpages }">
+		                   		<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${curpage+1 }"/><c:param name = "key" value = "${key }"/></c:url>">»</a></li>
+		                   		<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${totalpages }"/><c:param name = "key" value = "${key }"/></c:url>"> Trang Cuối </a></li>
+		                   		</c:if>
+		                   	</c:if>
+		                   	<c:if test = "${totalpages <= 7 }">
+		                   		<c:if test = "${curpage > 1 }">
+	                    			<li><a href="<c:url value = "${req }"><c:param name = "page" value = "1"/><c:param name = "key" value = "${key }"/></c:url>">Trang đầu</a></li>
+	                    			<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${curpage-1 }"/><c:param name = "key" value = "${key }"/></c:url>">«</a></li>
+	                    		</c:if>
+		                    	<c:if test = "${curpage == 1 }">
+		                   			<c:forEach var = "num" begin = "1" end = "${totalpages }">
+		                   				<c:if test = "${num == 1 }">
+		                   					<li class="active"><a href="<c:url value = "${req }"><c:param name = "page" value = "1"/><c:param name = "key" value = "${key }"/></c:url>">1</a></li>
+		                   				</c:if>
+			                    		<c:if test = "${num != 1 }">
+			                    			<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
+			                    		</c:if>
+		                    		
+		                   			</c:forEach>
+		                   		</c:if>
+		                   		<c:if test = "${curpage == totalpages }">
+		                   			<c:forEach var = "num" begin = "1" end = "${totalpages }">
+		                   				<c:if test = "${num == totalpages }">
+		                   					<li class="active"><a href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
+		                   				</c:if>
+			                    		<c:if test = "${num != totalpages }">
+			                    			<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
+			                    		</c:if>
+		                    		
+		                   			</c:forEach>
+		                   		</c:if>
+		                   		<c:if test = "${curpage != 1 && curpage != totalpages }">
+		                   			<c:forEach var = "num" begin = "1" end = "${curpage }">
+			                    		<c:if test = "${num == curpage }">
+		                   					<li class="active"><a href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
+		                   				</c:if>
+			                    		<c:if test = "${num != curpage }">
+			                    			<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
+			                    		</c:if>
+		                   			</c:forEach>
+		                   		</c:if>
+		                   		
+								<c:if test = "${curpage != totalpages }">
+		                   		<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${curpage+1 }"/><c:param name = "key" value = "${key }"/></c:url>">»</a></li>
+		                   		<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${totalpages}"/><c:param name = "key" value = "${key }"/></c:url>"> Trang Cuối </a></li>
+		                   		</c:if>
+		                   	</c:if>
+                    	</ul>
+                    </nav>
                 </div>
                 <div class="sort-product  box-sort2">
-                    <select name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$ddlSort" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$ddlSort\&#39;,\&#39;\&#39;)&#39;, 0)" id="mainbody_contentbody_contentpage_ddlSort">
-		<option selected="selected" value="New">Mới nhất</option>
-		<option value="View">Xem nhiều</option>
-		<option value="Down">Tải nhiều</option>
-
-	</select>
                     <div class="sort-product-icon">
                         <i class="fa fa-sort-alpha-asc"></i>
                     </div>
@@ -945,126 +577,35 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 	
         <div id="view-product-list" class="view-product-list">
             <h2 class="page-heading">
-                <span id="mainbody_contentbody_contentpage_ucSuggest_divTitle" class="page-heading-title">CODE GỢI Ý CHO BẠN</span>
+                <span id="mainbody_contentbody_contentpage_ucSuggest_divTitle" class="page-heading-title">TÀI LIỆU XEM NHIỀU</span>
             </h2>
             <ul class="row product-list style2 grid">
-                
+                <c:forEach var = "doc" items = "${topviewdocs}">
                         <li class="col-sx-12 col-sm-3">
                             <div class="product-container">
                                 <div class="left-block">
-                                    <a href="https://sharecode.vn/source-code/chat-in-lan-by-progaming-c-7056.htm">
+                                    <a href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
                                         <div class="img-box">
-                                            <img class="img-responsive" src="style/search-cate/img_code.jpg" alt="Chat In Lan By Progaming C#" title="Download Chat In Lan By Progaming C#">
+                                            <img class="img-responsive" src="${doc.cover }" alt="${doc.docName }" title="${doc.docName }">
                                         </div>
                                     </a>
                                     <div class="quick-view">
-                                        <a title="Download code" class="search" href="https://sharecode.vn/source-code/chat-in-lan-by-progaming-c-7056.htm#Download"></a>
-                                        <a id="mainbody_contentbody_contentpage_ucSuggest_rptOtherCode_Button4_0" title="Yêu thích code này" class="heart LikeSuccess" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$ucSuggest$rptOtherCode$ctl00$Button4&#39;,&#39;&#39;)"></a>
-                                        <a onclick="createCaptcha();" id="mainbody_contentbody_contentpage_ucSuggest_rptOtherCode_Button5_0" title="Lưu code lại cho tôi" class="compare" data-toggle="modal" data-target="#LoginForm" role="button" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$ucSuggest$rptOtherCode$ctl00$Button5&#39;,&#39;&#39;)"></a>
-                                        
+
                                         
                                     </div>
                                     <div class="downview">
-                                        <span class="view-count2">1114</span>
-                                        <span class="down-count2">5</span>
+                                        <span class="view-count2">${doc.view }</span>
+                                        <span class="down-count2">${doc.download }</span>
                                     </div>
-                                    <a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-17.htm">Visual C#</a>
+                                    <a class="cate" href="<c:url value = "/category"><c:param name = "id" value = "${doc.cateId }"/></c:url>">${doc.category.categoryName }</a>
                                 </div>
                                 <div class="right-block">
-                                    <a href="https://sharecode.vn/source-code/chat-in-lan-by-progaming-c-7056.htm">
-                                        <h3 class="product-name bold" title="Download Chat In Lan By Progaming C#">Chat In Lan By Progaming C#</h3>
+                                    <a href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
+                                        <h3 class="product-name bold" title="${doc.docName }">${doc.docName }</h3>
                                     </a>
-                                   <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true"><button id="rateit-reset-14" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-14" style="display: none;"><span></span></button><div id="rateit-range-14" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-14" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
                             </div>
                         </div></li>
-                    
-                        <li class="col-sx-12 col-sm-3">
-                            <div class="product-container">
-                                <div class="left-block">
-                                    <a href="https://sharecode.vn/source-code/he-thong-quan-ly-so-dien-thoai-7061.htm">
-                                        <div class="img-box">
-                                            <img class="img-responsive" src="style/search-cate/he-thong-quan-ly-so-dien-thoai-114448.jpg" alt="HỆ THỐNG QUẢN LÝ SỐ ĐIỆN THOẠI" title="Download HỆ THỐNG QUẢN LÝ SỐ ĐIỆN THOẠI">
-                                        </div>
-                                    </a>
-                                    <div class="quick-view">
-                                        <a title="Download code" class="search" href="https://sharecode.vn/source-code/he-thong-quan-ly-so-dien-thoai-7061.htm#Download"></a>
-                                        <a id="mainbody_contentbody_contentpage_ucSuggest_rptOtherCode_Button4_1" title="Yêu thích code này" class="heart LikeSuccess" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$ucSuggest$rptOtherCode$ctl01$Button4&#39;,&#39;&#39;)"></a>
-                                        <a onclick="createCaptcha();" id="mainbody_contentbody_contentpage_ucSuggest_rptOtherCode_Button5_1" title="Lưu code lại cho tôi" class="compare" data-toggle="modal" data-target="#LoginForm" role="button" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$ucSuggest$rptOtherCode$ctl01$Button5&#39;,&#39;&#39;)"></a>
-                                        
-                                        
-                                    </div>
-                                    <div class="downview">
-                                        <span class="view-count2">1518</span>
-                                        <span class="down-count2">4</span>
-                                    </div>
-                                    <a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/javajsp-20.htm">Java/JSP</a>
-                                </div>
-                                <div class="right-block">
-                                    <a href="https://sharecode.vn/source-code/he-thong-quan-ly-so-dien-thoai-7061.htm">
-                                        <h3 class="product-name bold" title="Download HỆ THỐNG QUẢN LÝ SỐ ĐIỆN THOẠI">HỆ THỐNG QUẢN LÝ SỐ ĐIỆN THOẠI</h3>
-                                    </a>
-                                   <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true"><button id="rateit-reset-15" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-15" style="display: none;"><span></span></button><div id="rateit-range-15" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-15" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
-                            </div>
-                        </div></li>
-                    
-                        <li class="col-sx-12 col-sm-3">
-                            <div class="product-container">
-                                <div class="left-block">
-                                    <a href="https://sharecode.vn/source-code/full-code-bao-cao-phan-mem-quan-ly-rap-chieu-phim-c-7062.htm">
-                                        <div class="img-box">
-                                            <img class="img-responsive" src="style/search-cate/full-code-bao-cao-phan-mem-quan-ly-rap-chieu-phim-c-114312.jpg" alt="Full code + báo cáo " phần="" mềm="" quản="" lý="" rạp="" chiếu="" phim"="" (c#)"="" title="Download Full code + báo cáo ">
-                                        </div>
-                                    </a>
-                                    <div class="quick-view">
-                                        <a title="Download code" class="search" href="https://sharecode.vn/source-code/full-code-bao-cao-phan-mem-quan-ly-rap-chieu-phim-c-7062.htm#Download"></a>
-                                        <a id="mainbody_contentbody_contentpage_ucSuggest_rptOtherCode_Button4_2" title="Yêu thích code này" class="heart LikeSuccess" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$ucSuggest$rptOtherCode$ctl02$Button4&#39;,&#39;&#39;)"></a>
-                                        <a onclick="createCaptcha();" id="mainbody_contentbody_contentpage_ucSuggest_rptOtherCode_Button5_2" title="Lưu code lại cho tôi" class="compare" data-toggle="modal" data-target="#LoginForm" role="button" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$ucSuggest$rptOtherCode$ctl02$Button5&#39;,&#39;&#39;)"></a>
-                                        
-                                        
-                                    </div>
-                                    <div class="downview">
-                                        <span class="view-count2">5317</span>
-                                        <span class="down-count2">43</span>
-                                    </div>
-                                    <a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-17.htm">Visual C#</a>
-                                </div>
-                                <div class="right-block">
-                                    <a href="https://sharecode.vn/source-code/full-code-bao-cao-phan-mem-quan-ly-rap-chieu-phim-c-7062.htm">
-                                        <h3 class="product-name bold" title="Download Full code + báo cáo " phần="" mềm="" quản="" lý="" rạp="" chiếu="" phim"="" (c#)"="">Full code + báo cáo "Phần mềm quản lý rạp chiếu phim" (C#)</h3>
-                                    </a>
-                                   <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true"><button id="rateit-reset-16" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-16" style="display: none;"><span></span></button><div id="rateit-range-16" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-16" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
-                            </div>
-                        </div></li>
-                    
-                        <li class="col-sx-12 col-sm-3">
-                            <div class="product-container">
-                                <div class="left-block">
-                                    <a href="https://sharecode.vn/source-code/code-shop-thiet-bi-may-van-phong-dang-giao-dien-phang-ho-tro-mobile-7063.htm">
-                                        <div class="img-box">
-                                            <img class="img-responsive" src="style/search-cate/code-shop-thiet-bi-may-van-phong-dang-giao-dien-phang-ho-tro-mobile-113857.jpg" alt="Code shop thiết bị máy văn phòng dạng giao diện phẳng hỗ trợ mobile" title="Download Code shop thiết bị máy văn phòng dạng giao diện phẳng hỗ trợ mobile">
-                                        </div>
-                                    </a>
-                                    <div class="quick-view">
-                                        <a title="Download code" class="search" href="https://sharecode.vn/source-code/code-shop-thiet-bi-may-van-phong-dang-giao-dien-phang-ho-tro-mobile-7063.htm#Download"></a>
-                                        <a id="mainbody_contentbody_contentpage_ucSuggest_rptOtherCode_Button4_3" title="Yêu thích code này" class="heart LikeSuccess" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$ucSuggest$rptOtherCode$ctl03$Button4&#39;,&#39;&#39;)"></a>
-                                        <a onclick="createCaptcha();" id="mainbody_contentbody_contentpage_ucSuggest_rptOtherCode_Button5_3" title="Lưu code lại cho tôi" class="compare" data-toggle="modal" data-target="#LoginForm" role="button" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$ucSuggest$rptOtherCode$ctl03$Button5&#39;,&#39;&#39;)"></a>
-                                        
-                                        
-                                    </div>
-                                    <div class="downview">
-                                        <span class="view-count2">1547</span>
-                                        <span class="down-count2">1</span>
-                                    </div>
-                                    <a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/php-mysql-21.htm">PHP &amp; MySQL</a>
-                                </div>
-                                <div class="right-block">
-                                    <a href="https://sharecode.vn/source-code/code-shop-thiet-bi-may-van-phong-dang-giao-dien-phang-ho-tro-mobile-7063.htm">
-                                        <h3 class="product-name bold" title="Download Code shop thiết bị máy văn phòng dạng giao diện phẳng hỗ trợ mobile">Code shop thiết bị máy văn phòng dạng giao diện phẳng hỗ trợ mobile</h3>
-                                    </a>
-                                   <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true"><button id="rateit-reset-17" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-17" style="display: none;"><span></span></button><div id="rateit-range-17" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-17" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
-                            </div>
-                        </div></li>
-                    
+                    </c:forEach>
             </ul>
         </div>
     
@@ -1075,162 +616,39 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
         <div class="column col-xs-12 col-sm-3" id="left_column">
             
 <div class="block left-module">
-    <p class="title_block">CODE NỔI BẬT</p>
+    <p class="title_block">TÀI LIỆU NỔI BẬT</p>
     <div class="block_content">
         <ul class="products-block best-sell">
-            
+            <c:forEach var = "doc" items = "${topdocs }">
                     <li>
                         <div class="products-block-left">
-                            <a href="https://sharecode.vn/source-code/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-23971.htm">
-                                <img src="style/search-cate/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-112150.jpg" alt="full code website bán hàng,code website bán hàng,code bán hàng chuẩn seo,Full code bán thực phẩm chức năng chuẩn seo,share code bán hàng,Full code website bán thực phẩm chức năng" title="Download Full code website bán thực phẩm chức năng chuẩn seo">
+                            <a href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
+                                <img src="${doc.cover }" alt="${doc.docName }" title="${doc.docName }">
                             </a>
                         </div>
                         <div class="products-block-right">
                             <p class="product-name">
-                                <a href="https://sharecode.vn/source-code/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-23971.htm">
-                                    </a></p><h3 class="title2 bold" title="Download Full code website bán thực phẩm chức năng chuẩn seo"><a href="https://sharecode.vn/source-code/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-23971.htm">Full code website bán thực phẩm chức năng chuẩn seo</a></h3><a href="https://sharecode.vn/source-code/full-code-website-ban-thuc-pham-chuc-nang-chuan-seo-23971.htm">
+                                <a href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
+                                    </a></p><h3 class="title2 bold" title="${doc.docName }"><a href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">${doc.docName }</a></h3><a href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
                                 </a>
                             <p></p>
-                            <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true"><button id="rateit-reset-18" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-18" style="display: none;"><span></span></button><div id="rateit-range-18" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-18" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
                             
                         </div>
                         <div class="products-block-bottom">
-                            <div><a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">WordPress</a>
-                                <span class="alignright view-count">355</span>
-                                <span class="alignright down-count">2</span>
+                            <div><a class="cate" href="<c:url value = "/category"><c:param name = "id" value = "${doc.cateId }"/></c:url>">${doc.category.categoryName }</a>
+                                <span class="alignright view-count">${doc.view }</span>
+                                <span class="alignright down-count">${doc.download }</span>
                             </div>
                         </div>
                     </li>
-                
-                    <li>
-                        <div class="products-block-left">
-                            <a href="https://sharecode.vn/source-code/full-code-website-thuong-mai-dien-tu-ban-phu-kien-chuan-seo-23921.htm">
-                                <img src="style/search-cate/full-code-website-thuong-mai-dien-tu-ban-phu-kien-chuan-seo-151054.jpg" alt="chuẩn seo,Code thương mại điện tử,seo chuẩn,thương mại,Full Code Website thương mại điện tử" title="Download Full Code Website thương mại điện tử bán phụ kiện chuẩn seo">
-                            </a>
-                        </div>
-                        <div class="products-block-right">
-                            <p class="product-name">
-                                <a href="https://sharecode.vn/source-code/full-code-website-thuong-mai-dien-tu-ban-phu-kien-chuan-seo-23921.htm">
-                                    </a></p><h3 class="title2 bold" title="Download Full Code Website thương mại điện tử bán phụ kiện chuẩn seo"><a href="https://sharecode.vn/source-code/full-code-website-thuong-mai-dien-tu-ban-phu-kien-chuan-seo-23921.htm">Full Code Website thương mại điện tử bán phụ kiện chuẩn seo</a></h3><a href="https://sharecode.vn/source-code/full-code-website-thuong-mai-dien-tu-ban-phu-kien-chuan-seo-23921.htm">
-                                </a>
-                            <p></p>
-                            <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true"><button id="rateit-reset-19" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-19" style="display: none;"><span></span></button><div id="rateit-range-19" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-19" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
                             
-                        </div>
-                        <div class="products-block-bottom">
-                            <div><a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">WordPress</a>
-                                <span class="alignright view-count">280</span>
-                                <span class="alignright down-count">0</span>
-                            </div>
-                        </div>
-                    </li>
-                
-                    <li>
-                        <div class="products-block-left">
-                            <a href="https://sharecode.vn/source-code/mau-website-dang-tin-bat-dong-san-hien-thi-tot-tren-cac-thiet-bi-mobile-24003.htm">
-                                <img src="style/search-cate/mau-website-dang-tin-bat-dong-san-hien-thi-tot-tren-cac-thiet-bi-mobile-151317.jpg" alt="đăng tin,web bất động sản,website bất động sản" title="Download Mẫu website đăng tin bất động sản hiển thị tốt trên các thiết bị mobile">
-                            </a>
-                        </div>
-                        <div class="products-block-right">
-                            <p class="product-name">
-                                <a href="https://sharecode.vn/source-code/mau-website-dang-tin-bat-dong-san-hien-thi-tot-tren-cac-thiet-bi-mobile-24003.htm">
-                                    </a></p><h3 class="title2 bold" title="Download Mẫu website đăng tin bất động sản hiển thị tốt trên các thiết bị mobile"><a href="https://sharecode.vn/source-code/mau-website-dang-tin-bat-dong-san-hien-thi-tot-tren-cac-thiet-bi-mobile-24003.htm">Mẫu website đăng tin bất động sản hiển thị tốt trên các thiết bị mobile</a></h3><a href="https://sharecode.vn/source-code/mau-website-dang-tin-bat-dong-san-hien-thi-tot-tren-cac-thiet-bi-mobile-24003.htm">
-                                </a>
-                            <p></p>
-                            <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true"><button id="rateit-reset-20" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-20" style="display: none;"><span></span></button><div id="rateit-range-20" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-20" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
-                            
-                        </div>
-                        <div class="products-block-bottom">
-                            <div><a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">WordPress</a>
-                                <span class="alignright view-count">181</span>
-                                <span class="alignright down-count">1</span>
-                            </div>
-                        </div>
-                    </li>
-                
-                    <li>
-                        <div class="products-block-left">
-                            <a href="https://sharecode.vn/source-code/source-code-website-ban-hang-thuc-pham-hoa-qua-23966.htm">
-                                <img src="style/search-cate/[yeu-cau-bo-sung-video-demo]-source-code-website-ban-hang-thuc-pham-hoa-qua-82825.jpg" alt="code web ẩm thực,Source website,code bán hàng thực phẩm,code website bán hàng,code bán hàng,Source code website bán hàng thực phẩm hoa quả" title="Download Source code website bán hàng thực phẩm hoa quả">
-                            </a>
-                        </div>
-                        <div class="products-block-right">
-                            <p class="product-name">
-                                <a href="https://sharecode.vn/source-code/source-code-website-ban-hang-thuc-pham-hoa-qua-23966.htm">
-                                    </a></p><h3 class="title2 bold" title="Download Source code website bán hàng thực phẩm hoa quả"><a href="https://sharecode.vn/source-code/source-code-website-ban-hang-thuc-pham-hoa-qua-23966.htm">Source code website bán hàng thực phẩm hoa quả</a></h3><a href="https://sharecode.vn/source-code/source-code-website-ban-hang-thuc-pham-hoa-qua-23966.htm">
-                                </a>
-                            <p></p>
-                            <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true"><button id="rateit-reset-21" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-21" style="display: none;"><span></span></button><div id="rateit-range-21" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-21" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
-                            
-                        </div>
-                        <div class="products-block-bottom">
-                            <div><a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">WordPress</a>
-                                <span class="alignright view-count">163</span>
-                                <span class="alignright down-count">4</span>
-                            </div>
-                        </div>
-                    </li>
-                
-                    <li>
-                        <div class="products-block-left">
-                            <a href="https://sharecode.vn/source-code/code-ban-dien-thoai-cuc-dep-23934.htm">
-                                <img src="style/search-cate/code-website-ban-dien-thoai-cuc-dep-9563.jpg" alt="source code bán điện thoại đẹp,web bán điện thoại,code web bán điện thoại,code web điện thoại" title="Download Code website bán điện thoại cực đẹp">
-                            </a>
-                        </div>
-                        <div class="products-block-right">
-                            <p class="product-name">
-                                <a href="https://sharecode.vn/source-code/code-ban-dien-thoai-cuc-dep-23934.htm">
-                                    </a></p><h3 class="title2 bold" title="Download Code website bán điện thoại cực đẹp"><a href="https://sharecode.vn/source-code/code-ban-dien-thoai-cuc-dep-23934.htm">Code website bán điện thoại cực đẹp</a></h3><a href="https://sharecode.vn/source-code/code-ban-dien-thoai-cuc-dep-23934.htm">
-                                </a>
-                            <p></p>
-                            <div class="rateit rateit-bg" data-rateit-value="5" data-rateit-readonly="true"><button id="rateit-reset-22" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-22" style="display: none;"><span></span></button><div id="rateit-range-22" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-22" aria-valuemin="0" aria-valuemax="5" aria-valuenow="5" aria-readonly="true" style="width: 80px; height: 16px;"><div class="rateit-empty"></div><div class="rateit-selected" style="height: 16px; width: 80px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
-                            
-                        </div>
-                        <div class="products-block-bottom">
-                            <div><a class="cate" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">WordPress</a>
-                                <span class="alignright view-count">159</span>
-                                <span class="alignright down-count">1</span>
-                            </div>
-                        </div>
-                    </li>
+           </c:forEach>
                 
         </ul>
     </div>
 </div>
 
             
-<div class="block left-module">
-    <p class="title_block">THÔNG BÁO</p>
-    <div class="block_content">
-        <div class="layered layered-category">
-            <div class="layered-content">
-                <ul class="tree-menu">
-                    
-                            <li><a href="https://sharecode.vn/cau-hoi/cach-upload-code-hieu-qua-va-toi-uu-seo-10.htm" title="Cách UPLOAD code hiệu quả và tối ưu SEO - FAQ">
-                                <h3 class="title2 bullet">Cách UPLOAD code hiệu quả và tối ưu SEO<span class="ic_hot"></span></h3>
-                            </a></li>
-                        
-                            <li><a href="https://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm" title="Mẹo giúp bạn TĂNG DOANH THU bán source code - FAQ">
-                                <h3 class="title2 bullet">Mẹo giúp bạn TĂNG DOANH THU bán source code<span class="ic_hot"></span></h3>
-                            </a></li>
-                        
-                            <li><a href="https://sharecode.vn/cau-hoi/huong-dan-nap-tien-vao-tai-khoan-8.htm" title="Hướng dẫn NẠP TIỀN vào tài khoản - FAQ">
-                                <h3 class="title2 bullet">Hướng dẫn NẠP TIỀN vào tài khoản<span class=""></span></h3>
-                            </a></li>
-                        
-                            <li><a href="https://sharecode.vn/cau-hoi/huong-dan-rut-tien-tu-tai-khoan-7.htm" title="Hướng dẫn RÚT TIỀN từ tài khoản - FAQ">
-                                <h3 class="title2 bullet">Hướng dẫn RÚT TIỀN từ tài khoản<span class=""></span></h3>
-                            </a></li>
-                        
-                            <li><a href="https://sharecode.vn/cau-hoi/huong-dan-cach-chay-website-aspnet-tren-localhost-2.htm" title="Hướng dẫn cách chạy website ASP.Net trên Localhost - FAQ">
-                                <h3 class="title2 bullet">Hướng dẫn cách chạy website ASP.Net trên Localhost<span class=""></span></h3>
-                            </a></li>
-                        
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
 
         </div>
     </div>

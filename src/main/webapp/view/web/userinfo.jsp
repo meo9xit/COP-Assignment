@@ -636,6 +636,26 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                 </div>
                 <div id="mainbody_contentbody_contentpage_updatePhone_error" class="text-error col-sm-4 pro-top7">&nbsp;</div>
             </div>
+            <c:if test = "${actiontype eq 'create' }" >
+            <div class="form-group">
+                <label class="col-sm-5 control-label">Mật khẩu<span class="text-error">*</span></label>
+                <div class="col-sm-4">
+                    <input name="password" type="password" id="mainbody_contentbody_contentpage_updateFullName" maxlength="40" placeholder="VD: Trần Thanh Tâm" class="form-control" value="Hà Duy Hưng">
+                </div>
+                <div class="col-sm-3">
+                    <div id="updateFullName_error" class="text-error pro-top7">&nbsp;</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-5 control-label">Nhập lại mật khẩu<span class="text-error">*</span></label>
+                <div class="col-sm-4">
+                    <input name="repassword" type="password" id="mainbody_contentbody_contentpage_updateFullName" maxlength="40" placeholder="VD: Trần Thanh Tâm" class="form-control" value="Hà Duy Hưng">
+                </div>
+                <div class="col-sm-3">
+                    <div id="updateFullName_error" class="text-error pro-top7">&nbsp;</div>
+                </div>
+            </div>
+            </c:if>
             <c:if test = "${actiontype eq 'edit' }" >
             <div class="form-group">
                 <label class="col-sm-5 control-label">Ảnh đại diện</label>

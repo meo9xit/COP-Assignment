@@ -50,9 +50,9 @@ public class TopViewController extends HttpServlet {
 		Category cate = cateService.findById(id);
 		List<Document> docs = docService.findByView(curpage, 12);
 		List<Category> cates = cateService.findAll();
-		List<Document> topdownload = docService.findByDownload(1, 4);
+		List<Document> topdownload = docService.findByDownload(1, 5);
 		List<Document> topview = docService.findByView(1, 4);
-		int totalpages = docService.getCount() / 12;
+		int totalpages = (docService.getCount() % 12 != 0) ? docService.getCount()/12 +1 : docService.getCount()/12;
 		request.setAttribute("totalpages", totalpages);
 		request.setAttribute("categories", cates);
 		request.setAttribute("curpage", curpage);
@@ -60,6 +60,7 @@ public class TopViewController extends HttpServlet {
 		request.setAttribute("topviewdocs", topview);
 		request.setAttribute("topdocs", topdownload );
 		request.setAttribute("title", "Tài liệu được xem nhiều nhất");
+		request.setAttribute("req", "/topview");
 		request.getRequestDispatcher("/view/web/search-cate.jsp").forward(request, response);
 	}
 

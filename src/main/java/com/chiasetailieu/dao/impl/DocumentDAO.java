@@ -35,10 +35,10 @@ public class DocumentDAO extends GenericDAO<Document> implements IDocumentDAO{
 	}
 
 	@Override
-	public List<Document> findByName(String name) {
+	public List<Document> findByName(String name,int curpage, int docperpage) {
 		// TODO Auto-generated method stub
-		String sql = "select * from document where doc_name like ?";
-		List<Document> docs = query(sql, new DocumentMapper(), "%"+name+"%");
+		String sql = "select * from document where doc_name like ? limit ?, ?";
+		List<Document> docs = query(sql, new DocumentMapper(), "%"+name+"%", curpage, docperpage);
 		return docs.isEmpty()?null:docs;
 	}
 
