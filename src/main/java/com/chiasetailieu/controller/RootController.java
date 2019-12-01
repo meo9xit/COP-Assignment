@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class RootController
  */
-@WebServlet("/hung")
+@WebServlet("/")
 public class RootController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
