@@ -14,6 +14,7 @@ public class FeedbackMapper implements GenericMapper<Feedback>{
 			feedback.setId(rs.getLong("feedback_id"));
 			feedback.setUserId(rs.getLong("user_id"));
 			feedback.setContent(rs.getString("content"));
+			feedback.setCreatedDate(rs.getDate("create_date"));
 			return feedback;
 		} catch (SQLException e) {
 			// TODO: handle exception

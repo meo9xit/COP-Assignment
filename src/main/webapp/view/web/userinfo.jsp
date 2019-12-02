@@ -2,7 +2,7 @@
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="dec"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<c:url var="APIurl" value="/FeedbackAPI" />
 
 <!DOCTYPE html>
 <!-- saved from url=(0042)https://sharecode.vn/thong-tin-ca-nhan.htm -->
@@ -890,19 +890,34 @@ function performsubmit() {
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <div id="contact-box">
-                                    <div class="introduce-title">Gửi hỗ trợ - Góp ý</div>
-                                    <div>
-                                        <textarea name="ctl00$ctl00$ctl00$txtComment" rows="2" cols="20" id="txtComment" class="form-control send-sp" placeholder="Nội dung &amp; liên hệ của bạn (Email, ĐT)" style="height:60px;width:100%;"></textarea>
-                                        <div id="errCmt" class="text-error"></div>
-                                    </div>
-                                    <br>
-                                    <div>
-                                        <a onclick=" return fosp_cmt();" id="btnSend" class="button-orange" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$btnSend&#39;,&#39;&#39;)"><i class="fa fa-paper-plane fa-lg" aria-hidden="true"></i>&nbsp; GỬI NHANH</a>
-                                    </div>
-                                    <br>
-                                    <a href="https://sharecode.vn/dang-ki-nhan-code.htm" class="agreen title5"><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;Yêu cầu và Đăng kí nhận code</a>
-                                </div>
+                                <form id="formSubmit">
+									<label for="email_address">Gửi hỗ trợ - Góp ý</label>
+									<div class="form-group">
+										<c:if test = "${ empty loginedUser}">
+											 <div class="form-line">
+												<input type="hidden" id="userId" class="form-control"
+													name="userId" placeholder="Enter userId!"
+													value="0">
+											</div>
+										</c:if>
+										<c:if test = "${ not empty loginedUser }">
+											 <div class="form-line">
+												<input type="hidden" id="userId" class="form-control"
+													name="userId" placeholder="Enter userId!"
+													value="${loginedUser.userid}">
+											</div>
+										</c:if>
+										
+										<div class="form-line">
+											<input type="text" id="content" class="form-control"
+												name="content" placeholder="Enter feedback content!"
+												value="${model.content}">
+										</div>
+									</div>
+									<br> <input type="button"
+										class="btn btn-primary m-t-15 waves-effect" id="btnAdd"
+										value="AddFeedback" />
+								</form>
                             </div>
                         </div>
                         <div id="trademark-box" class="row">
@@ -977,7 +992,34 @@ function performsubmit() {
             $('#hdLangFilter').val($("#slSearch").val());
         });
     </script>
-    
+    <script>
+		$('#btnAdd').click(function(e) {
+			e.preventDefault();
+			var data = {};
+			var formData = $('#formSubmit').serializeArray();
+			$.each(formData, function(i, v) {
+				data["" + v.name + ""] = v.value;
+			});
+			console.info(data);
+			addNew(data);
+		});
+		function addNew(data) {
+			$
+					.ajax({
+						url : '${APIurl}',
+						type : 'POST',
+						contentType : 'application/json',
+						data : JSON.stringify(data),
+						dataType : 'json',
+						success : function(result) {
+							window.location.href = "/chiasetailieu/user-info";
+						},
+						error : function(error) {
+							window.location.href = "/chiasetailieu/user-info?feedback";
+						}
+					});
+		}
+	</script>
     <script type="text/javascript">
         $('.carousel').carousel({
             interval: 5000

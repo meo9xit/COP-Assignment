@@ -30,8 +30,8 @@ public class FeedbackDAO extends GenericDAO<Feedback> implements IFeedbackDAO{
 	@Override
 	public Long save(Feedback fb) {
 		// TODO Auto-generated method stub
-		String sql = "insert into feedback (feedback_id,user_id,content, create_date) values (?,?,?,?) ";
-		return insert(sql, fb.getId(),fb.getUserId(),fb.getContent(), fb.getCreatedDate());		
+		String sql = "insert into feedback (user_id,content, create_date) values (?,?,?) ";
+		return insert(sql, fb.getUserId(),fb.getContent(), fb.getCreatedDate());		
 	}
 
 	@Override

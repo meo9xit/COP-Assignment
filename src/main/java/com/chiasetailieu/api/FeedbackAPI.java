@@ -49,7 +49,8 @@ public class FeedbackAPI extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("application/json");
 		Feedback fb = HttpUtil.of(request.getReader()).toModel(Feedback.class);
-		fb.setUser((User)SessionUtil.getInstance().getValue(request, "loginedUser"));
+//		fb.setUser((User)SessionUtil.getInstance().getValue(request, "loginedUser"));
+//		fb.setUserId((Long)SessionUtil.getInstance().getValue(request, "loginedUser.userId"));
 		fb.setCreatedDate(new java.sql.Date(System.currentTimeMillis()));
 		fb = feedbackService.save(fb);
 		mapper.writeValue(response.getOutputStream(), fb);
