@@ -472,8 +472,6 @@ transform
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-	<form method="post" action="https://sharecode.vn/thong-tin-ca-nhan.htm"
-		id="form1" enctype="multipart/form-data">
 
 
 		<script type="text/javascript">
@@ -1143,120 +1141,129 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 						<form id="userinfo-form"
 							action="<c:url value = "${actionlink }"/> " method="post"
 							enctype="multipart/form-data">
-							<div id="mainbody_contentbody_contentpage_panDefaultButton"
-								onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;mainbody_contentbody_contentpage_btnUpdate&#39;)">
-
-								<div class="form-horizontal">
-									<div class="form-group">
-										<label class="col-sm-5 control-label">Email đăng kí</label>
-										<div class="col-sm-5  pro-top7">
-											<b id="mainbody_contentbody_contentpage_updateEmail"
-												class="green">${loginedUser.email }</b>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-sm-5 control-label">Họ và tên<span
-											class="text-error">*</span></label>
-										<div class="col-sm-4">
-											<input name="name" type="text"
-												id="mainbody_contentbody_contentpage_updateFullName"
-												maxlength="40" placeholder="VD: Trần Thanh Tâm"
-												class="form-control" value="Hà Duy Hưng">
-										</div>
-										<div class="col-sm-3">
-											<div id="updateFullName_error" class="text-error pro-top7">&nbsp;</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-sm-5 control-label">Tên hiển thị<span
-											class="text-error">*</span></label>
-										<div class="col-sm-4">
-											<input name="username" type="text"
-												id="mainbody_contentbody_contentpage_updateUserName"
-												placeholder="VD: ThanhTam92" maxlength="40"
-												class="form-control" value="meo9xit">
-										</div>
-										<div class="col-sm-3">
-											<div id="updateUserName_error" class="text-error pro-top7">&nbsp;</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-sm-5 control-label">Số điện thoại<span
-											class="text-error">*</span></label>
-										<div class="col-sm-3">
-											<input name="phonenumber" type="text"
-												id="mainbody_contentbody_contentpage_updatePhone"
-												maxlength="10" placeholder="VD: 03... or 09.."
-												class="form-control" value="0328864555">
-										</div>
-										<div id="mainbody_contentbody_contentpage_updatePhone_error"
-											class="text-error col-sm-4 pro-top7">&nbsp;</div>
-									</div>
-									<c:if test="${actiontype eq 'create' }">
-										<div class="form-group">
-											<label class="col-sm-5 control-label">Mật khẩu<span
-												class="text-error">*</span></label>
-											<div class="col-sm-4">
-												<input name="password" type="password"
-													id="mainbody_contentbody_contentpage_updateFullName"
-													maxlength="40" placeholder="VD: Trần Thanh Tâm"
-													class="form-control" value="Hà Duy Hưng">
-											</div>
-											<div class="col-sm-3">
-												<div id="updateFullName_error" class="text-error pro-top7">&nbsp;</div>
-											</div>
-										</div>
-										<div class="form-group">
-											<label class="col-sm-5 control-label">Nhập lại mật
-												khẩu<span class="text-error">*</span>
-											</label>
-											<div class="col-sm-4">
-												<input name="repassword" type="password"
-													id="mainbody_contentbody_contentpage_updateFullName"
-													maxlength="40" placeholder="VD: Trần Thanh Tâm"
-													class="form-control" value="Hà Duy Hưng">
-											</div>
-											<div class="col-sm-3">
-												<div id="updateFullName_error" class="text-error pro-top7">&nbsp;</div>
-											</div>
-										</div>
-									</c:if>
-									<c:if test="${actiontype eq 'edit' }">
-										<div class="form-group">
-											<label class="col-sm-5 control-label">Ảnh đại diện</label>
-											<div class="col-sm-5">
-												<img src="style/userinfo/avanta2.png"
-													id="mainbody_contentbody_contentpage_Avanta"
-													class="pro-img" width="90" height="90"
-													alt="meo9xit - Hà Duy Hưng" title="Hà Duy Hưng">
-											</div>
-										</div>
-									</c:if>
-								</div>
-								<div class="form-group">
-									<label class="col-sm-5 control-label">Chọn ảnh khác</label>
-									<div class="col-sm-5  pro-top7">
-										<input type="file" name="avatar"
-											id="mainbody_contentbody_contentpage_fulImage"
-											title="Bạn hãy chọn ảnh ở đây"
-											onchange="javascript:ImageURL();" />
-									</div>
-								</div>
-
-								<div class="form-group">
-									<div class="col-sm-offset-5 col-sm-6">
-										<a href="https://sharecode.vn/doi-mat-khau.htm"
-											class="aorange">Đổi mật khẩu mới</a>
-									</div>
-								</div>
-							</div>
+							<div id="mainbody_contentbody_contentpage_panDefaultButton" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;mainbody_contentbody_contentpage_btnUpdate&#39;)">
+	
+						        <div class="form-horizontal">
+						            <div class="form-group">
+						                <label class="col-sm-5 control-label">Email đăng kí</label>
+						                <div class="col-sm-5  pro-top7">
+						                	<c:if test = "${actiontype == 'edit' }">
+						                    	<b id="mainbody_contentbody_contentpage_updateEmail" class="green">${loginedUser.email }</b>
+					                		</c:if>
+					                		<c:if test = "${actiontype == 'create' }">
+					                			<input name="email" type="email" id="email" maxlength="40" placeholder="VD: Trần Thanh Tâm" class="form-control" value="${loginedUser.realname }">
+					                		</c:if>
+					                	</div>
+						            </div>
+						            <div class="form-group">
+						                <label class="col-sm-5 control-label">Họ và tên<span class="text-error">*</span></label>
+						                <div class="col-sm-4">
+						                    <input name="realname" type="text" id="mainbody_contentbody_contentpage_updateFullName" maxlength="40" placeholder="VD: Trần Thanh Tâm" class="form-control" value="${loginedUser.realname }">
+						                </div>
+						                <div class="col-sm-3">
+						                    <div id="updateFullName_error" class="text-error pro-top7">&nbsp;</div>
+						                </div>
+						            </div>
+						            <div class="form-group">
+						                <label class="col-sm-5 control-label">Tên tài khoản<span class="text-error">*</span></label>
+						                <div class="col-sm-4">
+						                    <input name="username" type="text" id="mainbody_contentbody_contentpage_updateUserName" placeholder="VD: ThanhTam92" maxlength="40" class="form-control" value="meo9xit">
+						                </div>
+						                <div class="col-sm-3">
+						                    <div id="updateUserName_error" class="text-error pro-top7">&nbsp;</div>
+						                </div>
+						            </div>
+						   
+						            <c:if test = "${actiontype eq 'create' }" >
+						            <div class="form-group">
+						                <label class="col-sm-5 control-label">Mật khẩu<span class="text-error">*</span></label>
+						                <div class="col-sm-4">
+						                    <input name="password" type="password" id="mainbody_contentbody_contentpage_updateFullName" maxlength="40" placeholder="VD: Trần Thanh Tâm" class="form-control" value="Hà Duy Hưng">
+						                </div>
+						                <div class="col-sm-3">
+						                    <div id="updateFullName_error" class="text-error pro-top7">&nbsp;</div>
+						                </div>
+						            </div>
+						            <div class="form-group">
+						                <label class="col-sm-5 control-label">Nhập lại mật khẩu<span class="text-error">*</span></label>
+						                <div class="col-sm-4">
+						                    <input name="repassword" type="password" id="mainbody_contentbody_contentpage_updateFullName" maxlength="40" placeholder="VD: Trần Thanh Tâm" class="form-control" value="Hà Duy Hưng">
+						                </div>
+						                <div class="col-sm-3">
+						                    <div id="updateFullName_error" class="text-error pro-top7">&nbsp;</div>
+						                </div>
+						            </div>
+						            </c:if>
+						            <c:if test = "${actiontype eq 'edit' }" >
+						            <div class="form-group">
+						                <label class="col-sm-5 control-label">Ảnh đại diện</label>
+						                <div class="col-sm-5">
+						                    <img src="style/userinfo/avanta2.png" id="mainbody_contentbody_contentpage_Avanta" class="pro-img" width="90" height="90" alt="meo9xit - Hà Duy Hưng" title="Hà Duy Hưng">
+						                </div>
+						            </div>
+						            <div class="form-group">
+						                <label class="col-sm-5 control-label">Chọn ảnh khác</label>
+						                <div class="col-sm-5  pro-top7">
+						                    <input type="file" name="avatar" id="mainbody_contentbody_contentpage_fulImage" title="Bạn hãy chọn ảnh ở đây" onchange="javascript:ImageURL();" />
+						                </div>
+						            </div>
+						            <div class="form-group">
+						                <div class="col-sm-offset-5 col-sm-6">
+						                    <a href="https://sharecode.vn/doi-mat-khau.htm" class="aorange">Đổi mật khẩu mới</a>
+						                </div>
+						            </div>
+						            <div class="form-group line-h">
+						                <div class="col-sm-offset-5 col-sm-6">
+						                    <a onclick="performsubmit();" id="mainbody_contentbody_contentpage_btnUpdate" class="button-orange" ><i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp; Cập nhật thông tin</a>
+						                </div>
+						            </div>
+						            </c:if>
+						            <c:if test = "${actiontype eq 'create' }" >
+						            	<div class="form-group line-h">
+						                	<div class="col-sm-offset-5 col-sm-6">
+						                    	<a onclick="performsubmit();" id="mainbody_contentbody_contentpage_btnUpdate" class="button-orange" ><i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp; Đăng ký</a>
+						                	</div>
+						            	</div>
+						            </c:if>
+						        </div>
+    
+</div>
 						</form>
-						<script type="text/javascript">
+<script type="text/javascript">
 function performsubmit() {
 	if(validate_update())
 	  	document.getElementById("userinfo-form").submit();
 	}
 </script>
+
+<script>
+		$('#btnAdd').click(function(e) {
+			e.preventDefault();
+			var data = {};
+			var formData = $('#formSubmit').serializeArray();
+			$.each(formData, function(i, v) {
+				data["" + v.name + ""] = v.value;
+			});
+			console.info(data);
+			addNew(data);
+		});
+		function addNew(data) {
+			$
+					.ajax({
+						url : '${APIurl}',
+						type : 'POST',
+						contentType : 'application/json',
+						data : JSON.stringify(data),
+						dataType : 'json',
+						success : function(result) {
+							window.location.href = "/chiasetailieu/admin-user";
+						},
+						error : function(error) {
+							window.location.href = "/chiasetailieu/admin-user?type=add";
+						}
+					});
+		}
+	</script>
 						<br> <br>
 
 					</div>
@@ -1373,6 +1380,8 @@ function performsubmit() {
 
 			</div>
 		</div>
+		
+		
 
 
 
@@ -1598,7 +1607,6 @@ function performsubmit() {
 			</footer>
 
 		</div>
-	</form>
 
 	<a href="https://sharecode.vn/thong-tin-ca-nhan.htm#"
 		class="scroll_top" title="Lên đầu" style="display: none;"></a>
