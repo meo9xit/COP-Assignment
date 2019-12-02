@@ -18,7 +18,7 @@ import com.chiasetailieu.service.IDocumentService;
 /**
  * Servlet implementation class TopDownloadController
  */
-@WebServlet("/TopDownloadController")
+@WebServlet("/topdownload")
 public class TopDownloadController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -50,9 +50,9 @@ public class TopDownloadController extends HttpServlet {
 		Category cate = cateService.findById(id);
 		List<Document> docs = docService.findByDownload(curpage, 12);
 		List<Category> cates = cateService.findAll();
-		List<Document> topdownload = docService.findByDownload(1, 4);
+		List<Document> topdownload = docService.findByDownload(1, 5);
 		List<Document> topview = docService.findByView(1, 4);
-		int totalpages = docService.getCount() / 12;
+		int totalpages = (docService.getCount() % 12 != 0) ? docService.getCount()/12 +1 : docService.getCount()/12;
 		request.setAttribute("totalpages", totalpages);
 		request.setAttribute("categories", cates);
 		request.setAttribute("curpage", curpage);
@@ -61,6 +61,7 @@ public class TopDownloadController extends HttpServlet {
 		request.setAttribute("topdocs", topdownload );
 		request.setAttribute("title", "Tài liệu được tải nhiều nhất");
 		request.setAttribute("cates", cates);
+		request.setAttribute("req", "/topdownload");
 		request.getRequestDispatcher("/view/web/search-cate.jsp").forward(request, response);
 	}
 

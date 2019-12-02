@@ -8,7 +8,7 @@ import com.chiasetailieu.model.Document;
 public interface IDocumentService {
 	Document save(Document doc);
 	Document findOneById(Long id);
-	List<Document> findByName(String name);
+	List<Document> findByName(String name, int curpage, int docperpage);
 	List<Document> findByCategory(Category cate, int curpage, int docperpage);
 	List<Document> findAll();
 	void delete (Document doc);

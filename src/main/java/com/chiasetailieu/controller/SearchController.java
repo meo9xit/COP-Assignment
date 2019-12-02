@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.chiasetailieu.model.Category;
 import com.chiasetailieu.model.Document;
+import com.chiasetailieu.service.ICategoryService;
 import com.chiasetailieu.service.IDocumentService;
 
 /**
@@ -21,6 +23,9 @@ public class SearchController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	@Inject
 	private IDocumentService docService;
+	
+	@Inject
+	private ICategoryService cateService;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -38,9 +43,30 @@ public class SearchController extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		request.setCharacterEncoding("UTF-8");
 		String keyword = request.getParameter("key");
-		List<Document> docs = docService.findByName(keyword);
-		request.setAttribute("searchresult", docs);
-		request.getRequestDispatcher("/view/web/search.jsp").forward(request, response);
+		String param = request.getParameter("page");
+		int curpage;
+		if(param != null) {
+			curpage = Integer.parseInt(param);
+		} else {
+			curpage = 1;
+		}
+		Long id = Long.parseLong(request.getParameter("id"));
+		List<Document> docs = docService.findByName(keyword,curpage,12);
+		Category cate = cateService.findById(id);
+		List<Category> cates = cateService.findAll();
+		List<Document> topdownload = docService.findByDownload(1, 5);
+		List<Document> topview = docService.findByView(1, 4);
+		int totalpages = (docService.getCount() % 12 != 0) ? docService.getCount()/12 +1 : docService.getCount()/12;
+		request.setAttribute("totalpages", totalpages);
+		request.setAttribute("categories", cates);
+		request.setAttribute("curpage", curpage);
+		request.setAttribute("docs", docs);
+		request.setAttribute("topviewdocs", topview);
+		request.setAttribute("topdocs", topdownload );
+		request.setAttribute("title", "Tìm kiếm tài liệu");
+		request.setAttribute("key", keyword);
+		request.setAttribute("req", "/search");
+		request.getRequestDispatcher("/view/web/search-cate.jsp").forward(request, response);
 	}
 
 	/**

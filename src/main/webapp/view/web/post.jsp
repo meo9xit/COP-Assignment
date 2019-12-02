@@ -1143,6 +1143,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 												value="${model.content}">
 										</div>
 									</div>
+									<input type="hidden" name = "userId" value = "${loginedUser.userid }"/>
+									<input type="hidden" name = "docId" value = "${doc.docId }"/>
 									<br> <input type="button"
 										class="btn btn-primary m-t-15 waves-effect" id="btnAdd"
 										value="Add" />
@@ -1175,40 +1177,26 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 									type="hidden"
 									name="ctl00$ctl00$mainbody$contentbody$hdCommentReply"
 									id="mainbody_contentbody_hdCommentReply" />
+							<c:forEach var = "comment" items = "${comments }">
+								<div class="cmt-item " id="cmt-15351">
+                                    <div class="cmt-img">
+                                        <a href="#" target="_blank">
+                                            <img width="45" height="45" src="${comment.user.avatar }"></a>
+                                    </div>
+                                    <div class="cmt-box cmt-border">
+                                        <div class="cmt-head">
+                                            <a href="#" target="_blank" class="bold agreen">${comment.user.username }</a>
+                                                </span>&nbsp;<span class="txt-colo"><i class="fa fa-thumbs-up" aria-hidden="true"></i></span></span><span class="txt-colo cmt-right  cmt-date">${comment.createdDate }</span>
+                                                <a class="red alignright cmt-del" href="javascript:__doPostBack('ctl00$ctl00$mainbody$contentbody$rptComment$ctl00$ctl01','')">Xóa &nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                        </div>
+                                        <div class="cmt-content">
+                                            ${comment.content }
+                                        </div>
 
-								<div class="cmt-item " id="cmt-15186">
-									<!-- <div class="cmt-img">
-										<a href='/thanh-vien/thanh-chu-240350.htm' target="_blank">
-											<img width="45" height="45" src="style/post/avanta.png" />
-										</a>
-									</div> -->
+                                    </div>
 
-									<form action="<c:url value='/comment'/>" id="formSubmit"
-										method="get">
-
-										<div class="cmt-box cmt-border">
-											<c:forEach var="comment" items="${model.listResult}">
-												<div class="cmt-head">
-													<div class="cmt-img">
-														<a href='/thanh-vien/thanh-chu-240350.htm' target="_blank">
-															<img width="45" height="45" src="style/post/avanta.png" />
-														</a>
-													</div>
-													<span class="txt-colo cmt-right  cmt-date">Người
-														nhập: ${comment.userId}</span><span
-														class="txt-colo cmt-right  cmt-date">Mã tài liệu:
-														${comment.docId}</span> <span
-														class="txt-colo cmt-right  cmt-date">Ngày viết:
-														${comment.createdDate}</span>
-												</div>
-												<div class="cmt-content">${comment.content}</div>
-											</c:forEach>
-										</div>
-									</form>
-
-								</div>
-								<div id="Parent15186"></div>
-
+                                </div>
+							</c:forEach>
 								<!-- <div class="sortPagiBar clear">
 									<div class="bottom-pagination">
 										<nav id="mainbody_contentbody_PaggingBottom">
@@ -1220,94 +1208,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 								</div> -->
 							</div>
 							<br />
-							<h2 class="page-heading" id="danh-gia">
-								<span class="page-heading-title">ĐÁNH GIÁ</span>
-							</h2>
-							<br /> <input type="hidden"
-								name="ctl00$ctl00$mainbody$contentbody$hdRating"
-								id="mainbody_contentbody_hdRating" value="5" />
-							<div class="rat">
-								<div class="row">
-
-									<div class="col-sm-6 rat-col">
-										<div class="col-sm-5" itemprop="aggregateRating" itemscope
-											itemtype="http://schema.org/AggregateRating">
-											<b>ĐIỂM TRUNG BÌNH</b><br />
-											<div class="rateit" data-rateit-value="5"
-												data-rateit-readonly="true"></div>
-											<br /> <span id="mainbody_contentbody_RateAvg"
-												class="rat-point bold green" itemprop="ratingValue">5</span>
-											<meta itemprop="reviewCount" content="1" />
-										</div>
-										<div class="col-sm-7">
-											<b id="mainbody_contentbody_totalRate2"
-												class="text-uppercase">1 Đ&#225;nh gi&#225;</b><br />
-											<div class="rateit" data-rateit-value="5"
-												data-rateit-readonly="true"></div>
-											Code rất tốt <b id="mainbody_contentbody_rat5">(1)</b><br />
-											<div class="rateit" data-rateit-value="4"
-												data-rateit-readonly="true"></div>
-											Code tốt <b id="mainbody_contentbody_rat4">(0)</b><br />
-											<div class="rateit" data-rateit-value="3"
-												data-rateit-readonly="true"></div>
-											Code rất hay <b id="mainbody_contentbody_rat3">(0)</b><br />
-											<div class="rateit" data-rateit-value="2"
-												data-rateit-readonly="true"></div>
-											Code hay <b id="mainbody_contentbody_rat2">(0)</b><br />
-											<div class="rateit" data-rateit-value="1"
-												data-rateit-readonly="true"></div>
-											Bình thường <b id="mainbody_contentbody_rat1">(0)</b>
-										</div>
-									</div>
-								</div>
-
-
-								<div class="rat-head bold">
-									<div class="col-sm-4">Thành viên</div>
-									<div class="col-sm-8">Nội dung đánh giá</div>
-								</div>
-
-								<div class="rat-item" itemprop="review" itemscope
-									itemtype="http://schema.org/Review">
-									<div class="col-sm-4">
-										<span class="green bold" itemprop="author"><a
-											href='/thanh-vien/thanh-tong-van-222652.htm' target="_blank"
-											class="bold agreen">Văn Thanh</a></span>
-										<div class="txt-colo">
-											<span class="txt-colo">22:23 - 5/11/2019</span>
-										</div>
-										<meta itemprop="datePublished" content="2019-11-05T10:23" />
-									</div>
-									<div class="col-sm-8">
-										<div class="rateit" data-rateit-value="5"
-											data-rateit-readonly="true"></div>
-										<strong itemprop="name">Code rất tốt</strong> <br /> <span
-											itemprop="description">Code rất tốt và phù hợp để phát
-											triển</span>
-									</div>
-									<span itemprop="reviewRating" itemscope
-										itemtype="http://schema.org/Rating">
-										<meta itemprop="worstRating" content="1" />
-										<meta itemprop="ratingValue" content="5" />
-										<meta itemprop="bestRating" content="5" />
-									</span>
-								</div>
-								<div class="line"></div>
-
-								<div class="sortPagiBar">
-									<div class="show-product-item">
-										<select name="ctl00$ctl00$mainbody$contentbody$ddlShow"
-											onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ctl00$mainbody$contentbody$ddlShow\&#39;,\&#39;\&#39;)&#39;, 0)"
-											id="mainbody_contentbody_ddlShow">
-											<option selected="selected" value="show20">Hiển thị
-												20</option>
-											<option value="show50">Hiển thị 50</option>
-											<option value="showall">Tất cả</option>
-
-										</select>
-									</div>
-								</div>
-							</div>
+							<br /> 
 							<br />
 
 						</div>
@@ -1375,212 +1276,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 		}
 	</script>
 						<!-- Popup Download ngay không cần đăng nhập -->
-						<div class="modal fade custom2" id="Download_now_modal"
-							tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-							<div class="modal-dialog modal-lg" role="document">
-								<div class="modal-content">
-									<div class="modal-header popup_header">
-										<button type="button" class="close" data-dismiss="modal"
-											aria-label="Close">
-											<span aria-hidden="true">&times;</span>
-										</button>
-										<p class="modal-title text-center" id="P1">NẠP TIỀN
-											DOWNLOAD NGAY</p>
-									</div>
-									<div class="modal-body">
-										<div class="row bg-tab down-now-1">
-											<div class="col-xs-12">
-												<div class="title3 text-center down-now-2">
-													<span class="bold">Bạn đang download: </span><span
-														class="bold green text-nowrap tit">[Mã code <span
-														id="mainbody_contentbody_nowCode">23988</span>]
-													</span> <span class="bold orange text-nowrap">[Phí tải <span
-														id="mainbody_contentbody_nowPrice">200</span>&nbsp;Xu]
-													</span>
-												</div>
-												<ul class="nav nav-tabs" role="tablist">
-													<li role="presentation" class="bold"><a href="#mnATM"
-														role="tab" data-toggle="tab">1 - THẺ ATM ONLINE</a></li>
-													<li role="presentation" class="bold"><a
-														href="#mnSendATM" role="tab" data-toggle="tab">2 -
-															CHUYỂN KHOẢN</a></li>
-													<li role="presentation" class="bold"><a href="#mnNL"
-														role="tab" data-toggle="tab">3 - VÍ ĐIỆN TỬ</a></li>
-													<li role="presentation" class="bold active"><a
-														href="#mnPay" role="tab" data-toggle="tab">4 - PAYPAL</a></li>
-												</ul>
-											</div>
-										</div>
-										<div class="row">
-											<div class="tab-content col-xs-12">
-
-												<div role="tabpanel" class="row tab-pane fade" id="mnATM">
-													<div class="text-center">
-														<br /> Hỗ trợ thanh toán qua INTERNET BANKING tất cả các
-														ngân hàng:<br /> <span class="orange">VietcomBank,
-															BIDV, VietinBank, SacomBank, TechcomBank, Á Châu, TPbank,<br />
-															MBbank, AgriBank, VPbank, SHB, MaritimeBank, DongAbank,
-															VIB, EximBank,<br /> HDbank, NCB, Việt Á, OceanBank,
-															PGbank, BacAbank...
-														</span> <br /> <br /> Bạn cần đăng nhập để tải code qua chức
-														năng này!<br /> <br /> <a data-dismiss="modal"
-															data-toggle="modal" data-target="#LoginForm"
-															onclick="createCaptcha();" role="button"
-															class="button-orange"><i class="fa fa-sign-in fa-lg"
-															aria-hidden="true"></i>&nbsp; ĐĂNG NHẬP NGAY</a><br /> <br />
-													</div>
-												</div>
-												<div role="tabpanel" class="row tab-pane fade"
-													id="mnSendATM">
-													<div class="text-center">
-														<br /> Hỗ trợ CHUYỂN KHOẢN TRỰC TIẾP qua các số tài khoản
-														ngân hàng:<br /> <span class="orange">VietcomBank,
-															BIDV, VietinBank, SacomBank, TechcomBank, Á Châu, TPbank,<br />
-															MBbank, AgriBank, VPbank, SHB, MaritimeBank
-														</span> <br /> <br /> Bạn cần đăng nhập để tải code qua chức
-														năng này!<br /> <br /> <a data-dismiss="modal"
-															data-toggle="modal" data-target="#LoginForm"
-															onclick="createCaptcha();" role="button"
-															class="button-orange"><i class="fa fa-sign-in fa-lg"
-															aria-hidden="true"></i>&nbsp; ĐĂNG NHẬP NGAY</a><br /> <br />
-													</div>
-												</div>
-												<div role="tabpanel" class="row tab-pane fade" id="mnNL">
-													<div class="col-xs-12">
-														<ul class="tab-child nav nav-tabs" role="tablist">
-															<li role="presentation" class="col-sm-3"><a
-																href="#boxNganLuong" role="tab" data-toggle="tab"
-																class="bg"> <img src="style/post/vi-ngan-luong.png" />
-															</a></li>
-															<li role="presentation" class="col-sm-3"><a
-																href="#boxBaoKim" role="tab" data-toggle="tab"
-																class="bg"> <img src="style/post/vi-bao-kim.png" />
-															</a></li>
-															<li role="presentation" class="col-sm-3"><a
-																href="#boxMomo" role="tab" data-toggle="tab" class="bg">
-																	<img src="style/post/vi-momo.png" />
-															</a></li>
-															<li role="presentation" class="col-sm-3"><a
-																href="#boxBankPlus" role="tab" data-toggle="tab"
-																class="bg"> <img src="style/post/vi-bank-plus.png" />
-															</a></li>
-														</ul>
-													</div>
-													<div class="text-center clear">
-														<br /> Bạn cần đăng nhập để tải code qua chức năng này!<br />
-														<br /> <a data-dismiss="modal" data-toggle="modal"
-															data-target="#LoginForm" onclick="createCaptcha();"
-															role="button" class="button-orange"><i
-															class="fa fa-sign-in fa-lg" aria-hidden="true"></i>&nbsp;
-															ĐĂNG NHẬP NGAY</a><br /> <br />
-													</div>
-												</div>
-												<div role="tabpanel" class="row tab-pane fade in active"
-													id="mnPay">
-													<div id="mainbody_contentbody_Panel1"
-														onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;mainbody_contentbody_btnPaypal&#39;)">
-
-														<div class="col-sm-6">
-															<div class="bg-pop">
-																<div class="note">
-																	<b class="green">CHÚ Ý</b>
-																</div>
-																<ul class="introduce-list">
-																	<li class="bold">Bạn đang "DOWNLOAD CODE NGAY" qua
-																		Paypal mà không cần đăng nhập</li>
-																	<li>Nên <a data-dismiss="modal"
-																		data-toggle="modal" data-target="#LoginForm"
-																		onclick="createCaptcha();" role="button"
-																		class="aorange">Đăng nhập</a> rồi download code để
-																		quản lý code & quản lý số dư.
-																	</li>
-																	<li>Nếu bạn không tải được code vui lòng gọi: <a
-																		class="bold" href="tel:+84981282756"
-																		title="Click gọi ngay!">0981.282.756</a></li>
-																</ul>
-															</div>
-
-														</div>
-														<div class="col-sm-6">
-															<div class="form-horizontal" style="margin-top: 15px;">
-																<div class="form-group" id="messCardPaypal">
-																	<div class="col-xs-12">
-																		<div class="orange">
-																			**Số tiền cần để mua code này là: <b
-																				id="mainbody_contentbody_lblPaypalPrice">12.80
-																				USD</b>
-																		</div>
-																	</div>
-																</div>
-																<div class="text-error" id="errPaypal"></div>
-																<div class="form-group">
-																	<div class="col-xs-12">
-																		<input
-																			name="ctl00$ctl00$mainbody$contentbody$txtCaptchaPaypal"
-																			type="text" maxlength="4"
-																			id="mainbody_contentbody_txtCaptchaPaypal"
-																			class="form-control alignleft" placeholder="Xác nhận"
-																			style="width: 90px;" />
-
-																		<script type="text/javascript">
-    function createCaptcha() {
-        jQuery.ajax({
-            type: "POST",
-            url: "/Ajax/CreateCaptcha.aspx/CaptchaUrl",
-            data: '{}',
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            async: false,
-            success: function (data) {
-                if (data.d != '') {
-                    $('.imgCaptcha').attr('src', data.d);
-                }
-                else
-                    $('.imgCaptcha').attr('src', '/Image/captcha.jpg');
-            }
-        });
-    }
-</script>
-																		<div
-																			style="height: 30px; width: 140px; float: left; margin-left: 10px;">
-																			<img src="style/post/captcha.jpg" alt="captcha"
-																				class="imgCaptcha" height="30" width="80" />
-																			<div class="aorange"
-																				style="float: right; width: 60px; margin-top: 6px; padding-left: 5px;"
-																				onclick="return createCaptcha();">Mã khác</div>
-																		</div>
-
-
-																	</div>
-																</div>
-																<div class="form-group">
-																	<div class="col-xs-12 line-h">
-																		<a href="#"></a> <a onclick="return Check_Paypal();"
-																			id="mainbody_contentbody_btnPaypal"
-																			href="javascript:__doPostBack(&#39;ctl00$ctl00$mainbody$contentbody$btnPaypal&#39;,&#39;&#39;)"><img
-																			src="style/post/btn-paypal.png" alt="PayPal Checkout"></a>
-																		<img src="style/post/btn-paypal-2.png"
-																			alt="PayPal Checkout card" class="paypal-card">
-																	</div>
-																</div>
-															</div>
-														</div>
-
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="line_orn"></div>
-									<div class="modal-footer">
-										<p class="text-center green bold line-h">
-											<img src="style/post/secure.png" height="40" alt="secure" />
-											&nbsp;Chứng nhận giao dịch an toàn!
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
 
 					</div>
 					<div class="column col-xs-12 col-sm-3" id="left_column">
@@ -1627,9 +1322,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 									</div>
 								</div>
 							</div>
-							<meta itemprop="priceCurrency" content="Xu" />
-							<meta itemprop="price" content="200" />
-							<link itemprop="availability" href="http://schema.org/InStock" />
 							<div id="boxTopCode">
 
 								<div class="block left-module">
@@ -1671,138 +1363,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 												</div>
 											</li>
 
-											<li>
-												<div class="products-block-left">
-													<a
-														href='/source-code/code-get-link-video-nhieu-server-23535.htm'>
-														<img
-														src="/FilesUpload/Code/[yeu-cau-bo-sung-video-cai-dat]-code-get-link-video-nhieu-server-14122.jpg"
-														alt="code get link youtube,code get link drive,code get link mp4,code get link phim,code get link,get link online"
-														title="Download Code get link video nhiều server">
-													</a>
-												</div>
-												<div class="products-block-right">
-													<p class="product-name">
-														<a
-															href='/source-code/code-get-link-video-nhieu-server-23535.htm'>
-															<h3 class="title2 bold"
-																title="Download Code get link video nhiều server">Code
-																get link video nhiều server</h3>
-														</a>
-													</p>
-													<div class="rateit" data-rateit-value="5"
-														data-rateit-readonly="true"></div>
-
-												</div>
-												<div class="products-block-bottom">
-													<div>
-														<a class="cate"
-															href='/ngon-ngu-lap-trinh/php-mysql-21.htm'>PHP &
-															MySQL</a> <span class="alignright view-count">21588</span> <span
-															class="alignright down-count">1</span>
-													</div>
-												</div>
-											</li>
-
-											<li>
-												<div class="products-block-left">
-													<a
-														href='/source-code/[code-php-thuan]-website-quan-ly-nhan-su-23932.htm'>
-														<img
-														src="/FilesUpload/Code/source-code-website-quan-ly-nhan-su-[php-thuan]-16515.jpg"
-														alt="php thuần,đồ án web php,php mysql,code quản lý nhân sự"
-														title="Download Source code Website Quản lý nhân sự [PHP Thuần]">
-													</a>
-												</div>
-												<div class="products-block-right">
-													<p class="product-name">
-														<a
-															href='/source-code/[code-php-thuan]-website-quan-ly-nhan-su-23932.htm'>
-															<h3 class="title2 bold"
-																title="Download Source code Website Quản lý nhân sự [PHP Thuần]">Source
-																code Website Quản lý nhân sự [PHP Thuần]</h3>
-														</a>
-													</p>
-													<div class="rateit" data-rateit-value="5"
-														data-rateit-readonly="true"></div>
-
-												</div>
-												<div class="products-block-bottom">
-													<div>
-														<a class="cate"
-															href='/ngon-ngu-lap-trinh/php-mysql-21.htm'>PHP &
-															MySQL</a> <span class="alignright view-count">2839</span> <span
-															class="alignright down-count">7</span>
-													</div>
-												</div>
-											</li>
-
-											<li>
-												<div class="products-block-left">
-													<a
-														href='/source-code/[code-php-thuan]-website-ban-quan-ao-tre-em-bao-cao-23596.htm'>
-														<img
-														src="/FilesUpload/Code/[code-php-thuan]-website-ban-hang-thoi-trang-quan-ao-tre-em-bao-cao-821.jpg"
-														alt="php thuần,website bán hàng,đồ án web bán quần áo,Website thời trang,Web bán hàng quần áo"
-														title="Download [Code PHP Thuần] Website bán hàng thời trang quần áo trẻ em + báo cáo">
-													</a>
-												</div>
-												<div class="products-block-right">
-													<p class="product-name">
-														<a
-															href='/source-code/[code-php-thuan]-website-ban-quan-ao-tre-em-bao-cao-23596.htm'>
-															<h3 class="title2 bold"
-																title="Download [Code PHP Thuần] Website bán hàng thời trang quần áo trẻ em + báo cáo">[Code
-																PHP Thuần] Website bán hàng thời trang quần áo trẻ em +
-																báo cáo</h3>
-														</a>
-													</p>
-													<div class="rateit" data-rateit-value="5"
-														data-rateit-readonly="true"></div>
-
-												</div>
-												<div class="products-block-bottom">
-													<div>
-														<a class="cate"
-															href='/ngon-ngu-lap-trinh/php-mysql-21.htm'>PHP &
-															MySQL</a> <span class="alignright view-count">2573</span> <span
-															class="alignright down-count">7</span>
-													</div>
-												</div>
-											</li>
-
-											<li>
-												<div class="products-block-left">
-													<a
-														href='/source-code/code-tao-thoi-khoa-bieu-don-gian-23567.htm'>
-														<img
-														src="/FilesUpload/Code/code-tao-thoi-khoa-bieu-don-gian-154617.jpg"
-														alt="thời khóa biểu,Code tạo thời khóa biểu,thời khóa biểu php"
-														title="Download Code tạo thời khóa biểu đơn giản">
-													</a>
-												</div>
-												<div class="products-block-right">
-													<p class="product-name">
-														<a
-															href='/source-code/code-tao-thoi-khoa-bieu-don-gian-23567.htm'>
-															<h3 class="title2 bold"
-																title="Download Code tạo thời khóa biểu đơn giản">Code
-																tạo thời khóa biểu đơn giản</h3>
-														</a>
-													</p>
-													<div class="rateit" data-rateit-value="5"
-														data-rateit-readonly="true"></div>
-
-												</div>
-												<div class="products-block-bottom">
-													<div>
-														<a class="cate"
-															href='/ngon-ngu-lap-trinh/php-mysql-21.htm'>PHP &
-															MySQL</a> <span class="alignright view-count">1332</span> <span
-															class="alignright down-count">257</span>
-													</div>
-												</div>
-											</li>
 
 										</ul>
 									</div>
@@ -1900,25 +1460,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 							<div id="address-box">
 								<a href="/"> <img src="style/post/logo.png"
 									alt="Sharecode.vn" /></a>
-								<div id="address-list">
-									<div class="tit-name">Hotline:</div>
-									<div class="tit-contain">
-										<a href="tel:+84981282756" title="Click gọi ngay!">0981.282.756</a>
-									</div>
-									<div class="tit-name">Email:</div>
-									<div class="tit-contain">
-										<a href="mailto:sharecode.contact@gmail.com"
-											title="Click để gửi email!">Sharecode.contact@gmail.com</a>
-									</div>
-								</div>
 								<br />
-								<div class="social-link">
-									<a href="https://www.facebook.com/sharecode.vn"><i
-										class="fa fa-facebook"></i></a> <a
-										href="https://www.youtube.com/channel/UCrmDzitLIGfSLYQsSe-j6WA"><i
-										class="fa fa-youtube-play"></i></a>
-
-								</div>
 							</div>
 						</div>
 						<div class="col-md-6">
@@ -1930,39 +1472,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 										<li><a href="/quy-dinh-chung.htm">Quy định chung</a></li>
 										<li><a href="/chinh-sach-ban-code.htm">Chính sách bán
 												code</a></li>
-										<li><a href="/cau-hoi.htm">Câu hỏi thường gặp</a></li>
-										<li><a href="/su-kien.htm">Sự kiện</a></li>
 									</ul>
 								</div>
 								<div class="col-sm-4">
-									<div class="introduce-title">HƯỚNG DẪN</div>
-									<ul id="introduce-Account" class="introduce-list">
-										<li><a
-											href="https://sharecode.vn/cau-hoi/huong-dan-cach-tai-code-mien-phi-14.htm">Tải
-												code miễn phí</a></li>
-										<li><a
-											href="https://sharecode.vn/cau-hoi/huong-dan-cach-tai-code-co-phi-15.htm">Tải
-												code có phí</a></li>
-										<li><a
-											href="https://sharecode.vn/cau-hoi/huong-dan-nap-tien-vao-tai-khoan-8.htm">Hướng
-												dẫn nạp tiền</a></li>
-										<li><a
-											href="https://sharecode.vn/cau-hoi/huong-dan-rut-tien-tu-tai-khoan-7.htm">Hướng
-												dẫn rút tiền</a></li>
-										<li><a
-											href="https://sharecode.vn/cau-hoi/huong-dan-ho-tro-ki-thuat-16.htm">Hỗ
-												trợ kĩ thuật</a></li>
-									</ul>
+
 								</div>
 								<div class="col-sm-4">
-									<div class="introduce-title">DỊCH VỤ MÁY CHỦ</div>
-									<ul id="Ul1" class="introduce-list">
-										<li><a href="/dang-ki-ten-mien.htm">Đăng kí tên miền</a></li>
-										<li><a href="/hosting-ssd.htm">Hosting SSD</a></li>
-										<li><a href="/vps-may-chu-ao.htm">Clould VPS</a></li>
-										<li><a href="/email-server.htm">Email Server</a></li>
-										<li><a href="/chung-thuc-ssl.htm">Chứng thực SSL</a></li>
-									</ul>
+									
 								</div>
 							</div>
 						</div>
@@ -1985,52 +1501,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 										class="fa fa-paper-plane fa-lg" aria-hidden="true"></i>&nbsp;
 										GỬI NHANH</a>
 								</div>
-								<br /> <a href="/dang-ki-nhan-code.htm" class="agreen title5"><i
-									class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;Yêu cầu
-									và Đăng kí nhận code</a>
+								<br /> 
 							</div>
 						</div>
-					</div>
-					<div id="trademark-box" class="row">
-						<div class="col-sm-12">
-							<ul id="trademark-list">
-								<li id="payment-methods">Thanh toán đảm bảo</li>
-								<li><img src="style/post/b1.png" alt="ngan luong" /></li>
-								<li><img src="style/post/b10.png" alt="bao kim" /></li>
-								<li><img src="style/post/b11.png" alt="momo" /></li>
-								<li><img src="style/post/b8.png" alt="paypal" /></li>
-								<li><img src="style/post/b5.png" alt="vietcombank" /></li>
-								<li><img src="style/post/b9.png" alt="vietin bank" /></li>
-								<li><img src="style/post/b6.png" alt="agribank" /></li>
-								<li><img src="style/post/b7.png" alt="bidv" /></li>
-
-							</ul>
-						</div>
-					</div>
-					<div id="trademark-text-box" class="row">
-						<div class="col-sm-12">
-							<ul id="trademark-search-list" class="trademark-list">
-								<li class="trademark-text-tit">Top tìm kiếm</li>
-								<li><a href='/tu-khoa/game-3.htm'>Game</a></li>
-								<li><a href='/tu-khoa/phan-men-quan-ly-4.htm'>Phần mền
-										quản lý</a></li>
-								<li><a href='/tu-khoa/website-gioi-thieu-32.htm'>Website
-										giới thiệu</a></li>
-								<li><a href='/tu-khoa/quan-ly-sach-54.htm'>Quản lý sách</a></li>
-								<li><a href='/tu-khoa/web-tin-tuc-183.htm'>Web tin tức</a></li>
-							</ul>
-						</div>
-					</div>
-					<div id="footer-menu-box">
-						<p class="text-center">
-							Copyrights &#169; 2014 Sharecode.vn - Nội dung đã được bảo vệ bản
-							quyền <a
-								href="//www.dmca.com/Protection/Status.aspx?ID=e3cfb854-1733-4462-a9e8-0ef4661d6600"
-								title="DMCA.com Protection Status" class="dmca-badge"> <img
-								src="//images.dmca.com/Badges/dmca-badge-w150-5x1-09.png?ID=e3cfb854-1733-4462-a9e8-0ef4661d6600"
-								alt="DMCA.com Protection Status"></a>
-							<script src="//images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
-						</p>
 					</div>
 				</div>
 			</footer>
