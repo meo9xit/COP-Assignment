@@ -399,7 +399,6 @@ transform
 .fb_iframe_widget iframe {
 	position: absolute
 }
-
 .fb_iframe_widget_fluid_desktop, .fb_iframe_widget_fluid_desktop span,
 	.fb_iframe_widget_fluid_desktop iframe {
 	max-width: 100%
