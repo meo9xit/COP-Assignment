@@ -382,7 +382,11 @@ keyframes rotateSpinner { 0%{
 
 100%{
 transform
+
+
 :rotate(360deg)
+
+
 }
 }
 .fb_iframe_widget {
@@ -399,6 +403,7 @@ transform
 .fb_iframe_widget iframe {
 	position: absolute
 }
+
 .fb_iframe_widget_fluid_desktop, .fb_iframe_widget_fluid_desktop span,
 	.fb_iframe_widget_fluid_desktop iframe {
 	max-width: 100%
@@ -512,125 +517,160 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 </script>
 
 
-        
-        <div class="row-fluid">
-            <div id="myCarousel" class="carousel slide vertical">
-                <div class="carousel-inner">
-                    <div class="item next left" style="background: #86bd3b;">
-                        
-                        <a data-toggle="modal" data-target="#LoginForm" onclick="createCaptcha();" title="UPLOAD source code KIẾM TIỀN cùng Sharecode.vn">
-                            <img src="style/search-cate/code-hay-upload-kiem-tien.jpg">
-                        </a>
-                        
-                    </div>
-                     <div class="item" style="background: #2175ba;">
-                        <a href="https://sharecode.vn/kien-thuc-lap-trinh/dich-vu-thiet-ke-website-chuyen-nghiep-voi-gia-cuc-re-va-nhieu-uu-dai-tai-sharecodevn-880.htm" title="Dịch vụ thiết kế website" target="_blank">
-                            <img src="style/search-cate/thiet-ke-website.jpg">
-                        </a>
-                    </div>
-                   <div class="item active left" style="background: #34a5cd;">
-                                <a href="https://sharecode.vn/vps-may-chu-ao.htm" title="Đăng kí CLOULD VPS NGAY!">
-                                <img src="style/search-cate/share-code-clould-vps.jpg"> </a>
-                            </div>
-                          
-                   
-                </div>
-            </div>
-        </div>
 
-        <div id="header" class="header">
-            <div class="top-header">
-                <div class="container">                    
-                    <div class="nav-top-links">
-                    </div>
-                    <c:if test = "${empty loginedUser }">
-                    <div id="LoginBox" class="support-link">
-                        <a href="<c:url value = "/login"/>" role="button">Đăng nhập</a>
-                        <a href="https://sharecode.vn/dang-ki-tai-khoan.htm">Đăng kí</a>
-                    </div>
-                    </c:if>
-                    <c:if test = "${not empty loginedUser }">
-                    	<div id="ExitBox" class="support-link">
-                        	<a id="btnExit" class="aorange" href="<c:url value ="/logout"/>">[Thoát]</a>
-                    	</div>
-                    	<div id="user-info-top" class="user-info pull-right">
-                        <div id="AcInfo" class="dropdown">
-                            <a href="/code-upload-cua-toi.htm" id="UserName2" class="current-open" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Xin chào, ${loginedUser.username }"><span>Xin chào, </span><span id="UserName"><b>${loginedUser.username }</b></span></a>
-                            <ul class="dropdown-menu mega_dropdown" role="menu">
-                                <li><a href="<c:url value = "/doc-manage"/>"><i class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp;Tài liệu tải lên</a></li>
-                                <li><a href="<c:url value = "/user-info"/>" class="green"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Cài đặt thông tin</a></li>
-                            </ul>
-                        </div>
-                        
-                    </div>
-                    </c:if>
-                    
-                </div>
-            </div>
-            <div class="container main-header">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-3 col-md-3 logo">
-                        <a href="https://sharecode.vn/">
-                            <img alt="Trang chủ sharecode.vn" title="Sharecode.vn" src="style/search-cate/logo.png"></a>
-                    </div>
-                    <div class="col-xs-7 col-sm-7 col-md-6 header-search-box">
-                        
-                    </div>
-                    <div class="col-xs-5 col-sm-2 col-md-3 shopping-cart-box btn-align">
-                        <c:if test = "${empty loginedUser }">
-                        	<a href = "<c:url value = "/login" />" role="button" class="button-orange" title="Tải lên"><i class="fa fa-cloud-upload fa-lg" aria-hidden="true"></i>&nbsp; TẢI LÊN</a>
-                        </c:if>
-                        <c:if test = "${not empty loginedUser }">
-                        	<a href="/user-upload" class="button-orange" title="Upload code kiếm tiền"><i class="fa fa-cloud-upload fa-lg" aria-hidden="true"></i>&nbsp; TẢI LÊN</a>
-                    	</c:if>
-                    </div>
-                </div>
-            </div>
-            <div id="nav-top-menu" class="nav-top-menu nav-ontop">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-3" id="box-vertical-megamenus">
-                            <div class="box-vertical-megamenus">
-                                <h4 class="title">
-                                    <span class="title-menu">Danh mục</span>
-                                    <span class="btn-open-mobile pull-right home-page"><i class="fa fa-bars"></i></span>
-                                </h4>
-                                <div class="vertical-menu-content is-home">
-                                    <ul class="vertical-menu-list">
-                                        <c:forEach var = "category" items="${cates }">
-                                                <li class=""><a href="<c:url value = "/post"><c:param name = "id" value = "${category.categoryID }"/></c:url>">
-                                                    <img class="icon-menu" alt="${category.categoryName }" src="style/search-cate/3.png" > ${category.categoryName }</a></li>
-                                        </c:forEach>    
-                                                
-                                    </ul>
-                                    <div class="all-category"><span class="open-cate">Xem tất cả</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="main-menu" class="col-sm-9 main-menu">
-                            <nav class="navbar navbar-default">
-                                <div class="container-fluid">
-                                    <div class="navbar-header">
-                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                                            <i class="fa fa-bars"></i>
-                                        </button>
-                                        <a class="navbar-brand" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm#">MENU</a>
-                                    </div>
-                                    <div id="navbar" class="navbar-collapse collapse">
-                                        <ul class="nav navbar-nav">
-                                            <li id="mnhome" class="active" title="Trang chủ"><a href="<c:url value = "/home"></c:url>"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a></li>
-                                            <li id="mntopcode" title="Tài liệu xem nhiều"><a href="<c:url value = "/topview"></c:url>"> Được xem nhiều </a></li>
-                                            <li id="mncodeok" title="Tài liệu tải nhiều"><a href="<c:url value = "/topdownload"></c:url>">  Được tải nhiều <span class="notify notify-right"></span></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                    <div id="form-search-opntop">
-                    <div class="form-inline search-h">
-                            <div id="regPanel" onkeypress="WebForm_FireDefaultButton">
-								<form id="searchform" action="<c:url value="/search"/>" >
+		<div class="row-fluid">
+			<div id="myCarousel" class="carousel slide vertical">
+				<div class="carousel-inner">
+					<div class="item next left" style="background: #86bd3b;">
+
+						<a data-toggle="modal" data-target="#LoginForm"
+							onclick="createCaptcha();"
+							title="UPLOAD source code KIẾM TIỀN cùng Sharecode.vn"> <img
+							src="style/search-cate/code-hay-upload-kiem-tien.jpg">
+						</a>
+
+					</div>
+					<div class="item" style="background: #2175ba;">
+						<a
+							href="https://sharecode.vn/kien-thuc-lap-trinh/dich-vu-thiet-ke-website-chuyen-nghiep-voi-gia-cuc-re-va-nhieu-uu-dai-tai-sharecodevn-880.htm"
+							title="Dịch vụ thiết kế website" target="_blank"> <img
+							src="style/search-cate/thiet-ke-website.jpg">
+						</a>
+					</div>
+					<div class="item active left" style="background: #34a5cd;">
+						<a href="https://sharecode.vn/vps-may-chu-ao.htm"
+							title="Đăng kí CLOULD VPS NGAY!"> <img
+							src="style/search-cate/share-code-clould-vps.jpg">
+						</a>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+		<div id="header" class="header">
+			<div class="top-header">
+				<div class="container">
+					<div class="nav-top-links"></div>
+					<c:if test="${empty loginedUser }">
+						<div id="LoginBox" class="support-link">
+							<a href="<c:url value = "/login"/>" role="button">Đăng nhập</a> <a
+								href="https://sharecode.vn/dang-ki-tai-khoan.htm">Đăng kí</a>
+						</div>
+					</c:if>
+					<c:if test="${not empty loginedUser }">
+						<div id="ExitBox" class="support-link">
+							<a id="btnExit" class="aorange" href="<c:url value ="/logout"/>">[Thoát]</a>
+						</div>
+						<div id="user-info-top" class="user-info pull-right">
+							<div id="AcInfo" class="dropdown">
+								<a href="/code-upload-cua-toi.htm" id="UserName2"
+									class="current-open" data-toggle="dropdown"
+									aria-haspopup="true" aria-expanded="false"
+									title="Xin chào, ${loginedUser.username }"><span>Xin
+										chào, </span><span id="UserName"><b>${loginedUser.username }</b></span></a>
+								<ul class="dropdown-menu mega_dropdown" role="menu">
+									<li><a href="<c:url value = "/doc-manage"/>"><i
+											class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp;Tài
+											liệu tải lên</a></li>
+									<li><a href="<c:url value = "/user-info"/>" class="green"><i
+											class="fa fa-cog" aria-hidden="true"></i>&nbsp;Cài đặt thông
+											tin</a></li>
+								</ul>
+							</div>
+
+						</div>
+					</c:if>
+
+				</div>
+			</div>
+			<div class="container main-header">
+				<div class="row">
+					<div class="col-xs-12 col-sm-3 col-md-3 logo">
+						<a href="https://sharecode.vn/"> <img
+							alt="Trang chủ sharecode.vn" title="Sharecode.vn"
+							src="style/search-cate/logo.png"></a>
+					</div>
+					<div class="col-xs-7 col-sm-7 col-md-6 header-search-box"></div>
+					<div class="col-xs-5 col-sm-2 col-md-3 shopping-cart-box btn-align">
+						<c:if test="${empty loginedUser }">
+							<a href="<c:url value = "/login" />" role="button"
+								class="button-orange" title="Tải lên"><i
+								class="fa fa-cloud-upload fa-lg" aria-hidden="true"></i>&nbsp;
+								TẢI LÊN</a>
+						</c:if>
+						<c:if test="${not empty loginedUser }">
+							<a href="/user-upload" class="button-orange"
+								title="Upload code kiếm tiền"><i
+								class="fa fa-cloud-upload fa-lg" aria-hidden="true"></i>&nbsp;
+								TẢI LÊN</a>
+						</c:if>
+					</div>
+				</div>
+			</div>
+			<div id="nav-top-menu" class="nav-top-menu nav-ontop">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-3" id="box-vertical-megamenus">
+							<div class="box-vertical-megamenus">
+								<h4 class="title">
+									<span class="title-menu">Danh mục</span> <span
+										class="btn-open-mobile pull-right home-page"><i
+										class="fa fa-bars"></i></span>
+								</h4>
+								<div class="vertical-menu-content is-home">
+									<ul class="vertical-menu-list">
+										<c:forEach var="category" items="${cates }">
+											<li class=""><a
+												href="<c:url value = "/post"><c:param name = "id" value = "${category.categoryID }"/></c:url>">
+													<img class="icon-menu" alt="${category.categoryName }"
+													src="style/search-cate/3.png">
+													${category.categoryName }
+											</a></li>
+										</c:forEach>
+
+									</ul>
+									<div class="all-category">
+										<span class="open-cate">Xem tất cả</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="main-menu" class="col-sm-9 main-menu">
+							<nav class="navbar navbar-default">
+								<div class="container-fluid">
+									<div class="navbar-header">
+										<button type="button" class="navbar-toggle collapsed"
+											data-toggle="collapse" data-target="#navbar"
+											aria-expanded="false" aria-controls="navbar">
+											<i class="fa fa-bars"></i>
+										</button>
+										<a class="navbar-brand"
+											href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm#">MENU</a>
+									</div>
+									<div id="navbar" class="navbar-collapse collapse">
+										<ul class="nav navbar-nav">
+											<li id="mnhome" class="active" title="Trang chủ"><a
+												href="<c:url value = "/home"></c:url>"><i
+													class="fa fa-home fa-lg" aria-hidden="true"></i></a></li>
+											<li id="mntopcode" title="Tài liệu xem nhiều"><a
+												href="<c:url value = "/topview"></c:url>"> Được xem
+													nhiều </a></li>
+											<li id="mncodeok" title="Tài liệu tải nhiều"><a
+												href="<c:url value = "/topdownload"></c:url>"> Được tải
+													nhiều <span class="notify notify-right"></span>
+											</a></li>
+										</ul>
+									</div>
+								</div>
+							</nav>
+						</div>
+					</div>
+					<div id="form-search-opntop">
+						<div class="form-inline search-h">
+							<div id="regPanel" onkeypress="WebForm_FireDefaultButton">
+								<form id="searchform" action="<c:url value="/search"/>">
 									<div class="form-group input-serach">
 										<input name="key" type="text" id="txtSearch"
 											class="txt-search txt-auto ui-autocomplete-input"
@@ -646,17 +686,17 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 											.submit();
 								}
 							</script>
-                        </div></div>
-                    <div id="user-info-opntop">
-                    <div id="user-info-top" class="user-info pull-right">
-                        
-                    </div></div>
-                    
-                </div>
-            </div>
-        </div>
-        
-        <script type="text/javascript">
+						</div>
+					</div>
+					<div id="user-info-opntop">
+						<div id="user-info-top" class="user-info pull-right"></div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
 
             function fosp_login() {
                 jQuery('#login_error').html('');
@@ -817,304 +857,373 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
     }
 </script>
 
-<div style="height: 30px; width: 140px; float: left; margin-left: 10px;">
-    <img src="style/search-cate/captcha.jpg" alt="captcha" class="imgCaptcha" height="30" width="80">
-    <div class="aorange" style="float: right; width: 60px; margin-top: 6px; padding-left: 5px;" onclick="return createCaptcha();">
-        Mã khác
-    </div>
-</div>
+										<div
+											style="height: 30px; width: 140px; float: left; margin-left: 10px;">
+											<img src="style/search-cate/captcha.jpg" alt="captcha"
+												class="imgCaptcha" height="30" width="80">
+											<div class="aorange"
+												style="float: right; width: 60px; margin-top: 6px; padding-left: 5px;"
+												onclick="return createCaptcha();">Mã khác</div>
+										</div>
 
 
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-offset-4 col-sm-6">
-                                        
-                                        <a href="https://sharecode.vn/quen-mat-khau.htm" target="_blank" class="aorange">Quên mật khẩu?</a>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-offset-4 col-sm-6">
-                                        <div class="text-error" id="login_error">&nbsp;</div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-offset-4 col-sm-6">
-                                        <a onclick="return fosp_login();" id="btnLogin" class="button-orange" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$btnLogin&#39;,&#39;&#39;)"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>&nbsp; Đăng nhập</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-</div>
-                    <div class="line_orn"></div>
-                    <div class="modal-footer">
-                        <p class="text-center">ShareCode.vn Cộng đồng chia sẻ và download source code</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-offset-4 col-sm-6">
 
-        
-    <div class="columns-container">
-        <div class="container" id="columns">
-            <div class="breadcrumb clearfix" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                <a itemprop="item" class="agreen" href="https://sharecode.vn/" title="Trở lại trang chủ">Trang chủ<meta itemprop="name" content="sharecode.vn"></a>
-                     <meta itemprop="position" content="1">
-                </span>
-                <span class="navigation-pipe">&nbsp;</span>
-                
-    
-    <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-    <a href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm" id="mainbody_breadcrumb_breadpage_PathCategoryLink" itemprop="item" class="agreen" title="Danh mục WordPress">
-        <h2 id="mainbody_breadcrumb_breadpage_PathTitle" class="abread" itemprop="name">Danh mục <b>WordPress</b></h2>
-    </a>
-     <meta itemprop="position" content="2">
-    </span>
+										<a href="https://sharecode.vn/quen-mat-khau.htm"
+											target="_blank" class="aorange">Quên mật khẩu?</a>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-offset-4 col-sm-6">
+										<div class="text-error" id="login_error">&nbsp;</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-offset-4 col-sm-6">
+										<a onclick="return fosp_login();" id="btnLogin"
+											class="button-orange"
+											href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$btnLogin&#39;,&#39;&#39;)"><i
+											class="fa fa-sign-in fa-lg" aria-hidden="true"></i>&nbsp;
+											Đăng nhập</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="line_orn"></div>
+					<div class="modal-footer">
+						<p class="text-center">ShareCode.vn Cộng đồng chia sẻ và
+							download source code</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
-            </div>
-            
-    <div class="row">
-        <div class="center_column col-xs-12 col-sm-9" id="center_column">
-            
-    <div itemscope="" itemtype="http://schema.org/ItemList">
-    <h1 class="page-heading">
-        <span id="mainbody_contentbody_contentpage_titlePage" class="page-heading-title" itemprop="name">WordPress</span>
-    </h1>
-         <link itemprop="url" href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">
-         <meta itemprop="description" content="Thư viện tổng hợp mã nguồn website đẹp bằng WordPress, Hướng dẫn bạn cách cài đặt module &amp; sử dụng trong WordPress">
-    <div id="mainbody_contentbody_contentpage_upPannel">
-	
-
-            <a id="mainbody_contentbody_contentpage_btnViewBase" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnViewBase&#39;,&#39;&#39;)"></a>
-            <a id="mainbody_contentbody_contentpage_bntViewDetail" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$bntViewDetail&#39;,&#39;&#39;)"></a>
-            <div id="view-product-list" class="view-product-list">
-                <div class="page-heading3">&nbsp;</div>
-                 
-                <ul class="display-product-option">
-                    
-                </ul>
-                
-                    <ul class="row product-list style2 grid mar-top4">
-                        <c:forEach var = "doc" items = "${docs }">
-                                <li class="col-sx-12 col-sm-3" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/Product">
-                                    <div class="product-container">
-                                        <div class="left-block">
-                                            <a href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
-                                                <div class="img-box">
-                                                    <img class="img-responsive" itemprop="image" src="${doc.cover }" alt="${doc.docName }" title="Download Full code web bán túi xách thời trang">
-                                                </div>
-                                            </a>
-                                            
-                                            <div class="downview">
-                                                <span class="view-count2">${doc.view }</span>
-                                                <span class="down-count2">${doc.download }</span>
-                                            </div>
-                                            <a class="cate" href="<c:url value = "/category"><c:param name = "id" value = "${doc.cateId }"/></c:url>">${doc.category.categoryName }</a>
-                                        </div>
-                                        <div class="right-block">
-                                            <a itemprop="url" href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
-                                                <h2 class="product-name bold" itemprop="name" title="${doc.docName }">${doc.docName }</h2>
-                                            </a>
-                                            
-                                        </div>
-                                    </div>
-                                </li>
-                            </c:forEach>
-                                
-                    </ul>
-            </div>
-            <div class="sortPagiBar">
-                <div class="bottom-pagination">
-                    <nav id="mainbody_contentbody_contentpage_PaggingBottom">
-                    	<ul class="pagination">
-                    		<c:if test = "${totalpages > 7 }">
-	                    		<c:if test = "${curpage > 1 }">
-	                    			<li><a href="<c:url value = "${req }"><c:param name = "page" value = "1"/><c:param name = "key" value = "${key }"/></c:url>">Trang đầu</a></li>
-	                    			<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${curpage-1 }"/><c:param name = "key" value = "${key }"/></c:url>">«</a></li>
-	                    		</c:if>
-		                    	<c:if test = "${curpage == 1 }">
-		                   			<c:forEach var = "num" begin = "1" end = "6">
-		                   				<c:if test = "${num == 1 }">
-		                   					<li class="active"><a href="<c:url value = "${req }"><c:param name = "page" value = "1"/><c:param name = "key" value = "${key }"/></c:url>">1</a></li>
-		                   				</c:if>
-			                    		<c:if test = "${num != 1 }">
-			                    			<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
-			                    		</c:if>
-		                    		
-		                   			</c:forEach>
-		                   		</c:if>
-		                   		<c:if test = "${curpage == totalpages }">
-		                   			<c:forEach var = "num" begin = "${totalpages-6 }" end = "${totalpages }">
-		                   				<c:if test = "${num == totalpages }">
-		                   					<li class="active"><a href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
-		                   				</c:if>
-			                    		<c:if test = "${num != totalpages }">
-			                    			<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
-			                    		</c:if>
-		                    		
-		                   			</c:forEach>
-		                   		</c:if>
-		                   		<c:if test = "${curpage != 1 && curpage != totalpages }">
-		                   			<c:forEach var = "num" begin = "${curpage - 3 }" end = "${curpage + 3 }">
-			                    		<c:if test = "${num == curpage }">
-		                   					<li class="active"><a href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
-		                   				</c:if>
-			                    		<c:if test = "${num != curpage }">
-			                    			<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
-			                    		</c:if>
-		                   			</c:forEach>
-		                   		</c:if>
-		                   		
-								<c:if test = "${curpage != totalpages }">
-		                   		<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${curpage+1 }"/><c:param name = "key" value = "${key }"/></c:url>">»</a></li>
-		                   		<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${totalpages }"/><c:param name = "key" value = "${key }"/></c:url>"> Trang Cuối </a></li>
-		                   		</c:if>
-		                   	</c:if>
-		                   	<c:if test = "${totalpages <= 7 }">
-		                   		<c:if test = "${curpage > 1 }">
-	                    			<li><a href="<c:url value = "${req }"><c:param name = "page" value = "1"/><c:param name = "key" value = "${key }"/></c:url>">Trang đầu</a></li>
-	                    			<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${curpage-1 }"/><c:param name = "key" value = "${key }"/></c:url>">«</a></li>
-	                    		</c:if>
-		                    	<c:if test = "${curpage == 1 }">
-		                   			<c:forEach var = "num" begin = "1" end = "${totalpages }">
-		                   				<c:if test = "${num == 1 }">
-		                   					<li class="active"><a href="<c:url value = "${req }"><c:param name = "page" value = "1"/><c:param name = "key" value = "${key }"/></c:url>">1</a></li>
-		                   				</c:if>
-			                    		<c:if test = "${num != 1 }">
-			                    			<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
-			                    		</c:if>
-		                    		
-		                   			</c:forEach>
-		                   		</c:if>
-		                   		<c:if test = "${curpage == totalpages }">
-		                   			<c:forEach var = "num" begin = "1" end = "${totalpages }">
-		                   				<c:if test = "${num == totalpages }">
-		                   					<li class="active"><a href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
-		                   				</c:if>
-			                    		<c:if test = "${num != totalpages }">
-			                    			<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
-			                    		</c:if>
-		                    		
-		                   			</c:forEach>
-		                   		</c:if>
-		                   		<c:if test = "${curpage != 1 && curpage != totalpages }">
-		                   			<c:forEach var = "num" begin = "1" end = "${curpage }">
-			                    		<c:if test = "${num == curpage }">
-		                   					<li class="active"><a href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
-		                   				</c:if>
-			                    		<c:if test = "${num != curpage }">
-			                    			<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
-			                    		</c:if>
-		                   			</c:forEach>
-		                   		</c:if>
-		                   		
-								<c:if test = "${curpage != totalpages }">
-		                   		<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${curpage+1 }"/><c:param name = "key" value = "${key }"/></c:url>">»</a></li>
-		                   		<li><a href="<c:url value = "${req }"><c:param name = "page" value = "${totalpages}"/><c:param name = "key" value = "${key }"/></c:url>"> Trang Cuối </a></li>
-		                   		</c:if>
-		                   	</c:if>
-                    	</ul>
-                    </nav>
-                </div>
-                <div class="sort-product  box-sort2">
-                    <div class="sort-product-icon">
-                        <i class="fa fa-sort-alpha-asc"></i>
-                    </div>
-                </div>
-            </div>
-        
-</div>
-        </div>
-    <div id="mainbody_contentbody_contentpage_ucSuggest_upPannel">
-	
-        <div id="view-product-list" class="view-product-list">
-            <h2 class="page-heading">
-                <span id="mainbody_contentbody_contentpage_ucSuggest_divTitle" class="page-heading-title">TÀI LIỆU XEM NHIỀU</span>
-            </h2>
-            <ul class="row product-list style2 grid">
-                <c:forEach var = "doc" items = "${topviewdocs}">
-                        <li class="col-sx-12 col-sm-3">
-                            <div class="product-container">
-                                <div class="left-block">
-                                    <a href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
-                                        <div class="img-box">
-                                            <img class="img-responsive" src="${doc.cover }" alt="${doc.docName }" title="${doc.docName }">
-                                        </div>
-                                    </a>
-                                    <div class="quick-view">
-
-                                        
-                                    </div>
-                                    <div class="downview">
-                                        <span class="view-count2">${doc.view }</span>
-                                        <span class="down-count2">${doc.download }</span>
-                                    </div>
-                                    <a class="cate" href="<c:url value = "/category"><c:param name = "id" value = "${doc.cateId }"/></c:url>">${doc.category.categoryName }</a>
-                                </div>
-                                <div class="right-block">
-                                    <a href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
-                                        <h3 class="product-name bold" title="${doc.docName }">${doc.docName }</h3>
-                                    </a>
-                            </div>
-                        </div></li>
-                    </c:forEach>
-            </ul>
-        </div>
-    
-</div>
+		<div class="columns-container">
+			<div class="container" id="columns">
+				<div class="breadcrumb clearfix" itemscope=""
+					itemtype="http://schema.org/BreadcrumbList">
+					<span itemprop="itemListElement" itemscope=""
+						itemtype="http://schema.org/ListItem"> <a itemprop="item"
+						class="agreen" href="https://sharecode.vn/"
+						title="Trở lại trang chủ">Trang chủ
+							<meta itemprop="name" content="sharecode.vn">
+					</a>
+						<meta itemprop="position" content="1">
+					</span> <span class="navigation-pipe">&nbsp;</span> <span
+						itemprop="itemListElement" itemscope=""
+						itemtype="http://schema.org/ListItem"> <a
+						href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm"
+						id="mainbody_breadcrumb_breadpage_PathCategoryLink"
+						itemprop="item" class="agreen" title="Danh mục WordPress">
+							<h2 id="mainbody_breadcrumb_breadpage_PathTitle" class="abread"
+								itemprop="name">
+								Danh mục <b>WordPress</b>
+							</h2>
+					</a>
+						<meta itemprop="position" content="2">
+					</span>
 
 
-        </div>
-        <div class="column col-xs-12 col-sm-3" id="left_column">
-            
-<div class="block left-module">
-    <p class="title_block">TÀI LIỆU NỔI BẬT</p>
-    <div class="block_content">
-        <ul class="products-block best-sell">
-            <c:forEach var = "doc" items = "${topdocs }">
-                    <li>
-                        <div class="products-block-left">
-                            <a href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
-                                <img src="${doc.cover }" alt="${doc.docName }" title="${doc.docName }">
-                            </a>
-                        </div>
-                        <div class="products-block-right">
-                            <p class="product-name">
-                                <a href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
-                                    </a></p><h3 class="title2 bold" title="${doc.docName }"><a href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">${doc.docName }</a></h3><a href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
-                                </a>
-                            <p></p>
-                            
-                        </div>
-                        <div class="products-block-bottom">
-                            <div><a class="cate" href="<c:url value = "/category"><c:param name = "id" value = "${doc.cateId }"/></c:url>">${doc.category.categoryName }</a>
-                                <span class="alignright view-count">${doc.view }</span>
-                                <span class="alignright down-count">${doc.download }</span>
-                            </div>
-                        </div>
-                    </li>
-                            
-           </c:forEach>
-                
-        </ul>
-    </div>
-</div>
+				</div>
 
-            
+				<div class="row">
+					<div class="center_column col-xs-12 col-sm-9" id="center_column">
 
-        </div>
-    </div>
+						<div itemscope="" itemtype="http://schema.org/ItemList">
+							<h1 class="page-heading">
+								<span id="mainbody_contentbody_contentpage_titlePage"
+									class="page-heading-title" itemprop="name">WordPress</span>
+							</h1>
+							<link itemprop="url"
+								href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">
+							<meta itemprop="description"
+								content="Thư viện tổng hợp mã nguồn website đẹp bằng WordPress, Hướng dẫn bạn cách cài đặt module &amp; sử dụng trong WordPress">
+							<div id="mainbody_contentbody_contentpage_upPannel">
 
-        </div>
-    </div>
-     
 
-        
-<script src="style/search-cate/floater_xlib.js.tải xuống"></script>
-<script type="text/javascript">
+								<a id="mainbody_contentbody_contentpage_btnViewBase"
+									href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnViewBase&#39;,&#39;&#39;)"></a>
+								<a id="mainbody_contentbody_contentpage_bntViewDetail"
+									href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$bntViewDetail&#39;,&#39;&#39;)"></a>
+								<div id="view-product-list" class="view-product-list">
+									<div class="page-heading3">&nbsp;</div>
+
+									<ul class="display-product-option">
+
+									</ul>
+
+									<ul class="row product-list style2 grid mar-top4">
+										<c:forEach var="doc" items="${docs }">
+											<li class="col-sx-12 col-sm-3" itemprop="itemListElement"
+												itemscope="" itemtype="http://schema.org/Product">
+												<div class="product-container">
+													<div class="left-block">
+														<a
+															href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
+															<div class="img-box">
+																<img class="img-responsive" itemprop="image"
+																	src="${doc.cover }" alt="${doc.docName }"
+																	title="Download Full code web bán túi xách thời trang">
+															</div>
+														</a>
+
+														<div class="downview">
+															<span class="view-count2">${doc.view }</span> <span
+																class="down-count2">${doc.download_count }</span>
+														</div>
+														<a class="cate"
+															href="<c:url value = "/category"><c:param name = "id" value = "${doc.cateId }"/></c:url>">${doc.category.categoryName }</a>
+													</div>
+													<div class="right-block">
+														<a itemprop="url"
+															href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
+															<h2 class="product-name bold" itemprop="name"
+																title="${doc.docName }">${doc.docName }</h2>
+														</a>
+
+													</div>
+												</div>
+											</li>
+										</c:forEach>
+
+									</ul>
+								</div>
+								<div class="sortPagiBar">
+									<div class="bottom-pagination">
+										<nav id="mainbody_contentbody_contentpage_PaggingBottom">
+											<ul class="pagination">
+												<c:if test="${totalpages > 7 }">
+													<c:if test="${curpage > 1 }">
+														<li><a
+															href="<c:url value = "${req }"><c:param name = "page" value = "1"/><c:param name = "key" value = "${key }"/></c:url>">Trang
+																đầu</a></li>
+														<li><a
+															href="<c:url value = "${req }"><c:param name = "page" value = "${curpage-1 }"/><c:param name = "key" value = "${key }"/></c:url>">«</a></li>
+													</c:if>
+													<c:if test="${curpage == 1 }">
+														<c:forEach var="num" begin="1" end="6">
+															<c:if test="${num == 1 }">
+																<li class="active"><a
+																	href="<c:url value = "${req }"><c:param name = "page" value = "1"/><c:param name = "key" value = "${key }"/></c:url>">1</a></li>
+															</c:if>
+															<c:if test="${num != 1 }">
+																<li><a
+																	href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
+															</c:if>
+
+														</c:forEach>
+													</c:if>
+													<c:if test="${curpage == totalpages }">
+														<c:forEach var="num" begin="${totalpages-6 }"
+															end="${totalpages }">
+															<c:if test="${num == totalpages }">
+																<li class="active"><a
+																	href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
+															</c:if>
+															<c:if test="${num != totalpages }">
+																<li><a
+																	href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
+															</c:if>
+
+														</c:forEach>
+													</c:if>
+													<c:if test="${curpage != 1 && curpage != totalpages }">
+														<c:forEach var="num" begin="${curpage - 3 }"
+															end="${curpage + 3 }">
+															<c:if test="${num == curpage }">
+																<li class="active"><a
+																	href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
+															</c:if>
+															<c:if test="${num != curpage }">
+																<li><a
+																	href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
+															</c:if>
+														</c:forEach>
+													</c:if>
+
+													<c:if test="${curpage != totalpages }">
+														<li><a
+															href="<c:url value = "${req }"><c:param name = "page" value = "${curpage+1 }"/><c:param name = "key" value = "${key }"/></c:url>">»</a></li>
+														<li><a
+															href="<c:url value = "${req }"><c:param name = "page" value = "${totalpages }"/><c:param name = "key" value = "${key }"/></c:url>">
+																Trang Cuối </a></li>
+													</c:if>
+												</c:if>
+												<c:if test="${totalpages <= 7 }">
+													<c:if test="${curpage > 1 }">
+														<li><a
+															href="<c:url value = "${req }"><c:param name = "page" value = "1"/><c:param name = "key" value = "${key }"/></c:url>">Trang
+																đầu</a></li>
+														<li><a
+															href="<c:url value = "${req }"><c:param name = "page" value = "${curpage-1 }"/><c:param name = "key" value = "${key }"/></c:url>">«</a></li>
+													</c:if>
+													<c:if test="${curpage == 1 }">
+														<c:forEach var="num" begin="1" end="${totalpages }">
+															<c:if test="${num == 1 }">
+																<li class="active"><a
+																	href="<c:url value = "${req }"><c:param name = "page" value = "1"/><c:param name = "key" value = "${key }"/></c:url>">1</a></li>
+															</c:if>
+															<c:if test="${num != 1 }">
+																<li><a
+																	href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
+															</c:if>
+
+														</c:forEach>
+													</c:if>
+													<c:if test="${curpage == totalpages }">
+														<c:forEach var="num" begin="1" end="${totalpages }">
+															<c:if test="${num == totalpages }">
+																<li class="active"><a
+																	href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
+															</c:if>
+															<c:if test="${num != totalpages }">
+																<li><a
+																	href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
+															</c:if>
+
+														</c:forEach>
+													</c:if>
+													<c:if test="${curpage != 1 && curpage != totalpages }">
+														<c:forEach var="num" begin="1" end="${curpage }">
+															<c:if test="${num == curpage }">
+																<li class="active"><a
+																	href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
+															</c:if>
+															<c:if test="${num != curpage }">
+																<li><a
+																	href="<c:url value = "${req }"><c:param name = "page" value = "${num }"/><c:param name = "key" value = "${key }"/></c:url>">${num }</a></li>
+															</c:if>
+														</c:forEach>
+													</c:if>
+
+													<c:if test="${curpage != totalpages }">
+														<li><a
+															href="<c:url value = "${req }"><c:param name = "page" value = "${curpage+1 }"/><c:param name = "key" value = "${key }"/></c:url>">»</a></li>
+														<li><a
+															href="<c:url value = "${req }"><c:param name = "page" value = "${totalpages}"/><c:param name = "key" value = "${key }"/></c:url>">
+																Trang Cuối </a></li>
+													</c:if>
+												</c:if>
+											</ul>
+										</nav>
+									</div>
+									<div class="sort-product  box-sort2">
+										<div class="sort-product-icon">
+											<i class="fa fa-sort-alpha-asc"></i>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div id="mainbody_contentbody_contentpage_ucSuggest_upPannel">
+
+							<div id="view-product-list" class="view-product-list">
+								<h2 class="page-heading">
+									<span id="mainbody_contentbody_contentpage_ucSuggest_divTitle"
+										class="page-heading-title">TÀI LIỆU XEM NHIỀU</span>
+								</h2>
+								<ul class="row product-list style2 grid">
+									<c:forEach var="doc" items="${topviewdocs}">
+										<li class="col-sx-12 col-sm-3">
+											<div class="product-container">
+												<div class="left-block">
+													<a
+														href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
+														<div class="img-box">
+															<img class="img-responsive" src="${doc.cover }"
+																alt="${doc.docName }" title="${doc.docName }">
+														</div>
+													</a>
+													<div class="quick-view"></div>
+													<div class="downview">
+														<span class="view-count2">${doc.view }</span> <span
+															class="down-count2">${doc.download_count }</span>
+													</div>
+													<a class="cate"
+														href="<c:url value = "/category"><c:param name = "id" value = "${doc.cateId }"/></c:url>">${doc.category.categoryName }</a>
+												</div>
+												<div class="right-block">
+													<a
+														href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
+														<h3 class="product-name bold" title="${doc.docName }">${doc.docName }</h3>
+													</a>
+												</div>
+											</div>
+										</li>
+									</c:forEach>
+								</ul>
+							</div>
+
+						</div>
+
+
+					</div>
+					<div class="column col-xs-12 col-sm-3" id="left_column">
+
+						<div class="block left-module">
+							<p class="title_block">TÀI LIỆU NỔI BẬT</p>
+							<div class="block_content">
+								<ul class="products-block best-sell">
+									<c:forEach var="doc" items="${topdocs }">
+										<li>
+											<div class="products-block-left">
+												<a
+													href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
+													<img src="${doc.cover }" alt="${doc.docName }"
+													title="${doc.docName }">
+												</a>
+											</div>
+											<div class="products-block-right">
+												<p class="product-name">
+													<a
+														href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
+													</a>
+												</p>
+												<h3 class="title2 bold" title="${doc.docName }">
+													<a
+														href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">${doc.docName }</a>
+												</h3>
+												<a
+													href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
+												</a>
+												<p></p>
+
+											</div>
+											<div class="products-block-bottom">
+												<div>
+													<a class="cate"
+														href="<c:url value = "/category"><c:param name = "id" value = "${doc.cateId }"/></c:url>">${doc.category.categoryName }</a>
+													<span class="alignright view-count">${doc.view }</span> <span
+														class="alignright down-count">${doc.download_count }</span>
+												</div>
+											</div>
+										</li>
+
+									</c:forEach>
+
+								</ul>
+							</div>
+						</div>
+
+
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+
+		<script src="style/search-cate/floater_xlib.js.tải xuống"></script>
+		<script type="text/javascript">
 
     var slideTime = 600;
     var floatAtBottom = false;

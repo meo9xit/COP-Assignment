@@ -1065,50 +1065,20 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 											<i class="fa fa-bars"></i>
 										</button>
 										<a class="navbar-brand"
-											href="https://sharecode.vn/thong-tin-ca-nhan.htm#">MENU</a>
+											href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm#">MENU</a>
 									</div>
 									<div id="navbar" class="navbar-collapse collapse">
 										<ul class="nav navbar-nav">
 											<li id="mnhome" class="active" title="Trang chủ"><a
-												href="https://sharecode.vn/"><i class="fa fa-home fa-lg"
-													aria-hidden="true"></i></a></li>
-											<li id="mntopcode" title="Top code nổi bật"><a
-												href="https://sharecode.vn/top-codes.htm">Top code</a></li>
-											<li id="mncodeok" title="Code chất lượng (&gt;= 100 Xu)"><a
-												href="https://sharecode.vn/code-chat-luong.htm">Code
-													chất lượng <span class="notify notify-right"></span>
+												href="<c:url value = "/home"></c:url>"><i
+													class="fa fa-home fa-lg" aria-hidden="true"></i></a></li>
+											<li id="mntopcode" title="Tài liệu xem nhiều"><a
+												href="<c:url value = "/topview"></c:url>"> Được xem
+													nhiều </a></li>
+											<li id="mncodeok" title="Tài liệu tải nhiều"><a
+												href="<c:url value = "/topdownload"></c:url>"> Được tải
+													nhiều <span class="notify notify-right"></span>
 											</a></li>
-											<li id="mncode" title="Code tham khảo (2 Xu - 99 Xu)"><a
-												href="https://sharecode.vn/code-tham-khao.htm">Code tham
-													khảo</a></li>
-											<li id="mncodefree" title="Code miễn phí (0 Xu)"><a
-												href="https://sharecode.vn/code-mien-phi.htm">Code miễn
-													phí</a></li>
-											<li id="mndomain" class="dropdown"><a
-												href="https://sharecode.vn/hosting-ssd.htm"
-												class="dropdown-toggle">Tên miền - Hosting <span
-													class="notify notify-right"></span></a>
-												<ul class="dropdown-menu container-fluid">
-													<li class="block-container">
-														<ul class="block">
-															<li class="link_container"><a
-																href="https://sharecode.vn/dang-ki-ten-mien.htm">Đăng
-																	kí tên miền</a></li>
-															<li class="link_container"><a
-																href="https://sharecode.vn/hosting-ssd.htm">Hosting
-																	SSD</a></li>
-															<li class="link_container"><a
-																href="https://sharecode.vn/vps-may-chu-ao.htm">Clould
-																	VPS</a></li>
-															<li class="link_container"><a
-																href="https://sharecode.vn/email-server.htm">Email
-																	server</a></li>
-															<li class="link_container"><a
-																href="https://sharecode.vn/chung-thuc-ssl.htm">Chứng
-																	thực SSL</a></li>
-														</ul>
-													</li>
-												</ul></li>
 										</ul>
 									</div>
 								</div>
