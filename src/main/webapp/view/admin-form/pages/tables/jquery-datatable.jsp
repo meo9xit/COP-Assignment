@@ -306,7 +306,7 @@
 				<ul class="list">
 					<li class="header">MAIN NAVIGATION</li>
 					<li><a
-						href="view/admin-form/pages/tables/jquery-datatable.jsp"> <i
+						href='<c:url value="/admin-user"/>'> <i
 							class="material-icons">home</i> <span>Quản lý người dùng</span>
 					</a></li>
 					<li><a href='<c:url value="/admin-subcategory"/>'> <i
