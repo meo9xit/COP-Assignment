@@ -58,6 +58,7 @@ public class HomeController extends HttpServlet {
 		request.setAttribute("categories", cates);
 		request.setAttribute("curpage", curpage);
 		request.setAttribute("docs", docs);
+		System.out.println(getServletContext().getRealPath("/style/search-cate"));
 		request.setAttribute("topviewdocs", topview);
 		request.setAttribute("topdocs", topdownload );
 		request.setAttribute("req", "/home");

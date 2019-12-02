@@ -13,7 +13,8 @@
 <link rel="stylesheet" type="text/css" href="style/search-cate/owl.carousel.css">
 <link rel="stylesheet" type="text/css" href="style/search-cate/jquery-ui.min.css">
 <link rel="stylesheet" type="text/css" href="style/search-cate/animate.css">
-<link rel="stylesheet" type="text/css" href="style/search-cate/reset.css"><link rel="stylesheet" type="text/css" href="style/search-cate/style.css">
+<link rel="stylesheet" type="text/css" href="style/search-cate/reset.css">
+<link rel="stylesheet" type="text/css" href="style/search-cate/style.css" >
     
     
     <meta property="og:image" content="https://sharecode.vn/assets/images/logo_sharecode.png">
