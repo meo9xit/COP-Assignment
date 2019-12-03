@@ -3,6 +3,7 @@
 	prefix="dec"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<c:url var="APIurl" value="/api-documents"/>
 
 <!DOCTYPE html>
 <!-- saved from url=(0044)https://sharecode.vn/code-upload-cua-toi.htm -->
@@ -24,23 +25,23 @@
 <meta name="twitter:card" value="summary">
 <meta property="og:site_name" content="Sharecode.vn">
 <link rel="stylesheet" type="text/css"
-	href="./Code tải lên của tôi_files/bootstrap.min.css">
+	href="style/uploaddeddoc/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css"
-	href="./Code tải lên của tôi_files/font-awesome.min.css">
+	href="style/uploaddeddoc/select2.min.css">
 <link rel="stylesheet" type="text/css"
-	href="./Code tải lên của tôi_files/select2.min.css">
+	href="style/uploaddeddoc/owl.carousel.css">
 <link rel="stylesheet" type="text/css"
-	href="./Code tải lên của tôi_files/owl.carousel.css">
+	href="style/uploaddeddoc/jquery-ui.min.css">
 <link rel="stylesheet" type="text/css"
-	href="./Code tải lên của tôi_files/jquery-ui.min.css">
+	href="style/uploaddeddoc/animate.css">
 <link rel="stylesheet" type="text/css"
-	href="./Code tải lên của tôi_files/animate.css">
+	href="style/uploaddeddoc/reset.css">
 <link rel="stylesheet" type="text/css"
-	href="./Code tải lên của tôi_files/reset.css">
-<link rel="stylesheet" type="text/css"
-	href="./Code tải lên của tôi_files/style.css">
+	href="style/uploaddeddoc/style.css">
 
-<link href="./Code tải lên của tôi_files/profile.css" rel="stylesheet">
+<link href="style/uploaddeddoc/profile.css" rel="stylesheet">
 
 
 <meta name="description"
@@ -55,7 +56,7 @@
 
 
 <link rel="stylesheet" type="text/css"
-	href="./Code tải lên của tôi_files/responsive.css">
+	href="style/uploaddeddoc/responsive.css">
 <style type="text/css">
 .fb_hidden {
 	position: absolute;
@@ -430,7 +431,7 @@ transform
 					title="Facebook Cross Domain Communication Frame" tabindex="-1"
 					frameborder="0" allowtransparency="true" allowfullscreen="true"
 					scrolling="no" allow="encrypted-media"
-					src="./Code tải lên của tôi_files/xd_arbiter.html"
+					src="style/uploaddeddoc/xd_arbiter.html"
 					style="border: none;"></iframe>
 			</div>
 			<div></div>
@@ -438,11 +439,11 @@ transform
 	</div>
 
 	<script async=""
-		src="./Code tải lên của tôi_files/analytics.js.tải xuống"></script>
-	<script src="./Code tải lên của tôi_files/sdk.js.tải xuống" async=""
+		src="style/uploaddeddoc/analytics.js.tải xuống"></script>
+	<script src="style/uploaddeddoc/sdk.js.tải xuống" async=""
 		crossorigin="anonymous"></script>
 	<script id="facebook-jssdk"
-		src="./Code tải lên của tôi_files/sdk.js(1).tải xuống"></script>
+		src="style/uploaddeddoc/sdk.js(1).tải xuống"></script>
 	<script>
         window.fbAsyncInit = function () {
             FB.init({
@@ -480,21 +481,15 @@ function __doPostBack(eventTarget, eventArgument) {
 </script>
 
 
-	<script src="./Code tải lên của tôi_files/WebResource.axd"
+	<script src="style/uploaddeddoc/WebResource.axd"
 		type="text/javascript"></script>
 
 
-	<script src="./Code tải lên của tôi_files/ScriptResource.axd"
+	<script src="style/uploaddeddoc/ScriptResource.axd"
 		type="text/javascript"></script>
-	<script src="./Code tải lên của tôi_files/ScriptResource(1).axd"
+	<script src="style/uploaddeddoc/ScriptResource(1).axd"
 		type="text/javascript"></script>
-	<div class="aspNetHidden">
 
-		<input type="hidden" name="__VIEWSTATEGENERATOR"
-			id="__VIEWSTATEGENERATOR" value="40C6AFAF"> <input
-			type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
-			value="/wEdACGx0UoQf30dA4n7USqdJTFnicdokvXrko/HzcC2ytH5LOUCRZ2fmNYwaJ6nLB+QKRfzqgylkSC105WTXjqRLBEiMXn6wy/zBjWQF3IX0QM3eVgqnuNz7Lzf3zDBlOJhlOuHO3xHfyQR+G0qbZsvpNAEjrwKKnvjgCf57LqzCGJNBPXj45ZamvHmOwHWXD3mrR3RL2til5QvRKSl4G1aNFRFkDxGQm9jX45jK/gKvuqaclfrbia0bMSM36db9JONvphx0r/lyxYpMZxnmYJv0Fm1pl75Bzox8RS/AzS0H8EoA2Fhqq5ns9Hmb0qtoUwUbDz8URKrmU5sMOZpTFAUMIH2eWqPMAuKBu3TJU+72rNd5djolJpz+ylyqaoQ8wJs6/2R58kv+Q8ifuwptBxrrGZ6nNAMop5vPoSKw1tc606hEUDAfyz9ZHvIcW9doNoM8K/R/uGxu1UZZlLqO8VlSmlATVsrvEhcxKPgj+Xmb9aDhz4va1JqsqdzMyeRlVuPHE8Zs78gQ0SaaLloHzIuXQlPUouR5yUp8OGSA5MrE5nxQwKmIN40u11q/UjvQjGAwT6vgMR5f7pINEF4exLzgv/JqKEDuTX9bP3e22cYj7AuMDRDZWtSdB7YtP6rZA1mnRI/OLf0NMRDhaqnVHtN+ORzaFHi+dDuhnL8SDg7BwQwYLxM7ITXCunZfIh7djrWMKdN0ADAvzvZnVbIYaZ8+oHrV1mApQ==">
-	</div>
 	<script type="text/javascript">
 //<![CDATA[
 Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 'form1', ['tctl00$ctl00$ctl00$mainbody$contentbody$contentpage$upPannel','mainbody_contentbody_contentpage_upPannel','tctl00$ctl00$ctl00$ctl24','ctl24'], [], [], 90, 'ctl00$ctl00$ctl00');
@@ -509,279 +504,149 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 	</div>
 
 	<div id="header" class="header">
-		<div class="top-header">
-			<div class="container">
-				<div class="nav-top-links"></div>
-
-				<div id="ExitBox" class="support-link">
-					<a id="btnExit" class="aorange"
-						href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$btnExit&#39;,&#39;&#39;)">[Thoát]</a>
-				</div>
-
-			</div>
-		</div>
-		<div class="container main-header">
-			<div class="row">
-				<div class="col-xs-12 col-sm-3 col-md-3 logo">
-					<a href="https://sharecode.vn/"> <img
-						alt="Trang chủ sharecode.vn" title="Sharecode.vn"
-						src="./Code tải lên của tôi_files/logo.png"></a>
-				</div>
-				<div class="col-xs-7 col-sm-7 col-md-6 header-search-box"></div>
-				<div class="col-xs-5 col-sm-2 col-md-3 shopping-cart-box btn-align">
-
-
-					<a href="https://sharecode.vn/thanh-vien-upload.htm"
-						class="button-orange" title="Upload code kiếm tiền"><i
-						class="fa fa-cloud-upload fa-lg" aria-hidden="true"></i>&nbsp; TẢI
-						LÊN</a>
-
-				</div>
-			</div>
-		</div>
-		<div id="nav-top-menu" class="nav-top-menu nav-ontop">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-3" id="box-vertical-megamenus">
-						<div class="box-vertical-megamenus">
-							<h4 class="title">
-								<span class="title-menu">Danh mục</span> <span
-									class="btn-open-mobile pull-right home-page"><i
-									class="fa fa-bars"></i></span>
-							</h4>
-							<div class="vertical-menu-content is-home" style="display: none;">
-								<ul class="vertical-menu-list">
-									<li><a class="parent"
-										href="https://sharecode.vn/code-upload-cua-toi.htm#"> <img
-											class="icon-menu" alt="Thể loại code"
-											src="./Code tải lên của tôi_files/2.png">PHÂN LOẠI CODE
-									</a>
-										<div class="vertical-dropdown-menu" style="width: 902px;">
-											<div class="vertical-groups col-sm-6 col-md-4">
-												<div class="mega-group col-sm-12">
-													<span class="mega-group-header"><span>THỂ
-															LOẠI CODE</span></span>
-													<ul class="group-link-default">
-
-														<li><a class="bold"
-															href="https://sharecode.vn/the-loai-source-code/website-1.htm">Website</a></li>
-
-														<li><a class="bold"
-															href="https://sharecode.vn/the-loai-source-code/phan-mem-ung-dung-2.htm">Phần
-																mềm - Ứng dụng</a></li>
-
-														<li><a class="bold"
-															href="https://sharecode.vn/the-loai-source-code/game-3.htm">Game</a></li>
-
-														<li><a class="bold"
-															href="https://sharecode.vn/the-loai-source-code/khac-4.htm">Khác</a></li>
-
-													</ul>
-												</div>
-											</div>
-											<div class="vertical-groups col-sm-6 col-md-5">
-												<div class="mega-group col-sm-12">
-													<span class="mega-group-header"><span>SOURCE
-															CODE</span></span>
-													<ul class="group-link-default">
-														<li><a
-															href="https://sharecode.vn/code-chat-luong.htm"><strong>Code
-																	chất lượng</strong> (&gt;= 100 Xu)</a></li>
-														<li><a href="https://sharecode.vn/code-tham-khao.htm"><strong>Code
-																	tham khảo</strong> (2 Xu - 99 Xu)</a></li>
-														<li><a href="https://sharecode.vn/code-mien-phi.htm"><strong>Code
-																	miễn phí</strong> (0 Xu)</a></li>
-
-
-													</ul>
-												</div>
-
-											</div>
-										</div></li>
-
-									<li class=""><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/android-15.htm">
-											<img class="icon-menu" alt="Android"
-											src="./Code tải lên của tôi_files/3.png">Android
-									</a></li>
-
-									<li class=""><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/ios-23.htm">
-											<img class="icon-menu" alt="iOS"
-											src="./Code tải lên của tôi_files/3.png">iOS
-									</a></li>
-
-									<li class=""><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/windows-phone-26.htm">
-											<img class="icon-menu" alt="Windows phone"
-											src="./Code tải lên của tôi_files/3.png">Windows phone
-									</a></li>
-
-									<li class=""><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/php-mysql-21.htm">
-											<img class="icon-menu" alt="PHP &amp; MySQL"
-											src="./Code tải lên của tôi_files/3.png">PHP &amp;
-											MySQL
-									</a></li>
-
-									<li class=""><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">
-											<img class="icon-menu" alt="WordPress"
-											src="./Code tải lên của tôi_files/3.png">WordPress
-									</a></li>
-
-									<li class=""><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/joomla-28.htm">
-											<img class="icon-menu" alt="Joomla"
-											src="./Code tải lên của tôi_files/3.png">Joomla
-									</a></li>
-
-									<li class=""><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-17.htm">
-											<img class="icon-menu" alt="Visual C#"
-											src="./Code tải lên của tôi_files/3.png">Visual C#
-									</a></li>
-
-									<li class=""><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/aspaspnet-16.htm">
-											<img class="icon-menu" alt="Asp/Asp.Net"
-											src="./Code tải lên của tôi_files/3.png">Asp/Asp.Net
-									</a></li>
-
-									<li class=""><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/javajsp-20.htm">
-											<img class="icon-menu" alt="Java/JSP"
-											src="./Code tải lên của tôi_files/3.png">Java/JSP
-									</a></li>
-
-									<li class=""><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-basic-19.htm">
-											<img class="icon-menu" alt="Visual Basic"
-											src="./Code tải lên của tôi_files/3.png">Visual Basic
-									</a></li>
-
-									<li class="cat-link-orther"><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/cocos2d-24.htm">
-											<img class="icon-menu" alt="Cocos2D"
-											src="./Code tải lên của tôi_files/3.png">Cocos2D
-									</a></li>
-
-									<li class="cat-link-orther"><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/unity-27.htm">
-											<img class="icon-menu" alt="Unity"
-											src="./Code tải lên của tôi_files/3.png">Unity
-									</a></li>
-
-									<li class="cat-link-orther"><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-18.htm">
-											<img class="icon-menu" alt="Visual C++"
-											src="./Code tải lên của tôi_files/3.png">Visual C++
-									</a></li>
-
-									<li class="cat-link-orther"><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/html-template-25.htm">
-											<img class="icon-menu" alt="Html &amp; Template"
-											src="./Code tải lên của tôi_files/3.png">Html &amp;
-											Template
-									</a></li>
-
-									<li class="cat-link-orther"><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/khac-22.htm">
-											<img class="icon-menu" alt="Khác"
-											src="./Code tải lên của tôi_files/3.png">Khác
-									</a></li>
-
+			<div class="top-header">
+				<div class="container">
+					<div class="nav-top-links"></div>
+					<c:if test="${empty loginedUser }">
+						<div id="LoginBox" class="support-link">
+							<a href="<c:url value = "/login"/>" role="button">Đăng nhập</a> <a
+								href="https://sharecode.vn/dang-ki-tai-khoan.htm">Đăng kí</a>
+						</div>
+					</c:if>
+					<c:if test="${not empty loginedUser }">
+						<div id="ExitBox" class="support-link">
+							<a id="btnExit" class="aorange" href="<c:url value ="/logout"/>">[Thoát]</a>
+						</div>
+						<div id="user-info-top" class="user-info pull-right">
+							<div id="AcInfo" class="dropdown">
+								<a href="/code-upload-cua-toi.htm" id="UserName2"
+									class="current-open" data-toggle="dropdown"
+									aria-haspopup="true" aria-expanded="false"
+									title="Xin chào, ${loginedUser.username }"><span>Xin
+										chào, </span><span id="UserName"><b>${loginedUser.username }</b></span></a>
+								<ul class="dropdown-menu mega_dropdown" role="menu">
+									<li><a href="<c:url value = "/doc-manage"/>"><i
+											class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp;Tài
+											liệu tải lên</a></li>
+									<li><a href="<c:url value = "/user-info"/>" class="green"><i
+											class="fa fa-cog" aria-hidden="true"></i>&nbsp;Cài đặt thông
+											tin</a></li>
 								</ul>
-								<div class="all-category">
-									<span class="open-cate">Xem tất cả</span>
+							</div>
+
+						</div>
+					</c:if>
+
+				</div>
+			</div>
+			<div class="container main-header">
+				<div class="row">
+					<div class="col-xs-12 col-sm-3 col-md-3 logo">
+						<a href="https://sharecode.vn/"> <img
+							alt="Trang chủ sharecode.vn" title="Sharecode.vn"
+							src="style/userinfo/logo.png"></a>
+					</div>
+					<div class="col-xs-7 col-sm-7 col-md-6 header-search-box">
+
+						<div class="form-inline search-h">
+							<div id="regPanel"
+								onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnSearch&#39;)">
+
+								<div class="form-group input-serach">
+									<input name="key" type="text" id="txtSearch"
+											class="txt-search txt-auto ui-autocomplete-input"
+											placeholder="Nhập Từ khóa" autocomplete="off">
 								</div>
+								<a id="btnSearch" class="pull-right btn-search"
+									href="#header" onclick="submitSearch()"></a>
+							<script>
+								function submitSearch() {
+									document.getElementById("searchform")
+											.submit();
+								}
+							</script>
 							</div>
 						</div>
 					</div>
-					<div id="main-menu" class="col-sm-9 main-menu">
-						<nav class="navbar navbar-default">
-							<div class="container-fluid">
-								<div class="navbar-header">
-									<button type="button" class="navbar-toggle collapsed"
-										data-toggle="collapse" data-target="#navbar"
-										aria-expanded="false" aria-controls="navbar">
-										<i class="fa fa-bars"></i>
-									</button>
-									<a class="navbar-brand"
-										href="https://sharecode.vn/code-upload-cua-toi.htm#">MENU</a>
-								</div>
-								<div id="navbar" class="navbar-collapse collapse">
-									<ul class="nav navbar-nav">
-										<li id="mnhome" class="active" title="Trang chủ"><a
-											href="https://sharecode.vn/"><i class="fa fa-home fa-lg"
-												aria-hidden="true"></i></a></li>
-										<li id="mntopcode" title="Top code nổi bật"><a
-											href="https://sharecode.vn/top-codes.htm">Top code</a></li>
-										<li id="mncodeok" title="Code chất lượng (&gt;= 100 Xu)"><a
-											href="https://sharecode.vn/code-chat-luong.htm">Code chất
-												lượng <span class="notify notify-right"></span>
-										</a></li>
-										<li id="mncode" title="Code tham khảo (2 Xu - 99 Xu)"><a
-											href="https://sharecode.vn/code-tham-khao.htm">Code tham
-												khảo</a></li>
-										<li id="mncodefree" title="Code miễn phí (0 Xu)"><a
-											href="https://sharecode.vn/code-mien-phi.htm">Code miễn
-												phí</a></li>
+					<div class="col-xs-5 col-sm-2 col-md-3 shopping-cart-box btn-align">
+							<a href="<c:url value = "/user-upload" />" class="button-orange"
+								title="Upload code kiếm tiền"><i
+								class="fa fa-cloud-upload fa-lg" aria-hidden="true"></i>&nbsp;
+								TẢI LÊN</a>
+					</div>
+				</div>
+			</div>
+			<div id="nav-top-menu" class="nav-top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-3" id="box-vertical-megamenus">
+							<div class="box-vertical-megamenus">
+								<h4 class="title">
+									<span class="title-menu">Danh mục</span> <span
+										class="btn-open-mobile pull-right home-page"><i
+										class="fa fa-bars"></i></span>
+								</h4>
+								<div class="vertical-menu-content is-home">
+									<ul class="vertical-menu-list">
+										<c:forEach var="category" items="${categories }">
+											<li class=""><a
+												href="<c:url value = "/post"><c:param name = "id" value = "${category.categoryID }"/></c:url>">
+													<img class="icon-menu" alt="${category.categoryName }"
+													src="style/search-cate/3.png">
+													${category.categoryName }
+											</a></li>
+										</c:forEach>
 
 									</ul>
+									<div class="all-category">
+										<span class="open-cate">Xem tất cả</span>
+									</div>
 								</div>
 							</div>
-						</nav>
-					</div>
-				</div>
-				<div id="form-search-opntop">
-					<div class="form-inline search-h">
-						<div id="regPanel"
-							onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnSearch&#39;)">
-
-							<div class="form-group input-serach">
-								<input name="ctl00$ctl00$ctl00$txtSearch" type="text"
-									id="txtSearch"
-									class="txt-search txt-auto ui-autocomplete-input"
-									placeholder="Nhập Từ khóa (or) Mã code" autocomplete="off">
-							</div>
-							<a id="btnSearch" class="pull-right btn-search"
-								href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$btnSearch&#39;,&#39;&#39;)"></a>
-
+						</div>
+						<div id="main-menu" class="col-sm-9 main-menu">
+							<nav class="navbar navbar-default">
+								<div class="container-fluid">
+									<div class="navbar-header">
+										<button type="button" class="navbar-toggle collapsed"
+											data-toggle="collapse" data-target="#navbar"
+											aria-expanded="false" aria-controls="navbar">
+											<i class="fa fa-bars"></i>
+										</button>
+										<a class="navbar-brand"
+											href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm#">MENU</a>
+									</div>
+									<div id="navbar" class="navbar-collapse collapse">
+										<ul class="nav navbar-nav">
+											<li id="mnhome" class="active" title="Trang chủ"><a
+												href="<c:url value = "/home"></c:url>"><i
+													class="fa fa-home fa-lg" aria-hidden="true"></i></a></li>
+											<li id="mntopcode" title="Tài liệu xem nhiều"><a
+												href="<c:url value = "/topview"></c:url>"> Được xem
+													nhiều </a></li>
+											<li id="mncodeok" title="Tài liệu tải nhiều"><a
+												href="<c:url value = "/topdownload"></c:url>"> Được tải
+													nhiều <span class="notify notify-right"></span>
+											</a></li>
+										</ul>
+									</div>
+								</div>
+							</nav>
 						</div>
 					</div>
-				</div>
-				<div id="user-info-opntop">
-					<div id="user-info-top" class="user-info pull-right">
-						<div id="AcInfo" class="dropdown">
-							<a href="https://sharecode.vn/code-upload-cua-toi.htm"
-								id="UserName2" class="current-open" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false"
-								title="Xin chào, meo9xit"><span>Xin chào, </span><span
-								id="UserName"><b>${loginedUser.username }</b></span></a>
-							<ul class="dropdown-menu mega_dropdown" role="menu">
-								<li><a href="https://sharecode.vn/code-upload-cua-toi.htm"><i
-										class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp;Code
-										tải lên</a></li>
-								<li><a href="https://sharecode.vn/thong-tin-ca-nhan.htm"
-									class="green"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Cài
-										đặt thông tin</a></li>
-							</ul>
-						</div>
+					<div id="form-search-opntop"></div>
+					<div id="user-info-opntop"></div>
 
+					<div id="shopping-cart-box-ontop" style="display: none;">
+						<a href="https://sharecode.vn/binh-luan.htm"> <i
+							class="fa fa-comment"></i>
+
+						</a>
 					</div>
+
 				</div>
-
-				<div id="shopping-cart-box-ontop" style="display: block;">
-					<a href="https://sharecode.vn/binh-luan.htm"> <i
-						class="fa fa-comment"></i>
-
-					</a>
-				</div>
-
 			</div>
 		</div>
-	</div>
 
 	<div class="columns-container">
 		<div class="container" id="columns">
@@ -813,93 +678,17 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 
 
 					<div class="bg-title">
-						<a href="https://sharecode.vn/code-upload-cua-toi.htm"
+						<a href=""
 							class="search_title alignleft">
 							<h1 class="search_title">TÀI LIỆU TẢI LÊN</h1>
 						</a>
-						<div id="mainbody_contentbody_contentpage_regPanel"
-							onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;mainbody_contentbody_contentpage_btnSearch&#39;)">
-
-							<input
-								name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$txtSearch"
-								type="text" id="mainbody_contentbody_contentpage_txtSearch"
-								class="search_textbox form-control"
-								placeholder="Tìm code tải lên"> <input type="submit"
-								name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnSearch"
-								value="" id="mainbody_contentbody_contentpage_btnSearch"
-								class="btn_hide">
-
-						</div>
 					</div>
-					<br>
-					<br>
 					<div class="row">
 						<div class="col-sm-5 col-md-7"></div>
 						<div class="col-sm-7 col-md-5">
-							<div id="mainbody_contentbody_contentpage_Panel1"
-								onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;mainbody_contentbody_contentpage_btnEdit&#39;)">
-
-								<div class="input-group">
-									<input
-										name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$txtCode"
-										type="text" id="mainbody_contentbody_contentpage_txtCode"
-										class="form-control" placeholder="Mã code"> <span
-										class="input-group-btn"> <input type="submit"
-										name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnEdit"
-										value="Sửa nhanh"
-										id="mainbody_contentbody_contentpage_btnEdit"
-										class="btn btn-inline-orange"> <input type="submit"
-										name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnView"
-										value="Xem nhanh"
-										id="mainbody_contentbody_contentpage_btnView"
-										class="btn btn-inline-orange">
-									</span>
-								</div>
-
-							</div>
 						</div>
 					</div>
 					<br>
-					<div id="mainbody_contentbody_contentpage_divOption"
-						class="btn-group alignright bold" role="group">
-						<a id="mainbody_contentbody_contentpage_btnAll"
-							class="btn btn-option bold select"
-							href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnAll&#39;,&#39;&#39;)">Tất
-							cả <span id="mainbody_contentbody_contentpage_badAll"
-							class="badge bagde-green">0</span>
-						</a> <a id="mainbody_contentbody_contentpage_btnPremium"
-							class="btn btn-option bold"
-							href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnPremium&#39;,&#39;&#39;)">Có
-							phí <span id="mainbody_contentbody_contentpage_badPremium"
-							class="badge bagde-green">0</span>
-						</a> <a id="mainbody_contentbody_contentpage_btnFree"
-							class="btn btn-option bold"
-							href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnFree&#39;,&#39;&#39;)">Miễn
-							phí <span id="mainbody_contentbody_contentpage_badFree"
-							class="badge bagde-green">0</span>
-						</a> <a id="mainbody_contentbody_contentpage_btnHide"
-							class="btn btn-option bold"
-							href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnHide&#39;,&#39;&#39;)">Đang
-							ẩn <span id="mainbody_contentbody_contentpage_badHide"
-							class="badge bagde-green">0</span>
-						</a> <a id="mainbody_contentbody_contentpage_btnWait"
-							class="btn btn-option bold"
-							href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnWait&#39;,&#39;&#39;)">Chờ
-							duyệt <span id="mainbody_contentbody_contentpage_badWait"
-							class="badge bagde-green">0</span>
-						</a> <a id="mainbody_contentbody_contentpage_btnWaitPrice"
-							class="btn btn-option bold"
-							href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnWaitPrice&#39;,&#39;&#39;)">Chờ
-							duyệt phí tải <span
-							id="mainbody_contentbody_contentpage_badWaitPrice"
-							class="badge bagde-green">0</span>
-						</a> <a id="mainbody_contentbody_contentpage_btnNotOk"
-							class="btn btn-option bold"
-							href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnNotOk&#39;,&#39;&#39;)">Từ
-							chối <span id="mainbody_contentbody_contentpage_badNotOk"
-							class="badge bagde-green">0</span>
-						</a>
-					</div>
 					<div class="clear"></div>
 					<br>
 					<div id="mainbody_contentbody_contentpage_upPannel">
@@ -911,42 +700,45 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 							</div>
 							<div class="col-md-6 pro-col2">
 								<div class="pro-20"></div>
-
 								<div class="pro-20">TẢI</div>
 								<div class="pro-20">XEM</div>
-								<div class="pro-15"></div>
+								<div class="pro-30"></div>
 
-								<div class="pro-25 text-center">
+								<div class="pro-10 text-center">
 									<i class="fa fa-cog" aria-hidden="true"></i>
 								</div>
 							</div>
 						</div>
+					<c:forEach var = "doc" items = "${docs }">
 						<div class="col-xs-12 pro-row">
 							<div class="col-md-6 pro-col">
-								<div class="pro-20" title="Mã code">24107</div>
+								<div class="pro-20" title="Mã code">${doc.docId }</div>
 								<div class="pro-80 bold">
 									<a class="agreen titlecode"
-										href="/source-code/full-code-website-ban-phu-kien-noi-that-oto-dep-chuan-seo-responsive-24107.htm">
-										<h3 class="title1">Full code website bán phụ kiện nội
-											thất ô tô chuẩn seo responsive</h3>
+										href="<c:url value = "/update-doc"/>" >
+										<h3 class="title1">${doc.docId }</h3>
 									</a>
 								</div>
 							</div>
 							<div class="col-md-6 pro-col pro-line14">
-								<span title="Phí tải" class="pro-20 orange"><b>350</b> Xu</span>
-								<span title="Lượt tải" class="pro-20"><b>0</b></span> <span
-									title="Lượt xem" class="pro-20"><b>67</b></span> <span
-									class="pro-30">25/11/2019</span> <span
+								<span title="" class="pro-20 orange"></span>
+								<span title="Lượt tải" class="pro-20"><b>${doc.download_count }</b></span> 
+								<span
+									title="Lượt xem" class="pro-20"><b>${doc.view }</b></span> 
+								<span
+									class="pro-30">${doc.createdDate }</span> 
+								<span
 									class="pro-10 text-center"> <a
-									onclick="return ComfirmDelete(this);"
+									onclick="return ComfirmDelete(${doc.docId});"
 									id="mainbody_contentbody_contentpage_rptList_btnDelete_0"
 									data-toggle="tooltip" data-placement="top"
-									title="Bỏ lưu code này"
-									href="javascript:__doPostBack('ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$rptList$ctl00$btnDelete','')"><i
+									title="Xóa tài liệu này"
+									href="#"><i
 										class="fa fa-trash orange" aria-hidden="true"></i></a>
 								</span>
 							</div>
 						</div>
+					</c:forEach>
 						<div class="clear"></div>
 						<div id="mainbody_contentbody_contentpage_noResult"
 							class="noresult"></div>
@@ -956,28 +748,43 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 						<div class="sortPagiBar clearfix clear">
 							<span class="page-noite"><b
 								id="mainbody_contentbody_contentpage_lblTotalPage">0 - 0</b>&nbsp;/
-								Tổng số <b id="mainbody_contentbody_contentpage_lblTotalCode">0</b>&nbsp;CODE</span>
+								Tổng số <b id="mainbody_contentbody_contentpage_lblTotalCode">0</b>&nbsp;Tài liệu</span>
 							<div class="bottom-pagination">
 								<nav id="mainbody_contentbody_contentpage_PaggingBottom"></nav>
 							</div>
-							<div id="mainbody_contentbody_contentpage_divSort"
-								class="sort-product">
-								<select
-									name="ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$ddlSort"
-									onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$ddlSort\&#39;,\&#39;\&#39;)&#39;, 0)"
-									id="mainbody_contentbody_contentpage_ddlSort">
-									<option selected="selected" value="New">Mới nhất</option>
-									<option value="View">Xem nhiều</option>
-									<option value="Down">Tải nhiều</option>
-
-								</select>
-								<div class="sort-product-icon">
-									<i class="fa fa-sort-alpha-asc"></i>
-								</div>
-							</div>
 						</div>
 						<br>
-
+<script>
+        function ComfirmDelete(data) {
+            if (confirm("Bạn có thực sự muốn xóa tài liệu này?") == true) {
+				btnDeleteClick(data)
+            }
+            else
+                return false;
+        }
+        function btnDeleteClick(obj) {
+    		var data = {};
+    		var ids = obj;
+    		data['docId'] = ids;
+    		deleteDoc(data);
+    		location.href=location.href;
+    	};
+    	
+    	function deleteDoc(data) {
+            $.ajax({
+                url: '${APIurl}',
+                type: 'DELETE',
+                contentType: 'application/json',
+                data: JSON.stringify(data),
+                success: function () {
+                	
+                },
+                error: function () {
+                }
+            });
+        }
+       
+    </script>
 					</div>
 
 				</div>
@@ -986,7 +793,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 					<div class="block left-module box-border2">
 						<div class="pro-left">
 							<a href="https://sharecode.vn/thong-tin-ca-nhan.htm"> <img
-								src="./Code tải lên của tôi_files/avanta2.png"
+								src="style/uploaddeddoc/avanta2.png"
 								id="mainbody_contentbody_ucProfile_Avanta" class="prof_img"
 								alt="meo9xit - Hà Duy Hưng" width="90" height="90"
 								title="meo9xit - Hà Duy Hưng">
@@ -1077,72 +884,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 
 
 
-							<div class="owl-stage-outer">
-								<div class="owl-stage"
-									style="transform: translate3d(-900px, 0px, 0px); transition: all 0s ease 0s; width: 2100px;">
-									<div class="owl-item cloned"
-										style="width: 270px; margin-right: 30px;">
-										<li><a
-											href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm"
-											rel="nofollow" target="_blank"> <img
-												src="./Code tải lên của tôi_files/15_19_18_meo tang doanh thu ban code.jpg"
-												alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code"
-												title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li>
-									</div>
-									<div class="owl-item cloned"
-										style="width: 270px; margin-right: 30px;">
-										<li><a
-											href="https://sharecode.vn/su-kien/uu-dai-tung-bung-tang-thuong-khi-upload-va-upload-code-dat-moc-11.htm"
-											rel="nofollow" target="_blank"> <img
-												src="./Code tải lên của tôi_files/0_22_5_sharecode tang thuong 2.jpg"
-												alt="sự kiện, event, tặng thưởng, upload code"
-												title="Sự kiện: Mừng ngày giỗ tổ 10/3 - Tặng thưởng khi upload code đạt mốc"></a></li>
-									</div>
-									<div class="owl-item" style="width: 270px; margin-right: 30px;">
-										<li><a
-											href="http://sharecode.vn/cau-hoi/huong-dan-nap-tien-vao-tai-khoan-8.htm"
-											rel="nofollow" target="_blank"> <img
-												src="./Code tải lên của tôi_files/13_49_37_nap xu vao tai khoan.jpg"
-												alt="Nạp xu, nạp tiền, quy đổi, nạp thẻ cào, nạp qua ngân hàng, nạp qua ví ngân lượng"
-												title="Nạp XU vào tài khoản ngay!"></a></li>
-									</div>
-									<div class="owl-item active"
-										style="width: 270px; margin-right: 30px;">
-										<li><a
-											href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm"
-											rel="nofollow" target="_blank"> <img
-												src="./Code tải lên của tôi_files/15_19_18_meo tang doanh thu ban code.jpg"
-												alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code"
-												title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li>
-									</div>
-									<div class="owl-item" style="width: 270px; margin-right: 30px;">
-										<li><a
-											href="https://sharecode.vn/su-kien/uu-dai-tung-bung-tang-thuong-khi-upload-va-upload-code-dat-moc-11.htm"
-											rel="nofollow" target="_blank"> <img
-												src="./Code tải lên của tôi_files/0_22_5_sharecode tang thuong 2.jpg"
-												alt="sự kiện, event, tặng thưởng, upload code"
-												title="Sự kiện: Mừng ngày giỗ tổ 10/3 - Tặng thưởng khi upload code đạt mốc"></a></li>
-									</div>
-									<div class="owl-item cloned"
-										style="width: 270px; margin-right: 30px;">
-										<li><a
-											href="http://sharecode.vn/cau-hoi/huong-dan-nap-tien-vao-tai-khoan-8.htm"
-											rel="nofollow" target="_blank"> <img
-												src="./Code tải lên của tôi_files/13_49_37_nap xu vao tai khoan.jpg"
-												alt="Nạp xu, nạp tiền, quy đổi, nạp thẻ cào, nạp qua ngân hàng, nạp qua ví ngân lượng"
-												title="Nạp XU vào tài khoản ngay!"></a></li>
-									</div>
-									<div class="owl-item cloned"
-										style="width: 270px; margin-right: 30px;">
-										<li><a
-											href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm"
-											rel="nofollow" target="_blank"> <img
-												src="./Code tải lên của tôi_files/15_19_18_meo tang doanh thu ban code.jpg"
-												alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code"
-												title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li>
-									</div>
-								</div>
-							</div>
 							<div class="owl-controls">
 								<div class="owl-nav">
 									<div class="owl-prev" style="display: none;">
@@ -1168,58 +909,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 					</div>
 
 					<div class="block left-module">
-						<p class="title_block">THÔNG BÁO</p>
-						<div class="block_content">
-							<div class="layered layered-category">
-								<div class="layered-content">
-									<ul class="tree-menu">
-
-										<li><a
-											href="https://sharecode.vn/cau-hoi/cach-upload-code-hieu-qua-va-toi-uu-seo-10.htm"
-											title="Cách UPLOAD code hiệu quả và tối ưu SEO - FAQ">
-												<h3 class="title2 bullet">
-													Cách UPLOAD code hiệu quả và tối ưu SEO<span class="ic_hot"></span>
-												</h3>
-										</a></li>
-
-										<li><a
-											href="https://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm"
-											title="Mẹo giúp bạn TĂNG DOANH THU bán source code - FAQ">
-												<h3 class="title2 bullet">
-													Mẹo giúp bạn TĂNG DOANH THU bán source code<span
-														class="ic_hot"></span>
-												</h3>
-										</a></li>
-
-										<li><a
-											href="https://sharecode.vn/cau-hoi/huong-dan-nap-tien-vao-tai-khoan-8.htm"
-											title="Hướng dẫn NẠP TIỀN vào tài khoản - FAQ">
-												<h3 class="title2 bullet">
-													Hướng dẫn NẠP TIỀN vào tài khoản<span class=""></span>
-												</h3>
-										</a></li>
-
-										<li><a
-											href="https://sharecode.vn/cau-hoi/huong-dan-rut-tien-tu-tai-khoan-7.htm"
-											title="Hướng dẫn RÚT TIỀN từ tài khoản - FAQ">
-												<h3 class="title2 bullet">
-													Hướng dẫn RÚT TIỀN từ tài khoản<span class=""></span>
-												</h3>
-										</a></li>
-
-										<li><a
-											href="https://sharecode.vn/cau-hoi/huong-dan-cach-chay-website-aspnet-tren-localhost-2.htm"
-											title="Hướng dẫn cách chạy website ASP.Net trên Localhost - FAQ">
-												<h3 class="title2 bullet">
-													Hướng dẫn cách chạy website ASP.Net trên Localhost<span
-														class=""></span>
-												</h3>
-										</a></li>
-
-									</ul>
-								</div>
-							</div>
-						</div>
+						
 					</div>
 
 				</div>
@@ -1230,7 +920,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 
 
 
-	<script src="./Code tải lên của tôi_files/floater_xlib.js.tải xuống"></script>
+	<script src="style/uploaddeddoc/floater_xlib.js.tải xuống"></script>
 	<script type="text/javascript">
 
     var slideTime = 600;
@@ -1284,7 +974,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 			<a
 				href="https://sharecode.vn/kien-thuc-lap-trinh/dich-vu-thiet-ke-website-chuyen-nghiep-voi-gia-cuc-re-va-nhieu-uu-dai-tai-sharecodevn-880.htm"
 				target="_blank"> <img
-				src="./Code tải lên của tôi_files/thiet-ke-web-gia-re.jpg"
+				src="style/uploaddeddoc/thiet-ke-web-gia-re.jpg"
 				border="0" width="120" alt=""></a><br>
 		</div>
 	</div>
@@ -1292,7 +982,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 		style="text-align: left; position: fixed; overflow: hidden; width: 120px; z-index: 99999; left: 1299.5px; top: 60px; display: none;">
 		<div id="Div2">
 			<a href="https://topcode.vn/" target="_blank"> <img
-				src="./Code tải lên của tôi_files/Ra-mat-topcode.jpg" border="0"
+				src="style/uploaddeddoc/Ra-mat-topcode.jpg" border="0"
 				width="120" alt=""></a><br>
 		</div>
 	</div>
@@ -1312,7 +1002,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 					<div class="col-md-3">
 						<div id="address-box">
 							<a href="https://sharecode.vn/"> <img
-								src="./Code tải lên của tôi_files/logo.png" alt="Sharecode.vn"></a>
+								src="style/uploaddeddoc/logo.png" alt="Sharecode.vn"></a>
 							<div id="address-list">
 								<div class="tit-name">Hotline:</div>
 								<div class="tit-contain">
@@ -1415,21 +1105,21 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 					<div class="col-sm-12">
 						<ul id="trademark-list">
 							<li id="payment-methods">Thanh toán đảm bảo</li>
-							<li><img src="./Code tải lên của tôi_files/b1.png"
+							<li><img src="style/uploaddeddoc/b1.png"
 								alt="ngan luong"></li>
-							<li><img src="./Code tải lên của tôi_files/b10.png"
+							<li><img src="style/uploaddeddoc/b10.png"
 								alt="bao kim"></li>
-							<li><img src="./Code tải lên của tôi_files/b11.png"
+							<li><img src="style/uploaddeddoc/b11.png"
 								alt="momo"></li>
-							<li><img src="./Code tải lên của tôi_files/b8.png"
+							<li><img src="style/uploaddeddoc/b8.png"
 								alt="paypal"></li>
-							<li><img src="./Code tải lên của tôi_files/b5.png"
+							<li><img src="style/uploaddeddoc/b5.png"
 								alt="vietcombank"></li>
-							<li><img src="./Code tải lên của tôi_files/b9.png"
+							<li><img src="style/uploaddeddoc/b9.png"
 								alt="vietin bank"></li>
-							<li><img src="./Code tải lên của tôi_files/b6.png"
+							<li><img src="style/uploaddeddoc/b6.png"
 								alt="agribank"></li>
-							<li><img src="./Code tải lên của tôi_files/b7.png"
+							<li><img src="style/uploaddeddoc/b7.png"
 								alt="bidv"></li>
 
 						</ul>
@@ -1461,10 +1151,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 						<a
 							href="https://www.dmca.com/Protection/Status.aspx?ID=e3cfb854-1733-4462-a9e8-0ef4661d6600&amp;refurl=https://sharecode.vn/code-upload-cua-toi.htm"
 							title="DMCA.com Protection Status" class="dmca-badge"> <img
-							src="./Code tải lên của tôi_files/dmca-badge-w150-5x1-09.png"
+							src="style/uploaddeddoc/dmca-badge-w150-5x1-09.png"
 							alt="DMCA.com Protection Status"></a>
 						<script
-							src="./Code tải lên của tôi_files/DMCABadgeHelper.min.js.tải xuống"> </script>
+							src="style/uploaddeddoc/DMCABadgeHelper.min.js.tải xuống"> </script>
 					</p>
 				</div>
 			</div>
@@ -1476,19 +1166,19 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 		class="scroll_top" title="Lên đầu" style="display: inline;"></a>
 	<!-- Script-->
 	<script type="text/javascript"
-		src="./Code tải lên của tôi_files/jquery-1.11.2.min.js.tải xuống"></script>
+		src="style/uploaddeddoc/jquery-1.11.2.min.js.tải xuống"></script>
 	<script type="text/javascript"
-		src="./Code tải lên của tôi_files/bootstrap.min.js.tải xuống"></script>
+		src="style/uploaddeddoc/bootstrap.min.js.tải xuống"></script>
 	<script type="text/javascript"
-		src="./Code tải lên của tôi_files/select2.min.js.tải xuống"></script>
+		src="style/uploaddeddoc/select2.min.js.tải xuống"></script>
 	<script type="text/javascript"
-		src="./Code tải lên của tôi_files/owl.carousel.min.js.tải xuống"></script>
+		src="style/uploaddeddoc/owl.carousel.min.js.tải xuống"></script>
 	<script type="text/javascript"
-		src="./Code tải lên của tôi_files/jquery.actual.min.js.tải xuống"></script>
+		src="style/uploaddeddoc/jquery.actual.min.js.tải xuống"></script>
 	<script type="text/javascript"
-		src="./Code tải lên của tôi_files/theme-script.js.tải xuống"></script>
+		src="style/uploaddeddoc/theme-script.js.tải xuống"></script>
 	<script type="text/javascript"
-		src="./Code tải lên của tôi_files/jquery-ui.min.js.tải xuống"></script>
+		src="style/uploaddeddoc/jquery-ui.min.js.tải xuống"></script>
 	<script type="text/javascript">
         $('#slSearch').on('change', function () {
             $('#hdLangFilter').val($("#slSearch").val());
@@ -1574,7 +1264,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
         ga('send', 'pageview');
     </script>
 	<!-- Đặt thẻ này vào phần đầu hoặc ngay trước thẻ đóng phần nội dung của bạn. -->
-	<script src="./Code tải lên của tôi_files/platform.js.tải xuống"
+	<script src="style/uploaddeddoc/platform.js.tải xuống"
 		async="" defer="" gapi_processed="true">
   {lang: 'vi'}
     </script>
@@ -1612,7 +1302,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 						title="fb:page Facebook Social Plugin" frameborder="0"
 						allowtransparency="true" allowfullscreen="true" scrolling="no"
 						allow="encrypted-media"
-						src="./Code tải lên của tôi_files/page.html"
+						src="style/uploaddeddoc/page.html"
 						style="border: none; visibility: visible; width: 250px; height: 350px;"
 						class=""></iframe></span>
 			</div>

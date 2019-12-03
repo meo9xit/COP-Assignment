@@ -685,7 +685,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 							<br /> <span class="dt-box-title bold">Preview</span>
 							<div class="dt-box entry-detail">
 								<embed src="${doc.docSource }" type="application/pdf"
-									height="700px" width="500">
+									height="762px" width="870px">
 							</div>
 							<br /> <br />
 							<div class="clear" style="height: 40px;">&nbsp;</div>

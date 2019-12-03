@@ -1,23 +1,14 @@
 package com.chiasetailieu.controller;
 
-import java.awt.Graphics2D;
-import java.awt.Image;
-import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.io.RandomAccessFile;
-import java.nio.ByteBuffer;
-import java.nio.channels.FileChannel;
-import java.sql.Date;
 import java.sql.Timestamp;
 import java.util.List;
 
 import javax.imageio.ImageIO;
 import javax.inject.Inject;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -37,16 +28,13 @@ import com.chiasetailieu.service.ISubCategoryService;
 import com.chiasetailieu.utils.AppUtils;
 import com.chiasetailieu.utils.DocConverter;
 
-
 /**
- * Servlet implementation class UploadController
+ * Servlet implementation class UpdateDocController
  */
-@WebServlet("/user-upload")
-@MultipartConfig(fileSizeThreshold = 1024 * 1024 * 2, 
-maxFileSize = 1024 * 1024 * 10,
-maxRequestSize = 1024 * 1024 * 50)
-public class UploadController extends HttpServlet {
+@WebServlet("/doc-update")
+public class UpdateDocController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+       
 	private static String uploadDir = "C:\\virtualTomcat\\wtpwebapps\\chiasetailieu\\style";
 	@Inject
     IDocumentService docService;
@@ -59,7 +47,7 @@ public class UploadController extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public UploadController() {
+    public UpdateDocController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -73,7 +61,7 @@ public class UploadController extends HttpServlet {
 		List<SubCategory> subcates = subcateService.findAll();
 		request.setAttribute("categories", categories);
 		request.setAttribute("subcates", subcates);
-		request.setAttribute("actiontype", "upload");
+		request.setAttribute("actiontype", "update");
 		request.getRequestDispatcher("/view/web/upload.jsp").forward(request, response);
 	}
 
@@ -91,13 +79,13 @@ public class UploadController extends HttpServlet {
 	           String docname = request.getParameter("docName");
 	           System.out.println("Description: " + description);
 	           User user = AppUtils.getLoginedUser(request.getSession());
-	           Document doc = new Document();
+	           Long docid = Long.parseLong(request.getParameter("docid"));
+	           Document doc = docService.findOneById(docid);
 	           doc.setDocDescription(description);
 	           doc.setCateId(cateId);
 	           doc.setSubcateId(subcateId);
 	           doc.setUserId(user.getUserid());
 	           doc.setDocName(docname);
-	           doc.setView(0l);
 	           String ss = request.getServletContext().getRealPath("");
 	           System.out.println("Paht: " + ss);
 	           // Đường dẫn tuyệt đối tới thư mục gốc của web app.
@@ -167,8 +155,8 @@ public class UploadController extends HttpServlet {
 	           }
 	  
 	           // Upload thành công.
-	           docService.save(doc);
-	           response.sendRedirect(request.getContextPath() + "/user-upload");
+	           docService.update(doc);
+	           response.sendRedirect(request.getContextPath() + "/doc-manage");
 	       } catch (Exception e) {
 	           e.printStackTrace();
 	           request.setAttribute("errorMessage", "Error: " + e.getMessage());
@@ -235,7 +223,7 @@ public class UploadController extends HttpServlet {
 		catch(IOException e) {
 			System.out.println("Exception occured :" + e.getMessage());
 		}
-		return "/style/cover/"+ imgName;
+		return "/style/cover/" + imgName;
 	}
 	
 	private String getExtension(String filename) {

@@ -26,8 +26,8 @@
 <meta property="og:site_name" content="Sharecode.vn">
 <link rel="stylesheet" type="text/css"
 	href="style/userinfo/bootstrap.min.css">
-<link rel="stylesheet" type="text/css"
-	href="style/userinfo/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css"
 	href="style/userinfo/select2.min.css">
 <link rel="stylesheet" type="text/css"
@@ -538,61 +538,37 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 		<div id="header" class="header">
 			<div class="top-header">
 				<div class="container">
-					<div class="nav-top-links">
-						<a class="first-item" href="tel:+84981282756"
-							title="Click gọi ngay!"> <img alt="hotline"
-							src="style/userinfo/phone.png">0981.282.756
-						</a> <a href="mailto:sharecode.contact@gmail.com"
-							title="Click để gửi email!"> <img alt="email sharecode"
-							src="style/userinfo/email.png">Sharecode.contact@gmail.com
-						</a> <a href="https://sharecode.vn/kien-thuc-lap-trinh.htm">Kiến
-							thức lập trình</a> <a href="https://sharecode.vn/su-kien.htm">Sự
-							kiện</a>
-					</div>
-
-					<div id="ExitBox" class="support-link">
-						<a id="btnExit" class="aorange"
-							href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$btnExit&#39;,&#39;&#39;)">[Thoát]</a>
-					</div>
-
-					<div id="user-info-top" class="user-info pull-right">
-						<div id="AcInfo" class="dropdown">
-							<a href="https://sharecode.vn/code-upload-cua-toi.htm"
-								id="UserName2" class="current-open" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false"
-								title="Xin chào, meo9xit"><span>Xin chào, </span><span
-								id="UserName"><b>meo9xit</b></span></a>
-							<ul class="dropdown-menu mega_dropdown" role="menu">
-								<li><a href="https://sharecode.vn/code-upload-cua-toi.htm"><i
-										class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp;Code
-										tải lên</a></li>
-								<li><a href="https://sharecode.vn/code-da-luu.htm"><i
-										class="fa fa-folder-open" aria-hidden="true"></i>&nbsp;&nbsp;Code
-										đã lưu</a></li>
-								<li><a href="https://sharecode.vn/code-download.htm"><i
-										class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;Code
-										đã mua</a></li>
-								<li><a href="https://sharecode.vn/doanh-thu-ban-code.htm"><i
-										class="fa fa-line-chart" aria-hidden="true"></i>&nbsp;Doanh
-										thu bán code</a></li>
-								<li><a href="https://sharecode.vn/lich-su-giao-dich.htm"><i
-										class="fa fa-history" aria-hidden="true"></i>&nbsp;&nbsp;Lịch
-										sử nạp tiền</a></li>
-								<li><a href="https://sharecode.vn/rut-tien.htm"><i
-										class="fa fa-money" aria-hidden="true"></i>&nbsp;Rút tiền</a></li>
-								<li><a href="https://me.sharecode.vn/" target="_blank"><i
-										class="fa fa-server" aria-hidden="true"></i>&nbsp;Quản lý
-										Domain - Hosting</a></li>
-								<li><a href="https://sharecode.vn/binh-luan.htm"
-									class="orange"><i class="fa fa-comment" aria-hidden="true"></i>&nbsp;Bình
-										luận</a></li>
-								<li><a href="https://sharecode.vn/thong-tin-ca-nhan.htm"
-									class="green"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Cài
-										đặt thông tin</a></li>
-							</ul>
+					<div class="nav-top-links"></div>
+					<c:if test="${empty loginedUser }">
+						<div id="LoginBox" class="support-link">
+							<a href="<c:url value = "/login"/>" role="button">Đăng nhập</a> <a
+								href="https://sharecode.vn/dang-ki-tai-khoan.htm">Đăng kí</a>
 						</div>
+					</c:if>
+					<c:if test="${not empty loginedUser }">
+						<div id="ExitBox" class="support-link">
+							<a id="btnExit" class="aorange" href="<c:url value ="/logout"/>">[Thoát]</a>
+						</div>
+						<div id="user-info-top" class="user-info pull-right">
+							<div id="AcInfo" class="dropdown">
+								<a href="/code-upload-cua-toi.htm" id="UserName2"
+									class="current-open" data-toggle="dropdown"
+									aria-haspopup="true" aria-expanded="false"
+									title="Xin chào, ${loginedUser.username }"><span>Xin
+										chào, </span><span id="UserName"><b>${loginedUser.username }</b></span></a>
+								<ul class="dropdown-menu mega_dropdown" role="menu">
+									<li><a href="<c:url value = "/doc-manage"/>"><i
+											class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp;Tài
+											liệu tải lên</a></li>
+									<li><a href="<c:url value = "/user-info"/>" class="green"><i
+											class="fa fa-cog" aria-hidden="true"></i>&nbsp;Cài đặt thông
+											tin</a></li>
+								</ul>
+							</div>
 
-					</div>
+						</div>
+					</c:if>
+
 				</div>
 			</div>
 			<div class="container main-header">
@@ -608,291 +584,27 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 							<div id="regPanel"
 								onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnSearch&#39;)">
 
-								<div class="form-group form-category">
-									<input type="hidden" name="ctl00$ctl00$ctl00$hdLangFilter"
-										id="hdLangFilter"> <select
-										class="select-category select2-hidden-accessible"
-										id="slSearch" tabindex="-1" aria-hidden="true">
-										<option value="0">TẤT CẢ CODE</option>
-
-										<option value="15">Android</option>
-
-										<option value="23">iOS</option>
-
-										<option value="26">Windows phone</option>
-
-										<option value="21">PHP &amp; MySQL</option>
-
-										<option value="29">WordPress</option>
-
-										<option value="28">Joomla</option>
-
-										<option value="17">Visual C#</option>
-
-										<option value="16">Asp/Asp.Net</option>
-
-										<option value="20">Java/JSP</option>
-
-										<option value="19">Visual Basic</option>
-
-										<option value="24">Cocos2D</option>
-
-										<option value="27">Unity</option>
-
-										<option value="18">Visual C++</option>
-
-										<option value="25">Html &amp; Template</option>
-
-										<option value="22">Khác</option>
-
-									</select><span
-										class="select2 select2-container select2-container--default"
-										dir="ltr" style="width: 127px;"><span class="selection"><span
-											class="select2-selection select2-selection--single"
-											role="combobox" aria-autocomplete="list" aria-haspopup="true"
-											aria-expanded="false" tabindex="0"
-											aria-labelledby="select2-slSearch-container"><span
-												class="select2-selection__rendered"
-												id="select2-slSearch-container" title="TẤT CẢ CODE">TẤT
-													CẢ CODE</span><span class="select2-selection__arrow"
-												role="presentation"><b role="presentation"></b></span></span></span><span
-										class="dropdown-wrapper" aria-hidden="true"></span></span>
-								</div>
 								<div class="form-group input-serach">
-									<input name="ctl00$ctl00$ctl00$txtSearch" type="text"
-										id="txtSearch"
-										class="txt-search txt-auto ui-autocomplete-input"
-										placeholder="Nhập Từ khóa (or) Mã code" autocomplete="off">
+									<input name="key" type="text" id="txtSearch"
+											class="txt-search txt-auto ui-autocomplete-input"
+											placeholder="Nhập Từ khóa" autocomplete="off">
 								</div>
 								<a id="btnSearch" class="pull-right btn-search"
-									href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$btnSearch&#39;,&#39;&#39;)"></a>
-
+									href="#header" onclick="submitSearch()"></a>
+							<script>
+								function submitSearch() {
+									document.getElementById("searchform")
+											.submit();
+								}
+							</script>
 							</div>
 						</div>
 					</div>
 					<div class="col-xs-5 col-sm-2 col-md-3 shopping-cart-box btn-align">
-
-
-						<script type="text/javascript">   
-    function Check_ATM() {
-
-        jQuery('#errATM').html('');
-        jQuery('#errATM').attr('class', 'text-error');
-        jQuery('input[type="text"]').removeClass('validation-failed');
-        jQuery('#boxMoneyATM').removeClass('validation-failed');
-        jQuery('#boxBankATM').removeClass('validation-failed');
-        jQuery('#txtnumberATM').removeClass('validation-failed');
-
-        if ($("input:radio[name='bankcode']").is(":checked") == false) {
-            jQuery('#boxBankATM').addClass('validation-failed');
-            jQuery('#errATM').html('Chưa chọn ngân hàng giao dịch.');
-            return false;
-        }
-
-        if ($("input:radio[name='moneyATM']").is(":checked") == false) {
-            jQuery('#boxMoneyATM').addClass('validation-failed');
-            jQuery('#errATM').html('Chưa chọn số tiền muốn nạp.');
-            return false;
-        } else
-            if ($("input:radio[name='moneyATM']:checked").val() == "0" & (parseInt($("#txtnumberATM").val()) <= 1 || $("#txtnumberATM").val() == "")) {
-                jQuery('#txtnumberATM').addClass('validation-failed');
-                jQuery('#errATM').html('Chưa nhập số Xu muốn nạp.');
-                return false;
-            }
-
-        captcha = jQuery('#ucPopupMoney_txtCaptchaATM').val();
-        if (captcha == '') {
-            jQuery('#ucPopupMoney_txtCaptchaATM').addClass('validation-failed');
-             jQuery('#errATM').html('Chưa nhập mã xác nhận.');
-             jQuery('#ucPopupMoney_txtCaptchaATM').focus();
-             return false;
-         }
-         jQuery.ajax({
-             type: "POST",
-             url: "/Ajax/CreateCaptcha.aspx/CheckCaptcha",
-             data: '{code: "' + captcha + '" }',
-             contentType: "application/json; charset=utf-8",
-             dataType: "json",
-             async: false,
-             beforeSend: function () {
-                 $('#ucPopupMoney_btnATM').attr('disabled', 'disabled').html("<i class='fa fa-spinner fa-spin fa-lg'></i>&nbsp; Đang xử lý...");
-            },
-            success: function (data) {
-                if (data.d == 'false') {
-                    jQuery('#errATM').html('Mã xác nhận không đúng.');
-                    jQuery('#ucPopupMoney_txtCaptchaATM').addClass('validation-failed');
-                        jQuery('#ucPopupMoney_txtCaptchaATM').focus();
-                    }
-                $('#ucPopupMoney_btnATM').removeAttr('disabled').html('NẠP TIỀN BẰNG SỐ THẺ ATM &nbsp;<i class="fa fa-credit-card fa-lg" aria-hidden="true">');
-                }
-
-        });
-            if (jQuery('#errATM').html() != '') {
-                return false;
-            }
-
-        }
-        function Check_NL() {
-
-            jQuery('#errNL').html('');
-            jQuery('#errNL').attr('class', 'text-error');
-            jQuery('input[type="text"]').removeClass('validation-failed');
-            jQuery('#boxMoneyNL').removeClass('validation-failed');
-            jQuery('#txtnumberNL').removeClass('validation-failed');
-
-            captcha = jQuery('#ucPopupMoney_txtCaptchaNL').val();
-
-        if ($("input:radio[name='moneyNL']").is(":checked") == false) {
-            jQuery('#boxMoneyNL').addClass('validation-failed');
-            jQuery('#errNL').html('Chưa chọn số tiền muốn nạp.');
-            return false;
-        }else
-            if ($("input:radio[name='moneyNL']:checked").val() == "0" & (parseInt($("#txtnumberNL").val()) <= 1 || $("#txtnumberNL").val() == "")) {
-            jQuery('#txtnumberNL').addClass('validation-failed');
-            jQuery('#errNL').html('Chưa nhập số Xu muốn nạp.');
-            return false;
-        }
-        if (captcha == '') {
-            jQuery('#ucPopupMoney_txtCaptchaNL').addClass('validation-failed');
-             jQuery('#errNL').html('Chưa nhập mã xác nhận.');
-             jQuery('#ucPopupMoney_txtCaptchaNL').focus();
-             return false;
-         }
-         jQuery.ajax({
-             type: "POST",
-             url: "/Ajax/CreateCaptcha.aspx/CheckCaptcha",
-             data: '{code: "' + captcha + '" }',
-             contentType: "application/json; charset=utf-8",
-             dataType: "json",
-             async: false,
-             beforeSend: function () {
-                 $('#ucPopupMoney_btnNganLuong').attr('disabled', 'disabled').html("<i class='fa fa-spinner fa-spin fa-lg'></i>&nbsp; Đang xử lý...");
-            },
-            success: function (data) {
-                if (data.d == 'false') {
-                    jQuery('#errNL').html('Mã xác nhận không đúng.');
-                    jQuery('#ucPopupMoney_txtCaptchaNL').addClass('validation-failed');
-                        jQuery('#ucPopupMoney_txtCaptchaNL').focus();
-                    }
-                    $('#ucPopupMoney_btnNganLuong').removeAttr('disabled').html('NẠP TIỀN VÀO TÀI KHOẢN &nbsp;<i class="fa fa-money fa-lg" aria-hidden="true">');
-                }
-
-        });
-
-            if (jQuery('#errNL').html() != '') {
-                return false;
-            }
-
-        }
-    function Check_VISA() {
-
-        jQuery('#errVISA').html('');
-        jQuery('#errVISA').attr('class', 'text-error');
-        jQuery('input[type="text"]').removeClass('validation-failed');
-        jQuery('#boxMoneyVISA').removeClass('validation-failed');
-        jQuery('#txtnumberVISA').removeClass('validation-failed');
-
-        captcha = jQuery('#ucPopupMoney_txtCaptchaVISA').val();
-
-        if ($("input:radio[name='moneyVISA']").is(":checked") == false) {
-            jQuery('#boxMoneyVISA').addClass('validation-failed');
-            jQuery('#errVISA').html('Chưa chọn số tiền muốn nạp.');
-            return false;
-        } else
-            if ($("input:radio[name='moneyVISA']:checked").val() == "0" & (parseInt($("#txtnumberVISA").val()) <= 1 || $("#txtnumberVISA").val() == "")) {
-                jQuery('#txtnumberVISA').addClass('validation-failed');
-                jQuery('#errVISA').html('Chưa nhập số tiền muốn nạp.');
-                return false;
-            }
-        if (captcha == '') {
-            jQuery('#ucPopupMoney_txtCaptchaVISA').addClass('validation-failed');
-                jQuery('#errVISA').html('Chưa nhập mã xác nhận.');
-                jQuery('#ucPopupMoney_txtCaptchaVISA').focus();
-                return false;
-            }
-            jQuery.ajax({
-                type: "POST",
-                url: "/Ajax/CreateCaptcha.aspx/CheckCaptcha",
-                data: '{code: "' + captcha + '" }',
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                async: false,
-                beforeSend: function () {
-                    $('#ucPopupMoney_btnVISA').attr('disabled', 'disabled').html("<i class='fa fa-spinner fa-spin fa-lg'></i>&nbsp; Đang xử lý...");
-             },
-             success: function (data) {
-                 if (data.d == 'false') {
-                     jQuery('#errVISA').html('Mã xác nhận không đúng.');
-                     jQuery('#ucPopupMoney_txtCaptchaVISA').addClass('validation-failed');
-                     jQuery('#ucPopupMoney_txtCaptchaVISA').focus();
-                 }
-                 $('#ucPopupMoney_btnVISA').removeAttr('disabled').html('NẠP TIỀN VÀO TÀI KHOẢN &nbsp;<i class="fa fa-money fa-lg" aria-hidden="true">');
-             }
-
-         });
-
-         if (jQuery('#errVISA').html() != '') {
-             return false;
-         }
-
-     }
-        function Check_Paypal() {
-
-            jQuery('#errPaypal').html('');
-            jQuery('#errPaypal').attr('class', 'text-error');
-            jQuery('input[type="text"]').removeClass('validation-failed');
-            jQuery('#boxMoneyPaypal').removeClass('validation-failed');
-
-            captcha = jQuery('#ucPopupMoney_txtCaptchaPaypal').val();
-
-        if ($("input:radio[name='moneyPay']").is(":checked") == false) {
-            jQuery('#boxMoneyPaypal').addClass('validation-failed');
-            jQuery('#errPaypal').html('Chưa chọn số tiền muốn nạp.');
-            return false;
-        }
-
-        if (captcha == '') {
-            jQuery('#ucPopupMoney_txtCaptchaPaypal').addClass('validation-failed');
-            jQuery('#errPaypal').html('Chưa nhập mã xác nhận.');
-            jQuery('#ucPopupMoney_txtCaptchaPaypal').focus();
-            return false;
-        }
-        jQuery.ajax({
-            type: "POST",
-            url: "/Ajax/CreateCaptcha.aspx/CheckCaptcha",
-            data: '{code: "' + captcha + '" }',
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            async: false,
-            success: function (data) {
-                if (data.d == 'false') {
-                    jQuery('#errPaypal').html('Mã xác nhận không đúng.');
-                    jQuery('#ucPopupMoney_txtCaptchaPaypal').addClass('validation-failed');
-                    jQuery('#ucPopupMoney_txtCaptchaPaypal').focus();
-                }
-            }
-
-        });
-
-        if (jQuery('#errPaypal').html() != '') {
-            return false;
-        }
-
-        }
-    function handleClick(rdo) {
-
-        if (rdo.value == "VCB" || rdo.value == "MB" || rdo.value == "VIB" || rdo.value == "ICB" || rdo.value == "EXB" || rdo.value == "MSB" || rdo.value == "NVB" || rdo.value == "VPB" || rdo.value == "STB" || rdo.value == "AGB" || rdo.value == "SHB" || rdo.value == "TPB" || rdo.value == "ABB" || rdo.value == "SGCB" || rdo.value == "OCB")
-            $("#boxQRPay").show();
-        else
-            $("#boxQRPay").hide();
-    }
-</script>
-
-						<a href="https://sharecode.vn/thanh-vien-upload.htm"
-							class="button-orange" title="Upload code kiếm tiền"><i
-							class="fa fa-cloud-upload fa-lg" aria-hidden="true"></i>&nbsp;
-							TẢI LÊN</a>
-
+							<a href="<c:url value = "/user-upload" />" class="button-orange"
+								title="Upload code kiếm tiền"><i
+								class="fa fa-cloud-upload fa-lg" aria-hidden="true"></i>&nbsp;
+								TẢI LÊN</a>
 					</div>
 				</div>
 			</div>
@@ -906,145 +618,16 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 										class="btn-open-mobile pull-right home-page"><i
 										class="fa fa-bars"></i></span>
 								</h4>
-								<div class="vertical-menu-content is-home"
-									style="display: none;">
+								<div class="vertical-menu-content is-home">
 									<ul class="vertical-menu-list">
-										<li><a class="parent"
-											href="https://sharecode.vn/thong-tin-ca-nhan.htm#"> <img
-												class="icon-menu" alt="Thể loại code"
-												src="style/userinfo/2.png">PHÂN LOẠI CODE
-										</a>
-											<div class="vertical-dropdown-menu" style="width: 900px;">
-												<div class="vertical-groups col-sm-6 col-md-4">
-													<div class="mega-group col-sm-12">
-														<span class="mega-group-header"><span>THỂ
-																LOẠI CODE</span></span>
-														<ul class="group-link-default">
-
-															<li><a class="bold"
-																href="https://sharecode.vn/the-loai-source-code/website-1.htm">Website</a></li>
-
-															<li><a class="bold"
-																href="https://sharecode.vn/the-loai-source-code/phan-mem-ung-dung-2.htm">Phần
-																	mềm - Ứng dụng</a></li>
-
-															<li><a class="bold"
-																href="https://sharecode.vn/the-loai-source-code/game-3.htm">Game</a></li>
-
-															<li><a class="bold"
-																href="https://sharecode.vn/the-loai-source-code/khac-4.htm">Khác</a></li>
-
-														</ul>
-													</div>
-												</div>
-												<div class="vertical-groups col-sm-6 col-md-5">
-													<div class="mega-group col-sm-12">
-														<span class="mega-group-header"><span>SOURCE
-																CODE</span></span>
-														<ul class="group-link-default">
-															<li><a
-																href="https://sharecode.vn/code-chat-luong.htm"><strong>Code
-																		chất lượng</strong> (&gt;= 100 Xu)</a></li>
-															<li><a
-																href="https://sharecode.vn/code-tham-khao.htm"><strong>Code
-																		tham khảo</strong> (2 Xu - 99 Xu)</a></li>
-															<li><a href="https://sharecode.vn/code-mien-phi.htm"><strong>Code
-																		miễn phí</strong> (0 Xu)</a></li>
-
-
-														</ul>
-													</div>
-
-												</div>
-											</div></li>
-
-										<li class=""><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/android-15.htm">
-												<img class="icon-menu" alt="Android"
-												src="style/userinfo/3.png">Android
-										</a></li>
-
-										<li class=""><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/ios-23.htm">
-												<img class="icon-menu" alt="iOS" src="style/userinfo/3.png">iOS
-										</a></li>
-
-										<li class=""><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/windows-phone-26.htm">
-												<img class="icon-menu" alt="Windows phone"
-												src="style/userinfo/3.png">Windows phone
-										</a></li>
-
-										<li class=""><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/php-mysql-21.htm">
-												<img class="icon-menu" alt="PHP &amp; MySQL"
-												src="style/userinfo/3.png">PHP &amp; MySQL
-										</a></li>
-
-										<li class=""><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">
-												<img class="icon-menu" alt="WordPress"
-												src="style/userinfo/3.png">WordPress
-										</a></li>
-
-										<li class=""><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/joomla-28.htm">
-												<img class="icon-menu" alt="Joomla"
-												src="style/userinfo/3.png">Joomla
-										</a></li>
-
-										<li class=""><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-17.htm">
-												<img class="icon-menu" alt="Visual C#"
-												src="style/userinfo/3.png">Visual C#
-										</a></li>
-
-										<li class=""><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/aspaspnet-16.htm">
-												<img class="icon-menu" alt="Asp/Asp.Net"
-												src="style/userinfo/3.png">Asp/Asp.Net
-										</a></li>
-
-										<li class=""><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/javajsp-20.htm">
-												<img class="icon-menu" alt="Java/JSP"
-												src="style/userinfo/3.png">Java/JSP
-										</a></li>
-
-										<li class=""><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-basic-19.htm">
-												<img class="icon-menu" alt="Visual Basic"
-												src="style/userinfo/3.png">Visual Basic
-										</a></li>
-
-										<li class="cat-link-orther"><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/cocos2d-24.htm">
-												<img class="icon-menu" alt="Cocos2D"
-												src="style/userinfo/3.png">Cocos2D
-										</a></li>
-
-										<li class="cat-link-orther"><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/unity-27.htm">
-												<img class="icon-menu" alt="Unity"
-												src="style/userinfo/3.png">Unity
-										</a></li>
-
-										<li class="cat-link-orther"><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-18.htm">
-												<img class="icon-menu" alt="Visual C++"
-												src="style/userinfo/3.png">Visual C++
-										</a></li>
-
-										<li class="cat-link-orther"><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/html-template-25.htm">
-												<img class="icon-menu" alt="Html &amp; Template"
-												src="style/userinfo/3.png">Html &amp; Template
-										</a></li>
-
-										<li class="cat-link-orther"><a
-											href="https://sharecode.vn/ngon-ngu-lap-trinh/khac-22.htm">
-												<img class="icon-menu" alt="Khác" src="style/userinfo/3.png">Khác
-										</a></li>
+										<c:forEach var="category" items="${categories }">
+											<li class=""><a
+												href="<c:url value = "/post"><c:param name = "id" value = "${category.categoryID }"/></c:url>">
+													<img class="icon-menu" alt="${category.categoryName }"
+													src="style/search-cate/3.png">
+													${category.categoryName }
+											</a></li>
+										</c:forEach>
 
 									</ul>
 									<div class="all-category">

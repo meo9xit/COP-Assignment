@@ -30,8 +30,8 @@
 <meta property="og:site_name" content="Sharecode.vn">
 <link rel="stylesheet" type="text/css"
 	href="style/upload/bootstrap.min.css">
-<link rel="stylesheet" type="text/css"
-	href="style/upload/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css"
 	href="style/upload/select2.min.css">
 <link rel="stylesheet" type="text/css"
@@ -95,7 +95,7 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-	<c:url var="post_url" value="/user-upload" />
+	
 
 	<script type="text/javascript">
 //<![CDATA[
@@ -138,269 +138,149 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 	</div>
 
 	<div id="header" class="header">
-		<div class="top-header">
-			<div class="container">
-				<div class="nav-top-links"></div>
-
-				<div id="ExitBox" class="support-link">
-					<a id="btnExit" class="aorange"
-						href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$btnExit&#39;,&#39;&#39;)">[Thoát]</a>
-				</div>
-				<div id="user-info-top" class="user-info pull-right">
-					<div id="AcInfo" class="dropdown">
-						<a href="https://sharecode.vn/code-upload-cua-toi.htm"
-							id="UserName2" class="current-open" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false"
-							title="Xin chào, ${loginedUser.username}"><span>Xin
-								chào, </span><span id="UserName"><b>${loginedUser.username }</b></span></a>
-						<ul class="dropdown-menu mega_dropdown" role="menu">
-							<li><a href="https://sharecode.vn/code-upload-cua-toi.htm"><i
-									class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp;Code
-									tải lên</a></li>
-							<li><a href="https://sharecode.vn/thong-tin-ca-nhan.htm"
-								class="green"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Cài
-									đặt thông tin</a></li>
-						</ul>
-					</div>
-
-				</div>
-			</div>
-		</div>
-		<div class="container main-header">
-			<div class="row">
-				<div class="col-xs-12 col-sm-3 col-md-3 logo">
-					<a href="https://sharecode.vn/"> <img
-						alt="Trang chủ sharecode.vn" title="Sharecode.vn"
-						src="style/upload/logo.png"></a>
-				</div>
-				<div class="col-xs-7 col-sm-7 col-md-6 header-search-box">
-					<div class="form-inline search-h">
-						<div id="regPanel"
-							onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnSearch&#39;)">
-
-							<div class="form-group input-serach">
-								<input name="ctl00$ctl00$ctl00$txtSearch" type="text"
-									id="txtSearch"
-									class="txt-search txt-auto ui-autocomplete-input"
-									placeholder="Nhập Từ khóa (or) Mã tài liệu" autocomplete="off">
-							</div>
-							<a id="btnSearch" class="pull-right btn-search"
-								href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$btnSearch&#39;,&#39;&#39;)"></a>
-
+			<div class="top-header">
+				<div class="container">
+					<div class="nav-top-links"></div>
+					<c:if test="${empty loginedUser }">
+						<div id="LoginBox" class="support-link">
+							<a href="<c:url value = "/login"/>" role="button">Đăng nhập</a> <a
+								href="https://sharecode.vn/dang-ki-tai-khoan.htm">Đăng kí</a>
 						</div>
-					</div>
-				</div>
-				<div class="col-xs-5 col-sm-2 col-md-3 shopping-cart-box btn-align">
-
-					<a data-toggle="modal" data-target="#AddMoney" role="button"
-						class="button-green" onclick="createCaptcha();"
-						title="Nạp tiền vào tài khoản"><i class="fa fa-money fa-lg"
-						aria-hidden="true"></i>&nbsp; NẠP XU</a>&nbsp;&nbsp; <a
-						href="https://sharecode.vn/thanh-vien-upload.htm"
-						class="button-orange" title="Upload code kiếm tiền"><i
-						class="fa fa-cloud-upload fa-lg" aria-hidden="true"></i>&nbsp; TẢI
-						LÊN</a>
-
-				</div>
-			</div>
-		</div>
-		<div id="nav-top-menu" class="nav-top-menu">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-3" id="box-vertical-megamenus">
-						<div class="box-vertical-megamenus">
-							<h4 class="title">
-								<span class="title-menu">Danh mục</span> <span
-									class="btn-open-mobile pull-right home-page"><i
-									class="fa fa-bars"></i></span>
-							</h4>
-							<div class="vertical-menu-content is-home" style="display: none;">
-								<ul class="vertical-menu-list">
-									<li><a class="parent"
-										href="https://sharecode.vn/thanh-vien-upload.htm#"> <img
-											class="icon-menu" alt="Thể loại code"
-											src="style/upload/2.png">PHÂN LOẠI TÀI LIỆU
-									</a>
-										<div class="vertical-dropdown-menu" style="width: 900px;">
-											<div class="vertical-groups col-sm-6 col-md-4">
-												<div class="mega-group col-sm-12">
-													<span class="mega-group-header"><span>THỂ
-															LOẠI TÀI LIỆU</span></span>
-													<ul class="group-link-default">
-
-														<li><a class="bold"
-															href="https://sharecode.vn/the-loai-source-code/website-1.htm">Website</a></li>
-
-														<li><a class="bold"
-															href="https://sharecode.vn/the-loai-source-code/phan-mem-ung-dung-2.htm">Phần
-																mềm - Ứng dụng</a></li>
-
-														<li><a class="bold"
-															href="https://sharecode.vn/the-loai-source-code/game-3.htm">Game</a></li>
-
-														<li><a class="bold"
-															href="https://sharecode.vn/the-loai-source-code/khac-4.htm">Khác</a></li>
-
-													</ul>
-												</div>
-											</div>
-											<div class="vertical-groups col-sm-6 col-md-5">
-												<div class="mega-group col-sm-12">
-													<span class="mega-group-header"><span>TÀI
-															LIỆU</span></span>
-													<ul class="group-link-default">
-														<li><a
-															href="https://sharecode.vn/code-chat-luong.htm"><strong>Code
-																	chất lượng</strong> (&gt;= 100 Xu)</a></li>
-														<li><a href="https://sharecode.vn/code-tham-khao.htm"><strong>Code
-																	tham khảo</strong> (2 Xu - 99 Xu)</a></li>
-														<li><a href="https://sharecode.vn/code-mien-phi.htm"><strong>Code
-																	miễn phí</strong> (0 Xu)</a></li>
-
-
-													</ul>
-												</div>
-
-											</div>
-										</div></li>
-
-									<li class=""><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/android-15.htm">
-											<img class="icon-menu" alt="Android" src="style/upload/3.png">Android
-									</a></li>
-
-									<li class=""><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/ios-23.htm">
-											<img class="icon-menu" alt="iOS" src="style/upload/3.png">iOS
-									</a></li>
-
-									<li class=""><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/windows-phone-26.htm">
-											<img class="icon-menu" alt="Windows phone"
-											src="style/upload/3.png">Windows phone
-									</a></li>
-
-									<li class=""><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/php-mysql-21.htm">
-											<img class="icon-menu" alt="PHP &amp; MySQL"
-											src="style/upload/3.png">PHP &amp; MySQL
-									</a></li>
-
-									<li class=""><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm">
-											<img class="icon-menu" alt="WordPress"
-											src="style/upload/3.png">WordPress
-									</a></li>
-
-									<li class=""><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/joomla-28.htm">
-											<img class="icon-menu" alt="Joomla" src="style/upload/3.png">Joomla
-									</a></li>
-
-									<li class=""><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-17.htm">
-											<img class="icon-menu" alt="Visual C#"
-											src="style/upload/3.png">Visual C#
-									</a></li>
-
-									<li class=""><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/aspaspnet-16.htm">
-											<img class="icon-menu" alt="Asp/Asp.Net"
-											src="style/upload/3.png">Asp/Asp.Net
-									</a></li>
-
-									<li class=""><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/javajsp-20.htm">
-											<img class="icon-menu" alt="Java/JSP"
-											src="style/upload/3.png">Java/JSP
-									</a></li>
-
-									<li class=""><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-basic-19.htm">
-											<img class="icon-menu" alt="Visual Basic"
-											src="style/upload/3.png">Visual Basic
-									</a></li>
-
-									<li class="cat-link-orther"><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/cocos2d-24.htm">
-											<img class="icon-menu" alt="Cocos2D" src="style/upload/3.png">Cocos2D
-									</a></li>
-
-									<li class="cat-link-orther"><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/unity-27.htm">
-											<img class="icon-menu" alt="Unity" src="style/upload/3.png">Unity
-									</a></li>
-
-									<li class="cat-link-orther"><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/visual-c-18.htm">
-											<img class="icon-menu" alt="Visual C++"
-											src="style/upload/3.png">Visual C++
-									</a></li>
-
-									<li class="cat-link-orther"><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/html-template-25.htm">
-											<img class="icon-menu" alt="Html &amp; Template"
-											src="style/upload/3.png">Html &amp; Template
-									</a></li>
-
-									<li class="cat-link-orther"><a
-										href="https://sharecode.vn/ngon-ngu-lap-trinh/khac-22.htm">
-											<img class="icon-menu" alt="Khác" src="style/upload/3.png">Khác
-									</a></li>
-
+					</c:if>
+					<c:if test="${not empty loginedUser }">
+						<div id="ExitBox" class="support-link">
+							<a id="btnExit" class="aorange" href="<c:url value ="/logout"/>">[Thoát]</a>
+						</div>
+						<div id="user-info-top" class="user-info pull-right">
+							<div id="AcInfo" class="dropdown">
+								<a href="/code-upload-cua-toi.htm" id="UserName2"
+									class="current-open" data-toggle="dropdown"
+									aria-haspopup="true" aria-expanded="false"
+									title="Xin chào, ${loginedUser.username }"><span>Xin
+										chào, </span><span id="UserName"><b>${loginedUser.username }</b></span></a>
+								<ul class="dropdown-menu mega_dropdown" role="menu">
+									<li><a href="<c:url value = "/doc-manage"/>"><i
+											class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp;Tài
+											liệu tải lên</a></li>
+									<li><a href="<c:url value = "/user-info"/>" class="green"><i
+											class="fa fa-cog" aria-hidden="true"></i>&nbsp;Cài đặt thông
+											tin</a></li>
 								</ul>
-								<div class="all-category">
-									<span class="open-cate">Xem tất cả</span>
+							</div>
+
+						</div>
+					</c:if>
+
+				</div>
+			</div>
+			<div class="container main-header">
+				<div class="row">
+					<div class="col-xs-12 col-sm-3 col-md-3 logo">
+						<a href="https://sharecode.vn/"> <img
+							alt="Trang chủ sharecode.vn" title="Sharecode.vn"
+							src="style/userinfo/logo.png"></a>
+					</div>
+					<div class="col-xs-7 col-sm-7 col-md-6 header-search-box">
+
+						<div class="form-inline search-h">
+							<div id="regPanel"
+								onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnSearch&#39;)">
+
+								<div class="form-group input-serach">
+									<input name="key" type="text" id="txtSearch"
+											class="txt-search txt-auto ui-autocomplete-input"
+											placeholder="Nhập Từ khóa" autocomplete="off">
 								</div>
+								<a id="btnSearch" class="pull-right btn-search"
+									href="#header" onclick="submitSearch()"></a>
+							<script>
+								function submitSearch() {
+									document.getElementById("searchform")
+											.submit();
+								}
+							</script>
 							</div>
 						</div>
 					</div>
-					<div id="main-menu" class="col-sm-9 main-menu">
-						<nav class="navbar navbar-default">
-							<div class="container-fluid">
-								<div class="navbar-header">
-									<button type="button" class="navbar-toggle collapsed"
-										data-toggle="collapse" data-target="#navbar"
-										aria-expanded="false" aria-controls="navbar">
-										<i class="fa fa-bars"></i>
-									</button>
-									<a class="navbar-brand"
-										href="https://sharecode.vn/thanh-vien-upload.htm#">MENU</a>
-								</div>
-								<div id="navbar" class="navbar-collapse collapse">
-									<ul class="nav navbar-nav">
-										<li id="mnhome" class="active" title="Trang chủ"><a
-											href="https://sharecode.vn/"><i class="fa fa-home fa-lg"
-												aria-hidden="true"></i></a></li>
-										<li id="mntopcode" title="Top code nổi bật"><a
-											href="https://sharecode.vn/top-codes.htm">Top tài liệu</a></li>
-										<li id="mncodeok" title="Code chất lượng (&gt;= 100 Xu)"><a
-											href="https://sharecode.vn/code-chat-luong.htm">Tài liệu
-												chất lượng <span class="notify notify-right"></span>
-										</a></li>
-										<li id="mncode" title="Code tham khảo (2 Xu - 99 Xu)"><a
-											href="https://sharecode.vn/code-tham-khao.htm">Tài liệu
-												tham khảo</a></li>
+					<div class="col-xs-5 col-sm-2 col-md-3 shopping-cart-box btn-align">
+							<a href="<c:url value = "/user-upload" />" class="button-orange"
+								title="Upload code kiếm tiền"><i
+								class="fa fa-cloud-upload fa-lg" aria-hidden="true"></i>&nbsp;
+								TẢI LÊN</a>
+					</div>
+				</div>
+			</div>
+			<div id="nav-top-menu" class="nav-top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-3" id="box-vertical-megamenus">
+							<div class="box-vertical-megamenus">
+								<h4 class="title">
+									<span class="title-menu">Danh mục</span> <span
+										class="btn-open-mobile pull-right home-page"><i
+										class="fa fa-bars"></i></span>
+								</h4>
+								<div class="vertical-menu-content is-home">
+									<ul class="vertical-menu-list">
+										<c:forEach var="category" items="${categories }">
+											<li class=""><a
+												href="<c:url value = "/post"><c:param name = "id" value = "${category.categoryID }"/></c:url>">
+													<img class="icon-menu" alt="${category.categoryName }"
+													src="style/search-cate/3.png">
+													${category.categoryName }
+											</a></li>
+										</c:forEach>
 
 									</ul>
+									<div class="all-category">
+										<span class="open-cate">Xem tất cả</span>
+									</div>
 								</div>
 							</div>
-						</nav>
+						</div>
+						<div id="main-menu" class="col-sm-9 main-menu">
+							<nav class="navbar navbar-default">
+								<div class="container-fluid">
+									<div class="navbar-header">
+										<button type="button" class="navbar-toggle collapsed"
+											data-toggle="collapse" data-target="#navbar"
+											aria-expanded="false" aria-controls="navbar">
+											<i class="fa fa-bars"></i>
+										</button>
+										<a class="navbar-brand"
+											href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm#">MENU</a>
+									</div>
+									<div id="navbar" class="navbar-collapse collapse">
+										<ul class="nav navbar-nav">
+											<li id="mnhome" class="active" title="Trang chủ"><a
+												href="<c:url value = "/home"></c:url>"><i
+													class="fa fa-home fa-lg" aria-hidden="true"></i></a></li>
+											<li id="mntopcode" title="Tài liệu xem nhiều"><a
+												href="<c:url value = "/topview"></c:url>"> Được xem
+													nhiều </a></li>
+											<li id="mncodeok" title="Tài liệu tải nhiều"><a
+												href="<c:url value = "/topdownload"></c:url>"> Được tải
+													nhiều <span class="notify notify-right"></span>
+											</a></li>
+										</ul>
+									</div>
+								</div>
+							</nav>
+						</div>
 					</div>
+					<div id="form-search-opntop"></div>
+					<div id="user-info-opntop"></div>
+
+					<div id="shopping-cart-box-ontop" style="display: none;">
+						<a href="https://sharecode.vn/binh-luan.htm"> <i
+							class="fa fa-comment"></i>
+
+						</a>
+					</div>
+
 				</div>
-				<div id="form-search-opntop"></div>
-				<div id="user-info-opntop"></div>
-
-				<div id="shopping-cart-box-ontop">
-					<a href="https://sharecode.vn/binh-luan.htm"> <i
-						class="fa fa-comment"></i>
-
-					</a>
-				</div>
-
 			</div>
 		</div>
-	</div>
 
 	<div class="columns-container">
 		<div class="container" id="columns">
@@ -432,8 +312,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 
 			<div class="row">
 				<div class="center_column col-xs-12 col-sm-9" id="center_column">
-
-					<form method="post" action="${post_url}" id="formfile"
+				<c:if test = "${actiontype == 'upload' }">
+					<c:url var="post_url" value="/user-upload" />
+				</c:if>
+				<c:if test = "${actiontype == 'update' }">
+					<c:url var="post_url" value="/doc-update" />
+				</c:if>
+					<form id = "uploadform" method="post" action="${post_url}"
 						enctype="multipart/form-data">
 						<div class="box-bg">
 							<div class="upload_form">
@@ -472,7 +357,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 													<input name="docName" type="text" maxlength="200"
 														id="mainbody_contentbody_contentpage_txtTitle"
 														class="form-control" onblur="ValidateTitle()"
-														placeholder="Tối thiểu 20 kí tự"> <span
+														placeholder="Tối thiểu 20 kí tự" value = "${doc.docName }"> <span
 														class="glyphicon glyphicon-ok form-control-feedback success-ic"
 														aria-hidden="true" id="successTitle"
 														style="display: none;"></span>
@@ -552,12 +437,15 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 												</label>
 												<div class="col-md-10" id="editorDetail"
 													style="display: block">
-													<textarea name="docDescription" id="descriptor"></textarea>
+													<textarea name="docDescription" id="descriptor">${doc.docDescription }</textarea>
 													<!--  <span class="glyphicon glyphicon-ok form-control-feedback success-ic" aria-hidden="true" id="successDetail" style="display: none;"></span> -->
 
 												</div>
 											</div>
 											<div class="form-group"></div>
+											<c:if test = "${actiontype == 'udpate' }">
+												<input type = "hidden" name = "docid" value = "${doc.docId }">
+											</c:if>
 											<div class="form-group">
 												<div class="col-md-offset-2 col-md-10">
 													<div id="listSuggest"></div>
@@ -572,11 +460,26 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 											</div>
 											<br>
 											<div class="form-group">
+												<c:if test = "${actiontype == 'upload' }">
 												<div class="col-md-offset-2 col-md-10 line-h">
-													<input type="submit" value="TẢI LÊN"> <span
+													<a id="btnupload" class="button-orange" href="#" onclick = "submitUpload();"><i class="fa fa-cloud-upload fa-lg" aria-hidden="true">
+													</i>&nbsp;<span id="mainbody_contentbody_contentpage_lblButton">TẢI LÊN NGAY</span>
+													</a> 
+													<span
 														class="text-error text-nowrap" style="line-height: 40px;">(*)
 														Là các trường bắt buộc nhập nội dung</span>
 												</div>
+												</c:if>
+												<c:if test = "${actiontype == 'update' }">
+												<div class="col-md-offset-2 col-md-10 line-h">
+													<a id="btnupload" class="button-orange" href="#" onclick = "submitUpload();"><i class="fa fa-cloud-upload fa-lg" aria-hidden="true">
+													</i>&nbsp;<span id="mainbody_contentbody_contentpage_lblButton">CẬP NHẬT</span>
+													</a> 
+													<span
+														class="text-error text-nowrap" style="line-height: 40px;">(*)
+														Là các trường bắt buộc nhập nội dung</span>
+												</div>
+												</c:if>
 											</div>
 										</div>
 									</div>
@@ -591,6 +494,12 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 							</div>
 						</div>
 					</form>
+					<script>
+								function submitUpload() {
+									document.getElementById("uploadform")
+											.submit();
+								}
+							</script>
 					<br> <br>
 
 				</div>
