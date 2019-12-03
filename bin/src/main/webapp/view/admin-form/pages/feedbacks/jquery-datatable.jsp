@@ -3,7 +3,7 @@
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="dec"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<c:url var="APIurl" value="/CategoryAPI"/>
+<c:url var="APIurl" value="/FeedbackAPI"/>
 <!DOCTYPE html>
 <html>
 
@@ -824,13 +824,13 @@
                     <small>Taken from <a href="https://datatables.net/" target="_blank">datatables.net</a></small>
                 </h2>
             </div>
-            <!-- Basic Examples -->
+            <!-- Export FB table -->
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
                             <h2>
-                                CATEGORIES LIST
+                                BASIC EXAMPLE
                             </h2>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
@@ -847,29 +847,43 @@
                         </div>
                         <div class="body">
                             <div class="table-responsive">
-                            <a href='<c:url value="/CateController?type=add"/>'>
+                            <a href='<c:url value="/FeedbackController?type=add"/>'>
 	                            <button type="button" class="btn bg-blue waves-effect">
 	                                    <i class="material-icons">verified_user</i>
-	                                    <span>ADD CATEGORY</span>
+	                                    <span>ADD USER</span>
 	                                </button>
 	                                </a>
-                            <form action="<c:url value='/CateController'/>" id="formSubmit" method="get">
+                            <form action="<c:url value='/FeedbackController'/>" id="formSubmit" method="get">
                                 <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                     <thead>
                                         <tr>
-                                        	<th><input type="checkbox" id="checkAll"></th>
+                                        <!-- <th><input type="checkbox" id="checkAll"></th> -->	
                                             <th>ID</th>
-                                            <th>Category</th>
+                                            <th>Username</th>
+                                            <th>Content</th>
+                                            <th>Create-at</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody> 
-                                    <c:forEach var = "cate" items = "${model.listResult}">
+                                    <tfoot>
                                         <tr>
-                                       		<td><input type="checkbox" id="checkbox_${cate.categoryID}" value="${cate.categoryName}"/></td>
-                                            <td>${cate.categoryID}</td>
-                                            <td>${cate.categoryName}</td>
-                                            <td><button value = "${cate.categoryID}" onClick = "btnDeleteClick(this)"><img src="style/admin/images/Delete_16x16.png"/></button></td>
+                                            <th>ID</th>
+                                            <th>User name</th>
+                                            <th>Content</th>
+                                            <th>Create-at</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody> 
+                                    <c:forEach var = "fb" items = "${model.listResult}">
+                                        <tr>
+                                       	<!-- <td><input type="checkbox" id="checkbox_${fb.id}" value="${fb.id}"/></td>  -->	
+                                            <td>${fb.id}</td>
+                                            <td>${fb.userId}</td>
+                                            <td>${fb.content}</td>
+                                            <td>${fb.createdDate}</td>
+                                            
+                                            <td><button value = "${fb.id}" onClick = "btnDeleteClick(this)"><img src="style/admin/images/Delete_16x16.png"/></button></td>
                                         </tr>
                                     </c:forEach>
                                     </tbody>
@@ -880,7 +894,7 @@
                     </div>
                 </div>
             </div>
-            <!-- #END# Basic Examples -->           
+            <!-- END FB table -->          
         </div>
     </section>
 	
@@ -888,12 +902,13 @@
 	function btnDeleteClick(obj) {
 		var data = {};
 		var ids = obj.value;
-		data['categoryID'] = ids;
-		deleteCate(data);
+		data['id'] = ids;
+		deleteFB(data);
 		location.href=location.href;
 	};
 	
-	function deleteCate(data) {
+	
+	function deleteFB(data) {
         $.ajax({
             url: '${APIurl}',
             type: 'DELETE',

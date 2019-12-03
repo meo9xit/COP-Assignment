@@ -64,6 +64,7 @@ public class TopViewController extends HttpServlet {
 		request.getRequestDispatcher("/view/web/search-cate.jsp").forward(request, response);
 	}
 
+	
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */

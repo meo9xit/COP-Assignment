@@ -2,7 +2,8 @@
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator"
 	prefix="dec"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
+<c:url var="APIurl" value="/FeedbackAPI" />
 
 <!DOCTYPE html>
 <!-- saved from url=(0042)https://sharecode.vn/thanh-vien-upload.htm -->
@@ -647,20 +648,21 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 
 </script>
 
-				<div id="ctl24">
+<div id="ctl24">
 
-					<!-- Footer -->
-					<footer id="footer">
-						<div class="container">
-							<!-- introduce-box -->
-							<div id="introduce-box" class="row">
-								<div class="col-md-3">
-									<div id="address-box">
-										<a href="https://sharecode.vn/"> <img
-											src="style/upload/logo.png" alt="Sharecode.vn"></a>
-										<div id="address-list"></div>
-										<br>
-										<div class="social-link"></div>
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<!-- introduce-box -->
+					<div id="introduce-box" class="row">
+						<div class="col-md-3">
+							<div id="address-box">
+								<a href="https://sharecode.vn/"> <img
+									src="style/search-cate/logo.png" alt="Sharecode.vn"></a>
+								<div id="address-list">
+									<div class="tit-name">Hotline:</div>
+									<div class="tit-contain">
+										<a href="tel:+84981282756" title="Click gọi ngay!">0981.282.756</a>
 									</div>
 								</div>
 								<div class="col-md-6">
@@ -674,58 +676,99 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 									</div>
 								</div>
 								<div class="col-md-3">
-									<div id="contact-box">
-										<div class="introduce-title">Gửi hỗ trợ - Góp ý</div>
-										<div>
-											<textarea name="ctl00$ctl00$ctl00$txtComment" rows="2"
-												cols="20" id="txtComment" class="form-control send-sp"
-												placeholder="Nội dung &amp; liên hệ của bạn (Email, ĐT)"
-												style="height: 60px; width: 100%;"></textarea>
-											<div id="errCmt" class="text-error"></div>
-										</div>
-										<br>
-										<div>
-											<a onclick=" return fosp_cmt();" id="btnSend"
-												class="button-orange"
-												href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$btnSend&#39;,&#39;&#39;)"><i
-												class="fa fa-paper-plane fa-lg" aria-hidden="true"></i>&nbsp;
-												GỬI NHANH</a>
-										</div>
+                                <form id="formSubmit">
+									<label for="email_address">Gửi hỗ trợ - Góp ý</label>
+									<div class="form-group">
+										<c:if test = "${ empty loginedUser}">
+											 <div class="form-line">
+												<input type="hidden" id="userId" class="form-control"
+													name="userId" placeholder="Enter userId!"
+													value="0">
+											</div>
+										</c:if>
+										<c:if test = "${ not empty loginedUser }">
+											 <div class="form-line">
+												<input type="hidden" id="userId" class="form-control"
+													name="userId" placeholder="Enter userId!"
+													value="${loginedUser.userid}">
+											</div>
+										</c:if>
 										
+										<div class="form-line">
+											<input type="text" id="content" class="form-control"
+												name="content" placeholder="Enter feedback content!"
+												value="${model.content}">
+										</div>
 									</div>
-								</div>
+									<br> <input type="button"
+										class="btn btn-primary m-t-15 waves-effect" id="btnAdd"
+										value="AddFeedback" />
+								</form>
+                    		</div>
 							</div>
 						</div>
-					</footer>
-
+						
+					</div>
 				</div>
+			</div>
+			</footer>
 
+		</div>
 
-
-				<a href="https://sharecode.vn/thanh-vien-upload.htm#"
-					class="scroll_top" title="Lên đầu" style="display: inline;"></a>
-				<!-- Script-->
-				<script type="text/javascript"
-					src="style/upload/jquery-1.11.2.min.js.tải xuống"></script>
-				<script type="text/javascript"
-					src="style/upload/bootstrap.min.js.tải xuống"></script>
-				<script type="text/javascript"
-					src="style/upload/select2.min.js.tải xuống"></script>
-				<script type="text/javascript"
-					src="style/upload/owl.carousel.min.js.tải xuống"></script>
-				<script type="text/javascript"
-					src="style/upload/jquery.actual.min.js.tải xuống"></script>
-				<script type="text/javascript"
-					src="style/upload/theme-script.js.tải xuống"></script>
-				<script type="text/javascript"
-					src="style/upload/jquery-ui.min.js.tải xuống"></script>
-				<script type="text/javascript">
+	<a href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm#"
+		class="scroll_top" title="Lên đầu" style="display: inline;"></a>
+	<!-- Script-->
+	<script type="text/javascript"
+		src="style/search-cate/jquery-1.11.2.min.js.tải xuống"></script>
+	<script type="text/javascript"
+		src="style/search-cate/bootstrap.min.js.tải xuống"></script>
+	<script type="text/javascript"
+		src="style/search-cate/select2.min.js.tải xuống"></script>
+	<script type="text/javascript"
+		src="style/search-cate/owl.carousel.min.js.tải xuống"></script>
+	<script type="text/javascript"
+		src="style/search-cate/jquery.actual.min.js.tải xuống"></script>
+	<script type="text/javascript"
+		src="style/search-cate/theme-script.js.tải xuống"></script>
+	<script type="text/javascript"
+		src="style/search-cate/jquery-ui.min.js.tải xuống"></script>
+	<script type="text/javascript">
         $('#slSearch').on('change', function () {
             $('#hdLangFilter').val($("#slSearch").val());
         });
     </script>
+    
+    <script>
+		$('#btnAdd').click(function(e) {
+			e.preventDefault();
+			var data = {};
+			var formData = $('#formSubmit').serializeArray();
+			$.each(formData, function(i, v) {
+				data["" + v.name + ""] = v.value;
+			});
+			console.info(data);
+			addNew(data);
+		});
+		function addNew(data) {
+			$
+					.ajax({
+						url : '${APIurl}',
+						type : 'POST',
+						contentType : 'application/json',
+						data : JSON.stringify(data),
+						dataType : 'json',
+						success : function(result) {
+							window.location.href = "/chiasetailieu/user-upload";
+						},
+						error : function(error) {
+							window.location.href = "/chiasetailieu/user-upload?feedback";
+						}
+					});
+		}
+	</script>
+    
+    <script type="text/javascript">
 
-				<script type="text/javascript">
         $('.carousel').carousel({
             interval: 5000
         })
