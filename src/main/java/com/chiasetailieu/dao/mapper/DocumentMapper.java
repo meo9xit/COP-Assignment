@@ -3,10 +3,16 @@ package com.chiasetailieu.dao.mapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.inject.Inject;
+
 import com.chiasetailieu.model.Document;
+import com.chiasetailieu.service.ICategoryService;
 
 public class DocumentMapper implements GenericMapper<Document>{
 
+	@Inject
+	ICategoryService cateservice;
+	
 	@Override
 	public Document mapRow(ResultSet rs) {
 		// TODO Auto-generated method stub

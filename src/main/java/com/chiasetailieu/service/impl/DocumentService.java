@@ -28,9 +28,9 @@ public class DocumentService implements IDocumentService{
 	}
 
 	@Override
-	public List<Document> findByName(String name) {
+	public List<Document> findByName(String name, int curpage, int docperpage) {
 		// TODO Auto-generated method stub
-		return null;
+		return documentDAO.findByName(name, curpage, docperpage);
 	}
 
 	@Override
