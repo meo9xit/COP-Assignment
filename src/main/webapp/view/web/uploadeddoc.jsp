@@ -511,7 +511,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 					<c:if test="${empty loginedUser }">
 						<div id="LoginBox" class="support-link">
 							<a href="<c:url value = "/login"/>" role="button">Đăng nhập</a> <a
-								href="https://sharecode.vn/dang-ki-tai-khoan.htm">Đăng kí</a>
+								href="<c:url value = "/register"/>">Đăng kí</a>
 						</div>
 					</c:if>
 					<c:if test="${not empty loginedUser }">
@@ -543,9 +543,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 			<div class="container main-header">
 				<div class="row">
 					<div class="col-xs-12 col-sm-3 col-md-3 logo">
-						<a href="https://sharecode.vn/"> <img
-							alt="Trang chủ sharecode.vn" title="Sharecode.vn"
-							src="style/userinfo/logo.png"></a>
+						<a href="<c:url value = "/home"/> "> <img
+							alt="Trang chủ " title="csvn.vn"
+							src="style/logo.png"></a>
 					</div>
 					<div class="col-xs-7 col-sm-7 col-md-6 header-search-box">
 
@@ -794,7 +794,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 					<div class="block left-module box-border2">
 						<div class="pro-left">
 							<a href="https://sharecode.vn/thong-tin-ca-nhan.htm"> <img
-								src="style/uploaddeddoc/avanta2.png"
+								src="<c:url value = "${loginedUser.avatar }"/>"
 								id="mainbody_contentbody_ucProfile_Avanta" class="prof_img"
 								alt="meo9xit - Hà Duy Hưng" width="90" height="90"
 								title="meo9xit - Hà Duy Hưng">
@@ -802,73 +802,19 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 						</div>
 						<div class="pro-right">
 							<h2 id="mainbody_contentbody_ucProfile_FullName"
-								class="pro-title green bold">Hà Duy Hưng</h2>
+								class="pro-title green bold">${loginedUser.realname }</h2>
 							<div class="line"></div>
-							<div class="pro-money">
-								<div>
-									Tài khoản&nbsp;<strong
-										id="mainbody_contentbody_ucProfile_Money">0</strong> Xu
-								</div>
-								<div>
-									Tạm giữ&nbsp;&nbsp;&nbsp;&nbsp;<span class="aorange"><strong
-										id="mainbody_contentbody_ucProfile_MoneyKeep"
-										title="Số XU đang bị tạm giữ cho giao dịch code vừa được bán">0</strong>
-										Xu</span> <i id="mainbody_contentbody_ucProfile_InfoKeep"
-										class="fa fa-info-circle" aria-hidden="true"
-										title="Số XU đang bị tạm giữ cho giao dịch code vừa được bán"></i>
-								</div>
-								<div>
-									Khả dụng&nbsp;&nbsp;<span class="agreen"><strong
-										id="mainbody_contentbody_ucProfile_MoneyAllow"
-										title="Số XU tối đa có thể sử dụng để mua code (hoặc) rút tiền">0</strong>
-										Xu</span> <i
-										title="Số XU tối đa có thể sử dụng để mua code (hoặc) rút tiền"
-										class="fa fa-info-circle" aria-hidden="true"></i>
-								</div>
-
-							</div>
 						</div>
 						<div class="pro-link clear pro-link-first">
-							<a href="https://sharecode.vn/thong-tin-ca-nhan.htm"
+							<a href="<c:url value = "/user-info"/> "
 								class="aorange"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Cài
-								đặt TT</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
-								href="https://sharecode.vn/thanh-vien/meo9xit-299971.htm"
-								id="mainbody_contentbody_ucProfile_LinkPageUser" class="aorange"><i
-								class="fa fa-user" aria-hidden="true"></i>&nbsp;Trang cá nhân</a>
-						</div>
-						<div class="pro-link">
-							<a href="https://sharecode.vn/bao-code-trung.htm" class="aorange"><i
-								class="fa fa-clipboard" aria-hidden="true"></i>&nbsp;Báo bản
-								quyền </a>&nbsp;&nbsp; <a href="https://sharecode.vn/binh-luan.htm"
-								class="aorange pro-line14"><i class="fa fa-comment"
-								aria-hidden="true"></i>&nbsp;Bình luận <span
-								id="mainbody_contentbody_ucProfile_CmtCount"
-								class="badge bagde-green badge-link">0</span></a>
+								đặt TT</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 						</div>
 						<ul class="pro-list">
 							<li id="mnCodeUpload" class="pro-select"><a
-								href="https://sharecode.vn/code-upload-cua-toi.htm">Code tải
-									lên (<strong id="mainbody_contentbody_ucProfile_UploadCount">0</strong>)
+								href="<c:url value = "/doc-manage"/>">Tài liệu tải
+									lên 
 							</a></li>
-							<li id="mnCodeSave"><a
-								href="https://sharecode.vn/code-da-luu.htm">Code đã lưu (<strong
-									id="mainbody_contentbody_ucProfile_SaveCount">0</strong>)
-							</a></li>
-							<li id="mnCodeDown"><a
-								href="https://sharecode.vn/code-download.htm">Code đã mua (<strong
-									id="mainbody_contentbody_ucProfile_BuyCount">0</strong>)
-							</a></li>
-							<li id="mnCodeSell"><a
-								href="https://sharecode.vn/doanh-thu-ban-code.htm">Doanh thu
-									bán code</a></li>
-
-							<li id="mnAddMoney"><a
-								href="https://sharecode.vn/lich-su-giao-dich.htm">Lịch sử
-									nạp tiền</a></li>
-							<li id="mnGetMoney"><a
-								href="https://sharecode.vn/rut-tien.htm">Rút tiền</a></li>
-							<li id="Li1"><a href="https://me.sharecode.vn/"
-								target="_blank">Quản lý Domain - Hosting</a></li>
 						</ul>
 					</div>
 
@@ -993,94 +939,47 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 
 </script>
 
-<div id="ctl24">
+	<div id="ctl24">
 
 			<!-- Footer -->
 			<footer id="footer">
-				<div class="container">
-					<!-- introduce-box -->
-					<div id="introduce-box" class="row">
-						<div class="col-md-3">
-							<div id="address-box">
-								<a href="https://sharecode.vn/"> <img
-									src="style/search-cate/logo.png" alt="Sharecode.vn"></a>
-								<div id="address-list">
-									<div class="tit-name">Hotline:</div>
-									<div class="tit-contain">
-										<a href="tel:+84981282756" title="Click gọi ngay!">0981.282.756</a>
-									</div>
-									<div class="tit-name">Email:</div>
-									<div class="tit-contain">
-										<a href="mailto:sharecode.contact@gmail.com"
-											title="Click để gửi email!">Sharecode.contact@gmail.com</a>
+						<div class="container">
+							<!-- introduce-box -->
+							<div id="introduce-box" class="row">
+								<div class="col-md-3">
+									<div id="address-box">
+										<a href="<c:url value = "/home"/> "> <img
+											src="style/logo.png" alt="CSVN.vn"></a>
+										<div id="address-list"></div>
+										<br>
+										<div class="social-link"></div>
 									</div>
 								</div>
-								<br>
-								<div class="social-link">
-									<a href="https://www.facebook.com/sharecode.vn"><i
-										class="fa fa-facebook"></i></a> <a
-										href="https://www.youtube.com/channel/UCrmDzitLIGfSLYQsSe-j6WA"><i
-										class="fa fa-youtube-play"></i></a>
-
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="row">
-								<div class="col-sm-4">
-									<div class="introduce-title">VỀ CHÚNG TÔI</div>
-									<ul id="introduce-company" class="introduce-list">
-										<li><a href="https://sharecode.vn/gioi-thieu.htm">Giới
-												thiệu</a></li>
-										<li><a href="https://sharecode.vn/quy-dinh-chung.htm">Quy
-												định chung</a></li>
-										<li><a
-											href="https://sharecode.vn/chinh-sach-ban-code.htm">Chính
-												sách bán code</a></li>
-										<li><a href="https://sharecode.vn/cau-hoi.htm">Câu
-												hỏi thường gặp</a></li>
-										<li><a href="https://sharecode.vn/su-kien.htm">Sự
-												kiện</a></li>
-									</ul>
-								</div>
-								<div class="col-sm-4">
-									<div class="introduce-title">HƯỚNG DẪN</div>
+								<div class="col-md-6">
+									<div class="row">
+										<div class="col-sm-4">
+											<div class="introduce-title">VỀ CHÚNG TÔI</div>
+											<ul id="introduce-company" class="introduce-list">
+												<li>Hà Duy Hưng</li>
+												<li>Vũ Thị Thu Hường</li>
+												<li>Chu Tuấn Thành</li>
+												</ul>
+									</div>
+									<div class="col-sm-4">
+									<div class="introduce-title"></div>
 									<ul id="introduce-Account" class="introduce-list">
-										<li><a
-											href="https://sharecode.vn/cau-hoi/huong-dan-cach-tai-code-mien-phi-14.htm">Tải
-												code miễn phí</a></li>
-										<li><a
-											href="https://sharecode.vn/cau-hoi/huong-dan-cach-tai-code-co-phi-15.htm">Tải
-												code có phí</a></li>
-										<li><a
-											href="https://sharecode.vn/cau-hoi/huong-dan-nap-tien-vao-tai-khoan-8.htm">Hướng
-												dẫn nạp tiền</a></li>
-										<li><a
-											href="https://sharecode.vn/cau-hoi/huong-dan-rut-tien-tu-tai-khoan-7.htm">Hướng
-												dẫn rút tiền</a></li>
-										<li><a
-											href="https://sharecode.vn/cau-hoi/huong-dan-ho-tro-ki-thuat-16.htm">Hỗ
-												trợ kĩ thuật</a></li>
+
 									</ul>
 								</div>
 								<div class="col-sm-4">
-									<div class="introduce-title">DỊCH VỤ MÁY CHỦ</div>
+									<div class="introduce-title"></div>
 									<ul id="Ul1" class="introduce-list">
-										<li><a href="https://sharecode.vn/dang-ki-ten-mien.htm">Đăng
-												kí tên miền</a></li>
-										<li><a href="https://sharecode.vn/hosting-ssd.htm">Hosting
-												SSD</a></li>
-										<li><a href="https://sharecode.vn/vps-may-chu-ao.htm">Clould
-												VPS</a></li>
-										<li><a href="https://sharecode.vn/email-server.htm">Email
-												Server</a></li>
-										<li><a href="https://sharecode.vn/chung-thuc-ssl.htm">Chứng
-												thực SSL</a></li>
+
 									</ul>
 								</div>
 							</div>
-						</div>
-						<div class="col-md-3">
+								</div>
+								<div class="col-md-3">
                                 <form id="formSubmit">
 									<label for="email_address">Gửi hỗ trợ - Góp ý</label>
 									<div class="form-group">
@@ -1110,66 +1009,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 										value="AddFeedback" />
 								</form>
                     		</div>
-					</div>
-					<div id="trademark-box" class="row">
-						<div class="col-sm-12">
-							<ul id="trademark-list">
-								<li id="payment-methods">Thanh toán đảm bảo</li>
-								<li><img src="style/search-cate/b1.png" alt="ngan luong">
-								</li>
-								<li><img src="style/search-cate/b10.png" alt="bao kim">
-								</li>
-								<li><img src="style/search-cate/b11.png" alt="momo">
-								</li>
-								<li><img src="style/search-cate/b8.png" alt="paypal">
-								</li>
-								<li><img src="style/search-cate/b5.png" alt="vietcombank">
-								</li>
-								<li><img src="style/search-cate/b9.png" alt="vietin bank">
-								</li>
-								<li><img src="style/search-cate/b6.png" alt="agribank">
-								</li>
-								<li><img src="style/search-cate/b7.png" alt="bidv"></li>
-
-							</ul>
+							</div>
 						</div>
-					</div>
-					<div id="trademark-text-box" class="row">
-						<div class="col-sm-12">
-							<ul id="trademark-search-list" class="trademark-list">
-								<li class="trademark-text-tit">Top tìm kiếm</li>
-								<li><a href="https://sharecode.vn/tu-khoa/game-3.htm">Game</a></li>
-								<li><a
-									href="https://sharecode.vn/tu-khoa/phan-men-quan-ly-4.htm">Phần
-										mền quản lý</a></li>
-								<li><a
-									href="https://sharecode.vn/tu-khoa/website-gioi-thieu-32.htm">Website
-										giới thiệu</a></li>
-								<li><a
-									href="https://sharecode.vn/tu-khoa/quan-ly-sach-54.htm">Quản
-										lý sách</a></li>
-								<li><a
-									href="https://sharecode.vn/tu-khoa/web-tin-tuc-183.htm">Web
-										tin tức</a></li>
-							</ul>
-						</div>
-					</div>
-					<div id="footer-menu-box">
-						<p class="text-center">
-							Copyrights © 2014 Sharecode.vn - Nội dung đã được bảo vệ bản
-							quyền <a
-								href="https://www.dmca.com/Protection/Status.aspx?ID=e3cfb854-1733-4462-a9e8-0ef4661d6600&amp;refurl=https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm"
-								title="DMCA.com Protection Status" class="dmca-badge"> <img
-								src="style/search-cate/dmca-badge-w150-5x1-09.png"
-								alt="DMCA.com Protection Status"></a>
-							<script src="style/search-cate/DMCABadgeHelper.min.js.tải xuống"> </script>
-						</p>
-					</div>
-				</div>
-			</footer>
+					</footer>
 
 		</div>
-
 	<a href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm#"
 		class="scroll_top" title="Lên đầu" style="display: inline;"></a>
 	<!-- Script-->
@@ -1323,29 +1167,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
   } 
 }
     </script>
-	<div class="hisella-messages" style="bottom: -350px; right: -30px;">
-		<div class="hisella-messages-outer">
-			<div id="hisella-minimize">&nbsp;HỖ TRỢ TRỰC TUYẾN</div>
-			<div id="hisella-facebook" class="fb-page fb_iframe_widget"
-				data-adapt-container-width="true" data-height="350"
-				data-hide-cover="false"
-				data-href="https://www.facebook.com/sharecode.vn"
-				data-show-facepile="true" data-show-posts="false"
-				data-small-header="false" data-tabs="messages" data-width="250"
-				fb-xfbml-state="rendered"
-				fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=1938824166400762&amp;container_width=0&amp;height=350&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fsharecode.vn&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;small_header=false&amp;tabs=messages&amp;width=250"
-				style="opacity: 0;">
-				<span style="vertical-align: bottom; width: 250px; height: 350px;"><iframe
-						name="f2f2f1c6338b97c" width="250px" height="350px"
-						title="fb:page Facebook Social Plugin" frameborder="0"
-						allowtransparency="true" allowfullscreen="true" scrolling="no"
-						allow="encrypted-media"
-						src="style/uploaddeddoc/page.html"
-						style="border: none; visibility: visible; width: 250px; height: 350px;"
-						class=""></iframe></span>
-			</div>
-		</div>
-	</div>
 
 
 	<script type="text/javascript">

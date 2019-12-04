@@ -24,9 +24,11 @@ import com.chiasetailieu.service.IDocumentService;
 /**
  * Servlet implementation class DownloadController
  */
-@WebServlet("/DownloadController")
+@WebServlet("/download")
 public class DownloadController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private static String uploadDir = "C:\\virtualTomcat\\wtpwebapps\\chiasetailieu";
        
 	@Inject
 	private IDocumentService docService;
@@ -47,7 +49,9 @@ public class DownloadController extends HttpServlet {
 		Long id = Long.parseLong(request.getParameter("id"));
 		Document doc = docService.findOneById(id);
 		doc.setDownload_count(doc.getDownload_count()+1);
-	    String fullPath = doc.getDocSource();
+		docService.update(doc);
+	    String fullPath = uploadDir + doc.getDocSource();
+	    fullPath = fullPath.replace('\\', '/');
 	    File downloadFile = new File(fullPath);
 	    String mimeType = context.getMimeType(fullPath);
         if (mimeType == null) {        

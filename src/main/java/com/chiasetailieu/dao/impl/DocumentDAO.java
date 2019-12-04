@@ -59,7 +59,7 @@ public class DocumentDAO extends GenericDAO<Document> implements IDocumentDAO{
 		String sql = "update document set doc_name = ?, cate_id = ?, subcate_id = ?, user_id = ?, doc_source = ?, doc_cover = ?, create_date = ?"
 				+ ", edit_date = ?, view = ?, download = ? where doc_id = ?";
 		update(sql, document.getDocName(), document.getCateId(), document.getSubcateId(), document.getUserId(), document.getDocSource(),
-				document.getCover(),document.getCreatedDate(), document.getModifiedDate(), document.getView(), document.getDownload_count());
+				document.getCover(),document.getCreatedDate(), document.getModifiedDate(), document.getView(), document.getDownload_count(), document.getDocId());
 	}
 
 	@Override

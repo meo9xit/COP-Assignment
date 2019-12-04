@@ -618,6 +618,12 @@ img.alignright {
     color: #ff8401;
 }
 
+.view-count:before {
+        font: normal normal normal 15px/1 FontAwesome;
+        content: "\f06e";
+        margin-right: 3px;
+    }
+
 .view-count2 {
     width: 50%;
     height: 22px;
@@ -626,6 +632,11 @@ img.alignright {
     padding: 2px 0px 0px 5px;
     overflow: hidden;
 }
+.view-count2:before {
+        font: normal normal normal 13px/1 FontAwesome;
+        content: "\f06e";
+        margin-right: 6px;
+    }
 /* ----------------
  [2. Top banner]
  */

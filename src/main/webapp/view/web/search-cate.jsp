@@ -541,7 +541,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 					<c:if test="${empty loginedUser }">
 						<div id="LoginBox" class="support-link">
 							<a href="<c:url value = "/login"/>" role="button">Đăng nhập</a> <a
-								href="https://sharecode.vn/dang-ki-tai-khoan.htm">Đăng kí</a>
+								href="<c:url value = "/register"/>">Đăng kí</a>
 						</div>
 					</c:if>
 					<c:if test="${not empty loginedUser }">
@@ -573,9 +573,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 			<div class="container main-header">
 				<div class="row">
 					<div class="col-xs-12 col-sm-3 col-md-3 logo">
-						<a href="https://sharecode.vn/"> <img
-							alt="Trang chủ sharecode.vn" title="Sharecode.vn"
-							src="style/search-cate/logo.png"></a>
+						<a href="<c:url value = "/home"/> "> <img
+							alt="Trang chủ " title="csvn.vn"
+							src="style/logo.png"></a>
 					</div>
 					<div class="col-xs-7 col-sm-7 col-md-6 header-search-box">
 
@@ -1134,7 +1134,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 													<a
 														href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
 														<div class="img-box">
-															<img class="img-responsive" src="${doc.cover }"
+															<img class="img-responsive" src="<c:url value = "${doc.cover }"/> "
 																alt="${doc.docName }" title="${doc.docName }">
 														</div>
 													</a>
@@ -1173,7 +1173,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 											<div class="products-block-left">
 												<a
 													href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
-													<img src="${doc.cover }" alt="${doc.docName }"
+													<img src="<c:url value = "${doc.cover }"/>" alt="${doc.docName }"
 													title="${doc.docName }">
 												</a>
 											</div>
@@ -1294,20 +1294,19 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 		<div id="ctl24">
 
 			<!-- Footer -->
-					<footer id="footer">
+			<footer id="footer">
 						<div class="container">
 							<!-- introduce-box -->
 							<div id="introduce-box" class="row">
 								<div class="col-md-3">
 									<div id="address-box">
-										<a href="https://sharecode.vn/"> <img
-											src="style/upload/logo.png" alt="Sharecode.vn"></a>
+										<a href="<c:url value = "/home"/> "> <img
+											src="style/logo.png" alt="CSVN.vn"></a>
 										<div id="address-list"></div>
 										<br>
 										<div class="social-link"></div>
 									</div>
 								</div>
-
 								<div class="col-md-6">
 									<div class="row">
 										<div class="col-sm-4">
@@ -1316,7 +1315,21 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 												<li>Hà Duy Hưng</li>
 												<li>Vũ Thị Thu Hường</li>
 												<li>Chu Tuấn Thành</li>
+												</ul>
 									</div>
+									<div class="col-sm-4">
+									<div class="introduce-title"></div>
+									<ul id="introduce-Account" class="introduce-list">
+
+									</ul>
+								</div>
+								<div class="col-sm-4">
+									<div class="introduce-title"></div>
+									<ul id="Ul1" class="introduce-list">
+
+									</ul>
+								</div>
+							</div>
 								</div>
 								<div class="col-md-3">
                                 <form id="formSubmit">
@@ -1351,7 +1364,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 							</div>
 						</div>
 					</footer>
-				</div>
+
 		</div>
 
 	<a href="https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm#"

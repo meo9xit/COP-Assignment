@@ -114,7 +114,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 					<c:if test="${empty loginedUser }">
 						<div id="LoginBox" class="support-link">
 							<a href="<c:url value = "/login"/>" role="button">Đăng nhập</a> <a
-								href="https://sharecode.vn/dang-ki-tai-khoan.htm">Đăng kí</a>
+								href="<c:url value = "/register"/>">Đăng kí</a>
 						</div>
 					</c:if>
 					<c:if test="${not empty loginedUser }">
@@ -146,9 +146,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 			<div class="container main-header">
 				<div class="row">
 					<div class="col-xs-12 col-sm-3 col-md-3 logo">
-						<a href="https://sharecode.vn/"> <img
-							alt="Trang chủ sharecode.vn" title="Sharecode.vn"
-							src="style/userinfo/logo.png"></a>
+						<a href="<c:url value = "/home"/> "> <img
+							alt="Trang chủ " title="csvn.vn"
+							src="style/logo.png"></a>
 					</div>
 					<div class="col-xs-7 col-sm-7 col-md-6 header-search-box">
 
@@ -470,16 +470,16 @@ function validate_changepass() {
 </script>
 
         <div id="ctl24">
-	
-                <!-- Footer -->
-					<footer id="footer">
+
+			<!-- Footer -->
+			<footer id="footer">
 						<div class="container">
 							<!-- introduce-box -->
 							<div id="introduce-box" class="row">
 								<div class="col-md-3">
 									<div id="address-box">
-										<a href="https://sharecode.vn/"> <img
-											src="style/upload/logo.png" alt="Sharecode.vn"></a>
+										<a href="<c:url value = "/home"/> "> <img
+											src="style/logo.png" alt="CSVN.vn"></a>
 										<div id="address-list"></div>
 										<br>
 										<div class="social-link"></div>
@@ -493,34 +493,57 @@ function validate_changepass() {
 												<li>Hà Duy Hưng</li>
 												<li>Vũ Thị Thu Hường</li>
 												<li>Chu Tuấn Thành</li>
+												</ul>
 									</div>
+									<div class="col-sm-4">
+									<div class="introduce-title"></div>
+									<ul id="introduce-Account" class="introduce-list">
+
+									</ul>
 								</div>
-								<div class="col-md-3">
-									<div id="contact-box">
-										<div class="introduce-title">Gửi hỗ trợ - Góp ý</div>
-										<div>
-											<textarea name="ctl00$ctl00$ctl00$txtComment" rows="2"
-												cols="20" id="txtComment" class="form-control send-sp"
-												placeholder="Nội dung &amp; liên hệ của bạn (Email, ĐT)"
-												style="height: 60px; width: 100%;"></textarea>
-											<div id="errCmt" class="text-error"></div>
-										</div>
-										<br>
-										<div>
-											<a onclick=" return fosp_cmt();" id="btnSend"
-												class="button-orange"
-												href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$btnSend&#39;,&#39;&#39;)"><i
-												class="fa fa-paper-plane fa-lg" aria-hidden="true"></i>&nbsp;
-												GỬI NHANH</a>
-										</div>
-										
-									</div>
+								<div class="col-sm-4">
+									<div class="introduce-title"></div>
+									<ul id="Ul1" class="introduce-list">
+
+									</ul>
 								</div>
 							</div>
+								</div>
+								<div class="col-md-3">
+                                <form id="formSubmit">
+									<label for="email_address">Gửi hỗ trợ - Góp ý</label>
+									<div class="form-group">
+										<c:if test = "${ empty loginedUser}">
+											 <div class="form-line">
+												<input type="hidden" id="userId" class="form-control"
+													name="userId" placeholder="Enter userId!"
+													value="0">
+											</div>
+										</c:if>
+										<c:if test = "${ not empty loginedUser }">
+											 <div class="form-line">
+												<input type="hidden" id="userId" class="form-control"
+													name="userId" placeholder="Enter userId!"
+													value="${loginedUser.userid}">
+											</div>
+										</c:if>
+										
+										<div class="form-line">
+											<input type="text" id="content" class="form-control"
+												name="content" placeholder="Enter feedback content!"
+												value="${model.content}">
+										</div>
+									</div>
+									<br> <input type="button"
+										class="btn btn-primary m-t-15 waves-effect" id="btnAdd"
+										value="AddFeedback" />
+								</form>
+                    		</div>
+							</div>
 						</div>
-					</footer>            
-</div>
-    </form>
+					</footer>
+
+		</div>
 
     <a href="#" class="scroll_top" title="Lên đầu" style="display: none;"></a>
     <!-- Script-->

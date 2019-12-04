@@ -159,8 +159,8 @@ to {
 			<div class="imgcontainer">
 				<!-- <span onclick="document.getElementById('id01').style.display='none'"
 				class="close" title="Close Modal">&times;</span> -->
-				<img src="/style/web-style/img_avatar2.png" alt="Avatar"
-					class="avatar">
+				<img src="style/logo.png" alt="Avatar"
+					class="avatar" width = "300px" height = "120px">
 			</div>
 
 			<div class="container">
@@ -171,12 +171,12 @@ to {
 				<label for="psw"><b>Password</b></label> <input type="password"
 					placeholder="Enter Password" name="psw" required> <br>
 				<label style="text-align: center;"> <input type="checkbox"
-					checked="checked" name="remember"> Remember me
+					checked="checked" name="remember"> Ghi nhớ
 				</label> <br>
 
-				<button type="submit">Login</button>
+				<button type="submit">Đăng nhập</button>
 				<p>
-					Forgot <a href="#">password?</a>
+					Chưa có tài khoản? <a href="/chiasetailieu/register">Đăng ký</a>
 				</p>
 
 			</div>

@@ -542,7 +542,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 					<c:if test="${empty loginedUser }">
 						<div id="LoginBox" class="support-link">
 							<a href="<c:url value = "/login"/>" role="button">Đăng nhập</a> <a
-								href="https://sharecode.vn/dang-ki-tai-khoan.htm">Đăng kí</a>
+								href="<c:url value = "/register"/>">Đăng kí</a>
 						</div>
 					</c:if>
 					<c:if test="${not empty loginedUser }">
@@ -574,9 +574,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 			<div class="container main-header">
 				<div class="row">
 					<div class="col-xs-12 col-sm-3 col-md-3 logo">
-						<a href="https://sharecode.vn/"> <img
-							alt="Trang chủ sharecode.vn" title="Sharecode.vn"
-							src="style/userinfo/logo.png"></a>
+						<a href="<c:url value = "/home"/> "> <img
+							alt="Trang chủ " title="csvn.vn"
+							src="style/logo.png"></a>
 					</div>
 					<div class="col-xs-7 col-sm-7 col-md-6 header-search-box">
 
@@ -715,16 +715,20 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 							</a>
 						</div>
 						<br> <br>
-						<c:if test="${actiontype eq 'edit' }">
-							<c:set var="actionlink" value="/user-info" />
+						<c:if test = "${actiontype == 'edit' }">
+							<c:url var="post_url" value="/user-info" />
 						</c:if>
-						<c:if test="${actiontype eq 'create' }">
-							<c:set var="actionlink" value="/register" />
+						<c:if test = "${actiontype == 'create' }">
+							<c:url var="post_url" value="/register" />
 						</c:if>
-						<form id="userinfo-form"
-							action="<c:url value = "${actionlink }"/> " method="post"
-							enctype="multipart/form-data">
-							<div id="mainbody_contentbody_contentpage_panDefaultButton" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;mainbody_contentbody_contentpage_btnUpdate&#39;)">
+						<c:if test = "${actiontype == 'edit' }">
+							<form id="userinfoform" method="post" action="${post_url}" enctype="multipart/form-data">
+						</c:if>
+						<c:if test = "${actiontype == 'create' }">
+							<form id="userinfoform" method="post" action="${post_url}">
+						</c:if>
+						
+							<div id="mainbody_contentbody_contentpage_panDefaultButton" >
 	
 						        <div class="form-horizontal">
 						            <div class="form-group">
@@ -734,14 +738,14 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 						                    	<b id="mainbody_contentbody_contentpage_updateEmail" class="green">${loginedUser.email }</b>
 					                		</c:if>
 					                		<c:if test = "${actiontype == 'create' }">
-					                			<input name="email" type="email" id="email" maxlength="40" placeholder="VD: Trần Thanh Tâm" class="form-control" value="${loginedUser.realname }">
+					                			<input id ="mainbody_contentbody_contentpage_updateEmail" name="email" type="email" maxlength="40" placeholder="VD: meo9xit@gmail.com" class="form-control" value="${loginedUser.realname }">
 					                		</c:if>
 					                	</div>
 						            </div>
 						            <div class="form-group">
 						                <label class="col-sm-5 control-label">Họ và tên<span class="text-error">*</span></label>
 						                <div class="col-sm-4">
-						                    <input name="realname" type="text" id="mainbody_contentbody_contentpage_updateFullName" maxlength="40" placeholder="VD: Trần Thanh Tâm" class="form-control" value="${loginedUser.realname }">
+						                    <input name="realname" type="text" id="mainbody_contentbody_contentpage_updateFullName" maxlength="40" placeholder="VD: Trần Văn A" class="form-control" value="${loginedUser.realname }">
 						                </div>
 						                <div class="col-sm-3">
 						                    <div id="updateFullName_error" class="text-error pro-top7">&nbsp;</div>
@@ -757,7 +761,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 						                </div>
 						            </div>
 						   
-						            <c:if test = "${actiontype eq 'create' }" >
+						            <c:if test = "${actiontype == 'create' }" >
 						            <div class="form-group">
 						                <label class="col-sm-5 control-label">Mật khẩu<span class="text-error">*</span></label>
 						                <div class="col-sm-4">
@@ -781,42 +785,41 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 						            <div class="form-group">
 						                <label class="col-sm-5 control-label">Ảnh đại diện</label>
 						                <div class="col-sm-5">
-						                    <img src="style/userinfo/avanta2.png" id="mainbody_contentbody_contentpage_Avanta" class="pro-img" width="90" height="90" alt="meo9xit - Hà Duy Hưng" title="Hà Duy Hưng">
+						                    <img src="<c:url value = "${loginedUser.avatar}"/>" id="mainbody_contentbody_contentpage_Avanta" class="pro-img" width="90" height="90" alt="meo9xit - Hà Duy Hưng" title="Hà Duy Hưng">
 						                </div>
 						            </div>
 						            <div class="form-group">
 						                <label class="col-sm-5 control-label">Chọn ảnh khác</label>
 						                <div class="col-sm-5  pro-top7">
-						                    <input type="file" name="avatar" id="mainbody_contentbody_contentpage_fulImage" title="Bạn hãy chọn ảnh ở đây" onchange="javascript:ImageURL();" />
+						                    <input name="avatar" type="file" id="mainbody_contentbody_contentpage_fulImage" title="Bạn hãy chọn ảnh ở đây" />
 						                </div>
 						            </div>
 						            <div class="form-group">
 						                <div class="col-sm-offset-5 col-sm-6">
-						                    <a href="https://sharecode.vn/doi-mat-khau.htm" class="aorange">Đổi mật khẩu mới</a>
+						                    <a href="<c:url value = "/change-pass"/>" class="aorange">Đổi mật khẩu mới</a>
 						                </div>
 						            </div>
 						            <div class="form-group line-h">
 						                <div class="col-sm-offset-5 col-sm-6">
-						                    <a onclick="performsubmit();" id="mainbody_contentbody_contentpage_btnUpdate" class="button-orange" ><i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp; Cập nhật thông tin</a>
+						                    <a onclick="performsubmit();" href = "#mainbody_contentbody_contentpage_btnUpdate" id="mainbody_contentbody_contentpage_btnUpdate" class="button-orange" ><i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp; Cập nhật thông tin</a>
 						                </div>
 						            </div>
 						            </c:if>
 						            <c:if test = "${actiontype eq 'create' }" >
 						            	<div class="form-group line-h">
 						                	<div class="col-sm-offset-5 col-sm-6">
-						                    	<a onclick="performsubmit();" id="mainbody_contentbody_contentpage_btnUpdate" class="button-orange" ><i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp; Đăng ký</a>
+						                    	<a onclick="performsubmit();" href ="#mainbody_contentbody_contentpage_btnUpdate" id="mainbody_contentbody_contentpage_btnUpdate" class="button-orange" ><i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp; Đăng ký</a>
 						                	</div>
 						            	</div>
 						            </c:if>
 						        </div>
     
-</div>
+							</div>
 						</form>
 <script type="text/javascript">
 function performsubmit() {
-	if(validate_update())
-	  	document.getElementById("userinfo-form").submit();
-	}
+	  	document.getElementById("userinfoform").submit();
+}
 </script>
 
 <script>
@@ -850,12 +853,13 @@ function performsubmit() {
 						<br> <br>
 
 					</div>
+					
 					<div class="column col-xs-12 col-sm-3" id="left_column">
-
+						<c:if test = "${not empty loginedUser }">
 						<div class="block left-module box-border2">
 							<div class="pro-left">
 								<a href="https://sharecode.vn/thong-tin-ca-nhan.htm"> <img
-									src="style/userinfo/avanta2.png"
+									src="<c:url value = "${loginedUser.avatar }"/>"
 									id="mainbody_contentbody_ucProfile_Avanta" class="prof_img"
 									alt="meo9xit - Hà Duy Hưng" width="90" height="90"
 									title="meo9xit - Hà Duy Hưng">
@@ -863,22 +867,23 @@ function performsubmit() {
 							</div>
 							<div class="pro-right">
 								<h2 id="mainbody_contentbody_ucProfile_FullName"
-									class="pro-title green bold">Hà Duy Hưng</h2>
+									class="pro-title green bold">${loginedUser.realname }</h2>
 								<div class="line"></div>
 							</div>
 							<div class="pro-link clear pro-link-first">
-								<a href="https://sharecode.vn/thong-tin-ca-nhan.htm"
+								<a href="<c:url value = "/user-info" />"
 									class="aorange"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Cài
 									đặt TT</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							</div>
 							<ul class="pro-list">
 								<li id="mnCodeUpload"><a
-									href="https://sharecode.vn/code-upload-cua-toi.htm">Tài
+									href="<c:url value = "/doc-manage"/>" >Tài
 										liệu đăng tải(<strong
 										id="mainbody_contentbody_ucProfile_UploadCount">0</strong>)
 								</a></li>
 							</ul>
 						</div>
+						</c:if>
 
 						<div id="mainbody_contentbody_ucBanner_divBanner"
 							class="col-left-slide left-module">
@@ -893,14 +898,7 @@ function performsubmit() {
 
 
 
-								<!-- <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1200px, 0px, 0px); transition: all 0s ease 0s; width: 2100px;"><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm" rel="nofollow" target="_blank">
-                    <img src="style/userinfo/15_19_18_meo tang doanh thu ban code.jpg" alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code" title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li></div><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="https://sharecode.vn/su-kien/uu-dai-tung-bung-tang-thuong-khi-upload-va-upload-code-dat-moc-11.htm" rel="nofollow" target="_blank">
-                    <img src="style/userinfo/0_22_5_sharecode tang thuong 2.jpg" alt="sự kiện, event, tặng thưởng, upload code" title="Sự kiện: Mừng ngày giỗ tổ 10/3 - Tặng thưởng khi upload code đạt mốc"></a></li></div><div class="owl-item" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/huong-dan-nap-tien-vao-tai-khoan-8.htm" rel="nofollow" target="_blank">
-                    <img src="style/userinfo/13_49_37_nap xu vao tai khoan.jpg" alt="Nạp xu, nạp tiền, quy đổi, nạp thẻ cào, nạp qua ngân hàng, nạp qua ví ngân lượng" title="Nạp XU vào tài khoản ngay!"></a></li></div><div class="owl-item" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm" rel="nofollow" target="_blank">
-                    <img src="style/userinfo/15_19_18_meo tang doanh thu ban code.jpg" alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code" title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li></div><div class="owl-item active" style="width: 270px; margin-right: 30px;"><li><a href="https://sharecode.vn/su-kien/uu-dai-tung-bung-tang-thuong-khi-upload-va-upload-code-dat-moc-11.htm" rel="nofollow" target="_blank">
-                    <img src="style/userinfo/0_22_5_sharecode tang thuong 2.jpg" alt="sự kiện, event, tặng thưởng, upload code" title="Sự kiện: Mừng ngày giỗ tổ 10/3 - Tặng thưởng khi upload code đạt mốc"></a></li></div><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/huong-dan-nap-tien-vao-tai-khoan-8.htm" rel="nofollow" target="_blank">
-                    <img src="style/userinfo/13_49_37_nap xu vao tai khoan.jpg" alt="Nạp xu, nạp tiền, quy đổi, nạp thẻ cào, nạp qua ngân hàng, nạp qua ví ngân lượng" title="Nạp XU vào tài khoản ngay!"></a></li></div><div class="owl-item cloned" style="width: 270px; margin-right: 30px;"><li><a href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm" rel="nofollow" target="_blank">
-                    <img src="style/userinfo/15_19_18_meo tang doanh thu ban code.jpg" alt="Doanh thu, tăng doanh thu, lợi nhuận, bán code" title="Mẹo giúp tăng DOANH THU bán CODE cho bạn"></a></li></div></div></div> -->
+								
 								<div class="owl-controls">
 									<div class="owl-nav">
 										<div class="owl-prev" style="display: none;">
@@ -926,36 +924,7 @@ function performsubmit() {
 						</div>
 
 						<div class="block left-module">
-							<!-- <p class="title_block">THÔNG BÁO</p> -->
-							<!-- <div class="block_content">
-        <div class="layered layered-category">
-            <div class="layered-content">
-                <ul class="tree-menu">
-                    
-                            <li><a href="https://sharecode.vn/cau-hoi/cach-upload-code-hieu-qua-va-toi-uu-seo-10.htm" title="Cách UPLOAD code hiệu quả và tối ưu SEO - FAQ">
-                                <h3 class="title2 bullet">Cách UPLOAD code hiệu quả và tối ưu SEO<span class="ic_hot"></span></h3>
-                            </a></li>
-                        
-                            <li><a href="https://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm" title="Mẹo giúp bạn TĂNG DOANH THU bán source code - FAQ">
-                                <h3 class="title2 bullet">Mẹo giúp bạn TĂNG DOANH THU bán source code<span class="ic_hot"></span></h3>
-                            </a></li>
-                        
-                            <li><a href="https://sharecode.vn/cau-hoi/huong-dan-nap-tien-vao-tai-khoan-8.htm" title="Hướng dẫn NẠP TIỀN vào tài khoản - FAQ">
-                                <h3 class="title2 bullet">Hướng dẫn NẠP TIỀN vào tài khoản<span class=""></span></h3>
-                            </a></li>
-                        
-                            <li><a href="https://sharecode.vn/cau-hoi/huong-dan-rut-tien-tu-tai-khoan-7.htm" title="Hướng dẫn RÚT TIỀN từ tài khoản - FAQ">
-                                <h3 class="title2 bullet">Hướng dẫn RÚT TIỀN từ tài khoản<span class=""></span></h3>
-                            </a></li>
-                        
-                            <li><a href="https://sharecode.vn/cau-hoi/huong-dan-cach-chay-website-aspnet-tren-localhost-2.htm" title="Hướng dẫn cách chạy website ASP.Net trên Localhost - FAQ">
-                                <h3 class="title2 bullet">Hướng dẫn cách chạy website ASP.Net trên Localhost<span class=""></span></h3>
-                            </a></li>
-                        
-                </ul>
-            </div>
-        </div>
-    </div> -->
+
 						</div>
 
 					</div>
@@ -1044,90 +1013,43 @@ function performsubmit() {
 
 			<!-- Footer -->
 			<footer id="footer">
-				<div class="container">
-					<!-- introduce-box -->
-					<div id="introduce-box" class="row">
-						<div class="col-md-3">
-							<div id="address-box">
-								<a href="https://sharecode.vn/"> <img
-									src="style/search-cate/logo.png" alt="Sharecode.vn"></a>
-								<div id="address-list">
-									<div class="tit-name">Hotline:</div>
-									<div class="tit-contain">
-										<a href="tel:+84981282756" title="Click gọi ngay!">0981.282.756</a>
-									</div>
-									<div class="tit-name">Email:</div>
-									<div class="tit-contain">
-										<a href="mailto:sharecode.contact@gmail.com"
-											title="Click để gửi email!">Sharecode.contact@gmail.com</a>
+						<div class="container">
+							<!-- introduce-box -->
+							<div id="introduce-box" class="row">
+								<div class="col-md-3">
+									<div id="address-box">
+										<a href="<c:url value = "/home"/> "> <img
+											src="style/logo.png" alt="CSVN.vn"></a>
+										<div id="address-list"></div>
+										<br>
+										<div class="social-link"></div>
 									</div>
 								</div>
-								<br>
-								<div class="social-link">
-									<a href="https://www.facebook.com/sharecode.vn"><i
-										class="fa fa-facebook"></i></a> <a
-										href="https://www.youtube.com/channel/UCrmDzitLIGfSLYQsSe-j6WA"><i
-										class="fa fa-youtube-play"></i></a>
-
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="row">
-								<div class="col-sm-4">
-									<div class="introduce-title">VỀ CHÚNG TÔI</div>
-									<ul id="introduce-company" class="introduce-list">
-										<li><a href="https://sharecode.vn/gioi-thieu.htm">Giới
-												thiệu</a></li>
-										<li><a href="https://sharecode.vn/quy-dinh-chung.htm">Quy
-												định chung</a></li>
-										<li><a
-											href="https://sharecode.vn/chinh-sach-ban-code.htm">Chính
-												sách bán code</a></li>
-										<li><a href="https://sharecode.vn/cau-hoi.htm">Câu
-												hỏi thường gặp</a></li>
-										<li><a href="https://sharecode.vn/su-kien.htm">Sự
-												kiện</a></li>
-									</ul>
-								</div>
-								<div class="col-sm-4">
-									<div class="introduce-title">HƯỚNG DẪN</div>
+								<div class="col-md-6">
+									<div class="row">
+										<div class="col-sm-4">
+											<div class="introduce-title">VỀ CHÚNG TÔI</div>
+											<ul id="introduce-company" class="introduce-list">
+												<li>Hà Duy Hưng</li>
+												<li>Vũ Thị Thu Hường</li>
+												<li>Chu Tuấn Thành</li>
+												</ul>
+									</div>
+									<div class="col-sm-4">
+									<div class="introduce-title"></div>
 									<ul id="introduce-Account" class="introduce-list">
-										<li><a
-											href="https://sharecode.vn/cau-hoi/huong-dan-cach-tai-code-mien-phi-14.htm">Tải
-												code miễn phí</a></li>
-										<li><a
-											href="https://sharecode.vn/cau-hoi/huong-dan-cach-tai-code-co-phi-15.htm">Tải
-												code có phí</a></li>
-										<li><a
-											href="https://sharecode.vn/cau-hoi/huong-dan-nap-tien-vao-tai-khoan-8.htm">Hướng
-												dẫn nạp tiền</a></li>
-										<li><a
-											href="https://sharecode.vn/cau-hoi/huong-dan-rut-tien-tu-tai-khoan-7.htm">Hướng
-												dẫn rút tiền</a></li>
-										<li><a
-											href="https://sharecode.vn/cau-hoi/huong-dan-ho-tro-ki-thuat-16.htm">Hỗ
-												trợ kĩ thuật</a></li>
+
 									</ul>
 								</div>
 								<div class="col-sm-4">
-									<div class="introduce-title">DỊCH VỤ MÁY CHỦ</div>
+									<div class="introduce-title"></div>
 									<ul id="Ul1" class="introduce-list">
-										<li><a href="https://sharecode.vn/dang-ki-ten-mien.htm">Đăng
-												kí tên miền</a></li>
-										<li><a href="https://sharecode.vn/hosting-ssd.htm">Hosting
-												SSD</a></li>
-										<li><a href="https://sharecode.vn/vps-may-chu-ao.htm">Clould
-												VPS</a></li>
-										<li><a href="https://sharecode.vn/email-server.htm">Email
-												Server</a></li>
-										<li><a href="https://sharecode.vn/chung-thuc-ssl.htm">Chứng
-												thực SSL</a></li>
+
 									</ul>
 								</div>
 							</div>
-						</div>
-						<div class="col-md-3">
+								</div>
+								<div class="col-md-3">
                                 <form id="formSubmit">
 									<label for="email_address">Gửi hỗ trợ - Góp ý</label>
 									<div class="form-group">
@@ -1157,63 +1079,9 @@ function performsubmit() {
 										value="AddFeedback" />
 								</form>
                     		</div>
-					</div>
-					<div id="trademark-box" class="row">
-						<div class="col-sm-12">
-							<ul id="trademark-list">
-								<li id="payment-methods">Thanh toán đảm bảo</li>
-								<li><img src="style/search-cate/b1.png" alt="ngan luong">
-								</li>
-								<li><img src="style/search-cate/b10.png" alt="bao kim">
-								</li>
-								<li><img src="style/search-cate/b11.png" alt="momo">
-								</li>
-								<li><img src="style/search-cate/b8.png" alt="paypal">
-								</li>
-								<li><img src="style/search-cate/b5.png" alt="vietcombank">
-								</li>
-								<li><img src="style/search-cate/b9.png" alt="vietin bank">
-								</li>
-								<li><img src="style/search-cate/b6.png" alt="agribank">
-								</li>
-								<li><img src="style/search-cate/b7.png" alt="bidv"></li>
-
-							</ul>
+							</div>
 						</div>
-					</div>
-					<div id="trademark-text-box" class="row">
-						<div class="col-sm-12">
-							<ul id="trademark-search-list" class="trademark-list">
-								<li class="trademark-text-tit">Top tìm kiếm</li>
-								<li><a href="https://sharecode.vn/tu-khoa/game-3.htm">Game</a></li>
-								<li><a
-									href="https://sharecode.vn/tu-khoa/phan-men-quan-ly-4.htm">Phần
-										mền quản lý</a></li>
-								<li><a
-									href="https://sharecode.vn/tu-khoa/website-gioi-thieu-32.htm">Website
-										giới thiệu</a></li>
-								<li><a
-									href="https://sharecode.vn/tu-khoa/quan-ly-sach-54.htm">Quản
-										lý sách</a></li>
-								<li><a
-									href="https://sharecode.vn/tu-khoa/web-tin-tuc-183.htm">Web
-										tin tức</a></li>
-							</ul>
-						</div>
-					</div>
-					<div id="footer-menu-box">
-						<p class="text-center">
-							Copyrights © 2014 Sharecode.vn - Nội dung đã được bảo vệ bản
-							quyền <a
-								href="https://www.dmca.com/Protection/Status.aspx?ID=e3cfb854-1733-4462-a9e8-0ef4661d6600&amp;refurl=https://sharecode.vn/ngon-ngu-lap-trinh/wordpress-29.htm"
-								title="DMCA.com Protection Status" class="dmca-badge"> <img
-								src="style/search-cate/dmca-badge-w150-5x1-09.png"
-								alt="DMCA.com Protection Status"></a>
-							<script src="style/search-cate/DMCABadgeHelper.min.js.tải xuống"> </script>
-						</p>
-					</div>
-				</div>
-			</footer>
+					</footer>
 
 		</div>
 
@@ -1416,12 +1284,11 @@ function performsubmit() {
            }
        }
        function validate_update() {
-           jQuery('input[type="text"]').removeClass('validation-failed');
+
            jQuery('#updateFullName_error').html('');
            var require_fullname = jQuery('#mainbody_contentbody_contentpage_updateFullName');
            if (require_fullname.val() == '') {
                jQuery('#updateFullName_error').html('Chưa nhập');
-               require_fullname.addClass('validation-failed');
                require_fullname.focus();
                return false;
            }
@@ -1429,29 +1296,10 @@ function performsubmit() {
            var require_username = jQuery('#mainbody_contentbody_contentpage_updateUserName');
            if (require_username.val() == '') {
                jQuery('#updateUserName_error').html('Chưa nhập');
-               require_username.addClass('validation-failed');
                require_username.focus();
                return false;
            }
-           jQuery('#updateFullName_error').html('');
-           var email = jQuery('#mainbody_contentbody_contentpage_updateEmailMoney');
-            email_pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-            if (email.val() != "" && !email.val().match(email_pattern)) {
-                email.addClass('validation-failed');
-                jQuery('#updateFullName_error').html('Email không hợp lệ.');
-                email.focus();
-                return false;
-            }
-            jQuery('#mainbody_contentbody_contentpage_updatePhone_error').html('');
-            var phone = jQuery('#mainbody_contentbody_contentpage_updatePhone');
-           phone_pattern = /^(\+84|0)(([0-9]{9}))$/;
-           if (phone.val() != "" && !phone.val().match(phone_pattern)) {
-               phone.addClass('validation-failed');
-               jQuery('#mainbody_contentbody_contentpage_updatePhone_error').html('Số ĐT không hợp lệ.');
-               phone.focus();
-               return false;
-           }
-           jQuery('#mainbody_contentbody_contentpage_btnUpdate').addClass('popup_btn SaveSuccess');
+
            return true;
        }
     </script>

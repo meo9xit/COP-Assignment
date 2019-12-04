@@ -3,31 +3,39 @@ package com.chiasetailieu.controller;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Timestamp;
+import java.util.List;
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-import com.chiasetailieu.model.Document;
+import com.chiasetailieu.model.Category;
 import com.chiasetailieu.model.User;
-import com.chiasetailieu.service.impl.UserService;
+import com.chiasetailieu.service.ICategoryService;
+import com.chiasetailieu.service.IUserService;
 import com.chiasetailieu.utils.AppUtils;
-import com.chiasetailieu.utils.DocConverter;
 
 /**
  * Servlet implementation class UpdateInfo
  */
 @WebServlet("/user-info")
+@MultipartConfig(fileSizeThreshold = 1024 * 1024 * 2, 
+maxFileSize = 1024 * 1024 * 10,
+maxRequestSize = 1024 * 1024 * 50)
 public class UpdateInfo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private String avatarDir = "C:\\virtualTomcat\\wtpwebapps\\chiasetailieu\\style";
     @Inject
-    UserService userService;
+    IUserService userService;
+    
+    @Inject
+    ICategoryService cateService;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -42,6 +50,8 @@ public class UpdateInfo extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		request.setAttribute("actiontype", "edit");
+		List<Category> cates = cateService.findAll();
+		request.setAttribute("categories", cates);
 		request.getRequestDispatcher("/view/web/userinfo.jsp").forward(request, response);
 	}
 
@@ -53,11 +63,11 @@ public class UpdateInfo extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		request.setCharacterEncoding("UTF-8");
 		User user = AppUtils.getLoginedUser(request.getSession());
-		String email = request.getParameter("email");
-		String realname = request.getParameter("realname");
-		String username = request.getParameter("username");
+		
 		try {
 	           // Đường dẫn tuyệt đối tới thư mục gốc của web app.
+				String realname = request.getParameter("realname");
+				String username = request.getParameter("username");
 	           String appPath = avatarDir+"\\avatar";
 	           appPath = appPath.replace('\\', '/');
 	           System.out.println("Description: " + appPath);
@@ -82,9 +92,7 @@ public class UpdateInfo extends HttpServlet {
 	               String fileName = extractFileName(part);
 	               System.out.println("File name: " + fileName);	            		   
 			               if (fileName != null && fileName.length() > 0) {
-			            	   
-			            	   
-			            	   
+
 			                   String filePath = fullSavePath + fileName;
 			                   System.out.println("Write attachment to file: " + filePath);
 			                   

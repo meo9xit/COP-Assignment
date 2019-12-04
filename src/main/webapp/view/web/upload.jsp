@@ -145,7 +145,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 					<c:if test="${empty loginedUser }">
 						<div id="LoginBox" class="support-link">
 							<a href="<c:url value = "/login"/>" role="button">Đăng nhập</a> <a
-								href="https://sharecode.vn/dang-ki-tai-khoan.htm">Đăng kí</a>
+								href="<c:url value = "/register"/>">Đăng kí</a>
 						</div>
 					</c:if>
 					<c:if test="${not empty loginedUser }">
@@ -177,9 +177,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 			<div class="container main-header">
 				<div class="row">
 					<div class="col-xs-12 col-sm-3 col-md-3 logo">
-						<a href="https://sharecode.vn/"> <img
-							alt="Trang chủ sharecode.vn" title="Sharecode.vn"
-							src="style/userinfo/logo.png"></a>
+						<a href="<c:url value = "/home"/> "> <img
+							alt="Trang chủ " title="csvn.vn"
+							src="style/logo.png"></a>
 					</div>
 					<div class="col-xs-7 col-sm-7 col-md-6 header-search-box">
 
@@ -631,17 +631,16 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 
 			<!-- Footer -->
 			<footer id="footer">
-				<div class="container">
-					<!-- introduce-box -->
-					<div id="introduce-box" class="row">
-						<div class="col-md-3">
-							<div id="address-box">
-								<a href="https://sharecode.vn/"> <img
-									src="style/search-cate/logo.png" alt="Sharecode.vn"></a>
-								<div id="address-list">
-									<div class="tit-name">Hotline:</div>
-									<div class="tit-contain">
-										<a href="tel:+84981282756" title="Click gọi ngay!">0981.282.756</a>
+						<div class="container">
+							<!-- introduce-box -->
+							<div id="introduce-box" class="row">
+								<div class="col-md-3">
+									<div id="address-box">
+										<a href="https://sharecode.vn/"> <img
+											src="style/upload/logo.png" alt="Sharecode.vn"></a>
+										<div id="address-list"></div>
+										<br>
+										<div class="social-link"></div>
 									</div>
 								</div>
 								<div class="col-md-6">
@@ -652,8 +651,21 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 												<li>Hà Duy Hưng</li>
 												<li>Vũ Thị Thu Hường</li>
 												<li>Chu Tuấn Thành</li>
-											</ul>
+												</ul>
 									</div>
+									<div class="col-sm-4">
+									<div class="introduce-title"></div>
+									<ul id="introduce-Account" class="introduce-list">
+
+									</ul>
+								</div>
+								<div class="col-sm-4">
+									<div class="introduce-title"></div>
+									<ul id="Ul1" class="introduce-list">
+
+									</ul>
+								</div>
+							</div>
 								</div>
 								<div class="col-md-3">
                                 <form id="formSubmit">
@@ -687,11 +699,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                     		</div>
 							</div>
 						</div>
-						
-					</div>
-				</div>
-			</div>
-			</footer>
+					</footer>
 
 		</div>
 
@@ -848,29 +856,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
   } 
 }
     </script>
-				<div class="hisella-messages" style="bottom: -350px; right: -30px;">
-					<div class="hisella-messages-outer">
-						<div id="hisella-minimize">&nbsp;HỖ TRỢ TRỰC TUYẾN</div>
-						<div id="hisella-facebook" class="fb-page fb_iframe_widget"
-							data-adapt-container-width="true" data-height="350"
-							data-hide-cover="false"
-							data-href="https://www.facebook.com/sharecode.vn"
-							data-show-facepile="true" data-show-posts="false"
-							data-small-header="false" data-tabs="messages" data-width="250"
-							fb-xfbml-state="rendered"
-							fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=1938824166400762&amp;container_width=0&amp;height=350&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fsharecode.vn&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;small_header=false&amp;tabs=messages&amp;width=250"
-							style="opacity: 0;">
-							<span
-								style="vertical-align: bottom; width: 250px; height: 350px;"><iframe
-									name="f31b428e8c39edc" width="250px" height="350px"
-									title="fb:page Facebook Social Plugin" frameborder="0"
-									allowtransparency="true" allowfullscreen="true" scrolling="no"
-									allow="encrypted-media" src="style/upload/page.html"
-									style="border: none; visibility: visible; width: 250px; height: 350px;"
-									class=""></iframe></span>
-						</div>
-					</div>
-				</div>
 
 
 				<script type="text/javascript">

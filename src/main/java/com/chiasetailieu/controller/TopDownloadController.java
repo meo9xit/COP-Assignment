@@ -46,8 +46,6 @@ public class TopDownloadController extends HttpServlet {
 		} else {
 			curpage = 1;
 		}
-		Long id = Long.parseLong(request.getParameter("id"));
-		Category cate = cateService.findById(id);
 		List<Document> docs = docService.findByDownload(curpage, 12);
 		List<Category> cates = cateService.findAll();
 		List<Document> topdownload = docService.findByDownload(1, 5);

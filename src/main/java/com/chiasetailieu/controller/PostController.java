@@ -17,6 +17,7 @@ import com.chiasetailieu.model.Comment;
 import com.chiasetailieu.model.Document;
 import com.chiasetailieu.model.User;
 import com.chiasetailieu.service.IDocumentService;
+import com.chiasetailieu.service.ISubCategoryService;
 import com.chiasetailieu.service.IUserService;
 import com.chiasetailieu.service.ICategoryService;
 import com.chiasetailieu.service.ICommentService;
@@ -34,7 +35,9 @@ public class PostController extends HttpServlet {
 	
 	@Inject
 	ICategoryService cateService;
-
+	
+	@Inject
+	ISubCategoryService subcateService;
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
@@ -60,16 +63,23 @@ public class PostController extends HttpServlet {
 		Document doc = docService.findOneById(id);
 		Long userid = doc.getUserId();
 		User user = userService.findById(userid);
+		List<Document> topdownload = docService.findByDownload(1, 5);
+		List<Document> topview = docService.findByView(1, 4);
 		doc.setUser(user);
 		doc.setView(doc.getView()+1);
+		doc.setCategory(cateService.findById(doc.getCateId()));
+		doc.setSubcate(subcateService.findOneByID(doc.getSubcateId()));
 		List<Comment> comments = commentService.findByPost(doc);
 		for(Comment comment : comments) {
 			User us = userService.findById(comment.getUserId());
 			comment.setUser(us);
 		}
 		List<Category> cates = cateService.findAll();
+		docService.update(doc);
 		request.setAttribute("categories", cates);
 		request.setAttribute("doc", doc);
+		request.setAttribute("topviewdocs", topview);
+		request.setAttribute("topdocs", topdownload );
 		request.setAttribute("comments", comments);
 		request.getRequestDispatcher("/view/web/post.jsp").forward(request, response);
 	}
@@ -80,37 +90,8 @@ public class PostController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		response.setCharacterEncoding("UTF-8");
-		request.setCharacterEncoding("UTF-8");
 
-		// String comment_id = request.getParameter("commentId"); // String user_id =
-		request.getParameter("user_id"); // String doc_id =
-		request.getParameter("doc_id");
 
-		// YearMonth create_date =
-		// YearMonth.from(today.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
-		// YearMonth edit_date =
-		// YearMonth.from(today.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
-
-		String content = request.getParameter("content");
-		Comment comment = new Comment();
-		long millis = System.currentTimeMillis();
-		java.sql.Date create_date = new java.sql.Date(millis);
-		java.sql.Date edit_date = new java.sql.Date(millis); // comment.setId(Long.parseLong(user_id)); //
-//		comment.setDocId(Long.parseLong(doc_id)); 
-//		comment.setUserId(Long.parseLong(user_id));
-		comment.setCreatedDate(create_date);
-		comment.setModifiedDate(edit_date);
-		comment.setContent(content);
-		Long comment_id = Long.parseLong("100");
-		comment.setId(comment_id);
-		comment.setDocId(comment_id);
-		comment.setUserId(comment_id);
-		if (comment_id != null) {
-			commentDAO.save(comment);
-			response.sendRedirect(response.encodeRedirectURL(request.getContextPath() + "/"));
-		} // else { //
-		request.getRequestDispatcher("/view/web/post.jsp").forward(request, response); // }
 
 		doGet(request, response);
 

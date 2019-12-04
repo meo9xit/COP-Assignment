@@ -43,13 +43,13 @@ public class DocumentService implements IDocumentService{
 	@Override
 	public void delete(Document doc) {
 		// TODO Auto-generated method stub
-		
+		documentDAO.delete(doc);
 	}
 
 	@Override
 	public void update(Document doc) {
 		// TODO Auto-generated method stub
-		
+		documentDAO.update(doc);
 	}
 
 	@Override

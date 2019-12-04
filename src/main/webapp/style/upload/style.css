@@ -613,19 +613,28 @@ img.alignright {
     }
 
 .view-count {
-    background: url('/assets/images/view.png') no-repeat 0px 4px;
     padding-left: 18px;
     color: #ff8401;
 }
 
+    .view-count:before {
+        font: normal normal normal 15px/1 FontAwesome;
+        content: "\f06e";
+        margin-right: 4px;
+    }
+
 .view-count2 {
     width: 50%;
     height: 22px;
-    background: url(/assets/images/view2.png) no-repeat 6px 6px;
     float: left;
     padding: 2px 0px 0px 5px;
     overflow: hidden;
 }
+    .view-count2:before {
+        font: normal normal normal 13px/1 FontAwesome;
+        content: "\f06e";
+        margin-right: 6px;
+    }
 /* ----------------
  [2. Top banner]
  */
@@ -1085,7 +1094,7 @@ img.alignright {
 .main-header .header-search-box .form-inline .btn-search {
     width: 41px;
     height: 41px;
-    background: url("/assets/images/search.png") no-repeat center center, url(/assets/images/bt_title_popup.jpg);
+    background: url("/chiasetailieu/style/search-cate/search.png") no-repeat center center, url(/chiasetailieu/style/search-cate/bt_title_popup.jpg);
     border: 1px solid #84c52c;
     border-radius: 0px 5px 5px 0px;
     color: #fff;
@@ -2805,7 +2814,7 @@ span.notify-right {
 }
 
     #left_column .block .title_block {
-        background: url(/assets/images/logo_popup.png) no-repeat right, url(/assets/images/bg_green.jpg);
+        background: url(/chiasetailieu/style/search-cate/logo_popup.png) no-repeat right, url(/chiasetailieu/style/search-cate/bg_green.jpg);
         color: #fff;
         font-size: 16px;
         font-weight: bold;

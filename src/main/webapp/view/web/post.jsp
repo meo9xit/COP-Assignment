@@ -25,8 +25,8 @@
 <meta property="og:site_name" content="Sharecode.vn" />
 <link rel="stylesheet" type="text/css"
 	href="style/post/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css"
-	href="style/post/font-awesome.min.css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="style/post/select2.min.css" />
 <link rel="stylesheet" type="text/css"
 	href="style/post/owl.carousel.css" />
@@ -152,7 +152,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 					<c:if test="${empty loginedUser }">
 						<div id="LoginBox" class="support-link">
 							<a href="<c:url value = "/login"/>" role="button">Đăng nhập</a> <a
-								href="https://sharecode.vn/dang-ki-tai-khoan.htm">Đăng kí</a>
+								href="<c:url value = "/register"/>">Đăng kí</a>
 						</div>
 					</c:if>
 					<c:if test="${not empty loginedUser }">
@@ -184,9 +184,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 			<div class="container main-header">
 				<div class="row">
 					<div class="col-xs-12 col-sm-3 col-md-3 logo">
-						<a href="https://sharecode.vn/"> <img
-							alt="Trang chủ sharecode.vn" title="Sharecode.vn"
-							src="style/userinfo/logo.png"></a>
+						<a href="<c:url value = "/home"/> "> <img
+							alt="Trang chủ " title="csvn.vn"
+							src="style/logo.png"></a>
 					</div>
 					<div class="col-xs-7 col-sm-7 col-md-6 header-search-box">
 
@@ -539,7 +539,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 										<div class="col-md-6 col-lg-5 dt-sta-vie2 orange">
 											<i class="fa fa-download" aria-hidden="true"></i>&nbsp;<b
 												id="mainbody_contentbody_DownloadCount">${doc.download_count }</b>&nbsp;&nbsp;&nbsp;&nbsp;
-											<span class="dt-vie-ic">&nbsp;<b
+											<span class="view-count2">&nbsp;<b
 												id="mainbody_contentbody_Views">${doc.view }</b></span>&nbsp;&nbsp;&nbsp;&nbsp;
 										</div>
 									</div>
@@ -583,8 +583,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 
 							<br /> <span class="dt-box-title bold">Preview</span>
 							<div class="dt-box entry-detail">
-								<embed src="${doc.docSource }" type="application/pdf"
-									height="762px" width="870px">
+								<embed src="<c:url value = "${doc.docSource }"/>" type="application/pdf"
+									height="762px" width="830px">
 							</div>
 							<br /> <br />
 							<div class="clear" style="height: 40px;">&nbsp;</div>
@@ -606,7 +606,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 											href="<c:url value = "/download"><c:param name="id" value="${doc.docId }" /></c:url>" ><div
 												class="btn-box">
 												<div class="btn-ic"></div>
-												<div class="btn-txt bold">
+												<div class="btn-txt bold" id = "Download">
 													DOWNLOAD<br /> <span id="mainbody_contentbody_divPrice2"></span>
 												</div>
 											</div></a>
@@ -632,18 +632,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 									</div>
 								</div>
 							</div>
-							<input type="hidden"
-								name="ctl00$ctl00$mainbody$contentbody$hdCodeId"
-								id="mainbody_contentbody_hdCodeId" value="23988" /> <input
-								type="hidden"
-								name="ctl00$ctl00$mainbody$contentbody$hdIsShowDownload_now_modal"
-								id="mainbody_contentbody_hdIsShowDownload_now_modal"
-								value="true" /> <input type="hidden"
-								name="ctl00$ctl00$mainbody$contentbody$hdIsShowMessage_modal"
-								id="mainbody_contentbody_hdIsShowMessage_modal" value="false" />
-							<input type="hidden"
-								name="ctl00$ctl00$mainbody$contentbody$hdIsShowDownload_modal"
-								id="mainbody_contentbody_hdIsShowDownload_modal" value="false" />
 
 							<div id="view-product-list" class="view-product-list">
 								<h2 class="page-heading">
@@ -658,7 +646,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 													<a
 														href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
 														<div class="img-box">
-															<img class="img-responsive" src="${doc.cover }"
+															<img class="img-responsive" src="<c:url value = "${doc.cover }"/> "
 																alt="${doc.docName }" title="${doc.docName }">
 														</div>
 													</a>
@@ -688,8 +676,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 							</h2>
 							<br />
 							<div class="cmt">
+							<c:if test="${not empty loginedUser }">
 								<div class="cmt-img">
-									<img width="45" height="45" src="style/post/avanta.png" />
+									<img width="45" height="45" src="<c:url value = "${loginedUser.avatar }"/>" />
 								</div>
 								<form id="formSubmit">
 								<div class="cmt-box">
@@ -701,18 +690,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
                         		</div>
 									
 								</form>
+							</c:if>
 								
-								<input type="hidden"
-									name="ctl00$ctl00$mainbody$contentbody$hdCommentParent"
-									id="mainbody_contentbody_hdCommentParent" /> <input
-									type="hidden"
-									name="ctl00$ctl00$mainbody$contentbody$hdCommentReply"
-									id="mainbody_contentbody_hdCommentReply" />
 							<c:forEach var = "comment" items = "${comments }">
 								<div class="cmt-item " id="cmt-15351">
                                     <div class="cmt-img">
                                         <a href="#" target="_blank">
-                                            <img width="45" height="45" src="${comment.user.avatar }"></a>
+                                            <img width="45" height="45" src="<c:url value = "${comment.user.avatar }" /> "></a>
                                     </div>
                                     <div class="cmt-box cmt-border">
                                         <div class="cmt-head">
@@ -812,7 +796,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 								<div class="pro-left">
 									<a href="/thanh-vien/thanh-tong-van-222652.htm"
 										id="mainbody_contentbody_AvantaLink" target="_blank"> <img
-										src="${doc.user.avatar }"
+										src="<c:url value = "${doc.user.avatar }" /> "
 										id="mainbody_contentbody_Avanta" class="prof_img" width="90"
 										height="90" itemprop="image" title="${doc.user.realname }"
 										alt="${doc.user.realname }" />
@@ -855,7 +839,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 											<div class="products-block-left">
 												<a
 													href="<c:url value = "/post"><c:param name = "id" value = "${doc.docId }"/></c:url>">
-													<img src="${doc.cover }" alt="${doc.docName }"
+													<img src="<c:url value = "${doc.cover }" />" alt="${doc.docName }"
 													title="${doc.docName }">
 												</a>
 											</div>
@@ -981,8 +965,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 							<div id="introduce-box" class="row">
 								<div class="col-md-3">
 									<div id="address-box">
-										<a href="https://sharecode.vn/"> <img
-											src="style/upload/logo.png" alt="Sharecode.vn"></a>
+										<a href="<c:url value = "/home"/> "> <img
+											src="style/logo.png" alt="CSVN.vn"></a>
 										<div id="address-list"></div>
 										<br>
 										<div class="social-link"></div>
@@ -996,29 +980,52 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 												<li>Hà Duy Hưng</li>
 												<li>Vũ Thị Thu Hường</li>
 												<li>Chu Tuấn Thành</li>
+												</ul>
 									</div>
+									<div class="col-sm-4">
+									<div class="introduce-title"></div>
+									<ul id="introduce-Account" class="introduce-list">
+
+									</ul>
+								</div>
+								<div class="col-sm-4">
+									<div class="introduce-title"></div>
+									<ul id="Ul1" class="introduce-list">
+
+									</ul>
+								</div>
+							</div>
 								</div>
 								<div class="col-md-3">
-									<div id="contact-box">
-										<div class="introduce-title">Gửi hỗ trợ - Góp ý</div>
-										<div>
-											<textarea name="ctl00$ctl00$ctl00$txtComment" rows="2"
-												cols="20" id="txtComment" class="form-control send-sp"
-												placeholder="Nội dung &amp; liên hệ của bạn (Email, ĐT)"
-												style="height: 60px; width: 100%;"></textarea>
-											<div id="errCmt" class="text-error"></div>
-										</div>
-										<br>
-										<div>
-											<a onclick=" return fosp_cmt();" id="btnSend"
-												class="button-orange"
-												href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$btnSend&#39;,&#39;&#39;)"><i
-												class="fa fa-paper-plane fa-lg" aria-hidden="true"></i>&nbsp;
-												GỬI NHANH</a>
-										</div>
+                                <form id="formSubmit">
+									<label for="email_address">Gửi hỗ trợ - Góp ý</label>
+									<div class="form-group">
+										<c:if test = "${ empty loginedUser}">
+											 <div class="form-line">
+												<input type="hidden" id="userId" class="form-control"
+													name="userId" placeholder="Enter userId!"
+													value="0">
+											</div>
+										</c:if>
+										<c:if test = "${ not empty loginedUser }">
+											 <div class="form-line">
+												<input type="hidden" id="userId" class="form-control"
+													name="userId" placeholder="Enter userId!"
+													value="${loginedUser.userid}">
+											</div>
+										</c:if>
 										
+										<div class="form-line">
+											<input type="text" id="content" class="form-control"
+												name="content" placeholder="Enter feedback content!"
+												value="${model.content}">
+										</div>
 									</div>
-								</div>
+									<br> <input type="button"
+										class="btn btn-primary m-t-15 waves-effect" id="btnAdd"
+										value="AddFeedback" />
+								</form>
+                    		</div>
 							</div>
 						</div>
 					</footer>
@@ -1143,17 +1150,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
   } 
 }
     </script>
-	<div class="hisella-messages">
-		<div class="hisella-messages-outer">
-			<div id="hisella-minimize">&nbsp;HỖ TRỢ TRỰC TUYẾN</div>
-			<div id="hisella-facebook" class='fb-page'
-				data-adapt-container-width='true' data-height='350'
-				data-hide-cover='false'
-				data-href='https://www.facebook.com/sharecode.vn'
-				data-show-facepile='true' data-show-posts='false'
-				data-small-header='false' data-tabs='messages' data-width='250'></div>
-		</div>
-	</div>
 
 	<script>
 		$('#btnAdd').click(function(e) {

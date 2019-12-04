@@ -1,6 +1,7 @@
 package com.chiasetailieu.controller;
 
 import java.io.IOException;
+import java.security.MessageDigest;
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -9,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.bind.DatatypeConverter;
 
 import com.chiasetailieu.dao.impl.UserDAO;
 import com.chiasetailieu.model.User;
@@ -41,6 +43,15 @@ public class LoginController extends HttpServlet {
  
         String userName = request.getParameter("uname");
         String password = request.getParameter("psw");
+        try {
+    		MessageDigest md = MessageDigest.getInstance("MD5");
+    	    md.update(password.getBytes());
+    	    byte[] digest = md.digest();
+    	    password = DatatypeConverter
+    	      .printHexBinary(digest).toUpperCase();
+    		} catch (Exception e) {
+    			// TODO: handle exception
+    		}
         User userAccount = userService.findByUsernameAndPassword(userName, password);
  
         if (userAccount == null) {
@@ -70,8 +81,8 @@ public class LoginController extends HttpServlet {
             // Mặc định sau khi đăng nhập thành công
             // chuyển hướng về trang /userInfo
         	if(userAccount.getRole().getRolename().equals("USER"))
-        		response.sendRedirect("/home");
-        	else response.sendRedirect("/admin-user");
+        		response.sendRedirect("/chiasetailieu/home");
+        	else response.sendRedirect("/chiasetailieu/admin-user");
         }
  
     }
