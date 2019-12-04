@@ -69,7 +69,9 @@ public class LoginController extends HttpServlet {
         } else {
             // Mặc định sau khi đăng nhập thành công
             // chuyển hướng về trang /userInfo
-        		response.sendRedirect(request.getContextPath() + "/view/web/index.html");
+        	if(userAccount.getRole().getRolename().equals("USER"))
+        		response.sendRedirect("/home");
+        	else response.sendRedirect("/admin-user");
         }
  
     }

@@ -21,18 +21,24 @@ public class SecurityConfig {
  
     private static void init() {
  
-        // Cấu hình cho vai trò "EMPLOYEE".
+        // Cấu hình cho vai trò "USER".
         List<String> urlPatterns1 = new ArrayList<String>();
  
         urlPatterns1.add("/user-upload");
+        urlPatterns1.add("/user-info");
+        urlPatterns1.add("/change-pass");
 //        urlPatterns1.add("/employeeTask");
  
         mapConfig.put(ROLE_USER, urlPatterns1);
  
-        // Cấu hình cho vai trò "MANAGER".
+        // Cấu hình cho vai trò "ADMIN".
         List<String> urlPatterns2 = new ArrayList<String>();
  
-        urlPatterns2.add("/admin");
+        urlPatterns2.add("/admin-user");
+        urlPatterns2.add("/admin-edit-subcategory");
+        urlPatterns2.add("/admin-subcategory");
+        urlPatterns2.add("/CateController");
+        urlPatterns2.add("/FeedbackController");
 //        urlPatterns2.add("/managerTask");
  
         mapConfig.put(ROLE_ADMIN, urlPatterns2);

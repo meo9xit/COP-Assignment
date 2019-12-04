@@ -25,7 +25,7 @@ import com.chiasetailieu.utils.DocConverter;
 @WebServlet("/user-info")
 public class UpdateInfo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private String avatarDir = "C:\\Users\\ACER\\Documents";
+	private String avatarDir = "C:\\virtualTomcat\\wtpwebapps\\chiasetailieu\\style";
     @Inject
     UserService userService;
     /**
@@ -85,14 +85,13 @@ public class UpdateInfo extends HttpServlet {
 			            	   
 			            	   
 			            	   
-			                   String filePath = fullSavePath + File.separator + fileName;
+			                   String filePath = fullSavePath + fileName;
 			                   System.out.println("Write attachment to file: " + filePath);
-			                   String temp = filePath;
 			                   
 			                   // Ghi vào file.
 			                   
 			                   part.write(filePath);
-			                   user.setAvatar(filePath);
+			                   user.setAvatar("style/avatar/" + fileName);
 			               }
 	           }
 	           user.setRealname(realname);
