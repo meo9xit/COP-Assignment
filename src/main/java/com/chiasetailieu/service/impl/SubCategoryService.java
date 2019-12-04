@@ -33,9 +33,9 @@ public class SubCategoryService implements ISubCategoryService{
 	}
 
 	@Override
-	public SubCategory findByCategories(Category category) {
+	public List<SubCategory> findByCategories(Category category) {
 		// TODO Auto-generated method stub
-		return null;
+		return SubCategoryDAO.findByCategories(category);
 	}
 
 	@Override

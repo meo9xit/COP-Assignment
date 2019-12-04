@@ -20,7 +20,8 @@ public class SubcateDAO extends GenericDAO<SubCategory> implements ISubcategoryD
 	@Override
 	public List<SubCategory> findByCategories(Category category) {
 		// TODO Auto-generated method stub
-		return null;
+		String sql = "select * from subcate where cate_id = ?";
+		return query(sql, new SubcateMapper(), category.getCategoryID());
 	}
 
 	@Override

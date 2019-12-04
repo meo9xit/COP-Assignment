@@ -7,6 +7,7 @@ import javax.inject.Inject;
 import com.chiasetailieu.dao.IDocumentDAO;
 import com.chiasetailieu.model.Category;
 import com.chiasetailieu.model.Document;
+import com.chiasetailieu.model.SubCategory;
 import com.chiasetailieu.service.IDocumentService;
 
 public class DocumentService implements IDocumentService{
@@ -79,6 +80,12 @@ public class DocumentService implements IDocumentService{
 	public List<Document> findByDownload(int curpage, int docperpage) {
 		// TODO Auto-generated method stub
 		return documentDAO.findByDownload(curpage, docperpage);
+	}
+
+	@Override
+	public List<Document> findBySubcategory(SubCategory cate, int curpage, int docperpage) {
+		// TODO Auto-generated method stub
+		return documentDAO.findBySubcategory(cate, curpage, docperpage);
 	}
 
 }

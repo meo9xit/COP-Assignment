@@ -18,22 +18,22 @@ import com.chiasetailieu.service.IDocumentService;
 import com.chiasetailieu.service.ISubCategoryService;
 
 /**
- * Servlet implementation class SearchCateController
+ * Servlet implementation class SearchSubcateController
  */
-@WebServlet("/category")
-public class SearchCateController extends HttpServlet {
+@WebServlet("/SearchSubcateController")
+public class SearchSubcateController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-	@Inject
-	ICategoryService cateService;
 	@Inject
 	IDocumentService docService;
 	@Inject
 	ISubCategoryService subcateService;
+	@Inject
+	ICategoryService cateService;
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SearchCateController() {
+    public SearchSubcateController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -51,9 +51,9 @@ public class SearchCateController extends HttpServlet {
 			curpage = 1;
 		}
 		Long id = Long.parseLong(request.getParameter("id"));
-		Category cate = cateService.findById(id);
-		List<Document> docs = docService.findByCategory(cate,curpage, 12);
-		List<SubCategory> cates = subcateService.findByCategories(cate);
+		SubCategory cate = subcateService.findOneByID(id);
+		List<Document> docs = docService.findBySubcategory(cate,curpage, 12);
+		List<SubCategory> cates = subcateService.findByCategories(cateService.findById(cate.getCategoryId()));
 		List<Document> topdownload = docService.findByDownload(1, 5);
 		List<Document> topview = docService.findByView(1, 4);
 		int totalpages = (docService.getCount() % 12 != 0) ? docService.getCount()/12 +1 : docService.getCount()/12;
@@ -63,10 +63,9 @@ public class SearchCateController extends HttpServlet {
 		request.setAttribute("docs", docs);
 		request.setAttribute("topviewdocs", topview);
 		request.setAttribute("topdocs", topdownload );
-		request.setAttribute("title", "Danh mục "+cate.getCategoryName());
-		request.setAttribute("req", "/category");
+		request.setAttribute("title", "Chủ đề "+cate.getSubcategoryName());
+		request.setAttribute("req", "/subcategory");
 		request.getRequestDispatcher("/view/web/search-cate.jsp").forward(request, response);
-		
 	}
 
 	/**

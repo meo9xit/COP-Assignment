@@ -1,6 +1,7 @@
 package com.chiasetailieu.api;
 
 import java.io.IOException;
+import java.sql.Date;
 
 import javax.inject.Inject;
 import javax.servlet.ServletException;
@@ -57,7 +58,7 @@ public class CommentAPI extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("application/json");
 		Comment comment = HttpUtil.of(request.getReader()).toModel(Comment.class);
-		commentService.delete(commentService.findById(comment.getId()));
+		commentService.delete(comment);
 		mapper.writeValue(response.getOutputStream(), "{}");
 	}
 

@@ -531,12 +531,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 						</ul>
 					</div>
 
-					<div id="mainbody_contentbody_ucBanner_divBanner"
-						class="col-left-slide left-module">
-						<ul class="owl-carousel owl-style2 owl-theme owl-loaded"
-							data-loop="true" data-nav="false" data-margin="30"
-							data-autoplaytimeout="1000" data-autoplayhoverpause="true"
-							data-items="1" data-autoplay="true">
 
 
 
@@ -549,25 +543,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 									style="transform: translate3d(-1500px, 0px, 0px); transition: all 0s ease 0s; width: 2100px;">
 									<div class="owl-item cloned"
 										style="width: 270px; margin-right: 30px;">
-										<li><a
-											href="http://sharecode.vn/cau-hoi/meo-giup-ban-tang-doanh-thu-ban-source-code-9.htm"
-											rel="nofollow" target="_blank">
+
 									</div>
 
-									<div class="block left-module">
-										<p class="title_block">THÔNG BÁO</p>
-										<div class="block_content">
-											<div class="layered layered-category">
-												<div class="layered-content">
-													<ul class="tree-menu">
 
-
-
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
 
 								</div>
 							</div>
@@ -673,6 +652,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 												<li>Hà Duy Hưng</li>
 												<li>Vũ Thị Thu Hường</li>
 												<li>Chu Tuấn Thành</li>
+											</ul>
 									</div>
 								</div>
 								<div class="col-md-3">

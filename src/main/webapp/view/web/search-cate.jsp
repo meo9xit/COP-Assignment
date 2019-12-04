@@ -614,15 +614,23 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 						<div class="col-sm-3" id="box-vertical-megamenus">
 							<div class="box-vertical-megamenus">
 								<h4 class="title">
+								<c:if test="${req != '/category' && req != '/subcategory' }">
 									<span class="title-menu">Danh mục</span> <span
 										class="btn-open-mobile pull-right home-page"><i
 										class="fa fa-bars"></i></span>
+								</c:if>
+								<c:if test="${req == '/category' || req == '/subcategory' }">
+									<span class="title-menu">Chủ đề</span> <span
+										class="btn-open-mobile pull-right home-page"><i
+										class="fa fa-bars"></i></span>
+								</c:if>
 								</h4>
 								<div class="vertical-menu-content is-home">
+								<c:if test = "${req != '/category' && req != '/subcategory' }">
 									<ul class="vertical-menu-list">
 										<c:forEach var="category" items="${categories }">
 											<li class=""><a
-												href="<c:url value = "/post"><c:param name = "id" value = "${category.categoryID }"/></c:url>">
+												href="<c:url value = "/category"><c:param name = "id" value = "${category.categoryID }"/></c:url>">
 													<img class="icon-menu" alt="${category.categoryName }"
 													src="style/search-cate/3.png">
 													${category.categoryName }
@@ -630,9 +638,20 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
 										</c:forEach>
 
 									</ul>
-									<div class="all-category">
-										<span class="open-cate">Xem tất cả</span>
-									</div>
+								</c:if>
+								<c:if test = "${req == '/category' || req == '/subcategory' }">
+									<ul class="vertical-menu-list">
+										<c:forEach var="category" items="${categories }">
+											<li class=""><a
+												href="<c:url value = "/subcategory"><c:param name = "id" value = "${category.subcategoryID }"/></c:url>">
+													<img class="icon-menu" alt="${category.subcategoryName }"
+													src="style/search-cate/3.png">
+													${category.subcategoryName }
+											</a></li>
+										</c:forEach>
+
+									</ul>
+								</c:if>
 								</div>
 							</div>
 						</div>

@@ -692,19 +692,14 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 									<img width="45" height="45" src="style/post/avanta.png" />
 								</div>
 								<form id="formSubmit">
-									<label for="content">Comment content</label>
-									<div class="form-group">
-										<div class="form-line">
-											<input type="text" id="content" class="form-control"
-												name="content" placeholder="Enter content!"
-												value="${model.content}">
-										</div>
-									</div>
-									<input type="hidden" name = "userId" value = "${loginedUser.userid }"/>
+								<div class="cmt-box">
+                            		<textarea name="content" rows="3" cols="20" id="mainbody_contentbody_txtComment" class="form-control send-sp" placeholder="Nhập nội dung..."></textarea>
+                            		<input type="hidden" name = "userId" value = "${loginedUser.userid }"/>
 									<input type="hidden" name = "docId" value = "${doc.docId }"/>
-									<br> <input type="button"
-										class="btn btn-primary m-t-15 waves-effect" id="btnAdd"
-										value="Add" />
+                            		<a id="btnAdd" class="button-orange button-small alignright" href="#formSubmit"><i class="fa fa-comment line-h20" aria-hidden="true"></i>&nbsp;BÌNH LUẬN</a>
+                            
+                        		</div>
+									
 								</form>
 								
 								<input type="hidden"
@@ -723,7 +718,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
                                         <div class="cmt-head">
                                             <a href="#" target="_blank" class="bold agreen">${comment.user.username }</a>
                                                 </span>&nbsp;<span class="txt-colo"><i class="fa fa-thumbs-up" aria-hidden="true"></i></span></span><span class="txt-colo cmt-right  cmt-date">${comment.createdDate }</span>
-                                                <a class="red alignright cmt-del" href="javascript:__doPostBack('ctl00$ctl00$mainbody$contentbody$rptComment$ctl00$ctl01','')">Xóa &nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                                <a class="red alignright cmt-del" onclick = "btnDeleteClick(${comment.id});" href="#formSubmit">Xóa &nbsp;&nbsp;&nbsp;&nbsp;</a>
                                         </div>
                                         <div class="cmt-content">
                                             ${comment.content }
@@ -782,10 +777,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 						<script>
 		function btnDeleteClick(obj) {
 			var data = {};
-			var ids = obj.value;
-			data['subcategoryID'] = ids;
+			var ids = obj;
+			data['id'] = ids;
 			deleteSubCategory(data);
-			location.href = location.href;
 		};
 
 		function deleteSubCategory(data) {
@@ -795,9 +789,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 				contentType : 'application/json',
 				data : JSON.stringify(data),
 				success : function() {
-
+					window.location.href = "/chiasetailieu/comment#binh-luan";
 				},
 				error : function() {
+					window.location.href = "/chiasetailieu/comment#binh-luan";
 				}
 			});
 		}
@@ -1179,7 +1174,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 				data : JSON.stringify(data),
 				dataType : 'json',
 				success : function(result) {
-					window.location.href = "/chiasetailieu/comment";
+					window.location.href = "/chiasetailieu/comment#binh-luan";
 				},
 				error : function(error) {
 					window.location.href = "/chiasetailieu/home";
@@ -1188,73 +1183,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1
 		}
 	</script>
 
-	<script>
-        //Lấy cookie trạng thái tài khoản
-        function getCookieACC() {
-            var cname = "cookie-stt-acc=";
-            var ca = document.cookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-                if (c.indexOf(cname) == 0) {
-                    return c.substring(cname.length, c.length);
-                }
-            }
-            return null;
-        }
-        function checkStatusAcc() {
-            var stt = getCookieACC();
-            if (stt == 'true')
-                window.location.reload();
-        }
-        function ReplyID(parent, id) {
-            $('.CommentReply').appendTo('#Parent' + id);
-            $('#mainbody_contentbody_txtCommentReply').focus();
-            $('.CommentReply').show();
-            $('#mainbody_contentbody_hdCommentParent').val(parent);
-            $('#mainbody_contentbody_hdCommentReply').val(id);
-        }
-        function Rate(value) {
-            if (value == null)
-                return "";
-            else if (value == 1)
-                return "Bình thường";
-            else if (value == 2)
-                return "Code hay";
-            else if (value == 3)
-                return "Code rất hay";
-            else if (value == 4)
-                return "Code tốt";
-            else if (value == 5)
-                return "Code rất tốt";
-        }
-        function Rating() {
-            $('#rateit_star').rateit({ min: 0, max: 5, step: 1 });
-            $('#rateit_star').bind('rated', function (e) {
-                var value = $(this).rateit('value');
-                $('#mainbody_contentbody_hdRating').val(value);
-            });
-            $('#rateit_star').bind('over', function (event, value) {
-                $('#rateit_txt').text(Rate(value));
-            });
-            $('.rateit').rateit({ max: 5, step: 1 });
-        }
-        $(document).ready(function () {
-            //thay link share facebook
-            document.getElementById("fb-share").setAttribute("data-href", window.location.href);
-            $('.CommentReply').hide();
-            //Kiểm tra tài khoản có thay đổi hay ko để load lại trang cập nhật số tiền
-            document.cookie = "cookie-stt-acc=false; path=/";
-            setInterval(checkStatusAcc, 1000);//kiểm tra lại tài khoản sau 1s
-            Rating();
-        });
-        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function (evt, args) {
-            Rating();
-        });
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        });
-    </script>
 
 	<link href="style/post/iosOverlay.css" rel="stylesheet" />
 	<script src="style/post/iosOverlay.js"></script>

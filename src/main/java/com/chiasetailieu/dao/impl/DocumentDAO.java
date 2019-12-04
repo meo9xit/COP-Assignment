@@ -57,9 +57,9 @@ public class DocumentDAO extends GenericDAO<Document> implements IDocumentDAO{
 	public void update(Document document) {
 		// TODO Auto-generated method stub
 		String sql = "update document set doc_name = ?, cate_id = ?, subcate_id = ?, user_id = ?, doc_source = ?, doc_cover = ?, create_date = ?"
-				+ ", edit_date = ? where doc_id = ?";
+				+ ", edit_date = ?, view = ?, download = ? where doc_id = ?";
 		update(sql, document.getDocName(), document.getCateId(), document.getSubcateId(), document.getUserId(), document.getDocSource(),
-				document.getCover(),document.getCreatedDate(), document.getModifiedDate());
+				document.getCover(),document.getCreatedDate(), document.getModifiedDate(), document.getView(), document.getDownload_count());
 	}
 
 	@Override
@@ -72,8 +72,9 @@ public class DocumentDAO extends GenericDAO<Document> implements IDocumentDAO{
 	@Override
 	public List<Document> findByCategory(Category cate, int curpage, int docperpage) {
 		// TODO Auto-generated method stub
+		int start = curpage*docperpage - docperpage;
 		String sql = "select * from document where cate_id = ? limit ?, ?";
-		List<Document> docs = query(sql, new DocumentMapper(), cate.getCategoryID(), curpage, docperpage);
+		List<Document> docs = query(sql, new DocumentMapper(), cate.getCategoryID(), start, docperpage);
 		return docs;
 	}
 
@@ -106,6 +107,15 @@ public class DocumentDAO extends GenericDAO<Document> implements IDocumentDAO{
 		int start = curpage*docperpage - docperpage;
 		String sql = "SELECT * FROM Document ORDER BY download DESC LIMIT ?, ?";
 		return query(sql, new DocumentMapper(), start, docperpage);
+	}
+
+	@Override
+	public List<Document> findBySubcategory(SubCategory cate, int curpage, int docperpage) {
+		// TODO Auto-generated method stub
+		int start = curpage*docperpage - docperpage;
+		String sql = "select * from document where cate_id = ? limit ?, ?";
+		List<Document> docs = query(sql, new DocumentMapper(), cate.getSubcategoryID(), start, docperpage);
+		return docs;
 	}
 
 }

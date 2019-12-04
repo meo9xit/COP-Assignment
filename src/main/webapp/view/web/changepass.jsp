@@ -282,8 +282,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
     </div>
     <br>
     <br>
-    <div id="mainbody_contentbody_contentpage_panDefaultButton" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;mainbody_contentbody_contentpage_btnUpdate&#39;)">
-	
+    <div id="mainbody_contentbody_contentpage_panDefaultButton" onkeypress="">
+	<form method = "post" action = "<c:url value = "/change-pass"/>" id = "formchangepass" >
         <div class="form-horizontal">
             <div class="form-group">
                 <label class="col-sm-5 control-label">Mật khẩu cũ</label>
@@ -314,11 +314,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', 
                             <div id="updatePass_error" class="text-error">&nbsp;</div>
                         </div>
                     </div>
-             <div class="form-group">
-                        <div class="col-sm-offset-5 col-sm-6">
-                            <input name="performsubmit" type="text" maxlength="4" id="performsubmit" class="form-control alignleft" placeholder="Xác nhận" style="width:90px;" />
-             		</div>
-             </div>
+
 <script type="text/javascript">
 function validate_changepass() {
     jQuery('#updatePass_error').html('');
@@ -345,14 +341,25 @@ function validate_changepass() {
          rp.focus();
          return false;
      }
+     return true;
+}
 </script>
 
             <div class="form-group line-h">
                 <div class="col-sm-offset-5 col-sm-6">
-                    <a onclick="return validate_update();" id="mainbody_contentbody_contentpage_btnUpdate" class="button-orange" href="javascript:__doPostBack(&#39;ctl00$ctl00$ctl00$mainbody$contentbody$contentpage$btnUpdate&#39;,&#39;&#39;)"><i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp; Cập nhật thông tin</a>
+                    <a onclick="return submitChangepass();" id="mainbody_contentbody_contentpage_btnUpdate" class="button-orange" href="mainbody_contentbody_contentpage_panDefaultButton"><i class="fa fa-key fa-lg" aria-hidden="true"></i>&nbsp; Đổi mật khẩu</a>
                 </div>
             </div>
         </div>
+    </form>
+    <script>
+								function submitChangepass() {
+									if(validate_changepass())
+										document.getElementById("formchangepass")
+												.submit();
+									return true;
+								}
+							</script>
     
 </div>
     <br>

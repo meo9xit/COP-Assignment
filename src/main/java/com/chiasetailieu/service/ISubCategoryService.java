@@ -11,7 +11,7 @@ public interface ISubCategoryService {
 	SubCategory save(SubCategory subcategory);
 	List<SubCategory> findAll();
 	void delete(SubCategory subcategory);
-	SubCategory findByCategories(Category category);
+	List<SubCategory> findByCategories(Category category);
 	SubCategory findOneByDocument(Document document);
 	SubCategory findOneByID(Long newID);
 	void update(SubCategory subcategory);

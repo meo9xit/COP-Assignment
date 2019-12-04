@@ -6,6 +6,7 @@ import javax.inject.Inject;
 
 import com.chiasetailieu.dao.ICommentDAO;
 import com.chiasetailieu.model.Comment;
+import com.chiasetailieu.model.Document;
 import com.chiasetailieu.service.ICommentService;
 
 public class CommentService implements ICommentService{
@@ -34,6 +35,12 @@ public class CommentService implements ICommentService{
 	public Comment findById(Long newID) {
 		Comment ret = commentDAO.findById(newID);
 		return ret;
+	}
+
+	@Override
+	public List<Comment> findByPost(Document doc) {
+		// TODO Auto-generated method stub
+		return commentDAO.findByPost(doc);
 	}
 
 

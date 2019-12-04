@@ -1,6 +1,7 @@
 package com.chiasetailieu.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -11,11 +12,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.chiasetailieu.dao.impl.CommentDAO;
+import com.chiasetailieu.model.Category;
 import com.chiasetailieu.model.Comment;
 import com.chiasetailieu.model.Document;
 import com.chiasetailieu.model.User;
 import com.chiasetailieu.service.IDocumentService;
 import com.chiasetailieu.service.IUserService;
+import com.chiasetailieu.service.ICategoryService;
 import com.chiasetailieu.service.ICommentService;
 import com.chiasetailieu.utils.FormUtil;
 
@@ -28,7 +31,9 @@ public class PostController extends HttpServlet {
 	
 	@Inject
 	IUserService userService;
-
+	
+	@Inject
+	ICategoryService cateService;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -40,9 +45,7 @@ public class PostController extends HttpServlet {
 
 	@Inject
 	private ICommentService commentService;
-
-	@Inject
-	private CommentDAO commentDAO;
+	
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
@@ -59,17 +62,16 @@ public class PostController extends HttpServlet {
 		User user = userService.findById(userid);
 		doc.setUser(user);
 		doc.setView(doc.getView()+1);
-		request.setAttribute("doc", doc);
-		Comment model = FormUtil.toModel(Comment.class, request);
-		String url = "";
-		if (model.getType() == null) {
-			url = "/view/web/post.jsp";
-			model.setListResult(commentService.findAll());
+		List<Comment> comments = commentService.findByPost(doc);
+		for(Comment comment : comments) {
+			User us = userService.findById(comment.getUserId());
+			comment.setUser(us);
 		}
+		List<Category> cates = cateService.findAll();
+		request.setAttribute("categories", cates);
+		request.setAttribute("doc", doc);
+		request.setAttribute("comments", comments);
 		request.getRequestDispatcher("/view/web/post.jsp").forward(request, response);
-		request.setAttribute("model", model);
-		RequestDispatcher rd = request.getRequestDispatcher(url);
-		rd.forward(request, response);
 	}
 
 	/**
