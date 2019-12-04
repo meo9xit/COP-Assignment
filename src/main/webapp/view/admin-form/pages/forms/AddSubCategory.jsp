@@ -314,10 +314,10 @@
 								Category</span>
 					</a></li>
 					<li><a
-						href='<c:url value="/admin-category"/>'> <i
+						href='<c:url value="/CateController"/>'> <i
 							class="material-icons">home</i> <span>Quản lý thể loại</span>
 					</a></li>
-					<li><a href='<c:url value="/admin-feedback"/>'> <i
+					<li><a href='<c:url value="/FeedbackController"/>'> <i
 							class="material-icons">text_fields</i> <span>Quản lý phản hồi</span>
 					</a></li>
 					<!-- <li>
