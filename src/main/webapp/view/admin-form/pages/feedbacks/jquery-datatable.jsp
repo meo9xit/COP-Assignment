@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Jquery DataTable | Bootstrap Based Admin Template - Material Design</title>
+    <title>Phản hồi</title>
     <!-- Favicon-->
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
@@ -304,20 +304,23 @@
             <!-- Menu -->
             <div class="menu">
                 <ul class="list">
-                    <li class="header">MAIN NAVIGATION</li>
-                    <li>
-                        <a href="view/admin-form/index.html">
-                            <i class="material-icons">home</i>
-                            <span>Home</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="view/admin-form/pages/typography.html">
-                            <i class="material-icons">text_fields</i>
-                            <span>Typography</span>
-                        </a>
-                    </li>
-                    <li>
+					<li class="header">MAIN NAVIGATION</li>
+					<li><a
+						href='<c:url value="/admin-user"/>'> <i
+							class="material-icons">home</i> <span>Quản lý người dùng</span>
+					</a></li>
+					<li><a href='<c:url value="/admin-subcategory"/>'> <i
+							class="material-icons">text_fields</i> <span>Quản lý Sub
+								Category</span>
+					</a></li>
+					<li><a
+						href='<c:url value="/CateController"/>'> <i
+							class="material-icons">home</i> <span>Quản lý thể loại</span>
+					</a></li>
+					<li><a href='<c:url value="/FeedbackController"/>'> <i
+							class="material-icons">text_fields</i> <span>Quản lý phản hồi</span>
+					</a></li>
+					<!-- <li>
                         <a href="view/admin-form/pages/helper-classes.html">
                             <i class="material-icons">layers</i>
                             <span>Helper Classes</span>
@@ -473,22 +476,6 @@
                             </li>
                         </ul>
                     </li>
-<!-- Categories -->
-					<li class="active">
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">view_list</i>
-                            <span>Category</span>
-                        </a>
-                        <ul class="ml-menu">
-                            
-                            <li>
-                                <a href="../../pages/categories/jquery-datatable.html">Categories List</a>
-                            </li>
-                            
-                        </ul>
-                    </li>                
-<!-- End categories -->                    
-                    
                     <li class="active">
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">view_list</i>
@@ -655,8 +642,8 @@
                             <i class="material-icons col-light-blue">donut_large</i>
                             <span>Information</span>
                         </a>
-                    </li>
-                </ul>
+                    </li> -->
+				</ul>
             </div>
             <!-- #Menu -->
             <!-- Footer -->
